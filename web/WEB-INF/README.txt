@@ -1,1 +1,0 @@
-This folder is only for java app's.
