@@ -1,0 +1,53 @@
+Page (www.semantictext.info/page.stxt):
+
+Metadata:
+	Title: Contribuye con nosotros
+	Description: Cosas que faltan por hacer en el lenguaje STxT y formas de contribuir
+		con el mantenimiento y los contenidos del portal.
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-10-17
+	Priority: 0.6
+	
+Content:
+	==¿Quieres contribuir?==
+	
+Alert:
+	¡¡Gracias por querer colaborar con nosotros!!
+	
+Content:
+	La mejor forma de ayudarnos es dando a conocer el lenguaje. Usándolo,
+	hablando a otras personas, y disfrutando con él. Nosotros ya lo hemos 
+	usado, y la experiencia ha sido genial.
+	
+	Aunque queda mucho trabajo por hacer. Faltan librerías, editores de texto,
+	aplicaciones,... la lista es interminable.
+	
+	Buenas noticias para los informáticos: un nuevo juguete para explorar :-)	
+	
+	== www.semantictext.info ==
+	
+	Nuestro lenguaje tiene infinitas aplicaciones, pero creemos que su definición 
+	es única y que ya está lista.
+	
+	//Las posibles aplicaciones o utilidades las dejamos para vosotros ;-)//
+	
+	Por lo que respecta a esta web, creemos que es un proyecto cerrado, pero dista
+	mucho de considerarse perfecto. Seguro que puede mejorar de mil formas. ¿Crees que 
+	hay que añadir un capítulo nuevo al libro? ¿Has encontrado algún error en la documentación? 
+	¿Mejorarías algún ejemplo? ¿Nos propones un css distinto y más reducido de tamaño?
+	
+	Queremos que esta web sea un punto de referencia en el aprendizaje de STxT.
+	
+alert: ¡Ayúdanos a que esto sea posible!\\
+	[[admin@semantictext.info]]
+	
+Content:
+	**Estaremos encantados de poderos contestar lo antes posible ;-)**\\
+	Por cierto, sólo hablamos en catalán, castellano e inglés :-)
+		
+
+
+	
+	
+	
+	

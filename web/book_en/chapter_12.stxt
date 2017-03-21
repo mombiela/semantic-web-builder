@@ -1,0 +1,245 @@
+Chapter(www.semantictext.info/book.stxt):
+
+Metadata:
+	Title: Chapter 12: Semantic Web
+	Description: A proposal for the semantic web using STxT.
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+
+Nav:
+	Prev: 11
+	Next: 13
+	
+Title:
+	Chapter 12: Semantic Web
+	
+text:
+	The time to go deeper has come.
+
+alert:
+	Welcome to the semantic web.
+	
+h1:
+	A proposal for the web
+
+text:
+	I have seen many proposals before, but in my opinion they do not entirely work.
+	I'm going to say something that a lot of people might not like:
+
+assert:
+	HTML is not semantic
+
+text:
+	Once again I’m sorry, but that’s the way it is. HTML has never been a good semantic language,
+	although it's okay for presenting content. A lot has been done in order to separate the content from the presentation,
+	but I think that there is still a long way to go. And I don't know if it is being made in the right direction.
+	
+#	//By the way, there are hundreds of people involved in this process, 
+#	great experts in the web world. Who am I to question it?//
+
+	What do we have right now?
+	
+	Well, there is HTML for the content. Then we have CSS for the presentation. Mix, shake well,
+	and we get a fantastic website. We also have large current search engines,
+	from which we generally get good results. Not always the ones we want, but that's inevitable.
+
+	But back to HTML and CSS. Is it really semantic? I don’t think so. HTML4 was obviously not,
+	and we have now evolved into HTML5 but, what have we gained? Much in terms of standardization
+	and language evolution, but make no mistake: HTML is still based on the presentation.
+	
+	What is my proposal? Are you really asking?
+
+alert:
+	Semantic Text
+
+text:
+	Alright, it is clear, STxT. And how do we make the semantic web with STxT?
+
+	I don't know, although I imagine it’s one of the best ways of doing it nowadays :-D
+	
+	What did you expect? Did you think I would have done everything for you already? If we get somewhere with STxT, we will see.
+	My visionary powers are not that advanced :-)
+
+	The following sections are ideas, things I have thought about, but there is no specific proposal.
+	There are many scenarios in which we can imagine this new technology,
+	and many ways of applying it. I don’t even know now, but I can see its potential.
+	I hope others also see it and know how to apply it.
+
+h1:
+	Ideas
+	
+h2:
+	Replace HTML5!!
+
+text:
+	But that is crazy!! We have spent years evolving, making browsers,... how could we do something like this!!
+	
+	That is crazy >:-O
+
+	I know, but let me show you my vision. This goes for computer techs, and people who work with HTML.
+
+alert:
+	Relax, I'm going to hypnotize you.
+
+text:
+	With STxT everything can change, it is a new world, a new way of thinking. Let’s not close our minds to anything.
+
+	Clear your mind. There is nothing there now. Nothing exists yet. We are in 1985.
+	We have never heard of SGML, HTML, hyperlinks, or CSS.
+	We have an acquaintance with a PC and they use the command line to do things.
+
+	Someone tells us that a new language has been invented. It is called STxT and it serves for expressing ideas and displaying text.
+	
+	We now have a vision of the future, we are in 2020, and we see a web, but we don’t know anything about computing.
+	The web looks very much to the one we have nowadays, but everything is structured with STxT.
+
+	You ask yourselves... How is it made? What is it like inside? 
+
+code:
+	...
+	
+	...
+	
+	...
+	
+	...
+	
+alert:
+	WAKE UP!!
+	
+text:
+	What have you seen?
+	
+	Well, as you cannot answer I will tell you what //I// have seen.
+	It can help you or it may be nonsense, but it is my vision.
+
+	Web pages are STxT pages, with each web and portal defining its own structure.
+
+	This lets us see the web as a distinct content set of pages.
+ 	For example, for a cooking web:
+
+code:
+	/recipes/*.stxt
+	/tricks/*.stxt
+	/diets/*.stxt
+
+text:
+	Apart from this, every web portal has a series of pages that give us information on how to format
+	or present the text. There is a group of people who did this and did a great job.
+	They did it in the W3C.
+
+	They made STxT documents that allowed this, and all webs used them, thanks to their popularity.
+	Besides, as there were fantastic STxT viewers, everything was able to be integrated without problems,
+	and many viewers were created.
+	
+	The pages that needed to have a website were quite a few. The main ones were:
+
+code:
+	robots.stxt
+	sitemap.stxt
+	styles.stxt
+	/styles/*.stxt
+
+text:
+	These pages allowed us to get an idea of the portal content,
+	while at the same time we applied styles to the whole.
+	The best part about styles is that they were automatically applied depending on the type of document,
+	and it was also very easy to make new styles.
+	A document which followed a known namespace and easy to use was created: w3c.org/css.stxt
+
+	Thus, the pages were very easy to create. With a simple STxT editor, a page with perfect content was built.
+	A designer created a fantastic style for it, and finally a programmer gave it a dynamic behavior
+	creating a js file for each type of page (a scripting language for providing behavior to these pages).
+
+	Thus, for example, our cooking website would be like this:
+
+code:
+	robots.stxt
+	sitemap.stxt
+	styles.stxt
+	
+	/styles/receta.stxt
+	/styles/trucos.stxt
+	/styles/dietas.stxt
+	
+	/dynamic/receta.js
+	/dynamic/trucos.js
+	/dynamic/dietas.js
+	
+	/images/*.png
+	/images/*.gif
+	...
+	
+	/recipes/recipe1.stxt
+	/recipes/recipe2.stxt
+	/recipes/recipe3.stxt
+	...
+	
+	/tricks/trick1.stxt
+	/tricks/trick2.stxt
+	/tricks/trick3.stxt
+	...
+	
+	
+	...
+	...
+	...
+	
+text:
+	Well, that’s it. Excuse the scheme simplicity, but a hypnosis session cannot be stretched out any more :-)
+	I don't know if this will awaken you imagination, but I'd like to at least make you think.
+	Not everything is fine just as it is. There is always room for improvement. For doing things differently.
+	And we are computer techs. We have to test things. And experiment. And make mistakes. It is the only way forward.
+
+h2:
+	Search engines
+
+text:
+	I believe that the search engines and browsers in general would increase their searching capabilities
+	and their capability of indexing contents knowing what the text is about. In addition, it would already be nested
+	and each part would have a specific and well-defined meaning.
+
+	It’s possible that famous STxT templates could arise, and a page could follow one of them in order to display certain content.
+	This would make indexing even easier, as it would unify certain aspects.
+	
+h2:
+	The transition
+	
+text:
+	What should the transition be like? It should be //easy and transparent//. Otherwise, there will be no transition.
+	The first thing to do would be to define the new way of seeing documents with STxT, and the new CSS.
+	By the way, it would be a good moment for making the CSS and having a first version.
+	Perhaps the browser renders would finally treat them all the samel!
+
+	From here on we can foresee a period of page coexistence.
+	There will be good old HTML pages along with STxT pages.
+	I imagine also a good moment for integrating and unifying a "lightweight language" for the content.
+	I'd like for W3C to become interested in this whole process.
+	Although it would be a very alternative front to everything that is being done now.
+	But it should not be traumatic either. We can think of STxT as another extension to be considered by the browsers,
+	with a special way of displaying. The display would be very similar to XML when there are no css or anything standard,
+	and as the web incorporated them, the appearance would improve.
+
+	We can even consider the coexistence of HTML pages with a more structured STxT counterpart.
+	The HTML would contain metatags that would tell the search engines that it has an associated STxT,
+	as the indexing using this file would be more appropriate.
+
+	We must not forget that the aim of all this is to achieve the semantic web in a less traumatic way,
+	which is easy for everybody, not just for super-computer techs. 
+
+h1:
+	SWB: Semantic Web Builder
+
+text:
+	I couldn’t finish this chapter without speaking of SWB. This is the first STxT application that we have made.
+	Well, I know that it is the first one because it has been made for publishing this web, and before there was nothing else :-D
+
+	We could also say that it is the first website to show the content not only in HTML but also in STxT.
+
+	I can say that the experience of using STxT has been really impressive.
+
+	I've been programming for the web for years, and I had never before felt so comfortable.
+	Even without editing tools, the book creation process has been simply //a pleasure//.
+	I encourage everyone to try it.
+	
+	It's worthwhile ;-)

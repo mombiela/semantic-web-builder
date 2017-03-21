@@ -1,0 +1,55 @@
+Page (www.semantictext.info/page.stxt):
+
+Metadata:
+	Title: Donations for the project
+	Description: Donate via PayPal to the project and the authors of STxT. 
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+	Priority: 0.6
+
+Content:
+	Currently you can only do this through PayPal, 
+	although in the future we may accept other means.
+	
+HTML:
+	<div style="text-align:center;">
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="ZNH8VX8T5LDZU">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+	</form>
+	<p><center><strong>Thank you very much for your cooperation.</strong></center></p>
+	</div>
+
+Content:
+	== Why donate? ==
+	
+	I could give you many reasons, the investment we've made, server maintenances, 
+	work carried out, bandwidth, translations... and although I really hope that 
+	these investments can pay off (someday :-D) through advertising or other sponsors, 
+	this is not the primary reason.
+		
+	The donations are for us. For having made this project free and having given it to 
+	the community. 
+	For having made it and having put all our efforts in it. 
+	All our work is open-source.	
+	
+	You are free to use it. Free to earn money. Free to take advantage of it.
+	
+	But if you really believe that it has been a useful contribution, a donation will be 
+	greatly appreciated.
+	
+	You set the price. We give you STxT for free.
+	
+# What are we going to do with the donations? There’s a long list... First of all, finance 
+# this project. We have had many expenses... translations, domains, the time spent on it. 
+# Then, a fair reward for us. If this goes anywhere I think it will be well deserved ;-) 
+# Finally, for starting other projects, think of new ideas... There is so much to do! 
+# So much to be invented! But we need time to do this. And that is also part of what 
+# we are asking for.
+
+# Thanks for helping us!!!
+	
+	
+

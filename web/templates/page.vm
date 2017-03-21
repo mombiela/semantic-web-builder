@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="${lang.get("lang")}">
+	
+#parse("/init.vm")
+
+<head>
+    <meta charset="utf-8">
+    <title>${meta.getChild("title").tvalue}</title>
+	<meta name="description" content="${meta.getChild("description").tvalue}">
+	<meta name="author" content="${meta.getChild("author").tvalue}">
+    <link rel="stylesheet" href="${prefix_url}../css/app.css">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="row">
+    	<header id="main_header" class="small-12 columns">
+    		<hgroup>
+                <h1>
+    				<a href="${prefix_url}index.html">
+    				#if(${doc.canonicalName} == "chapter")
+    					STxT: ${lang.get("title_book")}
+    				#else
+    					STxT: Semantic text
+    				#end
+                    </a>
+    			</h1>
+    			<h2><a href="${prefix_url}index.html">${lang.get("title")}</a></h2>
+    		</hgroup>
+    	</header>
+    	
+		<div class="small-12 columns" id="sec_menu">
+        	<div>
+        		<ul class="inline-list right">
+        			<li><a href="${prefix_url}about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
+        			<li><a href="${prefix_url}donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
+        			<li><a href="${prefix_url}contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
+        			<li><a href="${prefix_url}licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
+					<li><b>|</b></li>
+					#if(${lang.get("lang")} == "en")
+						<li><b>${lang.get("menu.lang.en")}</b></li>
+						<li><a href="/set?lang=es" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
+					#end
+					#if(${lang.get("lang")} == "es")
+						<li><b>${lang.get("menu.lang.es")}</b></li>
+						<li><a href="/set?lang=en" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
+					#end
+                </ul>
+            </div>
+        </div>
+    </div>
+		
+	<div class="row">
+    <nav class="top-bar" data-topbar>
+      <section class="top-bar-section">
+        <ul class="left">
+			<li><a href="${prefix_url}index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
+			<li><a href="${prefix_url}book/chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
+			<li><a href="${prefix_url}book/chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
+			<li><a href="${prefix_url}book/chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
+			<li><a href="${prefix_url}swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
+			<li><a href="${prefix_url}stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
+        </ul>
+        <ul class="right">
+			<li><a href="${name}.stxt" target="${name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>
+        </ul>
+      </section>
+    </nav>		
+	</div>
+	
+	<div id="container">
+		<div id="main_content">
+    		#parse("/navigation.vm")
+    		
+    		#if(${doc.canonicalName} == "chapter")
+    			#if(${doc.getChild("title")})
+    				<h1>${doc.getChild("title").tvalue}</h1>
+    			#end
+    		#end
+    		
+    		#set($numPart = 0)
+    		
+    		#foreach($node in $doc.getChilds())
+    			#if(${node.canonicalName} == "html")
+    				${node.tvalue}
+    			#elseif(${node.canonicalName} == "content" || ${node.canonicalName} == "text")
+    				${wiki.render($node.tvalue)}
+    			#elseif(${node.canonicalName} == "preamble")
+                    <div class="preamble">${wiki.render($node.tvalue)}</div>
+    			#elseif(${node.canonicalName} == "header")
+                    <h2><a id="index_${numPart}"></a>$node.tvalue</h2>
+    				#set($numPart = $numPart + 1)
+    			#elseif(${node.canonicalName} == "subheader")
+                    <h3><a id="index_${numPart}"></a>$node.tvalue</h3>
+    				#set($numPart = $numPart + 1)
+    			#elseif(${node.canonicalName} == "code")
+    				<pre>${utils.escapeHtml($node.tvalue)}</pre>
+    			#elseif(${node.canonicalName} == "assert")
+                    <div class="assert">${wiki.render($node.tvalue)}</div>
+    			#elseif(${node.canonicalName} == "alert")
+                    <div class="alert">${wiki.render($node.tvalue)}</div>
+    			#end
+    		#end
+    		
+    		#if($doc.getChilds("text").size()>0)
+				#parse("/navigation.vm")
+			#end
+			<p>&nbsp;</p>
+        </div>
+		
+    	<aside id="advertisement">
+    		<h3>${lang.get("lat.sponsors.title")}</h3>
+            <p>${lang.get("lat.sponsors.1")}<p>
+            <p>${lang.get("lat.sponsors.2")}</p>
+            <p>${lang.get("lat.sponsors.3")}</p>
+			<!--
+            <h3>${lang.get("lat.ads.title")}</h3>
+            <p>${lang.get("lat.ads.1")}</p>
+            <p>${lang.get("lat.ads.2")}</p>
+			-->
+    		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- STxT - Adaptable -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-0611338592562725"
+                 data-ad-slot="5037052041"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+			<p>&nbsp;</p>
+			#end
+    	</aside>
+    </div>	
+	
+	<footer>${lang.get("foot.1")}</footer>
+	<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-51654743-1', 'semantictext.info');
+      ga('send', 'pageview');
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+#if(${doc.getChild("navigation")})
+	<nav class="book_nav row">
+    <ul>
+		#set($nav = ${doc.getChild("navigation")})
+
+		#if($nav.getChild("previous"))
+		<li class="left">
+            <a 
+				href="chapter_${nav.getChild("previous").tvalue}.html" 
+				title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
+		</li>
+		#end
+		#if($nav.getChild("next"))
+			<li class="right">
+            <a 
+				href="chapter_${nav.getChild("next").tvalue}.html" 
+				title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
+			</li>
+		#end
+	</ul>
+    </nav>
+#end						

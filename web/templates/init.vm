@@ -1,0 +1,8 @@
+## ---------------
+## Initialize vars
+## ---------------
+
+#if(${doc.canonicalName} == "chapter") #set($prefix_url = "../")
+#else  #set($prefix_url = "")
+#end
+#set($meta = ${doc.getChild("metadata")})

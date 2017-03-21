@@ -1,0 +1,175 @@
+Chapter(www.semantictext.info/book.stxt):
+
+Metadata:
+	Title: Chapter 11: STxT Parsing
+	Description: Although STxT parsing is simple, some parts are explained in more detail
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+
+Nav:
+	Prev: 10
+	Next: 12
+	
+title:
+	Chapter 11: STxT Parsing
+
+h1:
+	Introduction
+	
+text:
+	Parsing an STxT file is much easier than parsing files from other technologies.
+	It may seem contradictory, because it is actually a very powerful language, but at the same time it is
+	based on very simple principles.
+
+	I will explain my way of parsing a file. It’s possible that it is not the best nor the most optimal way,
+	but it’s one way of doing it. In fact, if you want to see the implementation I've done
+	it is available online:
+	
+assert:
+	[[https://code.google.com/p/stxt-parser/ | https://code.google.com/p/stxt-parser/]]
+	
+text:
+	This implementation has been done in Java language, because it is the one I know best.
+
+	I hope STxT is successful, and that other implementations appear very soon.
+
+	I won't go into all the details, but I'd like to explain
+	some points that require more attention.
+	
+Assert:
+	If you have no intention of implementing a parser do not go on reading.
+	The next chapter is much more interesting ;-)	
+h1:
+	Generic process
+	
+h2:
+	Line parsing
+	
+text:
+	The parsing process can be done line by line, so we can say that in general we have:
+	
+code:
+	while not end of file
+		read line
+		process line
+	end while
+	
+text:
+	During the process it is suitable to have a list of the last nodes we've been finding per level,
+	as the correct processing depends on this.
+	
+h2:
+	Line processing
+	
+text:
+	The first step in line processing is the //standardization// of the line.
+	A line is standardized when it is in compact (or semi compact) form, so we have to check whether it is,
+	and if it isn't, transform it. In the standardization the comment lines are also deleted.
+	
+	We must keep in mind in standardization that if the previous node was a text node,
+	when we go over a certain level, it will be part of that same node. That is, after that it will be text. It will also be part of it
+	if it doesn’t reach the level but the line is completely blank,
+	in which case it will be translated by text with a line break ([[chapter_06.html#index_9|See advanced tutorial]]).
+
+	Once we have compacted the line, processing continues independently, and we only need to get
+	the level of the new line and distinguish between a few cases:
+	
+	* Are we on the first node?
+	* Is the text line from a previous text node?
+	* Does a new node start?
+
+	In each of the cases the aim is to update the status of our variables, and continue with the process.
+
+	Note: The most important thing here is seeing that it is a process that can be done line by line,
+	and the decisions to take are relatively simple. This lets us have a very efficient parser,
+	which in turn may act as a grammar and node validator. 
+
+h2:
+	Validations
+	
+text:
+	Validations are made at various points of the parsing:
+
+	* When creating a new node: when creating a new node we validate that its namespace can be infered.
+ 	  Otherwise, it means that it could not be created in that position and it would be incorrect.
+	* At the end of a node: When we close a node, it is validated.
+	** If it is a NODE type, we validate that the number of children is correct.
+	** If it is not a NODE, we validate whether it has the appropriate content depending on its type.
+
+	When do we consider a node as concluded? This is an interesting point,
+	because there are two circumstances that make a node to be concluded.
+	One of them is when another node with a level equal to or below this node appears.
+	The other one is when the entire file has been processed and there are no more nodes to validate.
+	At these points the node is considered as concluded and the validations can start.
+
+h1:
+	Language nodes
+	
+text:
+	We had said in the language description that the data types have no limitation
+	and are not linked to a language, so validations should only be checked
+	using regular expressions or methods that ensure this fact.
+
+	We have the following types of nodes:
+
+	* NODE
+	* TEXT
+	* URL
+	* NATURAL
+	* INTEGER
+	* RATIONAL
+	* NUMBER
+	* BINARY
+	* HEXADECIMAL
+	* BASE64
+	* BOOLEAN
+
+	For example, regular expressions that we could use to validate nodes are:
+
+code:
+	BINARY       = ^(0|1|\s)+$
+	BOOLEAN      = ^0|1$
+	HEXADECIMAL  = ^([a-f0-9]|\s)+$
+	INTEGER      = ^(\-|\+)?\d+$
+	NATURAL      = ^\d+$
+	NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
+	RATIONAL     = ^(\-|\+)?\d+\/\d+$
+	 	
+h1:
+	Grammars
+	
+h2:
+	Storage
+
+text:
+	We obtain the grammars from the Internet, but having to go search definitions remotely all the time
+	is not practical nor efficient. The most efficient strategy is to have a kind of grammar repository,
+	in the disc, and to go find them there. In case we do not find them, we would look on the Internet,
+	and that repository would be updated. It is also possible to set checking times or other strategies.
+	The idea is that grammars do not change over time, or are at least compatible retroactively.
+	
+h2:
+	Initial grammar
+	
+text:
+	We should keep in mind that it is not possible to make a parser without having the grammar previously.
+	In order to parse a grammar we need to have the definition of the base grammar already parsed.
+	This is why there will be a definition of the initial grammar in the code itself. 
+	
+h1:
+	Details to consider
+	
+text:
+	There are some details that must be considered in parsing:
+	
+	* Case-insensitive: All nodes are considered to be CASE-INSENSITIVE,
+	  so the appropriate transformations should be made in the parsing process.
+	* Base64: With the BASE64 text we must allow line breaks,
+	  and make a standard parsing of the content thus obtained.
+	* For reading lines we should take into account both UNIX and DOS formats.
+	  Therefore we will allow both line break, and line break + carriage return.
+	  We do this in order to allow faster editions of files from any environment,
+	  although the most suitable thing would be to always use standard UNIX (only line break character).
+	  
+
+
