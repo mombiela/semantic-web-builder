@@ -7,10 +7,9 @@
     <title>${meta.getChild("title").tvalue}</title>
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
-    <link rel="stylesheet" href="${prefix_url}../css/app.css">
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="../css/app.css">
+	<script src="../js/cookie.js"></script>
+	<script>#parse("/page.js")</script>	
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     	<header id="main_header" class="small-12 columns">
     		<hgroup>
                 <h1>
-    				<a href="${prefix_url}index.html">
+    				<a href="index.html">
     				#if(${doc.canonicalName} == "chapter")
     					STxT: ${lang.get("title_book")}
     				#else
@@ -26,25 +25,25 @@
     				#end
                     </a>
     			</h1>
-    			<h2><a href="${prefix_url}index.html">${lang.get("title")}</a></h2>
+    			<h2><a href="index.html">${lang.get("title")}</a></h2>
     		</hgroup>
     	</header>
     	
 		<div class="small-12 columns" id="sec_menu">
         	<div>
         		<ul class="inline-list right">
-        			<li><a href="${prefix_url}about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
-        			<li><a href="${prefix_url}donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
-        			<li><a href="${prefix_url}contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
-        			<li><a href="${prefix_url}licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
+        			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
+        			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
+        			<li><a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
+        			<li><a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
 					<li><b>|</b></li>
 					#if(${lang.get("lang")} == "en")
 						<li><b>${lang.get("menu.lang.en")}</b></li>
-						<li><a href="/set?lang=es" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
+						<li><a href="../es/${doc_name}.html" onclick="setLang('es'); return false;" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
 					#end
 					#if(${lang.get("lang")} == "es")
 						<li><b>${lang.get("menu.lang.es")}</b></li>
-						<li><a href="/set?lang=en" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
+						<li><a href="../en/${doc_name}.html" onclick="setLang('en'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
 					#end
                 </ul>
             </div>
@@ -55,12 +54,12 @@
     <nav class="top-bar" data-topbar>
       <section class="top-bar-section">
         <ul class="left">
-			<li><a href="${prefix_url}index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-			<li><a href="${prefix_url}book/chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
-			<li><a href="${prefix_url}book/chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-			<li><a href="${prefix_url}book/chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
-			<li><a href="${prefix_url}swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
-			<li><a href="${prefix_url}stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
+			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
+			<li><a href="book/chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
+			<li><a href="book/chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
+			<li><a href="book/chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
+			<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
+			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
         </ul>
         <ul class="right">
 			<li><a href="${name}.stxt" target="${name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>

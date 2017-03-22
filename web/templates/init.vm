@@ -8,7 +8,5 @@
 #set($meta = ${doc.getChild("metadata")})
 
 #set($nn = ${nav_lang.get("lang")})
-NAV_LANG! = $nn
-
 #set($lang = ${langs.get("pages_$nn")})
 
