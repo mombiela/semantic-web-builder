@@ -4,7 +4,7 @@
 
 This is a builder of portals that uses the STxT language.
 
-The example comes with the source code of (http://www.semantictext.info).
+The example comes with the source code of http://www.semantictext.info
 
 ## Requirements
 
