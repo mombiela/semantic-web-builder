@@ -62,7 +62,7 @@
 			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
         </ul>
         <ul class="right">
-			<li><a href="${name}.stxt" target="${name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>
         </ul>
       </section>
     </nav>		
