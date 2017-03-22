@@ -2,11 +2,7 @@
 ## Initialize vars
 ## ---------------
 
-#if(${doc.canonicalName} == "chapter") #set($prefix_url = "../")
-#else  #set($prefix_url = "")
-#end
 #set($meta = ${doc.getChild("metadata")})
-
 #set($nn = ${nav_lang.get("lang")})
 #set($lang = ${langs.get("pages_$nn")})
 
