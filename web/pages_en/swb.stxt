@@ -11,7 +11,7 @@ Content:
 	
 Assert:
 	//Welcome to our leading application// \\
-	[[https://code.google.com/p/semantic-web-builder/ | Semantic Web Builder]]
+	[[https://github.com/mombiela/semantic-web-builder | Semantic Web Builder]]
 	
 Content:
 	===What is SWB?===

@@ -26,7 +26,7 @@ text:
 	it is available online:
 	
 assert:
-	[[https://code.google.com/p/stxt-parser/ | https://code.google.com/p/stxt-parser/]]
+	[[https://github.com/mombiela/stxt-parser | https://code.google.com/p/stxt-parser/]]
 	
 text:
 	This implementation has been done in Java language, because it is the one I know best.
