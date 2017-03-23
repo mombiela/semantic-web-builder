@@ -8,7 +8,7 @@ The example comes with the source code of http://www.semantictext.info
 
 ## Requirements
 
-You need Eclipse or Apache Ant.
+You need java installed.
 
 ## Usage
 
