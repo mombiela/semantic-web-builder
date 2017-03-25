@@ -15,22 +15,23 @@
 
 <body>
 
-	<header id="main_header">
-		<hgroup>
-            <h1>
-				<a href="index.html">
-				#if(${doc.canonicalName} == "chapter")
-					STxT: ${lang.get("title_book")}
-				#else
-					STxT: Semantic text
-				#end
-                </a>
-			</h1>
-			<h2><a href="index.html">${lang.get("title")}</a></h2>
-		</hgroup>
-	</header>
+    <div class="row">
+      <div class="small-12 columns">
+	    <h1>
+			<a href="index.html">
+			#if(${doc.canonicalName} == "chapter")
+				STxT: ${lang.get("title_book")}
+			#else
+				STxT: Semantic text
+			#end
+    	    </a>
+		</h1>
+		<h2><a href="index.html">${lang.get("title")}</a></h2>
+      </div>
+    </div>
 
-	<div>
+    <div class="row">
+      <div class="small-12 columns">
 		<ul class="inline-list right">
 			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
 			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
@@ -45,78 +46,85 @@
 				<li><b>${lang.get("menu.lang.es")}</b></li>
 				<li><a href="../en/${doc_name}.html" onclick="setLang('en'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
 			#end
-        </ul>
+    	</ul>
+      </div>
     </div>
 
-    <nav class="top-bar" data-topbar>
-      <section class="top-bar-section">
-        <ul class="left">
+    <div class="row">
+      <div class="small-12 columns">
+	    <ul class="left">
 			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 			<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
 			<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
 			<li><a href="chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
 			<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
 			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
-        </ul>
-        <ul class="right">
+    	</ul>
+    	<ul class="right">
 			<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>
-        </ul>
-      </section>
-    </nav>		
+    	</ul>
+      </div>
+    </div>
 	
-	<div>
-	#parse("/navigation.vm")
-	
-	#if(${doc.canonicalName} == "chapter")
-		#if(${doc.getChild("title")})
-			<h1>${doc.getChild("title").tvalue}</h1>
-		#end
-	#end
-	
-	#set($numPart = 0)
-	
-	#foreach($node in $doc.getChilds())
-		#if(${node.canonicalName} == "html")
-			${node.tvalue}
-		#elseif(${node.canonicalName} == "content" || ${node.canonicalName} == "text")
-			${wiki.render($node.tvalue)}
-		#elseif(${node.canonicalName} == "preamble")
-            <div class="preamble">${wiki.render($node.tvalue)}</div>
-		#elseif(${node.canonicalName} == "header")
-            <h2><a id="index_${numPart}"></a>$node.tvalue</h2>
-			#set($numPart = $numPart + 1)
-		#elseif(${node.canonicalName} == "subheader")
-            <h3><a id="index_${numPart}"></a>$node.tvalue</h3>
-			#set($numPart = $numPart + 1)
-		#elseif(${node.canonicalName} == "code")
-			<pre>${utils.escapeHtml($node.tvalue)}</pre>
-		#elseif(${node.canonicalName} == "assert")
-            <div class="assert">${wiki.render($node.tvalue)}</div>
-		#elseif(${node.canonicalName} == "alert")
-            <div class="alert">${wiki.render($node.tvalue)}</div>
-		#end
-	#end
-	
-	#if($doc.getChilds("text").size()>0)
+    <div class="row">
+      <div class="small-12 columns">
 		#parse("/navigation.vm")
-	#end
+	
+		#if(${doc.canonicalName} == "chapter")
+			#if(${doc.getChild("title")})
+				<h1>${doc.getChild("title").tvalue}</h1>
+			#end
+		#end
+	
+		#set($numPart = 0)
+	
+		#foreach($node in $doc.getChilds())
+			#if(${node.canonicalName} == "html")
+				${node.tvalue}
+			#elseif(${node.canonicalName} == "content" || ${node.canonicalName} == "text")
+				${wiki.render($node.tvalue)}
+			#elseif(${node.canonicalName} == "preamble")
+            	<div class="preamble">${wiki.render($node.tvalue)}</div>
+			#elseif(${node.canonicalName} == "header")
+            	<h2><a id="index_${numPart}"></a>$node.tvalue</h2>
+				#set($numPart = $numPart + 1)
+			#elseif(${node.canonicalName} == "subheader")
+            	<h3><a id="index_${numPart}"></a>$node.tvalue</h3>
+				#set($numPart = $numPart + 1)
+			#elseif(${node.canonicalName} == "code")
+				<pre>${utils.escapeHtml($node.tvalue)}</pre>
+			#elseif(${node.canonicalName} == "assert")
+            	<div class="assert">${wiki.render($node.tvalue)}</div>
+			#elseif(${node.canonicalName} == "alert")
+            	<div class="alert">${wiki.render($node.tvalue)}</div>
+			#end
+		#end
+	
+		#if($doc.getChilds("text").size()>0)
+			#parse("/navigation.vm")
+		#end
+	
+		<aside id="advertisement">
+			<h3>${lang.get("lat.sponsors.title")}</h3>
+        	<p>${lang.get("lat.sponsors.1")}<p>
+        	<p>${lang.get("lat.sponsors.2")}</p>
+        	<p>${lang.get("lat.sponsors.3")}</p>
+			<!--
+        	<h3>${lang.get("lat.ads.title")}</h3>
+        	<p>${lang.get("lat.ads.1")}</p>
+        	<p>${lang.get("lat.ads.2")}</p>
+			-->
+			#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
+			<p>&nbsp;</p>
+			#end
+		</aside>
+	  </div>
 	</div>
 	
-	<aside id="advertisement">
-		<h3>${lang.get("lat.sponsors.title")}</h3>
-        <p>${lang.get("lat.sponsors.1")}<p>
-        <p>${lang.get("lat.sponsors.2")}</p>
-        <p>${lang.get("lat.sponsors.3")}</p>
-		<!--
-        <h3>${lang.get("lat.ads.title")}</h3>
-        <p>${lang.get("lat.ads.1")}</p>
-        <p>${lang.get("lat.ads.2")}</p>
-		-->
-		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
-		<p>&nbsp;</p>
-		#end
-	</aside>
-	
-	<footer>${lang.get("foot.1")}</footer>
+    <div class="row">
+      <div class="small-12 columns">
+		<footer>${lang.get("foot.1")}</footer>
+	  </div>
+	</div>
 </body>
 </html>
