@@ -9,35 +9,10 @@ footer {
 	margin-bottom: 2em
 }
 
-pre {
-	padding: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	font-size: 90%
-}
-
 #advertisement {
 	padding-top: 1em
 }
 
-#main_content {
-	padding-top: 1em
-}
-
-#main_content .alert p, #main_content .assert p {
-	border: 2px dashed #CCC;
-	margin-left: auto;
-	margin-right: auto;
-	width: 470px;
-	text-align: center;
-	margin-top: 0;
-	margin-bottom: 1em;
-	padding: 0.7em
-}
-
-#main_content .alert p {
-	border-color: #dd7737
-}
 
 h1 {
 	text-align: right
@@ -50,10 +25,6 @@ h3 {
 ul li a.link_src {
 	color: yellow;
 	text-decoration: none
-}
-
-#main_content p {
-	text-align: justify
 }
 
 .book_nav li a {
@@ -69,20 +40,6 @@ ul li a.link_src {
 	list-style-type: none
 }
 
-#main_content .preamble {
-	margin-top: 2em;
-	text-align: right;
-	font-style: italic;
-	margin-right: auto;
-	margin-left: auto;
-	widht: 400px
-}
-
-#main_content .preamble p {
-	margin-top: 0;
-	margin-bottom: 0;
-	text-align: right
-}
 
 #sec_menu a {
 	color: #0063a6

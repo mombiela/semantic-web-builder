@@ -25,3 +25,60 @@
 #main_header a {
 	color: #444
 }
+
+/* ***************** */
+/* Paneles de código */
+/* ***************** */
+
+.panel, pre {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d9d9d9;
+	margin-bottom: 1.0rem;
+	padding: 1.0rem;
+	background: #f2f2f2;
+	line-height: 1;	
+	/*font-size: 90%*/
+}
+
+/* ************ */
+/* main_content */
+/* ************ */
+
+#main_content {
+	background-color: #fff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#main_content .alert p, #main_content .assert p {
+	border: 2px dashed #CCC;
+	margin-left: 2em;
+	margin-right: 2em;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding: 0.7em
+}
+
+#main_content .alert p {
+	border-color: #dd7737
+}
+
+#main_content p {
+	text-align: justify
+}
+
+#main_content .preamble {
+	margin-top: 2em;
+	text-align: right;
+	font-style: italic;
+	margin-right: auto;
+	margin-left: auto;
+	widht: 400px
+}
+
+#main_content .preamble p {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: right
+}

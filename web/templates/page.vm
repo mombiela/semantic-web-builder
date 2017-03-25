@@ -60,10 +60,8 @@
 	<!-- top bar -->
 	<!-- ******* -->
 	
-    <div class="row">
+    <div class="row top-bar">
       <div class="small-12 columns">
-		<div class="top-bar">
-		
 			<div class="top-bar-left">
 		    	<ul class="menu">
 					<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
@@ -80,14 +78,13 @@
 				</ul>
 			</div>    	
     	</div>
-      </div>
     </div>
 	
 	<!-- ******* -->
 	<!-- Content -->
 	<!-- ******* -->
 	
-    <div class="row">
+    <div class="row" id="main_content">
       <div class="small-12 columns">
 		#parse("/navigation.vm")
 	
