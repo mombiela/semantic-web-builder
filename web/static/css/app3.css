@@ -1,0 +1,113 @@
+
+#container {
+	background-color: #fff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3)
+}
+
+footer {
+	margin-top: 2em;
+	margin-bottom: 2em
+}
+
+pre {
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 90%
+}
+
+#advertisement {
+	padding-top: 1em
+}
+
+#main_content {
+	padding-top: 1em
+}
+
+#main_content .alert p, #main_content .assert p {
+	border: 2px dashed #CCC;
+	margin-left: auto;
+	margin-right: auto;
+	width: 470px;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding: 0.7em
+}
+
+#main_content .alert p {
+	border-color: #dd7737
+}
+
+h1 {
+	text-align: right
+}
+
+h3 {
+	font-weight: normal
+}
+
+ul li a.link_src {
+	color: yellow;
+	text-decoration: none
+}
+
+#main_content p {
+	text-align: justify
+}
+
+.book_nav li a {
+	color: #dd7737
+}
+
+.book_nav li {
+	padding: 0.8em;
+	padding-left: 0
+}
+
+.book_nav ul {
+	list-style-type: none
+}
+
+#main_content .preamble {
+	margin-top: 2em;
+	text-align: right;
+	font-style: italic;
+	margin-right: auto;
+	margin-left: auto;
+	widht: 400px
+}
+
+#main_content .preamble p {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: right
+}
+
+#sec_menu a {
+	color: #0063a6
+}
+
+#main_header h1, #main_header h2 {
+	color: black;
+	padding: 0;
+	margin: 0;
+	font-family: "Courier New", Courier, monospace;
+	text-align: left
+}
+
+#main_header h1 {
+	font-size: 350%;
+	font-weight: normal;
+	padding-top: 0.15em
+}
+
+#main_header h2 {
+	font-size: 130%;
+	font-weight: normal;
+	line-height: 0.8em
+}
+
+#main_header a {
+	color: #444
+}
