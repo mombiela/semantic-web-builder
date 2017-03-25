@@ -15,14 +15,16 @@
 
 <body>
 
-    <div class="row">
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <div class="row" id="main_header">
       <div class="small-12 columns">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.canonicalName} == "chapter")
-				STxT: ${lang.get("title_book")}
-			#else
-				STxT: Semantic text
+			#if(${doc.canonicalName} == "chapter")	STxT: ${lang.get("title_book")}
+			#else                  					STxT: Semantic text
 			#end
     	    </a>
 		</h1>
@@ -30,6 +32,10 @@
       </div>
     </div>
 
+	<!-- **** -->
+	<!-- menu -->
+	<!-- **** -->
+	
     <div class="row">
       <div class="small-12 columns">
 		<ul class="menu simple align-right">
@@ -50,21 +56,36 @@
       </div>
     </div>
 
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
     <div class="row">
       <div class="small-12 columns">
-	    <ul class="left">
-			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-			<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
-			<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-			<li><a href="chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
-			<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
-			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
-    	</ul>
-    	<ul class="right">
-			<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT" class="link_src">&#x25BC;&#x25BC;&#x25BC;</a></li>
-    	</ul>
+		<div class="top-bar">
+		
+			<div class="top-bar-left">
+		    	<ul class="menu">
+					<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
+					<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
+					<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
+					<li><a href="chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
+					<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
+					<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
+		    	</ul>
+		    </div>
+			<div class="top-bar-right">
+		    	<ul class="menu">
+					<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT" class="button">&#x25BC;&#x25BC;&#x25BC;</a></li>
+				</ul>
+			</div>    	
+    	</div>
       </div>
     </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
 	
     <div class="row">
       <div class="small-12 columns">
