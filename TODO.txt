@@ -16,3 +16,4 @@ Largo plazo
 * Realizar transformador de imágenes que permita realizar reducidas
 * Realizar creador de imágenes a partir de un fichero de texto
 * Realizar creador de pdf a partir de un fichero de texto
+
