@@ -90,3 +90,12 @@ footer {
 	margin-bottom: 2em
 }
 
+/* ******** */
+/* book_nav */
+/* ******** */
+
+.book_nav li a {
+	color: #dd7737
+}
+
+
