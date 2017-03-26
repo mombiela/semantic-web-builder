@@ -74,7 +74,7 @@
 		    </div>
 			<div class="top-bar-right">
 		    	<ul class="menu">
-					<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+					<li><a class="link_src" href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
 				</ul>
 			</div>    	
     	</div>
