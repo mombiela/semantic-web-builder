@@ -85,7 +85,7 @@
 	<!-- ******* -->
 	
     <div class="row" id="main_content">
-      <div class="small-12 columns">
+      <div class="small-12 medium-8 columns">
 		#parse("/navigation.vm")
 	
 		#if(${doc.canonicalName} == "chapter")
@@ -113,11 +113,11 @@
 				<pre>${utils.escapeHtml($node.tvalue)}</pre>
 			#elseif(${node.canonicalName} == "assert")
 				<div class="row">
-            	<div class="assert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            		<div class="assert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
             	</div>
 			#elseif(${node.canonicalName} == "alert")
 				<div class="row">
-            	<div class="alert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            		<div class="alert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
             	</div>
 			#end
 		#end
@@ -125,7 +125,10 @@
 		#if($doc.getChilds("text").size()>0)
 			#parse("/navigation.vm")
 		#end
-	
+
+	  </div>
+	  	
+      <div class="small-12 medium-4 columns">
 		<aside id="advertisement">
 			<h3>${lang.get("lat.sponsors.title")}</h3>
         	<p>${lang.get("lat.sponsors.1")}<p>
