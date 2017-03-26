@@ -17,3 +17,4 @@ Largo plazo
 * Realizar creador de imágenes a partir de un fichero de texto
 * Realizar creador de pdf a partir de un fichero de texto
 
+
