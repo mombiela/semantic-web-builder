@@ -19,7 +19,7 @@
 	<!-- main_header -->
 	<!-- *********** -->
 	
-    <div class="row" id="main_header">
+    <div class="row collapse" id="main_header">
       <div class="small-12 columns">
 	    <h1>
 			<a href="index.html">
@@ -36,7 +36,7 @@
 	<!-- menu -->
 	<!-- **** -->
 	
-    <div class="row">
+    <div class="row collapse" id="menu-1">
       <div class="small-12 columns">
 		<ul class="menu simple align-right">
 			#if(${lang.get("lang")} == "en")
@@ -60,7 +60,7 @@
 	<!-- top bar -->
 	<!-- ******* -->
 	
-    <div class="row top-bar">
+    <div class="row collapse top-bar">
       <div class="small-12 columns">
 			<div class="top-bar-left">
 		    	<ul class="menu">
