@@ -52,8 +52,6 @@
 
 #main_content .alert p, #main_content .assert p {
 	border: 2px dashed #CCC;
-	margin-left: 2em;
-	margin-right: 2em;
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 1em;
@@ -82,3 +80,13 @@
 	margin-bottom: 0;
 	text-align: right
 }
+
+/* ****** */
+/* Footer */
+/* ****** */
+
+footer {
+	margin-top: 2em;
+	margin-bottom: 2em
+}
+

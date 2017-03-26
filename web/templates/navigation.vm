@@ -1,6 +1,6 @@
 #if(${doc.getChild("navigation")})
 	<nav class="book_nav row">
-    <ul>
+    <ul class="menu simple">
 		#set($nav = ${doc.getChild("navigation")})
 
 		#if($nav.getChild("previous"))

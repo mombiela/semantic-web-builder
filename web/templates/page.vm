@@ -74,7 +74,7 @@
 		    </div>
 			<div class="top-bar-right">
 		    	<ul class="menu">
-					<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT" class="button">&#x25BC;&#x25BC;&#x25BC;</a></li>
+					<li><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
 				</ul>
 			</div>    	
     	</div>
@@ -112,9 +112,13 @@
 			#elseif(${node.canonicalName} == "code")
 				<pre>${utils.escapeHtml($node.tvalue)}</pre>
 			#elseif(${node.canonicalName} == "assert")
-            	<div class="assert">${wiki.render($node.tvalue)}</div>
+				<div class="row">
+            	<div class="assert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            	</div>
 			#elseif(${node.canonicalName} == "alert")
-            	<div class="alert">${wiki.render($node.tvalue)}</div>
+				<div class="row">
+            	<div class="alert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            	</div>
 			#end
 		#end
 	
