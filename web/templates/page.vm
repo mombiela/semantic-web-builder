@@ -139,6 +139,16 @@
         	<p>${lang.get("lat.ads.2")}</p>
 			-->
 			#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- STxT - Adaptable -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-0611338592562725"
+                 data-ad-slot="5037052041"
+                 data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 			<p>&nbsp;</p>
 			#end
 		</aside>
