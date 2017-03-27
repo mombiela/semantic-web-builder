@@ -1,18 +1,12 @@
 #if(${doc.getChild("navigation")})
-	<div class="column row">
-    <ul class="menu book_nav">
+	<div class="column row book_nav">
 		#set($nav = ${doc.getChild("navigation")})
 
 		#if($nav.getChild("previous"))
-			<li style="float:left;">
-            	<a 	href="chapter_${nav.getChild("previous").tvalue}.html" title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
-			</li>
+           	<a style="float:left;"	href="chapter_${nav.getChild("previous").tvalue}.html" title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
 		#end
 		#if($nav.getChild("next"))
-			<li style="float:right;">
-            	<a href="chapter_${nav.getChild("next").tvalue}.html" title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
-			</li>
+           	<a style="float:right;" href="chapter_${nav.getChild("next").tvalue}.html" title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
 		#end
-	</ul>
 	</div>
 #end						
