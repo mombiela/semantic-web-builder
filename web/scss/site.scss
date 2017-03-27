@@ -94,7 +94,7 @@ $global-font-size: 85% !default;
 /* ******* */
 
 div.top-bar, div.top-bar ul li a {
-	background-color: rgb(0,99,166);
+	background-color: rgb(57, 55, 163);
 	color: white;
 }
 
@@ -124,7 +124,7 @@ div.top-bar ul li a.link_src {
 
 
 #main_content .alert p, #main_content .assert p {
-	border: 2px dashed #CCC;
+	border: 3px dashed rgb(57, 55, 163);
 	text-align: center;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -132,7 +132,7 @@ div.top-bar ul li a.link_src {
 }
 
 #main_content .alert p {
-	border-color: #dd7737
+	border-color: rgb(255, 75, 156)
 }
 
 #main_content p {
