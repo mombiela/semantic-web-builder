@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="../css/app.css">
     -->
     <link rel="stylesheet" href="../css/site.css">
+		
+	#if(${lang.get("lang")} == "en")
+	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
+	#end
+		
+	#if(${lang.get("lang")} == "es")
+	<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/${doc_name}.html" />
+	#end
+	
 	<script src="../js/cookie.js"></script>
 	<script>#parse("/page.js")</script>	
 </head>
