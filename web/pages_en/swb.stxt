@@ -16,7 +16,7 @@ Assert:
 Content:
 	===What is SWB?===
 	
-	It is a set of Apache Ant scripts that allow you to build a portal through the use of 
+	It is a set of Java scripts that allow you to build a portal through the use of 
 	pages created with STxT. Although we would like for it to be used as a 
 	"source of inspiration" for other projects or developments. With this project we 
 	have used this very same site, so we are very pleased with the results.
@@ -47,10 +47,10 @@ Content:
 	
 	=== What requirements does it have? ===
 	
-	Well, in order to run it you need a Java virtual machine and Apache Ant available in the path.
+	Well, in order to run it you need a Java virtual machine available in the path.
 	
 	The project is created with Eclipse, so that its integration is direct. For the templates 
-	we have used Apache Velocity.
+	we have used [[http://velocity.apache.org|Apache Velocity|apache]].
 
 # Greetings to the Apache community!! The computer world wouldn't be the same without you!!
 	
