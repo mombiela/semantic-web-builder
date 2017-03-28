@@ -5,7 +5,10 @@ Corto plazo
 * 404.html
 * es/cookies.html
 * en/cookies.html
-* setCookie("cookies_informed") para informar cookies
+* Alerta de uso de cookies
+	* Cuadro de texto
+	* setCookie("cookies_informed") para informar cookies
+	* No mostrar alerta si ya informado de cookies
 
 -----------
 Largo plazo
