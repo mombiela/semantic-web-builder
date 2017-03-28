@@ -2,7 +2,6 @@
 Corto plazo
 -----------
 
-* 404.html
 * es/cookies.html
 * en/cookies.html
 * Alerta de uso de cookies
