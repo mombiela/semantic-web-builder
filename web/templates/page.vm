@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/foundation.min.css">
     <link rel="stylesheet" href="../css/app.css">
     -->
-    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/site-20170328.css">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
