@@ -46,8 +46,10 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
+/* !!!!!!!! Font size: 85 */
+$global-font-size: 85%;
+/* !!!!!!!! Width: 950 */
+$global-width: rem-calc(950);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #1779ba,
