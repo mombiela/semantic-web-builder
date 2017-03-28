@@ -8,6 +8,7 @@ Corto plazo
 	* Cuadro de texto
 	* setCookie("cookies_informed") para informar cookies
 	* No mostrar alerta si ya informado de cookies
+* En móvil hacer que <pre> -> overflow -> scroll
 
 -----------
 Largo plazo
