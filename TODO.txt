@@ -2,6 +2,7 @@
 Corto plazo
 -----------
 
+* Cambiar STxT por <span class="STxT">STxT</span> + estilo de fuente monospace
 * En móvil hacer que <pre> -> overflow -> scroll
 
 -----------
