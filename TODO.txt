@@ -2,8 +2,6 @@
 Corto plazo
 -----------
 
-* es/cookies.html
-* en/cookies.html
 * Alerta de uso de cookies
 	* Cuadro de texto
 	* setCookie("cookies_informed") para informar cookies
