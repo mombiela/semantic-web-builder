@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/foundation.min.css">
     <link rel="stylesheet" href="../css/app.css">
     -->
-    <link rel="stylesheet" href="../css/site-20170328.css">
+    <link rel="stylesheet" href="../css/site-20170404.css">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
@@ -172,5 +172,12 @@
 		<footer>${lang.get("foot.1")}</footer>
 	  </div>
 	</div>
+	
+	<div id="cookies_adv">
+		${lang.get("cookies_1")}
+        <a href="javascript:accept();" class="button">${lang.get("cookies_2")}</a>
+        <a href="cookies.html">${lang.get("cookies_3")}</a>
+    </div>
+    <script>checkCookies();</script>
 </body>
 </html>
