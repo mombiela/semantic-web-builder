@@ -26,7 +26,7 @@ text:
 	está disponible en Internet:
 
 assert:
-	[[https://github.com/mombiela/stxt-parser | https://code.google.com/p/stxt-parser/]]
+	[[https://github.com/mombiela/stxt-parser | https://github.com/mombiela/stxt-parser]]
 	
 text:
 	Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.
