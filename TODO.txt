@@ -6,8 +6,6 @@ Corto plazo
 	* Cuadro de texto
 	* setCookie("cookies_informed") para informar cookies
 	* No mostrar alerta si ya informado de cookies y aceptado
-	* Mostrar página para aceptar cookies en sitio de publicidad, diciendo que
-	  por favor, acepten cookies.
 * En móvil hacer que <pre> -> overflow -> scroll
 
 -----------
