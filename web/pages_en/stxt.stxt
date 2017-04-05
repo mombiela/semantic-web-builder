@@ -7,7 +7,7 @@ Metadata:
 	Last_modif: 2013-03-01
 
 Assert:
-	Our entire website is available in STxT.\\
+	Our entire website is available in @STxT@.\\
 	Just replace //*.html// with //*.stxt// \\or click on the yellow triangles :-)
 
 Content:
@@ -15,10 +15,10 @@ Content:
 	
 	You will see that all the pages can be accessed with the *.stxt extension instead of *.html, 
 	obtaining the page’s original source code. We like free information, and we believe that using 
-	STxT is a nice way of obtaining it. Besides, it didn’t cost us anything to make it. Our 
-	original sources were already STxT!! :-D
+	@STxT@ is a nice way of obtaining it. Besides, it didn’t cost us anything to make it. Our 
+	original sources were already @STxT@!! :-D
 	
-	By the way, the STxT files have surprises in them!! Take a look at them, sometimes you will see 
+	By the way, the @STxT@ files have surprises in them!! Take a look at them, sometimes you will see 
 	something that might be interesting or that simply will make you smile ;-)
 	
 html:

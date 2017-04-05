@@ -17,7 +17,7 @@ Content:
 	===¿Qué es SWB?===
 	
 	Un conjunto de scripts de Java que permiten construir un portal mediante
-	el uso de páginas creadas con STxT. Aunque a nosotros nos gustaría
+	el uso de páginas creadas con @STxT@. Aunque a nosotros nos gustaría
 	que fuese usado como "fuente de inspiración" para otros proyectos
 	o desarrollos. Con ese proyecto hemos usado este mismo portal, por
 	lo que estamos muy satisfechos con los resultados.
@@ -39,7 +39,7 @@ Content:
 	
 	Realmente hicimos estos scripts en un día; justo cuando empezábamos a hacer esta web.
 	Queríamos algo muy funcional, rápido de hacer, y que nos permitiese tener contenido estático
-	rápidamente publicado. Y resulta que STxT nos aportó la solución.
+	rápidamente publicado. Y resulta que @STxT@ nos aportó la solución.
 	Nos ha gustado tanto que hemos tenido que enseñarlo. Además, es el //código	fuente//
 	con el que hemos construido esta web. ¿Quién más puede presumir de ésto?
 	
