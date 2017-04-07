@@ -11,14 +11,14 @@ Nav:
 	Next: 03
 
 title:	
-	Chapter 2: What is STxT?
+	Chapter 2: What is @STxT@?
 
 assert:
 	This project is the result of years of //subconscious// reflection,\\
 	although it only took a moment of inspiration.
 
 text:
-	This chapter may seem a little unfocused, but they are my reflections when creating STxT.
+	This chapter may seem a little unfocused, but they are my reflections when creating @STxT@.
 	Please forgive me if I repeat myself a bit, if you don't understand what I am saying, or if it seems an incoherent speech.
 	But this is the way it is. It has been written to the best of my abilities, on different days, but always using it as the 
 	basis of creation.
@@ -30,23 +30,23 @@ text:
 	The other chapters are //The Perspiration//.
 
 	Glance quickly over this chapter, and read it more in depth when you already know
-	more about STxT. This is good advice ;-)
+	more about @STxT@. This is good advice ;-)
 
 h1: 
-	What is STxT?
+	What is @STxT@?
 	
 text:
 	It is a purely semantic language, with some very basic rules, 
 	which allows the creation of documents with structured and easy 
 	to interpret content, by both humans and machines. 
-	You could be reading a document in STxT without actually realizing
+	You could be reading a document in @STxT@ without actually realizing
 	that it is. 	
 	
-	STxT: A language for the web. It does not mean one more, one more among many. 
+	@STxT@: A language for the web. It does not mean one more, one more among many. 
 	It means //ONE// language for the web. Just one. And many at the same time. 
 	As many as you want. This is my proposal.
 	
-	STxT is a language for writing structured documents. It lets us create
+	@STxT@ is a language for writing structured documents. It lets us create
 	documents in a non-ambiguous way,	
 	adhering to very precise rules, 
 	but achieving documents that can be read by people 
@@ -57,7 +57,7 @@ text:
 	They have a hierarchical structure that is very similar to xml documents,
 	and their translation can be direct.                                
 	
-	In the future, STxT could replace other technologies such as xml or LaTex.
+	In the future, @STxT@ could replace other technologies such as xml or LaTex.
 	
 h1:
 	Statement of Intent :-)
@@ -87,16 +87,16 @@ text:
 	  but it is not an escape character. You’ll see, I have already expanded too much on this point...
 
 h1:
-	What does STxT mean?
+	What does @STxT@ mean?
 
 text:
-	Well, originally STxT means "Semantic text". 
+	Well, originally @STxT@ means "Semantic text". 
 	Although it could also have other meanings, that I particularly like: SuperText and SexyText.
 
 	* SuperText: it is text, but super :-D
 	* SexyText: it is particularly beautiful text ;-)
 
-	How did I choose the STxT extension? I was sure that documents had to be semantic,
+	How did I choose the @STxT@ extension? I was sure that documents had to be semantic,
 	so there was something that had to have "semantic". In addition, languages
 	with few letters in them are “in” now: xml, tex, html, xsd,... so stxt seemed to me like a
 	good choice. I just needed to check that this was not being used already, so looking
@@ -114,7 +114,7 @@ text:
 	the syntax point of view, looking for a computer approach, never a semantic one. 
 
 assert:
-	//With STxT we solve semantics and syntax at the same time, \\ in a stylish and beautiful way.//
+	//With @STxT@ we solve semantics and syntax at the same time, \\ in a stylish and beautiful way.//
 
 text:
 	Make no mistake. I am a computer tech. But sometimes you have to see things from the other side, 
@@ -133,9 +133,9 @@ text:
 	One of the goals is to go from having //1// relatively complicated language for doing things
 	(e.g.: XML, Latex,...) to having very simple //n//, with content linked to a structure.
 	This language needs to be able to be learned in a very short time. Almost with one example 
-	we should have enough. STxT is made so that it is this way. In addition, STxT lets us pass 
-	from STxT to other languages, such as latex, so that the more technical people 
-	can do the final work. But the origin and the base will always be STxT. 
+	we should have enough. @STxT@ is made so that it is this way. In addition, @STxT@ lets us pass 
+	from @STxT@ to other languages, such as latex, so that the more technical people 
+	can do the final work. But the origin and the base will always be @STxT@. 
 
 	It is much better that it is this way, as we write in pure semantics, without taking into account structure //at all//.
 	
@@ -182,7 +182,7 @@ Text:
 	  since they are almost automatic due to their location. Namespaces like you've never seen before ;-) 
 	* Very few data types (numbers without limitation, this is semantic, not a programming language)
 	* Easy to transform from this format to other formats
-	* Ambition: allow progress towards the semantic web, with the creation of beautiful html views and a strong STxT base.
+	* Ambition: allow progress towards the semantic web, with the creation of beautiful html views and a strong @STxT@ base.
 	* One of the objectives is to make the information open. This is also done during the design phase. 
 	  By design, the content is open.	
 		
@@ -197,7 +197,7 @@ Text:
 	The language deserves it. It cannot be kept hidden. It has to be tried. And it has to be liked.
 	I don't want to be the only one who has it. It wouldn’t be fair.
 
-	I would like for STxT to hold a place of honor with other languages in the future,
+	I would like for @STxT@ to hold a place of honor with other languages in the future,
 	and that this was due to its acceptance and the usefulness that it offered. 
 
 # -----------------------------------------

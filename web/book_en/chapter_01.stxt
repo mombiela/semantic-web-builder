@@ -15,7 +15,7 @@ title: Chapter 1: How to read this book?
 h1: Who this book is for
 	
 text:
-	This book is for all those who want to learn STxT. 
+	This book is for all those who want to learn @STxT@. 
 	
 	It is not just the explanation of a technology. It is the very process of its creation. 
 	It is the book where it is //fully// explained; as it is understood by its creator. 
@@ -39,7 +39,7 @@ text:
 	No specific computer knowledge is necessary,
 	but having notions of technologies such as xml or html is recommended. 
 
-	In order to understand the [[chapter_11. html|Chapter 11: Parsing of STxT]]
+	In order to understand the [[chapter_11. html|Chapter 11: Parsing of @STxT@]]
 	programming skills are necessary.
 
 h1:	Stars
@@ -55,7 +55,7 @@ h1: Reading order
 
 text:
 	Everyone should read [[chapter_03. html|Chapter 3, tutorial]]. It is basic. 
-	The [[chapter_09. html|Chapter 9, STxT and XML]] is also very interesting, 
+	The [[chapter_09. html|Chapter 9, @STxT@ and XML]] is also very interesting, 
 	as we compare these two languages.
 
 	From here on the order is indifferent. I leave it up to you :-)
