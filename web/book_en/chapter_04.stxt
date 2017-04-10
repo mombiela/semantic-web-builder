@@ -29,7 +29,7 @@ alert:
 	Attention, this is complicated; but worth it ;-) 
 	
 text:
-	When we are done you will almost be STxT experts :-)
+	When we are done you will almost be @STxT@ experts :-)
 
 h1:	
 	Namespaces and grammars (*)
@@ -45,7 +45,7 @@ text:
 	When we say that a document must comply with the grammar, we are saying that all nodes should be correct,
 	each depending on their namespace and definition.
 
-	Definition of grammar, as we understand it in STxT:
+	Definition of grammar, as we understand it in @STxT@:
 
 assert:
 	"Grammar is a cross definition of several namespaces, for a given document type."
@@ -84,7 +84,7 @@ assert:
 	A document is valid if all its nodes are valid according to the grammar.
 	
 text:
-	We know that an STxT document is a structured set of nodes,
+	We know that an @STxT@ document is a structured set of nodes,
 	where each of them must belong to a namespace.
 	Therefore, because of this we can also say:
 
@@ -149,7 +149,7 @@ h1:
 	How Namespaces are created and read
 
 text:
-	Creating a namespace is creating an STxT document with a specific structure
+	Creating a namespace is creating an @STxT@ document with a specific structure
 	and making it accessible on the web. This is important, since **THIS DOCUMENT HAS TO EXIST**.
 
 	The document must be a namespace definition
@@ -219,7 +219,7 @@ text:
 
 	**Description**: Here we give a description of what this node is, explaining it in a "human way".
 	This is very useful, as it allows us to really know what a node is, 
-	and thus learn about the contents of an STxT document.
+	and thus learn about the contents of an @STxT@ document.
 	This field is not mandatory, but is highly recommended.
 
 	**Child**: Specifies a possible child node. It must have the following attributes: Node, Namespace, and Num.
@@ -284,7 +284,7 @@ h1:
 text:
 	The node with the NODE type is perhaps the most important one, as it must always be present.
 	It is a node that can contain other nodes, and there must always be nodes of this type.
-	They are concept groupers, and make the entire hierarchical structure of STxT possible.
+	They are concept groupers, and make the entire hierarchical structure of @STxT@ possible.
 
 	Let’s go to our specific example, and fill in all this content.
 	We mainly have to say which children it can have, how many,
@@ -432,7 +432,7 @@ text:
 	This type of node corresponds to a URL. It must be an //absolute// url,
 	of the standard type used on the Internet. This type is also very important,
 	as it lets us associate one document with another one available on the Internet. It can be
-	used to reference images, websites, pages, blogs... or even another STxT document!
+	used to reference images, websites, pages, blogs... or even another @STxT@ document!
 
 	Valid examples:
 
@@ -445,7 +445,7 @@ h1:
 
 text:
 	There are four types of numerical nodes, and they correspond to specific mathematical sets.
-	We say this because STxT is not linked to any programming language,
+	We say this because @STxT@ is not linked to any programming language,
 	and **has no restriction in terms of sizes or lengths**.
 	Programming languages often do have these restrictions;
 	for example they need integers to be 32- or 64-bit.

@@ -29,7 +29,7 @@ alert:
 	Atentos, esto es complejo; pero valdrá la pena ;-) 
 	
 text:
-	Cuando terminemos ya casi seréis unos expertos de STxT :-)
+	Cuando terminemos ya casi seréis unos expertos de @STxT@ :-)
 	
 h1:
 	Namespaces y gramáticas (*)
@@ -45,7 +45,7 @@ text:
 	Cuando decimos que un documento tiene que cumplir la gramática decimos que todos los nodos deben ser correctos,
 	cada uno dependiendo de su namespace y definición.
 	
-	Definición de gramática, tal como la entendemos en STxT:
+	Definición de gramática, tal como la entendemos en @STxT@:
 	
 assert:
 	"Una gramática es una definición cruzada entre varios namespaces, para un tipo de documento dado".
@@ -84,7 +84,7 @@ assert:
 	Un documento es válido si todos sus nodos son válidos de acuerdo con la gramática.
 	
 text:
-	Sabemos que un documento STxT es un conjunto estructurado de nodos,
+	Sabemos que un documento @STxT@ es un conjunto estructurado de nodos,
 	dónde cada uno de ellos debe pertenecer a un namespace.
 	Pues bien, debido a esto podemos afirmar también:
 	
@@ -149,7 +149,7 @@ h1:
 	Cómo se crean y se leen los Namespaces
 	
 text:
-	Crear un namespace es crear un documento STxT con una estructura determinada
+	Crear un namespace es crear un documento @STxT@ con una estructura determinada
 	y ponerlo accesible en la web. Esto es importante, ya que **ESTE DOCUMENTO TIENE QUE EXISTIR**.
 	
 	El documento tiene que ser una definición de namespace
@@ -219,7 +219,7 @@ text:
 	
 	**Description**: Damos una descripción de lo que es este nodo, explicativa a "modo humano".
 	Esto es muy útil, ya que nos permite saber realmente qué es un nodo, 
-	y de esta forma conocer con detalle el contenido de un documento STxT.
+	y de esta forma conocer con detalle el contenido de un documento @STxT@.
 	Este campo no es obligatorio, pero sí muy recomendable.
 	
 	**Child**: Especifica un posible nodo hijo. Debe tener los siguientes atributos: Node, Namespace y Num.
@@ -284,7 +284,7 @@ h1:
 text:
 	El nodo con el tipo NODE es quizá el más importante, ya que siempre tiene que estar.
 	Es un nodo que puede contener a otros nodos, y siempre tiene que haber nodos de este tipo.
-	Son agrupadores de conceptos, y permiten toda la estructura jerárquica de STxT.
+	Son agrupadores de conceptos, y permiten toda la estructura jerárquica de @STxT@.
 	
 	Vamos a nuestro ejemplo concreto, y rellenemos todo este contenido.
 	Principalmente tenemos que decir qué hijos puede tener, en qué cantidad,
@@ -431,7 +431,7 @@ text:
 	Los nodos de este tipo corresponden a una URL. Debe ser una url //absoluta//,
 	de la forma estándar usada en internet. Este tipo también es muy importante,
 	ya que permite asociar un documento con otro disponible en Internet. Se puede
-	usar para referenciar imágenes, webs, páginas, blogs,... ¡o incluso otro documento STxT!
+	usar para referenciar imágenes, webs, páginas, blogs,... ¡o incluso otro documento @STxT@!
 	
 	Ejemplos válidos:
 	
@@ -444,7 +444,7 @@ h1:
 	
 text:
 	Hay cuatro tipos de nodos numéricos, y corresponden a conjuntos matemáticos concretos.
-	Decimos esto porque STxT no está ligado a ningún lenguaje de programación,
+	Decimos esto porque @STxT@ no está ligado a ningún lenguaje de programación,
 	y **no tiene ninguna restricción en cuanto a tamaños o longitudes**.
 	Los lenguajes de programación a menudo sí tienen estas restricciones;
 	por ejemplo que los enteros sean de 32 o 64 bits.
