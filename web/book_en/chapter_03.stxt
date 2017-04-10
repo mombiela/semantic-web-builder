@@ -11,11 +11,11 @@ Nav:
 	Next: 04
 
 title:	
-	Chapter 3: STxT, Tutorial
+	Chapter 3: @STxT@, Tutorial
 	
 text:
 	If you had to read just one chapter of this book, this would be that chapter. 
-	Here we explain what STxT is, in a straightforward manner, without further ado.
+	Here we explain what @STxT@ is, in a straightforward manner, without further ado.
 	And we also give you enough notions so you can read any other chapter.
 
 h1:
@@ -26,7 +26,7 @@ text:
 	and //everybody// can get to understand it.
 	
 	The example will be a cooking recipe. We will be tweaking it, 
-	so that it increasingly looks more like an STxT text, but you do not have to worry about this.
+	so that it increasingly looks more like an @STxT@ text, but you do not have to worry about this.
 	I promise that it will be easy, not very traumatic, and you will like it :-D
 
 	Without further ado... //Sweet fritters from Girona!//
@@ -63,8 +63,8 @@ code:
 	cover them with sugar.
 
 text:
-	For now it is only text, it cannot yet be considered a valid STxT.	
-	But we will be tweaking it and little by little we will obtain a perfect STxT ;-)
+	For now it is only text, it cannot yet be considered a valid @STxT@.	
+	But we will be tweaking it and little by little we will obtain a perfect @STxT@ ;-)
 
 	First, we have to identify the parts and think of a hierarchical 
 	structure.	A possible structure would be made of 5 parts. The full document
@@ -119,13 +119,13 @@ code:
 	cover them with sugar.
 
 text:
-	This is a very natural structure, and is the basis for obtaining the final STxT document.
+	This is a very natural structure, and is the basis for obtaining the final @STxT@ document.
 
 h1:
 	EVERYTHING in Namespaces (ns)
 
 text:
-	We are going to lose our fear //right now// of namespaces in STxT; 
+	We are going to lose our fear //right now// of namespaces in @STxT@; 
 	as a tribute to all the xml traumatized users who cannot stand them ;-)
 
 alert:
@@ -135,19 +135,19 @@ alert:
 	Now pay attention. 
 
 text:
-	An STxT document is made up of a set of nested nodes, 
+	An @STxT@ document is made up of a set of nested nodes, 
 	and **ALL** the nodes must belong to a namespace (it does not have to be the same one always). 
 
-	A namespace (ns) is a document (STxT!!) where it is specified which ones are its nodes, 
+	A namespace (ns) is a document (@STxT@!!) where it is specified which ones are its nodes, 
 	their shape, and what they may contain. 
 	
 	Contrary to other languages (such as xml) this document **MUST EXIST** 
 	and must be accessible through the web. It is normal that programs and parsers save it locally, 
 	but it is a requirement that the document exists and is accessible through the Internet. 
-	STxT has been made for the free access of information and it is basic that everyone
+	@STxT@ has been made for the free access of information and it is basic that everyone
 	be able to find the definitions. 
 
-	Let’s see how the example namespace would be (the real STxT document is not like this,
+	Let’s see how the example namespace would be (the real @STxT@ document is not like this,
 	we will see this later, but the information that it will contain will be this same one):
 	
 code:
@@ -228,10 +228,10 @@ code:
 		and cover them with sugar.
 
 text:
-	And that's it! Our first STxT document! :-) Take a good look at it. You don't need anything else.
+	And that's it! Our first @STxT@ document! :-) Take a good look at it. You don't need anything else.
 
 	Read this section as many times as you wish, it is essential. 
-	It is everything. If you understand this, that’s it. You will know STxT.
+	It is everything. If you understand this, that’s it. You will know @STxT@.
 	
 alert:
 	Please do not go on. Read this section at least once again.\\
@@ -242,7 +242,7 @@ h1:
 	Nodes and indentation
 
 text:	
-	We said before that an STxT document is a set of nested nodes. But we have not said
+	We said before that an @STxT@ document is a set of nested nodes. But we have not said
 	what the nesting rules are, or how it is done. But everything is very intuitive and visual:
 
 assert:
@@ -303,10 +303,10 @@ text:
 	
 	We see that indentation is the key, and indentation is obtained by tab characters.
 	It is also possible to obtain it through spaces, although the tabs have always been a standard in texts, 
-	so it is the recommended form in STxT (besides saving space).
+	so it is the recommended form in @STxT@ (besides saving space).
 
 assert:
-	Rule: An STxT document can only have one main node
+	Rule: An @STxT@ document can only have one main node
 
 text:
 	This rule has to be met always, thus allowing for a simplification in the structuring of the 
@@ -352,7 +352,7 @@ h1:
 	Node and Text
 
 text:
-	The most common node types in STxT documents are NODE and TEXT.
+	The most common node types in @STxT@ documents are NODE and TEXT.
 	The node type is a container for other nodes, while the text type 
 	allows the inclusion of a text, without restrictions.
 
@@ -382,7 +382,7 @@ text:
 code:
 	Node (...):
 		Text Node: We are going to put an xml example; 
-			of how things were done before STxT:
+			of how things were done before @STxT@:
 			<node>
 				<node1>This is an example</node1>
 				<node2>This is an escape example: &lt;</node2>
@@ -397,7 +397,7 @@ text:
 	in order to comment or add any observations, but have no effect on the document itself.
 
 assert:
-	In STxT, all lines that begin with the character # are comments
+	In @STxT@, all lines that begin with the character # are comments
 
 text:
 	Let’s go back to our example. We’ll imagine that we want to add information to our recipe,
@@ -428,7 +428,7 @@ text:
 	And here is grammar. Or, the definition of namespace nodes.
 	We will see it in more depth in the next chapter, 
 	but it is fairly self-explanatory;
-	like all STxT documents ;-)
+	like all @STxT@ documents ;-)
 
 code:
 	Namespace Definition(www.semantictext.info/namespace.stxt):
@@ -486,11 +486,11 @@ h1:
 	Overview
 
 text:
-	* An STxT document is a set of hierarchical nodes.
+	* An @STxT@ document is a set of hierarchical nodes.
 	* The structure of any node is defined in its corresponding namespace.
 	* The node hierarchy can be seen visually, 
 	  and is achieved through indentation (using tabs).
-	* An STxT document can only have one main node, 
+	* An @STxT@ document can only have one main node, 
 	  which lets us align its children without having to indent them
 	* The namespaces of all nodes do not need to be specified, only the one for the main node. 
 	  The rest will be inferred automatically.

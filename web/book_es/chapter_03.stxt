@@ -11,11 +11,11 @@ Nav:
 	Next: 04
 
 title:
-	Capítulo 3: STxT, Tutorial
+	Capítulo 3: @STxT@, Tutorial
 	
 text:
 	Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
-	Te explicamos lo que es STxT directamente, sin más preámbulos.
+	Te explicamos lo que es @STxT@ directamente, sin más preámbulos.
 	Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
 	
 h1:
@@ -26,7 +26,7 @@ text:
 	y //todo el mundo// lo puede llega a entender.
 	
 	El ejemplo será una receta de cocina. La iremos retocando, 
-	para que cada vez se parezca más a un texto STxT, pero no tenéis por qué preocuparos.
+	para que cada vez se parezca más a un texto @STxT@, pero no tenéis por qué preocuparos.
 	Os prometo que será fácil, poco traumático, y os va a gustar :-D
 	
 	Sin más preámbulos... //¡Buñuelos de Girona!//
@@ -63,8 +63,8 @@ code:
 	por azúcar.
 	
 text:
-	De momento es sólo texto, no puede considerarse todavía un STxT válido.	
-	Pero lo iremos retocando y poco a poco obtendremos un perfecto STxT ;-)
+	De momento es sólo texto, no puede considerarse todavía un @STxT@ válido.	
+	Pero lo iremos retocando y poco a poco obtendremos un perfecto @STxT@ ;-)
 	
 	Lo primero, es identificar las partes y pensar en una estructura 
 	jerárquica.	Una estructura posible sería de 5 partes. Todo el documento
@@ -119,13 +119,13 @@ code:
 	por azúcar.
 	
 text:
-	Esta estructura es muy natural, y es la base para obtener el documento final STxT.
+	Esta estructura es muy natural, y es la base para obtener el documento final @STxT@.
 	
 h1:
 	TODO en Namespaces (ns)
 	
 text:
-	Vamos a perder el miedo //ahora mismo// a los namespaces en STxT; 
+	Vamos a perder el miedo //ahora mismo// a los namespaces en @STxT@; 
 	en homenaje a todos los usuarios traumatizados de xml que no los pueden soportar ;-)
 	
 alert:
@@ -135,19 +135,19 @@ alert:
 	Ahora prestad atención. 
 	
 text:
-	Un documento STxT consiste en un conjunto de nodos anidados, 
+	Un documento @STxT@ consiste en un conjunto de nodos anidados, 
 	y **TODOS** los nodos deben pertenecer a algún namespace (no tiene por qué ser el mismo). 
 	
-	Un namespace (ns) es un documento (STxT!!) dónde se especifica cuáles son sus nodos, 
+	Un namespace (ns) es un documento (@STxT@!!) dónde se especifica cuáles son sus nodos, 
 	su forma y qué pueden contener. 
 	
 	Al contrario de otros lenguajes (como xml) este documento **DEBE EXISTIR** 
 	y debe ser accesible vía web. Lo normal es que los programas y parseadores lo guarden localmente, 
 	pero es un requisito que el documento exista y sea accesible por Internet. 
-	STxT se ha hecho para el acceso libre de la información y es básico que todo el mundo
+	@STxT@ se ha hecho para el acceso libre de la información y es básico que todo el mundo
 	pueda encontrar las definiciones. 
 	
-	Vamos a ver como sería el namespace de ejemplo (el documento STxT real no es así,
+	Vamos a ver como sería el namespace de ejemplo (el documento @STxT@ real no es así,
 	lo veremos más adelante, pero la información que contendrá sí será ésta):
 	
 code:
@@ -226,10 +226,10 @@ code:
 		pasan por azúcar.
 	
 text:
-	¡Y ya está! ¡Nuestro primer documento STxT! :-) Míralo bien. No es necesario nada más.
+	¡Y ya está! ¡Nuestro primer documento @STxT@! :-) Míralo bien. No es necesario nada más.
 	
 	Leed este apartado tantas veces como queráis, es imprescindible. 
-	Lo es todo. Si entendéis esto, ya está. Sabréis STxT.
+	Lo es todo. Si entendéis esto, ya está. Sabréis @STxT@.
 	
 alert:
 	Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.
@@ -240,7 +240,7 @@ h1:
 	Nodos e identación
 
 text:	
-	Antes hemos dicho que un documento STxT es un conjunto de nodos anidados. Pero no hemos dicho
+	Antes hemos dicho que un documento @STxT@ es un conjunto de nodos anidados. Pero no hemos dicho
 	cuáles son las reglas de anidación, ni como se hace. Pero todo es muy intuitivo y visual:
 	
 assert:
@@ -300,10 +300,10 @@ text:
 	
 	Vemos que la identación es la clave, y la identación se obtiene mediante caracteres de tabulación.
 	También es posible mediante espacios, aunque los tabuladores siempre han sido un estándar en textos, 
-	por lo que es la forma recomendada en STxT (además de ahorrar espacio).
+	por lo que es la forma recomendada en @STxT@ (además de ahorrar espacio).
 	
 assert:
-	Regla: Un documento STxT sólo puede tener un nodo principal
+	Regla: Un documento @STxT@ sólo puede tener un nodo principal
 	
 text:
 	Esta regla tiene que cumplirse siempre, lo que permite una simplificación en la estructuración de los 
@@ -349,7 +349,7 @@ h1:
 	Nodo y Texto
 	
 text:
-	Los tipos de nodo más habituales en los documentos STxT son NODO y TEXTO.
+	Los tipos de nodo más habituales en los documentos @STxT@ son NODO y TEXTO.
 	El tipo nodo es un contenedor para otros nodos, mientras que el tipo texto 
 	permite la inserción de un texto, sin restricciones.
 	
@@ -379,7 +379,7 @@ text:
 code:
 	Nodo(...):
 		Nodo Texto: Vamos a poner un ejemplo de xml; 
-			de como se hacían las cosas antes de STxT:
+			de como se hacían las cosas antes de @STxT@:
 			<nodo>
 				<nodo1>Esto es un ejemplo</nodo1>
 				<nodo2>Esto es un ejemplo de escape: &lt; </nodo2>
@@ -394,7 +394,7 @@ text:
 	para comentar o añadir alguna observación, pero no influyen en el documento en sí.
 	
 assert:
-	En STxT son comentarios todas las líneas que empiezan por el carácter #
+	En @STxT@ son comentarios todas las líneas que empiezan por el carácter #
 	
 text:
 	Volvemos a nuestro ejemplo. Imaginemos que queremos añadir información a nuestra receta,
@@ -441,7 +441,7 @@ text:
 	Y aquí está la gramática. O la definición de nodos del namespace.
 	En el próximo capítulo la veremos en más profundidad, 
 	pero es bastante explicativa por sí misma;
-	como todos los documentos STxT ;-)
+	como todos los documentos @STxT@ ;-)
 	    
 code:
 	Namespace Definition(www.semantictext.info/namespace.stxt):
@@ -499,11 +499,11 @@ h1:
 	Resumen
 	
 text:
-	* Un documento STxT es un conjunto de nodos jerárquicos.
+	* Un documento @STxT@ es un conjunto de nodos jerárquicos.
 	* La estructura de cualquier nodo está definida en su namespace correspondiente.
 	* La jerarquía de nodos se puede ver de forma visual, 
 	  y se consigue con la identación (mediante tabuladores).
-	* Un documento STxT sólo puede tener un nodo principal, 
+	* Un documento @STxT@ sólo puede tener un nodo principal, 
 	  lo que permite alinear a sus hijos sin necesidad de identarlos
 	* No se debe especificar los namespaces de todos los nodos, sólo del nodo principal. 
 	  Los demás serán deducidos de forma automática.
