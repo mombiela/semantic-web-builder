@@ -16,10 +16,10 @@ Title:
 	Chapter 5: Compaction (*)
 	
 h1:
-	STxT Information analysis
+	@STxT@ Information analysis
 	
 text:
-	This chapter deals with the compaction of STxT documents.
+	This chapter deals with the compaction of @STxT@ documents.
 	We are going to modify a document to make it more compact,
 	so that it is faster to parse and contains the same information.
 	

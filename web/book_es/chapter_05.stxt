@@ -16,10 +16,10 @@ Title:
 	Capítulo 5: Compactación (*)
 	
 h1:
-	Análisis de la información de STxT
+	Análisis de la información de @STxT@
 	
 text:
-	Este capítulo trata sobre la compactación de documentos STxT.
+	Este capítulo trata sobre la compactación de documentos @STxT@.
 	Vamos a modificar un documento para hacerlo más compacto,
 	de forma que sea más rápido de parsear y contenga la misma información.
 	
@@ -207,7 +207,7 @@ text:
 	Teníamos los datos de un cliente, y compactado queda como:
 	
 code:
-	Cliente(www.gymSTxT.com/client.stxt):
+	Cliente(www.gym.com/client.stxt):
 	1:Datos Personales:
 	2:Nombre: Shila
 	2:Primer apellido: Kween
