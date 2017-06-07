@@ -17,7 +17,7 @@ h1:
 	Introduction
 	
 text:
-	Parsing an STxT file is much easier than parsing files from other technologies.
+	Parsing an @STxT@ file is much easier than parsing files from other technologies.
 	It may seem contradictory, because it is actually a very powerful language, but at the same time it is
 	based on very simple principles.
 
@@ -31,7 +31,7 @@ assert:
 text:
 	This implementation has been done in Java language, because it is the one I know best.
 
-	I hope STxT is successful, and that other implementations appear very soon.
+	I hope @STxT@ is successful, and that other implementations appear very soon.
 
 	I won't go into all the details, but I'd like to explain
 	some points that require more attention.

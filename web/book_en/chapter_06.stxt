@@ -21,12 +21,12 @@ text:
 	
 	**Don't miss it!**	
 h1:
-	STxT reminder
+	@STxT@ reminder
 
 h2:
-	What is STxT?
+	What is @STxT@?
 text:
-	An STxT document is made up of a set of hierarchical nodes, 
+	An @STxT@ document is made up of a set of hierarchical nodes, 
 	and the structure of each node is defined in its corresponding namespace.
 	This structure is achieved through indentation (tabs or spaces), 
 	which gives the document a visual form that is recognizable 
@@ -64,7 +64,7 @@ code:
 			to allow their access to the VIP area.
 
 text:
-	An STxT document can only have one main node, 
+	An @STxT@ document can only have one main node, 
 	so this makes the indentation of its direct child nodes unnecessary.
 	In addition, it is mandatory to specify the namespace of this main node, 
 	as the other nodes will be perfectly defined from it.
@@ -129,7 +129,7 @@ h2:
 	Compaction
 	
 text:
-	An STxT document can be compacted to explicitly show the levels
+	An @STxT@ document can be compacted to explicitly show the levels
 	and be faster for machines to parse. It also allows to save space,
 	as the initial tabs and spaces	are replaced by numbers.
 	
@@ -213,7 +213,7 @@ text:
 	and has no practical effects on increasing readability. 
 	What’s more, sometimes it would be great to allow case-insensitive to increase clarity.
 
-	It is possible that in other cases it’s justified, but in STxT it seems just the opposite. 
+	It is possible that in other cases it’s justified, but in @STxT@ it seems just the opposite. 
 	We always think about semantics, and clearly names have the same meaning 
 	in uppercase as in lowercase.
 h2:
@@ -222,7 +222,7 @@ h2:
 text:
 	This problem has been intrinsic to computers for many years.
 	That I can recall it has always been there, and has always been a source of problems.
-	I think that STxT should have a single coding, to avoid having to say
+	I think that @STxT@ should have a single coding, to avoid having to say
 	on the document which one it is. In addition, it should be easily understood in the world of Internet,
 	so I think there is no doubt.
 
@@ -237,7 +237,7 @@ h2:
 	Tabs or spaces
 	
 text:
-	We are going to explain a //suggestion// for when writing documents in STxT. 
+	We are going to explain a //suggestion// for when writing documents in @STxT@. 
 
 	It is not a rule, we'll explain why in more detail later on, but I //strongly// suggest that you use it.
 	
@@ -281,14 +281,14 @@ h1:
 	Text (**)
 	
 text:
-	Writing text in STxT seems easy... and it actually is! :-)
+	Writing text in @STxT@ seems easy... and it actually is! :-)
 	
 	But (there's always a but) sometimes we want to understand exactly how it works
 	and see the more special cases and how they are interpreted. 
 	If this is your case, read on. You are in the right place ;-)
 	
 	//These rules are above all focused on parsing text and computer
-	interpretation. When we write STxT, we just have to take into account the indentation and
+	interpretation. When we write @STxT@, we just have to take into account the indentation and
 	the levels, and follow our intuition.//
 h2:
 	All about indentation
@@ -419,7 +419,7 @@ h2:
 	Text in the text
 	
 text:
-	Well, this is one of the things that I like most of STxT:
+	Well, this is one of the things that I like most of @STxT@:
 	It lets us make text from other languages //without having to parse anything!//.
 	Just keep in mind the indentation rules and that’s it!
 	We can write whatever we want. Let’s see how many languages can say the same thing :-D
@@ -463,7 +463,7 @@ h2:
 	
 text:
 	A namespace is a grouping of nodes definition and the description
-	of the namespace is always available on the Internet as an STxT document;
+	of the namespace is always available on the Internet as an @STxT@ document;
 	through an access url.
 
 	For example, the "www.gym.demo/ client.stxt" namespace can define 4 node types:
@@ -488,10 +488,10 @@ text:
 	We could do the same thing with all the other nodes.
 	
 h2:
-	What is an STxT document?
+	What is an @STxT@ document?
 	
 text:
-	An STxT document is a set of nested nodes.
+	An @STxT@ document is a set of nested nodes.
 	The first node is the one containing the rest,
 	and there can only be one main node.
 	This main node specifies its namespace,

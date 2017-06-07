@@ -52,7 +52,7 @@ text:
 	They would create a champion. Someone who would illuminate them. Only one could remain.
 	
 alert:
-	The time for STxT had arrived.
+	The time for @STxT@ had arrived.
 	
 h1:
 	Nowadays (**)
@@ -64,7 +64,7 @@ text:
 	And it is everywhere. And we still use it. And we want it to be there for everything... One minute! Stop!
 	Is it necessary? If we didn't know anything about sgml and wanted to have a txt fast for parsing, with structure,
 	with namespace, would we have created xml? I don’t think so. If we tell a child to make something up,
-	I guess that they never would have created xml... they would have made something more natural... THEY WOULD HAVE CREATED STxT!
+	I guess that they never would have created xml... they would have made something more natural... THEY WOULD HAVE CREATED @STxT@!
 
 	Well, we have more experience and we have learned. Let's create it!
 	
@@ -72,7 +72,7 @@ h1:
 	Initial contact
 	
 text:
-	I don't want to scare you, but STxT compared with xml, is:
+	I don't want to scare you, but @STxT@ compared with xml, is:
 
 	* Better looking
 	* More compact
@@ -86,7 +86,7 @@ text:
 	* Faster parsing
 	* Everything is namespaces! And you can’t even see them!
 
-	Let's see an XML example, and we will compare it with STxT, for starters.
+	Let's see an XML example, and we will compare it with @STxT@, for starters.
  	It will be an easy example:
 
 code:
@@ -101,7 +101,7 @@ code:
 	</email>
 
 text:
-	Let’s see the STxT version:
+	Let’s see the @STxT@ version:
 	
 code:
 	# This is a line comment
@@ -116,13 +116,13 @@ text:
 	I think a first feature stands out:
 	
 assert:
-	STxT looks much better than XML, and is understood better 
+	@STxT@ looks much better than XML, and is understood better 
 	
 text:
 	Let's go for the size.
 
 	XML Length: 246\\
-	STxT Length: 183
+	@STxT@ Length: 183
 
 	Let's see when we compact fully
 
@@ -143,29 +143,29 @@ code:
 
 text:
 	Minimum XML length: 225\\
-	Minimum STxT length: 172
+	Minimum @STxT@ length: 172
 
-	If we compare without xml header or STxT namespace:
+	If we compare without xml header or @STxT@ namespace:
 
 	Minimum XML length: 186\\
-	Minimum STxT length: 144
+	Minimum @STxT@ length: 144
 
 	I think it is clear that
 
 assert:
-	STxT is more compact than XML
+	@STxT@ is more compact than XML
 	
 text:
 	But in addition
 	
 assert:
-	STxT is more understandable than XML in a compacted state
+	@STxT@ is more understandable than XML in a compacted state
 	
 text:
 	or put another way
 	
 assert:
-	STxT keeps its understanding in a compacted state,\\
+	@STxT@ keeps its understanding in a compacted state,\\
 	while XML does not
 			
 text:
@@ -173,7 +173,7 @@ text:
 	We will discuss it later. For now, believe me:
 	
 assert:
-	With STxT you can express the same things as with XML
+	With @STxT@ you can express the same things as with XML
 		
 text:
 	Now let's try something fun...
@@ -203,7 +203,7 @@ code:
 	</email>
 	
 text:
-	And in STxT:
+	And in @STxT@:
 
 code:
 	Email (www.example.com/email.stxt):
@@ -225,7 +225,7 @@ text:
 	I think nothing more needs be said. It is clear, but:
 	
 assert:
-	STxT is simpler than XML
+	@STxT@ is simpler than XML
 	
 h1:
 	XML attributes
@@ -249,15 +249,15 @@ text:
 	Another added problem is that everyone should keep in mind that attributes exist.
 	This affects DTD's, XSD's, libraries, programmers... And what for?
 	Actually they do not provide much. Only unnecessary complexity.
-	Besides, this is STxT. Everything has a meaning, and everything is important.
+	Besides, this is @STxT@. Everything has a meaning, and everything is important.
 	
 assert:
-	STxT has no XML style attributes
+	@STxT@ has no XML style attributes
 					
 text:
 	This makes it //BETTER//, not worse. Sometimes, //LESS IS MORE ;-)//
 
-	The previous example in STxT would be:
+	The previous example in @STxT@ would be:
 
 code:
 	example(...):
@@ -281,7 +281,7 @@ h1:
 	DTD, XSD
 	
 h2:
-	XSD, DTD, and STxT
+	XSD, DTD, and @STxT@
 	
 text:
 	Let's talk about dtd’s and xsd's of xml. They are documents that tell us how a valid xml must be.
@@ -291,8 +291,8 @@ text:
 	In short, DTD is simpler than XSD, is less powerful, and is written in a different language than XML.
 	XSD is more powerful, more difficult to make and understand, but is written in XML, there is no need to learn another language.
 
-	And what happens with STxT? You should know it :-D It has the best. It is an STxT document.
-	Integrated into the language itself. Powerful and easy to learn. Just like STxT itself ;-)
+	And what happens with @STxT@? You should know it :-D It has the best. It is an @STxT@ document.
+	Integrated into the language itself. Powerful and easy to learn. Just like @STxT@ itself ;-)
 
 h2:
 	Where is it?
@@ -304,12 +304,12 @@ assert:
 	//Where is the grammar in this document?//
 	
 text:
-	In STxT, //EVERYTHING// is on the web. When you want to create a document you have
+	In @STxT@, //EVERYTHING// is on the web. When you want to create a document you have
 	to be able to see automatically its definition. The grammar should always be accessible.	 
 	
 assert:
-	An STxT document has an associated grammar by definition.\\
-	Otherwise, it is not STxT
+	An @STxT@ document has an associated grammar by definition.\\
+	Otherwise, it is not @STxT@
 	
 h2:
 	XSD of the XSD (*)
@@ -324,7 +324,7 @@ text:
 
 	Is there someone who understands it? Excuse me, excuse me. Is there someone //who is not a superhero// who understands it?
 
-	In contrast with STxT most people would not have any difficulties understanding the STxT of an STxT.
+	In contrast with @STxT@ most people would not have any difficulties understanding the @STxT@ of an @STxT@.
 	I'm going to show it, although we have already seen it in Chapter 4:
 
 code:
@@ -409,7 +409,7 @@ text:
 	There’s no color!
 
 	Okay, it’s much simpler but, no one dares to read what comes out of the xsd's!
-	Everything is much more complicated. With STxT we have sought simplicity.
+	Everything is much more complicated. With @STxT@ we have sought simplicity.
 	We like to do things by hand! Having an XML editor or reader should not be mandatory!
 
 h1:
@@ -417,24 +417,24 @@ h1:
 	
 text:
 	Does someone want to compare parsers and validators? There is no need to,
-	one with STxT is MUCH faster and simpler to implement. 
+	one with @STxT@ is MUCH faster and simpler to implement. 
 	Why? It’s very simple:
 	
 assert:
-	STxT has much fewer rules than XML
+	@STxT@ has much fewer rules than XML
 		
 text:
 	This makes everything easier. The parser code is faster.
 	They have fewer errors. It is easier to maintain. To make.
 	In addition, another advantage is that parsing and validating can be done simultaneously.
 	With XML you must decide if you really have to validate the xsd... and where is it?
-	Here we go again with the same problem as always. With STxT everything is much clearer.
+	Here we go again with the same problem as always. With @STxT@ everything is much clearer.
 	Any document has to have a definition of what it is like.
 	But it is very easy to make. It doesn’t take any time. It's worthwhile.
-	It is one of the great advantages of STxT.
+	It is one of the great advantages of @STxT@.
 
-	Note: For fans of private information: if the STxT parser or editor
-	has its own STxT grammars repository, it does not necessarily have to be visible on the web.
+	Note: For fans of private information: if the @STxT@ parser or editor
+	has its own @STxT@ grammars repository, it does not necessarily have to be visible on the web.
 	I don't like it, I am against it, but there is nothing or no one that can prevent this.
 	In fact, sometimes it will be needed, as I had to do with my own book
 	before having the website up.
@@ -445,7 +445,7 @@ h1:
 text:
 	I have always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.
 
-	Namespaces in STxT are completely different, as they are not difficult to make,
+	Namespaces in @STxT@ are completely different, as they are not difficult to make,
 	they provide all the necessary information, and we do not lose the expressiveness that is achieved with XML.
 	In fact, you can’t even see them! But they are always there, helping. Finishing the work.
 
@@ -459,8 +459,8 @@ h1:
 	Future
 	
 text:
-	I have been very honest with my entire analysis of XML vs STxT, but there is something we must not forget.
+	I have been very honest with my entire analysis of XML vs @STxT@, but there is something we must not forget.
 	XML has been around for quite a while. It is tested, it is used everywhere. It is a standard.
-	STxT is new, it has just been born, and it has a long way to go.
+	@STxT@ is new, it has just been born, and it has a long way to go.
 	
 	But I think that it is worthwhile.

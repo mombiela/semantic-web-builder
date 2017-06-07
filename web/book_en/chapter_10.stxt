@@ -64,13 +64,13 @@ text:
 	They are lacking a bit more structure and knowing what the services are like.
 	
 assert:
-	Watch out. The solution is here. It is called STxT. 
+	Watch out. The solution is here. It is called @STxT@. 
 	
 h1:
-	STxT: A new approach
+	@STxT@: A new approach
 	
 text:
-	We now have a new tool. It is called STxT. How would a webservice be defined?
+	We now have a new tool. It is called @STxT@. How would a webservice be defined?
 
 	I am going to propose things, this would be a new world to explore.
 	I'm happy to indicate possible paths or starting points.
@@ -120,7 +120,7 @@ code:
 text:
 	At this point I wouldn't want to say anything else. I do not dare,
 	but I guess you have already grasped the idea: //simplify//.
-	Everything is much simpler when STxT comes into play.
+	Everything is much simpler when @STxT@ comes into play.
 	Everything is clearer. And defined.
 	
 assert:
@@ -155,7 +155,7 @@ code:
 			out: OtherX(www.demo.com/demo.stxt)
 
 text:
-	There are many possibilities, I like them all with STxT ;-)
+	There are many possibilities, I like them all with @STxT@ ;-)
 
 h1:
 	A final proposal
@@ -281,7 +281,7 @@ code:
 h2:	The explanation
 
 text:
-	The STxT document responsible for defining one (or several webservices) will be
+	The @STxT@ document responsible for defining one (or several webservices) will be
 	a document of the type:
 	
 code:
@@ -290,10 +290,10 @@ code:
 text:
 	This document lets us define 3 different types of services:
 
-	* **SWS Service**: An STxT input document (UTF-8 encoding) and an STxT output document (UTF-8).
+	* **SWS Service**: An @STxT@ input document (UTF-8 encoding) and an @STxT@ output document (UTF-8).
 	  The POST method will be used since it is the most advisable one for this type of delivery.
-	  This would be a pure web service using only STxT.
-	* **Hybrid Service**: Http input parameters and an STxT output document.
+	  This would be a pure web service using only @STxT@.
+	* **Hybrid Service**: Http input parameters and an @STxT@ output document.
 	  The expected parameter encoding (usually ISO-8859-1 or UTF-8) can be specified and
 	  also the http method to run (GET or POST generally).
 	* **REST Service**: Standard http entry parameters and a standard output reply (json, xml, csv, etc.).
@@ -303,7 +303,7 @@ text:
 	It is also recommended to use the //descrip// field to give
 	an explanation of what the webservice does.
 
-	Both the //SWS// and the //Hybrid// must return a valid STxT document,
+	Both the //SWS// and the //Hybrid// must return a valid @STxT@ document,
  	so the output should be in UTF-8.
 
 	An example of HTTP message for a pure SWS service:
@@ -392,7 +392,7 @@ text:
 	//And the associated SOAP messages?//
 
 	We can say that in one single chapter we have explained how the webservices
-	could be, if their implementation and definition is based on STxT.
+	could be, if their implementation and definition is based on @STxT@.
 
 	Our webservice definition is equally useful for humans and for
 	machines, as it contains all the information needed for using

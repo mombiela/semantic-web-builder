@@ -19,8 +19,8 @@ h1:
 text:
 	We can do thousands of examples with this technology.
 	It is as simple as taking any other example from another language
-	and see how it would be written in STxT. Perhaps the simplest would be an example
-	that comes from XML, as it has many things in common with STxT
+	and see how it would be written in @STxT@. Perhaps the simplest would be an example
+	that comes from XML, as it has many things in common with @STxT@
 	(the next chapter discusses this topic in particular).
 
 	I have obtained many examples from [[http://www.wikipedia.org |Wikipedia|wiki]].
@@ -56,7 +56,7 @@ code:
 	</Library>
 
 text:
-	The same thing if we pass it to STxT:
+	The same thing if we pass it to @STxT@:
 
 code:
 	Library (www.examples.com/demo.stxt):
@@ -98,7 +98,7 @@ code:
 	</email>
 
 text:
-	In STxT it transforms into:
+	In @STxT@ it transforms into:
 	
 code:
 	Email (www.example.com/email.stxt):
@@ -110,8 +110,8 @@ code:
 	Body: Hello Mery!! The book is finished!!
 
 text:
-	We see that the conversion between the two formats is immediate, but the STxT is much better looking.
-	By the way, STxT always has a grammar, while XML does not
+	We see that the conversion between the two formats is immediate, but the @STxT@ is much better looking.
+	By the way, @STxT@ always has a grammar, while XML does not
 	until a dtd or an xsd are not applied. 
 	 
 h1:
@@ -120,14 +120,14 @@ h1:
 text:
 	I feel great admiration for wikipedia. I think it is one of the best projects that have been created on the Internet.
 
-	//How could it benefit from STxT?//
+	//How could it benefit from @STxT@?//
 
 	Well, wikipedia could have different templates:
 	actors, politicians, tv series, films, cities, countries, rivers,... sharing grammars in many cases.
 	For example, both actors and politicians can have biographies, but actors can also have a listing of films.
 
-	In addition, a mixture of STxT with the wikipedia language would be very interesting.
-	I think that this is a point where STxT beats most languages.
+	In addition, a mixture of @STxT@ with the wikipedia language would be very interesting.
+	I think that this is a point where @STxT@ beats most languages.
 	The mixture with the so-called "lightweight markup languages" is really spectacular.
 
 	Thus, mixed texts can be made of the following style:	
@@ -152,12 +152,12 @@ code:
 		...
 	
 text:
-	Another advantage is that with STxT we would not only have "templates" of
+	Another advantage is that with @STxT@ we would not only have "templates" of
 	how a city information should be, but we could also
 	apply styles and formats depending on the document type.
 	
 h1:
-	STxT and other technologies
+	@STxT@ and other technologies
 	
 h2:
 	Lightweight markup language
@@ -175,7 +175,7 @@ text:
 	* Data tables
 	* ...
 
-	It’s surprising to see what we can achieve if we combine these languages with STxT.
+	It’s surprising to see what we can achieve if we combine these languages with @STxT@.
 	We get text that is easy to interpret, with defined semantics, and with the expressiveness of both languages.
 
 	One example:
@@ -196,11 +196,11 @@ code:
 			* Greater concentration
 	
 text:
-	We see that we have given structure thanks to STxT, but the description is given
+	We see that we have given structure thanks to @STxT@, but the description is given
 	with a wikipedia style.
 	
 assert:
-	The union of STxT with //Lightweight markup languages// is simply spectacular
+	The union of @STxT@ with //Lightweight markup languages// is simply spectacular
 	
 h2:
 	Tex, Latex
@@ -210,9 +210,9 @@ text:
 	I've seen that one of the objectives of TeX is that a document be printed the same now as in 100 years.
 	It had seemed perfect... until now. Now I believe that the objective should be
 	that it means the same now as 100 years from now, and that it is //understood// now and in 100 years.
-	And the more people the better. This is not achieved with TeX, but it is with STxT.
+	And the more people the better. This is not achieved with TeX, but it is with @STxT@.
 	A document is understood today and 100 years from now. How do I think it should evolve?
-	I would make documents in STxT, would specify a grammar for the different types of documents,
+	I would make documents in @STxT@, would specify a grammar for the different types of documents,
 	would allow TeX elements (such as formulas) in the same way that is done with lightweight markup languages,
 	and would use TeX as rendering engine.
 
@@ -252,7 +252,7 @@ code:
 		Hello World!!
 
 text:
-	In fact, now that we can think in STxT, maybe it’s time to make formulas a different way,
+	In fact, now that we can think in @STxT@, maybe it’s time to make formulas a different way,
 	or a more simplified notation, such as:
 	
 code:
@@ -306,26 +306,26 @@ h2:
 	JSON (*)
 
 text:
-	JSON in general has nothing to do with STxT, but there are certain moments
+	JSON in general has nothing to do with @STxT@, but there are certain moments
 	where they might compete with each other. I am thinking in web services with REST.
-	I bet for STxT, because it is as easy (or more) to parse as JSON,
+	I bet for @STxT@, because it is as easy (or more) to parse as JSON,
 	and it gives documents a clear meaning.
 	In addition, it is more flexible and easier to read when we embed a large quantity of text,
 	whereas in JSON all the escape characters must always be taken into account.
 
 	But you there is no need to worry too much. Apart from web services,
-	I don't think that JSON and STxT are direct competitors,
+	I don't think that JSON and @STxT@ are direct competitors,
 	due to their different field of application.
 	
 h2:
 	Other (*)
 	
 text:
-	There are other languages that may be similar to STxT, but I believe that none of them have been made with the same approach.
+	There are other languages that may be similar to @STxT@, but I believe that none of them have been made with the same approach.
 	For example, YAML has some similarities in the way that it uses indentation,
-	or CofeeScript, which having a sometimes similar appearance, has nothing to do with STxT.
+	or CofeeScript, which having a sometimes similar appearance, has nothing to do with @STxT@.
 
-	STxT aims to provide structure and semantics to the document,
+	@STxT@ aims to provide structure and semantics to the document,
 	while at the same time allowing a readable text for the majority of people,
 	regardless of their computer knowledge.
 	

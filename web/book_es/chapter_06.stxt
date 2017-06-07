@@ -21,12 +21,12 @@ text:
 	
 	**¡No os lo perdáis!**	
 h1:
-	Recordatorio de STxT
+	Recordatorio de @STxT@
 	
 h2:
-	¿Qué es STxT?
+	¿Qué es @STxT@?
 text:
-	Un documento STxT consiste en un conjunto de nodos jerárquicos, 
+	Un documento @STxT@ consiste en un conjunto de nodos jerárquicos, 
 	y la estructura de cada nodo está definida en su namespace correspondiente.
 	Esta estructura se consigue gracias a la identación (tabuladores o espacios), 
 	lo que dota al documento de una forma visual reconocible 
@@ -64,7 +64,7 @@ code:
 		permitirle el acceso a la zona vip.
 	
 text:
-	Un documento STxT sólo puede tener un nodo principal, 
+	Un documento @STxT@ sólo puede tener un nodo principal, 
 	por lo que hace innecesaria la identación de sus nodos hijos directos.
 	Además, es obligatorio especificar el namespace de este nodo principal, 
 	ya que a partir de él los demás nodos quedarán perfectamente definidos.
@@ -129,7 +129,7 @@ h2:
 	Compactación
 	
 text:
-	Un documento STxT puede compactarse para mostrar explícitamente los niveles
+	Un documento @STxT@ puede compactarse para mostrar explícitamente los niveles
 	y ser más rápido de parsear por las máquinas. También permite ganar espacio,
 	ya que los tabuladores y espacios iniciales	son substituidos por números.
 	
@@ -213,7 +213,7 @@ text:
 	y no tiene como efectos prácticos aumentar la legibilidad. 
 	Es más, en ocasiones sería muy bueno permitir case-insensitive para aumentar claridad.
 	
-	Es posible que en otros casos esté justificado, pero en STxT parece justo lo contrario. 
+	Es posible que en otros casos esté justificado, pero en @STxT@ parece justo lo contrario. 
 	Siempre nos preocupamos por la semántica, y claramente los nombres tienen
 	el mismo significado en mayúsculas que en minúsculas.
 h2:
@@ -222,7 +222,7 @@ h2:
 text:
 	Este problema ha sido intrínseco a la informática durante muchos años.
 	Que yo recuerde ha estado siempre, y siempre ha sido una fuente de problemas.
-	Creo que STxT debería tener una única codificación, para evitar tener que decir
+	Creo que @STxT@ debería tener una única codificación, para evitar tener que decir
 	en el documento cuál es. Además, ésta debe ser fácilmente entendida en el mundo de Internet,
 	por lo cual creo que no hay lugar a dudas.
 	
@@ -237,7 +237,7 @@ h2:
 	Tabuladores o espacios
 	
 text:
-	Vamos a explicar una //recomendación// cuando escribamos documentos en STxT. 
+	Vamos a explicar una //recomendación// cuando escribamos documentos en @STxT@. 
 	
 	No es una regla, después explicaremos por qué con más detalle, pero os recomiendo //encarecidamente// que la uséis.
 	
@@ -281,14 +281,14 @@ h1:
 	Texto (**)
 	
 text:
-	Escribir texto en STxT parece fácil... ¡y en realidad lo es! :-)
+	Escribir texto en @STxT@ parece fácil... ¡y en realidad lo es! :-)
 	
 	Pero (siempre hay un pero) a veces queremos comprender exactamente cómo funciona
 	y ver los casos más especiales y como se interpretan. 
 	Si éste es tu caso, sigue leyendo. Estás en el lugar adecuado ;-)
 	
 	//Estas reglas están sobretodo enfocadas al parseo de textos y a la interpretación
-	informática. Cuando escribimos STxT sólo hay que tener en cuenta la identación y
+	informática. Cuando escribimos @STxT@ sólo hay que tener en cuenta la identación y
 	los niveles, y seguir nuestra intuición.//
 h2:
 	Todo sobre Identación
@@ -419,7 +419,7 @@ h2:
 	Texto en el texto
 	
 text:
-	Bien, ésta es una de las cosas que más me gustan de STxT:
+	Bien, ésta es una de las cosas que más me gustan de @STxT@:
 	Permite hacer texto de otros lenguajes //¡sin tener que parsear nada!//.
 	¡Sólo hay que tener en cuenta las reglas de identación y ya está!
 	Se puede escribir lo que queramos. A ver cuántos lenguajes pueden decir lo mismo :-D 
@@ -463,7 +463,7 @@ h2:
 	
 text:
 	Un namespace es una agrupación de definición de nodos y la descripción
-	del namespace está siempre disponible en Internet como documento STxT;
+	del namespace está siempre disponible en Internet como documento @STxT@;
 	mediante una url de acceso.
 	
 	Por ejemplo, el namespace "www.gym.demo/client.stxt" puede definir 4 tipos de nodo:
@@ -488,10 +488,10 @@ text:
 	Lo mismo podríamos hacer con todos los otros nodos.
 	
 h2:
-	¿Qué es un documento STxT?
+	¿Qué es un documento @STxT@?
 	
 text:
-	Un documento STxT es un conjunto de nodos anidados.
+	Un documento @STxT@ es un conjunto de nodos anidados.
 	El primer nodo es el que contiene a los demás, 
 	y sólo puede haber un nodo principal. 
 	Este nodo principal especifica su namespace, 
