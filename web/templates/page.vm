@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="${lang.get("lang")}">
 #parse("/init.vm")
-
+<html lang="${lang.get("lang")}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
