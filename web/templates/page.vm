@@ -36,8 +36,8 @@
       <div class="small-12 columns">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.canonicalName} == "chapter")	STxT: ${lang.get("title_book")}
-			#else                  					STxT: Semantic text
+			#if(${doc.canonicalName} == "chapter")	<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: ${lang.get("title_book")}
+			#else                  					<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: Semantic text
 			#end
     	    </a>
 		</h1>
