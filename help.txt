@@ -7,3 +7,4 @@ node-sass web/scss -o web/static/css --watch --recursive --output-style expanded
 
 node-sass web/scss -o web-out/css --watch --recursive --output-style expanded
 
+node-sass web/scss -o web-out/css --output-style expanded
