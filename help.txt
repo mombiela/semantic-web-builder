@@ -1,0 +1,6 @@
+JS-CSS> node-sass --watch style --recursive --output www/css --output-style expanded
+compressed 
+JS-CSS\www> http-server
+
+node-sass web/scss -o web/static/css  --output-style expanded
+node-sass web/scss -o web/static/css --watch --recursive --output-style expanded
