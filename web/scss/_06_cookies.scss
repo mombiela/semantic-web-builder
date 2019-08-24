@@ -1,0 +1,33 @@
+/* ********** */
+/* Cookie bar */
+/* ********** */
+
+#cookies_adv {
+	padding: 2rem;
+    background-color: $color2;
+    text-align: center;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+    width: 100%;
+}
+
+#cookies_adv a.button {
+	padding: 1rem;
+	margin: 0 20px;
+	background: $color1;
+	border: none;
+	color: white;
+	border-radius: 0.7rem;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+#cookies_adv a {
+	color: white;
+	text-decoration: underline;
+}
+
