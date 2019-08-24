@@ -60,11 +60,11 @@
 				<li><a href="../en/${doc_name}.html" onclick="setLang('en'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
 				<li><b>${lang.get("menu.lang.es")}</b></li>
 			#end
-			<!--<li><b> | </b></li>
+			<li><b> | </b></li>
 			<li><a href="licence.html" title="${lang.get("menu.licence")}">${lang.get("menu.licence")}</a></li>
 			<li><a href="contribute.html" title="${lang.get("menu.contrib")}">${lang.get("menu.contrib")}</a></li>
 			<li><a href="donate.html" title="${lang.get("menu.donate")}">${lang.get("menu.donate")}</a></li>
-			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>-->
+			<li><a href="about.html" title="${lang.get("menu.about")}">${lang.get("menu.about")}</a></li>
     	</ul>
       </div>
     </div>
