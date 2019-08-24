@@ -56,7 +56,7 @@ assert:
 content:
 	Bueno, la lista es larga, pero como aperitivo ya es suficiente:
 	
-	* Mejor que XML en muchos sentidos: [[book/chapter_09.html|Ver Capítulo 9]]
+	* Mejor que XML en muchos sentidos: [[chapter_09.html|Ver Capítulo 9]]
 	* Lenguaje semántico... pero sencillo! :-)
 	* ¡No hay caracteres de escape! ¡No se necesitan! :-O 
 	* Encoding UTF-8 //siempre//
