@@ -120,8 +120,11 @@ a {
   #main_content {
     display: flex;
   }
+  #main_content article {
+    flex: 1;
+  }
   #main_content aside {
-    padding-left: 20px;
+    padding-left: 1.5em;
     flex: 0 0 350px;
   }
 }
@@ -163,16 +166,8 @@ a {
   text-align: justify;
 }
 
-#main_content .preamble {
-  margin-top: 2em;
+#main_content div.preamble p {
   text-align: right;
-  font-style: italic;
-  margin-right: auto;
-  margin-left: auto;
-  widht: 400px p;
-  widht-margin-top: 0;
-  widht-margin-bottom: 0;
-  widht-text-align: right;
 }
 
 /* ****** */

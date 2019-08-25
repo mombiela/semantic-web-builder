@@ -79,7 +79,7 @@
 	<!-- Content -->
 	<!-- ******* -->
 	
-    <div class="row" id="main_content">
+    <div id="main_content">
       <article>
 		#parse("/navigation.vm")
 	

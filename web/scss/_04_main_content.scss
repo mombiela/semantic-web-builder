@@ -5,8 +5,11 @@
 #main_content {
 	@media (min-width: 750px) {
 		display: flex;
+		article {
+			flex: 1;
+		}
 		aside { 
-			padding-left: 20px;
+			padding-left: 1.5em;
 			flex: 0 0 350px;
 		}
 	}
@@ -31,27 +34,19 @@
 		text-align: center;
 		margin-top: 1em;
 		margin-bottom: 1em;
-		padding: 0.7em
+		padding: 0.7em;
 	}
 	.alert p {
-		border-color: $color1
+		border-color: $color1;
 	}
 	
 	p {
-		text-align: justify
-	}
-	.preamble {
-		margin-top: 2em;
+		text-align: justify;
+	}	
+	
+	div.preamble p
+	{
 		text-align: right;
-		font-style: italic;
-		margin-right: auto;
-		margin-left: auto;
-		widht: 400px
-		p {
-			margin-top: 0;
-			margin-bottom: 0;
-			text-align: right
-		}
 	}
 }
 
