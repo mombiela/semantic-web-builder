@@ -3,15 +3,25 @@
 /* ******* */
 
 div.top-bar {
-	background-color: $color2
+	background-color: $color2;
+	
+	ul {
+		margin-top: 10px;
+		list-style: none;
+		padding-left: 0;
+	}
+	
+	ul li {
+		display: inline-block;
+	}
+	
+	ul a {
+		color: white;
+		padding: 5px;
+		text-decoration: none;
+	}	
+	ul a.link_src {
+	    color: yellow;
+	    text-decoration: none;
+	}
 }
-
-div.top-bar, div.top-bar ul li a {
-	color: white;
-}
-
-div.top-bar ul li a.link_src {
-    color: yellow;
-    text-decoration: none;
-}
-
