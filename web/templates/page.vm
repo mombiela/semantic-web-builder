@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
 
-    <link rel="stylesheet" href="../css/site-20190824.css">
+    <link rel="stylesheet" href="../css/site.css?v=1">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
@@ -130,6 +130,7 @@
 		-->
     	
 		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
+		<div>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- STxT - Adaptable -->
         <ins class="adsbygoogle"
@@ -142,6 +143,7 @@
         </script>
 		<p>&nbsp;</p>
 		#end
+		</div>
 	  </aside>
 	</div>
 	
