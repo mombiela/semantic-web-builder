@@ -8,11 +8,7 @@
     <title>${meta.getChild("title").tvalue}</title>
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
-	<!--
-    <link rel="stylesheet" href="../css/foundation.min.css">
-    <link rel="stylesheet" href="../css/app.css">
-    -->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+
     <link rel="stylesheet" href="../css/site-20190824.css">
 		
 	#if(${lang.get("lang")} == "en")
@@ -108,11 +104,11 @@
 				<pre>${utils.escapeHtml($node.tvalue)}</pre>
 			#elseif(${node.canonicalName} == "assert")
 				<div class="row">
-            		<div class="assert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            		<div class="assert">${wiki.render($node.tvalue)}</div>
             	</div>
 			#elseif(${node.canonicalName} == "alert")
 				<div class="row">
-            		<div class="alert small-11 large-8 small-centered columns">${wiki.render($node.tvalue)}</div>
+            		<div class="alert">${wiki.render($node.tvalue)}</div>
             	</div>
 			#end
 		#end

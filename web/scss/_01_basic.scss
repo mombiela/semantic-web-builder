@@ -4,6 +4,7 @@
 
 :root {
 	box-sizing: border-box;
+	font-size: 0.9em;
 }
 
 *,*::before, *::after {
@@ -16,7 +17,6 @@
 
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 0.85em;
 	max-width: $main_width;
 	margin-left: auto;
 	margin-right: auto;
