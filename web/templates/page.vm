@@ -119,17 +119,14 @@
 	  </article>
 	  	
 	  <aside id="advertisement">
-		<!--
-		<h2>${lang.get("lat.sponsors.title")}</h2>
-    	<p>${lang.get("lat.sponsors.1")}<p>
-    	<p>${lang.get("lat.sponsors.2")}</p>
-    	<p>${lang.get("lat.sponsors.3")}</p>
-    	<h3>${lang.get("lat.ads.title")}</h3>
-    	<p>${lang.get("lat.ads.1")}</p>
-    	<p>${lang.get("lat.ads.2")}</p>
-		-->
+		##<h2>${lang.get("lat.sponsors.title")}</h2>
+    	##<p>${lang.get("lat.sponsors.1")}<p>
+    	##<p>${lang.get("lat.sponsors.2")}</p>
+    	##<p>${lang.get("lat.sponsors.3")}</p>
+    	##<h3>${lang.get("lat.ads.title")}</h3>
+    	##<p>${lang.get("lat.ads.1")}</p>
+    	##<p>${lang.get("lat.ads.2")}</p>
     	
-		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
 		<div>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- STxT - Adaptable -->
@@ -141,8 +138,6 @@
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-		<p>&nbsp;</p>
-		#end
 		</div>
 	  </aside>
 	</div>
