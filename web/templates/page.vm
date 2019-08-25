@@ -75,7 +75,7 @@
 	<!-- Content -->
 	<!-- ******* -->
 	
-    <div id="main_content">
+    <div id="main_content" class="clearfix">
       <article>
 		#parse("/navigation.vm")
 	

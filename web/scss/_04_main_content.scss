@@ -4,6 +4,17 @@
 
 #main_content {
 	@media (min-width: 750px) {
+		article {
+			width: 65%;
+			float: left;
+		}
+		aside {
+			width: 35%; 
+			float: right;
+			padding-left: 1.5em;
+		}
+
+		/* Revisar...
 		display: flex;
 		article {
 			flex: 1;
@@ -12,6 +23,7 @@
 			padding-left: 1.5em;
 			flex: 0 0 350px;
 		}
+		*/
 	}
 	
 	background-color: #fff;
