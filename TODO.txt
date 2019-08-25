@@ -2,7 +2,7 @@
 Corto plazo
 -----------
 
-* En móvil hacer que <pre> -> overflow -> scroll
+* Header con span correcto
 
 -----------
 Largo plazo
