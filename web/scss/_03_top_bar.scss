@@ -2,6 +2,10 @@
 /* tob_bar */
 /* ******* */
 
+div.top-bar {
+	background-color: $color2
+}
+
 div.top-bar, div.top-bar ul li a {
 	color: white;
 }

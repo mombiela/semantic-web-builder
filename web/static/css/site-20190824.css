@@ -1,3 +1,25 @@
+/* -------- */
+/* Defaults */
+/* -------- */
+:root {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ---- */
+/* body */
+/* ---- */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.85em;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* *********** */
 /* main_header */
 /* *********** */
@@ -24,27 +46,6 @@
   color: #444;
 }
 
-/* ***************** */
-/* Paneles de codigo */
-/* ***************** */
-.panel, pre {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #d9d9d9;
-  margin-bottom: 1.0rem;
-  padding: 1.0rem;
-  background: #f2f2f2;
-  line-height: 1;
-  /*font-size: 90%*/
-}
-
-/* ****** */
-/* menu-1 */
-/* ****** */
-#menu-1 {
-  margin-bottom: 0.2rem;
-}
-
 /* ******* */
 /* tob_bar */
 /* ******* */
@@ -63,7 +64,8 @@ div.top-bar ul li a.link_src {
 #main_content {
   background-color: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  padding-top: 1rem;
+  padding: 1em;
+  padding-top: 0.5em;
 }
 
 #main_content h1, #main_content h2, #main_content h3, #main_content h4 {
@@ -126,18 +128,6 @@ footer {
   margin-bottom: 2em;
 }
 
-/* ******** */
-/* book_nav */
-/* ******** */
-div.book_nav {
-  margin-top: 0.7em;
-  margin-bottom: 1em;
-}
-
-div.book_nav a {
-  color: #dd7737;
-}
-
 /* ********** */
 /* Cookie bar */
 /* ********** */
@@ -168,6 +158,32 @@ div.book_nav a {
 #cookies_adv a {
   color: white;
   text-decoration: underline;
+}
+
+/* ***************** */
+/* Paneles de codigo */
+/* ***************** */
+.panel, pre {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d9d9d9;
+  margin-bottom: 1.0rem;
+  padding: 1.0rem;
+  background: #f2f2f2;
+  line-height: 1;
+  /*font-size: 90%*/
+}
+
+/* ******** */
+/* book_nav */
+/* ******** */
+div.book_nav {
+  margin-top: 0.7em;
+  margin-bottom: 1em;
+}
+
+div.book_nav a {
+  color: #dd7737;
 }
 
 /* **** */
