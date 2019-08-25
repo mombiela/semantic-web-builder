@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
 
-    <link rel="stylesheet" href="/css/site.css?v=4">
+    <link rel="stylesheet" href="/css/site.css?v=5">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
@@ -61,7 +61,7 @@
 	
     <div class="top-bar">
     	<ul>
-			<li style="float:right"><a class="link_src" href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
 			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 			<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
 			<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
