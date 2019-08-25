@@ -1,5 +1,5 @@
 #if(${doc.getChild("navigation")})
-	<div class="column row book_nav">
+	<div class="column row book_nav clearfix">
 		#set($nav = ${doc.getChild("navigation")})
 
 		#if($nav.getChild("previous"))

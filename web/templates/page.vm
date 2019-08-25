@@ -64,17 +64,15 @@
 	<!-- ******* -->
 	
     <div class="top-bar">
-    	<ul class="top-bar__left">
+    	<ul>
 			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 			<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
 			<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
 			<li><a href="chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
 			<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
 			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
-    	</ul>
-    	<ul class="top-bar__right">
 			<li><a class="link_src" href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-		</ul>
+    	</ul>
     </div>
 	
 	<!-- ******* -->
@@ -82,7 +80,7 @@
 	<!-- ******* -->
 	
     <div class="row" id="main_content">
-      <div class="small-12 medium-8 columns">
+      <article>
 		#parse("/navigation.vm")
 	
 		#if(${doc.canonicalName} == "chapter")
@@ -122,43 +120,37 @@
 		#if($doc.getChilds("text").size()>0)
 			#parse("/navigation.vm")
 		#end
-	  </div>
+	  </article>
 	  	
-      <div class="small-12 medium-4 columns">
-		<aside id="advertisement">
-			<!--
-			-->
-			
-			<h2>${lang.get("lat.sponsors.title")}</h2>
-        	<p>${lang.get("lat.sponsors.1")}<p>
-        	<p>${lang.get("lat.sponsors.2")}</p>
-        	<p>${lang.get("lat.sponsors.3")}</p>
-        	<h3>${lang.get("lat.ads.title")}</h3>
-        	<p>${lang.get("lat.ads.1")}</p>
-        	<p>${lang.get("lat.ads.2")}</p>
-        	
-			#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- STxT - Adaptable -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-0611338592562725"
-                 data-ad-slot="5037052041"
-                 data-ad-format="auto"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-			<p>&nbsp;</p>
-			#end
-		</aside>
-	  </div>
+	  <aside id="advertisement">
+		<!--
+		-->
+		
+		<h2>${lang.get("lat.sponsors.title")}</h2>
+    	<p>${lang.get("lat.sponsors.1")}<p>
+    	<p>${lang.get("lat.sponsors.2")}</p>
+    	<p>${lang.get("lat.sponsors.3")}</p>
+    	<h3>${lang.get("lat.ads.title")}</h3>
+    	<p>${lang.get("lat.ads.1")}</p>
+    	<p>${lang.get("lat.ads.2")}</p>
+    	
+		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- STxT - Adaptable -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-0611338592562725"
+             data-ad-slot="5037052041"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+		<p>&nbsp;</p>
+		#end
+	  </aside>
 	</div>
 	
-    <div class="row">
-      <div class="small-12 columns">
-		<footer>${lang.get("foot.1")}</footer>
-	  </div>
-	</div>
+	<footer>${lang.get("foot.1")}</footer>
 	
 	<div id="cookies_adv">
 		${lang.get("cookies_1")}

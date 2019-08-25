@@ -2,26 +2,26 @@
 /* tob_bar */
 /* ******* */
 
-div.top-bar {
+.top-bar {
 	background-color: $color2;
 	
 	ul {
-		margin-top: 10px;
+		margin-top: 0;
+		margin-bottom: 0;
 		list-style: none;
 		padding-left: 0;
-	}
-	
-	ul li {
-		display: inline-block;
-	}
-	
-	ul a {
-		color: white;
-		padding: 5px;
-		text-decoration: none;
+		
+		li {
+			display: inline-block;
+		}		
+		a {
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			display: inline-block;
+		}	
+		a.link_src {
+		    color: yellow;
+		}
 	}	
-	ul a.link_src {
-	    color: yellow;
-	    text-decoration: none;
-	}
 }
