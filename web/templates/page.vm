@@ -120,10 +120,11 @@
 	  </article>
 	  	
 	  <aside id="advertisement">
-		##<h2>${lang.get("lat.sponsors.title")}</h2>
-    	##<p>${lang.get("lat.sponsors.1")}<p>
-    	##<p>${lang.get("lat.sponsors.2")}</p>
-    	##<p>${lang.get("lat.sponsors.3")}</p>
+		<h2>${lang.get("lat.sponsors.title")}</h2>
+    	<p>${lang.get("lat.sponsors.1")}<p>
+    	<p>${lang.get("lat.sponsors.2")}</p>
+    	<p>${lang.get("lat.sponsors.3")}</p>
+    	<br>
     	##<h2>${lang.get("lat.ads.title")}</h2>
     	##<p>${lang.get("lat.ads.1")}</p>
     	##<p>${lang.get("lat.ads.2")}</p>
