@@ -66,7 +66,12 @@ public abstract class AbstractDirProcessor implements Processor
     		        String path = srcFile.getCanonicalPath().substring(dirAbs).replace('\\', '/');
     		        if (!AntPathMatcher.match(filter, path))
     		        {
+    		            //System.out.println("Not match: " + filter + " -> " + path);
     		            continue;
+    		        }
+    		        else
+    		        {
+    		            //System.out.println("Match: " + filter + " -> " + path);
     		        }
     		    }
     			process(context, srcFile);
