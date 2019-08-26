@@ -20,7 +20,7 @@
 	#end
 	
 	<script src="/js/cookie.js"></script>
-	<script>#parse("/page.js")</script>	
+	<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
