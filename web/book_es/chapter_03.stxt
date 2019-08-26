@@ -379,7 +379,7 @@ text:
 code:
 	Nodo(...):
 		Nodo Texto: Vamos a poner un ejemplo de xml; 
-			de como se hacían las cosas antes de @STxT@:
+			de como se hacían las cosas antes de STxT:
 			<nodo>
 				<nodo1>Esto es un ejemplo</nodo1>
 				<nodo2>Esto es un ejemplo de escape: &lt; </nodo2>

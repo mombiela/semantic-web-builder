@@ -382,7 +382,7 @@ text:
 code:
 	Node (...):
 		Text Node: We are going to put an xml example; 
-			of how things were done before @STxT@:
+			of how things were done before STxT:
 			<node>
 				<node1>This is an example</node1>
 				<node2>This is an escape example: &lt;</node2>
