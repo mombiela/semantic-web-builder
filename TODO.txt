@@ -2,6 +2,5 @@
 Corto plazo
 -----------
 
-* No reemplazar en *.stxt!!!
 * Header con span correcto
 
