@@ -1,6 +1,0 @@
------------
-Corto plazo
------------
-
-* Header con span correcto
-

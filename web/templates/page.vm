@@ -32,8 +32,8 @@
     <header id="main_header">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.canonicalName} == "chapter")	<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: ${lang.get("title_book")}
-			#else                  					<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: Semantic text
+			#if(${doc.canonicalName} == "chapter")	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
+			#else                  					<span class="color1"><b>S</b></span>TxT: Semantic text
 			#end
     	    </a>
 		</h1>
