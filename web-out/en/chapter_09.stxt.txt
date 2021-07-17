@@ -1,0 +1,466 @@
+Chapter(www.semantictext.info/book.stxt):
+
+Metadata:
+	Title: Chapter 9: STxT and XML
+	Description: Here we compare STxT with XML and show similarities and differences.
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+
+Nav:
+	Prev: 08
+	Next: 10
+	
+title:
+	Chapter 9: @STxT@ and XML
+
+h1:
+	Note for the reader
+	
+text:
+	This chapter may offend xml enthusiast readers.
+	Read at your own risk ;-)
+	
+h1:
+	The legend (**)
+	
+text:
+	The origin of all evil: SGML.
+
+	It all began a long, long time ago, in a dark land called "computer science".
+	Encodings thrived in that world. Sowing incompatibilities.
+	Hindering communications. Laughing at those that were not like them.
+	Some tried to be at peace with all of them.
+
+	And then they created the monster: SGML
+
+	The monster started saying what encoding it would keep. And the problem was solved.
+	But it was too much of an effort. A lot of strange characters were necessary.
+	Texts full of "<", ">", "&xxx;". Unintelligible.
+
+	And they have reproduced. The world is full of its children. Little monsters that
+	fill the Earth with these characters, hindering reading for humans.
+	Only an elite handful can deal with the monsters. They are called "The computer techs".
+	They are terrifying. Nobody wants to see them, but everyone needs them. They are obscure.
+	They speak strange languages.
+
+	But the monsters are still here. They have mutated. They are now called xml’s.
+	And people like them!!
+
+	...
+
+	But a small group of people met and decided that it could not be.
+	They would create a champion. Someone who would illuminate them. Only one could remain.
+	
+alert:
+	The time for @STxT@ had arrived.
+	
+h1:
+	Nowadays (**)
+
+text:
+	The world is full of ugly documents, //xml's that we like...// but it’s a horrible format!
+
+	We are inheriting an outdated format, with outdated encodings, with a very computerized way of thinking.
+	And it is everywhere. And we still use it. And we want it to be there for everything... One minute! Stop!
+	Is it necessary? If we didn't know anything about sgml and wanted to have a txt fast for parsing, with structure,
+	with namespace, would we have created xml? I don’t think so. If we tell a child to make something up,
+	I guess that they never would have created xml... they would have made something more natural... THEY WOULD HAVE CREATED @STxT@!
+
+	Well, we have more experience and we have learned. Let's create it!
+	
+h1:
+	Initial contact
+	
+text:
+	I don't want to scare you, but @STxT@ compared with xml, is:
+
+	* Better looking
+	* More compact
+	* Simpler
+
+	And you can also express the same things.
+
+	In other sections we will also see that:
+
+	* Automatic internationalization of semantics
+	* Faster parsing
+	* Everything is namespaces! And you can’t even see them!
+
+	Let's see an XML example, and we will compare it with @STxT@, for starters.
+ 	It will be an easy example:
+
+code:
+	<?xml version="1.0" encoding="UTF-8" ?> 
+	<!-- This is a line comment  --> 
+	<email>
+	<from>John Smith</from>
+	<to>Mery Adams</to> 
+	<cc>Keyla Brown</cc> 
+	<title>Project report</title> 
+	<body>Hello Mery!! The book is finished!!</body> 
+	</email>
+
+text:
+	Let’s see the @STxT@ version:
+	
+code:
+	# This is a line comment
+	Email (www.example.com/email.stxt):
+		From: John Smith
+		To: Mery Adams
+		Cc: Keyla Brown
+		Title: Project report
+		Body: Hello Mery!! The book is finished!!
+
+text:
+	I think a first feature stands out:
+	
+assert:
+	@STxT@ looks much better than XML, and is understood better 
+	
+text:
+	Let's go for the size.
+
+	XML Length: 246\\
+	@STxT@ Length: 183
+
+	Let's see when we compact fully
+
+code:
+	<?xml version="1.0" encoding="UTF-8" ?><!-- This is a line comment  -->
+	<email><from>John Smith</from><to>Mery Adams</to><cc>Keyla Brown</cc>
+	<title>Project report</title><body>Hello Mery!! The book is
+	finished!!</body></email>
+
+code:
+	# This is a line comment
+	Email(www.example.com/email.stxt):
+	From:John Smith
+	To:Mery Adams
+	Cc:Keyla Brown
+	Title:Project report
+	Body:Hello Mery!! The book is finished!!
+
+text:
+	Minimum XML length: 225\\
+	Minimum @STxT@ length: 172
+
+	If we compare without xml header or @STxT@ namespace:
+
+	Minimum XML length: 186\\
+	Minimum @STxT@ length: 144
+
+	I think it is clear that
+
+assert:
+	@STxT@ is more compact than XML
+	
+text:
+	But in addition
+	
+assert:
+	@STxT@ is more understandable than XML in a compacted state
+	
+text:
+	or put another way
+	
+assert:
+	@STxT@ keeps its understanding in a compacted state,\\
+	while XML does not
+			
+text:
+	By the way, have we lost information? No, but what would happen if there were attributes?
+	We will discuss it later. For now, believe me:
+	
+assert:
+	With @STxT@ you can express the same things as with XML
+		
+text:
+	Now let's try something fun...
+	What does an XML document with a text node which in turn contains an XML, look like?
+
+	Let’s see it:
+	
+code:
+	<?xml version="1.0" encoding="UTF-8" ?> 
+	<!-- This is a line comment  --> 
+	<email>
+	<from>John Smith</from>
+	<to>Mery Adams</to> 
+	<cc>Keyla Brown<cc> 
+	<title>Project report</title> 
+	<body>
+		Hello Mery!! The book is finished!!
+		&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+		&lt;!-- This is a line comment  --&gt; 
+		&lt;email&gt;
+		&lt;from&gt;John Smith&lt;/from&gt;
+		&lt;to&gt;Mery Adams&lt;/to&gt; 
+		&lt;cc&gt;Keyla Brown&lt;cc&gt; 
+		&lt;title&gt;Project report&lt;/title&gt; 
+		&lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
+	</body> 
+	</email>
+	
+text:
+	And in @STxT@:
+
+code:
+	Email (www.example.com/email.stxt):
+	From: John Smith
+	To: Mery Adams
+	Cc: Keyla Brown
+	Title: Project report
+	Body:
+		Hello Mery!! The book is finished!!
+		<email>
+		<from>John Smith</from>
+		<to>Mery Adams</to> 
+		<cc>Keyla Brown<cc> 
+		<title>Project report</title> 
+		<body>Hello Mery!! The book is finished!!</body> 
+		</email>
+
+text:
+	I think nothing more needs be said. It is clear, but:
+	
+assert:
+	@STxT@ is simpler than XML
+	
+h1:
+	XML attributes
+	
+text:
+	Let's go for an example:
+
+code:
+	<example id="1" show="false">
+		Hello World
+	</example>
+
+text:
+	Attributes in xml have always been controversial.
+	What is an attribute and what should be a node? It is always difficult to decide.
+	It is quite accepted that attributes are like node metadata,
+	that is, they provide information but not about the content.
+	There are cases in which this is acceptable, but (in my humble opinion)
+	in most cases, they are a source of problems.
+
+	Another added problem is that everyone should keep in mind that attributes exist.
+	This affects DTD's, XSD's, libraries, programmers... And what for?
+	Actually they do not provide much. Only unnecessary complexity.
+	Besides, this is @STxT@. Everything has a meaning, and everything is important.
+	
+assert:
+	@STxT@ has no XML style attributes
+					
+text:
+	This makes it //BETTER//, not worse. Sometimes, //LESS IS MORE ;-)//
+
+	The previous example in @STxT@ would be:
+
+code:
+	example(...):
+		id:1
+		show:false
+		text:Hello World
+
+text:
+	In general, we can always make something of the type:
+	
+code:
+	node_name:
+		metadata:
+			m1:xxx
+			m2:xxx
+			m3:xxx
+		node2:
+		node3:
+	
+h1:
+	DTD, XSD
+	
+h2:
+	XSD, DTD, and @STxT@
+	
+text:
+	Let's talk about dtd’s and xsd's of xml. They are documents that tell us how a valid xml must be.
+	They work well more or less, and each of them has its advantages and disadvantages.
+	If you look around on the Internet you will see what I mean.
+
+	In short, DTD is simpler than XSD, is less powerful, and is written in a different language than XML.
+	XSD is more powerful, more difficult to make and understand, but is written in XML, there is no need to learn another language.
+
+	And what happens with @STxT@? You should know it :-D It has the best. It is an @STxT@ document.
+	Integrated into the language itself. Powerful and easy to learn. Just like @STxT@ itself ;-)
+
+h2:
+	Where is it?
+	
+text:
+	I'd like to see a typical xml problem disappear:
+	
+assert:
+	//Where is the grammar in this document?//
+	
+text:
+	In @STxT@, //EVERYTHING// is on the web. When you want to create a document you have
+	to be able to see automatically its definition. The grammar should always be accessible.	 
+	
+assert:
+	An @STxT@ document has an associated grammar by definition.\\
+	Otherwise, it is not @STxT@
+	
+h2:
+	XSD of the XSD (*)
+	
+text:
+	Anyone want to compare the xsd of an xsd? I've been tempted to include it in the book,
+	but it would have taken up over 50 pages, and I'm not exaggerating :-D
+
+	I’ll leave you the link, in case someone wants to see it:
+
+	[[http://www.w3.org/2001/XMLSchema.xsd|http://www.w3.org/2001/XMLSchema.xsd|xsd]]
+
+	Is there someone who understands it? Excuse me, excuse me. Is there someone //who is not a superhero// who understands it?
+
+	In contrast with @STxT@ most people would not have any difficulties understanding the @STxT@ of an @STxT@.
+	I'm going to show it, although we have already seen it in Chapter 4:
+
+code:
+	ns_def(www.semantictext.info/namespace.stxt):
+	 
+	n_def:
+		type:NODE
+		cn:ns_def
+		a:namespace definition
+		a:namespace_definition
+		ch:
+			cn:n_def
+			n:+
+	n_def:
+		type:NODE
+		cn:n_def
+		a:node definition
+		a:node def
+		a:node_def
+		ch:
+			cn:cn
+			n:1
+		ch:
+			cn:a
+			n:*
+		ch:
+			cn:type
+			n:1
+		ch:
+			cn:dsc
+			n:?
+		ch:
+			cn:ch
+			n:*
+	n_def:
+		type:NODE
+		cn:ch
+		a:Child
+		a:Child Node
+		ch:
+			cn:cn
+			n:1
+		ch:
+			cn:ns
+			n:?
+		ch:
+			cn:n
+			n:1
+	n_def:
+		type:TEXT
+		cn:cn
+		a:name
+		a:node
+		a:node name
+		a:canonical name
+	n_def:
+		type:TEXT
+		cn:a
+		a:al
+		a:alias
+	n_def:
+		type:TEXT
+		cn:type
+		a:node type
+	n_def:
+		type:TEXT
+		cn:n
+		a:num
+		a:occurs
+	n_def:
+		type:TEXT
+		cn:dsc
+		a:descrip
+		a:description
+	n_def:
+		type:TEXT
+		cn:ns
+		a:namespace
+
+text:
+	That's it! Compare it! :-D \\
+	There’s no color!
+
+	Okay, it’s much simpler but, no one dares to read what comes out of the xsd's!
+	Everything is much more complicated. With @STxT@ we have sought simplicity.
+	We like to do things by hand! Having an XML editor or reader should not be mandatory!
+
+h1:
+	Parsers and validators
+	
+text:
+	Does someone want to compare parsers and validators? There is no need to,
+	one with @STxT@ is MUCH faster and simpler to implement. 
+	Why? It’s very simple:
+	
+assert:
+	@STxT@ has much fewer rules than XML
+		
+text:
+	This makes everything easier. The parser code is faster.
+	They have fewer errors. It is easier to maintain. To make.
+	In addition, another advantage is that parsing and validating can be done simultaneously.
+	With XML you must decide if you really have to validate the xsd... and where is it?
+	Here we go again with the same problem as always. With @STxT@ everything is much clearer.
+	Any document has to have a definition of what it is like.
+	But it is very easy to make. It doesn’t take any time. It's worthwhile.
+	It is one of the great advantages of @STxT@.
+
+	Note: For fans of private information: if the @STxT@ parser or editor
+	has its own @STxT@ grammars repository, it does not necessarily have to be visible on the web.
+	I don't like it, I am against it, but there is nothing or no one that can prevent this.
+	In fact, sometimes it will be needed, as I had to do with my own book
+	before having the website up.
+
+h1:
+	Namespaces
+	
+text:
+	I have always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.
+
+	Namespaces in @STxT@ are completely different, as they are not difficult to make,
+	they provide all the necessary information, and we do not lose the expressiveness that is achieved with XML.
+	In fact, you can’t even see them! But they are always there, helping. Finishing the work.
+
+	In XML namespaces are a nuisance, provide complexity, and give little in return.
+
+	By the way, we have banished the {{{http://}}} prefix from namespaces.
+	It is no longer necessary, as this would imply that it is different if it is obtained with {{{http://}}}
+	than if it is done with {{{https://}}}. This makes no sense, what does make sense is that it is from {{{//}}}. 
+	
+h1:
+	Future
+	
+text:
+	I have been very honest with my entire analysis of XML vs @STxT@, but there is something we must not forget.
+	XML has been around for quite a while. It is tested, it is used everywhere. It is a standard.
+	@STxT@ is new, it has just been born, and it has a long way to go.
+	
+	But I think that it is worthwhile.

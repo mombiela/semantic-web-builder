@@ -1,0 +1,48 @@
+Page (www.semantictext.info/page.stxt):
+
+Metadata:
+	Title: Cooperate with us
+	Description: Things that need to be finished in STxT language, and ways of contributing 
+		to the portal maintenance and contents.
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-10-17
+	Priority: 0.6
+	
+Content:
+	==Would you like to cooperate?==
+	
+Alert:
+	Thank you for wanting to cooperate with us!!
+	
+Content:
+	The best way to help us is making the language known to others. You can do this 
+	by using it, talking to other people about it, and enjoying it. We have already 
+	used it, and the experience has been great.
+
+	Although there is much work to be done. We are missing libraries, text editors, 
+	applications... the list is endless.
+
+	Good news for programmers: a new toy for exploring :-)	
+	
+	== www.semantictext.info ==
+	
+	Our language has infinite applications, but we believe that its definition is unique 
+	and that it is ready.
+	
+	//We leave the possible applications or uses up to you ;-)//
+	
+	With regard to this website, we believe that it is a closed project, but it is far 
+	from perfect. Surely it can be improved in thousands of ways. Do you think the book 
+	needs a new chapter? Have you found an error in the documents? 
+	Would you improve any examples? Would you propose a different and smaller css?
+	
+	We want this website to be a reference point in learning @STxT@.
+	
+alert: Help us make this possible!\\
+	[[admin@semantictext.info]]
+	
+Content:
+	**We will be happy to reply as soon as possible ;-)**\\
+	By the way, we only speak Catalan, Spanish, and English :-)
+
+	

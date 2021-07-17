@@ -1,0 +1,262 @@
+Chapter(www.semantictext.info/book.stxt):
+
+Metadata:
+	Title: Chapter 7: Equivalences and Internationalization
+	Description:
+		Document internationalization. We also explain how different
+		documents can be treated in an equivalent manner. 
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+
+Nav:
+	Prev: 06
+	Next: 08
+	
+Title:
+	Chapter 7: Equivalences and Internationalization (I18N)
+	
+text:
+	This chapter may seem complex at first,
+	but it is not so. You will see that it is very natural.
+	In fact, you will think... Why have we not used it before?
+
+	The best way of working is to start with an example,
+	and then we will go into the subject in a more formal way.
+
+h1:
+	I18N. One example
+	
+text:
+	Let's make a simple example.
+	For example, an actress/actor document:
+
+code:
+	Actress (www.example.com/actress.stxt):
+		Name: Sheyla Queen
+		Birthday: 2/21/1979
+		Filmography:
+			Film:
+				Title: The last thing
+				Year: 1992
+			Film:
+				Title: Garden in red
+				Year: 1993
+
+text:
+	The grammar is quite simple:
+
+code:
+	Node Definition: 
+		Name: actor
+		Alias: acress
+		Type: NODE
+		Child:
+			Node: name 
+			Num: 1
+		Child:
+			Node: birthday 
+			Num: 1
+		Child:
+			Node: filmography 
+			Num: 1
+	Node Definition:
+		Name: filmography
+		type: NODE
+		Child:
+			Node: film
+			Num: +
+	Node Definition:
+		Name: film
+		Type: NODE
+		Child:
+			Type: title
+			Num: 1
+		Child:
+			Type: year
+			Num: 1
+	Node Definition:
+		Name: name
+		Type: TEXT
+	Node Definition:
+		Name: birthday
+		Type: TEXT
+	Node Definition:
+		Name: title
+		Type: TEXT
+	Node Definition:
+		Name: year
+		Type: TEXT
+	
+text:
+	Now, let's imagine that we want the same information in Spanish,
+	but instead of translating everything, we make a grammar that is almost the same,
+	but with aliases in Spanish.
+
+	The grammar would be left like this:
+
+code:
+	Node Definition: 
+		Name: actor
+		Alias: acress
+		Alias: actriz
+		Type: NODE
+		Child:
+			Type: name 
+			Num: 1
+		Child:
+			Type: birthday 
+			Num: 1
+		Child:
+			Type: filmography 
+			Num: 1
+	Node Definition:
+		Name: filmography
+		Alias: Filmografía
+		type: NODE
+		Child:
+			Type: film
+			Num: +
+	Node Definition:
+		Name: film
+		Alias: película
+		Type: NODE
+		Child:
+			Type: title
+			Num: 1
+		Child:
+			Type: year
+			Num: 1
+	Node Definition:
+		Name: name
+		Alias: Nombre
+		Type: TEXT
+	Node Definition:
+		Name: birthday
+		Alias: Fecha de nacimiento
+		Type: TEXT
+	Node Definition:
+		Name: title
+		Alias: Título
+		Type: TEXT
+	Node Definition:
+		Name: year
+		Alias: Año
+		Type: TEXT
+	
+text:
+	And the document could be like this:
+	
+code:
+	Actriz (www.example.com/actress_es.stxt):
+		Nombre: Sheyla Queen
+		Fecha de nacimiento: 2/21/1979
+		Filmografía:
+			Película:
+				Título: The last thing
+				Año: 1992
+			Película:
+				Título: Garden in red
+				Año: 1993
+	
+assert:
+	Now we have the same document equal but in perfect Spanish!
+
+text:
+	In addition, these documents have something in common:
+	
+assert:
+	The compacted form is the same!
+	\\(except the Namespace)
+		
+text:
+	Well, this is very important, because in order to translate from one to the other
+	we only need to change to the compacted form, change the namespace, and... that's it!
+	The document is exactly the same.
+
+	This is a case of equivalent grammars. We won’t talk about internationalization here,
+	as we are looking for something even more generic than that. We are looking for connections between languages,
+	and this is what the following sections will be about.
+	
+	But what we just did is a very interesting application.
+	
+assert:
+	A good way to internationalize is to create an equivalent grammar in another language.
+				
+h1:
+	Equivalences (**)
+	
+text:
+	Let's talk about connections that can be made between different grammars,
+	and their potential transformations. Actually we could stretch this topic much more,
+	but we're just going to reflect on it a little bit, and show certain things.
+		 
+h2:
+	Equivalent grammars (**)
+	
+text:
+	We say that two grammars are equivalent if any document
+	has the same compacted form; with the exception of the namespace of the first node.
+
+	This is the previous internationalization example,
+	where we had the compacted form be the same.
+
+	Otherwise, two grammars are equivalent if they have
+	the same canonical names, and an equal child structure.
+
+	One of the advantages of this is that internationalization
+	is almost direct, as we have seen in the previous section.
+
+	This is very useful, as we can say that the languages
+	are virtually identical. This would let us make future transformations,
+	and a whole series of very easily automated works.
+
+h2:
+	Transformable (or convertible) grammars (**)
+	
+assert:
+	A B grammar is transformable into A if when we make the compacted form,
+	just by changing the namespace of the original node B,
+	it can be parsed by A. That is, the canonicals from B
+	are either canonicals from A or aliases from A.
+	  	
+text:
+	 I think the definition is quite clear, it's like saying that it is
+	//like a subset of another larger language//.
+
+	Another application might be for building bridges between different documents.
+	We can create a type of document that serves as a transformer from one language to another.
+	This would be done by combining the aliases from one with canonical names,
+	so that the transformation would be almost direct.
+	
+	Note: The compacted from this one can be read with the target namespace (in full),
+	although it doesn’t have to be the other way around. It is like a form of inclusion.
+	
+	One thought: transformables are an easy way of moving from one language to another.
+	If this was XML, it would be like having an already implemented XSLT!
+
+# I think it would be interesting to also think about transformations
+# starting from the compacted form. When we change the node name and level 
+# we can achieve a structure very different from the original,
+# even with the possibility of also deleting lines if they are not valid
+# in the destination grammar.
+	
+# Note: I think this topic is too complex to deal with at this moment, 
+# but as a starting point it is very interesting. 
+	
+h2:
+	Extensions (**)
+	
+text:
+	Extensions are like transformable grammars, but seen from the point of view of the destination grammar.
+	
+assert:
+	An A grammar is an extension of B, if when we make the compacted form of B,
+	just by changing the namespace of the original node, it can be parsed by A.
+	That is, the canonicals from B are either canonicals from A or aliases from A.
+	
+text:
+	This tells us that A is an extension of B. What we do here is //extend the functionality of B//,
+	but we allow compatibility the other way around. That is, if we have B documents, they can also be used.
+	
+	
+	

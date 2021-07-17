@@ -1,0 +1,117 @@
+Chapter(www.semantictext.info/book.stxt):
+
+Metadata:
+	Title: Chapter 13: And now what?
+	Description: What to do from now on. Proposals and possibilities.
+	Author: Joan Costa Mombiela
+	Last_modif: 2013-03-01
+
+Nav:
+	Prev: 12
+	Next: end
+	
+Title: Chapter 13: And now what?
+
+h1: Where to start
+
+text:
+	This is not a book. It is almost a proposal. The start of future work.
+	I'd like for a new movement to be born from here.
+	We have been doing things the same way for a long time and I would like to break with this.
+	But in a beautiful way. Nice. And within the reach of everyone.
+	
+	This is my contribution.
+	
+	Perhaps this may seem a bit pretentious, but I like the idea so much that I cannot help it.
+ 	Excuse my audacity.
+	
+	With this book I have tried to explain how I understand @STxT@, and what I meant to do when I created this language.
+	Have I really created it? I guess the language was already there, and the only thing I had
+	to do was bring it out into the light. I'd like to think that I made it as a sculptor.
+
+h1: Pending things
+
+text:
+	There is much left to do if we really want to adopt this technology.
+	I'm going to give ideas, although surely I can’t even imagine the
+	most interesting applications right now.
+
+	This is the beautiful part, you toss an idea and it no longer belongs to you, it grows and matures alone,
+	and you can just watch where it goes :-)
+	
+	In future editions I hope to be able to "delete" some of these things,
+	and add new ones that are now unthinkable.
+
+# --------------------------------------------------------------------------------------------------------------------
+# Here I present the real list of //pending things//, although solving it is not within my reach :-(
+#
+# 	* Air for everyone (that’s it!! at least there is something already done...)
+# 	* Water for everyone
+# 	* Food for everyone
+# 	* Decent housing for everyone
+# 	* Quality education for everyone
+# 	* Decent work for everyone
+# 	* Power for everyone
+# 	* Money for everyone (well, I would like it to to be another form of money, fairer, non-speculative,
+#	  and different from the one we know. Once again, please think of something better than what now we have. 
+#	  Surely there are alternatives. We just have to find them. But in order to do this we have to search.)
+#	* .....
+#	* Ultimately, humanity for everyone
+#	
+#	Well, now that I've already shown //what is really pending//, let’s return to @STxT@.
+#	The following sections deal with that.
+# --------------------------------------------------------------------------------------------------------------------
+
+h2: Editors with assisted content
+	
+text:
+	We have many text editors, for many different languages.
+	How would you like @STxT@ editors?
+	Our favorite editor, but now collecting web semantics
+	and creating any type of structured content.
+	Quickly and easily. For everyone.
+	Now the content rules come up alone. With descriptions.
+	Content is easy and quick to create. By everyone.
+
+h2:	Libraries
+	
+text:
+	We need @STxT@ parsers in any programming language.
+	There is much work to be done here. Fast and efficient language parsers.
+	
+	It's like carrying what we already have in XML to @STxT@. And there is a lot.
+
+h2: Language converter
+	
+text:
+	Surely we have languages that we don’t like, or that we believe can be simpler.
+	We can pass directly to @STxT@ or make converters that pass from @STxT@ to another more specialized,
+	but less semantic language.
+	
+	For example we have Latex, second to none in terms of quality of output documents, but a
+	bit difficult for most people. What would a @STxT@ to Latex converter be like?
+	We could make document types (articles, letters,...) and their converters to Latex.
+	The original text would be very clear (@STxT@) and the final result file (pdf) would be excellent.
+	
+	This would allow computer techs to keep more specialized technologies,
+  	and the rest to use simple formats like @STxT@.
+	
+h2: Language substitution
+	
+text:
+	This can be done in a lot of sites, XML documents, RSS's, special text files,
+	program configurations; there are thousands of sites where a language or files could be replaced directly by @STxT@.
+
+	What would we gain? We would have enough with just one editor, texts would be easier to maintain, and by having a grammar
+	we would also have the description of what a document should look like.
+
+h2: Semantic Web
+
+text:
+	There is so much work to do that I will only tell you to look again at the previous chapter,
+	you hypnotize yourselves, and... go ahead!
+
+alert:
+	Who knows what may come up! :-D 
+	
+	
