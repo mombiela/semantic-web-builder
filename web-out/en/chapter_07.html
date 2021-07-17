@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Equivalences and Internationalization</title>
+	<meta name="description" content="Document internationalization. We also explain how different
+documents can be treated in an equivalent manner.">
+	<meta name="author" content="Joan Costa Mombiela">
+
+    <link rel="stylesheet" href="/css/site.css?v=1">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/chapter_07.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+				<span class="color1"><b>S</b></span>TxT: The Book
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/chapter_07.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="chapter_07.stxt" target="chapter_07" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_06.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_08.html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+									<h1>Chapter 7: Equivalences and Internationalization (I18N)</h1>
+						
+			
+																								<p>This chapter may seem complex at first,
+but it is not so. You will see that it is very natural.
+In fact, you will think... Why have we not used it before?</p>
+<p>The best way of working is to start with an example,
+and then we will go into the subject in a more formal way.</p>
+
+								            	<h2><a id="index_0"></a>I18N. One example</h2>
+																<p>Let&#39;s make a simple example.
+For example, an actress/actor document:</p>
+
+												<pre>Actress (www.example.com/actress.stxt):
+    Name: Sheyla Queen
+    Birthday: 2/21/1979
+    Filmography:
+        Film:
+            Title: The last thing
+            Year: 1992
+        Film:
+            Title: Garden in red
+            Year: 1993</pre>
+												<p>The grammar is quite simple:</p>
+
+												<pre>Node Definition: 
+    Name: actor
+    Alias: acress
+    Type: NODE
+    Child:
+        Node: name 
+        Num: 1
+    Child:
+        Node: birthday 
+        Num: 1
+    Child:
+        Node: filmography 
+        Num: 1
+Node Definition:
+    Name: filmography
+    type: NODE
+    Child:
+        Node: film
+        Num: +
+Node Definition:
+    Name: film
+    Type: NODE
+    Child:
+        Type: title
+        Num: 1
+    Child:
+        Type: year
+        Num: 1
+Node Definition:
+    Name: name
+    Type: TEXT
+Node Definition:
+    Name: birthday
+    Type: TEXT
+Node Definition:
+    Name: title
+    Type: TEXT
+Node Definition:
+    Name: year
+    Type: TEXT</pre>
+												<p>Now, let&#39;s imagine that we want the same information in Spanish,
+but instead of translating everything, we make a grammar that is almost the same,
+but with aliases in Spanish.</p>
+<p>The grammar would be left like this:</p>
+
+												<pre>Node Definition: 
+    Name: actor
+    Alias: acress
+    Alias: actriz
+    Type: NODE
+    Child:
+        Type: name 
+        Num: 1
+    Child:
+        Type: birthday 
+        Num: 1
+    Child:
+        Type: filmography 
+        Num: 1
+Node Definition:
+    Name: filmography
+    Alias: Filmograf&iacute;a
+    type: NODE
+    Child:
+        Type: film
+        Num: +
+Node Definition:
+    Name: film
+    Alias: pel&iacute;cula
+    Type: NODE
+    Child:
+        Type: title
+        Num: 1
+    Child:
+        Type: year
+        Num: 1
+Node Definition:
+    Name: name
+    Alias: Nombre
+    Type: TEXT
+Node Definition:
+    Name: birthday
+    Alias: Fecha de nacimiento
+    Type: TEXT
+Node Definition:
+    Name: title
+    Alias: T&iacute;tulo
+    Type: TEXT
+Node Definition:
+    Name: year
+    Alias: A&ntilde;o
+    Type: TEXT</pre>
+												<p>And the document could be like this:</p>
+
+												<pre>Actriz (www.example.com/actress_es.stxt):
+    Nombre: Sheyla Queen
+    Fecha de nacimiento: 2/21/1979
+    Filmograf&iacute;a:
+        Pel&iacute;cula:
+            T&iacute;tulo: The last thing
+            A&ntilde;o: 1992
+        Pel&iacute;cula:
+            T&iacute;tulo: Garden in red
+            A&ntilde;o: 1993</pre>
+												<div class="row">
+            		<div class="assert"><p>Now we have the same document equal but in perfect Spanish!</p>
+</div>
+            	</div>
+												<p>In addition, these documents have something in common:</p>
+
+												<div class="row">
+            		<div class="assert"><p>The compacted form is the same!
+<br/>(except the Namespace)</p>
+</div>
+            	</div>
+												<p>Well, this is very important, because in order to translate from one to the other
+we only need to change to the compacted form, change the namespace, and... that&#39;s it!
+The document is exactly the same.</p>
+<p>This is a case of equivalent grammars. We won’t talk about internationalization here,
+as we are looking for something even more generic than that. We are looking for connections between languages,
+and this is what the following sections will be about.</p>
+<p>But what we just did is a very interesting application.</p>
+
+												<div class="row">
+            		<div class="assert"><p>A good way to internationalize is to create an equivalent grammar in another language.</p>
+</div>
+            	</div>
+								            	<h2><a id="index_1"></a>Equivalences (**)</h2>
+																<p>Let&#39;s talk about connections that can be made between different grammars,
+and their potential transformations. Actually we could stretch this topic much more,
+but we&#39;re just going to reflect on it a little bit, and show certain things.</p>
+
+								            	<h3><a id="index_2"></a>Equivalent grammars (**)</h3>
+																<p>We say that two grammars are equivalent if any document
+has the same compacted form; with the exception of the namespace of the first node.</p>
+<p>This is the previous internationalization example,
+where we had the compacted form be the same.</p>
+<p>Otherwise, two grammars are equivalent if they have
+the same canonical names, and an equal child structure.</p>
+<p>One of the advantages of this is that internationalization
+is almost direct, as we have seen in the previous section.</p>
+<p>This is very useful, as we can say that the languages
+are virtually identical. This would let us make future transformations,
+and a whole series of very easily automated works.</p>
+
+								            	<h3><a id="index_3"></a>Transformable (or convertible) grammars (**)</h3>
+																<div class="row">
+            		<div class="assert"><p>A B grammar is transformable into A if when we make the compacted form,
+just by changing the namespace of the original node B,
+it can be parsed by A. That is, the canonicals from B
+are either canonicals from A or aliases from A.</p>
+</div>
+            	</div>
+												<p>I think the definition is quite clear, it&#39;s like saying that it is
+<em>like a subset of another larger language</em>.</p>
+<p>Another application might be for building bridges between different documents.
+We can create a type of document that serves as a transformer from one language to another.
+This would be done by combining the aliases from one with canonical names,
+so that the transformation would be almost direct.</p>
+<p>Note: The compacted from this one can be read with the target namespace (in full),
+although it doesn’t have to be the other way around. It is like a form of inclusion.</p>
+<p>One thought: transformables are an easy way of moving from one language to another.
+If this was XML, it would be like having an already implemented XSLT!</p>
+
+								            	<h3><a id="index_4"></a>Extensions (**)</h3>
+																<p>Extensions are like transformable grammars, but seen from the point of view of the destination grammar.</p>
+
+												<div class="row">
+            		<div class="assert"><p>An A grammar is an extension of B, if when we make the compacted form of B,
+just by changing the namespace of the original node, it can be parsed by A.
+That is, the canonicals from B are either canonicals from A or aliases from A.</p>
+</div>
+            	</div>
+												<p>This tells us that A is an extension of B. What we do here is <em>extend the functionality of B</em>,
+but we allow compatibility the other way around. That is, if we have B documents, they can also be used.</p>
+
+						
+						<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_06.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_08.html" title="Next">Next &#x25BA;</a>
+			</div>
+			  </article>
+	  	
+	  <aside id="advertisement">
+		<h2>Sponsors</h2>
+    	<p>Would you like to be our sponsor? For now we don't have official sponsors, but we are open to offers.<p>
+    	<p>Would you like to be one of them? Contact us: <a href="mailto:admin@semantictext.info">admin@semantictext.info</a></p>
+    	<p>This will be your reserved space ;-)</p>
+    	<br>
+    	    	    	    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2019 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

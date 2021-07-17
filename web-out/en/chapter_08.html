@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8: Examples and Other Technologies</title>
+	<meta name="description" content="Here we show various STxT examples, and compare them with other popular languages.">
+	<meta name="author" content="Joan Costa Mombiela">
+
+    <link rel="stylesheet" href="/css/site.css?v=1">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/chapter_08.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+				<span class="color1"><b>S</b></span>TxT: The Book
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/chapter_08.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="chapter_08.stxt" target="chapter_08" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_07.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_09.html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+									<h1>Chapter 8: Examples and Other Technologies</h1>
+						
+			
+																				            	<h2><a id="index_0"></a>Examples</h2>
+																<p>We can do thousands of examples with this technology.
+It is as simple as taking any other example from another language
+and see how it would be written in <span class='STxT'><span class='first'>S</span>TxT</span>. Perhaps the simplest would be an example
+that comes from XML, as it has many things in common with <span class='STxT'><span class='first'>S</span>TxT</span>
+(the next chapter discusses this topic in particular).</p>
+<p>I have obtained many examples from <a href="http://www.wikipedia.org" wiki>Wikipedia</a>.</p>
+<p>One (invented) xml example would be:</p>
+
+												<pre>&lt;Library&gt;
+    &lt;Book id=&quot;1&quot;&gt;
+        &lt;Title&gt;The Fellowship of the Ring&lt;/Title&gt;
+        &lt;Author&gt;J.R.R. Tolkien&lt;/Author&gt;
+        &lt;Language&gt;EN&lt;/Language&gt;
+        &lt;Published&gt;29 July 1954&lt;/Published&gt;
+        &lt;Genre&gt;High fantasy Adventure&lt;/Genre&gt;
+    &lt;/Book&gt;
+    &lt;Book id=&quot;2&quot;&gt;
+        &lt;Title&gt;The Two Towers&lt;/Title&gt;
+        &lt;Author&gt;J.R.R. Tolkien&lt;/Author&gt;
+        &lt;ISBN&gt;76542&lt;/ISBN&gt;
+        &lt;Language&gt;EN&lt;/Language&gt;
+        &lt;Published&gt;11 November 1954&lt;/Published&gt;
+        &lt;Genre&gt;High fantasy Adventure&lt;/Genre&gt;
+    &lt;/Book&gt;
+    &lt;Book id=&quot;3&quot;&gt;
+        &lt;Title&gt;The Return of the King&lt;/Title&gt;
+        &lt;Author&gt;J.R.R. Tolkien&lt;/Author&gt;
+        &lt;ISBN&gt;12345&lt;/ISBN&gt;
+        &lt;Language&gt;EN&lt;/Language&gt;
+        &lt;Published&gt;20 October 1955&lt;/Published&gt;
+        &lt;Genre&gt;High fantasy Adventure&lt;/Genre&gt;
+    &lt;/Book&gt;
+&lt;/Library&gt;</pre>
+												<p>The same thing if we pass it to <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
+
+												<pre>Library (www.examples.com/demo.stxt):
+
+Book:
+    id: 1
+    Title: The Fellowship of the Ring
+    Author: J.R.R. Tolkien
+    Language: EN
+    Published: 29 July 1954
+    Genre: High fantasy Adventure
+Book:
+    id: 2
+    Title: The Two Towers
+    Author: J.R.R. Tolkien
+    ISBN: 76542
+    Language: EN
+    Published: 11 November 1954
+    Genre: High fantasy Adventure
+Book:
+    id: 3
+    Title: The Return of the King
+    Author: J.R.R. Tolkien
+    ISBN: 12345
+    Language: EN
+    Published: 20 October 1955
+    Genre: High fantasy Adventure</pre>
+												<p>Another example in XML:</p>
+
+												<pre>&lt;email&gt;
+&lt;from&gt;John Smith&lt;/from&gt;
+&lt;to&gt;Mery Adams&lt;/to&gt; 
+&lt;cc&gt;Keyla Brown&lt;cc&gt; 
+&lt;title&gt;Project report&lt;/title&gt; 
+&lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
+&lt;/email&gt;</pre>
+												<p>In <span class='STxT'><span class='first'>S</span>TxT</span> it transforms into:</p>
+
+												<pre>Email (www.example.com/email.stxt):
+
+From: John Smith
+To: Mery Adams
+Cc: Keyla Brown
+Title: Project report
+Body: Hello Mery!! The book is finished!!</pre>
+												<p>We see that the conversion between the two formats is immediate, but the <span class='STxT'><span class='first'>S</span>TxT</span> is much better looking.
+By the way, <span class='STxT'><span class='first'>S</span>TxT</span> always has a grammar, while XML does not
+until a dtd or an xsd are not applied.</p>
+
+								            	<h2><a id="index_1"></a>Wikipedia (*)</h2>
+																<p>I feel great admiration for wikipedia. I think it is one of the best projects that have been created on the Internet.</p>
+<p><em>How could it benefit from <span class='STxT'><span class='first'>S</span>TxT</span>?</em></p>
+<p>Well, wikipedia could have different templates:
+actors, politicians, tv series, films, cities, countries, rivers,... sharing grammars in many cases.
+For example, both actors and politicians can have biographies, but actors can also have a listing of films.</p>
+<p>In addition, a mixture of <span class='STxT'><span class='first'>S</span>TxT</span> with the wikipedia language would be very interesting.
+I think that this is a point where <span class='STxT'><span class='first'>S</span>TxT</span> beats most languages.
+The mixture with the so-called &quot;lightweight markup languages&quot; is really spectacular.</p>
+<p>Thus, mixed texts can be made of the following style:</p>
+
+												<pre>City (www.wikipedia.org/city.stxt):
+     
+Name: Barcelona 
+Autonomous Community: Catalonia
+Country: Spain
+
+History:
+    {{Main|History of Barcelona}}
+    The founding of Barcelona is the subject of 
+    two different legends. The first attributes 
+    the founding of the city to the mythological [[Hercules]].
+    The second legend attributes the foundation
+    of the city directly to the historical
+    [[Carthage|Carthaginian]] [[Hamilcar Barca]],
+    father of [[Hannibal]], who named the city ''Barcino''
+    after his family in the 3rd century BC.
+    ...</pre>
+												<p>Another advantage is that with <span class='STxT'><span class='first'>S</span>TxT</span> we would not only have &quot;templates&quot; of
+how a city information should be, but we could also
+apply styles and formats depending on the document type.</p>
+
+								            	<h2><a id="index_2"></a><span class='STxT'><span class='first'>S</span>TxT</span> and other technologies</h2>
+												            	<h3><a id="index_3"></a>Lightweight markup language</h3>
+																<p>Lightweight markup languages have had a spectacular boom thanks to projects like Wikipedia.
+Thanks to them we can define text in a much simpler way than having to write tags as with HTML.
+But they have a big deficiency: They do not have a clear structure and semantics.</p>
+<p>What&#39;s more, almost all of them deal with the text style:</p>
+<ul><li>Bold</li>
+<li>Italic</li>
+<li>Lists of elements</li>
+<li>Data tables</li>
+<li>...</li></ul>
+<p>It’s surprising to see what we can achieve if we combine these languages with <span class='STxT'><span class='first'>S</span>TxT</span>.
+We get text that is easy to interpret, with defined semantics, and with the expressiveness of both languages.</p>
+<p>One example:</p>
+
+												<pre>Product:
+    Name: Magic memory
+    Price: &euro;10
+    Description:
+        This product produces a //magical rejuvenation//
+        of your memory and provides an **immediate** effect
+        on everyone who tries it.
+
+        Effects:
+
+        * Quick memorization
+        * Automatic learning
+        * Greater concentration</pre>
+												<p>We see that we have given structure thanks to <span class='STxT'><span class='first'>S</span>TxT</span>, but the description is given
+with a wikipedia style.</p>
+
+												<div class="row">
+            		<div class="assert"><p>The union of <span class='STxT'><span class='first'>S</span>TxT</span> with <em>Lightweight markup languages</em> is simply spectacular</p>
+</div>
+            	</div>
+								            	<h3><a id="index_4"></a>Tex, Latex</h3>
+																<p>Please forgive me if I criticize a lot. I never do it without giving an alternative or a reason. I like constructive criticism ;-)
+I&#39;ve seen that one of the objectives of TeX is that a document be printed the same now as in 100 years.
+It had seemed perfect... until now. Now I believe that the objective should be
+that it means the same now as 100 years from now, and that it is <em>understood</em> now and in 100 years.
+And the more people the better. This is not achieved with TeX, but it is with <span class='STxT'><span class='first'>S</span>TxT</span>.
+A document is understood today and 100 years from now. How do I think it should evolve?
+I would make documents in <span class='STxT'><span class='first'>S</span>TxT</span>, would specify a grammar for the different types of documents,
+would allow TeX elements (such as formulas) in the same way that is done with lightweight markup languages,
+and would use TeX as rendering engine.</p>
+<p>I dare say that TeX is unbeatable in terms of rendering; and I think that it will be at least for 100 years more ;-)</p>
+<p>What would a document look like? Well, a simple example would be something like this:</p>
+
+												<pre>Article (www.latex.com/article.stxt):
+Title:
+Author:
+References:
+    Reference:
+        Title:
+        Year:
+        ISBN:
+    Reference:
+        Title:
+        Year:
+        ISBN:
+        
+Paragraph:
+    This is a mathematical formula:
+    
+Formula:
+    \begin{eqnarray}
+    x&amp;=&amp;y\\
+    x^2&amp;=&amp;xy\\
+    x^2-y^2&amp;=&amp;xy-y^2\\
+    (x+y)(x-y)&amp;=&amp;y(x-y)\\
+    x+y&amp;=&amp;y\\
+    2y&amp;=&amp;y\quad \mbox{(first ecuation)}\\
+    2&amp;=&amp;1
+    \end{eqnarray}
+    
+Paragraph:
+    Hello World!!</pre>
+												<p>In fact, now that we can think in <span class='STxT'><span class='first'>S</span>TxT</span>, maybe it’s time to make formulas a different way,
+or a more simplified notation, such as:</p>
+
+												<pre>Article (www.latex.com/article.stxt):
+Title:
+Author:
+References:
+    Reference:
+        Title:
+        Year:
+        ISBN:
+    Reference:
+        Title:
+        Year:
+        ISBN:
+        
+Paragraph:
+    This is a mathematical formula:
+
+Formula:                    
+    Array:
+        Element: x&amp;=&amp;y
+        Element: x^2&amp;=&amp;xy
+        Element: x^2-y^2&amp;=&amp;xy-y^2
+        Element: (x+y)(x-y)&amp;=&amp;y(x-y)
+        Element: x+y&amp;=&amp;y
+        Complex:
+            Element: 2y&amp;=&amp;y\quad 
+            Element: mbox{(first ecuation)}
+                     2&amp;=&amp;1
+Paragraph:
+    Hello World!!</pre>
+												<p>Well, there are thousands of possibilities and ways of approaching the problem, I leave it up to you to practice with them ;-D</p>
+
+												<div class="row">
+            		<div class="assert"><p>What have we gained with respect to just TeX?</p>
+</div>
+            	</div>
+												<ul><li>Ease in creating documents</li>
+<li>UTF-8</li>
+<li>Defined structure</li>
+<li>Semantic text</li>
+<li>Readable text</li></ul>
+<p>And in addition, we have kept the compactness in the creation of mathematical formulas
+and in other elements where TeX is really a great language.</p>
+
+								            	<h3><a id="index_5"></a>JSON (*)</h3>
+																<p>JSON in general has nothing to do with <span class='STxT'><span class='first'>S</span>TxT</span>, but there are certain moments
+where they might compete with each other. I am thinking in web services with REST.
+I bet for <span class='STxT'><span class='first'>S</span>TxT</span>, because it is as easy (or more) to parse as JSON,
+and it gives documents a clear meaning.
+In addition, it is more flexible and easier to read when we embed a large quantity of text,
+whereas in JSON all the escape characters must always be taken into account.</p>
+<p>But you there is no need to worry too much. Apart from web services,
+I don&#39;t think that JSON and <span class='STxT'><span class='first'>S</span>TxT</span> are direct competitors,
+due to their different field of application.</p>
+
+								            	<h3><a id="index_6"></a>Other (*)</h3>
+																<p>There are other languages that may be similar to <span class='STxT'><span class='first'>S</span>TxT</span>, but I believe that none of them have been made with the same approach.
+For example, YAML has some similarities in the way that it uses indentation,
+or CofeeScript, which having a sometimes similar appearance, has nothing to do with <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
+<p><span class='STxT'><span class='first'>S</span>TxT</span> aims to provide structure and semantics to the document,
+while at the same time allowing a readable text for the majority of people,
+regardless of their computer knowledge.</p>
+
+						
+						<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_07.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_09.html" title="Next">Next &#x25BA;</a>
+			</div>
+			  </article>
+	  	
+	  <aside id="advertisement">
+		<h2>Sponsors</h2>
+    	<p>Would you like to be our sponsor? For now we don't have official sponsors, but we are open to offers.<p>
+    	<p>Would you like to be one of them? Contact us: <a href="mailto:admin@semantictext.info">admin@semantictext.info</a></p>
+    	<p>This will be your reserved space ;-)</p>
+    	<br>
+    	    	    	    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2019 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

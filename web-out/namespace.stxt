@@ -1,0 +1,95 @@
+#	-------------------------------------------------------
+#   Generic Grammar: 
+#	   This grammar uses only Canonical Names
+#      to allow simple parsers and future alias addition
+#   
+#   For examples and description:
+#   http://www.semantictext.info/en/book/chapter_04.html
+#              
+# 	ns_def (namespace definition,namespace_definition):
+#		n_def (node definition, node def, node_def):
+#			cn (name, node, node name, canonical name):
+#			a(al, alias):
+#			type (node type):
+#			dsc (descrip, description):
+#			ch(child, child node):
+#				cn (name, node, node name, canonical name):
+#				ns (namespace):
+#				n (num):
+#	-------------------------------------------------------
+
+ns_def(www.semantictext.info/namespace.stxt):
+ 
+n_def:
+	type:NODE
+	cn:ns_def
+	a:namespace definition
+	a:namespace_definition
+	ch:
+		cn:n_def
+		n:+
+n_def:
+	type:NODE
+	cn:n_def
+	a:node definition
+	a:node def
+	a:node_def
+	ch:
+		cn:cn
+		n:1
+	ch:
+		cn:a
+		n:*
+	ch:
+		cn:type
+		n:1
+	ch:
+		cn:dsc
+		n:?
+	ch:
+		cn:ch
+		n:*
+n_def:
+	type:NODE
+	cn:ch
+	a:Child
+	a:Child Node
+	ch:
+		cn:cn
+		n:1
+	ch:
+		cn:ns
+		n:?
+	ch:
+		cn:n
+		n:1
+n_def:
+	type:TEXT
+	cn:cn
+	a:name
+	a:node
+	a:node name
+	a:canonical name
+n_def:
+	type:TEXT
+	cn:a
+	a:al
+	a:alias
+n_def:
+	type:TEXT
+	cn:type
+	a:node type
+n_def:
+	type:TEXT
+	cn:n
+	a:num
+	a:occurs
+n_def:
+	type:TEXT
+	cn:dsc
+	a:descrip
+	a:description
+n_def:
+	type:TEXT
+	cn:ns
+	a:namespace
