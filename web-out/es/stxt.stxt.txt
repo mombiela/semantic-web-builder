@@ -22,7 +22,7 @@ Content:
 	interesante o que simplemente te haga sonreír ;-)
 	
 html:
-	<strong><a href="stxt.stxt" target="stxt">¿Me quieres ver? :-)</a></strong>
+	<strong><a href="stxt.stxt.txt" target="stxt">¿Me quieres ver? :-)</a></strong>
 
 # ------------------------------------------------------------------------
 # ¡¡SORPRESA!!:-D No he podido evitar escribir esto aquí XD
