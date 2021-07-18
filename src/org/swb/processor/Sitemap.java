@@ -96,7 +96,7 @@ public class Sitemap implements Processor
         Page result = new Page();
         
         // Create name
-        result.setUrl(domain + prefix + '/' + name + '.' + sufix);
+        result.setUrl("https://" + domain + prefix + '/' + name + '.' + sufix);
         
         // Obtenemos metadata // TODO Revisar
         if (!(object instanceof Node))
