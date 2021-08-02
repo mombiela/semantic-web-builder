@@ -16,5 +16,3 @@ Download the zip archive
 Unzip -> this will create an Eclipse Project
 Execute ant build (command line or Eclipse)
 
-
-
