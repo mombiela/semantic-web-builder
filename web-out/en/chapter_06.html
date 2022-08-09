@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6: Advanced Tutorial</title>
+	<meta name="description" content="STxT Advanced tutorial. We make an initial summary of STxT, grammars, and compaction.
+Below we describe the more advanced aspects of STxT.">
+	<meta name="author" content="Joan Costa Mombiela">
+
+    <link rel="stylesheet" href="/css/site.css?v=1">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/chapter_06.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+				<span class="color1"><b>S</b></span>TxT: The Book
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/chapter_06.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="chapter_06.stxt.txt" target="chapter_06" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_05.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_07.html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+									<h1>Chapter 6: Advanced Tutorial (*)</h1>
+						
+			
+																								<p>This chapter will be similar to the tutorial in Chapter 3, but more direct in all its operation,
+and all the real complexities will be explained.</p>
+<p><strong>Don&#39;t miss it!</strong></p>
+
+								            	<h2><a id="index_0"></a><span class='STxT'><span class='first'>S</span>TxT</span> reminder</h2>
+												            	<h3><a id="index_1"></a>What is <span class='STxT'><span class='first'>S</span>TxT</span>?</h3>
+																<p>An <span class='STxT'><span class='first'>S</span>TxT</span> document is made up of a set of hierarchical nodes, 
+and the structure of each node is defined in its corresponding namespace.
+This structure is achieved through indentation (tabs or spaces), 
+which gives the document a visual form that is recognizable 
+by humans and machines indiscriminately.</p>
+<p>Example:</p>
+
+												<pre>Booking (miempresa.example.demo/reserva.stxt):
+
+Reference: 093a2da1-q345-739r-ba5d-pqff98fe8j7d
+Date and time: 2001-11-29 13:20:00
+Passenger:
+    Name: John
+    First last name: Smith
+    Second last name: Adams
+Route:
+    Outbound:
+        Departure: New York
+        Arrival: Los Angeles
+        Departure date: 2001-12-14
+        Departure time: Late in the afternoon
+        Seating preference: aisle
+    Return:
+        Departure: Los Angeles
+        Arrival: New York
+        Departure Date: 2001-12-20
+        Departure time: mid-morning
+    Accommodation:
+        Preference: none
+    Remarks:
+        This passenger has contracted the special 
+        privacy services, so in 
+        case of availability it is recommended
+        to allow their access to the VIP area.</pre>
+												<p>An <span class='STxT'><span class='first'>S</span>TxT</span> document can only have one main node, 
+so this makes the indentation of its direct child nodes unnecessary.
+In addition, it is mandatory to specify the namespace of this main node, 
+as the other nodes will be perfectly defined from it.</p>
+<p>From the different namespaces we can build all
+the grammar and structure of the document; which has to be complied with
+in order to consider a document as correct.</p>
+
+								            	<h3><a id="index_2"></a>Grammars</h3>
+																<p>The grammar of a document defines what the different nodes in the document are like,
+what namespace they belong to, and what their children (or subnodes) are like.</p>
+<p>The namespace definition is done in STXT documents,
+and they must have the following definition:</p>
+
+												<pre>Namespace Definition(www.semantictext.info/namespace.stxt):
+
+Node Definition:
+    Name:
+    Alias:
+    Type:
+    Description:
+    Child:
+        Node:
+        Namespace:
+        Num:</pre>
+												<ul><li><strong>Name</strong> specifies the node name (in that namespace). It is also known as <em>Canonical Name</em>.</li>
+<li><strong>Alias</strong> are name synonyms, which can be used interchangeably in its place.</li>
+<li><strong>Type</strong> is the node type, and can have the following values:<ul><li><strong>NODE</strong>: Container node for other nodes</li>
+<li><strong>TEXT</strong>: Node with text content</li>
+<li><strong>URL</strong>: Node with an absolute URL</li>
+<li>NATURAL: Node with a natural number</li>
+<li>INTEGER: Node with an integer</li>
+<li>RATIONAL: Node with a rational number</li>
+<li>NUMBER: Numeric node</li>
+<li>BINARY: Binary node</li>
+<li>HEXADECIMAL: Hexadecimal content node</li>
+<li>BASE64: Base64 content node</li>
+<li>BOOLEAN: Boolean content node</li></ul>
+</li>
+<li><strong>Description</strong> here you can find a description of this node.</li>
+<li>A node, if it is of the NODE type, can have one or more children (subnodes), and they must be specified by <strong>child</strong>:<ul><li><strong>Node</strong>: Name of the child node.</li>
+<li><strong>Namespace</strong>: If the child is from a different namespace from the one in the definition, it shall be specified here.</li>
+<li><strong>Num</strong>: Specifies how many elements of this node may appear.<ul><li>*: It means that there can be an indeterminate number of these children</li>
+<li>?: There may be 1 or 0 of these children</li>
+<li>+: There must be at least 1</li>
+<li>number: There must be an exact number of these children</li></ul>
+</li></ul>
+</li></ul>
+<p><em>Name</em> and <em>alias</em> cannot be repeated throughout the namespace.
+The child nodes shall also be perfectly	defined,
+without allowing ambiguity about the namespace to which they belong.</p>
+
+								            	<h3><a id="index_3"></a>Compaction</h3>
+																<p>An <span class='STxT'><span class='first'>S</span>TxT</span> document can be compacted to explicitly show the levels
+and be faster for machines to parse. It also allows to save space,
+as the initial tabs and spaces	are replaced by numbers.</p>
+<p>In addition, we must use the canonical name instead of aliases. In case
+we do not to use the canonical name we would be talking about <em>semicompacted</em> documents.</p>
+<p>In our previous example, the compacted document would have the following form:</p>
+
+												<pre>Booking (miempresa.example.demo/reserva.stxt):
+1:Reference: 093a2da1-q345-739r-ba5d-pqff98fe8j7d
+1:Date and time: 2001-11-29 13:20:00
+1:Passenger:
+2:Name: John
+2:First last name: Smith
+2:Second last name: Adams
+1:Route:
+2:Outbound:
+3:Departure: New York
+3:Arrival: Los Angeles
+3:Departure date: 2001-12-14
+3:Departure time: Late in the afternoon
+3:Seating preference: aisle
+2:Return:
+3:Departure: Los Angeles
+3:Arrival: New York
+3:Departure Date: 2001-12-20
+3:Departure time: mid-morning
+2:Accommodation:
+3:Preference: none
+2:Remarks:
+3:This passenger has contracted the special 
+3:privacy services, so in 
+3:case of availability it is recommended
+3:to allow their access to the VIP area.</pre>
+								            	<h2><a id="index_4"></a>Language subtleties</h2>
+												            	<h3><a id="index_5"></a>Restrictions to node names</h3>
+																<p>Node names can be any way we want... or almost!
+There are only a few small restrictions:</p>
+<ul><li>They cannot have any of the following 3 characters:<ul><li>colon character: &#39;:&#39;</li>
+<li>open parenthesis character: &#39;(&#39;</li>
+<li>close parenthesis character: &#39;)&#39;</li></ul>
+</li>
+<li>A name cannot be just numeric or otherwise it could be confused with a compacted line.</li></ul>
+<p>By the way:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Spaces are permitted in names. <br/> 
+Why not? We want to look like computer techs? <br/>
+Times are changing :-D</p>
+</div>
+            	</div>
+												<div class="row">
+            		<div class="assert"><p>The first line will be of the type: <br/>
+name of the field (name_namespace) + &#39;:&#39;</p>
+</div>
+            	</div>
+												<div class="row">
+            		<div class="assert"><p>All other lines will be of the type: <br/>
+tabs or spaces + name of the field + &#39;:&#39;<br/>
+[+ field content if it is basic]</p>
+</div>
+            	</div>
+								            	<h3><a id="index_6"></a>Case insensitive</h3>
+																<div class="row">
+            		<div class="assert"><p><strong>The identifiers are CASE-INSENSITIVE!</strong></p>
+</div>
+            	</div>
+												<p>We are going to explain a fact, that it seems no one dares to say: </p>
+<p>In all languages which are Case-Sensitive, no one in the world (in their right mind)
+has ever made a document or program is only differentiated by upper- or lower-case.
+Why? Because it is absurd. Let’s admit it. It has only resulted in being a source of errors,
+and has no practical effects on increasing readability. 
+What’s more, sometimes it would be great to allow case-insensitive to increase clarity.</p>
+<p>It is possible that in other cases it’s justified, but in <span class='STxT'><span class='first'>S</span>TxT</span> it seems just the opposite. 
+We always think about semantics, and clearly names have the same meaning 
+in uppercase as in lowercase.</p>
+
+								            	<h3><a id="index_7"></a>UTF-8 Coding</h3>
+																<p>This problem has been intrinsic to computers for many years.
+That I can recall it has always been there, and has always been a source of problems.
+I think that <span class='STxT'><span class='first'>S</span>TxT</span> should have a single coding, to avoid having to say
+on the document which one it is. In addition, it should be easily understood in the world of Internet,
+so I think there is no doubt.</p>
+
+												<div class="row">
+            		<div class="assert"><p>The documents will be coded in UTF-8</p>
+</div>
+            	</div>
+												<p>It is a good rule and I am very happy with it. Nowadays it is the most acceptable,
+more universal, and more implemented coding. I don&#39;t think this will change in the coming years.</p>
+
+								            	<h3><a id="index_8"></a>Tabs or spaces</h3>
+																<p>We are going to explain a <em>suggestion</em> for when writing documents in <span class='STxT'><span class='first'>S</span>TxT</span>. </p>
+<p>It is not a rule, we&#39;ll explain why in more detail later on, but I <em>strongly</em> suggest that you use it.</p>
+
+												<div class="row">
+            		<div class="assert"><p>A document’s nodes must be created using tabs.
+Spaces are permitted but not recommended,
+and mixing them is strongly not recommended.</p>
+</div>
+            	</div>
+												<p>This is a rule of thumb, and I hope that the programs and text editors 
+used to create it follow this rule, but we will not always count with this help.
+For this reason, we will explain how levels are counted when tabs and spaces appear.</p>
+<p>The rule of thumb to remember is:</p>
+
+												<div class="row">
+            		<div class="assert"><p>&quot;4 Spaces&quot; = &quot;1 tab&quot;</p>
+</div>
+            	</div>
+												<p>Thus, when levels are counted, 1 tab moves up a level, 
+and so do 4 spaces. But if we don’t get to 4 spaces and another character appears,
+the previous spaces will not move up a level.
+This lets us perceive visually the correct number of levels
+(in most editors).</p>
+<p>Let’s give examples of counting levels:</p>
+
+												<pre>s: space
+t: tab
+
+t    t    t    t    XXXX: Element XXXX, Level 4
+ssss ssss ssss ssss YYYY: Element YYYY, Level 4
+ssst sst  st   t    ZZZZ: Element ZZZZ, Level 4</pre>
+												<p>We see that this is consistent with most text editors;
+as long as it’s configured with the option &quot;1 tab = 4 spaces&quot;.</p>
+
+								            	<h2><a id="index_9"></a>Text (**)</h2>
+																<p>Writing text in <span class='STxT'><span class='first'>S</span>TxT</span> seems easy... and it actually is! :-)</p>
+<p>But (there&#39;s always a but) sometimes we want to understand exactly how it works
+and see the more special cases and how they are interpreted. 
+If this is your case, read on. You are in the right place ;-)</p>
+<p><em>These rules are above all focused on parsing text and computer
+interpretation. When we write <span class='STxT'><span class='first'>S</span>TxT</span>, we just have to take into account the indentation and
+the levels, and follow our intuition.</em></p>
+
+								            	<h3><a id="index_10"></a>All about indentation</h3>
+																<p>Text indentation has some subtleties that we are going to show you, and we will do so with examples.</p>
+
+												<div class="row">
+            		<div class="assert"><p>If the line where the node begins is empty <br/>
+the line break should not be considered.</p>
+</div>
+            	</div>
+												<p>This is reasonable, since it allows us to make beautiful texts, all aligned.
+For example, the following nodes are equivalent:</p>
+
+												<pre>Text Node: Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.
+
+Text Node:
+    Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.</pre>
+												<p>We see that the second node looks better, and has the same content as the first.
+If we actually wanted the 1st line to be blank, we should do the following:</p>
+
+												<pre>Text Node:
+
+    Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.</pre>
+												<p>Another important rule is that <em>blank intermediate lines</em> do not have to
+reach the text level, and will still count as blank lines.</p>
+<p>This is also an aesthetic and intuitive function, and we have taken it into account.
+Thus, the following nodes are also equivalent:</p>
+
+												<pre>t    t    Text Node:
+t    t    t    xxxxxxx
+t    t    t    
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+t    t    
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+t 
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+
+t    t    t    zz zz</pre>
+												<p>They all make an <em>xxxxxxx</em> text, followed by a blank line and another one with <em>zz zz</em>.</p>
+
+								            	<h3><a id="index_11"></a>All about comments</h3>
+																<p>Comments are very useful, and we already know their operation:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Comments are lines that start with #, even if they have spaces or tabs in front of them.</p>
+</div>
+            	</div>
+												<p>But let&#39;s discuss something important. This rule is not entirely complete. It needs clarifying:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Comments are lines that start with #, even if they have spaces or tabs	in front of them;
+provided that they are not in a text node, and they have reached their level.</p>
+</div>
+            	</div>
+												<p>Better with an example:</p>
+
+												<pre>Text Node:
+        aaaa
+        bbbb
+        cccc
+# A comment is not included in the text (level 0)
+    # A comment is not included in the text (level 1)
+        # THIS LINE IS INCLUDED!!
+        # Already inside the text (level 2!).
+        # It is not a comment any more.
+            # This is not a comment either :-D
+        dddd
+        eeee</pre>
+												<p>We see that out of the 6 lines that look like comments, only the 2 first are,
+with a level less than or equal to the corresponding text node.</p>
+<p>However, outside a text node <em>it does not matter</em>, but is unadvisable:</p>
+
+												<pre>Normal Node:
+    # Comment
+        # It is also a comment, although it does NOT look good :-(
+        # Better to avoid these comments that are so unaligned
+    Another node:
+        Another node:</pre>
+								            	<h3><a id="index_12"></a>Text in the text</h3>
+																<p>Well, this is one of the things that I like most of <span class='STxT'><span class='first'>S</span>TxT</span>:
+It lets us make text from other languages <em>without having to parse anything!</em>.
+Just keep in mind the indentation rules and that’s it!
+We can write whatever we want. Let’s see how many languages can say the same thing :-D</p>
+<p>Let&#39;s make examples, since there is nothing more to add ;-)</p>
+
+												<pre>Node with XML:
+    &lt;tag1&gt;
+        &lt;tag2&gt;Content!!!!&lt;/tag2&gt;
+        &lt;tag2&gt;Other content!!!!&lt;/tag2&gt;
+    &lt;/tag1&gt;</pre>
+												<pre>Node with Wiki Text:
+    This is a list:
+    
+    * Elem 1
+    * Elem 2
+        ** Elem 2.1
+        ** Elem 2.2</pre>
+												<pre>Node with Latex:
+    \begin{equation}
+        y_{i+1} = x_{i}^{2n} - \sqrt{5}x_{i-1}^{n} + \sqrt{x_{i-2}^7} -1
+    \end{equation}</pre>
+								            	<h2><a id="index_13"></a>Namespaces, nodes, and more nodes (**)</h2>
+																<p>I&#39;d like to give the nodes, the namespace inference,
+and documents with different namespaces nodes, some more thought.
+I suppose that at this point this issue is already clear, but in order to clarify
+concepts, I will repeat myself a little. I hope not to confuse you, everything is actually easy and simple.
+But I&#39;m not at ease if I don&#39;t do it ;-)</p>
+
+								            	<h3><a id="index_14"></a>What is a namespace?</h3>
+																<p>A namespace is a grouping of nodes definition and the description
+of the namespace is always available on the Internet as an <span class='STxT'><span class='first'>S</span>TxT</span> document;
+through an access url.</p>
+<p>For example, the &quot;www.gym.demo/ client.stxt&quot; namespace can define 4 node types:</p>
+<ul><li>Customer</li>
+<li>Employee</li>
+<li>Account number</li>
+<li>Name</li></ul>
+<p>That&#39;s it. We have a relation where we link the namespace <em> www.gym.demo/ client.stxt</em>
+with its nodes: <em>Customer, Employee, Account number, and Name</em>.</p>
+<p>And now comes the fun part. In the namespace it also says what children each node can have,
+and the children can be from any namespace, they do not have to be in the same one.</p>
+<p>So, we could say that <em>Customer</em> has the following children:</p>
+<ul><li>Name (of the same namespace, www.gymdemo.org/ client.stxt)</li>
+<li>Training (of another namespace with the same url base, www.gym.demo/ gymdata.stxt)</li>
+<li>Confidential (of another namespace with another url, www.security.demo/credentials.stxt)</li></ul>
+<p>We could do the same thing with all the other nodes.</p>
+
+								            	<h3><a id="index_15"></a>What is an <span class='STxT'><span class='first'>S</span>TxT</span> document?</h3>
+																<p>An <span class='STxT'><span class='first'>S</span>TxT</span> document is a set of nested nodes.
+The first node is the one containing the rest,
+and there can only be one main node.
+This main node specifies its namespace,
+and this fact makes all the other nodes have their namespace
+specified automatically,
+through all subsequent definitions.</p>
+<p>But also, as we have seen before,
+each node can belong to a different namespace.</p>
+<p>Thus, in the example we were making before,
+we can build the <em>Customer</em> document as:</p>
+
+												<pre>Customer (www.gymdemo.org/ client.stxt):
+    # Of the same namespace
+    Name:
+
+    # Of another namespace, without needing to specify,
+    # the grammar is inferred
+    Training:
+
+    # Of another namespace, also without specifying
+    Confidential:</pre>
+												<p>The important thing is that the document is simple,
+but thanks to the grammars and definitions we know exactly
+what each element is, in a very simple way.
+And we just had to say which is the main element.</p>
+
+								            	<h3><a id="index_16"></a>Restrictions on the child nodes</h3>
+																<p>Due to the automatic namespace inference, the
+names (+ aliases) of the child nodes cannot collide
+together. If they do collide the namespace they belong to
+could not be properly infered.</p>
+
+						
+						<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_05.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_07.html" title="Next">Next &#x25BA;</a>
+			</div>
+			  </article>
+	  	
+	  <aside id="advertisement">
+		<h2>Sponsors</h2>
+    	<p>Would you like to be our sponsor? For now we don't have official sponsors, but we are open to offers.<p>
+    	<p>Would you like to be one of them? Contact us: <a href="mailto:admin@semantictext.info">admin@semantictext.info</a></p>
+    	<p>This will be your reserved space ;-)</p>
+    	<br>
+    	    	    	    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2022 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

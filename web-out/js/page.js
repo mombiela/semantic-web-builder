@@ -1,8 +1,9 @@
 function setLang(dest_lang)
 {
-	var location = "../" + dest_lang + "/${doc_name}.html";
+	var pathact = window.location.pathname.substring(4);
+	var newlocation = "/" + dest_lang + "/" + pathact;
 	Cookies.set('lang', dest_lang, {expires: 365});
-	window.location.href = location;
+	window.location.href = newlocation;
 }
 
 function remove(id)

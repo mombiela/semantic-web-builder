@@ -6,6 +6,9 @@ span.STxT {
 	font-family: "Courier New", Courier, monospace;
 	font-size: 1.3em;
 }
+span.STxT span.first, .color1 {
+	color: $color1 !important;
+}
 
 .text-center {
 	text-align: center !important;

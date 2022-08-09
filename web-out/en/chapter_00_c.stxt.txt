@@ -1,0 +1,157 @@
+chapter(www.semantictext.info/book.stxt):
+	metadata:
+		title: Index of the book
+		description: Index of the book with all chapters
+		author: Joan Costa Mombiela
+		last_modif: 2013-03-01
+			
+	navigation:
+		previous: 00_b
+		next: 01
+			
+	text:
+		=== [[chapter_01.html | Chapter 1: How to read this book?]] === 
+		* [[chapter_01.html#index_0 | Who this book is for]]
+		* [[chapter_01.html#index_1 | Prerequisites]]
+		* [[chapter_01.html#index_2 | Stars]]
+		* [[chapter_01.html#index_3 | Reading order]]
+		
+		=== [[chapter_02.html | Chapter 2: What is @STxT@?]] === 
+		* [[chapter_02.html#index_0 | What is @STxT@?]]
+		* [[chapter_02.html#index_1 | Statement of Intent :-)]]
+		* [[chapter_02.html#index_2 | What does @STxT@ mean?]]
+		* [[chapter_02.html#index_3 | Why a new language?]]
+		* [[chapter_02.html#index_4 | A language for everyone]]
+		* [[chapter_02.html#index_5 | Chaotic Statement of Intent :-D (**)]]
+		* [[chapter_02.html#index_6 | Applications, results, and expectations]]
+		
+		=== [[chapter_03.html | Chapter 3: @STxT@, Tutorial]] === 
+		* [[chapter_03.html#index_0 | One example... now!]]
+		* [[chapter_03.html#index_1 | EVERYTHING in Namespaces (ns)]]
+		* [[chapter_03.html#index_2 | Nodes and indentation]]
+		* [[chapter_03.html#index_3 | Node and Text]]
+		* [[chapter_03.html#index_4 | Comments]]
+		* [[chapter_03.html#index_5 | Finally, grammar]]
+		* [[chapter_03.html#index_6 | Overview]]
+		
+		=== [[chapter_04.html | Chapter 4: Creating and Using Grammars]] === 
+		* [[chapter_04.html#index_0 | Namespaces and grammars (*)]]
+		* [[chapter_04.html#index_1 | Basic rule (*)]]
+		* [[chapter_04.html#index_2 | One example to start with]]
+		* [[chapter_04.html#index_3 | How Namespaces are created and read]]
+		* [[chapter_04.html#index_4 | Nodes of the NODE type]]
+		* [[chapter_04.html#index_5 | Text nodes]]
+		** [[chapter_04.html#index_6 | TEXT]]
+		** [[chapter_04.html#index_7 | URL]]
+		* [[chapter_04.html#index_8 | Numerical Nodes]]
+		** [[chapter_04.html#index_9 | NATURAL]]
+		** [[chapter_04.html#index_10 | INTEGER]]
+		** [[chapter_04.html#index_11 | RATIONAL]]
+		** [[chapter_04.html#index_12 | NUMBER]]
+		* [[chapter_04.html#index_13 | Nodes with Bits]]
+		** [[chapter_04.html#index_14 | BINARY]]
+		** [[chapter_04.html#index_15 | HEXADECIMAL]]
+		** [[chapter_04.html#index_16 | BASE64]]
+		** [[chapter_04.html#index_17 | BOOLEAN]]
+		* [[chapter_04.html#index_18 | One example to finish off]]
+		** [[chapter_04.html#index_19 | Grammar]]
+		** [[chapter_04.html#index_20 | The example]]
+		* [[chapter_04.html#index_21 | One last thought (*)]]
+		* [[chapter_04.html#index_22 | Grammar of the grammar (**)]]
+		
+		=== [[chapter_05.html | Chapter 5: Compaction (*)]] === 
+		* [[chapter_05.html#index_0 | @STxT@ Information analysis]]
+		* [[chapter_05.html#index_1 | A way of compacting]]
+		* [[chapter_05.html#index_2 | Other examples]]
+		* [[chapter_05.html#index_3 | Usefulness]]
+		
+		=== [[chapter_06.html | Chapter 6: Advanced Tutorial (*)]] === 
+		* [[chapter_06.html#index_0 | @STxT@ reminder]]
+		** [[chapter_06.html#index_1 | What is @STxT@?]]
+		** [[chapter_06.html#index_2 | Grammars]]
+		** [[chapter_06.html#index_3 | Compaction]]
+		* [[chapter_06.html#index_4 | Language subtleties]]
+		** [[chapter_06.html#index_5 | Restrictions to node names]]
+		** [[chapter_06.html#index_6 | Case insensitive]]
+		** [[chapter_06.html#index_7 | UTF-8 Coding]]
+		** [[chapter_06.html#index_8 | Tabs or spaces]]
+		* [[chapter_06.html#index_9 | Text (**)]]
+		** [[chapter_06.html#index_10 | All about indentation]]
+		** [[chapter_06.html#index_11 | All about comments]]
+		** [[chapter_06.html#index_12 | Text in the text]]
+		* [[chapter_06.html#index_13 | Namespaces, nodes, and more nodes (**)]]
+		** [[chapter_06.html#index_14 | What is a namespace?]]
+		** [[chapter_06.html#index_15 | What is an @STxT@ document?]]
+		** [[chapter_06.html#index_16 | Restrictions on the child nodes]]
+		
+		=== [[chapter_07.html | Chapter 7: Equivalences and Internationalization (I18N)]] === 
+		* [[chapter_07.html#index_0 | I18N. One example]]
+		* [[chapter_07.html#index_1 | Equivalences (**)]]
+		** [[chapter_07.html#index_2 | Equivalent grammars (**)]]
+		** [[chapter_07.html#index_3 | Transformable (or convertible) grammars (**)]]
+		** [[chapter_07.html#index_4 | Extensions (**)]]
+		
+		=== [[chapter_08.html | Chapter 8: Examples and Other Technologies]] === 
+		* [[chapter_08.html#index_0 | Examples]]
+		* [[chapter_08.html#index_1 | Wikipedia (*)]]
+		* [[chapter_08.html#index_2 | @STxT@ and other technologies]]
+		** [[chapter_08.html#index_3 | Lightweight markup language]]
+		** [[chapter_08.html#index_4 | Tex, Latex]]
+		** [[chapter_08.html#index_5 | JSON (*)]]
+		** [[chapter_08.html#index_6 | Other (*)]]
+		
+		=== [[chapter_09.html | Chapter 9: @STxT@ and XML]] === 
+		* [[chapter_09.html#index_0 | Note for the reader]]
+		* [[chapter_09.html#index_1 | The legend (**)]]
+		* [[chapter_09.html#index_2 | Nowadays (**)]]
+		* [[chapter_09.html#index_3 | Initial contact]]
+		* [[chapter_09.html#index_4 | XML attributes]]
+		* [[chapter_09.html#index_5 | DTD, XSD]]
+		** [[chapter_09.html#index_6 | XSD, DTD, and @STxT@]]
+		** [[chapter_09.html#index_7 | Where is it?]]
+		** [[chapter_09.html#index_8 | XSD of the XSD (*)]]
+		* [[chapter_09.html#index_9 | Parsers and validators]]
+		* [[chapter_09.html#index_10 | Namespaces]]
+		* [[chapter_09.html#index_11 | Future]]
+		
+		=== [[chapter_10.html | Chapter 10: Web Services]] === 
+		* [[chapter_10.html#index_0 | Warning]]
+		* [[chapter_10.html#index_1 | SOAP in theory]]
+		* [[chapter_10.html#index_2 | SOAP in practice]]
+		* [[chapter_10.html#index_3 | REST]]
+		* [[chapter_10.html#index_4 | @STxT@: A new approach]]
+		* [[chapter_10.html#index_5 | A final proposal]]
+		** [[chapter_10.html#index_6 | Grammar]]
+		** [[chapter_10.html#index_7 | The explanation]]
+		** [[chapter_10.html#index_8 | The example]]
+		** [[chapter_10.html#index_9 | The thought]]
+		
+		=== [[chapter_11.html | Chapter 11: @STxT@ Parsing]] === 
+		* [[chapter_11.html#index_0 | Introduction]]
+		* [[chapter_11.html#index_1 | Generic process]]
+		** [[chapter_11.html#index_2 | Line parsing]]
+		** [[chapter_11.html#index_3 | Line processing]]
+		** [[chapter_11.html#index_4 | Validations]]
+		* [[chapter_11.html#index_5 | Language nodes]]
+		* [[chapter_11.html#index_6 | Grammars]]
+		** [[chapter_11.html#index_7 | Storage]]
+		** [[chapter_11.html#index_8 | Initial grammar]]
+		* [[chapter_11.html#index_9 | Details to consider]]
+		
+		=== [[chapter_12.html | Chapter 12: Semantic Web]] === 
+		* [[chapter_12.html#index_0 | A proposal for the web]]
+		* [[chapter_12.html#index_1 | Ideas]]
+		** [[chapter_12.html#index_2 | Replace HTML5!!]]
+		** [[chapter_12.html#index_3 | Search engines]]
+		** [[chapter_12.html#index_4 | The transition]]
+		* [[chapter_12.html#index_5 | SWB: Semantic Web Builder]]
+		
+		=== [[chapter_13.html | Chapter 13: And now what?]] === 
+		* [[chapter_13.html#index_0 | Where to start]]
+		* [[chapter_13.html#index_1 | Pending things]]
+		** [[chapter_13.html#index_2 | Editors with assisted content]]
+		** [[chapter_13.html#index_3 | Libraries]]
+		** [[chapter_13.html#index_4 | Language converter]]
+		** [[chapter_13.html#index_5 | Language substitution]]
+		** [[chapter_13.html#index_6 | Semantic Web]]
+		

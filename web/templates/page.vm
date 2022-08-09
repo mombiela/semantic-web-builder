@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
 
-    <link rel="stylesheet" href="../css/site-20190824.css">
+    <link rel="stylesheet" href="/css/site.css?v=1">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
@@ -19,8 +19,8 @@
 	<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/${doc_name}.html" />
 	#end
 	
-	<script src="../js/cookie.js"></script>
-	<script>#parse("/page.js")</script>	
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -32,8 +32,8 @@
     <header id="main_header">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.canonicalName} == "chapter")	<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: ${lang.get("title_book")}
-			#else                  					<span style="color:#ff4b9c;font-weight:bold;">S</span>TxT: Semantic text
+			#if(${doc.canonicalName} == "chapter")	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
+			#else                  					<span class="color1"><b>S</b></span>TxT: Semantic text
 			#end
     	    </a>
 		</h1>
@@ -61,13 +61,13 @@
 	
     <div class="top-bar">
     	<ul>
+			<li class="link_src"><a href="${doc_name}.stxt.txt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
 			<li><a href="index.html" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 			<li><a href="chapter_00_c.html" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
 			<li><a href="chapter_03.html" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
 			<li><a href="chapter_09.html" title="${lang.get("menu.xml")}">${lang.get("menu.xml")}</a></li>
 			<li><a href="swb.html" title="${lang.get("menu.swb")}">${lang.get("menu.swb")}</a></li>
 			<li><a href="stxt.html" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
-			<li><a class="link_src" href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
     	</ul>
     </div>
 	
@@ -77,6 +77,7 @@
 	
     <div id="main_content" class="clearfix">
       <article>
+      	##parse("/ads.vm")
 		#parse("/navigation.vm")
 	
 		#if(${doc.canonicalName} == "chapter")
@@ -119,30 +120,15 @@
 	  </article>
 	  	
 	  <aside id="advertisement">
-		<!--
-		-->
-		
 		<h2>${lang.get("lat.sponsors.title")}</h2>
     	<p>${lang.get("lat.sponsors.1")}<p>
     	<p>${lang.get("lat.sponsors.2")}</p>
     	<p>${lang.get("lat.sponsors.3")}</p>
-    	<h3>${lang.get("lat.ads.title")}</h3>
-    	<p>${lang.get("lat.ads.1")}</p>
-    	<p>${lang.get("lat.ads.2")}</p>
-    	
-		#if(!(${doc.getChild("navigation")} && $doc.getChilds("text").size()==0))
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- STxT - Adaptable -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-0611338592562725"
-             data-ad-slot="5037052041"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-		<p>&nbsp;</p>
-		#end
+    	<br>
+    	##<h2>${lang.get("lat.ads.title")}</h2>
+    	##<p>${lang.get("lat.ads.1")}</p>
+    	##<p>${lang.get("lat.ads.2")}</p>
+    	#parse("/ads.vm")
 	  </aside>
 	</div>
 	

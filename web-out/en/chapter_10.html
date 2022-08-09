@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10: Web Services</title>
+	<meta name="description" content="Implementation of webservices using STxT">
+	<meta name="author" content="Joan Costa Mombiela">
+
+    <link rel="stylesheet" href="/css/site.css?v=1">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/chapter_10.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+				<span class="color1"><b>S</b></span>TxT: The Book
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/chapter_10.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="chapter_10.stxt.txt" target="chapter_10" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_09.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_11.html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+									<h1>Chapter 10: Web Services</h1>
+						
+			
+																				            	<h2><a id="index_0"></a>Warning</h2>
+																<p>Same as the previous chapter. Webservices and SOAP fans must forgive and excuse me.
+It is better they do not read any part of this chapter.</p>
+<p>I correct myself. It’s better that they do read it. In fact, I encourage them to do so.
+The best judgment is the one from those who really know and have used a technology.</p>
+
+								            	<h2><a id="index_1"></a>SOAP in theory</h2>
+																<p>SOAP is fantastic. It is a language for web services. It is based on xml,
+and that makes it standard and cross-platform. It is also based on tested technologies,
+such as XSD&#39;s. If there were to be complexities, there will be no problem. Tools will be created,
+and they will always work right, and that which might seem complex will be carried out automatically,
+with a few mouse &quot;clicks&quot;. The systems will understand each other,
+and we will break the boundaries between languages.</p>
+<p>In theory, theory and practice are the same. In practice, this is not true. (*)</p>
+<p><em>(*) I don’t remember who said this, but I liked it.</em></p>
+
+								            	<h2><a id="index_2"></a>SOAP in practice</h2>
+																<p>But practice does not always agree with us. There are things that are beyond control.
+Once more complexity is apparent in all its immensity.
+There are too many variables, too many interpretations. Too many parties involved.
+Libraries that pass native code to XML and are automatically parsed.
+No one can read a message in a decent way. Errors turn into tragedies.
+Does the library fail? Is the protocol slightly different? Was the WSDL parsing not correct?
+But what is the WSDL saying? I don’t understand it! What should be the great solution
+is becoming the great problem. A good idea, but impossible to implement.</p>
+<p>I’m sorry, but this is how I see it.</p>
+
+								            	<h2><a id="index_3"></a>REST</h2>
+																<p>The appearance of REST services are a clear response to SOAP problems.
+Everything tends to go in that direction. And I’m not surprised by this. I would do it too.
+The big ones are on their way. Cell phones talk to each other this way.
+But they are still missing something. There are initiatives already, but it is not an easy journey.
+They are lacking a bit more structure and knowing what the services are like.</p>
+
+												<div class="row">
+            		<div class="assert"><p>Watch out. The solution is here. It is called <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
+</div>
+            	</div>
+								            	<h2><a id="index_4"></a><span class='STxT'><span class='first'>S</span>TxT</span>: A new approach</h2>
+																<p>We now have a new tool. It is called <span class='STxT'><span class='first'>S</span>TxT</span>. How would a webservice be defined?</p>
+<p>I am going to propose things, this would be a new world to explore.
+I&#39;m happy to indicate possible paths or starting points.</p>
+<p>If I made a simulation of a WSDL, I would like a set of services
+to be defined the following way:</p>
+
+												<pre>Webservices(...):
+    Service:
+        url: http://xxxx/fsfs
+        in: Node1(www.example.com/nodo.stxt)
+        out: Node2(www.example.com/nodo.stxt)
+        
+    Service:
+        url: http://xxxx/fsfs
+        in: Node3(www.example.com/nodo.stxt)
+        out: OtherZ(www.demo.com/demo.stxt)
+        
+    Service:
+        url: http://xxxx/fsfs
+        in: Node3(www.example.com/nodo.stxt)
+        out: OtherX(www.demo.com/demo.stxt)</pre>
+												<p>or perhaps the following way:</p>
+
+												<pre>Webservice(...):
+    url: http://xxxx/fsfs
+    
+    Service:
+        method: xxx
+        in: Nodo1(www.example.com/nodo.stxt)
+        out: Nodo2(www.example.com/nodo.stxt)
+        
+    Service:
+        method: yyy
+        in: Nodo3(www.example.com/nodo.stxt)
+        out: OtroZ(www.demo.com/demo.stxt)
+        
+    Service:
+        method: zzz
+        in: Nodo3(www.example.com/nodo.stxt)
+        out: OtroX(www.demo.com/demo.stxt)</pre>
+												<p>At this point I wouldn&#39;t want to say anything else. I do not dare,
+but I guess you have already grasped the idea: <em>simplify</em>.
+Everything is much simpler when <span class='STxT'><span class='first'>S</span>TxT</span> comes into play.
+Everything is clearer. And defined.</p>
+
+												<div class="row">
+            		<div class="assert"><p>We had SOAP, REST, and now... <br/>
+<em>SWS</em>: Semantic web services!!</p>
+</div>
+            	</div>
+												<p>Well, as it is an http(s) service we could also do something hybrid ;-)</p>
+
+												<pre>Webservices(...):
+    Service:
+        url: http://www.xxx.com/yyy
+        params:
+            param: 
+                name: p1
+                descrip: Description of param1
+            param: 
+                name: p2
+                descrip: Description of param2
+            param: 
+                name: p2
+                descrip: Description of param3
+        out: Node2(www.example.com/nodo.stxt)
+        
+    Service:
+        url: http://www.xxx.com/ttt
+        out: OtherZ(www.demo.com/demo.stxt)
+        
+    Service:
+        url: http://www.xxx.com/zzz
+        out: OtherX(www.demo.com/demo.stxt)</pre>
+												<p>There are many possibilities, I like them all with <span class='STxT'><span class='first'>S</span>TxT</span> ;-)</p>
+
+								            	<h2><a id="index_5"></a>A final proposal</h2>
+																<p>At the end I&#39;ve done it. Initially I didn&#39;t want to, but I could not avoid doing it.</p>
+<p>I&#39;m going to make a proposal for a webservices definition, and I&#39;m also going to make it available.
+It will be similar to the previous examples we&#39;ve seen.</p>
+
+								            	<h3><a id="index_6"></a>Grammar</h3>
+																<p>The grammar is available in <a href="www.semantictext.info/web_services.stxt">www.semantictext.info/web_services.stxt</a></p>
+<p>It has the following code:</p>
+
+												<pre>Namespace definition (www.semantictext.info/namespace.stxt):
+
+Node Definition:
+    Type:NODE
+    Name:wsd
+    Alias:Web Service Definitions
+    Child:
+        Node:SWS Service
+        Num:*
+    Child:
+        Node:Hybrid Service
+        Num:*
+    Child:
+        Node:REST Service
+        Num:*
+Node Definition:
+    Type:NODE
+    Name:sws_service
+    Alias:SWS Service
+    Child:
+        Node:Url
+        Num:1
+    Child:
+        Node:Input Document
+        Num:1
+    Child:
+        Node:Output Document
+        Num:1
+    Child:
+        Node:Description
+        Num:?
+Node Definition:
+    Type:NODE
+    Name:hybrid_service
+    Alias:Hybrid Service
+    Alias:Hy Service
+    Child:
+        Node:Url
+        Num:1
+    Child:
+        Node:Method
+        Num:1
+    Child:
+        Node:Params Encoding
+        Num:1
+    Child:
+        Node:Param
+        Num:*
+    Child:
+        Node:Output Document
+        Num:1
+    Child:
+        Node:Description
+        Num:?
+Node Definition:
+    Type:NODE
+    Name:REST Service
+    Child:
+        Node:Url
+        Num:1
+    Child:
+        Node:Method
+        Num:1
+    Child:
+        Node:Params Encoding
+        Num:1
+    Child:
+        Node:Param
+        Num:*
+    Child:
+        Node:Description
+        Num:?
+Node Definition:
+    Type:NODE
+    Name:Param
+    Child:
+        Node:Name
+        Num:1
+    Child:
+        Node:Descrip
+        Num:?
+Node Definition:
+    Type:TEXT
+    Name:Url
+Node Definition:
+    Type:TEXT
+    Name:Params Encoding
+Node Definition:
+    Type:TEXT
+    Name:Input Document
+Node Definition:
+    Type:TEXT
+    Name:Output Document
+Node Definition:
+    Type:TEXT
+    Name:Name
+Node Definition:
+    Type:TEXT
+    Name:descrip
+    Alias:Description
+Node Definition:
+    Type:TEXT
+    Name:Method</pre>
+								            	<h3><a id="index_7"></a>The explanation</h3>
+																<p>The <span class='STxT'><span class='first'>S</span>TxT</span> document responsible for defining one (or several webservices) will be
+a document of the type:</p>
+
+												<pre>Web Service Definitions(www.semantictext.info/web_services.stxt)</pre>
+												<p>This document lets us define 3 different types of services:</p>
+<ul><li><strong>SWS Service</strong>: An <span class='STxT'><span class='first'>S</span>TxT</span> input document (UTF-8 encoding) and an <span class='STxT'><span class='first'>S</span>TxT</span> output document (UTF-8).
+The POST method will be used since it is the most advisable one for this type of delivery.
+This would be a pure web service using only <span class='STxT'><span class='first'>S</span>TxT</span>.</li>
+<li><strong>Hybrid Service</strong>: Http input parameters and an <span class='STxT'><span class='first'>S</span>TxT</span> output document.
+The expected parameter encoding (usually ISO-8859-1 or UTF-8) can be specified and
+also the http method to run (GET or POST generally).</li>
+<li><strong>REST Service</strong>: Standard http entry parameters and a standard output reply (json, xml, csv, etc.).
+Just like the hybrid we can also specify the encoding and http method to run.</li></ul>
+<p>In the three different types, it is necessary to specify the url to be executed.
+It is also recommended to use the <em>descrip</em> field to give
+an explanation of what the webservice does.</p>
+<p>Both the <em>SWS</em> and the <em>Hybrid</em> must return a valid <span class='STxT'><span class='first'>S</span>TxT</span> document,
+so the output should be in UTF-8.</p>
+<p>An example of HTTP message for a pure SWS service:</p>
+
+												<pre>POST /url/of/webservice HTTP/1.0
+Host: www.example.demo
+Content-Type: text/plain; charset=utf-8
+
+A node(www.example.demo/ws.stxt):
+Document: This is a demo
+Text: Hello world!!!
+Client:
+    Id:1
+    Name:Evelyn
+Client:
+    Id:2
+    Name:John</pre>
+								            	<h3><a id="index_8"></a>The example</h3>
+																<pre>Web Service Definitions(www.semantictext.info/web_services.stxt):
+
+SWS Service:
+    Url: http://www.ws.demo/example_sws_1.ws 
+    Input Document: Example Input (webservice.demo/example.stxt)
+    Output Document: Example Output (webservice.demo/example.stxt)
+    Description: Description of the webservice 
+    
+SWS Service:
+    Url: http://www.ws.demo/example_sws_1.ws
+    Input Document: Demo Input (webservice.demo/demo.stxt)
+    Output Document: Demo Output (webservice.demo/demo.stxt)
+    Description: Description of the webservice 
+     
+SWS Service:
+    Url: http://www.ws.demo/example_sws_2.ws 
+    Input Document: Example Input (webservice.demo/example.stxt)
+    Output Document: Example Output (webservice.demo/example.stxt)
+    Description: Description of the webservice 
+     
+Hybrid Service:
+    Url: http://www.ws.demo/example_hybrid.ws 
+    Method: POST
+    Params Encoding: UTF-8
+    Param:
+        Name:param_1
+        Description: Description of param_1 
+    Param:
+        Name:param_n
+        Description: Description of param_n 
+    Output Document: Example Output (webservice.demo/example.stxt)
+    Description: Description of the webservice 
+     
+REST Service:
+    Url: http://www.ws.demo/example_rest.ws 
+    Method: POST
+    Params Encoding: UTF-8
+    Param:
+        Name:param_1
+        Description: Descripci&oacute;n de param_1
+    Param:
+        Name:param_n
+        Description: Descripci&oacute;n de param_n
+    Description: Description of the webservice 
+        The response is in **JSON** format.
+        Example: {response:code, message:&quot;A message&quot;}
+        
+        Code results:
+        * 0: OK
+        * 1: Warning
+        * 2: Error
+        * 3: Fatal error</pre>
+								            	<h3><a id="index_9"></a>The thought</h3>
+																<p>In a few lines we have condensed a large amount of information,
+but in a very clear and simple way.</p>
+<p><em>Can you imagine what an equivalent WSDL document would be like?</em></p>
+<p><em>And the associated SOAP messages?</em></p>
+<p>We can say that in one single chapter we have explained how the webservices
+could be, if their implementation and definition is based on <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
+<p>Our webservice definition is equally useful for humans and for
+machines, as it contains all the information needed for using
+a webservice efficiently. In addition, creating an implementation
+should be relatively simple.</p>
+
+						
+						<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_09.html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_11.html" title="Next">Next &#x25BA;</a>
+			</div>
+			  </article>
+	  	
+	  <aside id="advertisement">
+		<h2>Sponsors</h2>
+    	<p>Would you like to be our sponsor? For now we don't have official sponsors, but we are open to offers.<p>
+    	<p>Would you like to be one of them? Contact us: <a href="mailto:admin@semantictext.info">admin@semantictext.info</a></p>
+    	<p>This will be your reserved space ;-)</p>
+    	<br>
+    	    	    	    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2022 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

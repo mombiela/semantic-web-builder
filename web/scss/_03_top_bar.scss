@@ -13,15 +13,18 @@
 		
 		li {
 			display: inline-block;
+			&.link_src {
+				float:right;
+				a {
+			    	color: yellow;
+				}
+			}
 		}		
 		a {
 			color: white;
 			padding: 10px;
 			text-decoration: none;
 			display: inline-block;
-		}	
-		a.link_src {
-		    color: yellow;
 		}
 	}	
 }

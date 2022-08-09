@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6: Tutorial Avanzado</title>
+	<meta name="description" content="Tutorial Avanzado de STxT. Inicialmente se hace un resumen de STxT, gramáticas y compactación.
+A continuación se describen aspectos más avanzados de STxT.">
+	<meta name="author" content="Joan Costa Mombiela">
+
+    <link rel="stylesheet" href="/css/site.css?v=1">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/chapter_06.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+				<span class="color1"><b>S</b></span>TxT: El Libro
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/chapter_06.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="chapter_06.stxt.txt" target="chapter_06" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="chapter_00_c.html" title="El Libro">El Libro</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT y XML">STxT y XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_05.html" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="chapter_07.html" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+									<h1>Capítulo 6: Tutorial Avanzado (*)</h1>
+						
+			
+																								<p>Este capítulo será parecido al tutorial del capítulo 3, pero más directo en todo su funcionamiento,
+y se explicarán todas las complejidades reales.</p>
+<p><strong>¡No os lo perdáis!</strong></p>
+
+								            	<h2><a id="index_0"></a>Recordatorio de <span class='STxT'><span class='first'>S</span>TxT</span></h2>
+												            	<h3><a id="index_1"></a>¿Qué es <span class='STxT'><span class='first'>S</span>TxT</span>?</h3>
+																<p>Un documento <span class='STxT'><span class='first'>S</span>TxT</span> consiste en un conjunto de nodos jerárquicos, 
+y la estructura de cada nodo está definida en su namespace correspondiente.
+Esta estructura se consigue gracias a la identación (tabuladores o espacios), 
+lo que dota al documento de una forma visual reconocible 
+por humanos y por máquinas indistintamente.</p>
+<p>Ejemplo:</p>
+
+												<pre>Reserva (miempresa.example.demo/reserva.stxt):
+
+Referencia: 093a2da1-q345-739r-ba5d-pqff98fe8j7d
+Fecha y hora: 2001-11-29 13:20:00
+Pasajero:
+    Nombre: John
+    Primer apellido: Smith
+    Segundo apellido: Adams
+Itinerario:
+    Ida:
+        Salida: Nueva York
+        Llegada: Los Angeles
+        Fecha Salida: 2001-12-14
+        Hora Salida: &Uacute;ltima hora de la tarde
+        Preferencia Asiento: pasillo
+    Vuelta:
+        Salida: Los Angeles
+        Llegada: Nueva York
+        Fecha Salida: 2001-12-20
+        Hora Salida: media-ma&ntilde;ana
+Alojamiento:
+    Preferencia:ninguna
+Observaciones:
+    Este pasajero ha contratado los servicios 
+    especiales de privacidad, por lo que en 
+    caso de tener disponibilidad se recomienda
+    permitirle el acceso a la zona vip.</pre>
+												<p>Un documento <span class='STxT'><span class='first'>S</span>TxT</span> sólo puede tener un nodo principal, 
+por lo que hace innecesaria la identación de sus nodos hijos directos.
+Además, es obligatorio especificar el namespace de este nodo principal, 
+ya que a partir de él los demás nodos quedarán perfectamente definidos.</p>
+<p>A partir de los distintos namespaces se puede construir toda
+la gramática y estructura del documento; la cual se tiene que cumplir
+para considerar un documento correcto.</p>
+
+								            	<h3><a id="index_2"></a>Gramáticas</h3>
+																<p>La gramática de un documento define como son los diferentes nodos del documento,
+a qué namespace pertenecen, y cómo son sus hijos (o subnodos).</p>
+<p>La definición de los namespaces se hace en documentos STXT,
+y éstos deben tener la siguiente definición:</p>
+
+												<pre>Namespace Definition(www.semantictext.info/namespace.stxt):
+
+Node Definition:
+    Name:
+    Alias:
+    Type:
+    Description:
+    Child:
+        Node:
+        Namespace:
+        Num:</pre>
+												<ul><li><strong>Name</strong> especifica el nombre del nodo (en ese namespace). También es conocido como <em>Nombre Canónico</em>.</li>
+<li><strong>Alias</strong> son sinónimos del nombre, que pueden usarse indistintamente en su lugar.</li>
+<li><strong>Type</strong> es el tipo de nodo, y puede tener los siguientes valores:<ul><li><strong>NODE</strong>: Nodo contenedor de otros nodos</li>
+<li><strong>TEXT</strong>: Nodo con contenido texto</li>
+<li><strong>URL</strong>: Nodo con una URL absoluta</li>
+<li>NATURAL: Nodo con un número natural</li>
+<li>INTEGER: Nodo con un número entero</li>
+<li>RATIONAL: Nodo con un número racional</li>
+<li>NUMBER: Nodo numérico</li>
+<li>BINARY: Nodo binario</li>
+<li>HEXADECIMAL: Nodo con contenido hexadecimal</li>
+<li>BASE64: Nodo con contenido en Base64</li>
+<li>BOOLEAN: Nodo con contenido boleano</li></ul>
+</li>
+<li><strong>Description</strong> se puede informar para tener una descripción de este nodo.</li>
+<li>Un nodo, en caso de ser de tipo NODE, puede tener uno o varios hijos (subnodos), y deben especificarse mediante <strong>child</strong>:<ul><li><strong>Node</strong>: Nombre del nodo hijo.</li>
+<li><strong>Namespace</strong>: si el hijo es de un namespace diferente al de la definición se especificará aquí.</li>
+<li><strong>Num</strong>: especifica cuántos elementos de este nodo pueden aparecer:<ul><li>*: Significa que puede haber un número indeterminado de estos hijos</li>
+<li>?: Puede haber 1 o 0 de estos hijos</li>
+<li>+: Tiene que haber al menos 1</li>
+<li>número: Tiene que haber un número exacto de estos hijos</li></ul>
+</li></ul>
+</li></ul>
+<p><em>Name</em> y <em>alias</em> no pueden repetirse en todo el namespace.
+Los nodos hijos también tienen que quedar perfectamente	definidos,
+sin permitir ambigüedad sobre el namespace al que pertenecen.</p>
+
+								            	<h3><a id="index_3"></a>Compactación</h3>
+																<p>Un documento <span class='STxT'><span class='first'>S</span>TxT</span> puede compactarse para mostrar explícitamente los niveles
+y ser más rápido de parsear por las máquinas. También permite ganar espacio,
+ya que los tabuladores y espacios iniciales	son substituidos por números.</p>
+<p>Además, hay que usar el nombre canónico en lugar de los alias. En caso
+de no usar el nombre canónico hablaríamos de documentos <em>semicompactados</em>.</p>
+<p>En nuestro ejemplo anterior, el documento compactado tendría la siguiente forma:</p>
+
+												<pre>Reserva(miempresa.example.demo/reserva.stxt):
+1:Referencia:093a2da1-q345-739r-ba5d-pqff98fe8j7d
+1:Fecha Y Hora:2001-11-29 13:20:00
+1:Pasajero:
+2:Nombre:John
+2:Primer apellido: Smith
+2:Segundo apellido: Adams
+1:Itinerario:
+2:Ida:
+3:Salida: Nueva York
+3:Llegada: Los Angeles
+3:Fecha Salida: 2001-12-14
+3:Hora Salida: &Uacute;ltima hora de la tarde
+3:Preferencia Asiento: pasillo
+2:Vuelta:
+3:Salida: Los Angeles
+3:Llegada:Nueva York
+3:Fecha Salida:2001-12-20
+3:Hora Salida:media-ma&ntilde;ana
+1:Alojamiento:
+2:Preferencia:ninguna
+1:Observaciones:
+2:Este pasajero ha contratado los servicios 
+2:especiales de privacidad, por lo que en 
+2:caso de tener disponibilidad se recomienda
+2:permitirle el acceso a la zona //omega//.</pre>
+								            	<h2><a id="index_4"></a>Sutilezas del lenguaje</h2>
+												            	<h3><a id="index_5"></a>Restricciones en los nombres de los nodos</h3>
+																<p>Los nombres de los nodos pueden ser como queramos... ¡o casi!
+Sólo hay unas pequeñas restricciones:</p>
+<ul><li>No puede tener ninguno de los 3 siguientes caracteres:<ul><li>caracter dos puntos: &#39;:&#39;</li>
+<li>caracter abrir paréntesis: &#39;(&#39;</li>
+<li>caracter cerrar paréntesis: &#39;)&#39;</li></ul>
+</li>
+<li>El nombre no puede ser solamente numérico o de otra forma se podría confundir con una linea compactada.</li></ul>
+<p>Por cierto:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Se permiten espacios en los nombres. <br/> 
+¿Por qué no? ¿Para parecer informáticos? <br/>
+Los tiempos están cambiando :-D</p>
+</div>
+            	</div>
+												<div class="row">
+            		<div class="assert"><p>La primera línea será de la forma:<br/>
+nombre del campo (nombre_namespace) + &#39;:&#39;</p>
+</div>
+            	</div>
+												<div class="row">
+            		<div class="assert"><p>Todas las demás líneas serán de la forma:<br/>
+tabuladores o espacios + nombre del campo + &#39;:&#39;<br/>
+[+ contenido del campo si es básico]</p>
+</div>
+            	</div>
+								            	<h3><a id="index_6"></a>Case insensitive</h3>
+																<div class="row">
+            		<div class="assert"><p><strong>Los identificadores son CASE-INSENSITIVE!</strong></p>
+</div>
+            	</div>
+												<p>Vamos a explicar una realidad, que parece que nadie se atreve a decir: </p>
+<p>En todos los lenguajes que son Case-Sensitive, nadie en el mundo (en su sano juicio)
+ha hecho nunca un documento o programa que sólo se diferencie por mayúsculas y minúsculas.
+¿Por qué? Porque es absurdo. Reconozcámoslo. Sólo tiene como consecuencia ser una fuente de errores,
+y no tiene como efectos prácticos aumentar la legibilidad. 
+Es más, en ocasiones sería muy bueno permitir case-insensitive para aumentar claridad.</p>
+<p>Es posible que en otros casos esté justificado, pero en <span class='STxT'><span class='first'>S</span>TxT</span> parece justo lo contrario. 
+Siempre nos preocupamos por la semántica, y claramente los nombres tienen
+el mismo significado en mayúsculas que en minúsculas.</p>
+
+								            	<h3><a id="index_7"></a>Codificación UTF-8</h3>
+																<p>Este problema ha sido intrínseco a la informática durante muchos años.
+Que yo recuerde ha estado siempre, y siempre ha sido una fuente de problemas.
+Creo que <span class='STxT'><span class='first'>S</span>TxT</span> debería tener una única codificación, para evitar tener que decir
+en el documento cuál es. Además, ésta debe ser fácilmente entendida en el mundo de Internet,
+por lo cual creo que no hay lugar a dudas.</p>
+
+												<div class="row">
+            		<div class="assert"><p>Los documentos se codificarán en UTF-8</p>
+</div>
+            	</div>
+												<p>Es una buena regla y estoy muy contento con ella. Hoy en día es la codificación más aceptable,
+más universal, y más implementada. No creo que esto cambie en los próximos años.</p>
+
+								            	<h3><a id="index_8"></a>Tabuladores o espacios</h3>
+																<p>Vamos a explicar una <em>recomendación</em> cuando escribamos documentos en <span class='STxT'><span class='first'>S</span>TxT</span>. </p>
+<p>No es una regla, después explicaremos por qué con más detalle, pero os recomiendo <em>encarecidamente</em> que la uséis.</p>
+
+												<div class="row">
+            		<div class="assert"><p>Los nodos de un documento deben crearse mediante tabuladores.
+Se permite, pero no se recomiendan espacios,
+y se desaconseja encarecidamente mezclarlos.</p>
+</div>
+            	</div>
+												<p>Esto es una regla práctica, y espero que los programas y editores de texto 
+que se usen para crearlo la sigan, pero no siempre contaremos con esta ayuda.
+Por esto, vamos a explicar cómo se cuentan los niveles cuando aparecen tabuladores y espacios.</p>
+<p>La regla básica a recordar es:</p>
+
+												<div class="row">
+            		<div class="assert"><p>&quot;4 Espacios&quot; = &quot;1 Tabulador&quot;</p>
+</div>
+            	</div>
+												<p>Así, cuando se cuentan niveles, 1 tabulador hace subir un nivel, 
+y 4 espacios también. Pero, si no se llega a 4 espacios y aparece otro carácter,
+los espacios anteriores no habrán hecho subir de nivel.
+Esto nos permite percibir de forma visual el número correcto de niveles
+(en la mayoría de editores).</p>
+<p>Vamos a poner ejemplos de contar niveles:</p>
+
+												<pre>s: espacio
+t: tabulador
+
+t    t    t    t    XXXX: Elemento XXXX, Nivel 4
+ssss ssss ssss ssss YYYY: Elemento YYYY, Nivel 4
+ssst sst  st   t    ZZZZ: Elemento ZZZZ, Nivel 4</pre>
+												<p>Vemos que esto es coherente con la mayoría de editores de texto;
+siempre que se configure con la opción de &quot;1 tabulador = 4 espacios&quot;.</p>
+
+								            	<h2><a id="index_9"></a>Texto (**)</h2>
+																<p>Escribir texto en <span class='STxT'><span class='first'>S</span>TxT</span> parece fácil... ¡y en realidad lo es! :-)</p>
+<p>Pero (siempre hay un pero) a veces queremos comprender exactamente cómo funciona
+y ver los casos más especiales y como se interpretan. 
+Si éste es tu caso, sigue leyendo. Estás en el lugar adecuado ;-)</p>
+<p><em>Estas reglas están sobretodo enfocadas al parseo de textos y a la interpretación
+informática. Cuando escribimos <span class='STxT'><span class='first'>S</span>TxT</span> sólo hay que tener en cuenta la identación y
+los niveles, y seguir nuestra intuición.</em></p>
+
+								            	<h3><a id="index_10"></a>Todo sobre Identación</h3>
+																<p>La identación en texto tiene algunas sutilezas que vamos a enseñar, y lo haremos con ejemplos.</p>
+
+												<div class="row">
+            		<div class="assert"><p>Si la línea donde empieza el nodo está vacía <br/>
+no se debería tener en cuenta el salto de línea.</p>
+</div>
+            	</div>
+												<p>Esto es razonable, ya que nos permite hacer textos bonitos, todo alineado.
+Por ejemplo, los siguientes nodos son equivalentes:</p>
+
+												<pre>Text Node: Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.
+
+Text Node:
+    Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.</pre>
+												<p>Se ve que el segundo nodo es más bonito, y tiene el mismo contenido que el primero.
+Si realmente se quisiera que la 1ª línea fuera en blanco, se debería hacer lo siguiente:</p>
+
+												<pre>Text Node:
+
+    Lorem ipsum dolor sit amet, sicing elit, sed do eiusmod
+    tempor incididunt ut dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+    commodo consequat. Duis aute irur in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.</pre>
+												<p>Otra regla importante, es que <em>las líneas en blanco intermedias</em> no tienen por qué
+llegar al nivel del texto, y seguirán contando como líneas en blanco.</p>
+<p>Esto también es una función estética e intuitiva, y lo hemos tenido en cuenta.
+Así, los siguientes nodos también son equivalentes:</p>
+
+												<pre>t    t    Text Node:
+t    t    t    xxxxxxx
+t    t    t    
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+t    t    
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+t 
+t    t    t    zz zz
+
+t    t    Text Node:
+t    t    t    xxxxxxx
+
+t    t    t    zz zz</pre>
+												<p>Todos hacen un texto <em>xxxxxxx</em>, seguido de una línea en blanco y con otra con <em>zz zz</em>.</p>
+
+								            	<h3><a id="index_11"></a>Todo sobre comentarios</h3>
+																<p>Los comentarios son muy útiles, y ya conocemos su funcionamiento:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Los comentarios son las líneas que empiezan por #, aunque tengan espacios o tabuladores delante.</p>
+</div>
+            	</div>
+												<p>Pero vamos a discutir algo importante. Esta regla no es del todo completa. Falta matizar:</p>
+
+												<div class="row">
+            		<div class="assert"><p>Los comentarios son las líneas que empiezan por #, aunque tengan espacios o tabuladores	delante; 
+siempre y cuando no estén en un nodo texto y hayan llegado a su nivel.</p>
+</div>
+            	</div>
+												<p>Mejor un ejemplo:</p>
+
+												<pre>Nodo Texto:
+        aaaa
+        bbbb
+        cccc
+# Un comentario, no se incluye en el texto (nivel 0)
+    # Un comentario, no se incluye en el texto (nivel 1)
+        # &iexcl;&iexcl;ESTA L&Iacute;NEA S&Iacute; QUE SE INCLUYE!!
+        # Ya est&aacute; dentro del texto (nivel 2!).
+        # Ya no es un comentario.
+            # Esto tampoco es un comentario :-D
+        dddd
+        eeee</pre>
+												<p>Vemos que de las 6 líneas que parecen comentarios sólo lo son las 2 primeras,
+con un nivel inferior o igual al nodo de texto correspondiente.</p>
+<p>En cambio, fuera de un nodo texto <em>no importa</em>, pero se desaconseja:</p>
+
+												<pre>Nodo Normal:
+    # Comentario
+        # Tambi&eacute;n es un comentario, aunque NO es bonito :-(
+        # Mejor evitar estos comentarios tan desalineados
+    Otro nodo:
+        Otro nodo:</pre>
+								            	<h3><a id="index_12"></a>Texto en el texto</h3>
+																<p>Bien, ésta es una de las cosas que más me gustan de <span class='STxT'><span class='first'>S</span>TxT</span>:
+Permite hacer texto de otros lenguajes <em>¡sin tener que parsear nada!</em>.
+¡Sólo hay que tener en cuenta las reglas de identación y ya está!
+Se puede escribir lo que queramos. A ver cuántos lenguajes pueden decir lo mismo :-D </p>
+<p>Vamos a hacer ejemplos, ya que no hay nada más que añadir ;-)</p>
+
+												<pre>Nodo con XML:
+    &lt;tag1&gt;
+        &lt;tag2&gt;Contenido !!!!&lt;/tag2&gt;
+        &lt;tag2&gt;Otro Contenido !!!!&lt;/tag2&gt;
+    &lt;/tag1&gt;</pre>
+												<pre>Nodo con Texto Wiki:
+    Esto es una lista:
+    
+    * Elem 1
+    * Elem 2
+        ** Elem 2.1
+        ** Elem 2.2</pre>
+												<pre>Nodo con Latex:
+    \begin{equation}
+        y_{i+1} = x_{i}^{2n} - \sqrt{5}x_{i-1}^{n} + \sqrt{x_{i-2}^7} -1
+    \end{equation}</pre>
+								            	<h2><a id="index_13"></a>Namespaces, nodos y más nodos (**)</h2>
+																<p>Me gustaría volver a dar un poco de vueltas a los nodos, 
+la deducción de los namespaces y documentos con nodos de diferentes namespaces.
+Supongo que a este nivel ya está claro este tema, pero para dejar claros
+los conceptos voy a repetirme un poco. Espero no liaros, realmente todo es fácil y sencillo.
+Pero no estoy tranquilo si no lo hago ;-)</p>
+
+								            	<h3><a id="index_14"></a>¿Qué es un namespace?</h3>
+																<p>Un namespace es una agrupación de definición de nodos y la descripción
+del namespace está siempre disponible en Internet como documento <span class='STxT'><span class='first'>S</span>TxT</span>;
+mediante una url de acceso.</p>
+<p>Por ejemplo, el namespace &quot;www.gym.demo/client.stxt&quot; puede definir 4 tipos de nodo:</p>
+<ul><li>Cliente</li>
+<li>Empleado</li>
+<li>Número de Cuenta</li>
+<li>Nombre </li></ul>
+<p>Ya está. Tenemos una relación en la que ligamos el namespace <em>www.gym.demo/client.stxt</em>
+con sus nodos: <em>Cliente, Empleado, Número de Cuenta y Nombre</em>.</p>
+<p>Y ahora viene lo divertido. En el namespace también se dice qué hijos puede tener cada nodo,
+y los hijos pueden ser de cualquier namespace, no tienen por qué estar en el mismo.</p>
+<p>Así, se podría decir que <em>Cliente</em> tiene los siguientes hijos:</p>
+<ul><li>Nombre (del mismo namespace, www.gymdemo.org/client.stxt)</li>
+<li>Entrenamiento (de otro namespace con la misma url base, www.gym.demo/gymdata.stxt)</li>
+<li>Confidencial (de otro namespace con otra url, www.security.demo/credentials.stxt)</li></ul>
+<p>Lo mismo podríamos hacer con todos los otros nodos.</p>
+
+								            	<h3><a id="index_15"></a>¿Qué es un documento <span class='STxT'><span class='first'>S</span>TxT</span>?</h3>
+																<p>Un documento <span class='STxT'><span class='first'>S</span>TxT</span> es un conjunto de nodos anidados.
+El primer nodo es el que contiene a los demás, 
+y sólo puede haber un nodo principal. 
+Este nodo principal especifica su namespace, 
+y este hecho hace que todos los demás nodos tengan especificado
+su namespace de forma automática,
+a través de todas las definiciones posteriores.</p>
+<p>Pero además, como hemos visto antes,
+cada nodo puede pertenecer a un namespace diferente.</p>
+<p>Así, en el ejemplo anterior que estábamos haciendo, 
+podemos construir el documento de <em>Cliente</em> como:</p>
+
+												<pre>Cliente (www.gymdemo.org/client.stxt):
+    # Del mismo namespace
+    Nombre: 
+    
+    # De otro namespace, pero no hace falta especificar, 
+    # se deduce de la gram&aacute;tica
+    Entrenamiento:
+    
+    # De otro namespace, tambi&eacute;n sin especificar
+    Confidencial:</pre>
+												<p>Lo importante de esto es que el documento es simple,
+pero gracias a las gramáticas y definiciones sabemos exactamente
+qué es cada elemento, de una forma muy sencilla.
+Y sólo hemos tenido que decir cuál es el elemento principal.</p>
+
+								            	<h3><a id="index_16"></a>Restricciones en los nodos hijos</h3>
+																<p>Debido a la deducción automática del namespace, los
+nombres (+ los alias) de los nodos hijos no pueden colisionar
+entre sí. En caso de colisión no se podría deducir
+correctamente el namespace al cual pertenecen.</p>
+
+						
+						<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_05.html" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="chapter_07.html" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+			  </article>
+	  	
+	  <aside id="advertisement">
+		<h2>Patrocinadores</h2>
+    	<p>¿Quieres ser nuestro patrocinador? De momento no tenemos patrocinadores oficiales, pero estamos abiertos a propuestas.<p>
+    	<p>¿Quieres ser uno de ellos? Contacta con nosotros: <a href="mailto:admin@semantictext.info">admin@semantictext.info</a></p>
+    	<p>Este será tu espacio reservado ;-)</p>
+    	<br>
+    	    	    	    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2022 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

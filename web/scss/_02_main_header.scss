@@ -22,6 +22,15 @@
 		line-height: 0.8rem
 	}
 	
+	@media (max-width: 450px) {
+		h1 {
+			font-size: 1.7rem;
+		}
+		h2 {
+			display:none;
+		}
+	}	
+	
 	a {
 		color: #444;
 		text-decoration: none;
