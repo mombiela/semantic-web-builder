@@ -13,7 +13,7 @@ Assert:
 Content:
 	Nos gusta probar nuestra propia medicina ;-)
 	
-	Veréis que todas las páginas pueden ser accedidas con la extensión *.stxt en vez
+	Veréis que todas las páginas pueden ser accedidas con la extensión *.stxt.txt en vez
 	de *.html, obteniendo el código fuente original de la página. Nos gusta la información
 	libre, y creemos que usar @STxT@ es una bonita forma de conseguirlo. Además, no nos
 	ha costado nada hacerlo. ¡¡Nuestros fuentes originales ya eran @STxT@!! :-D
