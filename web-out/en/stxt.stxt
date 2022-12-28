@@ -13,7 +13,7 @@ Assert:
 Content:
 	We like to taste our own medicine ;-)
 	
-	You will see that all the pages can be accessed with the *.stxt.txt extension instead of *.html, 
+	You will see that all the pages can be accessed with the *.stxt extension instead of *.html, 
 	obtaining the page’s original source code. We like free information, and we believe that using 
 	@STxT@ is a nice way of obtaining it. Besides, it didn’t cost us anything to make it. Our 
 	original sources were already @STxT@!! :-D
@@ -22,7 +22,7 @@ Content:
 	something that might be interesting or that simply will make you smile ;-)
 	
 html:
-	<strong><a href="stxt.stxt.txt" target="stxt">Do you want to see me? :-)</a></strong>
+	<strong><a href="stxt.stxt" target="stxt">Do you want to see me? :-)</a></strong>
 
 # ------------------------------------------------------------------------
 # SURPRISE!! :-D I couldn’t help writing this here XD
