@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").tvalue}">
 	<meta name="author" content="${meta.getChild("author").tvalue}">
 
-    <link rel="stylesheet" href="/css/site.css?v=1">
+    <link rel="stylesheet" href="/css/site.css?v=2">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/${doc_name}.html" />
