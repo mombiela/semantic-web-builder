@@ -51,7 +51,7 @@ Content:
 	==¿Y bien?==
 	
 assert:
-	¿A parte de esos horribles caracteres {{{'<','>'}}} qué hay de nuevo?
+	¿Aparte de eliminar esos horribles caracteres {{{'<','>'}}} qué hay de nuevo?
 	
 content:
 	Bueno, la lista es larga, pero como aperitivo ya es suficiente:
