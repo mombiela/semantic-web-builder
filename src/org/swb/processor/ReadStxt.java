@@ -1,6 +1,6 @@
 package org.swb.processor;
 
-import info.semantictext.parser.Parser;
+import info.semantictext.Parser;
 
 import java.io.File;
 import java.io.IOException;

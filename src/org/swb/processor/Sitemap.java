@@ -1,7 +1,7 @@
 package org.swb.processor;
 
 import info.semantictext.Node;
-import info.semantictext.utils.Constants;
+import info.semantictext.Constants;
 
 import java.io.File;
 import java.io.IOException;
