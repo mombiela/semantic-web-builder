@@ -10,8 +10,8 @@ public class ReadStxt extends AbstractRead
     @Override
     protected Object read(File srcFile) throws IOException
     {
-	Parser p = new Parser();
-        p.parse(srcFile);
+        Parser p = new Parser();
+        p.parseFile(srcFile);
         return p.getDocumentNode();
     }
 
