@@ -1,206 +1,206 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: Chapter 2: What is STxT?
-	Description: Description of the language and of the characteristics that make it unique.
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
-
-Nav:
-	Prev: 01
-	Next: 03
-
-title:	
-	Chapter 2: What is @STxT@?
-
-assert:
-	This project is the result of years of //subconscious// reflection,\\
-	although it only took a moment of inspiration.
-
-text:
-	This chapter may seem a little unfocused, but they are my reflections when creating @STxT@.
-	Please forgive me if I repeat myself a bit, if you don't understand what I am saying, or if it seems an incoherent speech.
-	But this is the way it is. It has been written to the best of my abilities, on different days, but always using it as the 
-	basis of creation.
+	Metadata:
+		Title: Chapter 2: What is STxT?
+		Description: Description of the language and of the characteristics that make it unique.
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
 	
-assert:
-	Is //The inspiration//
-				
-text:
-	The other chapters are //The Perspiration//.
-
-	Glance quickly over this chapter, and read it more in depth when you already know
-	more about @STxT@. This is good advice ;-)
-
-h1: 
-	What is @STxT@?
+	Nav:
+		Prev: 01
+		Next: 03
 	
-text:
-	It is a purely semantic language, with some very basic rules, 
-	which allows the creation of documents with structured and easy 
-	to interpret content, by both humans and machines. 
-	You could be reading a document in @STxT@ without actually realizing
-	that it is. 	
+	title:	
+		Chapter 2: What is @STxT@?
 	
-	@STxT@: A language for the web. It does not mean one more, one more among many. 
-	It means //ONE// language for the web. Just one. And many at the same time. 
-	As many as you want. This is my proposal.
+	assert:
+		This project is the result of years of //subconscious// reflection,\\
+		although it only took a moment of inspiration.
 	
-	@STxT@ is a language for writing structured documents. It lets us create
-	documents in a non-ambiguous way,	
-	adhering to very precise rules, 
-	but achieving documents that can be read by people 
-	that are not computer literate.
-
-	In fact, the documents have meaning by themselves,
-	without needing any additional translation.
-	They have a hierarchical structure that is very similar to xml documents,
-	and their translation can be direct.                                
-	
-	In the future, @STxT@ could replace other technologies such as xml or LaTex.
-	
-h1:
-	Statement of Intent :-)
-
-text:
-	There are a number of principles or features that we want this new language to have.
-	
-	* Independent from the programming language, operating system, and platform
-	* Easy to read by humans without computer skills
-	* Easy to learn by humans without computer skills
-	* Nice appearance and intuitive
-	* Encourages the freedom of movement and sharing of information
-	* Easy to learn by humans with computer skills 
-	* Easy to interpret by computers
-	* It allows for the easy integration of texts from other programming languages, 
-	  especially "lightweight languages", which are particularly interesting. 
-	  This way, we achieve a very interesting integration.
-	* Native internationalization (I18N) capabilities
-	* Native self-description capabilities
-	* Enable the creation of content trees which are capable of distinguishing 
-	  very easily between different languages
-	* Be generic in order to include documents in other languages
-	* Simplify so much that escape characters are not necessary. 
-	  As a matter of fact, there are no escape characters!! 
-	  Is that possible? Yes. I believe that it is the first language that can say this :-D 
-	  It does so through its structure and content. There is only one forbidden character, 
-	  but it is not an escape character. You’ll see, I have already expanded too much on this point...
-
-h1:
-	What does @STxT@ mean?
-
-text:
-	Well, originally @STxT@ means "Semantic text". 
-	Although it could also have other meanings, that I particularly like: SuperText and SexyText.
-
-	* SuperText: it is text, but super :-D
-	* SexyText: it is particularly beautiful text ;-)
-
-	How did I choose the @STxT@ extension? I was sure that documents had to be semantic,
-	so there was something that had to have "semantic". In addition, languages
-	with few letters in them are “in” now: xml, tex, html, xsd,... so stxt seemed to me like a
-	good choice. I just needed to check that this was not being used already, so looking
-	through the Internet I only remotely found another meaning: sexy-text. 
-	Well, even that was good, semantic text has to be sexy ;-)
-
-h1:	Why a new language?
-
-text:
-	I have always believed that we needed a simple language for writing texts, but that was
-	at same time powerful as far as structure is concerned. And I had not found it... until now.
-
-	I think the problem that has always existed is that one always tries to solve the general case,
-	and this complicates things. But in addition it has been dealt with the wrong way, always taking into account 
-	the syntax point of view, looking for a computer approach, never a semantic one. 
-
-assert:
-	//With @STxT@ we solve semantics and syntax at the same time, \\ in a stylish and beautiful way.//
-
-text:
-	Make no mistake. I am a computer tech. But sometimes you have to see things from the other side, 
-	with a 'clean' view. In fact it is a balance between learning from what you know and trying to think
-	as if you didn't know anything about it.
-
-	Another objective is to make the information open. This has also been addressed during the design phase. 
-	By design, the content is open.	
-
-h1: A language for everyone
-	
-text:
-	We try to make it easy for everyone. There should not be problems for "non-computer people" 
-	when having to create a semantic document. It should be intuitive, and simple, with the right tools.
-
-	One of the goals is to go from having //1// relatively complicated language for doing things
-	(e.g.: XML, Latex,...) to having very simple //n//, with content linked to a structure.
-	This language needs to be able to be learned in a very short time. Almost with one example 
-	we should have enough. @STxT@ is made so that it is this way. In addition, @STxT@ lets us pass 
-	from @STxT@ to other languages, such as latex, so that the more technical people 
-	can do the final work. But the origin and the base will always be @STxT@. 
-
-	It is much better that it is this way, as we write in pure semantics, without taking into account structure //at all//.
-	
-	When I began creating this language I was looking for something very generic but that was descriptive at the same time.
-	I wanted the information to be very clear, but I wanted to forget the complex grammars from other systems. 
-	I wanted something accessible, but at the same time powerful and useful. That is why I had to look for
-	simplicity, and keep away from the majority of other work already carried out.
-	My intention was to create a language not just for elite people, but for everyone. 
-	I also knew that this would be beneficial, because this way the number of people willing to create documents 
-	would increase considerably. There is a tremendous amount of people with great knowledge,
-	but sometimes they are limited by the way they have to translate this information.
-	I also intend to solve this problem.
-
-h1:
-	Chaotic Statement of Intent :-D (**)
-
-Text:	
-	
-	Well, all this is what we were looking for, or what we have achieved, or the objective,
-	or a mixture of all these things. I don't know, they are scattered ideas, which have been out there 
-	during its creation and I wanted you to see, nothing else.	
-	There is nothing to be understood from this list.
-	You have to wait until the end of the book, and see what has been achieved, what hasn’t, 
-	and if we have gained something... in the end.
-
-	* Valid for a looong time
-	* Content type for web: text/plain (UTF-8)
-	* There are no character problems: UTF-8 ALWAYS
-	* Expandable 
-	* Anyone can create data types, and the page MUST EXIST, not like xml namespaces. 
-	* Obviously it can be saved in cache, in order to not be asking all the time, but it is something REAL.
-	* Easy data transfer between platforms
-	* Easy content migrations
-	* You can set definition files, so that anyone whoever wants to can create types before making them public
-	* Define data types with url's: only 1 namespace, and from that one everything is by default
-	* It has been made to be beautiful
-	* Easy to read and make by humans and machines
-	* Inferable contents: it is not necessary to write everything, which lets us shorten or make longer descriptions	
-	* Made for being learned very quickly, with few rules
-	* Definition of types (grammars) included from the design stage, for full integration
-	* Xml refactoring
-	* Thanks to the type definition a super-compact format can be made, much more so than xml, json,...
-	* Much easier to create by hand, as we almost never have to watch the namespaces, 
-	  since they are almost automatic due to their location. Namespaces like you've never seen before ;-) 
-	* Very few data types (numbers without limitation, this is semantic, not a programming language)
-	* Easy to transform from this format to other formats
-	* Ambition: allow progress towards the semantic web, with the creation of beautiful html views and a strong @STxT@ base.
-	* One of the objectives is to make the information open. This is also done during the design phase. 
-	  By design, the content is open.	
+	text:
+		This chapter may seem a little unfocused, but they are my reflections when creating @STxT@.
+		Please forgive me if I repeat myself a bit, if you don't understand what I am saying, or if it seems an incoherent speech.
+		But this is the way it is. It has been written to the best of my abilities, on different days, but always using it as the 
+		basis of creation.
 		
-h1:
-	Applications, results, and expectations
-
-Text:
-	I believe we have created a great language. Simple, practical, and truly useful. 
+	assert:
+		Is //The inspiration//
+					
+	text:
+		The other chapters are //The Perspiration//.
 	
-	I have written this book in this language. And I had never felt so comfortable.
-	For me it has been a great discovery. When I use it, I think: //people have to know it//.
-	The language deserves it. It cannot be kept hidden. It has to be tried. And it has to be liked.
-	I don't want to be the only one who has it. It wouldn’t be fair.
-
-	I would like for @STxT@ to hold a place of honor with other languages in the future,
-	and that this was due to its acceptance and the usefulness that it offered. 
-
-# -----------------------------------------
-# Welcome to a new age. The age of STxT :-)
-# -----------------------------------------
-
+		Glance quickly over this chapter, and read it more in depth when you already know
+		more about @STxT@. This is good advice ;-)
+	
+	h1: 
+		What is @STxT@?
+		
+	text:
+		It is a purely semantic language, with some very basic rules, 
+		which allows the creation of documents with structured and easy 
+		to interpret content, by both humans and machines. 
+		You could be reading a document in @STxT@ without actually realizing
+		that it is. 	
+		
+		@STxT@: A language for the web. It does not mean one more, one more among many. 
+		It means //ONE// language for the web. Just one. And many at the same time. 
+		As many as you want. This is my proposal.
+		
+		@STxT@ is a language for writing structured documents. It lets us create
+		documents in a non-ambiguous way,	
+		adhering to very precise rules, 
+		but achieving documents that can be read by people 
+		that are not computer literate.
+	
+		In fact, the documents have meaning by themselves,
+		without needing any additional translation.
+		They have a hierarchical structure that is very similar to xml documents,
+		and their translation can be direct.                                
+		
+		In the future, @STxT@ could replace other technologies such as xml or LaTex.
+		
+	h1:
+		Statement of Intent :-)
+	
+	text:
+		There are a number of principles or features that we want this new language to have.
+		
+		* Independent from the programming language, operating system, and platform
+		* Easy to read by humans without computer skills
+		* Easy to learn by humans without computer skills
+		* Nice appearance and intuitive
+		* Encourages the freedom of movement and sharing of information
+		* Easy to learn by humans with computer skills 
+		* Easy to interpret by computers
+		* It allows for the easy integration of texts from other programming languages, 
+		  especially "lightweight languages", which are particularly interesting. 
+		  This way, we achieve a very interesting integration.
+		* Native internationalization (I18N) capabilities
+		* Native self-description capabilities
+		* Enable the creation of content trees which are capable of distinguishing 
+		  very easily between different languages
+		* Be generic in order to include documents in other languages
+		* Simplify so much that escape characters are not necessary. 
+		  As a matter of fact, there are no escape characters!! 
+		  Is that possible? Yes. I believe that it is the first language that can say this :-D 
+		  It does so through its structure and content. There is only one forbidden character, 
+		  but it is not an escape character. You’ll see, I have already expanded too much on this point...
+	
+	h1:
+		What does @STxT@ mean?
+	
+	text:
+		Well, originally @STxT@ means "Semantic text". 
+		Although it could also have other meanings, that I particularly like: SuperText and SexyText.
+	
+		* SuperText: it is text, but super :-D
+		* SexyText: it is particularly beautiful text ;-)
+	
+		How did I choose the @STxT@ extension? I was sure that documents had to be semantic,
+		so there was something that had to have "semantic". In addition, languages
+		with few letters in them are “in” now: xml, tex, html, xsd,... so stxt seemed to me like a
+		good choice. I just needed to check that this was not being used already, so looking
+		through the Internet I only remotely found another meaning: sexy-text. 
+		Well, even that was good, semantic text has to be sexy ;-)
+	
+	h1:	Why a new language?
+	
+	text:
+		I have always believed that we needed a simple language for writing texts, but that was
+		at same time powerful as far as structure is concerned. And I had not found it... until now.
+	
+		I think the problem that has always existed is that one always tries to solve the general case,
+		and this complicates things. But in addition it has been dealt with the wrong way, always taking into account 
+		the syntax point of view, looking for a computer approach, never a semantic one. 
+	
+	assert:
+		//With @STxT@ we solve semantics and syntax at the same time, \\ in a stylish and beautiful way.//
+	
+	text:
+		Make no mistake. I am a computer tech. But sometimes you have to see things from the other side, 
+		with a 'clean' view. In fact it is a balance between learning from what you know and trying to think
+		as if you didn't know anything about it.
+	
+		Another objective is to make the information open. This has also been addressed during the design phase. 
+		By design, the content is open.	
+	
+	h1: A language for everyone
+		
+	text:
+		We try to make it easy for everyone. There should not be problems for "non-computer people" 
+		when having to create a semantic document. It should be intuitive, and simple, with the right tools.
+	
+		One of the goals is to go from having //1// relatively complicated language for doing things
+		(e.g.: XML, Latex,...) to having very simple //n//, with content linked to a structure.
+		This language needs to be able to be learned in a very short time. Almost with one example 
+		we should have enough. @STxT@ is made so that it is this way. In addition, @STxT@ lets us pass 
+		from @STxT@ to other languages, such as latex, so that the more technical people 
+		can do the final work. But the origin and the base will always be @STxT@. 
+	
+		It is much better that it is this way, as we write in pure semantics, without taking into account structure //at all//.
+		
+		When I began creating this language I was looking for something very generic but that was descriptive at the same time.
+		I wanted the information to be very clear, but I wanted to forget the complex grammars from other systems. 
+		I wanted something accessible, but at the same time powerful and useful. That is why I had to look for
+		simplicity, and keep away from the majority of other work already carried out.
+		My intention was to create a language not just for elite people, but for everyone. 
+		I also knew that this would be beneficial, because this way the number of people willing to create documents 
+		would increase considerably. There is a tremendous amount of people with great knowledge,
+		but sometimes they are limited by the way they have to translate this information.
+		I also intend to solve this problem.
+	
+	h1:
+		Chaotic Statement of Intent :-D (**)
+	
+	Text:	
+		
+		Well, all this is what we were looking for, or what we have achieved, or the objective,
+		or a mixture of all these things. I don't know, they are scattered ideas, which have been out there 
+		during its creation and I wanted you to see, nothing else.	
+		There is nothing to be understood from this list.
+		You have to wait until the end of the book, and see what has been achieved, what hasn’t, 
+		and if we have gained something... in the end.
+	
+		* Valid for a looong time
+		* Content type for web: text/plain (UTF-8)
+		* There are no character problems: UTF-8 ALWAYS
+		* Expandable 
+		* Anyone can create data types, and the page MUST EXIST, not like xml namespaces. 
+		* Obviously it can be saved in cache, in order to not be asking all the time, but it is something REAL.
+		* Easy data transfer between platforms
+		* Easy content migrations
+		* You can set definition files, so that anyone whoever wants to can create types before making them public
+		* Define data types with url's: only 1 namespace, and from that one everything is by default
+		* It has been made to be beautiful
+		* Easy to read and make by humans and machines
+		* Inferable contents: it is not necessary to write everything, which lets us shorten or make longer descriptions	
+		* Made for being learned very quickly, with few rules
+		* Definition of types (grammars) included from the design stage, for full integration
+		* Xml refactoring
+		* Thanks to the type definition a super-compact format can be made, much more so than xml, json,...
+		* Much easier to create by hand, as we almost never have to watch the namespaces, 
+		  since they are almost automatic due to their location. Namespaces like you've never seen before ;-) 
+		* Very few data types (numbers without limitation, this is semantic, not a programming language)
+		* Easy to transform from this format to other formats
+		* Ambition: allow progress towards the semantic web, with the creation of beautiful html views and a strong @STxT@ base.
+		* One of the objectives is to make the information open. This is also done during the design phase. 
+		  By design, the content is open.	
+			
+	h1:
+		Applications, results, and expectations
+	
+	Text:
+		I believe we have created a great language. Simple, practical, and truly useful. 
+		
+		I have written this book in this language. And I had never felt so comfortable.
+		For me it has been a great discovery. When I use it, I think: //people have to know it//.
+		The language deserves it. It cannot be kept hidden. It has to be tried. And it has to be liked.
+		I don't want to be the only one who has it. It wouldn’t be fair.
+	
+		I would like for @STxT@ to hold a place of honor with other languages in the future,
+		and that this was due to its acceptance and the usefulness that it offered. 
+	
+	# -----------------------------------------
+	# Welcome to a new age. The age of STxT :-)
+	# -----------------------------------------
+	

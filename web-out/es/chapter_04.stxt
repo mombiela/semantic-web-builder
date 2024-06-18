@@ -1,963 +1,963 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: Capítulo 4: Creación y uso de gramáticas
-	Description: Uso de gramáticas, namespaces, nodos, sus tipos y todo lo relacionado con las gramáticas en STxT
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
-
-Nav:
-	Prev: 03
-	Next: 05
+	Metadata:
+		Title: Capítulo 4: Creación y uso de gramáticas
+		Description: Uso de gramáticas, namespaces, nodos, sus tipos y todo lo relacionado con las gramáticas en STxT
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
 	
-title:
-	Capítulo 4: Creación y uso de gramáticas
-
-text:	
-	En este capítulo explicaremos las reglas de creación de documentos, 
-	desde el punto de vista de las gramáticas y los namespaces. 
-	Para ello, primero haremos una reflexión de cómo se relacionan, 
-	para a continuación explicar las normas de uso y funcionamiento.
-	
-	Hay partes que pueden parecer complejas, pero en realidad todo es muy intuitivo.
-	Mucho más intuitivo que otras tecnologías (estoy pensando en dtd's, xml's y xsd's), 
-	pero con una potencia similar.
-	
-	Es más, es tan simple que con un capítulo creo que será suficiente para explicarlo todo.
-	
-alert:
-	Atentos, esto es complejo; pero valdrá la pena ;-) 
-	
-text:
-	Cuando terminemos ya casi seréis unos expertos de @STxT@ :-)
-	
-h1:
-	Namespaces y gramáticas (*)
-	
-text:	
-	Vamos a distinguir entre namespaces y gramáticas.
-	
-	A veces hablamos de gramáticas y de namespaces de forma indistinta,
-	aunque en realidad no es "exactamente" lo mismo.
-	
-	Un namespace define un conjunto de nodos, con unas reglas completamente definidas.
-	La gramática no es ningún documento en sí, pero se crearía a partir de uno o varios namespaces.
-	Cuando decimos que un documento tiene que cumplir la gramática decimos que todos los nodos deben ser correctos,
-	cada uno dependiendo de su namespace y definición.
-	
-	Definición de gramática, tal como la entendemos en @STxT@:
-	
-assert:
-	"Una gramática es una definición cruzada entre varios namespaces, para un tipo de documento dado".
-	
-text:
-	Por ejemplo: los namespaces son:
-	
-code:
-	-----------
-	Namespace 1
-	-----------
-	xxx: tipo nodo, debe contener yyy,zzz,ttt
-	yyy: nodo texto
-	zzz: nodo texto
-	ttt: tipo nodo, debe contener uuu del namespace NS2
-	
-	-----------
-	Namespace 2
-	-----------
-	uuu: texto
-	
-text:
-	La gramática de //xxx// verifica que el elemento //xxx// tenga la siguiente estructura:
-	
-code:
-	xxx:
-		yyy:
-		zzz:
-		ttt:
-			uuu:
-	
-h1:
-	Regla básica (*)
-	
-assert:
-	Un documento es válido si todos sus nodos son válidos de acuerdo con la gramática.
-	
-text:
-	Sabemos que un documento @STxT@ es un conjunto estructurado de nodos,
-	dónde cada uno de ellos debe pertenecer a un namespace.
-	Pues bien, debido a esto podemos afirmar también:
-	
-assert:
-	Un documento no es válido si hay algún nodo sin namespace
-	o éste es incorrecto
-	
-text:
-	Bien, esto ya lo sabíamos, y lo mejor de todo es que esto es //casi// automático,
-	ya que no debemos dar la definición de cada namespace.
-	**Sólo se deberá especificar el namespace del primer nodo**, 
-	los namespaces de los siguientes se deducirán de su gramática
-	(o definiciones cruzadas de todos los namespaces implicados).
-	
-	Finalmente, también podemos deducir que
-	
-assert:
-	Un nodo es válido si su contenido es válido
+	Nav:
+		Prev: 03
+		Next: 05
 		
-text:		
-	Con esto quiero remarcar que para verificar la validez de un documento
-	se puede ir nodo por nodo, verificando su contenido. 
-	Si todos los nodos son válidos, ya está. El documento será válido. 
-	Es por esto que para ello sólo nos tendremos que centrar en un nodo, 
-	y repetir la verificación en cada uno de ellos.
+	title:
+		Capítulo 4: Creación y uso de gramáticas
 	
-h1:
-	Un ejemplo para empezar
-	
-text:
-	Vamos a hacer un ejemplo, pero ahora iremos a la inversa que en el capítulo anterior.
-	Empezaremos por la gramática del documento, definiremos sus nodos y características,
-	y finalmente crearemos un documento de prueba. 
-	
-	Imaginemos que tenemos un gimnasio, y queremos una ficha de clientes.
-	En esta ficha irán los datos personales y los datos bancarios.
-	
-	Así, un cliente tendrá dos nodos principales:
-	
-	* Datos Personales
-	* Datos Bancarios
-	
-	A su vez, en datos personales, queremos los siguientes datos:
-	
-	* Nombre
-	* Primer apellido
-	* Segundo apellido
-	* Edad
-	* Cliente vip
-	* Foto 
-	
-	Finalmente, en datos bancarios tendríamos:
-	
-	* Titular cuenta
-	* Número cuenta
-	
-	No lo compliquemos más, con esto es suficiente. 
-	
-	**¡Que empiece la fiesta! :-D**
-	
-h1:
-	Cómo se crean y se leen los Namespaces
-	
-text:
-	Crear un namespace es crear un documento @STxT@ con una estructura determinada
-	y ponerlo accesible en la web. Esto es importante, ya que **ESTE DOCUMENTO TIENE QUE EXISTIR**.
-	
-	El documento tiene que ser una definición de namespace
-	(Namespace Definition), tal como está definida en:
-	
-assert:
-	www.semantictext.info/namespace.stxt
-	
-text:
-	En nuestro ejemplo el documento debería empezar así:
-	
-code:
-	Namespace Definition(www.semantictext.info/namespace.stxt):
-	
-	# NAMESPACE: www.gym.demo/client.stxt
-	# A continuación irá la definición de cada nodo del namespace
-	
-	....
-	....
-	
-text:
-	Dentro de este documento irán las definiciones de 
-	todos los nodos del namespace.
-	
-	Cada definición de nodo debe tener la siguiente forma:
-	
-code:
-	Node Definition:
-		Type:
-		Name:
-		Alias:
-		Description:
-		Child:
-			Node:
-			Namespace:
-			Num:
-	
-text:
-	Vamos a desglosar cada parte:
-	
-	**Node Definition**: Inicio de la definición del nodo. Dentro se deben especificar
-	las siguientes características: Type, Name, Alias, Description, Child
-	
-	**Type**: Es el tipo de nodo. Hay 11 tipos de nodos, pero los 3 primeros son los más importantes.
-	Es obligatorio definir el tipo del nodo:
-	
-	* **NODE**: Nodo contenedor de otros nodos
-	* **TEXT**: Nodo texto
-	* **URL**: Nodo con una URL
-	* NATURAL: Nodo con un número natural
-	* INTEGER: Nodo con un número entero
-	* RATIONAL: Nodo con un número racional
-	* NUMBER: Nodo numérico
-	* BINARY: Nodo binario
-	* HEXADECIMAL: Nodo con contenido hexadecimal
-	* BASE64: Nodo con contenido en Base64
-	* BOOLEAN: Nodo con contenido boleano
-	
-	**Name**: es el nombre del nodo. Es obligatorio, y sólo puede haber uno. 
-	Además, no puede repetirse en todo el documento, ya que sino habría conflictos.
-	A este nombre también se le llama //Canonical Name//, para distinguirlo de
-	sus posibles alias.
-	
-	**Alias**: es un sinónimo del nombre (Name), y puede haber tantos alias como se quiera.
-	Pero tiene la misma restricción que nombre, es decir, que no se puede repetir, 
-	**ni con otros alias ni con otros nombres en todo del namespace**.
-	
-	**Description**: Damos una descripción de lo que es este nodo, explicativa a "modo humano".
-	Esto es muy útil, ya que nos permite saber realmente qué es un nodo, 
-	y de esta forma conocer con detalle el contenido de un documento @STxT@.
-	Este campo no es obligatorio, pero sí muy recomendable.
-	
-	**Child**: Especifica un posible nodo hijo. Debe tener los siguientes atributos: Node, Namespace y Num.
-	Este nodo sólo puede aparecer si el //tipo// del nodo es //NODE//.
-	
-	**Node**: Nombre del nodo hijo. Es obligatorio especificar este dato.
-	Hace referencia al //Name// del nodo (o a alguno de sus //Alias//).
-	No pueden haber dos childs con el mismo nombre de nodo (incluyendo todos sus alias),
-	ya que no se podría deducir el namespace automáticamente.
-	
-	**Namespace**: Namespace del nodo hijo. No es obligatorio especificarlo, 
-	en cuyo caso se supondrá que es del mismo namespace.
-	
-	**Num**: especifica cuántos de esos nodos hijos pueden aparecer. 
-	Es obligatorio y puede tomar los siguientes valores:
-	
-	* *: Significa que puede haber un número indeterminado de estos hijos
-	* ?: Puede haber 1 o 0 de estos hijos
-	* +: Tiene que haber al menos 1
-	* número: Tiene que haber un número exacto de estos hijos
+	text:	
+		En este capítulo explicaremos las reglas de creación de documentos, 
+		desde el punto de vista de las gramáticas y los namespaces. 
+		Para ello, primero haremos una reflexión de cómo se relacionan, 
+		para a continuación explicar las normas de uso y funcionamiento.
 		
-	Vamos a mostrar como empezaríamos con nuestro ejemplo.
-	En los próximos apartados iremos desglosando y terminando cada parte.
-	Es bastante intuitivo, pero vale la pena demorarse en los detalles:
-	
-code:
-	Namespace Definition(www.semantictext.info/namespace.stxt):
-	
-	# NAMESPACE: www.gym.demo/client.stxt
-	# A continuación irá la definición de cada nodo del namespace
-	
-	# --------------
-	# Nodo principal
-	# --------------
-	
-	Node Definition: 
-		Type: NODE
-		Name: Cliente
+		Hay partes que pueden parecer complejas, pero en realidad todo es muy intuitivo.
+		Mucho más intuitivo que otras tecnologías (estoy pensando en dtd's, xml's y xsd's), 
+		pero con una potencia similar.
+		
+		Es más, es tan simple que con un capítulo creo que será suficiente para explicarlo todo.
+		
+	alert:
+		Atentos, esto es complejo; pero valdrá la pena ;-) 
+		
+	text:
+		Cuando terminemos ya casi seréis unos expertos de @STxT@ :-)
+		
+	h1:
+		Namespaces y gramáticas (*)
+		
+	text:	
+		Vamos a distinguir entre namespaces y gramáticas.
+		
+		A veces hablamos de gramáticas y de namespaces de forma indistinta,
+		aunque en realidad no es "exactamente" lo mismo.
+		
+		Un namespace define un conjunto de nodos, con unas reglas completamente definidas.
+		La gramática no es ningún documento en sí, pero se crearía a partir de uno o varios namespaces.
+		Cuando decimos que un documento tiene que cumplir la gramática decimos que todos los nodos deben ser correctos,
+		cada uno dependiendo de su namespace y definición.
+		
+		Definición de gramática, tal como la entendemos en @STxT@:
+		
+	assert:
+		"Una gramática es una definición cruzada entre varios namespaces, para un tipo de documento dado".
+		
+	text:
+		Por ejemplo: los namespaces son:
+		
+	code:
+		-----------
+		Namespace 1
+		-----------
+		xxx: tipo nodo, debe contener yyy,zzz,ttt
+		yyy: nodo texto
+		zzz: nodo texto
+		ttt: tipo nodo, debe contener uuu del namespace NS2
+		
+		-----------
+		Namespace 2
+		-----------
+		uuu: texto
+		
+	text:
+		La gramática de //xxx// verifica que el elemento //xxx// tenga la siguiente estructura:
+		
+	code:
+		xxx:
+			yyy:
+			zzz:
+			ttt:
+				uuu:
+		
+	h1:
+		Regla básica (*)
+		
+	assert:
+		Un documento es válido si todos sus nodos son válidos de acuerdo con la gramática.
+		
+	text:
+		Sabemos que un documento @STxT@ es un conjunto estructurado de nodos,
+		dónde cada uno de ellos debe pertenecer a un namespace.
+		Pues bien, debido a esto podemos afirmar también:
+		
+	assert:
+		Un documento no es válido si hay algún nodo sin namespace
+		o éste es incorrecto
+		
+	text:
+		Bien, esto ya lo sabíamos, y lo mejor de todo es que esto es //casi// automático,
+		ya que no debemos dar la definición de cada namespace.
+		**Sólo se deberá especificar el namespace del primer nodo**, 
+		los namespaces de los siguientes se deducirán de su gramática
+		(o definiciones cruzadas de todos los namespaces implicados).
+		
+		Finalmente, también podemos deducir que
+		
+	assert:
+		Un nodo es válido si su contenido es válido
+			
+	text:		
+		Con esto quiero remarcar que para verificar la validez de un documento
+		se puede ir nodo por nodo, verificando su contenido. 
+		Si todos los nodos son válidos, ya está. El documento será válido. 
+		Es por esto que para ello sólo nos tendremos que centrar en un nodo, 
+		y repetir la verificación en cada uno de ellos.
+		
+	h1:
+		Un ejemplo para empezar
+		
+	text:
+		Vamos a hacer un ejemplo, pero ahora iremos a la inversa que en el capítulo anterior.
+		Empezaremos por la gramática del documento, definiremos sus nodos y características,
+		y finalmente crearemos un documento de prueba. 
+		
+		Imaginemos que tenemos un gimnasio, y queremos una ficha de clientes.
+		En esta ficha irán los datos personales y los datos bancarios.
+		
+		Así, un cliente tendrá dos nodos principales:
+		
+		* Datos Personales
+		* Datos Bancarios
+		
+		A su vez, en datos personales, queremos los siguientes datos:
+		
+		* Nombre
+		* Primer apellido
+		* Segundo apellido
+		* Edad
+		* Cliente vip
+		* Foto 
+		
+		Finalmente, en datos bancarios tendríamos:
+		
+		* Titular cuenta
+		* Número cuenta
+		
+		No lo compliquemos más, con esto es suficiente. 
+		
+		**¡Que empiece la fiesta! :-D**
+		
+	h1:
+		Cómo se crean y se leen los Namespaces
+		
+	text:
+		Crear un namespace es crear un documento @STxT@ con una estructura determinada
+		y ponerlo accesible en la web. Esto es importante, ya que **ESTE DOCUMENTO TIENE QUE EXISTIR**.
+		
+		El documento tiene que ser una definición de namespace
+		(Namespace Definition), tal como está definida en:
+		
+	assert:
+		www.semantictext.info/namespace.stxt
+		
+	text:
+		En nuestro ejemplo el documento debería empezar así:
+		
+	code:
+		Namespace Definition(www.semantictext.info/namespace.stxt):
+		
+		# NAMESPACE: www.gym.demo/client.stxt
+		# A continuación irá la definición de cada nodo del namespace
+		
+		....
+		....
+		
+	text:
+		Dentro de este documento irán las definiciones de 
+		todos los nodos del namespace.
+		
+		Cada definición de nodo debe tener la siguiente forma:
+		
+	code:
+		Node Definition:
+			Type:
+			Name:
+			Alias:
+			Description:
+			Child:
+				Node:
+				Namespace:
+				Num:
+		
+	text:
+		Vamos a desglosar cada parte:
+		
+		**Node Definition**: Inicio de la definición del nodo. Dentro se deben especificar
+		las siguientes características: Type, Name, Alias, Description, Child
+		
+		**Type**: Es el tipo de nodo. Hay 11 tipos de nodos, pero los 3 primeros son los más importantes.
+		Es obligatorio definir el tipo del nodo:
+		
+		* **NODE**: Nodo contenedor de otros nodos
+		* **TEXT**: Nodo texto
+		* **URL**: Nodo con una URL
+		* NATURAL: Nodo con un número natural
+		* INTEGER: Nodo con un número entero
+		* RATIONAL: Nodo con un número racional
+		* NUMBER: Nodo numérico
+		* BINARY: Nodo binario
+		* HEXADECIMAL: Nodo con contenido hexadecimal
+		* BASE64: Nodo con contenido en Base64
+		* BOOLEAN: Nodo con contenido boleano
+		
+		**Name**: es el nombre del nodo. Es obligatorio, y sólo puede haber uno. 
+		Además, no puede repetirse en todo el documento, ya que sino habría conflictos.
+		A este nombre también se le llama //Canonical Name//, para distinguirlo de
+		sus posibles alias.
+		
+		**Alias**: es un sinónimo del nombre (Name), y puede haber tantos alias como se quiera.
+		Pero tiene la misma restricción que nombre, es decir, que no se puede repetir, 
+		**ni con otros alias ni con otros nombres en todo del namespace**.
+		
+		**Description**: Damos una descripción de lo que es este nodo, explicativa a "modo humano".
+		Esto es muy útil, ya que nos permite saber realmente qué es un nodo, 
+		y de esta forma conocer con detalle el contenido de un documento @STxT@.
+		Este campo no es obligatorio, pero sí muy recomendable.
+		
+		**Child**: Especifica un posible nodo hijo. Debe tener los siguientes atributos: Node, Namespace y Num.
+		Este nodo sólo puede aparecer si el //tipo// del nodo es //NODE//.
+		
+		**Node**: Nombre del nodo hijo. Es obligatorio especificar este dato.
+		Hace referencia al //Name// del nodo (o a alguno de sus //Alias//).
+		No pueden haber dos childs con el mismo nombre de nodo (incluyendo todos sus alias),
+		ya que no se podría deducir el namespace automáticamente.
+		
+		**Namespace**: Namespace del nodo hijo. No es obligatorio especificarlo, 
+		en cuyo caso se supondrá que es del mismo namespace.
+		
+		**Num**: especifica cuántos de esos nodos hijos pueden aparecer. 
+		Es obligatorio y puede tomar los siguientes valores:
+		
+		* *: Significa que puede haber un número indeterminado de estos hijos
+		* ?: Puede haber 1 o 0 de estos hijos
+		* +: Tiene que haber al menos 1
+		* número: Tiene que haber un número exacto de estos hijos
+			
+		Vamos a mostrar como empezaríamos con nuestro ejemplo.
+		En los próximos apartados iremos desglosando y terminando cada parte.
+		Es bastante intuitivo, pero vale la pena demorarse en los detalles:
+		
+	code:
+		Namespace Definition(www.semantictext.info/namespace.stxt):
+		
+		# NAMESPACE: www.gym.demo/client.stxt
+		# A continuación irá la definición de cada nodo del namespace
+		
+		# --------------
+		# Nodo principal
+		# --------------
+		
+		Node Definition: 
+			Type: NODE
+			Name: Cliente
+			...
+		
+		# -------------
+		# Nodos básicos
+		# -------------
+		
+		Node Definition:
+			Type: NODE
+			Name: Datos Personales
+			...
+		
+		# -------------
+		# Nodos simples
+		# -------------
+		
+		Node Definition:
+			Type: TEXT
+			Name: Nombre
+			...
+		
+	h1:
+		Nodos de tipo NODE
+		
+	text:
+		El nodo con el tipo NODE es quizá el más importante, ya que siempre tiene que estar.
+		Es un nodo que puede contener a otros nodos, y siempre tiene que haber nodos de este tipo.
+		Son agrupadores de conceptos, y permiten toda la estructura jerárquica de @STxT@.
+		
+		Vamos a nuestro ejemplo concreto, y rellenemos todo este contenido.
+		Principalmente tenemos que decir qué hijos puede tener, en qué cantidad,
+		y su namespace si fuera diferente al que estamos definiendo (en nuestro ejemplo no es necesario).
+		
+	code:
 		...
-	
-	# -------------
-	# Nodos básicos
-	# -------------
-	
-	Node Definition:
-		Type: NODE
-		Name: Datos Personales
 		...
-	
-	# -------------
-	# Nodos simples
-	# -------------
-	
-	Node Definition:
-		Type: TEXT
-		Name: Nombre
+		
+		# --------------
+		# Nodo principal
+		# --------------
+		
+		Node Definition: 
+			Type: NODE
+			Name: Cliente
+			Child:
+				Node: Datos Personales 
+				Num: 1
+			Child:
+				Node: Datos Bancarios 
+				Num: 1
+		
+		# -------------
+		# Nodos básicos
+		# -------------
+		
+		Node Definition:
+			Type: NODE
+			Name: Datos Personales
+			Child:
+				Node: Nombre
+				Num: 1
+			Child:
+				Node: Primer apellido
+				Num: 1
+			Child:
+				Node: Segundo apellido
+				Num: ?
+			Child:
+				Node: Edad
+				Num: ?
+			Child:
+				Node: Cliente vip
+				Num: ?
+			Child:
+				Node: Foto
+				Num: * 
+			
+		Node Definition:
+			Type: NODE
+			Name: Datos Bancarios
+			Child:
+				Node: Titular cuenta 
+				Num: ?
+			Child:
+				Node: Número cuenta 
+				Num: 1
+			
 		...
-	
-h1:
-	Nodos de tipo NODE
-	
-text:
-	El nodo con el tipo NODE es quizá el más importante, ya que siempre tiene que estar.
-	Es un nodo que puede contener a otros nodos, y siempre tiene que haber nodos de este tipo.
-	Son agrupadores de conceptos, y permiten toda la estructura jerárquica de @STxT@.
-	
-	Vamos a nuestro ejemplo concreto, y rellenemos todo este contenido.
-	Principalmente tenemos que decir qué hijos puede tener, en qué cantidad,
-	y su namespace si fuera diferente al que estamos definiendo (en nuestro ejemplo no es necesario).
-	
-code:
-	...
-	...
-	
-	# --------------
-	# Nodo principal
-	# --------------
-	
-	Node Definition: 
-		Type: NODE
-		Name: Cliente
-		Child:
-			Node: Datos Personales 
-			Num: 1
-		Child:
-			Node: Datos Bancarios 
-			Num: 1
-	
-	# -------------
-	# Nodos básicos
-	# -------------
-	
-	Node Definition:
-		Type: NODE
-		Name: Datos Personales
-		Child:
-			Node: Nombre
-			Num: 1
-		Child:
-			Node: Primer apellido
-			Num: 1
-		Child:
-			Node: Segundo apellido
-			Num: ?
-		Child:
-			Node: Edad
-			Num: ?
-		Child:
-			Node: Cliente vip
-			Num: ?
-		Child:
-			Node: Foto
-			Num: * 
+		...
 		
-	Node Definition:
-		Type: NODE
-		Name: Datos Bancarios
-		Child:
-			Node: Titular cuenta 
-			Num: ?
-		Child:
-			Node: Número cuenta 
-			Num: 1
+	text:
+		Ya está. Hemos definido todos los nodos //NODE// de nuestro documento.
+		Con estos nodos ya podemos ver un poco la estructura que tiene que tener.
 		
-	...
-	...
+		De forma resumida sería:
+		
+	code:
+		Cliente:
+			Datos Personales:
+				Nombre:
+				Primer apellido:
+				Segundo apellido:
+				Edad:
+				Cliente vip:
+				Foto:
+			Datos Bancarios:
+				Titular cuenta:
+				Número cuenta:
 	
-text:
-	Ya está. Hemos definido todos los nodos //NODE// de nuestro documento.
-	Con estos nodos ya podemos ver un poco la estructura que tiene que tener.
+	text:
+		Ahora sólo falta definir como serán los otros tipos de nodos.
+		
+	h1:
+		Nodos de texto
+		
+	text:
+		Ya hemos dicho anteriormente que los nodos //básicos// más importantes
+		son los de texto. De hecho, todos los tipos básicos serán como los de texto,
+		pero restringiendo los valores que puede tomar.
+		
+		Ahora vamos a revisar todos los que hay, y los aplicaremos a nuestro ejemplo.
+		
+	h2:
+		TEXT 
+		
+	text:
+		Los nodo de este tipo corresponden a texto, sin ninguna restricción concreta.
+		
+		Dentro de nuestro ejemplo tendríamos la mayoría de los nodos:
+		
+		* Nombre
+		* Primer apellido
+		* Segundo apellido
+		* Titular cuenta
+		* Número cuenta
+		
+		Estos nodos quedarían de la siguiente forma dentro del documento:
+		
+	code:
+		...
+		...
+		
+		# --------------
+		# Nodos de texto
+		# --------------
+		
+		Node Definition:
+			Type: TEXT
+			Name: Nombre
+			
+		Node Definition:
+			Type: TEXT
+			Name: Primer apellido
+			
+		Node Definition:
+			Type: TEXT
+			Name: Segundo apellido
+			
+		Node Definition:
+			Type: TEXT
+			Name: Titular cuenta
+			
+		Node Definition:
+			Type: TEXT
+			Name: Número cuenta
+		...
+		...	
 	
-	De forma resumida sería:
-	
-code:
-	Cliente:
+	h2:
+		URL
+	text:
+		Los nodos de este tipo corresponden a una URL. Debe ser una url //absoluta//,
+		de la forma estándar usada en internet. Este tipo también es muy importante,
+		ya que permite asociar un documento con otro disponible en Internet. Se puede
+		usar para referenciar imágenes, webs, páginas, blogs,... ¡o incluso otro documento @STxT@!
+		
+		Ejemplos válidos:
+		
+		* https://www.xxx.demo/doc.stxt
+		* http://www.semantictext.info
+		* ...
+		
+	h1:
+		Nodos Numéricos
+		
+	text:
+		Hay cuatro tipos de nodos numéricos, y corresponden a conjuntos matemáticos concretos.
+		Decimos esto porque @STxT@ no está ligado a ningún lenguaje de programación,
+		y **no tiene ninguna restricción en cuanto a tamaños o longitudes**.
+		Los lenguajes de programación a menudo sí tienen estas restricciones;
+		por ejemplo que los enteros sean de 32 o 64 bits.
+		
+		Los nodos numéricos son:
+		
+		* NATURAL
+		* INTEGER
+		* RATIONAL
+		* NUMBER
+		
+	h2:
+		NATURAL
+		
+	text:
+		Entendemos por números naturales cualquier número mayor o igual a 0 sin decimales. 
+		
+		Son valores válidos:
+		
+		* 0
+		* 132
+		* 5289423647623746237424242853987
+		* ...
+		
+		En nuestro ejemplo, el campo edad sería un natural:
+		
+	code:
+		...
+		...
+			
+		# ---------------
+		# Nodos numéricos
+		# ---------------
+		
+		Node Definition:
+			Name: Edad
+			Type: NATURAL
+		...
+		...	
+		
+	h2:
+		INTEGER
+		
+	text:
+		Entendemos por números enteros cualquier número sin decimales, positivos o negativos. 
+		
+		Ejemplos válidos:
+		
+		* -100
+		* +423
+		* 23874283
+		* ...
+		
+	h2:
+		RATIONAL
+		
+	text:
+		Los números racionales serán números de la forma aaa/bbb, dónde aaa y bbb son naturales.
+		También aceptamos números positivos (por defecto) o negativos.
+		 
+		Ejemplos válidos:
+		
+		* 1/4
+		* -10/8
+		* 238942598534/43253457438573
+		* ...
+		
+	h2:
+		NUMBER
+		
+	text:
+		Los números son el tipo genérico para numéricos con decimales, 
+		sea cual sea su longitud. Utilizamos la notación ampliamente aceptada de usar "e"
+		para denotar exponencial de 10, y "." como separador de decimales.
+		
+		Ejemplos válidos:
+		
+		* 19.27
+		* -2.75345e-20
+		* 1.432
+		* 12
+		* 2398754385734e-122
+		* ...
+		
+	h1:
+		Nodos con Bits
+		
+	h2:
+		BINARY
+		
+	text:
+		Se trata de mostrar valores binarios, en los que sólo es posible usar 0 o 1's.
+		Permitimos también como separadores caracteres en blanco o saltos de línea.
+		
+		Ejemplos válidos: 
+		
+		* 1010100010
+		* 1000
+		* 1010
+		* ...
+		
+	h2:
+		HEXADECIMAL
+		
+	text:
+		Este tipo de nodo es para mostrar valores binarios, pero en formato hexadecimal.
+		También permitimos como separadores caracteres en blanco o saltos de línea.
+		
+		Ejemplos válidos: 
+		
+		* f52360Abcdef000
+		* 0012
+		* 3445
+		* 523a
+		* ...
+		
+	h2:
+		BASE64
+		
+	text:
+		Este tipo de nodo también es para mostrar valores binarios, 
+		pero esta vez en Base64. Igual que los anteriores permitimos como separadores
+		caracteres en blanco o saltos de línea. Este campo puede usarse para contener 
+		datos informáticos complejos, como por ejemplo ficheros o imágenes.
+		
+		Ejemplo:
+		
+	code:
+		SGVsbG8gV29ybGQhISEhISEKSG9sYSBNdW5kbyEhISEhIUhvbGEgTXVuZG
+		8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEhISEhIUhvbGEg
+		TXVuZG8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEhISEhIU
+		hvbGEgTXVuZG8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEh
+		ISEhIQ==
+		
+	text:
+		En nuestro ejemplo de cliente tenemos la foto como un campo de este tipo:
+		
+	code:
+		...
+		...
+			
+		# ----------
+		# Nodos bits
+		# ----------
+		
+		Node Definition:
+			Name: Foto
+			Type: BASE64
+		...
+		...
+		
+	h2:
+		BOOLEAN
+		
+	text:
+		Este valor solo permite mostrar un valor binario: //0// o //1//, 
+		por lo que también lo interpretamos como valor boleano (verdadero o falso).
+		En el ejemplo de cliente, lo usaremos para especificar si un cliente es vip o no:
+		
+	code:
+		...
+		...
+		Node Definition:
+			Type: BOOLEAN
+			Name: Cliente vip
+		...
+		...	
+		
+	h1:
+		Un ejemplo para finalizar
+		
+	text:
+		Bien, ahora que casi hemos terminado, veremos la gramática completa, y un ejemplo de documento.
+		
+	h2:
+		La gramática
+		
+	code:
+		Namespace Definition(www.semantictext.info/namespace.stxt):
+		
+		# NAMESPACE: www.gym.demo/client.stxt
+		
+		# --------------
+		# Nodo principal
+		# --------------
+		
+		Node Definition: 
+			Type: NODE
+			Name: Cliente
+			Child:
+				Node: Datos Personales 
+				Num: 1
+			Child:
+				Node: Datos Bancarios 
+				Num: 1
+		
+		# -------------
+		# Nodos básicos
+		# -------------
+		
+		Node Definition:
+			Type: NODE
+			Name: Datos Personales
+			Child:
+				Node: Nombre
+				Num: 1
+			Child:
+				Node:  Primer apellido
+				Num: 1
+			Child:
+				Node: Segundo apellido
+				Num: ?
+			Child:
+				Node: Edad
+				Num: ?
+			Child:
+				Node: Cliente vip
+				Num: ?
+			Child:
+				Node: Foto
+				Num: * 
+			
+		Node Definition:
+			Type: NODE
+			Name: Datos Bancarios
+			Child:
+				Node: Titular cuenta 
+				Num: ?
+			Child:
+				Node: Número cuenta 
+				Num: 1
+		
+		# --------------
+		# Nodos de texto
+		# --------------
+		
+		Node Definition:
+			Type: TEXT
+			Name: Nombre
+			
+		Node Definition:
+			Type: TEXT
+			Name: Primer apellido
+			
+		Node Definition:
+			Type: TEXT
+			Name: Segundo apellido
+			
+		Node Definition:
+			Type: TEXT
+			Name: Titular cuenta
+			
+		Node Definition:
+			Type: TEXT
+			Name: Número cuenta
+		
+		# ---------------
+		# Nodos numéricos
+		# ---------------
+		
+		Node Definition:
+			Type: NATURAL
+			Name: Edad
+			
+		# ----------
+		# Nodos bits
+		# ----------
+		
+		Node Definition:
+			Type: BASE64
+			Name: Foto
+		
+		Node Definition:
+			Type: BOOLEAN
+			Name: Cliente vip
+		
+	h2:
+		El ejemplo
+		
+	text:
+		Espero que sea suficientemente explicativo :-)
+		
+	code:
+		# ----------------
+		# Datos de cliente
+		# ----------------
+		
+		Cliente(www.gym.demo/client.stxt):
+		
+		# ----------------
+		# Datos personales
+		# ----------------
+		
 		Datos Personales:
-			Nombre:
-			Primer apellido:
-			Segundo apellido:
-			Edad:
-			Cliente vip:
+		
+			Nombre: Shila
+			Primer apellido: Kween
+			Edad: 28
+			Cliente vip: 1
 			Foto:
+				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
+				EWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
+		
+		# Nota: si alguien quiere entretenerse, la foto ha sido dibujada por mí. 
+		# Comprobaréis que soy bastante mejor informático que ilustrador :-D
+		
+		# ---------------
+		# Datos Bancarios
+		# ---------------
+		
 		Datos Bancarios:
-			Titular cuenta:
-			Número cuenta:
-
-text:
-	Ahora sólo falta definir como serán los otros tipos de nodos.
+			Titular cuenta: Joan Costa Mombiela
+			Número cuenta: 0000-0000-00-000000000
 	
-h1:
-	Nodos de texto
-	
-text:
-	Ya hemos dicho anteriormente que los nodos //básicos// más importantes
-	son los de texto. De hecho, todos los tipos básicos serán como los de texto,
-	pero restringiendo los valores que puede tomar.
-	
-	Ahora vamos a revisar todos los que hay, y los aplicaremos a nuestro ejemplo.
-	
-h2:
-	TEXT 
-	
-text:
-	Los nodo de este tipo corresponden a texto, sin ninguna restricción concreta.
-	
-	Dentro de nuestro ejemplo tendríamos la mayoría de los nodos:
-	
-	* Nombre
-	* Primer apellido
-	* Segundo apellido
-	* Titular cuenta
-	* Número cuenta
-	
-	Estos nodos quedarían de la siguiente forma dentro del documento:
-	
-code:
-	...
-	...
-	
-	# --------------
-	# Nodos de texto
-	# --------------
-	
-	Node Definition:
-		Type: TEXT
-		Name: Nombre
+	assert:
+		Fin. ¿Os ha gustado?	
 		
-	Node Definition:
-		Type: TEXT
-		Name: Primer apellido
+	h1:
+		Una última reflexión (*)
 		
-	Node Definition:
-		Type: TEXT
-		Name: Segundo apellido
+	text:
+		¿Es una buena costumbre introducir el nombre de la versión en la gramática? 
+		¿Por ejemplo xxxx_1.0.txt? 
 		
-	Node Definition:
-		Type: TEXT
-		Name: Titular cuenta
+		Depende de cada caso, por supuesto.
+		//¿El documento es definitivo o se espera que vaya a sufrir modificaciones?//
 		
-	Node Definition:
-		Type: TEXT
-		Name: Número cuenta
-	...
-	...	
-
-h2:
-	URL
-text:
-	Los nodos de este tipo corresponden a una URL. Debe ser una url //absoluta//,
-	de la forma estándar usada en internet. Este tipo también es muy importante,
-	ya que permite asociar un documento con otro disponible en Internet. Se puede
-	usar para referenciar imágenes, webs, páginas, blogs,... ¡o incluso otro documento @STxT@!
-	
-	Ejemplos válidos:
-	
-	* https://www.xxx.demo/doc.stxt
-	* http://www.semantictext.info
-	* ...
-	
-h1:
-	Nodos Numéricos
-	
-text:
-	Hay cuatro tipos de nodos numéricos, y corresponden a conjuntos matemáticos concretos.
-	Decimos esto porque @STxT@ no está ligado a ningún lenguaje de programación,
-	y **no tiene ninguna restricción en cuanto a tamaños o longitudes**.
-	Los lenguajes de programación a menudo sí tienen estas restricciones;
-	por ejemplo que los enteros sean de 32 o 64 bits.
-	
-	Los nodos numéricos son:
-	
-	* NATURAL
-	* INTEGER
-	* RATIONAL
-	* NUMBER
-	
-h2:
-	NATURAL
-	
-text:
-	Entendemos por números naturales cualquier número mayor o igual a 0 sin decimales. 
-	
-	Son valores válidos:
-	
-	* 0
-	* 132
-	* 5289423647623746237424242853987
-	* ...
-	
-	En nuestro ejemplo, el campo edad sería un natural:
-	
-code:
-	...
-	...
+		Una opción interesante es tener un documento sin versión siempre actualizado,
+		y mantener documentos intocables con números de versión.
+		Esta es una solución híbrida que creo correcta para muchos casos.
 		
-	# ---------------
-	# Nodos numéricos
-	# ---------------
-	
-	Node Definition:
-		Name: Edad
-		Type: NATURAL
-	...
-	...	
-	
-h2:
-	INTEGER
-	
-text:
-	Entendemos por números enteros cualquier número sin decimales, positivos o negativos. 
-	
-	Ejemplos válidos:
-	
-	* -100
-	* +423
-	* 23874283
-	* ...
-	
-h2:
-	RATIONAL
-	
-text:
-	Los números racionales serán números de la forma aaa/bbb, dónde aaa y bbb son naturales.
-	También aceptamos números positivos (por defecto) o negativos.
-	 
-	Ejemplos válidos:
-	
-	* 1/4
-	* -10/8
-	* 238942598534/43253457438573
-	* ...
-	
-h2:
-	NUMBER
-	
-text:
-	Los números son el tipo genérico para numéricos con decimales, 
-	sea cual sea su longitud. Utilizamos la notación ampliamente aceptada de usar "e"
-	para denotar exponencial de 10, y "." como separador de decimales.
-	
-	Ejemplos válidos:
-	
-	* 19.27
-	* -2.75345e-20
-	* 1.432
-	* 12
-	* 2398754385734e-122
-	* ...
-	
-h1:
-	Nodos con Bits
-	
-h2:
-	BINARY
-	
-text:
-	Se trata de mostrar valores binarios, en los que sólo es posible usar 0 o 1's.
-	Permitimos también como separadores caracteres en blanco o saltos de línea.
-	
-	Ejemplos válidos: 
-	
-	* 1010100010
-	* 1000
-	* 1010
-	* ...
-	
-h2:
-	HEXADECIMAL
-	
-text:
-	Este tipo de nodo es para mostrar valores binarios, pero en formato hexadecimal.
-	También permitimos como separadores caracteres en blanco o saltos de línea.
-	
-	Ejemplos válidos: 
-	
-	* f52360Abcdef000
-	* 0012
-	* 3445
-	* 523a
-	* ...
-	
-h2:
-	BASE64
-	
-text:
-	Este tipo de nodo también es para mostrar valores binarios, 
-	pero esta vez en Base64. Igual que los anteriores permitimos como separadores
-	caracteres en blanco o saltos de línea. Este campo puede usarse para contener 
-	datos informáticos complejos, como por ejemplo ficheros o imágenes.
-	
-	Ejemplo:
-	
-code:
-	SGVsbG8gV29ybGQhISEhISEKSG9sYSBNdW5kbyEhISEhIUhvbGEgTXVuZG
-	8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEhISEhIUhvbGEg
-	TXVuZG8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEhISEhIU
-	hvbGEgTXVuZG8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEh
-	ISEhIQ==
-	
-text:
-	En nuestro ejemplo de cliente tenemos la foto como un campo de este tipo:
-	
-code:
-	...
-	...
+	h1:
+		Gramática de la gramática (**)
 		
-	# ----------
-	# Nodos bits
-	# ----------
-	
-	Node Definition:
-		Name: Foto
-		Type: BASE64
-	...
-	...
-	
-h2:
-	BOOLEAN
-	
-text:
-	Este valor solo permite mostrar un valor binario: //0// o //1//, 
-	por lo que también lo interpretamos como valor boleano (verdadero o falso).
-	En el ejemplo de cliente, lo usaremos para especificar si un cliente es vip o no:
-	
-code:
-	...
-	...
-	Node Definition:
-		Type: BOOLEAN
-		Name: Cliente vip
-	...
-	...	
-	
-h1:
-	Un ejemplo para finalizar
-	
-text:
-	Bien, ahora que casi hemos terminado, veremos la gramática completa, y un ejemplo de documento.
-	
-h2:
-	La gramática
-	
-code:
-	Namespace Definition(www.semantictext.info/namespace.stxt):
-	
-	# NAMESPACE: www.gym.demo/client.stxt
-	
-	# --------------
-	# Nodo principal
-	# --------------
-	
-	Node Definition: 
-		Type: NODE
-		Name: Cliente
-		Child:
-			Node: Datos Personales 
-			Num: 1
-		Child:
-			Node: Datos Bancarios 
-			Num: 1
-	
-	# -------------
-	# Nodos básicos
-	# -------------
-	
-	Node Definition:
-		Type: NODE
-		Name: Datos Personales
-		Child:
-			Node: Nombre
-			Num: 1
-		Child:
-			Node:  Primer apellido
-			Num: 1
-		Child:
-			Node: Segundo apellido
-			Num: ?
-		Child:
-			Node: Edad
-			Num: ?
-		Child:
-			Node: Cliente vip
-			Num: ?
-		Child:
-			Node: Foto
-			Num: * 
+	text:
+		Un documento sólo tiene sentido si se tiene la gramática previa.
+		Pero para definir la gramática hay que hacer un documento :-O
+		Con esto tenemos un problema recursivo, por lo que la gramática de definición debe ser implícita
+		y perfectamente conocida. Este documento es público, pero deberá estar insertado de forma genérica
+		en todos los parsers de gramáticas, como gramática inicial.
 		
-	Node Definition:
-		Type: NODE
-		Name: Datos Bancarios
-		Child:
-			Node: Titular cuenta 
-			Num: ?
-		Child:
-			Node: Número cuenta 
-			Num: 1
-	
-	# --------------
-	# Nodos de texto
-	# --------------
-	
-	Node Definition:
-		Type: TEXT
-		Name: Nombre
+		Os presento la gramática de la gramática. Veréis que en todo el capítulo hemos usado los alias,
+		ya que nos parecen más claros que los nombres canónicos. Aún así esto es indiferente,
+		dado que nombres y alias actúan como sinónimos.
 		
-	Node Definition:
-		Type: TEXT
-		Name: Primer apellido
-		
-	Node Definition:
-		Type: TEXT
-		Name: Segundo apellido
-		
-	Node Definition:
-		Type: TEXT
-		Name: Titular cuenta
-		
-	Node Definition:
-		Type: TEXT
-		Name: Número cuenta
+		A modo de resumen tenemos los siguientes elementos:
 	
-	# ---------------
-	# Nodos numéricos
-	# ---------------
-	
-	Node Definition:
-		Type: NATURAL
-		Name: Edad
-		
-	# ----------
-	# Nodos bits
-	# ----------
-	
-	Node Definition:
-		Type: BASE64
-		Name: Foto
-	
-	Node Definition:
-		Type: BOOLEAN
-		Name: Cliente vip
-	
-h2:
-	El ejemplo
-	
-text:
-	Espero que sea suficientemente explicativo :-)
-	
-code:
-	# ----------------
-	# Datos de cliente
-	# ----------------
-	
-	Cliente(www.gym.demo/client.stxt):
-	
-	# ----------------
-	# Datos personales
-	# ----------------
-	
-	Datos Personales:
-	
-		Nombre: Shila
-		Primer apellido: Kween
-		Edad: 28
-		Cliente vip: 1
-		Foto:
-			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
-			EWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
-	
-	# Nota: si alguien quiere entretenerse, la foto ha sido dibujada por mí. 
-	# Comprobaréis que soy bastante mejor informático que ilustrador :-D
-	
-	# ---------------
-	# Datos Bancarios
-	# ---------------
-	
-	Datos Bancarios:
-		Titular cuenta: Joan Costa Mombiela
-		Número cuenta: 0000-0000-00-000000000
-
-assert:
-	Fin. ¿Os ha gustado?	
-	
-h1:
-	Una última reflexión (*)
-	
-text:
-	¿Es una buena costumbre introducir el nombre de la versión en la gramática? 
-	¿Por ejemplo xxxx_1.0.txt? 
-	
-	Depende de cada caso, por supuesto.
-	//¿El documento es definitivo o se espera que vaya a sufrir modificaciones?//
-	
-	Una opción interesante es tener un documento sin versión siempre actualizado,
-	y mantener documentos intocables con números de versión.
-	Esta es una solución híbrida que creo correcta para muchos casos.
-	
-h1:
-	Gramática de la gramática (**)
-	
-text:
-	Un documento sólo tiene sentido si se tiene la gramática previa.
-	Pero para definir la gramática hay que hacer un documento :-O
-	Con esto tenemos un problema recursivo, por lo que la gramática de definición debe ser implícita
-	y perfectamente conocida. Este documento es público, pero deberá estar insertado de forma genérica
-	en todos los parsers de gramáticas, como gramática inicial.
-	
-	Os presento la gramática de la gramática. Veréis que en todo el capítulo hemos usado los alias,
-	ya que nos parecen más claros que los nombres canónicos. Aún así esto es indiferente,
-	dado que nombres y alias actúan como sinónimos.
-	
-	A modo de resumen tenemos los siguientes elementos:
-
-code:	
- 	ns_def (namespace definition):
-		n_def (node definition, node def, node_def):
-			cn (name, node, node name, canonical name):
-			a(al, alias):
-			type (node type):
-			dsc (descrip, description):
-			ch(child):
+	code:	
+	 	ns_def (namespace definition):
+			n_def (node definition, node def, node_def):
 				cn (name, node, node name, canonical name):
-				ns (namespace):
-				n (num):
-
-text:
-	Os presento la gramática de la gramática, en todo su esplendor:
+				a(al, alias):
+				type (node type):
+				dsc (descrip, description):
+				ch(child):
+					cn (name, node, node name, canonical name):
+					ns (namespace):
+					n (num):
 	
-code:
-	ns_def(www.semantictext.info/namespace.stxt):
-	 
-	n_def:
-		type:NODE
-		cn:ns_def
-		a:namespace definition
-		a:namespace_definition
-		ch:
+	text:
+		Os presento la gramática de la gramática, en todo su esplendor:
+		
+	code:
+		ns_def(www.semantictext.info/namespace.stxt):
+		 
+		n_def:
+			type:NODE
+			cn:ns_def
+			a:namespace definition
+			a:namespace_definition
+			ch:
+				cn:n_def
+				n:+
+		n_def:
+			type:NODE
 			cn:n_def
-			n:+
-	n_def:
-		type:NODE
-		cn:n_def
-		a:node definition
-		a:node def
-		a:node_def
-		ch:
-			cn:cn
-			n:1
-		ch:
-			cn:a
-			n:*
-		ch:
-			cn:type
-			n:1
-		ch:
-			cn:dsc
-			n:?
-		ch:
+			a:node definition
+			a:node def
+			a:node_def
+			ch:
+				cn:cn
+				n:1
+			ch:
+				cn:a
+				n:*
+			ch:
+				cn:type
+				n:1
+			ch:
+				cn:dsc
+				n:?
+			ch:
+				cn:ch
+				n:*
+		n_def:
+			type:NODE
 			cn:ch
-			n:*
-	n_def:
-		type:NODE
-		cn:ch
-		a:Child
-		a:Child Node
-		ch:
+			a:Child
+			a:Child Node
+			ch:
+				cn:cn
+				n:1
+			ch:
+				cn:ns
+				n:?
+			ch:
+				cn:n
+				n:1
+		n_def:
+			type:TEXT
 			cn:cn
-			n:1
-		ch:
-			cn:ns
-			n:?
-		ch:
+			a:name
+			a:node
+			a:node name
+			a:canonical name
+		n_def:
+			type:TEXT
+			cn:a
+			a:al
+			a:alias
+		n_def:
+			type:TEXT
+			cn:type
+			a:node type
+		n_def:
+			type:TEXT
 			cn:n
-			n:1
-	n_def:
-		type:TEXT
-		cn:cn
-		a:name
-		a:node
-		a:node name
-		a:canonical name
-	n_def:
-		type:TEXT
-		cn:a
-		a:al
-		a:alias
-	n_def:
-		type:TEXT
-		cn:type
-		a:node type
-	n_def:
-		type:TEXT
-		cn:n
-		a:num
-		a:occurs
-	n_def:
-		type:TEXT
-		cn:dsc
-		a:descrip
-		a:description
-	n_def:
-		type:TEXT
-		cn:ns
-		a:namespace
+			a:num
+			a:occurs
+		n_def:
+			type:TEXT
+			cn:dsc
+			a:descrip
+			a:description
+		n_def:
+			type:TEXT
+			cn:ns
+			a:namespace

@@ -1,18 +1,18 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: STxT: A language for the web
-	Description: First book cover
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
+	Metadata:
+		Title: STxT: A language for the web
+		Description: First book cover
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
+		
+	Nav:
+		Next: 00_b
 	
-Nav:
-	Next: 00_b
-
-Title: @STxT@: A language for the web
-
-Preamble:
-	For many years we have seen the reign of technologies such as xml.
-	\\
-	\\
-	But this reign could be in danger.
+	Title: @STxT@: A language for the web
+	
+	Preamble:
+		For many years we have seen the reign of technologies such as xml.
+		\\
+		\\
+		But this reign could be in danger.

@@ -1,401 +1,401 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: Capítulo 10: Web Services
-	Description: Implementación de webservices mediante STxT
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
-
-Nav:
-	Prev: 09
-	Next: 11
+	Metadata:
+		Title: Capítulo 10: Web Services
+		Description: Implementación de webservices mediante STxT
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
 	
-title:
-	Capítulo 10: Web Services
-	
-h1:
-	Advertencia
-	
-text:
-	Igual que el capítulo anterior. Los fans de Webservices y SOAP me tendrán que perdonar y disculpar.
-	Mejor que no lean nada de este capítulo.
-	
-	Rectifico. Mejor que sí que lo lean. De hecho, los animo a hacerlo.
-	La mejor opinión es la de quien realmente conoce y ha usado una tecnología. 
-	
-h1:
-	SOAP en la teoría
-	
-text:
-	SOAP es fantástico. Es un lenguaje para realizar servicios web. Está basado en xml,
-	y eso hace que sea estándar y multiplataforma. También se basa en tecnologías probadas,
-	tales como XSD's. Si hubiera complejidad, no habrá problema. Se crearán herramientas,
-	y éstas siempre funcionarán bien, y lo que podría parecer complejo se realizará de forma automática,
-	con unos pocos "click's" de ratón. Los sistemas se entenderán entre ellos,
-	y romperemos las fronteras entre los lenguajes.
-	
-	En la teoría, la teoría y la práctica son iguales. En la práctica esto no es verdad. (*)
-	
-	//(*) No recuerdo quien lo dijo, pero me gustó.//
-	
-h1:
-	SOAP en la práctica
-
-text:	
-	Pero la práctica no siempre nos da la razón. Hay cosas que escapan al control.
-	Una vez más la complejidad se hace patente en toda su inmensidad.
-	Hay demasiadas variables, demasiadas interpretaciones. Demasiadas partes implicadas.
-	Librerías que pasan código nativo a XML y se parsean de forma automática.
-	Nadie puede leer de forma decente un mensaje. Los errores se transforman en tragedias.
-	¿La librería falla? ¿El protocolo es ligeramente distinto? ¿El parseo del WSDL no fue correcto?
-	¿Pero qué pone en el WSDL? ¡No lo entiendo! Lo que debería ser la gran solución
-	se va transformando en el gran problema. Una buena idea, imposible de poner en práctica.
-	
-	Lo siento, pero yo lo veo así.
-	
-h1:
-	REST
-	
-text:
-	La aparición de los servicios REST son una respuesta clara a los problemas de SOAP.
-	Todo está tendiendo hacia allí. Y no me extraña. Yo también lo haría.
-	Los grandes están en el camino. Los móviles se hablan de esta forma.
-	Pero todavía les falta algo. Ya hay iniciativas, pero no es un camino fácil.
-	Les falta un poco más de estructura y saber cómo son los servicios.
-	
-assert:
-	Atentos. La solución ha llegado. Se llama @STxT@. 
-	
-h1:
-	@STxT@: Un nuevo enfoque
-	
-text:
-	Ahora tenemos una nueva herramienta. Se llama @STxT@. ¿Cómo se definiría un webservice?
-	
-	Voy a hacer propuestas, esto sería un nuevo mundo para explorar.
-	Me conformo	con indicar posibles caminos o puntos de partida.
-	
-	Si hiciera un símil de un WSDL, me gustaría que un conjunto de servicios
-	se definieran de la siguiente forma:
-	
-code:
-	Webservices(...):
-		Service:
-			url: http://xxxx/fsfs
-			entrada: Nodo1(www.example.com/nodo.stxt)
-			salida: Nodo2(www.example.com/nodo.stxt)
-			
-		Service:
-			url: http://xxxx/fsfs
-			entrada: Nodo3(www.example.com/nodo.stxt)
-			salida: OtroZ(www.demo.com/demo.stxt)
-			
-		Service:
-			url: http://xxxx/fsfs
-			entrada: Nodo3(www.example.com/nodo.stxt)
-			salida: OtroX(www.demo.com/demo.stxt)
-	
-text:
-	o quizá de la siguiente forma:
-	
-code:
-	Webservice(...):
-		url: http://xxxx/fsfs
+	Nav:
+		Prev: 09
+		Next: 11
 		
-		Service:
-			method: xxx
-			entrada: Nodo1(www.example.com/nodo.stxt)
-			salida: Nodo2(www.example.com/nodo.stxt)
-			
-		Service:
-			method: yyy
-			entrada: Nodo3(www.example.com/nodo.stxt)
-			salida: OtroZ(www.demo.com/demo.stxt)
-			
-		Service:
-			method: zzz
-			entrada: Nodo3(www.example.com/nodo.stxt)
-			salida: OtroX(www.demo.com/demo.stxt)
-	
-text:
-	En este punto no me gustaría decir nada más. No me atrevo,
-	pero supongo que ya habéis captado la idea: //simplificar//.
-	Todo es más sencillo cuando entra en juego @STxT@.
-	Todo está más claro. Y definido.
-	
-assert:
-	Teníamos SOAP, REST, y ahora... \\
-	//SWS//: ¡¡Semantic web services!!
+	title:
+		Capítulo 10: Web Services
 		
-text:
-	Bien, ya que es un servicio http(s) también podríamos hacer algo híbrido ;-)
-	
-code:
-	Webservices(...):
-		Service:
-			url: http://www.xxx.com/yyy
-			params:
-				param: 
-					name: p1
-					descrip: Descripción de param1
-				param: 
-					name: p2
-					descrip: Descripción de param2
-				param: 
-					name: p2
-					descrip: Descripción de param3
-			salida: Nodo2(www.example.com/nodo.stxt)
-			
-		Service:
-			url: http://www.xxx.com/ttt
-			salida: OtroZ(www.demo.com/demo.stxt)
-			
-		Service:
-			url: http://www.xxx.com/zzz
-			salida: OtroX(www.demo.com/demo.stxt)
-	
-text:
-	Hay muchas posibilidades, me gustan todas con @STxT@ ;-)
-
-h1:
-	Una propuesta definitiva
-	
-text:
-	Al final lo he hecho. Inicialmente no quería, pero no lo he podido evitar.
-	
-	Voy a hacer una propuesta de definición de webservices, y además la voy a hacer disponible.
-	Va a ser parecida a	los ejemplos anteriores que hemos visto.
-	
-h2: La gramática
-
-text:
-	La gramática está disponible en [[www.semantictext.info/web_services.stxt]]
-
-	Tiene el siguiente código:
-	
-code:
-	Namespace definition (www.semantictext.info/namespace.stxt):
-	
-	Node Definition:
-		Type:NODE
-		Name:wsd
-		Alias:Web Service Definitions
-		Child:
-			Node:SWS Service
-			Num:*
-		Child:
-			Node:Hybrid Service
-			Num:*
-		Child:
-			Node:REST Service
-			Num:*
-	Node Definition:
-		Type:NODE
-		Name:sws_service
-		Alias:SWS Service
-		Child:
-			Node:Url
-			Num:1
-		Child:
-			Node:Input Document
-			Num:1
-		Child:
-			Node:Output Document
-			Num:1
-		Child:
-			Node:Description
-			Num:?
-	Node Definition:
-		Type:NODE
-		Name:hybrid_service
-		Alias:Hybrid Service
-		Alias:Hy Service
-		Child:
-			Node:Url
-			Num:1
-		Child:
-			Node:Method
-			Num:1
-		Child:
-			Node:Params Encoding
-			Num:1
-		Child:
-			Node:Param
-			Num:*
-		Child:
-			Node:Output Document
-			Num:1
-		Child:
-			Node:Description
-			Num:?
-	Node Definition:
-		Type:NODE
-		Name:REST Service
-		Child:
-			Node:Url
-			Num:1
-		Child:
-			Node:Method
-			Num:1
-		Child:
-			Node:Params Encoding
-			Num:1
-		Child:
-			Node:Param
-			Num:*
-		Child:
-			Node:Description
-			Num:?
-	Node Definition:
-		Type:NODE
-		Name:Param
-		Child:
-			Node:Name
-			Num:1
-		Child:
-			Node:Descrip
-			Num:?
-	Node Definition:
-		Type:TEXT
-		Name:Url
-	Node Definition:
-		Type:TEXT
-		Name:Params Encoding
-	Node Definition:
-		Type:TEXT
-		Name:Input Document
-	Node Definition:
-		Type:TEXT
-		Name:Output Document
-	Node Definition:
-		Type:TEXT
-		Name:Name
-	Node Definition:
-		Type:TEXT
-		Name:descrip
-		Alias:Description
-	Node Definition:
-		Type:TEXT
-		Name:Method
-	
-h2: La explicación
-
-text:
-	El documento @STxT@ encargado de definir uno (o varios webservices) será
-	un documento del tipo:
-	
-code:
-	Web Service Definitions(www.semantictext.info/web_services.stxt)
-	
-text:
-	Este documento permite definir servicios de 3 tipos distintos:
-	
-	* **SWS Service**: Un documento @STxT@ de entrada (encoding UTF-8) y un documento @STxT@ de salida (UTF-8).
-	  Se usará el método POST, ya que es lo más recomendable para este tipo de envíos.
-	  Este sería un web service puro usando solamente @STxT@.
-	* **Hybrid Service**: Parámetros de entrada http y un documento @STxT@ de salida.
-	  Se puede especificar el encoding esperado de los parámetros (Normalmente ISO-8859-1 o UTF-8) y 
-	  también el método http a ejecutar (GET o POST normalmente).
-	* **REST Service**: Parámetros de entrada http estándar y una respuesta estándar de salida (json, xml, csv, etc.).
-	  Igual que el híbrido también podremos especificar el encoding y el método http a ejecutar.
-	  
-	En los tres tipos distintos es necesario especificar la url que hay que ejecutar.
-	Además también es recomendable utilizar el campo //descrip// para dar
-	una explicación de lo que hace el webservice.
-	
-	Tanto el //SWS// como el //Hybrid// tienen que retornar un documento @STxT@ válido, 
-	por	lo que la salida debería ser en UTF-8.
-	
-	Un ejemplo de mensaje HTTP para un servicio puro SWS:
-	
-code:
-	POST /url/of/webservice HTTP/1.0
-	Host: www.example.demo
-	Content-Type: text/plain; charset=utf-8
-
-	A node(www.example.demo/ws.stxt):
-	Document: This is a demo
-	Text: Hello world!!!
-	Client:
-		Id:1
-		Name:Evelyn
-	Client:
-		Id:2
-		Name:John
-	
-h2:
-	El ejemplo
-	
-code:
-	Web Service Definitions(www.semantictext.info/web_services.stxt):
-	
-	SWS Service:
-		Url: http://www.ws.demo/example_sws_1.ws 
-		Input Document: Example Input (webservice.demo/example.stxt)
-		Output Document: Example Output (webservice.demo/example.stxt)
-		Description: Description of the webservice 
+	h1:
+		Advertencia
 		
-	SWS Service:
-		Url: http://www.ws.demo/example_sws_1.ws
-		Input Document: Demo Input (webservice.demo/demo.stxt)
-		Output Document: Demo Output (webservice.demo/demo.stxt)
-		Description: Description of the webservice 
-		 
-	SWS Service:
-		Url: http://www.ws.demo/example_sws_2.ws 
-		Input Document: Example Input (webservice.demo/example.stxt)
-		Output Document: Example Output (webservice.demo/example.stxt)
-		Description: Description of the webservice 
-		 
-	Hybrid Service:
-		Url: http://www.ws.demo/example_hybrid.ws 
-		Method: POST
-		Params Encoding: UTF-8
-		Param:
-			Name:param_1
-			Description: Description of param_1 
-		Param:
-			Name:param_n
-			Description: Description of param_n 
-		Output Document: Example Output (webservice.demo/example.stxt)
-		Description: Description of the webservice 
-		 
-	REST Service:
-		Url: http://www.ws.demo/example_rest.ws 
-		Method: POST
-		Params Encoding: UTF-8
-		Param:
-			Name:param_1
-			Description: Descripción de param_1
-		Param:
-			Name:param_n
-			Description: Descripción de param_n
-		Description: Description of the webservice 
-			The response is in **JSON** format.
-			Example: {response:code, message:"A message"}
+	text:
+		Igual que el capítulo anterior. Los fans de Webservices y SOAP me tendrán que perdonar y disculpar.
+		Mejor que no lean nada de este capítulo.
+		
+		Rectifico. Mejor que sí que lo lean. De hecho, los animo a hacerlo.
+		La mejor opinión es la de quien realmente conoce y ha usado una tecnología. 
+		
+	h1:
+		SOAP en la teoría
+		
+	text:
+		SOAP es fantástico. Es un lenguaje para realizar servicios web. Está basado en xml,
+		y eso hace que sea estándar y multiplataforma. También se basa en tecnologías probadas,
+		tales como XSD's. Si hubiera complejidad, no habrá problema. Se crearán herramientas,
+		y éstas siempre funcionarán bien, y lo que podría parecer complejo se realizará de forma automática,
+		con unos pocos "click's" de ratón. Los sistemas se entenderán entre ellos,
+		y romperemos las fronteras entre los lenguajes.
+		
+		En la teoría, la teoría y la práctica son iguales. En la práctica esto no es verdad. (*)
+		
+		//(*) No recuerdo quien lo dijo, pero me gustó.//
+		
+	h1:
+		SOAP en la práctica
+	
+	text:	
+		Pero la práctica no siempre nos da la razón. Hay cosas que escapan al control.
+		Una vez más la complejidad se hace patente en toda su inmensidad.
+		Hay demasiadas variables, demasiadas interpretaciones. Demasiadas partes implicadas.
+		Librerías que pasan código nativo a XML y se parsean de forma automática.
+		Nadie puede leer de forma decente un mensaje. Los errores se transforman en tragedias.
+		¿La librería falla? ¿El protocolo es ligeramente distinto? ¿El parseo del WSDL no fue correcto?
+		¿Pero qué pone en el WSDL? ¡No lo entiendo! Lo que debería ser la gran solución
+		se va transformando en el gran problema. Una buena idea, imposible de poner en práctica.
+		
+		Lo siento, pero yo lo veo así.
+		
+	h1:
+		REST
+		
+	text:
+		La aparición de los servicios REST son una respuesta clara a los problemas de SOAP.
+		Todo está tendiendo hacia allí. Y no me extraña. Yo también lo haría.
+		Los grandes están en el camino. Los móviles se hablan de esta forma.
+		Pero todavía les falta algo. Ya hay iniciativas, pero no es un camino fácil.
+		Les falta un poco más de estructura y saber cómo son los servicios.
+		
+	assert:
+		Atentos. La solución ha llegado. Se llama @STxT@. 
+		
+	h1:
+		@STxT@: Un nuevo enfoque
+		
+	text:
+		Ahora tenemos una nueva herramienta. Se llama @STxT@. ¿Cómo se definiría un webservice?
+		
+		Voy a hacer propuestas, esto sería un nuevo mundo para explorar.
+		Me conformo	con indicar posibles caminos o puntos de partida.
+		
+		Si hiciera un símil de un WSDL, me gustaría que un conjunto de servicios
+		se definieran de la siguiente forma:
+		
+	code:
+		Webservices(...):
+			Service:
+				url: http://xxxx/fsfs
+				entrada: Nodo1(www.example.com/nodo.stxt)
+				salida: Nodo2(www.example.com/nodo.stxt)
+				
+			Service:
+				url: http://xxxx/fsfs
+				entrada: Nodo3(www.example.com/nodo.stxt)
+				salida: OtroZ(www.demo.com/demo.stxt)
+				
+			Service:
+				url: http://xxxx/fsfs
+				entrada: Nodo3(www.example.com/nodo.stxt)
+				salida: OtroX(www.demo.com/demo.stxt)
+		
+	text:
+		o quizá de la siguiente forma:
+		
+	code:
+		Webservice(...):
+			url: http://xxxx/fsfs
 			
-			Code results:
-			* 0: OK
-			* 1: Warning
-			* 2: Error
-			* 3: Fatal error
+			Service:
+				method: xxx
+				entrada: Nodo1(www.example.com/nodo.stxt)
+				salida: Nodo2(www.example.com/nodo.stxt)
+				
+			Service:
+				method: yyy
+				entrada: Nodo3(www.example.com/nodo.stxt)
+				salida: OtroZ(www.demo.com/demo.stxt)
+				
+			Service:
+				method: zzz
+				entrada: Nodo3(www.example.com/nodo.stxt)
+				salida: OtroX(www.demo.com/demo.stxt)
+		
+	text:
+		En este punto no me gustaría decir nada más. No me atrevo,
+		pero supongo que ya habéis captado la idea: //simplificar//.
+		Todo es más sencillo cuando entra en juego @STxT@.
+		Todo está más claro. Y definido.
+		
+	assert:
+		Teníamos SOAP, REST, y ahora... \\
+		//SWS//: ¡¡Semantic web services!!
+			
+	text:
+		Bien, ya que es un servicio http(s) también podríamos hacer algo híbrido ;-)
+		
+	code:
+		Webservices(...):
+			Service:
+				url: http://www.xxx.com/yyy
+				params:
+					param: 
+						name: p1
+						descrip: Descripción de param1
+					param: 
+						name: p2
+						descrip: Descripción de param2
+					param: 
+						name: p2
+						descrip: Descripción de param3
+				salida: Nodo2(www.example.com/nodo.stxt)
+				
+			Service:
+				url: http://www.xxx.com/ttt
+				salida: OtroZ(www.demo.com/demo.stxt)
+				
+			Service:
+				url: http://www.xxx.com/zzz
+				salida: OtroX(www.demo.com/demo.stxt)
+		
+	text:
+		Hay muchas posibilidades, me gustan todas con @STxT@ ;-)
 	
-h2:
-	La reflexión
+	h1:
+		Una propuesta definitiva
+		
+	text:
+		Al final lo he hecho. Inicialmente no quería, pero no lo he podido evitar.
+		
+		Voy a hacer una propuesta de definición de webservices, y además la voy a hacer disponible.
+		Va a ser parecida a	los ejemplos anteriores que hemos visto.
+		
+	h2: La gramática
 	
-text:
-	En unas pocas líneas hemos condensado gran cantidad de información,
-	pero de una forma muy clara y sencilla.
+	text:
+		La gramática está disponible en [[www.semantictext.info/web_services.stxt]]
 	
-	//¿Os imagináis como sería un documento WSDL equivalente?//
+		Tiene el siguiente código:
+		
+	code:
+		Namespace definition (www.semantictext.info/namespace.stxt):
+		
+		Node Definition:
+			Type:NODE
+			Name:wsd
+			Alias:Web Service Definitions
+			Child:
+				Node:SWS Service
+				Num:*
+			Child:
+				Node:Hybrid Service
+				Num:*
+			Child:
+				Node:REST Service
+				Num:*
+		Node Definition:
+			Type:NODE
+			Name:sws_service
+			Alias:SWS Service
+			Child:
+				Node:Url
+				Num:1
+			Child:
+				Node:Input Document
+				Num:1
+			Child:
+				Node:Output Document
+				Num:1
+			Child:
+				Node:Description
+				Num:?
+		Node Definition:
+			Type:NODE
+			Name:hybrid_service
+			Alias:Hybrid Service
+			Alias:Hy Service
+			Child:
+				Node:Url
+				Num:1
+			Child:
+				Node:Method
+				Num:1
+			Child:
+				Node:Params Encoding
+				Num:1
+			Child:
+				Node:Param
+				Num:*
+			Child:
+				Node:Output Document
+				Num:1
+			Child:
+				Node:Description
+				Num:?
+		Node Definition:
+			Type:NODE
+			Name:REST Service
+			Child:
+				Node:Url
+				Num:1
+			Child:
+				Node:Method
+				Num:1
+			Child:
+				Node:Params Encoding
+				Num:1
+			Child:
+				Node:Param
+				Num:*
+			Child:
+				Node:Description
+				Num:?
+		Node Definition:
+			Type:NODE
+			Name:Param
+			Child:
+				Node:Name
+				Num:1
+			Child:
+				Node:Descrip
+				Num:?
+		Node Definition:
+			Type:TEXT
+			Name:Url
+		Node Definition:
+			Type:TEXT
+			Name:Params Encoding
+		Node Definition:
+			Type:TEXT
+			Name:Input Document
+		Node Definition:
+			Type:TEXT
+			Name:Output Document
+		Node Definition:
+			Type:TEXT
+			Name:Name
+		Node Definition:
+			Type:TEXT
+			Name:descrip
+			Alias:Description
+		Node Definition:
+			Type:TEXT
+			Name:Method
+		
+	h2: La explicación
 	
-	//¿Y los mensajes SOAP asociados?//
+	text:
+		El documento @STxT@ encargado de definir uno (o varios webservices) será
+		un documento del tipo:
+		
+	code:
+		Web Service Definitions(www.semantictext.info/web_services.stxt)
+		
+	text:
+		Este documento permite definir servicios de 3 tipos distintos:
+		
+		* **SWS Service**: Un documento @STxT@ de entrada (encoding UTF-8) y un documento @STxT@ de salida (UTF-8).
+		  Se usará el método POST, ya que es lo más recomendable para este tipo de envíos.
+		  Este sería un web service puro usando solamente @STxT@.
+		* **Hybrid Service**: Parámetros de entrada http y un documento @STxT@ de salida.
+		  Se puede especificar el encoding esperado de los parámetros (Normalmente ISO-8859-1 o UTF-8) y 
+		  también el método http a ejecutar (GET o POST normalmente).
+		* **REST Service**: Parámetros de entrada http estándar y una respuesta estándar de salida (json, xml, csv, etc.).
+		  Igual que el híbrido también podremos especificar el encoding y el método http a ejecutar.
+		  
+		En los tres tipos distintos es necesario especificar la url que hay que ejecutar.
+		Además también es recomendable utilizar el campo //descrip// para dar
+		una explicación de lo que hace el webservice.
+		
+		Tanto el //SWS// como el //Hybrid// tienen que retornar un documento @STxT@ válido, 
+		por	lo que la salida debería ser en UTF-8.
+		
+		Un ejemplo de mensaje HTTP para un servicio puro SWS:
+		
+	code:
+		POST /url/of/webservice HTTP/1.0
+		Host: www.example.demo
+		Content-Type: text/plain; charset=utf-8
 	
-	Podemos afirmar que en un solo capítulo hemos explicado como podrían ser
-	los webservices, en caso de basar su implementación y definición en @STxT@.
-	
-	Nuestra definición de webservice es igualmente útil para humanos y para
-	máquinas, ya que contiene toda la información necesaria para utilizar
-	un webservice eficientemente. Además, crear una implementación
-	debería ser relativamente sencillo.
-	
+		A node(www.example.demo/ws.stxt):
+		Document: This is a demo
+		Text: Hello world!!!
+		Client:
+			Id:1
+			Name:Evelyn
+		Client:
+			Id:2
+			Name:John
+		
+	h2:
+		El ejemplo
+		
+	code:
+		Web Service Definitions(www.semantictext.info/web_services.stxt):
+		
+		SWS Service:
+			Url: http://www.ws.demo/example_sws_1.ws 
+			Input Document: Example Input (webservice.demo/example.stxt)
+			Output Document: Example Output (webservice.demo/example.stxt)
+			Description: Description of the webservice 
+			
+		SWS Service:
+			Url: http://www.ws.demo/example_sws_1.ws
+			Input Document: Demo Input (webservice.demo/demo.stxt)
+			Output Document: Demo Output (webservice.demo/demo.stxt)
+			Description: Description of the webservice 
+			 
+		SWS Service:
+			Url: http://www.ws.demo/example_sws_2.ws 
+			Input Document: Example Input (webservice.demo/example.stxt)
+			Output Document: Example Output (webservice.demo/example.stxt)
+			Description: Description of the webservice 
+			 
+		Hybrid Service:
+			Url: http://www.ws.demo/example_hybrid.ws 
+			Method: POST
+			Params Encoding: UTF-8
+			Param:
+				Name:param_1
+				Description: Description of param_1 
+			Param:
+				Name:param_n
+				Description: Description of param_n 
+			Output Document: Example Output (webservice.demo/example.stxt)
+			Description: Description of the webservice 
+			 
+		REST Service:
+			Url: http://www.ws.demo/example_rest.ws 
+			Method: POST
+			Params Encoding: UTF-8
+			Param:
+				Name:param_1
+				Description: Descripción de param_1
+			Param:
+				Name:param_n
+				Description: Descripción de param_n
+			Description: Description of the webservice 
+				The response is in **JSON** format.
+				Example: {response:code, message:"A message"}
+				
+				Code results:
+				* 0: OK
+				* 1: Warning
+				* 2: Error
+				* 3: Fatal error
+		
+	h2:
+		La reflexión
+		
+	text:
+		En unas pocas líneas hemos condensado gran cantidad de información,
+		pero de una forma muy clara y sencilla.
+		
+		//¿Os imagináis como sería un documento WSDL equivalente?//
+		
+		//¿Y los mensajes SOAP asociados?//
+		
+		Podemos afirmar que en un solo capítulo hemos explicado como podrían ser
+		los webservices, en caso de basar su implementación y definición en @STxT@.
+		
+		Nuestra definición de webservice es igualmente útil para humanos y para
+		máquinas, ya que contiene toda la información necesaria para utilizar
+		un webservice eficientemente. Además, crear una implementación
+		debería ser relativamente sencillo.
+		

@@ -1,56 +1,56 @@
 Page (www.semantictext.info/page.stxt):
 
-Metadata:
-	Title: Semantic Web Builder: the web application
-	Description: SWB are a set of scripts that allow you to create web portals with STxT language.
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
+	Metadata:
+		Title: Semantic Web Builder: the web application
+		Description: SWB are a set of scripts that allow you to create web portals with STxT language.
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
+		
+	Content:
+		==Semantic Web Builder (SWB)==
+		
+	Assert:
+		//Welcome to our leading application// \\
+		[[https://github.com/mombiela/semantic-web-builder | Semantic Web Builder]]
+		
+	Content:
+		===What is SWB?===
+		
+		It is a set of Java scripts that allow you to build a portal through the use of 
+		pages created with @STxT@. Although we would like for it to be used as a 
+		"source of inspiration" for other projects or developments. With this project we 
+		have used this very same site, so we are very pleased with the results.
+		
+	# By the way, I had problems choosing the name SWB. 
+	# These were the candidates: 	
+	# * Super Web Builder
+	# * Semantic Web Builder
+	# * STxT Web Builder
+	# * Sexy Web Builder
 	
-Content:
-	==Semantic Web Builder (SWB)==
+		===What ISN’T SWB?===
+		
+		SWB is not an editor or a GUI for creating portals, and is not web development 
+		environment. There are great programs for this, and it is not our intention to compete 
+		with any of them. 
+		
+		===Why did you do it?===
+		
+		Actually we made these scripts in one day; just when we began building this website.
+		
+		We wanted something that was very functional, quick to do, and that would allow us 
+		to have static content 
+		quickly published. And it turns out that @STxT@ gave us the solution.
+		
+		We liked it so much that we had to show it. Besides, it is the source code that we have 
+		built this website with. Who else can brag about this?
+		
+		=== What requirements does it have? ===
+		
+		Well, in order to run it you need a Java virtual machine available in the path.
+		
+		The project is created with Eclipse, so that its integration is direct. For the templates 
+		we have used [[http://velocity.apache.org|Apache Velocity|apache]].
 	
-Assert:
-	//Welcome to our leading application// \\
-	[[https://github.com/mombiela/semantic-web-builder | Semantic Web Builder]]
-	
-Content:
-	===What is SWB?===
-	
-	It is a set of Java scripts that allow you to build a portal through the use of 
-	pages created with @STxT@. Although we would like for it to be used as a 
-	"source of inspiration" for other projects or developments. With this project we 
-	have used this very same site, so we are very pleased with the results.
-	
-# By the way, I had problems choosing the name SWB. 
-# These were the candidates: 	
-# * Super Web Builder
-# * Semantic Web Builder
-# * STxT Web Builder
-# * Sexy Web Builder
-
-	===What ISN’T SWB?===
-	
-	SWB is not an editor or a GUI for creating portals, and is not web development 
-	environment. There are great programs for this, and it is not our intention to compete 
-	with any of them. 
-	
-	===Why did you do it?===
-	
-	Actually we made these scripts in one day; just when we began building this website.
-	
-	We wanted something that was very functional, quick to do, and that would allow us 
-	to have static content 
-	quickly published. And it turns out that @STxT@ gave us the solution.
-	
-	We liked it so much that we had to show it. Besides, it is the source code that we have 
-	built this website with. Who else can brag about this?
-	
-	=== What requirements does it have? ===
-	
-	Well, in order to run it you need a Java virtual machine available in the path.
-	
-	The project is created with Eclipse, so that its integration is direct. For the templates 
-	we have used [[http://velocity.apache.org|Apache Velocity|apache]].
-
-# Greetings to the Apache community!! The computer world wouldn't be the same without you!!
-	
+	# Greetings to the Apache community!! The computer world wouldn't be the same without you!!
+		

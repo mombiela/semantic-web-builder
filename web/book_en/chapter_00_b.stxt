@@ -1,30 +1,30 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: STxT Introductory poetry
-	Description: Second book cover
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
-
-Nav:
-	Prev: 00_a
-	Next: 00_c
-
-Preamble:
-	One language to rule them all,
-
-	one language to find them,
+	Metadata:
+		Title: STxT Introductory poetry
+		Description: Second book cover
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
 	
-	one language to understand them all
-
-	and forever tie them to knowledge,
+	Nav:
+		Prev: 00_a
+		Next: 00_c
 	
-	in the land of Internet,
+	Preamble:
+		One language to rule them all,
 	
-	where the world will be liberated (*)
-	\\
-	\\
-	\\
-	// (*) In tribute to J.R.R.Tolkien, writer and creator of lenguajes.//
-
-
+		one language to find them,
+		
+		one language to understand them all
+	
+		and forever tie them to knowledge,
+		
+		in the land of Internet,
+		
+		where the world will be liberated (*)
+		\\
+		\\
+		\\
+		// (*) In tribute to J.R.R.Tolkien, writer and creator of lenguajes.//
+	
+	

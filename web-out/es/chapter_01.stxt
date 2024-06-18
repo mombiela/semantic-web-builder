@@ -1,62 +1,62 @@
 Chapter(www.semantictext.info/book.stxt):
 
-Metadata:
-	Title: Capítulo 1: ¿Cómo leer este libro?
-	Description: Requisitos previos y orden de lectura del libro
-	Author: Joan Costa Mombiela
-	Last_modif: 2013-03-01
-
-Nav:
-	Prev: 00_c
-	Next: 02
+	Metadata:
+		Title: Capítulo 1: ¿Cómo leer este libro?
+		Description: Requisitos previos y orden de lectura del libro
+		Author: Joan Costa Mombiela
+		Last_modif: 2013-03-01
 	
-title: Capítulo 1: ¿Cómo leer este libro?
-
-h1: Para quién es este libro
+	Nav:
+		Prev: 00_c
+		Next: 02
+		
+	title: Capítulo 1: ¿Cómo leer este libro?
 	
-text:
-	Este libro es para todos los que quieran aprender @STxT@. 
+	h1: Para quién es este libro
+		
+	text:
+		Este libro es para todos los que quieran aprender @STxT@. 
+		
+		No es sólo la explicación de una tecnología. Es el proceso mismo de su creación. 
+		Es el libro donde se explica //toda// ella; tal como la entiende su creador. 
+		Aunque el futuro de esta tecnología es totalmente incierto
+		en el momento de la escritura del libro.
+		 
+		¡Es muy emocionante! :-)
+		
+		Por supuesto, nada de esto sería posible sin todos los pasos 
+		anteriores que hemos dado: xml, dtd, html, xsd, tex,... 
+		Hay veces que ni tan siquiera sé si realmente soy su creador. 
+		Otras veces me planteo si realmente es una tecnología.
+		Pero ya es demasiado tarde ;-) 
+		
+		Esto es un eslabón más en la cadena. O pretende serlo.
+		¿Será el último de una larga búsqueda?
 	
-	No es sólo la explicación de una tecnología. Es el proceso mismo de su creación. 
-	Es el libro donde se explica //toda// ella; tal como la entiende su creador. 
-	Aunque el futuro de esta tecnología es totalmente incierto
-	en el momento de la escritura del libro.
-	 
-	¡Es muy emocionante! :-)
-	
-	Por supuesto, nada de esto sería posible sin todos los pasos 
-	anteriores que hemos dado: xml, dtd, html, xsd, tex,... 
-	Hay veces que ni tan siquiera sé si realmente soy su creador. 
-	Otras veces me planteo si realmente es una tecnología.
-	Pero ya es demasiado tarde ;-) 
-	
-	Esto es un eslabón más en la cadena. O pretende serlo.
-	¿Será el último de una larga búsqueda?
-
-h1: Requisitos previos
-	
-text:
-	No es necesario ningún conocimiento informático específico,
-	pero nociones de tecnologías como xml o html son recomendables. 
-	
-	Para entender el [[chapter_11.html|Capítulo 11: Parseo de @STxT@]]
-	se deberían tener conocimientos de programación.
-	
-h1:	Estrellas
-	
-text:
-	Los capítulos y los apartados pueden ser normales, difíciles ({{{*}}}) o simplemente extraños ({{{*}}}{{{*}}}).
-	
-	Leed los difíciles ({{{*}}}) si es de buena mañana o estáis especialmente lúcidos.
-	
-	Leed los extraños ({{{*}}}{{{*}}}) sólo bajo vuestra responsabilidad ;-)
-	
-h1: Orden de lectura
-	
-text:
-	Todo el mundo debería leer el [[chapter_03.html|Capítulo 3, el tutorial]]. Es básico. 
-	El [[chapter_09.html|Capítulo 9, @STxT@ y XML]] también es muy interesante, 
-	ya que comparamos estos dos lenguajes.
-	
-	A partir de aquí el orden es indiferente. Lo dejo a vuestra elección :-)
-	
+	h1: Requisitos previos
+		
+	text:
+		No es necesario ningún conocimiento informático específico,
+		pero nociones de tecnologías como xml o html son recomendables. 
+		
+		Para entender el [[chapter_11.html|Capítulo 11: Parseo de @STxT@]]
+		se deberían tener conocimientos de programación.
+		
+	h1:	Estrellas
+		
+	text:
+		Los capítulos y los apartados pueden ser normales, difíciles ({{{*}}}) o simplemente extraños ({{{*}}}{{{*}}}).
+		
+		Leed los difíciles ({{{*}}}) si es de buena mañana o estáis especialmente lúcidos.
+		
+		Leed los extraños ({{{*}}}{{{*}}}) sólo bajo vuestra responsabilidad ;-)
+		
+	h1: Orden de lectura
+		
+	text:
+		Todo el mundo debería leer el [[chapter_03.html|Capítulo 3, el tutorial]]. Es básico. 
+		El [[chapter_09.html|Capítulo 9, @STxT@ y XML]] también es muy interesante, 
+		ya que comparamos estos dos lenguajes.
+		
+		A partir de aquí el orden es indiferente. Lo dejo a vuestra elección :-)
+		
