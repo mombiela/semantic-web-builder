@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${meta.getChild("title").value}</title>
-	<meta name="description" content="${meta.getChild("description").value}">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
     <link rel="stylesheet" href="/css/site.css?v=2">
@@ -82,7 +82,7 @@
 	
 		#if(${doc.name} == "chapter")
 			#if(${doc.getChild("title")})
-				<h1>${doc.getChild("title").value}</h1>
+				<h1>${doc.getChild("title").text}</h1>
 			#end
 		#end
 	
