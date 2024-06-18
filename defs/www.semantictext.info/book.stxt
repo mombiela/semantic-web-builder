@@ -47,8 +47,6 @@ Node Definition:
 	Type:text
 Node Definition:
 	Name:preamble
-	Alias: phrase
-	Alias: intro
 	Type:text
 Node Definition:
 	Name:header
@@ -72,7 +70,6 @@ Node Definition:
 	Type:text
 Node Definition:
 	Name:navigation
-	Alias: nav
 	Type:node
 	Child:
 		Node:previous
