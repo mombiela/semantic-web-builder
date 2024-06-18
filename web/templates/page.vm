@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${meta.getChild("title").tvalue}</title>
-	<meta name="description" content="${meta.getChild("description").tvalue}">
-	<meta name="author" content="${meta.getChild("author").tvalue}">
+    <title>${meta.getChild("title").value}</title>
+	<meta name="description" content="${meta.getChild("description").value}">
+	<meta name="author" content="${meta.getChild("author").value}">
 
     <link rel="stylesheet" href="/css/site.css?v=2">
 		
@@ -32,7 +32,7 @@
     <header id="main_header">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.canonicalName} == "chapter")	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
+			#if(${doc.name} == "chapter")	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
 			#else                  					<span class="color1"><b>S</b></span>TxT: Semantic text
 			#end
     	    </a>
@@ -80,36 +80,36 @@
       	##parse("/ads.vm")
 		#parse("/navigation.vm")
 	
-		#if(${doc.canonicalName} == "chapter")
+		#if(${doc.name} == "chapter")
 			#if(${doc.getChild("title")})
-				<h1>${doc.getChild("title").tvalue}</h1>
+				<h1>${doc.getChild("title").value}</h1>
 			#end
 		#end
 	
 		#set($numPart = 0)
 	
 		#foreach($node in $doc.getChilds())
-			#if(${node.canonicalName} == "html")
-				${node.tvalue}
-			#elseif(${node.canonicalName} == "content" || ${node.canonicalName} == "text")
-				${wiki.render($node.tvalue)}
-			#elseif(${node.canonicalName} == "preamble")
-            	<div class="preamble">${wiki.render($node.tvalue)}</div>
-			#elseif(${node.canonicalName} == "header")
-            	<h2><a id="index_${numPart}"></a>$node.tvalue</h2>
+			#if(${node.name} == "html")
+				${node.text}
+			#elseif(${node.name} == "content" || ${node.name} == "text")
+				${wiki.render($node.text)}
+			#elseif(${node.name} == "preamble")
+            	<div class="preamble">${wiki.render($node.text)}</div>
+			#elseif(${node.name} == "header")
+            	<h2><a id="index_${numPart}"></a>$node.text</h2>
 				#set($numPart = $numPart + 1)
-			#elseif(${node.canonicalName} == "subheader")
-            	<h3><a id="index_${numPart}"></a>$node.tvalue</h3>
+			#elseif(${node.name} == "subheader")
+            	<h3><a id="index_${numPart}"></a>$node.text</h3>
 				#set($numPart = $numPart + 1)
-			#elseif(${node.canonicalName} == "code")
-				<pre>${utils.escapeHtml($node.tvalue)}</pre>
-			#elseif(${node.canonicalName} == "assert")
+			#elseif(${node.name} == "code")
+				<pre>${utils.escapeHtml($node.text)}</pre>
+			#elseif(${node.name} == "assert")
 				<div class="row">
-            		<div class="assert">${wiki.render($node.tvalue)}</div>
+            		<div class="assert">${wiki.render($node.text)}</div>
             	</div>
-			#elseif(${node.canonicalName} == "alert")
+			#elseif(${node.name} == "alert")
 				<div class="row">
-            		<div class="alert">${wiki.render($node.tvalue)}</div>
+            		<div class="alert">${wiki.render($node.text)}</div>
             	</div>
 			#end
 		#end
