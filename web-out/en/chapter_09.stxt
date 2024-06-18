@@ -13,14 +13,14 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Chapter 9: @STxT@ and XML
 	
-	h1:
+	header:
 		Note for the reader
 		
 	text:
 		This chapter may offend xml enthusiast readers.
 		Read at your own risk ;-)
 		
-	h1:
+	header:
 		The legend (**)
 		
 	text:
@@ -54,7 +54,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		The time for @STxT@ had arrived.
 		
-	h1:
+	header:
 		Nowadays (**)
 	
 	text:
@@ -68,7 +68,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 		Well, we have more experience and we have learned. Let's create it!
 		
-	h1:
+	header:
 		Initial contact
 		
 	text:
@@ -227,7 +227,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		@STxT@ is simpler than XML
 		
-	h1:
+	header:
 		XML attributes
 		
 	text:
@@ -277,10 +277,10 @@ Chapter(www.semantictext.info/book.stxt):
 			node2:
 			node3:
 		
-	h1:
+	header:
 		DTD, XSD
 		
-	h2:
+	subheader:
 		XSD, DTD, and @STxT@
 		
 	text:
@@ -294,7 +294,7 @@ Chapter(www.semantictext.info/book.stxt):
 		And what happens with @STxT@? You should know it :-D It has the best. It is an @STxT@ document.
 		Integrated into the language itself. Powerful and easy to learn. Just like @STxT@ itself ;-)
 	
-	h2:
+	subheader:
 		Where is it?
 		
 	text:
@@ -311,7 +311,7 @@ Chapter(www.semantictext.info/book.stxt):
 		An @STxT@ document has an associated grammar by definition.\\
 		Otherwise, it is not @STxT@
 		
-	h2:
+	subheader:
 		XSD of the XSD (*)
 		
 	text:
@@ -412,7 +412,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Everything is much more complicated. With @STxT@ we have sought simplicity.
 		We like to do things by hand! Having an XML editor or reader should not be mandatory!
 	
-	h1:
+	header:
 		Parsers and validators
 		
 	text:
@@ -439,7 +439,7 @@ Chapter(www.semantictext.info/book.stxt):
 		In fact, sometimes it will be needed, as I had to do with my own book
 		before having the website up.
 	
-	h1:
+	header:
 		Namespaces
 		
 	text:
@@ -455,7 +455,7 @@ Chapter(www.semantictext.info/book.stxt):
 		It is no longer necessary, as this would imply that it is different if it is obtained with {{{http://}}}
 		than if it is done with {{{https://}}}. This makes no sense, what does make sense is that it is from {{{//}}}. 
 		
-	h1:
+	header:
 		Future
 		
 	text:

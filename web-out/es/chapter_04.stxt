@@ -31,7 +31,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Cuando terminemos ya casi seréis unos expertos de @STxT@ :-)
 		
-	h1:
+	header:
 		Namespaces y gramáticas (*)
 		
 	text:	
@@ -77,7 +77,7 @@ Chapter(www.semantictext.info/book.stxt):
 			ttt:
 				uuu:
 		
-	h1:
+	header:
 		Regla básica (*)
 		
 	assert:
@@ -111,7 +111,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Es por esto que para ello sólo nos tendremos que centrar en un nodo, 
 		y repetir la verificación en cada uno de ellos.
 		
-	h1:
+	header:
 		Un ejemplo para empezar
 		
 	text:
@@ -145,7 +145,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		**¡Que empiece la fiesta! :-D**
 		
-	h1:
+	header:
 		Cómo se crean y se leen los Namespaces
 		
 	text:
@@ -278,7 +278,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Name: Nombre
 			...
 		
-	h1:
+	header:
 		Nodos de tipo NODE
 		
 	text:
@@ -369,7 +369,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Ahora sólo falta definir como serán los otros tipos de nodos.
 		
-	h1:
+	header:
 		Nodos de texto
 		
 	text:
@@ -379,7 +379,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Ahora vamos a revisar todos los que hay, y los aplicaremos a nuestro ejemplo.
 		
-	h2:
+	subheader:
 		TEXT 
 		
 	text:
@@ -425,7 +425,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 	
-	h2:
+	subheader:
 		URL
 	text:
 		Los nodos de este tipo corresponden a una URL. Debe ser una url //absoluta//,
@@ -439,7 +439,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* http://www.semantictext.info
 		* ...
 		
-	h1:
+	header:
 		Nodos Numéricos
 		
 	text:
@@ -456,7 +456,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* RATIONAL
 		* NUMBER
 		
-	h2:
+	subheader:
 		NATURAL
 		
 	text:
@@ -485,7 +485,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 		
-	h2:
+	subheader:
 		INTEGER
 		
 	text:
@@ -498,7 +498,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 23874283
 		* ...
 		
-	h2:
+	subheader:
 		RATIONAL
 		
 	text:
@@ -512,7 +512,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 238942598534/43253457438573
 		* ...
 		
-	h2:
+	subheader:
 		NUMBER
 		
 	text:
@@ -529,10 +529,10 @@ Chapter(www.semantictext.info/book.stxt):
 		* 2398754385734e-122
 		* ...
 		
-	h1:
+	header:
 		Nodos con Bits
 		
-	h2:
+	subheader:
 		BINARY
 		
 	text:
@@ -546,7 +546,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 1010
 		* ...
 		
-	h2:
+	subheader:
 		HEXADECIMAL
 		
 	text:
@@ -561,7 +561,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 523a
 		* ...
 		
-	h2:
+	subheader:
 		BASE64
 		
 	text:
@@ -596,7 +596,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...
 		
-	h2:
+	subheader:
 		BOOLEAN
 		
 	text:
@@ -613,13 +613,13 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 		
-	h1:
+	header:
 		Un ejemplo para finalizar
 		
 	text:
 		Bien, ahora que casi hemos terminado, veremos la gramática completa, y un ejemplo de documento.
 		
-	h2:
+	subheader:
 		La gramática
 		
 	code:
@@ -721,7 +721,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Type: BOOLEAN
 			Name: Cliente vip
 		
-	h2:
+	subheader:
 		El ejemplo
 		
 	text:
@@ -840,7 +840,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Fin. ¿Os ha gustado?	
 		
-	h1:
+	header:
 		Una última reflexión (*)
 		
 	text:
@@ -854,7 +854,7 @@ Chapter(www.semantictext.info/book.stxt):
 		y mantener documentos intocables con números de versión.
 		Esta es una solución híbrida que creo correcta para muchos casos.
 		
-	h1:
+	header:
 		Gramática de la gramática (**)
 		
 	text:

@@ -15,7 +15,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:	  
 		Capítulo 5: Compactación (*)
 		
-	h1:
+	header:
 		Análisis de la información de @STxT@
 		
 	text:
@@ -71,7 +71,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Ahora sólo se trata de incluir esta información. De esto trata la siguiente sección.
 		
-	h1:
+	header:
 		Una forma de compactación
 		
 	text:
@@ -166,7 +166,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Substituir los tabuladores de inicio por: \\
 		número de tabuladores + ':'
 		
-	h1:
+	header:
 		Otros ejemplos
 		
 	text:
@@ -289,7 +289,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:Titular cuenta: Joan Costa Mombiela
 		2:Número cuenta: 0000-0000-00-000000000
 		
-	h1:
+	header:
 		Utilidad
 		
 	text:

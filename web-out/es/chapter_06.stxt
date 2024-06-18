@@ -20,10 +20,10 @@ Chapter(www.semantictext.info/book.stxt):
 		y se explicarán todas las complejidades reales.
 		
 		**¡No os lo perdáis!**	
-	h1:
+	header:
 		Recordatorio de @STxT@
 		
-	h2:
+	subheader:
 		¿Qué es @STxT@?
 	text:
 		Un documento @STxT@ consiste en un conjunto de nodos jerárquicos, 
@@ -73,7 +73,7 @@ Chapter(www.semantictext.info/book.stxt):
 		la gramática y estructura del documento; la cual se tiene que cumplir
 		para considerar un documento correcto.
 		
-	h2:
+	subheader:
 		Gramáticas
 		
 	text:
@@ -125,7 +125,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Los nodos hijos también tienen que quedar perfectamente	definidos,
 		sin permitir ambigüedad sobre el namespace al que pertenecen.
 		
-	h2:
+	subheader:
 		Compactación
 		
 	text:
@@ -166,10 +166,10 @@ Chapter(www.semantictext.info/book.stxt):
 		2:caso de tener disponibilidad se recomienda
 		2:permitirle el acceso a la zona //omega//.
 		
-	h1:
+	header:
 		Sutilezas del lenguaje
 		
-	h2:
+	subheader:
 		Restricciones en los nombres de los nodos
 		
 	text:
@@ -198,7 +198,7 @@ Chapter(www.semantictext.info/book.stxt):
 		tabuladores o espacios + nombre del campo + ':'\\
 		[+ contenido del campo si es básico]
 				 
-	h2:
+	subheader:
 		Case insensitive
 		
 	assert:
@@ -216,7 +216,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Es posible que en otros casos esté justificado, pero en @STxT@ parece justo lo contrario. 
 		Siempre nos preocupamos por la semántica, y claramente los nombres tienen
 		el mismo significado en mayúsculas que en minúsculas.
-	h2:
+	subheader:
 		Codificación UTF-8
 		
 	text:
@@ -233,7 +233,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Es una buena regla y estoy muy contento con ella. Hoy en día es la codificación más aceptable,
 		más universal, y más implementada. No creo que esto cambie en los próximos años. 
 		
-	h2:
+	subheader:
 		Tabuladores o espacios
 		
 	text:
@@ -277,7 +277,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Vemos que esto es coherente con la mayoría de editores de texto;
 		siempre que se configure con la opción de "1 tabulador = 4 espacios".
 		
-	h1:
+	header:
 		Texto (**)
 		
 	text:
@@ -290,7 +290,7 @@ Chapter(www.semantictext.info/book.stxt):
 		//Estas reglas están sobretodo enfocadas al parseo de textos y a la interpretación
 		informática. Cuando escribimos @STxT@ sólo hay que tener en cuenta la identación y
 		los niveles, y seguir nuestra intuición.//
-	h2:
+	subheader:
 		Todo sobre Identación
 		
 	text:
@@ -368,7 +368,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Todos hacen un texto //xxxxxxx//, seguido de una línea en blanco y con otra con //zz zz//.
 		
-	h2:
+	subheader:
 		Todo sobre comentarios
 		
 	text:
@@ -415,7 +415,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Otro nodo:
 				Otro nodo:
 		
-	h2:
+	subheader:
 		Texto en el texto
 		
 	text:
@@ -448,7 +448,7 @@ Chapter(www.semantictext.info/book.stxt):
 				y_{i+1} = x_{i}^{2n} - \sqrt{5}x_{i-1}^{n} + \sqrt{x_{i-2}^7} -1
 			\end{equation}
 		
-	h1:
+	header:
 		Namespaces, nodos y más nodos (**)
 		
 	text:
@@ -458,7 +458,7 @@ Chapter(www.semantictext.info/book.stxt):
 		los conceptos voy a repetirme un poco. Espero no liaros, realmente todo es fácil y sencillo.
 		Pero no estoy tranquilo si no lo hago ;-)
 		
-	h2:
+	subheader:
 		¿Qué es un namespace?
 		
 	text:
@@ -487,7 +487,7 @@ Chapter(www.semantictext.info/book.stxt):
 			
 		Lo mismo podríamos hacer con todos los otros nodos.
 		
-	h2:
+	subheader:
 		¿Qué es un documento @STxT@?
 		
 	text:
@@ -523,7 +523,7 @@ Chapter(www.semantictext.info/book.stxt):
 		qué es cada elemento, de una forma muy sencilla.
 		Y sólo hemos tenido que decir cuál es el elemento principal.
 	
-	h2:
+	subheader:
 		Restricciones en los nodos hijos
 		 
 	text:

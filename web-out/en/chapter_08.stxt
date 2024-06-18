@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Chapter 8: Examples and Other Technologies
 	
-	h1:
+	header:
 		Examples
 		
 	text:
@@ -114,7 +114,7 @@ Chapter(www.semantictext.info/book.stxt):
 		By the way, @STxT@ always has a grammar, while XML does not
 		until a dtd or an xsd are not applied. 
 		 
-	h1:
+	header:
 		Wikipedia (*)
 		
 	text:
@@ -156,10 +156,10 @@ Chapter(www.semantictext.info/book.stxt):
 		how a city information should be, but we could also
 		apply styles and formats depending on the document type.
 		
-	h1:
+	header:
 		@STxT@ and other technologies
 		
-	h2:
+	subheader:
 		Lightweight markup language
 		
 	text:
@@ -202,7 +202,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		The union of @STxT@ with //Lightweight markup languages// is simply spectacular
 		
-	h2:
+	subheader:
 		Tex, Latex
 		
 	text:
@@ -302,7 +302,7 @@ Chapter(www.semantictext.info/book.stxt):
 		And in addition, we have kept the compactness in the creation of mathematical formulas
 		and in other elements where TeX is really a great language.
 		
-	h2:
+	subheader:
 		JSON (*)
 	
 	text:
@@ -317,7 +317,7 @@ Chapter(www.semantictext.info/book.stxt):
 		I don't think that JSON and @STxT@ are direct competitors,
 		due to their different field of application.
 		
-	h2:
+	subheader:
 		Other (*)
 		
 	text:

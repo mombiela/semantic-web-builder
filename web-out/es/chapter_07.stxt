@@ -23,7 +23,7 @@ Chapter(www.semantictext.info/book.stxt):
 		La mejor forma de trabajar es empezar por un ejemplo, 
 		y después entraremos en el tema de una forma más formal.
 	
-	h1:	
+	header:	
 		I18N. Un ejemplo
 		
 	text:	
@@ -182,7 +182,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Una buena forma de internacionalizar es crear una gramática equivalente en otro idioma.
 					
-	h1:			
+	header:			
 		Equivalencias (**)
 		
 	text:
@@ -190,7 +190,7 @@ Chapter(www.semantictext.info/book.stxt):
 		y de sus posibles transformaciones. Realmente este tema podría dar mucho más de sí,
 		pero sólo vamos a reflexionar un poco, y mostrar ciertas cosas.
 			 
-	h2:  
+	subheader:  
 		Gramáticas equivalentes (**)
 		
 	text:
@@ -210,7 +210,7 @@ Chapter(www.semantictext.info/book.stxt):
 		son prácticamente iguales. Esto permitiría hacer futuras transformaciones,
 		y todo una serie de trabajos automatizados de una forma muy sencilla.
 		
-	h2:
+	subheader:
 		Gramáticas transformables (o convertibles) (**)
 		
 	assert:
@@ -243,7 +243,7 @@ Chapter(www.semantictext.info/book.stxt):
 	# Nota: Creo que éste es un tema demasiado complejo para abordarlo en estos momentos, 
 	# pero como punto de partida es muy interesante. 
 		
-	h2:
+	subheader:
 		Extensiones (**)
 		
 	text:

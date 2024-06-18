@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Capítulo 10: Web Services
 		
-	h1:
+	header:
 		Advertencia
 		
 	text:
@@ -23,7 +23,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Rectifico. Mejor que sí que lo lean. De hecho, los animo a hacerlo.
 		La mejor opinión es la de quien realmente conoce y ha usado una tecnología. 
 		
-	h1:
+	header:
 		SOAP en la teoría
 		
 	text:
@@ -38,7 +38,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		//(*) No recuerdo quien lo dijo, pero me gustó.//
 		
-	h1:
+	header:
 		SOAP en la práctica
 	
 	text:	
@@ -53,7 +53,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Lo siento, pero yo lo veo así.
 		
-	h1:
+	header:
 		REST
 		
 	text:
@@ -66,7 +66,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Atentos. La solución ha llegado. Se llama @STxT@. 
 		
-	h1:
+	header:
 		@STxT@: Un nuevo enfoque
 		
 	text:
@@ -157,7 +157,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Hay muchas posibilidades, me gustan todas con @STxT@ ;-)
 	
-	h1:
+	header:
 		Una propuesta definitiva
 		
 	text:
@@ -166,7 +166,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Voy a hacer una propuesta de definición de webservices, y además la voy a hacer disponible.
 		Va a ser parecida a	los ejemplos anteriores que hemos visto.
 		
-	h2: La gramática
+	subheader: La gramática
 	
 	text:
 		La gramática está disponible en [[www.semantictext.info/web_services.stxt]]
@@ -278,7 +278,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Type:TEXT
 			Name:Method
 		
-	h2: La explicación
+	subheader: La explicación
 	
 	text:
 		El documento @STxT@ encargado de definir uno (o varios webservices) será
@@ -323,7 +323,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Id:2
 			Name:John
 		
-	h2:
+	subheader:
 		El ejemplo
 		
 	code:
@@ -380,7 +380,7 @@ Chapter(www.semantictext.info/book.stxt):
 				* 2: Error
 				* 3: Fatal error
 		
-	h2:
+	subheader:
 		La reflexión
 		
 	text:

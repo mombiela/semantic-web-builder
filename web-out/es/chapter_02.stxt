@@ -31,7 +31,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Ojead este capítulo un poco por encima, y leedlo con más profundidad cuando ya sepáis
 		más de @STxT@. Es un buen consejo ;-)
-	h1: 
+	header: 
 		¿Qué es @STxT@?
 		
 	text:
@@ -57,7 +57,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		En un futuro @STxT@ podría ser un reemplazo a otras tecnologías como xml o LaTex.
 		
-	h1:
+	header:
 		Declaración de intenciones :-)
 		
 	text:
@@ -84,7 +84,7 @@ Chapter(www.semantictext.info/book.stxt):
 		  Lo hace por estructura y contenido. Sólo hay algún carácter prohibido, 
 		  pero no de escape. Ya lo veréis, me acabo de extender demasiado en este punto...
 		  
-	h1:
+	header:
 		¿Qué significa @STxT@?
 		
 	text:
@@ -101,7 +101,7 @@ Chapter(www.semantictext.info/book.stxt):
 		por Internet sólo encontré remotamente otro significado: sexy-text. 
 		Bien, incluso eso estaba bien, ya que semantic text tiene que ser sexy ;-)
 		
-	h1:	¿Por qué un nuevo lenguaje?
+	header:	¿Por qué un nuevo lenguaje?
 		
 	text:
 		Siempre he creído que nos faltaba un lenguaje sencillo para escribir textos, pero que a la vez
@@ -122,7 +122,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Otro de los objetivos es hacer la información abierta. Esto también se ha abordado en la fase de diseño. 
 		Por diseño el contenido es abierto.	
 		
-	h1: Un lenguaje para todos
+	header: Un lenguaje para todos
 		
 	text:
 		Intentamos hacer fácil para todos. No habría que haber problemas para los "no informáticos" 
@@ -147,7 +147,7 @@ Chapter(www.semantictext.info/book.stxt):
 		pero a veces se ven limitadas por la forma con la que tienen que traducir esta información.
 		También pretendo solventar este problema.
 			
-	h1:
+	header:
 		Declaración caótica de intenciones :-D (**)
 		
 	Text:	
@@ -182,7 +182,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* Uno de los objetivos es hacer la información abierta. Esto también se hace en la fase de diseño. 
 		  Por diseño el contenido es abierto.	
 			
-	h1:
+	header:
 		Aplicaciones, resultados y esperanzas
 		
 	Text:

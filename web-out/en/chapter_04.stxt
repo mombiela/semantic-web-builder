@@ -31,7 +31,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		When we are done you will almost be @STxT@ experts :-)
 	
-	h1:	
+	header:	
 		Namespaces and grammars (*)
 		
 	text:	
@@ -77,7 +77,7 @@ Chapter(www.semantictext.info/book.stxt):
 			ttt:
 				uuu:
 	
-	h1:
+	header:
 		Basic rule (*)
 		
 	assert:	
@@ -111,7 +111,7 @@ Chapter(www.semantictext.info/book.stxt):
 		This is why we will only have to focus on one node, 
 		and repeat the verification with each of them.
 	
-	h1:
+	header:
 		One example to start with
 		
 	text:
@@ -145,7 +145,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 		**Let the party begin! :-D**
 	
-	h1:
+	header:
 		How Namespaces are created and read
 	
 	text:
@@ -278,7 +278,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Name: Name
 			...
 	
-	h1:
+	header:
 		Nodes of the NODE type
 	
 	text:
@@ -369,7 +369,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Now we only need to define what the other types of nodes will be like.
 	
-	h1:
+	header:
 		Text nodes
 	
 	text:
@@ -379,7 +379,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 		We are now going to go over all the types there are, and apply them to our example.
 	
-	h2:
+	subheader:
 		TEXT 
 	
 	text:
@@ -425,7 +425,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 	
-	h2:
+	subheader:
 		URL
 	
 	text:
@@ -440,7 +440,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* http://www.semantictext.info
 		* ...
 	
-	h1:
+	header:
 		Numerical Nodes
 	
 	text:
@@ -457,7 +457,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* RATIONAL
 		* NUMBER
 	
-	h2:
+	subheader:
 		NATURAL
 	
 	text:
@@ -486,7 +486,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 	
-	h2:
+	subheader:
 		INTEGER
 	
 	text:
@@ -499,7 +499,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 23874283
 		* ...
 	
-	h2:
+	subheader:
 		RATIONAL
 	
 	text:
@@ -513,7 +513,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 238942598534/43253457438573
 		* ...
 	
-	h2:
+	subheader:
 		NUMBER
 	
 	text:
@@ -530,10 +530,10 @@ Chapter(www.semantictext.info/book.stxt):
 		* 2398754385734e-122
 		* ...
 	
-	h1:
+	header:
 		Nodes with Bits
 	
-	h2:
+	subheader:
 		BINARY
 	
 	text:
@@ -547,7 +547,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 1010
 		* ...
 	
-	h2:
+	subheader:
 		HEXADECIMAL
 	
 	text:
@@ -562,7 +562,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* 523a
 		* ...
 	
-	h2:
+	subheader:
 		BASE64
 	
 	text:
@@ -597,7 +597,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...
 	
-	h2:
+	subheader:
 		BOOLEAN
 	
 	text:
@@ -614,13 +614,13 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...	
 	
-	h1:
+	header:
 		One example to finish off
 	
 	text:
 		OK, now that we've almost finished, we will see the full grammar, and a document example.
 	
-	h2:
+	subheader:
 		Grammar
 	
 	code:
@@ -722,7 +722,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Type: BOOLEAN
 			Name: Vip customer
 	
-	h2:
+	subheader:
 		The example
 	
 	text:
@@ -842,7 +842,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		The end. Did you like it?	
 	
-	h1:
+	header:
 		One last thought (*)
 	
 	text:
@@ -856,7 +856,7 @@ Chapter(www.semantictext.info/book.stxt):
 		and keep untouchable documents with version numbers.
 		This is a hybrid solution which I think is correct for many cases.
 	
-	h1:
+	header:
 		Grammar of the grammar (**)
 	
 	text:

@@ -12,7 +12,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	Title: Capítulo 13: ¿Y ahora qué?
 		
-	h1: Por dónde empezar
+	header: Por dónde empezar
 		
 	text:
 		Esto no es un libro. Es casi una propuesta. Un inicio de trabajo futuro. 
@@ -29,7 +29,7 @@ Chapter(www.semantictext.info/book.stxt):
 		¿Realmente lo he creado yo? Supongo que el lenguaje ya estaba ahí, y lo único que tenía
 		que hacer era sacarlo a la luz. Me gustaría pensar que lo hice como un escultor.
 		
-	h1: Cosas que quedan por hacer
+	header: Cosas que quedan por hacer
 		
 	text:
 		Queda mucho por hacer, si realmente se quiere adoptar esta tecnología.
@@ -62,7 +62,7 @@ Chapter(www.semantictext.info/book.stxt):
 	#	Los siguientes apartados tratan sobre eso.
 	# --------------------------------------------------------------------------------------------------------------------
 		
-	h2: Editores con contenido asistido
+	subheader: Editores con contenido asistido
 		
 	text:
 		Tenemos muchos editores de texto, para muchos lenguajes distintos.
@@ -73,7 +73,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Ahora las reglas del contenido aparecen solas. Con descripciones.
 		El contenido es fácil y rápido de crear. Por todos.
 		
-	h2:	Librerías
+	subheader:	Librerías
 		
 	text:  
 		Necesitamos parseadores de @STxT@ en cualquier lenguaje de programación.
@@ -81,7 +81,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Es como portar lo que ya tenemos en XML a @STxT@. Y hay mucho.
 		
-	h2: Conversor de lenguajes
+	subheader: Conversor de lenguajes
 		
 	text:
 		Seguro que tenemos lenguajes que no nos gustan, o que creemos que pueden ser más sencillos. 
@@ -96,7 +96,7 @@ Chapter(www.semantictext.info/book.stxt):
 	  	Esto permitiría a los informáticos mantener tecnologías más especializadas, 
 	  	y a los demás usar formatos más sencillos como @STxT@.
 		
-	h2: Substitución de lenguajes
+	subheader: Substitución de lenguajes
 		
 	text:
 		Esto se puede hacer en un montón de sitios, documentos XML, RSS's, ficheros de texto especiales, 
@@ -105,7 +105,7 @@ Chapter(www.semantictext.info/book.stxt):
 		¿Qué ganaríamos? Con un solo editor sería suficiente, textos más sencillos de mantener, y al disponer de una gramática
 		tendríamos también la descripción de cómo debe ser un documento.
 	
-	h2: Web semántica
+	subheader: Web semántica
 		
 	text:
 		Aquí hay tanto trabajo por hacer que sólo os diré que volváis a mirar el capítulo anterior,

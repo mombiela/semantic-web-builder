@@ -2,85 +2,20 @@
 # Definición de página
 # --------------------
 
-Namespace Definition(www.semantictext.info/namespace.stxt):
+Namespace: www.semantictext.info/book.stxt
 
-# ---------
-# Principal
-# ---------
-	
-Node Definition:
-	Name:chapter
-	Type:node
-	Child:
-		Node: metadata
-		Num: 1
-		Namespace: www.semantictext.info/page.stxt
-	Child:
-		Node:preamble
-		Num:?
-	Child:
-		Node:title
-		Num:?
-	Child:
-		Node:navigation
-		Num:?
-	Child:
-		Node:header
-		Num: *
-	Child:
-		Node:subheader
-		Num: *
-	Child:
-		Node:text
-		Num:*
-	Child:
-		Node:code
-		Num:*
-	Child:
-		Node:assert
-		Num:*
-	Child:
-		Node:alert
-		Num: *
-Node Definition:
-	Name:title
-	Type:text
-Node Definition:
-	Name:preamble
-	Type:text
-Node Definition:
-	Name:header
-	Type:text
-	Alias:h1
-Node Definition:
-	Name:subheader
-	Type:text
-	Alias:h2
-Node Definition:
-	Name:text
-	Type:text
-Node Definition:
-	Name:code
-	Type:text
-Node Definition:
-	Name:assert
-	Type:text
-Node Definition:
-	Name:alert
-	Type:text
-Node Definition:
-	Name:navigation
-	Type:node
-	Child:
-		Node:previous
-		Num:?
-	Child:
-		Node:next
-		Num:?
-Node Definition:
-	Name:previous
-	Type:text
-Node Definition:
-	Name:next
-	Type:text
-	
+	chapter:
+		metadata: (1) (www.semantictext.info/page.stxt)
+		preamble: (?) TEXT
+		title: (?) TEXT
+		navigation: (?)
+			previous: (?)
+			next: (?)
+
+		header: (*) TEXT
+		subheader: (*) TEXT
+		text: (*) TEXT
+		code: (*) TEXT
+		assert: (*) TEXT
+		alert: (*) TEXT
+

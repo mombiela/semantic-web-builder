@@ -13,14 +13,14 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Capítulo 9: @STxT@ y XML
 	
-	h1:	
+	header:	
 		Advertencia al lector
 		
 	text:
 		Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.
 		Leed bajo vuestra propia responsabilidad ;-)
 		
-	h1:
+	header:
 		La leyenda (**)
 		
 	text:
@@ -54,7 +54,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		La hora de @STxT@ había llegado.
 		
-	h1:
+	header:
 		La actualidad (**)
 	
 	text:	
@@ -68,7 +68,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Bien, nosotros tenemos más experiencia y hemos aprendido. ¡Vamos a crearlo!
 		
-	h1:
+	header:
 		Toma de contacto
 		
 	text:
@@ -227,7 +227,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		@STxT@ es más sencillo que XML
 		
-	h1:
+	header:
 		Atributos XML
 		
 	text:
@@ -277,10 +277,10 @@ Chapter(www.semantictext.info/book.stxt):
 			nodo2:
 			nodo3:
 		
-	h1:
+	header:
 		DTD, XSD
 		
-	h2:
+	subheader:
 		XSD, DTD y @STxT@
 		
 	text:
@@ -294,7 +294,7 @@ Chapter(www.semantictext.info/book.stxt):
 		¿Y qué pasa con @STxT@? Lo deberíais saber :-D Tiene lo mejor. Es un documento @STxT@.
 		Integrado en el propio lenguaje. Potente y fácil de aprender. Como el propio @STxT@ ;-)
 		
-	h2:
+	subheader:
 		¿Dónde está?
 		
 	text:
@@ -311,7 +311,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Un documento @STxT@ por definición tiene una gramática asociada.\\
 		Sino, no es @STxT@
 		
-	h2:
+	subheader:
 		XSD del XSD (*)
 		
 	text:
@@ -412,7 +412,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Todo es mucho más complicado. Con @STxT@ hemos buscado la sencillez.
 		¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!
 		
-	h1:
+	header:
 		Parsers y validators
 		
 	text:
@@ -439,7 +439,7 @@ Chapter(www.semantictext.info/book.stxt):
 		De hecho, en ocasiones será necesario, como yo he tenido que hacer en mi propio libro
 		antes de tener la web publicada.
 		
-	h1:
+	header:
 		Namespaces
 		
 	text:
@@ -455,7 +455,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Ya no es necesario, ya que ello implicaría que es distinto si se obtiene con {{{http://}}}
 		que si se hace con {{{https://}}}. Esto no tiene sentido, lo que sí lo tiene es que sea a partir de {{{//}}}. 
 		
-	h1:
+	header:
 		Futuro
 		
 	text:

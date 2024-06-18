@@ -19,7 +19,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:		
 		Bienvenidos a la web semántica.
 		
-	h1:
+	header:
 		Una propuesta para la web
 		
 	text:
@@ -65,10 +65,10 @@ Chapter(www.semantictext.info/book.stxt):
 		y muchas formas de aplicarla. Ahora ni tan siquiera lo sé, pero puedo ver su potencial.
 		Espero que otros también lo vean y lo sepan aplicar.
 		
-	h1:
+	header:
 		Ideas
 		
-	h2:
+	subheader:
 		¡¡Reemplazar HTML5!!
 		
 	text:
@@ -191,7 +191,7 @@ Chapter(www.semantictext.info/book.stxt):
 		No todo está bien como está. Siempre hay margen a mejorar. A hacer las cosas distintas.
 		Y somos informáticos. Hay que probar. Y experimentar. Y equivocarnos. Es la única forma de avanzar.
 		
-	h2:
+	subheader:
 		Buscadores
 		
 	text:
@@ -202,7 +202,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Es posible que surgieran plantillas @STxT@ famosas, y una página podría seguirla para mostrar ciertos contenidos.
 		Esto todavía facilitaría más la indexación, ya que unificaría ciertos aspectos.
 		
-	h2:
+	subheader:
 		La transición
 		
 	text:
@@ -227,7 +227,7 @@ Chapter(www.semantictext.info/book.stxt):
 		No hay que olvidar que el objetivo de todo esto es llegar a la web semántica de una forma poco traumática,
 		fácil para todo el mundo, no sólo para los super-informáticos. 
 		
-	h1:
+	header:
 		SWB: Semantic Web Builder
 	
 	text:

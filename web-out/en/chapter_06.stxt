@@ -20,10 +20,10 @@ Chapter(www.semantictext.info/book.stxt):
 		and all the real complexities will be explained.
 		
 		**Don't miss it!**	
-	h1:
+	header:
 		@STxT@ reminder
 	
-	h2:
+	subheader:
 		What is @STxT@?
 	text:
 		An @STxT@ document is made up of a set of hierarchical nodes, 
@@ -73,7 +73,7 @@ Chapter(www.semantictext.info/book.stxt):
 		the grammar and structure of the document; which has to be complied with
 		in order to consider a document as correct.
 	
-	h2:
+	subheader:
 		Grammars
 	
 	text:
@@ -125,7 +125,7 @@ Chapter(www.semantictext.info/book.stxt):
 		The child nodes shall also be perfectly	defined,
 		without allowing ambiguity about the namespace to which they belong.
 	
-	h2:
+	subheader:
 		Compaction
 		
 	text:
@@ -166,10 +166,10 @@ Chapter(www.semantictext.info/book.stxt):
 		3:case of availability it is recommended
 		3:to allow their access to the VIP area.
 	
-	h1:
+	header:
 		Language subtleties
 		
-	h2:
+	subheader:
 		Restrictions to node names
 		
 	text:
@@ -198,7 +198,7 @@ Chapter(www.semantictext.info/book.stxt):
 		tabs or spaces + name of the field + ':'\\
 		[+ field content if it is basic]
 				 
-	h2:
+	subheader:
 		Case insensitive
 		
 	assert:
@@ -216,7 +216,7 @@ Chapter(www.semantictext.info/book.stxt):
 		It is possible that in other cases it’s justified, but in @STxT@ it seems just the opposite. 
 		We always think about semantics, and clearly names have the same meaning 
 		in uppercase as in lowercase.
-	h2:
+	subheader:
 		UTF-8 Coding
 		
 	text:
@@ -233,7 +233,7 @@ Chapter(www.semantictext.info/book.stxt):
 		It is a good rule and I am very happy with it. Nowadays it is the most acceptable,
 		more universal, and more implemented coding. I don't think this will change in the coming years. 
 		
-	h2:
+	subheader:
 		Tabs or spaces
 		
 	text:
@@ -277,7 +277,7 @@ Chapter(www.semantictext.info/book.stxt):
 		We see that this is consistent with most text editors;
 		as long as it’s configured with the option "1 tab = 4 spaces".
 		
-	h1:
+	header:
 		Text (**)
 		
 	text:
@@ -290,7 +290,7 @@ Chapter(www.semantictext.info/book.stxt):
 		//These rules are above all focused on parsing text and computer
 		interpretation. When we write @STxT@, we just have to take into account the indentation and
 		the levels, and follow our intuition.//
-	h2:
+	subheader:
 		All about indentation
 		
 	text:
@@ -368,7 +368,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		They all make an //xxxxxxx// text, followed by a blank line and another one with //zz zz//.
 		
-	h2:
+	subheader:
 		All about comments
 		
 	text:
@@ -415,7 +415,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Another node:
 				Another node:
 		
-	h2:
+	subheader:
 		Text in the text
 		
 	text:
@@ -448,7 +448,7 @@ Chapter(www.semantictext.info/book.stxt):
 				y_{i+1} = x_{i}^{2n} - \sqrt{5}x_{i-1}^{n} + \sqrt{x_{i-2}^7} -1
 			\end{equation}
 	
-	h1:
+	header:
 		Namespaces, nodes, and more nodes (**)
 		
 	text:
@@ -458,7 +458,7 @@ Chapter(www.semantictext.info/book.stxt):
 		concepts, I will repeat myself a little. I hope not to confuse you, everything is actually easy and simple.
 		But I'm not at ease if I don't do it ;-)
 		
-	h2:
+	subheader:
 		What is a namespace?
 		
 	text:
@@ -487,7 +487,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 		We could do the same thing with all the other nodes.
 		
-	h2:
+	subheader:
 		What is an @STxT@ document?
 		
 	text:
@@ -523,7 +523,7 @@ Chapter(www.semantictext.info/book.stxt):
 		what each element is, in a very simple way.
 		And we just had to say which is the main element.
 	
-	h2:
+	subheader:
 		Restrictions on the child nodes
 		 
 	text:

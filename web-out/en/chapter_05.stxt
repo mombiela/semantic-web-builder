@@ -15,7 +15,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:	  
 		Chapter 5: Compaction (*)
 		
-	h1:
+	header:
 		@STxT@ Information analysis
 		
 	text:
@@ -71,7 +71,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:	
 		Now we just need to include this information. This is what the next section deals with.
 		
-	h1:
+	header:
 		A way of compacting
 	
 	text:
@@ -166,7 +166,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Replace the start tabs with: \\
 		number of tabs + ':'
 		
-	h1:
+	header:
 		Other examples
 	
 	text:
@@ -290,7 +290,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:Account holder: Joan Costa Mombiela
 		2:Account number: 0000-0000-00-000000000
 		
-	h1:
+	header:
 		Usefulness
 		
 	text:
