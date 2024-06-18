@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Capítulo 8: Ejemplos y otras tecnologías
 	
-	h1: 
+	header: 
 		Ejemplos
 		
 	text:	
@@ -114,7 +114,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Por cierto, el @STxT@ siempre tiene una gramática, mientras que el XML no la tiene
 		hasta que no se le aplique un dtd o xsd. 
 		 
-	h1:
+	header:
 		Wikipedia (*)
 		
 	text:
@@ -156,10 +156,10 @@ Chapter(www.semantictext.info/book.stxt):
 		cómo debe ser la información de una ciudad, sino que también podríamos
 		aplicar estilos y formatos dependiendo del tipo de documento.
 		
-	h1:
+	header:
 		@STxT@ y otras tecnologías
 		
-	h2:
+	subheader:
 		Lightweight markup language
 		
 	text:
@@ -202,7 +202,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		La unión de @STxT@ con //Lightweight markup languages// es simplemente espectacular
 		
-	h2:				
+	subheader:				
 		Tex, Latex
 		
 	text:
@@ -302,7 +302,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Y además, hemos mantenido la compacidad en la creación de fórmulas matemáticas
 		y otros elementos dónde TeX sí es realmente un gran lenguaje.
 		
-	h2:
+	subheader:
 		JSON (*)
 	
 	text:
@@ -317,7 +317,7 @@ Chapter(www.semantictext.info/book.stxt):
 		no creo que JSON y @STxT@ sean competencia directa,
 		debido a su distinto ámbito de aplicación.
 		
-	h2:
+	subheader:
 		Otros (*)
 		
 	text:

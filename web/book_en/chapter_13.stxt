@@ -12,7 +12,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	Title: Chapter 13: And now what?
 	
-	h1: Where to start
+	header: Where to start
 	
 	text:
 		This is not a book. It is almost a proposal. The start of future work.
@@ -29,7 +29,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Have I really created it? I guess the language was already there, and the only thing I had
 		to do was bring it out into the light. I'd like to think that I made it as a sculptor.
 	
-	h1: Pending things
+	header: Pending things
 	
 	text:
 		There is much left to do if we really want to adopt this technology.
@@ -62,7 +62,7 @@ Chapter(www.semantictext.info/book.stxt):
 	#	The following sections deal with that.
 	# --------------------------------------------------------------------------------------------------------------------
 	
-	h2: Editors with assisted content
+	subheader: Editors with assisted content
 		
 	text:
 		We have many text editors, for many different languages.
@@ -73,7 +73,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Now the content rules come up alone. With descriptions.
 		Content is easy and quick to create. By everyone.
 	
-	h2:	Libraries
+	subheader:	Libraries
 		
 	text:
 		We need @STxT@ parsers in any programming language.
@@ -81,7 +81,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		It's like carrying what we already have in XML to @STxT@. And there is a lot.
 	
-	h2: Language converter
+	subheader: Language converter
 		
 	text:
 		Surely we have languages that we don’t like, or that we believe can be simpler.
@@ -96,7 +96,7 @@ Chapter(www.semantictext.info/book.stxt):
 		This would allow computer techs to keep more specialized technologies,
 	  	and the rest to use simple formats like @STxT@.
 		
-	h2: Language substitution
+	subheader: Language substitution
 		
 	text:
 		This can be done in a lot of sites, XML documents, RSS's, special text files,
@@ -105,7 +105,7 @@ Chapter(www.semantictext.info/book.stxt):
 		What would we gain? We would have enough with just one editor, texts would be easier to maintain, and by having a grammar
 		we would also have the description of what a document should look like.
 	
-	h2: Semantic Web
+	subheader: Semantic Web
 	
 	text:
 		There is so much work to do that I will only tell you to look again at the previous chapter,

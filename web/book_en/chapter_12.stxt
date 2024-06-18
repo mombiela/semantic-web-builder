@@ -19,7 +19,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Welcome to the semantic web.
 		
-	h1:
+	header:
 		A proposal for the web
 	
 	text:
@@ -65,10 +65,10 @@ Chapter(www.semantictext.info/book.stxt):
 		and many ways of applying it. I don’t even know now, but I can see its potential.
 		I hope others also see it and know how to apply it.
 	
-	h1:
+	header:
 		Ideas
 		
-	h2:
+	subheader:
 		Replace HTML5!!
 	
 	text:
@@ -191,7 +191,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Not everything is fine just as it is. There is always room for improvement. For doing things differently.
 		And we are computer techs. We have to test things. And experiment. And make mistakes. It is the only way forward.
 	
-	h2:
+	subheader:
 		Search engines
 	
 	text:
@@ -202,7 +202,7 @@ Chapter(www.semantictext.info/book.stxt):
 		It’s possible that famous @STxT@ templates could arise, and a page could follow one of them in order to display certain content.
 		This would make indexing even easier, as it would unify certain aspects.
 		
-	h2:
+	subheader:
 		The transition
 		
 	text:
@@ -227,7 +227,7 @@ Chapter(www.semantictext.info/book.stxt):
 		We must not forget that the aim of all this is to achieve the semantic web in a less traumatic way,
 		which is easy for everybody, not just for super-computer techs. 
 	
-	h1:
+	header:
 		SWB: Semantic Web Builder
 	
 	text:

@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Capítulo 11: Parseo de STxT (*)
 		
-	h1:
+	header:
 		Introducción
 		
 	text:
@@ -39,10 +39,10 @@ Chapter(www.semantictext.info/book.stxt):
 	Assert:
 		Si no tenéis intención de implementar un parseador no continuéis leyendo.
 		El siguiente capítulo es mucho más interesante ;-)	
-	h1:
+	header:
 		Proceso genérico
 		
-	h2:
+	subheader:
 		Parseo por líneas
 		
 	text:
@@ -58,7 +58,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,
 		ya que de esto depende el procesado correcto.
 		
-	h2:
+	subheader:
 		Procesado de línea
 		
 	text:
@@ -84,7 +84,7 @@ Chapter(www.semantictext.info/book.stxt):
 		y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,
 		que a su vez puede actuar de validador de la gramática y los nodos. 
 		
-	h2:
+	subheader:
 		Validaciones
 		
 	text:
@@ -102,7 +102,7 @@ Chapter(www.semantictext.info/book.stxt):
 		La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.
 		En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.
 		
-	h1:
+	header:
 		Los nodos del lenguaje
 		
 	text:
@@ -135,10 +135,10 @@ Chapter(www.semantictext.info/book.stxt):
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	h1:
+	header:
 		Gramáticas
 		
-	h2:
+	subheader:
 		Almacenaje
 		
 	text:
@@ -148,7 +148,7 @@ Chapter(www.semantictext.info/book.stxt):
 		y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.
 		La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.
 		
-	h2:
+	subheader:
 		Gramática inicial
 		
 	text:
@@ -156,7 +156,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
 		Por esta razón habrá una definición de la gramática inicial en el propio código. 
 		
-	h1:
+	header:
 		Detalles a tener en cuenta
 		
 	text:

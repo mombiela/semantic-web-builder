@@ -27,7 +27,7 @@ public class Sitemap implements Processor
     private String[] sufix;
     
     // -------------
-    // Configuración
+    // Configuraciï¿½n
     // -------------
     
     @Override
@@ -49,7 +49,7 @@ public class Sitemap implements Processor
     }
     
     // ---------
-    // Ejecución
+    // Ejecuciï¿½n
     // ---------
     
     @Override
@@ -64,7 +64,7 @@ public class Sitemap implements Processor
         List<Page> pages = new ArrayList<Page>();
         for(int i = 0; i<this.pages.length; i++)
         {
-            // Obtenemos mapa de páginas a usar
+            // Obtenemos mapa de pï¿½ginas a usar
             Map<String, Object> mapPages = (Map) context.get(this.pages[i]);
             String prefix = this.prefix[i];
             String sufix  = this.sufix[i];
@@ -112,7 +112,7 @@ public class Sitemap implements Processor
         Node priority = node.getChild("priority");
         if (priority != null)
         {
-            float pvalue = Float.parseFloat(priority.getTvalue());
+            float pvalue = Float.parseFloat(priority.getValue());
             if (pvalue == 0) return null;
             result.setPriority(pvalue);
         }
@@ -122,7 +122,7 @@ public class Sitemap implements Processor
         {
             try
             {
-                result.setLastModif(SDF.parse(lastmodif.getTvalue()));
+                result.setLastModif(SDF.parse(lastmodif.getValue()));
             }
             catch (Exception e)
             {

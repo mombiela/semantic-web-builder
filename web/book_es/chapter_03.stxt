@@ -18,7 +18,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Te explicamos lo que es @STxT@ directamente, sin más preámbulos.
 		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
 		
-	h1:
+	header:
 		Un ejemplo... ¡ya!
 		
 	text:
@@ -121,7 +121,7 @@ Chapter(www.semantictext.info/book.stxt):
 	text:
 		Esta estructura es muy natural, y es la base para obtener el documento final @STxT@.
 		
-	h1:
+	header:
 		TODO en Namespaces (ns)
 		
 	text:
@@ -236,7 +236,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Después continua.
 		O mejor: descansa, lo vuelves a leer y pasas al próximo apartado :-) 
 		
-	h1:
+	header:
 		Nodos e identación
 	
 	text:	
@@ -345,7 +345,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Nodo 6: Texto nodo 6
 			Nodo 7: Texto nodo 7
 		
-	h1:
+	header:
 		Nodo y Texto
 		
 	text:
@@ -385,7 +385,7 @@ Chapter(www.semantictext.info/book.stxt):
 					<nodo2>Esto es un ejemplo de escape: &lt; </nodo2>
 				</nodo>
 		
-	h1:
+	header:
 		Comentarios
 		
 	text:
@@ -434,7 +434,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Cualquier línea que empiece por # será tratada como comentario,
 		y no será tenida en cuenta ni en programas ni en comunicaciones.
 		
-	h1:
+	header:
 		Por fin, la gramática
 		 
 	text:
@@ -495,7 +495,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Por lo que hace a Num tenemos las siguientes posibilidades: número, ?, +, *
 		Todos ellos son muy intuitivos para quien está acostumbrado a trabajar con expresiones regulares.
 		    
-	h1:
+	header:
 		Resumen
 		
 	text:

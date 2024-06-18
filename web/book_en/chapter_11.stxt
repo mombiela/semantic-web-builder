@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Chapter 11: STxT Parsing
 	
-	h1:
+	header:
 		Introduction
 		
 	text:
@@ -39,10 +39,10 @@ Chapter(www.semantictext.info/book.stxt):
 	Assert:
 		If you have no intention of implementing a parser do not go on reading.
 		The next chapter is much more interesting ;-)	
-	h1:
+	header:
 		Generic process
 		
-	h2:
+	subheader:
 		Line parsing
 		
 	text:
@@ -58,7 +58,7 @@ Chapter(www.semantictext.info/book.stxt):
 		During the process it is suitable to have a list of the last nodes we've been finding per level,
 		as the correct processing depends on this.
 		
-	h2:
+	subheader:
 		Line processing
 		
 	text:
@@ -84,7 +84,7 @@ Chapter(www.semantictext.info/book.stxt):
 		and the decisions to take are relatively simple. This lets us have a very efficient parser,
 		which in turn may act as a grammar and node validator. 
 	
-	h2:
+	subheader:
 		Validations
 		
 	text:
@@ -102,7 +102,7 @@ Chapter(www.semantictext.info/book.stxt):
 		The other one is when the entire file has been processed and there are no more nodes to validate.
 		At these points the node is considered as concluded and the validations can start.
 	
-	h1:
+	header:
 		Language nodes
 		
 	text:
@@ -135,10 +135,10 @@ Chapter(www.semantictext.info/book.stxt):
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	h1:
+	header:
 		Grammars
 		
-	h2:
+	subheader:
 		Storage
 	
 	text:
@@ -148,7 +148,7 @@ Chapter(www.semantictext.info/book.stxt):
 		and that repository would be updated. It is also possible to set checking times or other strategies.
 		The idea is that grammars do not change over time, or are at least compatible retroactively.
 		
-	h2:
+	subheader:
 		Initial grammar
 		
 	text:
@@ -156,7 +156,7 @@ Chapter(www.semantictext.info/book.stxt):
 		In order to parse a grammar we need to have the definition of the base grammar already parsed.
 		This is why there will be a definition of the initial grammar in the code itself. 
 		
-	h1:
+	header:
 		Details to consider
 		
 	text:

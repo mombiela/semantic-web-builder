@@ -32,7 +32,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Glance quickly over this chapter, and read it more in depth when you already know
 		more about @STxT@. This is good advice ;-)
 	
-	h1: 
+	header: 
 		What is @STxT@?
 		
 	text:
@@ -59,7 +59,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		In the future, @STxT@ could replace other technologies such as xml or LaTex.
 		
-	h1:
+	header:
 		Statement of Intent :-)
 	
 	text:
@@ -86,7 +86,7 @@ Chapter(www.semantictext.info/book.stxt):
 		  It does so through its structure and content. There is only one forbidden character, 
 		  but it is not an escape character. You’ll see, I have already expanded too much on this point...
 	
-	h1:
+	header:
 		What does @STxT@ mean?
 	
 	text:
@@ -103,7 +103,7 @@ Chapter(www.semantictext.info/book.stxt):
 		through the Internet I only remotely found another meaning: sexy-text. 
 		Well, even that was good, semantic text has to be sexy ;-)
 	
-	h1:	Why a new language?
+	header:	Why a new language?
 	
 	text:
 		I have always believed that we needed a simple language for writing texts, but that was
@@ -124,7 +124,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Another objective is to make the information open. This has also been addressed during the design phase. 
 		By design, the content is open.	
 	
-	h1: A language for everyone
+	header: A language for everyone
 		
 	text:
 		We try to make it easy for everyone. There should not be problems for "non-computer people" 
@@ -149,7 +149,7 @@ Chapter(www.semantictext.info/book.stxt):
 		but sometimes they are limited by the way they have to translate this information.
 		I also intend to solve this problem.
 	
-	h1:
+	header:
 		Chaotic Statement of Intent :-D (**)
 	
 	Text:	
@@ -186,7 +186,7 @@ Chapter(www.semantictext.info/book.stxt):
 		* One of the objectives is to make the information open. This is also done during the design phase. 
 		  By design, the content is open.	
 			
-	h1:
+	header:
 		Applications, results, and expectations
 	
 	Text:

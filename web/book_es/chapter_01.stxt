@@ -12,7 +12,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	title: Capítulo 1: ¿Cómo leer este libro?
 	
-	h1: Para quién es este libro
+	header: Para quién es este libro
 		
 	text:
 		Este libro es para todos los que quieran aprender @STxT@. 
@@ -33,7 +33,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Esto es un eslabón más en la cadena. O pretende serlo.
 		¿Será el último de una larga búsqueda?
 	
-	h1: Requisitos previos
+	header: Requisitos previos
 		
 	text:
 		No es necesario ningún conocimiento informático específico,
@@ -42,7 +42,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Para entender el [[chapter_11.html|Capítulo 11: Parseo de @STxT@]]
 		se deberían tener conocimientos de programación.
 		
-	h1:	Estrellas
+	header:	Estrellas
 		
 	text:
 		Los capítulos y los apartados pueden ser normales, difíciles ({{{*}}}) o simplemente extraños ({{{*}}}{{{*}}}).
@@ -51,7 +51,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 		Leed los extraños ({{{*}}}{{{*}}}) sólo bajo vuestra responsabilidad ;-)
 		
-	h1: Orden de lectura
+	header: Orden de lectura
 		
 	text:
 		Todo el mundo debería leer el [[chapter_03.html|Capítulo 3, el tutorial]]. Es básico. 
