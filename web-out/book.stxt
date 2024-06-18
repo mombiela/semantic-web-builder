@@ -79,7 +79,6 @@ Node Definition:
 		Num:?
 Node Definition:
 	Name:previous
-	Alias:prev
 	Type:text
 Node Definition:
 	Name:next
