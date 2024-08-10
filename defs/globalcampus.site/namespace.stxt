@@ -1,0 +1,29 @@
+Namespace: globalcampus.site/namespace.stxt
+	Menu: (?)
+		Link: (+)
+		
+	Index:
+		Title: (?)
+		Menu: (?)
+		Section: (+)
+			Link: (+)
+			
+	Document:
+		Title: (?)
+		Menu: (?)
+		Metadata:(?)
+			title: (?)
+			description: (?)
+			author: (?)
+			last modif: (?)
+			id public: (?)
+		Preamble: (?)
+		Header: (*)
+		Subheader: (*)
+		Content: (*) TEXT
+		Math: (*) TEXT
+		Assert: (*) TEXT
+		Alert: (*) TEXT
+		Code: (*) TEXT
+		Plantuml: (*) TEXT
+		
