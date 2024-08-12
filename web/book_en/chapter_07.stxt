@@ -15,7 +15,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Chapter 7: Equivalences and Internationalization (I18N)
 		
-	text:
+	Content:
 		This chapter may seem complex at first,
 		but it is not so. You will see that it is very natural.
 		In fact, you will think... Why have we not used it before?
@@ -26,7 +26,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		I18N. One example
 		
-	text:
+	Content:
 		Let's make a simple example.
 		For example, an actress/actor document:
 	
@@ -42,7 +42,7 @@ Chapter(www.semantictext.info/book.stxt):
 					Title: Garden in red
 					Year: 1993
 	
-	text:
+	Content:
 		The grammar is quite simple:
 	
 	code:
@@ -87,7 +87,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Name: year
 			Type: TEXT
 		
-	text:
+	Content:
 		Now, let's imagine that we want the same information in Spanish,
 		but instead of translating everything, we make a grammar that is almost the same,
 		but with aliases in Spanish.
@@ -143,7 +143,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Alias: Año
 			Type: TEXT
 		
-	text:
+	Content:
 		And the document could be like this:
 		
 	code:
@@ -161,14 +161,14 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Now we have the same document equal but in perfect Spanish!
 	
-	text:
+	Content:
 		In addition, these documents have something in common:
 		
 	assert:
 		The compacted form is the same!
 		\\(except the Namespace)
 			
-	text:
+	Content:
 		Well, this is very important, because in order to translate from one to the other
 		we only need to change to the compacted form, change the namespace, and... that's it!
 		The document is exactly the same.
@@ -185,7 +185,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Equivalences (**)
 		
-	text:
+	Content:
 		Let's talk about connections that can be made between different grammars,
 		and their potential transformations. Actually we could stretch this topic much more,
 		but we're just going to reflect on it a little bit, and show certain things.
@@ -193,7 +193,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Equivalent grammars (**)
 		
-	text:
+	Content:
 		We say that two grammars are equivalent if any document
 		has the same compacted form; with the exception of the namespace of the first node.
 	
@@ -219,7 +219,7 @@ Chapter(www.semantictext.info/book.stxt):
 		it can be parsed by A. That is, the canonicals from B
 		are either canonicals from A or aliases from A.
 		  	
-	text:
+	Content:
 		 I think the definition is quite clear, it's like saying that it is
 		//like a subset of another larger language//.
 	
@@ -246,7 +246,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Extensions (**)
 		
-	text:
+	Content:
 		Extensions are like transformable grammars, but seen from the point of view of the destination grammar.
 		
 	assert:
@@ -254,7 +254,7 @@ Chapter(www.semantictext.info/book.stxt):
 		just by changing the namespace of the original node, it can be parsed by A.
 		That is, the canonicals from B are either canonicals from A or aliases from A.
 		
-	text:
+	Content:
 		This tells us that A is an extension of B. What we do here is //extend the functionality of B//,
 		but we allow compatibility the other way around. That is, if we have B documents, they can also be used.
 		

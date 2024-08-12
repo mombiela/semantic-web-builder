@@ -9,7 +9,7 @@ chapter(www.semantictext.info/book.stxt):
 		previous: 00_b
 		next: 01
 			
-	text:
+	Content:
 		=== [[chapter_01.html | Capítulo 1: ¿Cómo leer este libro?]] === 
 		* [[chapter_01.html#index_0 | Para quién es este libro]]
 		* [[chapter_01.html#index_1 | Requisitos previos]]

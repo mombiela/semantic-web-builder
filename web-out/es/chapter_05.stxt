@@ -18,7 +18,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Análisis de la información de @STxT@
 		
-	text:
+	Content:
 		Este capítulo trata sobre la compactación de documentos @STxT@.
 		Vamos a modificar un documento para hacerlo más compacto,
 		de forma que sea más rápido de parsear y contenga la misma información.
@@ -44,7 +44,7 @@ Chapter(www.semantictext.info/book.stxt):
 					Nodo_8:
 						Nodo_9: Última linea
 		
-	text:
+	Content:
 		Vemos que hay 10 Nodos en este documento.
 		El primer nodo es Nodo_0, y es el que contiene a los demás.
 		Podríamos decir que es el primero en aparecer (orden)
@@ -53,7 +53,7 @@ Chapter(www.semantictext.info/book.stxt):
 		De esta forma podríamos cualificar todas las líneas, y extraer la información. 
 		No es difícil de hacer una tabla con esta información:
 		
-	text:
+	Content:
 		|=Orden  |=Nodo   |= Nivel  |
 		| 1      |Nodo_0  |0        |
 		| 2      |Nodo_1  |1        |
@@ -68,13 +68,13 @@ Chapter(www.semantictext.info/book.stxt):
 		| 11     |Nodo_8  |3        |
 		| 12     |Nodo_9  |4        |
 		
-	text:
+	Content:
 		Ahora sólo se trata de incluir esta información. De esto trata la siguiente sección.
 		
 	header:
 		Una forma de compactación
 		
-	text:
+	Content:
 		A partir de la tabla anterior, vamos a proponer una forma de compactar la información.
 		Será algo tan fácil como insertar el número de nivel en vez de utilizar tabuladores,
 		y separarlo con el carácter habitual ':'.
@@ -95,7 +95,7 @@ Chapter(www.semantictext.info/book.stxt):
 		3:Nodo_8:
 		4:Nodo_9: Última linea
 		
-	text:
+	Content:
 		Realmente, todavía hay información redundante, 
 		ya que el primer nodo siempre tiene nivel 0
 		(de hecho los parsers pueden suponer que es -1), 
@@ -117,7 +117,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:Nodo_8:
 		3:Nodo_9: Última linea
 		
-	text:
+	Content:
 		Como comentario personal diré que a mí me gusta más que todos los nodos tengan un nivel
 		(excepto el primero) ya que lo considero más estético y fácil de leer. 
 		
@@ -137,14 +137,14 @@ Chapter(www.semantictext.info/book.stxt):
 		3:Nodo_8:
 		4:Nodo_9: Última linea 
 		
-	text:
+	Content:
 		Hay una regla básica para la compactación:
 		
 	assert:
 		Si se han usado alias \\
 		se substituirán	por el Nombre Canónico
 		
-	text:	
+	Content:	
 		Esta regla es importante, ya que normalmente los nombres son más cortos que los alias,
 		y a su vez es más rápido de parsear un documento de esta forma. Además, también
 		juega un papel importante en la transformación de documentos, tal como
@@ -154,7 +154,7 @@ Chapter(www.semantictext.info/book.stxt):
 		En caso de no usar nombres canónicos hablaríamos de documentos //semicompactados//,
 		que siendo correctos no serían tan óptimos como los compactados.
 		
-	text:
+	Content:
 		Finalmente tener en cuenta que las líneas de texto que pertenecen 
 		a un nodo tendrán siempre un nivel superior al nodo al que pertenecen.
 		En el ejemplo anterior se ve que después del Nodo6 (con nivel 2)
@@ -169,7 +169,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Otros ejemplos
 		
-	text:
+	Content:
 		Si compactamos la receta de los buñuelos, nos quedaría el siguiente texto:
 		
 	code:
@@ -200,7 +200,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:abundante aceite hasta coger color. Conforme se van sacando se espolvorean 
 		2:con un poco de la mezcla del grassolis, y se pasan por azúcar.
 		
-	text:
+	Content:
 		Vamos a ver como queda la compactación de un ejemplo que veíamos
 		en el capítulo de las gramáticas.
 		
@@ -292,7 +292,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Utilidad
 		
-	text:
+	Content:
 		La utilidad de la compactación es crear un formato un poco más eficiente,
 		que igualmente sea fácil de leer y escribir por humanos.
 		Con los números de nivel también es muy sencillo de leer,

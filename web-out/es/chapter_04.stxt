@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Capítulo 4: Creación y uso de gramáticas
 	
-	text:	
+	Content:	
 		En este capítulo explicaremos las reglas de creación de documentos, 
 		desde el punto de vista de las gramáticas y los namespaces. 
 		Para ello, primero haremos una reflexión de cómo se relacionan, 
@@ -28,13 +28,13 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Atentos, esto es complejo; pero valdrá la pena ;-) 
 		
-	text:
+	Content:
 		Cuando terminemos ya casi seréis unos expertos de @STxT@ :-)
 		
 	header:
 		Namespaces y gramáticas (*)
 		
-	text:	
+	Content:	
 		Vamos a distinguir entre namespaces y gramáticas.
 		
 		A veces hablamos de gramáticas y de namespaces de forma indistinta,
@@ -50,7 +50,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		"Una gramática es una definición cruzada entre varios namespaces, para un tipo de documento dado".
 		
-	text:
+	Content:
 		Por ejemplo: los namespaces son:
 		
 	code:
@@ -67,7 +67,7 @@ Chapter(www.semantictext.info/book.stxt):
 		-----------
 		uuu: texto
 		
-	text:
+	Content:
 		La gramática de //xxx// verifica que el elemento //xxx// tenga la siguiente estructura:
 		
 	code:
@@ -83,7 +83,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Un documento es válido si todos sus nodos son válidos de acuerdo con la gramática.
 		
-	text:
+	Content:
 		Sabemos que un documento @STxT@ es un conjunto estructurado de nodos,
 		dónde cada uno de ellos debe pertenecer a un namespace.
 		Pues bien, debido a esto podemos afirmar también:
@@ -92,7 +92,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Un documento no es válido si hay algún nodo sin namespace
 		o éste es incorrecto
 		
-	text:
+	Content:
 		Bien, esto ya lo sabíamos, y lo mejor de todo es que esto es //casi// automático,
 		ya que no debemos dar la definición de cada namespace.
 		**Sólo se deberá especificar el namespace del primer nodo**, 
@@ -104,7 +104,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Un nodo es válido si su contenido es válido
 			
-	text:		
+	Content:		
 		Con esto quiero remarcar que para verificar la validez de un documento
 		se puede ir nodo por nodo, verificando su contenido. 
 		Si todos los nodos son válidos, ya está. El documento será válido. 
@@ -114,7 +114,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Un ejemplo para empezar
 		
-	text:
+	Content:
 		Vamos a hacer un ejemplo, pero ahora iremos a la inversa que en el capítulo anterior.
 		Empezaremos por la gramática del documento, definiremos sus nodos y características,
 		y finalmente crearemos un documento de prueba. 
@@ -148,7 +148,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Cómo se crean y se leen los Namespaces
 		
-	text:
+	Content:
 		Crear un namespace es crear un documento @STxT@ con una estructura determinada
 		y ponerlo accesible en la web. Esto es importante, ya que **ESTE DOCUMENTO TIENE QUE EXISTIR**.
 		
@@ -158,7 +158,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		www.semantictext.info/namespace.stxt
 		
-	text:
+	Content:
 		En nuestro ejemplo el documento debería empezar así:
 		
 	code:
@@ -170,7 +170,7 @@ Chapter(www.semantictext.info/book.stxt):
 		....
 		....
 		
-	text:
+	Content:
 		Dentro de este documento irán las definiciones de 
 		todos los nodos del namespace.
 		
@@ -187,7 +187,7 @@ Chapter(www.semantictext.info/book.stxt):
 				Namespace:
 				Num:
 		
-	text:
+	Content:
 		Vamos a desglosar cada parte:
 		
 		**Node Definition**: Inicio de la definición del nodo. Dentro se deben especificar
@@ -281,7 +281,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Nodos de tipo NODE
 		
-	text:
+	Content:
 		El nodo con el tipo NODE es quizá el más importante, ya que siempre tiene que estar.
 		Es un nodo que puede contener a otros nodos, y siempre tiene que haber nodos de este tipo.
 		Son agrupadores de conceptos, y permiten toda la estructura jerárquica de @STxT@.
@@ -347,7 +347,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...
 		
-	text:
+	Content:
 		Ya está. Hemos definido todos los nodos //NODE// de nuestro documento.
 		Con estos nodos ya podemos ver un poco la estructura que tiene que tener.
 		
@@ -366,13 +366,13 @@ Chapter(www.semantictext.info/book.stxt):
 				Titular cuenta:
 				Número cuenta:
 	
-	text:
+	Content:
 		Ahora sólo falta definir como serán los otros tipos de nodos.
 		
 	header:
 		Nodos de texto
 		
-	text:
+	Content:
 		Ya hemos dicho anteriormente que los nodos //básicos// más importantes
 		son los de texto. De hecho, todos los tipos básicos serán como los de texto,
 		pero restringiendo los valores que puede tomar.
@@ -382,7 +382,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		TEXT 
 		
-	text:
+	Content:
 		Los nodo de este tipo corresponden a texto, sin ninguna restricción concreta.
 		
 		Dentro de nuestro ejemplo tendríamos la mayoría de los nodos:
@@ -427,7 +427,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader:
 		URL
-	text:
+	Content:
 		Los nodos de este tipo corresponden a una URL. Debe ser una url //absoluta//,
 		de la forma estándar usada en internet. Este tipo también es muy importante,
 		ya que permite asociar un documento con otro disponible en Internet. Se puede
@@ -442,7 +442,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Nodos Numéricos
 		
-	text:
+	Content:
 		Hay cuatro tipos de nodos numéricos, y corresponden a conjuntos matemáticos concretos.
 		Decimos esto porque @STxT@ no está ligado a ningún lenguaje de programación,
 		y **no tiene ninguna restricción en cuanto a tamaños o longitudes**.
@@ -459,7 +459,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		NATURAL
 		
-	text:
+	Content:
 		Entendemos por números naturales cualquier número mayor o igual a 0 sin decimales. 
 		
 		Son valores válidos:
@@ -488,7 +488,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		INTEGER
 		
-	text:
+	Content:
 		Entendemos por números enteros cualquier número sin decimales, positivos o negativos. 
 		
 		Ejemplos válidos:
@@ -501,7 +501,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		RATIONAL
 		
-	text:
+	Content:
 		Los números racionales serán números de la forma aaa/bbb, dónde aaa y bbb son naturales.
 		También aceptamos números positivos (por defecto) o negativos.
 		 
@@ -515,7 +515,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		NUMBER
 		
-	text:
+	Content:
 		Los números son el tipo genérico para numéricos con decimales, 
 		sea cual sea su longitud. Utilizamos la notación ampliamente aceptada de usar "e"
 		para denotar exponencial de 10, y "." como separador de decimales.
@@ -535,7 +535,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		BINARY
 		
-	text:
+	Content:
 		Se trata de mostrar valores binarios, en los que sólo es posible usar 0 o 1's.
 		Permitimos también como separadores caracteres en blanco o saltos de línea.
 		
@@ -549,7 +549,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		HEXADECIMAL
 		
-	text:
+	Content:
 		Este tipo de nodo es para mostrar valores binarios, pero en formato hexadecimal.
 		También permitimos como separadores caracteres en blanco o saltos de línea.
 		
@@ -564,7 +564,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		BASE64
 		
-	text:
+	Content:
 		Este tipo de nodo también es para mostrar valores binarios, 
 		pero esta vez en Base64. Igual que los anteriores permitimos como separadores
 		caracteres en blanco o saltos de línea. Este campo puede usarse para contener 
@@ -579,7 +579,7 @@ Chapter(www.semantictext.info/book.stxt):
 		hvbGEgTXVuZG8hISEhISFIb2xhIE11bmRvISEhISEhSG9sYSBNdW5kbyEh
 		ISEhIQ==
 		
-	text:
+	Content:
 		En nuestro ejemplo de cliente tenemos la foto como un campo de este tipo:
 		
 	code:
@@ -599,7 +599,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		BOOLEAN
 		
-	text:
+	Content:
 		Este valor solo permite mostrar un valor binario: //0// o //1//, 
 		por lo que también lo interpretamos como valor boleano (verdadero o falso).
 		En el ejemplo de cliente, lo usaremos para especificar si un cliente es vip o no:
@@ -616,7 +616,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Un ejemplo para finalizar
 		
-	text:
+	Content:
 		Bien, ahora que casi hemos terminado, veremos la gramática completa, y un ejemplo de documento.
 		
 	subheader:
@@ -724,7 +724,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		El ejemplo
 		
-	text:
+	Content:
 		Espero que sea suficientemente explicativo :-)
 		
 	code:
@@ -843,7 +843,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Una última reflexión (*)
 		
-	text:
+	Content:
 		¿Es una buena costumbre introducir el nombre de la versión en la gramática? 
 		¿Por ejemplo xxxx_1.0.txt? 
 		
@@ -857,7 +857,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Gramática de la gramática (**)
 		
-	text:
+	Content:
 		Un documento sólo tiene sentido si se tiene la gramática previa.
 		Pero para definir la gramática hay que hacer un documento :-O
 		Con esto tenemos un problema recursivo, por lo que la gramática de definición debe ser implícita
@@ -882,7 +882,7 @@ Chapter(www.semantictext.info/book.stxt):
 					ns (namespace):
 					n (num):
 	
-	text:
+	Content:
 		Os presento la gramática de la gramática, en todo su esplendor:
 		
 	code:

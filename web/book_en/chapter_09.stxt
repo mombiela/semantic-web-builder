@@ -16,14 +16,14 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Note for the reader
 		
-	text:
+	Content:
 		This chapter may offend xml enthusiast readers.
 		Read at your own risk ;-)
 		
 	header:
 		The legend (**)
 		
-	text:
+	Content:
 		The origin of all evil: SGML.
 	
 		It all began a long, long time ago, in a dark land called "computer science".
@@ -57,7 +57,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Nowadays (**)
 	
-	text:
+	Content:
 		The world is full of ugly documents, //xml's that we like...// but it’s a horrible format!
 	
 		We are inheriting an outdated format, with outdated encodings, with a very computerized way of thinking.
@@ -71,7 +71,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Initial contact
 		
-	text:
+	Content:
 		I don't want to scare you, but @STxT@ compared with xml, is:
 	
 		* Better looking
@@ -100,7 +100,7 @@ Chapter(www.semantictext.info/book.stxt):
 		<body>Hello Mery!! The book is finished!!</body> 
 		</email>
 	
-	text:
+	Content:
 		Let’s see the @STxT@ version:
 		
 	code:
@@ -112,13 +112,13 @@ Chapter(www.semantictext.info/book.stxt):
 			Title: Project report
 			Body: Hello Mery!! The book is finished!!
 	
-	text:
+	Content:
 		I think a first feature stands out:
 		
 	assert:
 		@STxT@ looks much better than XML, and is understood better 
 		
-	text:
+	Content:
 		Let's go for the size.
 	
 		XML Length: 246\\
@@ -141,7 +141,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Title:Project report
 		Body:Hello Mery!! The book is finished!!
 	
-	text:
+	Content:
 		Minimum XML length: 225\\
 		Minimum @STxT@ length: 172
 	
@@ -155,27 +155,27 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		@STxT@ is more compact than XML
 		
-	text:
+	Content:
 		But in addition
 		
 	assert:
 		@STxT@ is more understandable than XML in a compacted state
 		
-	text:
+	Content:
 		or put another way
 		
 	assert:
 		@STxT@ keeps its understanding in a compacted state,\\
 		while XML does not
 				
-	text:
+	Content:
 		By the way, have we lost information? No, but what would happen if there were attributes?
 		We will discuss it later. For now, believe me:
 		
 	assert:
 		With @STxT@ you can express the same things as with XML
 			
-	text:
+	Content:
 		Now let's try something fun...
 		What does an XML document with a text node which in turn contains an XML, look like?
 	
@@ -202,7 +202,7 @@ Chapter(www.semantictext.info/book.stxt):
 		</body> 
 		</email>
 		
-	text:
+	Content:
 		And in @STxT@:
 	
 	code:
@@ -221,7 +221,7 @@ Chapter(www.semantictext.info/book.stxt):
 			<body>Hello Mery!! The book is finished!!</body> 
 			</email>
 	
-	text:
+	Content:
 		I think nothing more needs be said. It is clear, but:
 		
 	assert:
@@ -230,7 +230,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		XML attributes
 		
-	text:
+	Content:
 		Let's go for an example:
 	
 	code:
@@ -238,7 +238,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Hello World
 		</example>
 	
-	text:
+	Content:
 		Attributes in xml have always been controversial.
 		What is an attribute and what should be a node? It is always difficult to decide.
 		It is quite accepted that attributes are like node metadata,
@@ -254,7 +254,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		@STxT@ has no XML style attributes
 						
-	text:
+	Content:
 		This makes it //BETTER//, not worse. Sometimes, //LESS IS MORE ;-)//
 	
 		The previous example in @STxT@ would be:
@@ -263,9 +263,9 @@ Chapter(www.semantictext.info/book.stxt):
 		example(...):
 			id:1
 			show:false
-			text:Hello World
+			Content:Hello World
 	
-	text:
+	Content:
 		In general, we can always make something of the type:
 		
 	code:
@@ -283,7 +283,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		XSD, DTD, and @STxT@
 		
-	text:
+	Content:
 		Let's talk about dtd’s and xsd's of xml. They are documents that tell us how a valid xml must be.
 		They work well more or less, and each of them has its advantages and disadvantages.
 		If you look around on the Internet you will see what I mean.
@@ -297,13 +297,13 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Where is it?
 		
-	text:
+	Content:
 		I'd like to see a typical xml problem disappear:
 		
 	assert:
 		//Where is the grammar in this document?//
 		
-	text:
+	Content:
 		In @STxT@, //EVERYTHING// is on the web. When you want to create a document you have
 		to be able to see automatically its definition. The grammar should always be accessible.	 
 		
@@ -314,7 +314,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		XSD of the XSD (*)
 		
-	text:
+	Content:
 		Anyone want to compare the xsd of an xsd? I've been tempted to include it in the book,
 		but it would have taken up over 50 pages, and I'm not exaggerating :-D
 	
@@ -404,7 +404,7 @@ Chapter(www.semantictext.info/book.stxt):
 			cn:ns
 			a:namespace
 	
-	text:
+	Content:
 		That's it! Compare it! :-D \\
 		There’s no color!
 	
@@ -415,7 +415,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Parsers and validators
 		
-	text:
+	Content:
 		Does someone want to compare parsers and validators? There is no need to,
 		one with @STxT@ is MUCH faster and simpler to implement. 
 		Why? It’s very simple:
@@ -423,7 +423,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		@STxT@ has much fewer rules than XML
 			
-	text:
+	Content:
 		This makes everything easier. The parser code is faster.
 		They have fewer errors. It is easier to maintain. To make.
 		In addition, another advantage is that parsing and validating can be done simultaneously.
@@ -442,7 +442,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Namespaces
 		
-	text:
+	Content:
 		I have always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.
 	
 		Namespaces in @STxT@ are completely different, as they are not difficult to make,
@@ -458,7 +458,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Future
 		
-	text:
+	Content:
 		I have been very honest with my entire analysis of XML vs @STxT@, but there is something we must not forget.
 		XML has been around for quite a while. It is tested, it is used everywhere. It is a standard.
 		@STxT@ is new, it has just been born, and it has a long way to go.

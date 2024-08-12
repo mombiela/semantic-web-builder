@@ -14,7 +14,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: Where to start
 	
-	text:
+	Content:
 		This is not a book. It is almost a proposal. The start of future work.
 		I'd like for a new movement to be born from here.
 		We have been doing things the same way for a long time and I would like to break with this.
@@ -31,7 +31,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: Pending things
 	
-	text:
+	Content:
 		There is much left to do if we really want to adopt this technology.
 		I'm going to give ideas, although surely I can’t even imagine the
 		most interesting applications right now.
@@ -64,7 +64,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader: Editors with assisted content
 		
-	text:
+	Content:
 		We have many text editors, for many different languages.
 		How would you like @STxT@ editors?
 		Our favorite editor, but now collecting web semantics
@@ -75,7 +75,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader:	Libraries
 		
-	text:
+	Content:
 		We need @STxT@ parsers in any programming language.
 		There is much work to be done here. Fast and efficient language parsers.
 		
@@ -83,7 +83,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader: Language converter
 		
-	text:
+	Content:
 		Surely we have languages that we don’t like, or that we believe can be simpler.
 		We can pass directly to @STxT@ or make converters that pass from @STxT@ to another more specialized,
 		but less semantic language.
@@ -98,7 +98,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader: Language substitution
 		
-	text:
+	Content:
 		This can be done in a lot of sites, XML documents, RSS's, special text files,
 		program configurations; there are thousands of sites where a language or files could be replaced directly by @STxT@.
 	
@@ -107,7 +107,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader: Semantic Web
 	
-	text:
+	Content:
 		There is so much work to do that I will only tell you to look again at the previous chapter,
 		you hypnotize yourselves, and... go ahead!
 	

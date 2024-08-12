@@ -14,7 +14,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: Who this book is for
 		
-	text:
+	Content:
 		This book is for all those who want to learn @STxT@. 
 		
 		It is not just the explanation of a technology. It is the very process of its creation. 
@@ -35,7 +35,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: Prerequisites
 		
-	text:
+	Content:
 		No specific computer knowledge is necessary,
 		but having notions of technologies such as xml or html is recommended. 
 	
@@ -44,7 +44,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header:	Stars
 		
-	text:
+	Content:
 		Chapters and paragraphs can be normal, difficult ({{{*}}}), or simply strange ({{{*}}}{{{*}}}).
 		
 		Read the difficult ones ({{{*}}}) if it is early in the morning or you are feeling particularly lucid.
@@ -53,7 +53,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: Reading order
 	
-	text:
+	Content:
 		Everyone should read [[chapter_03. html|Chapter 3, tutorial]]. It is basic. 
 		The [[chapter_09. html|Chapter 9, @STxT@ and XML]] is also very interesting, 
 		as we compare these two languages.

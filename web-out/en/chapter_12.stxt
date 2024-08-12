@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Chapter 12: Semantic Web
 		
-	text:
+	Content:
 		The time to go deeper has come.
 	
 	alert:
@@ -22,14 +22,14 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		A proposal for the web
 	
-	text:
+	Content:
 		I have seen many proposals before, but in my opinion they do not entirely work.
 		I'm going to say something that a lot of people might not like:
 	
 	assert:
 		HTML is not semantic
 	
-	text:
+	Content:
 		Once again I’m sorry, but that’s the way it is. HTML has never been a good semantic language,
 		although it's okay for presenting content. A lot has been done in order to separate the content from the presentation,
 		but I think that there is still a long way to go. And I don't know if it is being made in the right direction.
@@ -52,7 +52,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Semantic Text
 	
-	text:
+	Content:
 		Alright, it is clear, @STxT@. And how do we make the semantic web with @STxT@?
 	
 		I don't know, although I imagine it’s one of the best ways of doing it nowadays :-D
@@ -71,7 +71,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Replace HTML5!!
 	
-	text:
+	Content:
 		But that is crazy!! We have spent years evolving, making browsers,... how could we do something like this!!
 		
 		That is crazy >:-O
@@ -81,7 +81,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Relax, I'm going to hypnotize you.
 	
-	text:
+	Content:
 		With @STxT@ everything can change, it is a new world, a new way of thinking. Let’s not close our minds to anything.
 	
 		Clear your mind. There is nothing there now. Nothing exists yet. We are in 1985.
@@ -107,7 +107,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		WAKE UP!!
 		
-	text:
+	Content:
 		What have you seen?
 		
 		Well, as you cannot answer I will tell you what //I// have seen.
@@ -123,7 +123,7 @@ Chapter(www.semantictext.info/book.stxt):
 		/tricks/*.stxt
 		/diets/*.stxt
 	
-	text:
+	Content:
 		Apart from this, every web portal has a series of pages that give us information on how to format
 		or present the text. There is a group of people who did this and did a great job.
 		They did it in the W3C.
@@ -140,7 +140,7 @@ Chapter(www.semantictext.info/book.stxt):
 		styles.stxt
 		/styles/*.stxt
 	
-	text:
+	Content:
 		These pages allowed us to get an idea of the portal content,
 		while at the same time we applied styles to the whole.
 		The best part about styles is that they were automatically applied depending on the type of document,
@@ -185,7 +185,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...
 		
-	text:
+	Content:
 		Well, that’s it. Excuse the scheme simplicity, but a hypnosis session cannot be stretched out any more :-)
 		I don't know if this will awaken you imagination, but I'd like to at least make you think.
 		Not everything is fine just as it is. There is always room for improvement. For doing things differently.
@@ -194,7 +194,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Search engines
 	
-	text:
+	Content:
 		I believe that the search engines and browsers in general would increase their searching capabilities
 		and their capability of indexing contents knowing what the text is about. In addition, it would already be nested
 		and each part would have a specific and well-defined meaning.
@@ -205,7 +205,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		The transition
 		
-	text:
+	Content:
 		What should the transition be like? It should be //easy and transparent//. Otherwise, there will be no transition.
 		The first thing to do would be to define the new way of seeing documents with @STxT@, and the new CSS.
 		By the way, it would be a good moment for making the CSS and having a first version.
@@ -230,7 +230,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		SWB: Semantic Web Builder
 	
-	text:
+	Content:
 		I couldn’t finish this chapter without speaking of SWB. This is the first @STxT@ application that we have made.
 		Well, I know that it is the first one because it has been made for publishing this web, and before there was nothing else :-D
 	

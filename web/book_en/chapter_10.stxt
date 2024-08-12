@@ -16,7 +16,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Warning
 		
-	text:
+	Content:
 		Same as the previous chapter. Webservices and SOAP fans must forgive and excuse me.
 		It is better they do not read any part of this chapter.
 	
@@ -26,7 +26,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		SOAP in theory
 		
-	text:
+	Content:
 		SOAP is fantastic. It is a language for web services. It is based on xml,
 		and that makes it standard and cross-platform. It is also based on tested technologies,
 		such as XSD's. If there were to be complexities, there will be no problem. Tools will be created,
@@ -41,7 +41,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		SOAP in practice
 	
-	text:
+	Content:
 		But practice does not always agree with us. There are things that are beyond control.
 		Once more complexity is apparent in all its immensity.
 		There are too many variables, too many interpretations. Too many parties involved.
@@ -56,7 +56,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		REST
 		
-	text:
+	Content:
 		The appearance of REST services are a clear response to SOAP problems.
 		Everything tends to go in that direction. And I’m not surprised by this. I would do it too.
 		The big ones are on their way. Cell phones talk to each other this way.
@@ -69,7 +69,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		@STxT@: A new approach
 		
-	text:
+	Content:
 		We now have a new tool. It is called @STxT@. How would a webservice be defined?
 	
 		I am going to propose things, this would be a new world to explore.
@@ -95,7 +95,7 @@ Chapter(www.semantictext.info/book.stxt):
 				in: Node3(www.example.com/nodo.stxt)
 				out: OtherX(www.demo.com/demo.stxt)
 	
-	text:
+	Content:
 		or perhaps the following way:
 		
 	code:
@@ -117,7 +117,7 @@ Chapter(www.semantictext.info/book.stxt):
 				in: Nodo3(www.example.com/nodo.stxt)
 				out: OtroX(www.demo.com/demo.stxt)
 	
-	text:
+	Content:
 		At this point I wouldn't want to say anything else. I do not dare,
 		but I guess you have already grasped the idea: //simplify//.
 		Everything is much simpler when @STxT@ comes into play.
@@ -127,7 +127,7 @@ Chapter(www.semantictext.info/book.stxt):
 		We had SOAP, REST, and now... \\
 		//SWS//: Semantic web services!!
 			
-	text:
+	Content:
 		Well, as it is an http(s) service we could also do something hybrid ;-)
 		
 	code:
@@ -154,13 +154,13 @@ Chapter(www.semantictext.info/book.stxt):
 				url: http://www.xxx.com/zzz
 				out: OtherX(www.demo.com/demo.stxt)
 	
-	text:
+	Content:
 		There are many possibilities, I like them all with @STxT@ ;-)
 	
 	header:
 		A final proposal
 		
-	text:
+	Content:
 		At the end I've done it. Initially I didn't want to, but I could not avoid doing it.
 	
 		I'm going to make a proposal for a webservices definition, and I'm also going to make it available.
@@ -168,7 +168,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader:	Grammar
 	
-	text:
+	Content:
 		The grammar is available in [[www.semantictext.info/web_services.stxt]]
 	
 		It has the following code:
@@ -280,14 +280,14 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader:	The explanation
 	
-	text:
+	Content:
 		The @STxT@ document responsible for defining one (or several webservices) will be
 		a document of the type:
 		
 	code:
 		Web Service Definitions(www.semantictext.info/web_services.stxt)
 		
-	text:
+	Content:
 		This document lets us define 3 different types of services:
 	
 		* **SWS Service**: An @STxT@ input document (UTF-8 encoding) and an @STxT@ output document (UTF-8).
@@ -315,7 +315,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 		A node(www.example.demo/ws.stxt):
 		Document: This is a demo
-		Text: Hello world!!!
+		Content: Hello world!!!
 		Client:
 			Id:1
 			Name:Evelyn
@@ -383,7 +383,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		The thought
 		
-	text:
+	Content:
 		In a few lines we have condensed a large amount of information,
 		but in a very clear and simple way.
 	

@@ -16,7 +16,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header: 
 		Ejemplos
 		
-	text:	
+	Content:	
 		Hay miles de ejemplos que se pueden hacer con esta tecnología.
 		Es tan sencillo como coger un ejemplo cualquiera de otro lenguaje
 		y ver cómo se escribiría en @STxT@. Quizá lo más simple sea un ejemplo
@@ -55,7 +55,7 @@ Chapter(www.semantictext.info/book.stxt):
 			</Book>
 		</Library>
 	
-	text:
+	Content:
 		Lo mismo pasado a @STxT@:
 		
 	code:
@@ -85,7 +85,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Published: 20 October 1955
 			Genre: High fantasy Adventure
 		
-	text:
+	Content:
 		Otro ejemplo en XML:
 		
 	code:
@@ -97,7 +97,7 @@ Chapter(www.semantictext.info/book.stxt):
 		<body>Hello Mery!! The book is finished!!</body> 
 		</email>
 		
-	text:
+	Content:
 		En @STxT@ se transforma en:
 		
 	code:
@@ -109,7 +109,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Title: Project report
 		Body: Hello Mery!! The book is finished!!
 		
-	text:
+	Content:
 		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el @STxT@.
 		Por cierto, el @STxT@ siempre tiene una gramática, mientras que el XML no la tiene
 		hasta que no se le aplique un dtd o xsd. 
@@ -117,7 +117,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Wikipedia (*)
 		
-	text:
+	Content:
 		Tengo gran admiración por la wikipedia. Creo que es uno de los mejores proyectos que se han creado en Internet.
 		
 		//¿Como se podría beneficiar de @STxT@?//
@@ -151,7 +151,7 @@ Chapter(www.semantictext.info/book.stxt):
 			after his family in the 3rd century BC.
 			...
 		
-	text:
+	Content:
 		Otra ventaja es que con @STxT@ no solamente tendríamos "plantillas" de 
 		cómo debe ser la información de una ciudad, sino que también podríamos
 		aplicar estilos y formatos dependiendo del tipo de documento.
@@ -162,7 +162,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Lightweight markup language
 		
-	text:
+	Content:
 		Los lenguajes ligeros de marcado han tenido un auge espectacular gracias a proyectos como la Wikipedia.
 		Gracias a ellos se puede definir texto de forma mucho más simple que teniendo que escribir etiquetas como HTML.
 		Pero tienen una gran carencia: No tienen una estructura ni una semántica clara.
@@ -195,7 +195,7 @@ Chapter(www.semantictext.info/book.stxt):
 				* Aprendizaje automático
 				* Mayor concentración
 		
-	text:
+	Content:
 		Vemos que hemos dado estructura gracias a @STxT@, pero la descripción se ha dado
 		al estilo wikipedia.
 		
@@ -205,7 +205,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:				
 		Tex, Latex
 		
-	text:
+	Content:
 		Perdonad si critico mucho. Nunca lo hago sin dar una alternativa o un motivo. Me gustan las críticas constructivas ;-)
 		He visto que uno de los objetivos de TeX es que un documento se imprima igual ahora y dentro de 100 años.
 		Me había parecido perfecto... hasta hoy. Ahora creo que el objetivo debería ser
@@ -251,7 +251,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Paragraph:
 			Hello World!!
 		
-	text:
+	Content:
 		De hecho, ahora ya podemos pensar en @STxT@, quizá sea el momento de hacer fórmulas de otra forma,
 		o notación más simplificada, como por ejemplo:
 		
@@ -286,13 +286,13 @@ Chapter(www.semantictext.info/book.stxt):
 		Paragraph:
 			Hello World!!
 		
-	text:
+	Content:
 		Bien, hay miles de posibilidades y formas de enfocar el problema, os lo dejo como ejercicio ;-D
 		
 	assert:
 		¿Qué hemos ganado con respecto a sólo TeX? 
 		
-	text:
+	Content:
 		* Facilidad en la creación de documentos
 		* UTF-8
 		* Estructura definida
@@ -305,7 +305,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		JSON (*)
 	
-	text:
+	Content:
 		JSON en principio no tiene nada que ver con @STxT@, pero hay ciertos momentos
 		en los que pueden entrar en competencia. Estoy pensando en servicios web mediante REST.
 		Yo apuesto por @STxT@, ya que es tan fácil (o más) de parsear que JSON,
@@ -320,7 +320,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Otros (*)
 		
-	text:
+	Content:
 		Hay otros lenguajes que se pueden parecer a @STxT@, pero creo que ninguno se ha hecho con el mismo enfoque.
 		Por ejemplo, tenemos YAML, que tiene ciertos parecidos en la forma en que usa la identación,
 		o CofeeScript, que teniendo un aspecto a veces similar, no tiene nada que ver con @STxT@.

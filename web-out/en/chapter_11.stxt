@@ -16,7 +16,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Introduction
 		
-	text:
+	Content:
 		Parsing an @STxT@ file is much easier than parsing files from other technologies.
 		It may seem contradictory, because it is actually a very powerful language, but at the same time it is
 		based on very simple principles.
@@ -28,7 +28,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		[[https://github.com/mombiela/stxt-parser | https://github.com/mombiela/stxt-parser]]
 		
-	text:
+	Content:
 		This implementation has been done in Java language, because it is the one I know best.
 	
 		I hope @STxT@ is successful, and that other implementations appear very soon.
@@ -45,7 +45,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Line parsing
 		
-	text:
+	Content:
 		The parsing process can be done line by line, so we can say that in general we have:
 		
 	code:
@@ -54,14 +54,14 @@ Chapter(www.semantictext.info/book.stxt):
 			process line
 		end while
 		
-	text:
+	Content:
 		During the process it is suitable to have a list of the last nodes we've been finding per level,
 		as the correct processing depends on this.
 		
 	subheader:
 		Line processing
 		
-	text:
+	Content:
 		The first step in line processing is the //standardization// of the line.
 		A line is standardized when it is in compact (or semi compact) form, so we have to check whether it is,
 		and if it isn't, transform it. In the standardization the comment lines are also deleted.
@@ -87,7 +87,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Validations
 		
-	text:
+	Content:
 		Validations are made at various points of the parsing:
 	
 		* When creating a new node: when creating a new node we validate that its namespace can be infered.
@@ -105,7 +105,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Language nodes
 		
-	text:
+	Content:
 		We had said in the language description that the data types have no limitation
 		and are not linked to a language, so validations should only be checked
 		using regular expressions or methods that ensure this fact.
@@ -141,7 +141,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Storage
 	
-	text:
+	Content:
 		We obtain the grammars from the Internet, but having to go search definitions remotely all the time
 		is not practical nor efficient. The most efficient strategy is to have a kind of grammar repository,
 		in the disc, and to go find them there. In case we do not find them, we would look on the Internet,
@@ -151,7 +151,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Initial grammar
 		
-	text:
+	Content:
 		We should keep in mind that it is not possible to make a parser without having the grammar previously.
 		In order to parse a grammar we need to have the definition of the base grammar already parsed.
 		This is why there will be a definition of the initial grammar in the code itself. 
@@ -159,7 +159,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Details to consider
 		
-	text:
+	Content:
 		There are some details that must be considered in parsing:
 		
 		* Case-insensitive: All nodes are considered to be CASE-INSENSITIVE,

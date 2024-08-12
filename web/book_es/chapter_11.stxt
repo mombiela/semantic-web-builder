@@ -16,7 +16,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Introducción
 		
-	text:
+	Content:
 		Parsear un fichero @STxT@ es mucho más fácil que parsear ficheros de otras tecnologías. 
 		Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está
 		basado en principios muy simples.
@@ -28,7 +28,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		[[https://github.com/mombiela/stxt-parser | https://github.com/mombiela/stxt-parser]]
 		
-	text:
+	Content:
 		Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.
 		
 		Espero que @STxT@ tenga éxito, y que muy pronto aparezcan otras implementaciones.
@@ -45,7 +45,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Parseo por líneas
 		
-	text:
+	Content:
 		El proceso de parseo puede hacerse línea a línea, por lo que podemos decir que de forma general tenemos:
 		
 	code:
@@ -54,14 +54,14 @@ Chapter(www.semantictext.info/book.stxt):
 			procesar linea
 		fin mientras
 		
-	text:
+	Content:
 		Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,
 		ya que de esto depende el procesado correcto.
 		
 	subheader:
 		Procesado de línea
 		
-	text:
+	Content:
 		El primer paso en el procesado de la línea es la //normalización// de la línea.
 		Una línea está normalizada cuando está en forma compacta (o semicompacta), por lo que hay que comprobar si lo está,
 		y si no lo está, transformarla. En la normalización también se eliminan las líneas de comentarios.
@@ -87,7 +87,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Validaciones
 		
-	text:
+	Content:
 		Las validaciones se hacen en varios puntos del parseo:
 		
 		* Al crear un nodo nuevo: Al crear un nodo nuevo se valida que se pueda deducir su namespace. 
@@ -105,7 +105,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Los nodos del lenguaje
 		
-	text:
+	Content:
 		En la descripción del lenguaje habíamos dicho que los tipos de datos no tienen limitación
 		ni están ligados a un lenguaje, por lo que las validaciones sólo deberían ser comprobadas
 		mediante expresiones regulares o métodos que aseguren este hecho.
@@ -141,7 +141,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Almacenaje
 		
-	text:
+	Content:
 		Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar
 		siempre las definiciones de forma remota. La estrategia más eficiente es tener una especie de repositorio de gramáticas,
 		en disco, e ir a buscarlas siempre allí. En caso de no encontrarse se buscaría en Internet,
@@ -151,7 +151,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Gramática inicial
 		
-	text:
+	Content:
 		Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.
 		Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
 		Por esta razón habrá una definición de la gramática inicial en el propio código. 
@@ -159,7 +159,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Detalles a tener en cuenta
 		
-	text:
+	Content:
 		Hay algunos detalles que hay que tener en cuenta en el parseo:
 		
 		* Case-insensitive: Todos los nodos son considerados CASE-INSENSITIVE, 

@@ -15,7 +15,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Capítulo 7: Equivalencias e Internacionalización (I18N)
 		
-	text:
+	Content:
 		Este capítulo puede parecer complejo al principio,
 		pero no es así. Veréis que es algo muy natural.
 		De hecho, pensaréis... ¿Por qué no lo hemos usado antes?
@@ -26,7 +26,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:	
 		I18N. Un ejemplo
 		
-	text:	
+	Content:	
 		Vamos a hacer un ejemplo sencillo.
 		Por ejemplo un documento de una actriz/actor:
 		
@@ -42,7 +42,7 @@ Chapter(www.semantictext.info/book.stxt):
 					Title: Garden in red
 					Year: 1993
 		
-	text:
+	Content:
 		La gramática es bastante sencilla:
 		
 	code:
@@ -87,7 +87,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Name: year
 			Type: TEXT
 		
-	text:
+	Content:
 		Ahora, imaginemos que queremos la misma información en castellano,
 		pero en vez de traducir todo, hacemos una gramática casi igual,
 		pero con alias en castellano.
@@ -143,7 +143,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Alias: Año
 			Type: TEXT
 		
-	text:
+	Content:
 		Y el documento podría quedar de la siguiente forma:
 		
 	code:
@@ -161,14 +161,14 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		¡Ya tenemos un documento igual pero en perfecto castellano!
 		
-	text:	
+	Content:	
 		Además, estos documentos tienen algo en común:
 		
 	assert:
 		¡La forma compactada es la misma!
 		\\(excepto el Namespace)
 			
-	text:		
+	Content:		
 		Bien, esto es algo muy importante, ya que para traducir de uno a otro 
 		sólo es necesario pasar a forma compactada, cambiar el namespace y... ¡ya está!
 		El documento es exactamente igual.
@@ -185,7 +185,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:			
 		Equivalencias (**)
 		
-	text:
+	Content:
 		Vamos a hablar de relaciones que se pueden hacer entre distintas gramáticas,
 		y de sus posibles transformaciones. Realmente este tema podría dar mucho más de sí,
 		pero sólo vamos a reflexionar un poco, y mostrar ciertas cosas.
@@ -193,7 +193,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:  
 		Gramáticas equivalentes (**)
 		
-	text:
+	Content:
 		Decimos que dos gramáticas son equivalentes si cualquier documento
 		tiene la misma forma compactada; a excepción del namespace del primer nodo.
 		
@@ -219,7 +219,7 @@ Chapter(www.semantictext.info/book.stxt):
 		se puede parsear por A. Es decir, que los canónicos de B
 		son o bien canónicos de A o alias de A.
 		  	
-	text:	  
+	Content:	  
 		Creo que la definición está bastante clara, es como decir que es
 		//como un subconjunto de otro lenguaje más grande//.
 		
@@ -246,7 +246,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Extensiones (**)
 		
-	text:
+	Content:
 		Las extensiones son como las gramáticas transformables, pero miradas desde la gramática de destino.
 		
 	assert:
@@ -254,7 +254,7 @@ Chapter(www.semantictext.info/book.stxt):
 		sólo cambiando el namespace del nodo original, se puede parsear por A.
 		Es decir, que los canónicos de B son o bien canónicos de A o alias de A.
 		
-	text:
+	Content:
 		Esto nos dice que A es una ampliación de B. Aquí lo que hacemos es //ampliar la funcionalidad de B//,
 		pero permitimos la compatibilidad a la inversa. Es decir, que si tenemos documentos de B también puedan usarse.
 		

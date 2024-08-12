@@ -14,7 +14,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	header: Por dónde empezar
 		
-	text:
+	Content:
 		Esto no es un libro. Es casi una propuesta. Un inicio de trabajo futuro. 
 		Me gustaría que a partir de aquí naciera un nuevo movimiento. 
 		Hace mucho que hacemos las cosas de la misma forma y me gustaría romper con ello. 
@@ -31,7 +31,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	header: Cosas que quedan por hacer
 		
-	text:
+	Content:
 		Queda mucho por hacer, si realmente se quiere adoptar esta tecnología.
 		Voy a dar ideas, aunque seguro que las aplicaciones más interesantes ni siquiera 
 		las puedo imaginar ahora mismo.
@@ -64,7 +64,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader: Editores con contenido asistido
 		
-	text:
+	Content:
 		Tenemos muchos editores de texto, para muchos lenguajes distintos.
 		¿Qué os parecería editores para @STxT@?
 		Nuestro editor favorito, pero ahora recogiendo semánticas de la web
@@ -75,7 +75,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader:	Librerías
 		
-	text:  
+	Content:  
 		Necesitamos parseadores de @STxT@ en cualquier lenguaje de programación.
 		Aquí hay mucho trabajo por hacer. Parseadores del lenguaje rápidos y eficientes.
 		
@@ -83,7 +83,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader: Conversor de lenguajes
 		
-	text:
+	Content:
 		Seguro que tenemos lenguajes que no nos gustan, o que creemos que pueden ser más sencillos. 
 		Se puede pasar directamente a @STxT@ o hacer conversores que pasen de @STxT@ a otro más especializado, 
 		pero menos semántico.
@@ -98,7 +98,7 @@ Chapter(www.semantictext.info/book.stxt):
 		
 	subheader: Substitución de lenguajes
 		
-	text:
+	Content:
 		Esto se puede hacer en un montón de sitios, documentos XML, RSS's, ficheros de texto especiales, 
 		configuración de programas, hay miles de sitios donde se podría substituir directamente un lenguaje o ficheros por @STxT@.
 		
@@ -107,7 +107,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	subheader: Web semántica
 		
-	text:
+	Content:
 		Aquí hay tanto trabajo por hacer que sólo os diré que volváis a mirar el capítulo anterior,
 		os autohipnotizéis, y... ¡adelante!
 		

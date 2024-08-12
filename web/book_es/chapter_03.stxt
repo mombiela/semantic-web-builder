@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	title:
 		Capítulo 3: @STxT@, Tutorial
 		
-	text:
+	Content:
 		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
 		Te explicamos lo que es @STxT@ directamente, sin más preámbulos.
 		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
@@ -21,7 +21,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Un ejemplo... ¡ya!
 		
-	text:
+	Content:
 		Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
 		y //todo el mundo// lo puede llega a entender.
 		
@@ -62,7 +62,7 @@ Chapter(www.semantictext.info/book.stxt):
 		espolvorean con un poco de la mezcla del grassolis, y se pasan 
 		por azúcar.
 		
-	text:
+	Content:
 		De momento es sólo texto, no puede considerarse todavía un @STxT@ válido.	
 		Pero lo iremos retocando y poco a poco obtendremos un perfecto @STxT@ ;-)
 		
@@ -118,13 +118,13 @@ Chapter(www.semantictext.info/book.stxt):
 		espolvorean con un poco de la mezcla del grassolis, y se pasan 
 		por azúcar.
 		
-	text:
+	Content:
 		Esta estructura es muy natural, y es la base para obtener el documento final @STxT@.
 		
 	header:
 		TODO en Namespaces (ns)
 		
-	text:
+	Content:
 		Vamos a perder el miedo //ahora mismo// a los namespaces en @STxT@; 
 		en homenaje a todos los usuarios traumatizados de xml que no los pueden soportar ;-)
 		
@@ -134,7 +134,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Ahora prestad atención. 
 		
-	text:
+	Content:
 		Un documento @STxT@ consiste en un conjunto de nodos anidados, 
 		y **TODOS** los nodos deben pertenecer a algún namespace (no tiene por qué ser el mismo). 
 		
@@ -181,7 +181,7 @@ Chapter(www.semantictext.info/book.stxt):
 		haber un título, o que la descripción es opcional, pero esto también se
 		verá más adelante.
 		
-	text:
+	Content:
 		Y ahora reescribimos la receta con los anteriores nodos y namespaces. 
 		Hay que tener en cuenta que //sólo hay que especificar el namespace del primer nodo, 
 		los otros namespaces se deducen automáticamente de su definición.//
@@ -225,7 +225,7 @@ Chapter(www.semantictext.info/book.stxt):
 			sacando se espolvorean con un poco de la mezcla del grassolis, y se 
 			pasan por azúcar.
 		
-	text:
+	Content:
 		¡Y ya está! ¡Nuestro primer documento @STxT@! :-) Míralo bien. No es necesario nada más.
 		
 		Leed este apartado tantas veces como queráis, es imprescindible. 
@@ -239,14 +239,14 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Nodos e identación
 	
-	text:	
+	Content:	
 		Antes hemos dicho que un documento @STxT@ es un conjunto de nodos anidados. Pero no hemos dicho
 		cuáles son las reglas de anidación, ni como se hace. Pero todo es muy intuitivo y visual:
 		
 	assert:
 		Se hace según la identación del nodo. 
 		
-	text:
+	Content:
 		Mejor un ejemplo, es más fácil verlo que explicarlo:
 		
 	code:
@@ -258,7 +258,7 @@ Chapter(www.semantictext.info/book.stxt):
 				Nodo 6: Texto nodo 6
 				Nodo 7: Texto nodo 7
 		
-	text:
+	Content:
 		En este ejemplo tenemos un nodo principal //Nodo 1//, que a su vez contiene 2 nodos: //Nodo 2// y //Nodo 5//.
 		A su vez //Nodo 2// contiene a //Nodo 3// y //Nodo 4//, y //Nodo 5// contiene //Nodo 6// y //Nodo 7//. 
 		
@@ -277,7 +277,7 @@ Chapter(www.semantictext.info/book.stxt):
 					Nodo 6: Texto nodo 6
 			Nodo 7: Texto nodo 7
 		 
-	text:
+	Content:
 		Ahora toda la estructura ha cambiado:
 		
 		* Nodo 1: Contiene Nodo 2 y 7
@@ -295,7 +295,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Ingredientes:
 			Preparación:
 		
-	text:
+	Content:
 		Teníamos un nodo //Receta// que contenía todos los otros nodos.
 		
 		Vemos que la identación es la clave, y la identación se obtiene mediante caracteres de tabulación.
@@ -305,7 +305,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Regla: Un documento @STxT@ sólo puede tener un nodo principal
 		
-	text:
+	Content:
 		Esta regla tiene que cumplirse siempre, lo que permite una simplificación en la estructuración de los 
 		documentos. Por ello, los nodos de 2º nivel no es necesario que estén alineados.
 		
@@ -318,7 +318,7 @@ Chapter(www.semantictext.info/book.stxt):
 		Ingredientes:
 		Preparación:
 		
-	text:
+	Content:
 		Gracias a la estructura, el primer nodo encontrado es el principal, 
 		y todos los demás se consideran sus hijos. 
 		De la misma forma tendríamos que el siguiente texto
@@ -332,7 +332,7 @@ Chapter(www.semantictext.info/book.stxt):
 				Nodo 6: Texto nodo 6
 				Nodo 7: Texto nodo 7
 		
-	text:
+	Content:
 		es equivalente a 
 		
 	code:
@@ -348,7 +348,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Nodo y Texto
 		
-	text:
+	Content:
 		Los tipos de nodo más habituales en los documentos @STxT@ son NODO y TEXTO.
 		El tipo nodo es un contenedor para otros nodos, mientras que el tipo texto 
 		permite la inserción de un texto, sin restricciones.
@@ -356,7 +356,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		La alineación es lo único que importa
 			
-	text:	
+	Content:	
 		Ésta es la regla básica para todos los nodos. Anteriormente hemos visto cómo la alineación 
 		cambiaba la jerarquía de nodos. En los nodos de texto la alineación permite incluir 
 		cualquier tipo de contenido //SIN TENER NECESIDAD DE UTILIZAR CARACTERES DE ESCAPE//.
@@ -371,7 +371,7 @@ Chapter(www.semantictext.info/book.stxt):
 				a "Nodo Texto:". Vemos que no es necesario caracteres de escape.
 				Por la alineación sabemos qué forma parte de "Nodo Texto".
 		
-	text:
+	Content:
 		Ahora más diversión... y si introducimos xml en el texto? 
 		Veremos que no hay problema alguno. Podemos insertar contenido texto 
 		sin tener que escapar ningún carácter. //¡Por Fin!//
@@ -388,7 +388,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Comentarios
 		
-	text:
+	Content:
 		Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
 		Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí 
 		para comentar o añadir alguna observación, pero no influyen en el documento en sí.
@@ -396,7 +396,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		En @STxT@ son comentarios todas las líneas que empiezan por el carácter #
 		
-	text:
+	Content:
 		Volvemos a nuestro ejemplo. Imaginemos que queremos añadir información a nuestra receta,
 		pero esta información es sólo a título de curiosidad, o incluso para aumentar 
 		la legibilidad del documento. Pues bien, esta información la añadiríamos como un comentario.
@@ -427,7 +427,7 @@ Chapter(www.semantictext.info/book.stxt):
 			En un recipiente pondremos la harina y el resto de ingredientes.
 			...
 		
-	text:
+	Content:
 		Los comentarios no tienen que tener ningún tipo de formato, 
 		es texto libre que el autor del documento puede incluir. 
 		Además, no tiene que estar situado en ningún sitio concreto del documento. 
@@ -437,7 +437,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Por fin, la gramática
 		 
-	text:
+	Content:
 		Y aquí está la gramática. O la definición de nodos del namespace.
 		En el próximo capítulo la veremos en más profundidad, 
 		pero es bastante explicativa por sí misma;
@@ -478,7 +478,7 @@ Chapter(www.semantictext.info/book.stxt):
 			Type:TEXT
 			Name:Preparación
 		  
-	text:  
+	Content:  
 		La información que contiene es la que ya habíamos visto anteriormente:
 		
 		* Hay 4 nodos de texto: Título, Descripción, Ingredientes, Preparación
@@ -498,7 +498,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Resumen
 		
-	text:
+	Content:
 		* Un documento @STxT@ es un conjunto de nodos jerárquicos.
 		* La estructura de cualquier nodo está definida en su namespace correspondiente.
 		* La jerarquía de nodos se puede ver de forma visual, 

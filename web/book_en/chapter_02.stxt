@@ -17,7 +17,7 @@ Chapter(www.semantictext.info/book.stxt):
 		This project is the result of years of //subconscious// reflection,\\
 		although it only took a moment of inspiration.
 	
-	text:
+	Content:
 		This chapter may seem a little unfocused, but they are my reflections when creating @STxT@.
 		Please forgive me if I repeat myself a bit, if you don't understand what I am saying, or if it seems an incoherent speech.
 		But this is the way it is. It has been written to the best of my abilities, on different days, but always using it as the 
@@ -26,7 +26,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		Is //The inspiration//
 					
-	text:
+	Content:
 		The other chapters are //The Perspiration//.
 	
 		Glance quickly over this chapter, and read it more in depth when you already know
@@ -35,7 +35,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header: 
 		What is @STxT@?
 		
-	text:
+	Content:
 		It is a purely semantic language, with some very basic rules, 
 		which allows the creation of documents with structured and easy 
 		to interpret content, by both humans and machines. 
@@ -62,7 +62,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Statement of Intent :-)
 	
-	text:
+	Content:
 		There are a number of principles or features that we want this new language to have.
 		
 		* Independent from the programming language, operating system, and platform
@@ -89,12 +89,12 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		What does @STxT@ mean?
 	
-	text:
+	Content:
 		Well, originally @STxT@ means "Semantic text". 
 		Although it could also have other meanings, that I particularly like: SuperText and SexyText.
 	
-		* SuperText: it is text, but super :-D
-		* SexyText: it is particularly beautiful text ;-)
+		* SuperContent: it is text, but super :-D
+		* SexyContent: it is particularly beautiful text ;-)
 	
 		How did I choose the @STxT@ extension? I was sure that documents had to be semantic,
 		so there was something that had to have "semantic". In addition, languages
@@ -105,7 +105,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header:	Why a new language?
 	
-	text:
+	Content:
 		I have always believed that we needed a simple language for writing texts, but that was
 		at same time powerful as far as structure is concerned. And I had not found it... until now.
 	
@@ -116,7 +116,7 @@ Chapter(www.semantictext.info/book.stxt):
 	assert:
 		//With @STxT@ we solve semantics and syntax at the same time, \\ in a stylish and beautiful way.//
 	
-	text:
+	Content:
 		Make no mistake. I am a computer tech. But sometimes you have to see things from the other side, 
 		with a 'clean' view. In fact it is a balance between learning from what you know and trying to think
 		as if you didn't know anything about it.
@@ -126,7 +126,7 @@ Chapter(www.semantictext.info/book.stxt):
 	
 	header: A language for everyone
 		
-	text:
+	Content:
 		We try to make it easy for everyone. There should not be problems for "non-computer people" 
 		when having to create a semantic document. It should be intuitive, and simple, with the right tools.
 	
@@ -152,7 +152,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Chaotic Statement of Intent :-D (**)
 	
-	Text:	
+	Content:	
 		
 		Well, all this is what we were looking for, or what we have achieved, or the objective,
 		or a mixture of all these things. I don't know, they are scattered ideas, which have been out there 
@@ -189,7 +189,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Applications, results, and expectations
 	
-	Text:
+	Content:
 		I believe we have created a great language. Simple, practical, and truly useful. 
 		
 		I have written this book in this language. And I had never felt so comfortable.

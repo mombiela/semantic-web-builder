@@ -18,7 +18,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		@STxT@ Information analysis
 		
-	text:
+	Content:
 		This chapter deals with the compaction of @STxT@ documents.
 		We are going to modify a document to make it more compact,
 		so that it is faster to parse and contains the same information.
@@ -44,7 +44,7 @@ Chapter(www.semantictext.info/book.stxt):
 					Node_8:
 						Node_9: Last line
 		
-	text:
+	Content:
 		We see that there are 10 nodes in this document.
 		The first node is Node_0, and is the one containing the rest.
 		We could say that it is the first one to appear (order)
@@ -53,7 +53,7 @@ Chapter(www.semantictext.info/book.stxt):
 		This way, we could qualify all the lines, and extract the information. 
 		It isn’t hard to make a table with this information:
 		
-	text:
+	Content:
 		|=Order  |=Node   |= Level  |
 		| 1      |Node_0  |0        |
 		| 2      |Node_1  |1        |
@@ -68,13 +68,13 @@ Chapter(www.semantictext.info/book.stxt):
 		| 11     |Node_8  |3        |
 		| 12     |Node_9  |4        |
 	
-	text:	
+	Content:	
 		Now we just need to include this information. This is what the next section deals with.
 		
 	header:
 		A way of compacting
 	
-	text:
+	Content:
 		From the table above, we are going to propose a way to compact the information.
 		It will be as easy as inserting the level number instead of using tabs,
 		and separate it with the usual ':' character.
@@ -95,7 +95,7 @@ Chapter(www.semantictext.info/book.stxt):
 		3:Node_8:
 		4:Node_9: Last line
 	
-	text:
+	Content:
 		Actually, there is still redundant information, 
 		as the first node always has level 0
 		(in fact the parsers can assume that it is -1), 
@@ -117,7 +117,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:Node_8:
 		3:Node_9: Last line
 	
-	text:
+	Content:
 		As a personal remark I will say that my I prefer that all nodes have a level
 		(except the first one) as I find it more aesthetic and easy to read. 
 		
@@ -137,14 +137,14 @@ Chapter(www.semantictext.info/book.stxt):
 		3:Node_8:
 		4:Node_9: Last line
 	
-	text:
+	Content:
 		There is one basic rule for compaction:
 		
 	assert:
 		If aliases have been used \\
 		they will be replaced by the Canonical Name
 		
-	text:	
+	Content:	
 		This is an important rule, since names are usually shorter than aliases,
 		and at the same time it is faster to parse a document this way. In addition, it also
 		plays an important role in document transformation, as we
@@ -154,7 +154,7 @@ Chapter(www.semantictext.info/book.stxt):
 		In case we do not use canonical names we would talk of //semicompacted// documents,
 		which although correct, would not it be as optimal as the compacted ones.
 	
-	text:
+	Content:
 		Finally keep in mind that text lines which belong 
 		to a node, will always be in a level above the node to which they belong.
 		In the previous example we can see that after Node6 (with level 2)
@@ -169,8 +169,8 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Other examples
 	
-	text:
-		If we compact the fritters recipe, we would ave the following text:
+	Content:
+		If we compact the fritters recipe, we would ave the following Content:
 	
 	code:
 		Recipe(www.cooking.demo/recipe.stxt):
@@ -201,7 +201,7 @@ Chapter(www.semantictext.info/book.stxt):
 		2:them out, sprinkle them with a little bit of the grassolis mixture,
 		2:and cover them with sugar.
 		
-	text:
+	Content:
 		Let’s see what the compaction of the example we saw in the
 		grammar chapter looks like.
 		
@@ -293,7 +293,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Usefulness
 		
-	text:
+	Content:
 		The usefulness of compaction is to create a slightly more efficient format,
 		which is just as easy to read and write by humans.
 		With level numbers it is also very easy to read,

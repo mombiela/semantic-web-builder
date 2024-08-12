@@ -13,7 +13,7 @@ Chapter(www.semantictext.info/book.stxt):
 	Title:
 		Capítulo 12: Web semántica
 		
-	text:
+	Content:
 		Ha llegado el momento de ir más allá.
 		
 	alert:		
@@ -22,14 +22,14 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		Una propuesta para la web
 		
-	text:
+	Content:
 		He visto muchas propuestas anteriormente, pero a mi entender no acaban de funcionar.
 		Voy a decir algo que quizá no guste a muchas personas:
 		
 	assert:
 		HTML no es semántico
 			
-	text:							
+	Content:							
 		Otra vez lo siento, pero es así. HTML nunca ha sido un buen lenguaje semántico,
 		aunque está bien para presentar contenido. Se ha hecho mucho para separar el contenido de la presentación,
 		pero creo que todavía queda un largo camino por recorrer. Y no sé si se hace en la dirección adecuada.
@@ -52,7 +52,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Semantic Text
 		
-	text:								
+	Content:								
 		Vale, ya está claro, @STxT@. ¿Y cómo se hace la web semántica con @STxT@? 
 		
 		No lo sé, aunque sospecho que es una de las mejores formas de hacerlo hoy en día :-D
@@ -71,7 +71,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		¡¡Reemplazar HTML5!!
 		
-	text:
+	Content:
 		¡¡Pero qué locura es esa!! ¡¡Llevamos años evolucionando, haciendo navegadores,... ¡¡cómo podríamos hacer algo así!!
 		
 		Eso es de locos >:-O
@@ -81,7 +81,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		Relajaos, os voy a hipnotizar.
 		
-	text:
+	Content:
 		Con @STxT@ todo puede cambiar, es un mundo nuevo, una nueva forma de pensar. No nos cerremos a nada. 
 		
 		Dejad la mente en blanco. Ahora no hay nada. Nada existe todavía. Estamos en el 1985.
@@ -107,7 +107,7 @@ Chapter(www.semantictext.info/book.stxt):
 	alert:
 		¡¡DESPERTAD!!!
 		
-	text:
+	Content:
 		¿Qué habéis visto? 
 		
 		Bueno, como no me podéis contestar os diré lo que //yo// he visto.
@@ -123,7 +123,7 @@ Chapter(www.semantictext.info/book.stxt):
 		/trucos/*.stxt
 		/dietas/*.stxt
 		
-	text:
+	Content:
 		A parte de esto, todo portal web tiene una serie de páginas que nos da la información de cómo formatear
 		o presentar el texto. Hay un grupo de personas que se encargó de hacer esto e hicieron un gran trabajo.
 		Fueron en la W3C.
@@ -140,7 +140,7 @@ Chapter(www.semantictext.info/book.stxt):
 		estilos.stxt
 		/estilos/*.stxt
 		
-	text:
+	Content:
 		Con estas páginas se permitía hacernos una idea del contenido del portal,
 		al mismo tiempo que aplicábamos unos estilos a todo el conjunto.
 		Lo mejor de los estilos es que se aplicaban automáticamente dependiendo del tipo de documento,
@@ -185,7 +185,7 @@ Chapter(www.semantictext.info/book.stxt):
 		...
 		...
 		
-	text:
+	Content:
 		Bien, ya está. Perdonad la simplicidad del esquema, pero una sesión de hipnosis no da para más :-)
 		No sé si esto os despertará la imaginación, pero me gustaría que al menos os hiciera pensar.
 		No todo está bien como está. Siempre hay margen a mejorar. A hacer las cosas distintas.
@@ -194,7 +194,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		Buscadores
 		
-	text:
+	Content:
 		Creo que los buscadores y los navegadores en general aumentarían su capacidad de búsqueda
 		y de indexar contenidos sabiendo de qué trata el texto. Además, ya estaría jerarquizado
 		y cada parte tendría un significado concreto y bien definido.
@@ -205,7 +205,7 @@ Chapter(www.semantictext.info/book.stxt):
 	subheader:
 		La transición
 		
-	text:
+	Content:
 		¿Cómo debe ser la transición? Debe ser //fácil y transparente//. Sino, no habrá transición.
 		Lo primero sería definir la nueva forma de ver documentos con @STxT@ y los nuevos CSS.
 		Por cierto, sería un buen momento para hacer los CSS y tener una primera versión.
@@ -230,7 +230,7 @@ Chapter(www.semantictext.info/book.stxt):
 	header:
 		SWB: Semantic Web Builder
 	
-	text:
+	Content:
 		No podría terminar este capítulo sin hablar de SWB. Ésta es la primera aplicación de @STxT@ que se ha hecho.
 		Bien, sé que es la primera porque se ha hecho para publicar esta web, y antes no había nada más :-D
 		
