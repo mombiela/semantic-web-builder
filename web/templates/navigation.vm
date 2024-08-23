@@ -3,10 +3,10 @@
 		#set($nav = ${doc.getChild("navigation")})
 
 		#if($nav.getChild("previous"))
-           	<a style="float:left;"	href="chapter_${nav.getChild("previous").value}.html" title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
+           	<a style="float:left;"	href="${nav.getChild("previous").getTextSufix()}" title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
 		#end
 		#if($nav.getChild("next"))
-           	<a style="float:right;" href="chapter_${nav.getChild("next").value}.html" title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
+           	<a style="float:right;" href="${nav.getChild("next").getTextSufix()}" title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
 		#end
 	</div>
 #end						
