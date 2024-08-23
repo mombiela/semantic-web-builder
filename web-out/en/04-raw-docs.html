@@ -95,9 +95,7 @@
             		<div class="assert"><p>Codificación UTF-8 Siempre</p>
 </div>
             	</div>
-												<p>Fin. Es una buena regla y estoy muy contento con ella. 
-Hoy en día es la codificación más aceptable, más universal,
-y más implementada. No creo que esto cambie en los próximos años.</p>
+												<p>Fin. Es una buena regla y estoy muy contento con ella.<br>Hoy en día es la codificación más aceptable, más universal,<br>y más implementada. No creo que esto cambie en los próximos años.</p>
 
 								            	<h2><a id="index_2"></a>Identificadores</h2>
 																<div class="row">
@@ -105,8 +103,8 @@ y más implementada. No creo que esto cambie en los próximos años.</p>
 </div>
             	</div>
 												<div class="row">
-            		<div class="assert"><p>Se permiten espacios en los nombres. \
-¿Por qué no? ¿Para parecer informáticos?\
+            		<div class="assert"><p>Se permiten espacios en los nombres. <br />
+¿Por qué no? ¿Para parecer informáticos?<br />
 Los tiempos están cambiando :-D</p>
 </div>
             	</div>
@@ -115,24 +113,16 @@ Los tiempos están cambiando :-D</p>
             		<div class="assert"><p>No existen caracteres de escape</p>
 </div>
             	</div>
-												<p>Creo que es lo mejor que he oído en mucho tiempo. 
-<strong>No existen caracteres de escape</strong> _porque no son necesarios_.
-Debido a la estructura no son necesarios.</p>
+												<p>Creo que es lo mejor que he oído en mucho tiempo.<br><strong>No existen caracteres de escape</strong> <em>porque no son necesarios</em>.<br>Debido a la estructura no son necesarios.</p>
 
 								            	<h2><a id="index_4"></a>Comentarios</h2>
-																<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
-Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí 
-para comentar o añadir alguna observación, pero no influyen en el documento en sí.</p>
+																<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.<br>Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí<br>para comentar o añadir alguna observación, pero no influyen en el documento en sí.</p>
 
 												<div class="row">
             		<div class="assert"><p>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</p>
 </div>
             	</div>
-												<p>Los comentarios no tienen que tener ningún tipo de formato, 
-es texto libre que el autor del documento puede incluir. 
-Además, no tiene que estar situado en ningún sitio concreto del documento. 
-Cualquier línea que empiece por # será tratada como comentario,
-y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
+												<p>Los comentarios no tienen que tener ningún tipo de formato,<br>es texto libre que el autor del documento puede incluir.<br>Además, no tiene que estar situado en ningún sitio concreto del documento.<br>Cualquier línea que empiece por # será tratada como comentario,<br>y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
 <p>Ejemplo:</p>
 
 												<pre>Receta: Receta de macarrones
@@ -154,22 +144,17 @@ y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Aquí cabe señalar que `(1),(2),(3) y (4)` son comentarios, mientras
-que `(5)` no lo es, ya que está dentro del texto identado.</p>
+												<p>Aquí cabe señalar que <code>(1),(2),(3) y (4)</code> son comentarios, mientras<br>que <code>(5)</code> no lo es, ya que está dentro del texto identado.</p>
 
 								            	<h2><a id="index_5"></a>Nodos e identación</h2>
-																<p>Antes hemos dicho que un documento <span class='STxT'><span class='first'>S</span>TxT</span> es un conjunto de nodos anidados. 
-La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.</p>
+																<p>Antes hemos dicho que un documento <span class='STxT'><span class='first'>S</span>TxT</span> es un conjunto de nodos anidados.<br>La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.</p>
 
 												<div class="row">
-            		<div class="assert"><p>4 espacios equivalen a un tabulador
-Es mejor no mezclar documentos con tabuladores y espacios</p>
+            		<div class="assert"><p>4 espacios equivalen a un tabulador<br>Es mejor no mezclar documentos con tabuladores y espacios</p>
 </div>
             	</div>
 								            	<h3><a id="index_6"></a>Nodos multilínea</h3>
-																<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace
-serán equivalentes a nodos tipo `TEXT`. Se construyen con líneas
-que empiezan por `:`, pero sin una etiqueta previa. Ejemplo:</p>
+																<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace<br>serán equivalentes a nodos tipo <code>TEXT</code>. Se construyen con líneas<br>que empiezan por <code>:</code>, pero sin una etiqueta previa. Ejemplo:</p>
 
 												<pre>Receta: Receta de macarrones
     ***Descripci&oacute;n:***
@@ -185,12 +170,10 @@ que empiezan por `:`, pero sin una etiqueta previa. Ejemplo:</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Acabamos de ver que el nodo `Descripción` es un nodo MULTILINE.</p>
+												<p>Acabamos de ver que el nodo <code>Descripción</code> es un nodo MULTILINE.</p>
 
 								            	<h2><a id="index_7"></a>(Prefix) Central (Sufix)</h2>
-																<p>Aunque no forma parte del lenguaje, es una práctica habitual que 
-campos simples se estructuren con `(prefix) central (sufix)`.
-Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
+																<p>Aunque no forma parte del lenguaje, es una práctica habitual que<br>campos simples se estructuren con <code>(prefix) central (sufix)</code>.<br>Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
 
 												<pre>Receta: Receta de macarrones
     Descripci&oacute;n:

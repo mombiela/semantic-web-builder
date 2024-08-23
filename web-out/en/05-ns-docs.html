@@ -76,27 +76,26 @@
 </div>
             	</div>
 												<p>Como resumen anterior:</p>
-<ul><li>Codificación UTF-8 Siempre</li>
+<ul>
+<li>Codificación UTF-8 Siempre</li>
 <li>Los Identificadores son CASE-INSENSITIVE</li>
 <li>No existen caracteres de escape</li>
 <li>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</li>
-<li>4 espacios equivalen a un tabulador</li></ul>
+<li>4 espacios equivalen a un tabulador</li>
+</ul>
 
 												<div class="row">
-            		<div class="assert"><p>No se permite el uso de `:` para nodos multilínea.\
+            		<div class="assert"><p>No se permite el uso de <code>:</code> para nodos multilínea.<br />
 Ésto esta implícito por el tipo de nodo.</p>
 </div>
             	</div>
-												<p>En caso que se inserte el carcter `:` lo que pasará es que formará
-parte del texto, no se considerará especial. Los otros tipos
-de texto no permiten varias líneas, por lo que no tendrá efecto.</p>
+												<p>En caso que se inserte el carcter <code>:</code> lo que pasará es que formará<br>parte del texto, no se considerará especial. Los otros tipos<br>de texto no permiten varias líneas, por lo que no tendrá efecto.</p>
 
 								            	<h2><a id="index_0"></a>Definición de namespace</h2>
-																<p>Un namespace es un documento sin namespace con el primer nodo llamado `Namespace`,
-el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.</p>
+																<p>Un namespace es un documento sin namespace con el primer nodo llamado <code>Namespace</code>,<br>el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.</p>
 
 												<div class="row">
-            		<div class="assert"><p>Un nodo se define sólamente una vez, después ya no se puede redefinir.\
+            		<div class="assert"><p>Un nodo se define sólamente una vez, después ya no se puede redefinir.<br />
 Se permite que aparezca antes siempre y cuando no se defina la estructura.</p>
 </div>
             	</div>
@@ -143,30 +142,34 @@ Se permite que aparezca antes siempre y cuando no se defina la estructura.</p>
             l&iacute;nea.</pre>
 								            	<h3><a id="index_1"></a>Definición de cantidad</h3>
 																<p>Se permite definir la cantidad de nodos de la siguiente forma:</p>
-<ul><li>`?`: Puede o no aparecer (máximo 1)</li>
-<li>`+`: Al menos un nodo</li>
-<li>`*`: Cualquier número de nodos</li>
-<li>`num+`: _num_ o más nodos</li>
-<li>`num-`: _num_ o menos nodos</li>
-<li>`num`: exactamente _num_ nodos</li></ul>
+<ul>
+<li><code>?</code>: Puede o no aparecer (máximo 1)</li>
+<li><code>+</code>: Al menos un nodo</li>
+<li><code>*</code>: Cualquier número de nodos</li>
+<li><code>num+</code>: <em>num</em> o más nodos</li>
+<li><code>num-</code>: <em>num</em> o menos nodos</li>
+<li><code>num</code>: exactamente <em>num</em> nodos</li>
+</ul>
 
 								            	<h3><a id="index_2"></a>Tipos de nodos</h3>
 																<p>Se permiten los siguientes tipos de nodos:</p>
-<ul><li>`STRING` (Valor por defecto)</li>
-<li>`TEXT` (permite multiline, no permite nodos hijos)</li>
-<li>`NUMBER`: /^(\-|\+)?\d+(\.\d+(e(\-|\+)?\d+)?/</li>
-<li>`BOOLEAN`: true | false</li>
-<li>`REGEX`: valid regex</li>
-<li>`ENUM`: En las siguientes multilineas se muestran los valores válidos</li>
-<li>`DATE`: YYYY-MM-DD</li>
-<li>`TIMESTAMP`: ISO_8601</li>
-<li>`EMAIL`: valid email</li>
-<li>`URL`: valid url</li>
-<li>`HEXADECIMAL` (permite multiline, no permite nodos hijos)</li>
-<li>`BASE64` (permite multiline, no permite nodos hijos)</li>
-<li>`EMPTY`: no permite contenido</li>
-<li>`INTEGER`: (+|-)?\d+</li>
-<li>`NATURAL`: \d+</li></ul>
+<ul>
+<li><code>STRING</code> (Valor por defecto)</li>
+<li><code>TEXT</code> (permite multiline, no permite nodos hijos)</li>
+<li><code>NUMBER</code>: /^(-|+)?\d+(.\d+(e(-|+)?\d+)?/</li>
+<li><code>BOOLEAN</code>: true | false</li>
+<li><code>REGEX</code>: valid regex</li>
+<li><code>ENUM</code>: En las siguientes multilineas se muestran los valores válidos</li>
+<li><code>DATE</code>: YYYY-MM-DD</li>
+<li><code>TIMESTAMP</code>: ISO_8601</li>
+<li><code>EMAIL</code>: valid email</li>
+<li><code>URL</code>: valid url</li>
+<li><code>HEXADECIMAL</code> (permite multiline, no permite nodos hijos)</li>
+<li><code>BASE64</code> (permite multiline, no permite nodos hijos)</li>
+<li><code>EMPTY</code>: no permite contenido</li>
+<li><code>INTEGER</code>: (+|-)?\d+</li>
+<li><code>NATURAL</code>: \d+</li>
+</ul>
 
 						
 			  </article>
