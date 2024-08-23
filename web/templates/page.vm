@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${meta.getChild("title").text}</title>
+    <title>${doc.getText()}</title>
 	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
@@ -32,8 +32,8 @@
     <header id="main_header">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.name} == "chapter")	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
-			#else                  					<span class="color1"><b>S</b></span>TxT: Semantic text
+			#if(${doc.getChild("default")})	<span class="color1"><b>S</b></span>TxT: ${lang.get("title_book")}
+			#else                  			<span class="color1"><b>S</b></span>TxT: Semantic text
 			#end
     	    </a>
 		</h1>
