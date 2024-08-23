@@ -1,10 +1,9 @@
-Page (www.semantictext.info/page.stxt):
+Document (globalcampus.site/namespace.stxt):Semantic Text en nuestra propia web
 
 	Metadata:
-		Title: Semantic Text en nuestra propia web
 		Description: Toda nuestra web está realizada con stxt. Mostramos como acceder con cualquier página al código fuente.
 		Author: Joan Costa Mombiela
-		Last_modif: 2013-03-01
+		Last modif: 2013-03-01
 	
 	Assert:
 		Toda nuestra web está disponible en @STxT@.\\

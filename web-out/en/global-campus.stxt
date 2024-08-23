@@ -1,0 +1,55 @@
+Document (globalcampus.site/namespace.stxt):Semantic Web Builder: La aplicación web
+
+	Metadata:
+		Description: SWB son una serie de scripts que permiten crear portales web a partir del lenguaje STxT.
+		Author: Joan Costa Mombiela
+		Last modif: 2013-03-01
+		
+	Content:
+		==Semantic Web Builder (SWB)==
+		
+	Assert:
+		//Bienvenido a nuestra aplicación estrella// \\
+		[[https://github.com/mombiela/semantic-web-builder | Semantic Web Builder]]
+		
+	Content:
+		===¿Qué es SWB?===
+		
+		Un conjunto de scripts de Java que permiten construir un portal mediante
+		el uso de páginas creadas con @STxT@. Aunque a nosotros nos gustaría
+		que fuese usado como "fuente de inspiración" para otros proyectos
+		o desarrollos. Con ese proyecto hemos usado este mismo portal, por
+		lo que estamos muy satisfechos con los resultados.
+	
+	# Por cierto, tuve problemas para escoger el nombre de SWB. 
+	# Estos eran los candidatos: 	
+	# * Super Web Builder
+	# * Semantic Web Builder
+	# * STxT Web Builder
+	# * Sexy Web Builder
+	
+		===¿Qué NO es SWB?===
+		
+		SWB no es un editor o GUI para crear portales, ni un entorno de desarrollo web. Para
+		ello hay grandes programas, y no es nuestra intención entrar en competencia
+		con ninguno de ellos. 
+		
+		===¿Por qué lo hicisteis?===
+		
+		Realmente hicimos estos scripts en un día; justo cuando empezábamos a hacer esta web.
+		Queríamos algo muy funcional, rápido de hacer, y que nos permitiese tener contenido estático
+		rápidamente publicado. Y resulta que @STxT@ nos aportó la solución.
+		Nos ha gustado tanto que hemos tenido que enseñarlo. Además, es el //código	fuente//
+		con el que hemos construido esta web. ¿Quién más puede presumir de ésto?
+		
+		=== ¿Qué requerimientos tiene? ===
+		
+		Bien, para funcionar es necesario una máquina virtual de Java disponible en el path.
+		El proyecto está creado con Eclipse, por lo que su integración es directa. Para las plantillas
+		hemos usado [[http://velocity.apache.org|Apache Velocity|apache]].
+		
+	# ¡¡Un saludo a la comunidad de Apache!! ¡¡El mundo de la informática no sería igual sin vosotros!!
+		
+		
+		
+		

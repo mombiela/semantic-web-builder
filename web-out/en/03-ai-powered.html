@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/03-ai-powered.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  					<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/03-ai-powered.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="03-ai-powered.stxt" target="03-ai-powered" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_Anterior (02-tutorial).html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_Siguiente (04-raw-docs).html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+			
+			
+																			<p>Con la llegada de las IA generativas, una cosa que me ha 
+sorprendido es la naturalidad con la que tratan STxT. 
+Parece como si lo conocieran, con sólo hacerles una breve
+introducción. Voy a poneros una conversación y juzgad.</p>
+
+								            	<h2><a id="index_0"></a>Conversación</h2>
+												            	<h3><a id="index_1"></a>Humano</h3>
+																<pre>Hola, te voy a hablar del lenguaje STXT (SemanticText). 
+Es un lenguaje escribir documentos estructurados. Los documentos tienen etiquetas 
+separadas por el caracter &quot;:&quot;, y est&aacute;n anidadas mediante tabuladores.
+Con el mismo lenguaje se puede definir un namespace, que definir&aacute; 
+un tipo de documento y las etiquetas permitidas y las que no.
+
+Te pongo un ejemplo de namespace:
+
+Namespace: www.kocinando.com/receta.stxt
+    Receta:
+        Descripci&oacute;n: (?) TEXT
+        Comensales: (?) NUMBER
+        Dificultad: (?) ENUM
+               : f&aacute;cil
+               : media
+            : dif&iacute;cil
+        Ingredientes: (1)
+            Ingrediente: (+)
+        Pasos: (1)
+            Paso: (+)
+            
+Te pongo un ejemplo de documento de ese namespace:
+
+Receta (www.kocinando.com/receta.stxt): Receta de macarrones
+    Descripci&oacute;n:
+        Esta es la descripci&oacute;n de....
+        Esta es la descripci&oacute;n de....
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Dorar carne
+
+&iquest;Has entendido lo que te he explicado?</pre>
+								            	<h3><a id="index_2"></a>IA</h3>
+																<p>Sí, he entendido lo que me has explicado sobre el lenguaje STXT (SemanticText). 
+Es un lenguaje para estructurar documentos utilizando etiquetas que están 
+organizadas jerárquicamente mediante tabulaciones. Además, las etiquetas se 
+definen dentro de un namespace, que establece qué etiquetas son permitidas 
+y sus posibles valores o formatos.</p>
+<p>En tu ejemplo, has definido un namespace específico para recetas 
+de cocina (www.kocinando.com/receta.stxt) que incluye etiquetas como Receta, 
+Descripción, Comensales, Dificultad, Ingredientes, Ingrediente, Pasos, y Paso. 
+Cada etiqueta puede tener ciertos tipos de valores asociados, como texto libre (TEXT), 
+números (NUMBER), o valores enumerados (ENUM) con opciones específicas como fácil, media, y difícil.</p>
+<p>Luego, has mostrado cómo se puede estructurar un documento de receta utilizando 
+este namespace, siguiendo la jerarquía y las reglas definidas en él. 
+Por ejemplo, en el documento de la receta de macarrones, se especifica la descripción, 
+la cantidad de comensales, la dificultad, los ingredientes con sus respectivas cantidades, 
+y los pasos a seguir, todo siguiendo la estructura definida en el namespace.</p>
+<p>¿Hay algo más específico que te gustaría discutir o aclarar sobre este lenguaje?</p>
+
+								            	<h3><a id="index_3"></a>Humano</h3>
+																<pre>Me gustar&iacute;a que siguiendo el namespace de www.kocinando.com/receta.stxt 
+me hicieras una receta real de macarrones a la bolo&ntilde;esa.</pre>
+								            	<h3><a id="index_4"></a>IA</h3>
+																<p>Aquí tienes una receta de macarrones a la boloñesa siguiendo el namespace www.kocinando.com/receta.stxt:</p>
+
+												<pre>Receta (www.kocinando.com/receta.stxt): Macarrones a la bolo&ntilde;esa
+    Descripci&oacute;n:
+        Los macarrones a la bolo&ntilde;esa son un plato cl&aacute;sico de la cocina italiana, compuesto de pasta y una deliciosa salsa de carne con tomate, cebolla, zanahoria y apio. Perfecto para cualquier ocasi&oacute;n.
+    Comensales: 4
+    Dificultad: media
+    Ingredientes:
+        Ingrediente: (400g) Macarrones
+        Ingrediente: (400g) Carne de res picada
+        Ingrediente: (1) Cebolla
+        Ingrediente: (2) Dientes de ajo
+        Ingrediente: (1) Zanahoria
+        Ingrediente: (1) Rama de apio
+        Ingrediente: (400g) Tomate triturado
+        Ingrediente: (2 cucharadas) Aceite de oliva
+        Ingrediente: (1/2 taza) Vino tinto
+        Ingrediente: (Al gusto) Sal
+        Ingrediente: (Al gusto) Pimienta negra
+        Ingrediente: (Al gusto) Queso parmesano rallado
+        Ingrediente: (1 hoja) Laurel
+        Ingrediente: (1 cucharadita) Az&uacute;car
+    Pasos:
+        Paso: (1) Picar finamente la cebolla, el ajo, la zanahoria y el apio.
+        Paso: (2) Calentar el aceite de oliva en una sart&eacute;n grande y sofre&iacute;r la cebolla, el ajo, la zanahoria y el apio hasta que est&eacute;n blandos.
+        Paso: (3) A&ntilde;adir la carne picada y cocinar hasta que se dore.
+        Paso: (4) Verter el vino tinto y cocinar a fuego medio hasta que el alcohol se evapore.
+        Paso: (5) Agregar el tomate triturado, la hoja de laurel, el az&uacute;car, la sal y la pimienta. Dejar cocer a fuego lento durante 30 minutos, removiendo de vez en cuando.
+        Paso: (6) Mientras la salsa se cocina, hervir agua con sal en una olla grande y cocinar los macarrones seg&uacute;n las instrucciones del paquete.
+        Paso: (7) Escurrir los macarrones y mezclarlos con la salsa bolo&ntilde;esa.
+        Paso: (8) Servir caliente y espolvorear con queso parmesano rallado al gusto.</pre>
+								            	<h2><a id="index_5"></a>Análisis</h2>
+																<p>1. Bueno, en primer lugar: ahora sí. <strong>Quizá esta receta sea mejor que la mía :-D</strong>
+1. En segundo lugar: con qué facilidad ha tratado la IA los documentos :-O
+1. Finalmente, destacar que al mostrar el resultado se ha identificado como <strong>YAML</strong> en
+vez de STXT. Entiendo que es muy similar, más adelante comentaremos 
+las similitudes y diferencias.</p>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Advertisements</h2>
+    	<p>That’s right! Right now we also need advertising. Perhaps in the future this situation will change. For now, it is simply not possible.</p>
+    	<p>This space is reserved for this purpose.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

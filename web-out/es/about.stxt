@@ -1,11 +1,9 @@
-Page (www.semantictext.info/page.stxt):
+Document (globalcampus.site/namespace.stxt):Sobre nosotros
 
 	Metadata:
-		Title: Sobre nosotros
 		Description: Quienes somos y qué tipo de proyecto es
 		Author: Joan Costa Mombiela
-		Last_modif: 2013-10-25
-		Priority: 0.2
+		Last modif: 2013-10-25
 		
 	Content:
 		Deberíamos decir que esto es un proyecto personal, pero realmente es un proyecto
@@ -13,13 +11,13 @@ Page (www.semantictext.info/page.stxt):
 		me encargo del diseño, de las ideas y de transmitirlas. El resto de la familia me 
 		dan soporte logístico y emocional para poder hacerlo.
 		
-		//¿Por qué explico todo esto?// 
+		_¿Por qué explico todo esto?_ 
 		
 		Primero, para que entendáis nuestra postura. Estamos encantados de responder a sugerencias, 
 		comentarios y críticas, pero el tiempo que podemos dedicar a STxT es limitado.
 		Perdonad si tardamos un poco en contestar.
 		
-		En segundo lugar, [[donate.html|animaros a colaborar :-)]]\\ [[contribute.html | y a contribuir ;-)]]
+		En segundo lugar, [animaros a colaborar :-)](donate) [y a contribuir ;-)](contribute)
 		
 	# ¿De dónde somos? Yo he vivido en Montgat toda la vida, aunque los últimos años estoy en Badalona,
 	# donde he hecho vida social desde siempre, y de dónde es mi mujer :-) 

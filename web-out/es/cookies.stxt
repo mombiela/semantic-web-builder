@@ -1,18 +1,18 @@
-Page (www.semantictext.info/page.stxt):
+Document (globalcampus.site/namespace.stxt):Cookies
 
 	Metadata:
-		Title: Cookies
 		Description: Política de cookies
 		Author: Joan Costa Mombiela
-		Last_modif: 2017-04-04
-		Priority: 0.2
+		Last modif: 2017-04-04
 		
-	Content:
-		== Cookies ==
+	Header: Cookies
 	
+	Content:
 		Para que este sitio funcione adecuadamente, a veces instalamos en los dispositivos de los usuarios pequeños ficheros de datos, conocidos como cookies. La mayoría de los grandes sitios web también lo hacen.
 		
-		=== ¿Qué son las cookies? ===
+	Header: ¿Qué son las cookies?
+	
+	Content:
 		Una cookie es un pequeño fichero de texto que los sitios web instalan 
 		en el ordenador o el dispositivo móvil de los usuarios que los visitan. 
 		Las cookies hacen posible que el sitio web recuerde las acciones 
@@ -21,13 +21,17 @@ Page (www.semantictext.info/page.stxt):
 		para que este no tenga que volver a configurarlos 
 		cuando regrese al sitio o navegue por sus páginas. 
 	
-		=== ¿Cómo utilizamos las cookies? ===
+	Header: ¿Cómo utilizamos las cookies?
+	
+	Content:
 		Nosotros usamos cookies para poder mostrar contenido personalizado, en particular
 		los anuncions de Google AdSense. También usamos las cookies para recordar el idioma,
 		así como saber si un usuario ha leído nuestra política de cookies. Estas cookies
 		tienen una duración indefinida.
 		
-		=== Cómo controlar las cookies ===
+	Header: Cómo controlar las cookies
+	
+	Content:
 		Usted puede controlar o borrar las cookies siempre que lo desee: para más información, 
 		consulte [[http://aboutcookies.org]].  Además de poder eliminar todas 
 		las cookies que ya se encuentran en su ordenador, 

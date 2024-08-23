@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a STxT</title>
-	<meta name="description" content="Introducción al lenguaje STxT, ventajas sobre xml, características únicas">
-	<meta name="author" content="Joan Costa Mombiela">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
 
     <link rel="stylesheet" href="/css/site.css?v=2">
 		
@@ -66,56 +66,61 @@
       				
 			
 			
-														<h2 id='H2_Nuestro_objetivo'>Nuestro objetivo </h2>
-
-												<div class="row">
-            		<div class="alert"><p>Crear el lenguaje más potente, más sencillo y más bonito <br/>
+					            	<h2><a id="index_0"></a>Nuestro objetivo</h2>
+																<div class="row">
+            		<div class="alert"><p>Crear el lenguaje más potente, más sencillo y más bonito \
 que jamás haya existido :-)</p>
 </div>
             	</div>
-												<h2 id='H2_Un_ejemplo'>¡Un ejemplo!</h2>
-<p>Un texto en XML:</p>
-<pre>&lt;email&gt;
-&lt;from&gt;John Smith&lt;/from&gt;
-&lt;to&gt;Mery Adams&lt;/to&gt; 
-&lt;cc&gt;Keyla Brown&lt;cc&gt; 
-&lt;title&gt;Project report&lt;/title&gt; 
-&lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
+								            	<h2><a id="index_1"></a>¡Un ejemplo!</h2>
+																<p>Un texto en XML:</p>
+
+												<pre>&lt;email&gt;
+    &lt;from&gt;John Smith&lt;/from&gt;
+    &lt;to&gt;Mery Adams&lt;/to&gt; 
+    &lt;cc&gt;Keyla Brown&lt;cc&gt; 
+    &lt;title&gt;Project report&lt;/title&gt; 
+    &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
 &lt;/email&gt;</pre>
-<p>Un equivalente en <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
-<pre>Email (www.example.com/email.stxt):
+												<p>Un equivalente en <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
 
-From: John Smith
-To: Mery Adams
-Cc: Keyla Brown
-Title: Project report
-Body: Hello Mery!! The book is finished!!</pre>
-<h2 id='H2_Y_bien'>¿Y bien?</h2>
-
-												<div class="row">
-            		<div class="assert"><p>¿Aparte de eliminar esos horribles caracteres &#39;&lt;&#39;,&#39;&gt;&#39; qué hay de nuevo?</p>
+												<pre>Email (www.example.com/email.stxt):
+    From: John Smith
+    To: Mery Adams
+    Cc: Keyla Brown
+    Title: Project report
+    Body: Hello Mery!! The book is finished!!</pre>
+								            	<h2><a id="index_2"></a>¿Y bien?</h2>
+																<div class="row">
+            		<div class="assert"><p>¿Aparte de eliminar esos horribles caracteres `&#39;&lt;&#39;,&#39;&gt;&#39;` qué hay de nuevo?</p>
 </div>
             	</div>
 												<p>Bueno, la lista es larga, pero como aperitivo ya es suficiente:</p>
-<ul><li>Mejor que XML en muchos sentidos: <a href="chapter_09.html">Ver Capítulo 9</a></li>
-<li>Lenguaje semántico... pero sencillo! :-)</li>
+<ul><li>Lenguaje semántico... pero sencillo! :-)</li>
 <li>¡No hay caracteres de escape! ¡No se necesitan! :-O </li>
-<li>Encoding UTF-8 <em>siempre</em></li>
-<li>Sencillo de aprender por humanos (<em>¡y por no informáticos!</em>)</li>
+<li>Encoding UTF-8 _siempre_</li>
+<li>Sencillo de aprender por humanos (_¡y por no informáticos!_)</li>
 <li>Sencillo de leer por máquinas</li></ul>
 <p>Otras características que gustarán a los informáticos ;-)</p>
 <ul><li>Parseo super rápido</li>
 <li>Gramática integrada en el lenguaje</li>
-<li>Namespaces sencillos, pero <em>todo siempre</em> en namespaces</li>
+<li>Namespaces sencillos, <strong>muy sencillos</strong> (y opcionales)</li>
 <li>Integra fácilmente textos de otros lenguajes de programación</li></ul>
-<h2 id='H2_Y_an_hay_ms_SWB'>Y aún hay más: SWB</h2>
-<p>No te olvides de nuestra aplicación estrella <a href="swb.html">Semantic Web Builder</a>.<br/>
-<strong>¡Atención diseñadores!</strong> Para nosotros el mejor editor de páginas web que existe. </p>
-<ul><li>Basado en <span class='STxT'><span class='first'>S</span>TxT</span>, por supuesto ;-) </li>
+
+								            	<h2><a id="index_3"></a>Y aún hay más: GlobalCampus.site</h2>
+																<p>No te olvides de nuestra aplicación estrella: [GlobalCampus.site](<a href="https://globalcampus.site">https://globalcampus.site</a>)</p>
+
+												<div class="row">
+            		<div class="assert"><p>Para nosotros el mejor editor de páginas web que existe.\
+El primer <strong>Meta Portal de aprendizaje</strong>\
+El primer sitio que usa STxT</p>
+</div>
+            	</div>
+												<ul><li>Basado en <span class='STxT'><span class='first'>S</span>TxT</span>, por supuesto ;-) </li>
 <li>Libre :-D</li>
 <li>Adaptable :-)</li>
 <li>Rápido :-O</li>
-<li><em>Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!</em></li></ul>
+<li>_Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_</li></ul>
 <p><strong>Te va a encantar :-P</strong></p>
 
 						

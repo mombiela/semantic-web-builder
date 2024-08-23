@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+		<link rel="alternate" hreflang="es" href="http://www.semantictext.info/es/04-raw-docs.html" />
+			
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  					<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">A language for the web</a></h2>
+		<ul>
+			<li><a href="about.html" title="About us">About us</a></li>
+			<li><a href="donate.html" title="Donations">Donations</a></li>
+			<li><a href="contribute.html" title="Cooperate">Cooperate</a></li>
+			<li><a href="licence.html" title="License">License</a></li>
+			<li><b> | </b></li>
+										<li><a href="../es/04-raw-docs.html" onclick="setLang('es'); return false;" title="Español"><i>Español</i></a></li>
+				<li><b>English</b></li>
+			    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="04-raw-docs.stxt" target="04-raw-docs" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="Hello!">Hello!</a></li>
+			<li><a href="chapter_00_c.html" title="The Book">The Book</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT and XML">STxT and XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_Anterior (03-ai-powered).html" title="Previous">&#x25C4; Previous</a>
+				           	<a style="float:right;" href="chapter_Siguiente (05-ns-docs).html" title="Next">Next &#x25BA;</a>
+			</div>
+	
+			
+			
+															            	<h2><a id="index_0"></a>Documentos sin namespace</h2>
+																<p>Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:</p>
+
+												<pre>Receta: Receta de macarrones
+    Descripci&oacute;n:
+        :Esta es la descripci&oacute;n de la recta de macarrones.
+        :Bla, bla, bla
+        :Bla, bla, bla
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+												<p>Vamos a profundizar un poco más.</p>
+
+								            	<h2><a id="index_1"></a>Codificación</h2>
+																<div class="row">
+            		<div class="assert"><p>Codificación UTF-8 Siempre</p>
+</div>
+            	</div>
+												<p>Fin. Es una buena regla y estoy muy contento con ella. 
+Hoy en día es la codificación más aceptable, más universal,
+y más implementada. No creo que esto cambie en los próximos años.</p>
+
+								            	<h2><a id="index_2"></a>Identificadores</h2>
+																<div class="row">
+            		<div class="assert"><p>Los Identificadores son CASE-INSENSITIVE</p>
+</div>
+            	</div>
+												<div class="row">
+            		<div class="assert"><p>Se permiten espacios en los nombres. \
+¿Por qué no? ¿Para parecer informáticos?\
+Los tiempos están cambiando :-D</p>
+</div>
+            	</div>
+								            	<h2><a id="index_3"></a>Caracteres de escape</h2>
+																<div class="row">
+            		<div class="assert"><p>No existen caracteres de escape</p>
+</div>
+            	</div>
+												<p>Creo que es lo mejor que he oído en mucho tiempo. 
+<strong>No existen caracteres de escape</strong> _porque no son necesarios_.
+Debido a la estructura no son necesarios.</p>
+
+								            	<h2><a id="index_4"></a>Comentarios</h2>
+																<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
+Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí 
+para comentar o añadir alguna observación, pero no influyen en el documento en sí.</p>
+
+												<div class="row">
+            		<div class="assert"><p>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</p>
+</div>
+            	</div>
+												<p>Los comentarios no tienen que tener ningún tipo de formato, 
+es texto libre que el autor del documento puede incluir. 
+Además, no tiene que estar situado en ningún sitio concreto del documento. 
+Cualquier línea que empiece por # será tratada como comentario,
+y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
+<p>Ejemplo:</p>
+
+												<pre>Receta: Receta de macarrones
+***# (1) Esto es un comentario***
+***# (2) Esto tambi&eacute;n es un comentario***
+    ***# (3) Esto tambi&eacute;n es un comentario***
+    Descripci&oacute;n:
+        :Esta es la descripci&oacute;n de la recta de macarrones.
+        :Bla, bla, bla
+    ***# (4) Esto es un comentario***    
+        :Bla, bla, bla
+        ***# (5) esto NO es un comentario***
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+												<p>Aquí cabe señalar que `(1),(2),(3) y (4)` son comentarios, mientras
+que `(5)` no lo es, ya que está dentro del texto identado.</p>
+
+								            	<h2><a id="index_5"></a>Nodos e identación</h2>
+																<p>Antes hemos dicho que un documento <span class='STxT'><span class='first'>S</span>TxT</span> es un conjunto de nodos anidados. 
+La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.</p>
+
+												<div class="row">
+            		<div class="assert"><p>4 espacios equivalen a un tabulador
+Es mejor no mezclar documentos con tabuladores y espacios</p>
+</div>
+            	</div>
+								            	<h3><a id="index_6"></a>Nodos multilínea</h3>
+																<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace
+serán equivalentes a nodos tipo `TEXT`. Se construyen con líneas
+que empiezan por `:`, pero sin una etiqueta previa. Ejemplo:</p>
+
+												<pre>Receta: Receta de macarrones
+    ***Descripci&oacute;n:***
+        ***:Esta es la descripci&oacute;n de la recta de macarrones.***
+        ***:Bla, bla, bla***
+        ***:Bla, bla, bla***
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+												<p>Acabamos de ver que el nodo `Descripción` es un nodo MULTILINE.</p>
+
+								            	<h2><a id="index_7"></a>(Prefix) Central (Sufix)</h2>
+																<p>Aunque no forma parte del lenguaje, es una práctica habitual que 
+campos simples se estructuren con `(prefix) central (sufix)`.
+Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
+
+												<pre>Receta: Receta de macarrones
+    Descripci&oacute;n:
+        :Esta es la descripci&oacute;n de la recta de macarrones.
+        :Bla, bla, bla
+        :Bla, bla, bla
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: ***(100g) Tomate***
+        Ingrediente: ***(240g) Macarrones***
+    Pasos:
+        Paso: ***(1) Hacer sofrito***
+        Paso: ***(2) Hervir macarrones***
+        Paso: ***(3) Juntar macarrones con sofrito y servir***</pre>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Advertisements</h2>
+    	<p>That’s right! Right now we also need advertising. Perhaps in the future this situation will change. For now, it is simply not possible.</p>
+    	<p>This space is reserved for this purpose.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - This work is licensed under a <a rel="license" style="text-decoration:underline" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">MIT License</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		This website uses cookies to ensure you get the best experience on our website. [cookies.html|Learn more]
+        <a href="javascript:accept();" class="button">Got it!</a>
+        <a href="cookies.html">More info</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/05-ns-docs.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  					<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/05-ns-docs.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="05-ns-docs.stxt" target="05-ns-docs" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="chapter_00_c.html" title="El Libro">El Libro</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT y XML">STxT y XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_Anterior (04-raw-docs).html" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="chapter_Siguiente (06-examples).html" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+																			<div class="row">
+            		<div class="assert"><p>Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.</p>
+</div>
+            	</div>
+												<p>Como resumen anterior:</p>
+<ul><li>Codificación UTF-8 Siempre</li>
+<li>Los Identificadores son CASE-INSENSITIVE</li>
+<li>No existen caracteres de escape</li>
+<li>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</li>
+<li>4 espacios equivalen a un tabulador</li></ul>
+
+												<div class="row">
+            		<div class="assert"><p>No se permite el uso de `:` para nodos multilínea.\
+Ésto esta implícito por el tipo de nodo.</p>
+</div>
+            	</div>
+												<p>En caso que se inserte el carcter `:` lo que pasará es que formará
+parte del texto, no se considerará especial. Los otros tipos
+de texto no permiten varias líneas, por lo que no tendrá efecto.</p>
+
+								            	<h2><a id="index_0"></a>Definición de namespace</h2>
+																<p>Un namespace es un documento sin namespace con el primer nodo llamado `Namespace`,
+el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.</p>
+
+												<div class="row">
+            		<div class="assert"><p>Un nodo se define sólamente una vez, después ya no se puede redefinir.\
+Se permite que aparezca antes siempre y cuando no se defina la estructura.</p>
+</div>
+            	</div>
+												<p>Vamos a ver un ejemplo:</p>
+
+												<pre>Namespace: www.demo.com/documento.stxt
+    Documento:
+        T&iacute;tulo: (1)
+        ***Secciones: (?)***
+        Description: (1) TEXT
+        Tipo Documento: (1) ENUM
+            :informe
+            :art&iacute;culo
+            :ensayo
+        
+    ***Secciones:***
+        ***Seccion: (+) TEXT***</pre>
+												<p>Otra forma de definirlo más simple hubiera sido:</p>
+
+												<pre>Namespace: www.demo.com/documento.stxt
+    Documento:
+        T&iacute;tulo: (1)
+        ***Secciones: (?)***
+            ***Seccion: (+) TEXT***
+        Description: (1) TEXT
+        Tipo Documento: (1) ENUM
+            :informe
+            :art&iacute;culo
+            :ensayo</pre>
+												<p>Finalmente un documento del namespace:</p>
+
+												<pre>Documento (www.demo.com/documento.stxt):
+    T&iacute;tulo: Primer documento simple
+    Description:
+        Este es el
+        primer documento
+        simple. Tiene varias l&iacute;neas
+    Tipo Documento: informe
+    Secciones:
+        Seccion: Esta es una secci&oacute;n
+        Seccion:
+            Esta es una secci&oacute;n
+            con m&aacute;s de una
+            l&iacute;nea.</pre>
+								            	<h3><a id="index_1"></a>Definición de cantidad</h3>
+																<p>Se permite definir la cantidad de nodos de la siguiente forma:</p>
+<ul><li>`?`: Puede o no aparecer (máximo 1)</li>
+<li>`+`: Al menos un nodo</li>
+<li>`*`: Cualquier número de nodos</li>
+<li>`num+`: _num_ o más nodos</li>
+<li>`num-`: _num_ o menos nodos</li>
+<li>`num`: exactamente _num_ nodos</li></ul>
+
+								            	<h3><a id="index_2"></a>Tipos de nodos</h3>
+																<p>Se permiten los siguientes tipos de nodos:</p>
+<ul><li>`STRING` (Valor por defecto)</li>
+<li>`TEXT` (permite multiline, no permite nodos hijos)</li>
+<li>`NUMBER`: /^(\-|\+)?\d+(\.\d+(e(\-|\+)?\d+)?/</li>
+<li>`BOOLEAN`: true | false</li>
+<li>`REGEX`: valid regex</li>
+<li>`ENUM`: En las siguientes multilineas se muestran los valores válidos</li>
+<li>`DATE`: YYYY-MM-DD</li>
+<li>`TIMESTAMP`: ISO_8601</li>
+<li>`EMAIL`: valid email</li>
+<li>`URL`: valid url</li>
+<li>`HEXADECIMAL` (permite multiline, no permite nodos hijos)</li>
+<li>`BASE64` (permite multiline, no permite nodos hijos)</li>
+<li>`EMPTY`: no permite contenido</li>
+<li>`INTEGER`: (+|-)?\d+</li>
+<li>`NATURAL`: \d+</li></ul>
+
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

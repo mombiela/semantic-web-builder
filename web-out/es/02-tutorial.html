@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${meta.getChild("title").text}</title>
+	<meta name="description" content="${meta.getChild("description").text}">
+	<meta name="author" content="${meta.getChild("author").value}">
+
+    <link rel="stylesheet" href="/css/site.css?v=2">
+		
+			
+		<link rel="alternate" hreflang="en" href="http://www.semantictext.info/en/02-tutorial.html" />
+		
+	<script src="/js/cookie.js?v=1"></script>
+	<script src="/js/page.js?v=1"></script>
+</head>
+
+<body>
+
+	<!-- *********** -->
+	<!-- main_header -->
+	<!-- *********** -->
+	
+    <header id="main_header">
+	    <h1>
+			<a href="index.html">
+			                  					<span class="color1"><b>S</b></span>TxT: Semantic text
+			    	    </a>
+		</h1>
+		<h2><a href="index.html">Un lenguaje para la web</a></h2>
+		<ul>
+			<li><a href="about.html" title="Sobre nosotros">Sobre nosotros</a></li>
+			<li><a href="donate.html" title="Donaciones">Donaciones</a></li>
+			<li><a href="contribute.html" title="Contribuir">Contribuir</a></li>
+			<li><a href="licence.html" title="Licencia">Licencia</a></li>
+			<li><b> | </b></li>
+							<li><b>Español</b></li>
+				<li><a href="../en/02-tutorial.html" onclick="setLang('en'); return false;"  title="Español"><i>English</i></a></li>
+						    	</ul>
+    </header>
+
+	<!-- ******* -->
+	<!-- top bar -->
+	<!-- ******* -->
+	
+    <div class="top-bar">
+    	<ul>
+			<li class="link_src"><a href="02-tutorial.stxt" target="02-tutorial" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
+			<li><a href="index.html" title="¡Hola!">¡Hola!</a></li>
+			<li><a href="chapter_00_c.html" title="El Libro">El Libro</a></li>
+			<li><a href="chapter_03.html" title="Tutorial">Tutorial</a></li>
+			<li><a href="chapter_09.html" title="STxT y XML">STxT y XML</a></li>
+			<li><a href="swb.html" title="SWB">SWB</a></li>
+			<li><a href="stxt.html" title="Semantic Text">Semantic Text</a></li>
+    	</ul>
+    </div>
+	
+	<!-- ******* -->
+	<!-- Content -->
+	<!-- ******* -->
+	
+    <div id="main_content" class="clearfix">
+      <article>
+      				<div class="column row book_nav clearfix">
+		
+		           	<a style="float:left;"	href="chapter_Anterior (01-intro-2024).html" title="Anterior">&#x25C4; Anterior</a>
+				           	<a style="float:right;" href="chapter_Siguiente (03-ai-powered).html" title="Siguiente">Siguiente &#x25BA;</a>
+			</div>
+	
+			
+			
+																			<p>Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
+Te explicamos lo que es <span class='STxT'><span class='first'>S</span>TxT</span> directamente, sin más preámbulos.
+Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.</p>
+
+								            	<h2><a id="index_0"></a>Un ejemplo... ¡ya!</h2>
+												            	<h3><a id="index_1"></a>Documentos sin namespace</h3>
+																<p>Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
+y _todo el mundo_ lo puede llega a entender.</p>
+<p>El ejemplo será una receta de cocina. ¡Adelante!</p>
+
+												<pre>Receta: Receta de macarrones
+    Descripci&oacute;n:
+        :Esta es la descripci&oacute;n de la recta de macarrones.
+        :Bla, bla, bla
+        :Bla, bla, bla
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+												<p>Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.</p>
+
+												<div class="row">
+            		<div class="alert"><p>No uséis esta receta en casa, esperad al próximo capítulo ;-)</p>
+</div>
+            	</div>
+												<p>Bien, acabáis de ver lo que es un <strong>documento <span class='STxT'><span class='first'>S</span>TxT</span> sin namespace</strong>. Este tipo de documentos
+son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
+se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
+un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así
+hasta formar una estructura jerárquica. </p>
+<p>Vale la pena mencionar el nodo `Descripción` que es un nodo que permite <strong>multilíneas</strong>.
+Al no tener una estructura previa se distinguen porque estan anidados pero las
+líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.</p>
+
+								            	<h3><a id="index_2"></a>Documentos con namespace</h3>
+																<p>Ahora iremos más allá, y definiremos la misma receta con un namespace.
+Primero mostraremos como queda la receta, y después mostraremos el
+namespace. Podéis pensar que normalmente se debería hacer al revés,
+pero la realidad es que la mayoría de las veces tendremos un ejemplo
+y de forma posterior definiremos el caso general.</p>
+<p>Aquí tenemos la receta:</p>
+
+												<pre>Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
+    Descripci&oacute;n:
+        Esta es la descripci&oacute;n de la recta de macarrones.
+        Bla, bla, bla
+        Bla, bla, bla
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+												<p>¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
+que es `www.kocinando.com/receta.stxt`, y el nodo `Descripción` parece
+más natural. <strong>Pues ya está :-)</strong> Hemos convertido un documento sin namespace
+a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter `:`
+de los campos multilínea. </p>
+<p>No podía ser más sencillo ;-)</p>
+<p>Ahora creamos el namespace. <strong>La definición del namespace se encuentra en
+un documento sin namespace</strong>. En la versión anterior de STxT no era así,
+pero complicaba los parseadores, y te obligaba a tener siempre definición
+de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
+<p>Aquí está el namespace que podemos crear para el ejemplo:</p>
+
+												<pre>***Namespace: www.kocinando.com/receta.stxt***
+    Receta:
+        Descripci&oacute;n: (?) TEXT
+        Comensales: (?) NUMBER
+        Dificultad: (?) ENUM
+               : f&aacute;cil
+               : media
+            : dif&iacute;cil
+        Ingredientes: (1)
+            Ingrediente: (+)
+        Pasos: (1)
+            Paso: (+)</pre>
+												<p>Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
+el tipo del nodo si hiciera falta.</p>
+<p>El namespace <strong>debería poderse consultar vía internet</strong>, en la misma url que lo indica.
+Así, este namespace debería estar disponible mediante la url `<a href="https://www.kocinando.com/receta.stxt">https://www.kocinando.com/receta.stxt</a>`. 
+Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.</p>
+<p>Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
+debería ser mucho más sencillo que en otros lenguajes.</p>
+
+								            	<h2><a id="index_3"></a>Otros elementos</h2>
+												            	<h3><a id="index_4"></a>Comentarios</h3>
+																<p>Es posible insertar comentarios en los documentos para 
+expresar partes no finalizadas, pensamientos del autor, etc.
+Los comentarios no se usarán pero permiten enriquecer el documento.</p>
+
+												<pre>Receta (www.kocinando.com/receta.stxt): Receta de macarrones
+***# Esta receta me la pas&oacute; XX y la he hecho un mont&oacute;n de veces***
+***# Os gustar&aacute; mucho!!***
+    Descripci&oacute;n:
+        Esta es la descripci&oacute;n de la recta de macarrones.
+        Bla, bla, bla
+        Bla, bla, bla
+    Comensales: 3
+    Dificultad: f&aacute;cil
+    Ingredientes:
+        Ingrediente: (100g) Tomate
+        Ingrediente: (240g) Macarrones
+    Pasos:
+        Paso: (1) Hacer sofrito
+        Paso: (2) Hervir macarrones
+        Paso: (3) Juntar macarrones con sofrito y servir</pre>
+								            	<h3><a id="index_5"></a>Distintos namespaces en un documento</h3>
+																<p>Un namespace puede hacer referencia a otro, para indicar que
+una parte del documento tiene la estructura en otro namespace.
+Mejor ver un ejemplo:</p>
+
+												<pre>***Namespace: www.kocinando.com/recetario.stxt***
+    Recetario:
+        Receta: (+) ***(www.kocinando.com/receta.stxt)***</pre>
+												<p>Aquí vemos que `Receta` es de otro namespace y vemos que
+en vez de poner la estructura se hace referencia a otro namespace.</p>
+
+												<div class="row">
+            		<div class="assert"><p>NO es necesario decir el namespace interior, sólo el nodo principal.</p>
+</div>
+            	</div>
+												<p>Así, un ejemplo de recetario sería:</p>
+
+												<pre>***Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama*** 
+    ***Receta: Receta de macarrones***
+        Descripci&oacute;n:
+            Esta es la descripci&oacute;n de la recta de macarrones.
+            Bla, bla, bla
+            Bla, bla, bla
+        Comensales: 3
+        Dificultad: f&aacute;cil
+        Ingredientes:
+            Ingrediente: (100g) Tomate
+            Ingrediente: (240g) Macarrones
+        Pasos:
+            Paso: (1) Hacer sofrito
+            Paso: (2) Hervir macarrones
+            Paso: (3) Juntar macarrones con sofrito y servir    
+    ***Receta: Receta de pizza***
+        Ingredientes:
+            Ingrediente: (1u) Masa pizza
+            Ingrediente: (100g) Tomate
+            Ingrediente: (50g) Queso
+        Pasos:
+            Paso: (1) Poner tomate y queso en pizza
+            Paso: (2) Hornear durante 15'</pre>
+								            	<h2><a id="index_6"></a>Fin del tutorial</h2>
+																<div class="row">
+            		<div class="alert"><p>Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.\
+O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-)</p>
+</div>
+            	</div>
+						
+			  </article>
+	  	
+	  <aside id="advertisement">
+		    	    	    	    	    	<h2>Anuncios</h2>
+    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
+    	<p>Este espacio está reservado para este fin.</p>
+    	
+    	<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- STxT - Adaptable -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-0611338592562725"
+     data-ad-slot="5037052041"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+	  </aside>
+	</div>
+	
+	<footer><p>&copy; 2023 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p></footer>
+	
+	<div id="cookies_adv">
+		Usamos cookies para mejorar su experiencia de uso y ofrecer contenidos adaptados a sus intereses
+        <a href="javascript:accept();" class="button">Entendido!</a>
+        <a href="cookies.html">Más información</a>
+    </div>
+    <script>checkCookies();</script>
+</body>
+</html>

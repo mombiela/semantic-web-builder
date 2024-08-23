@@ -1,48 +1,49 @@
-Page (www.semantictext.info/page.stxt):
+Document (globalcampus.site/namespace.stxt):Contribuye con nosotros
 
 	Metadata:
-		Title: Cooperate with us
-		Description: Things that need to be finished in STxT language, and ways of contributing 
-			to the portal maintenance and contents.
+		Description: Cosas que faltan por hacer en el lenguaje STxT y formas de contribuir con el mantenimiento y los contenidos del portal.
 		Author: Joan Costa Mombiela
-		Last_modif: 2013-10-17
-		Priority: 0.6
+		Last modif: 2013-10-17
+		
+	Header: ¿Quieres contribuir?
+		
+	Alert: ¡¡Gracias por querer colaborar con nosotros!!
 		
 	Content:
-		==Would you like to cooperate?==
+		La mejor forma de ayudarnos es dando a conocer el lenguaje. Usándolo,
+		hablando a otras personas, y disfrutando con él. Nosotros ya lo hemos 
+		usado, y la experiencia ha sido genial.
 		
-	Alert:
-		Thank you for wanting to cooperate with us!!
+		Aunque queda mucho trabajo por hacer. Faltan librerías, editores de texto,
+		aplicaciones,... la lista es interminable.
 		
-	Content:
-		The best way to help us is making the language known to others. You can do this 
-		by using it, talking to other people about it, and enjoying it. We have already 
-		used it, and the experience has been great.
+		Buenas noticias para los informáticos: un nuevo juguete para explorar :-)	
+		
+	Header:  www.semantictext.info
 	
-		Although there is much work to be done. We are missing libraries, text editors, 
-		applications... the list is endless.
-	
-		Good news for programmers: a new toy for exploring :-)	
+	Content:		
+		Nuestro lenguaje tiene infinitas aplicaciones, pero creemos que su definición 
+		es única y que ya está lista.
 		
-		== www.semantictext.info ==
+		_Las posibles aplicaciones o utilidades las dejamos para vosotros ;-)_
 		
-		Our language has infinite applications, but we believe that its definition is unique 
-		and that it is ready.
+		Por lo que respecta a esta web, creemos que es un proyecto cerrado, pero dista
+		mucho de considerarse perfecto. Seguro que puede mejorar de mil formas. ¿Crees que 
+		hay que añadir un capítulo nuevo al libro? ¿Has encontrado algún error en la documentación? 
+		¿Mejorarías algún ejemplo? ¿Nos propones un css distinto y más reducido de tamaño?
 		
-		//We leave the possible applications or uses up to you ;-)//
+		Queremos que esta web sea un punto de referencia en el aprendizaje de @STxT@.
 		
-		With regard to this website, we believe that it is a closed project, but it is far 
-		from perfect. Surely it can be improved in thousands of ways. Do you think the book 
-		needs a new chapter? Have you found an error in the documents? 
-		Would you improve any examples? Would you propose a different and smaller css?
-		
-		We want this website to be a reference point in learning @STxT@.
-		
-	alert: Help us make this possible!\\
+	alert: ¡Ayúdanos a que esto sea posible!\
 		[[admin@semantictext.info]]
 		
 	Content:
-		**We will be happy to reply as soon as possible ;-)**\\
-		By the way, we only speak Catalan, Spanish, and English :-)
+		**Estaremos encantados de poderos contestar lo antes posible ;-)**\
+		Por cierto, sólo hablamos en catalán, castellano e inglés :-)
+			
 	
+	
+		
+		
+		
 		

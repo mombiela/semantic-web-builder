@@ -1,0 +1,34 @@
+Document (globalcampus.site/namespace.stxt): Capítulo 1: ¿Qué es @STxT@?
+	Default:
+		Title: STXT: El Libro
+		
+	Navigation:
+		Previous: Anterior (00-table-content)
+		Next: Siguiente (02-tutorial)
+
+	Metadata:
+		Title: ¿Qué es STxT?
+		Description: Descripción del lenguaje y de las características que lo hacen único.
+		Author: Joan Costa Mombiela
+		last modif: 2013-03-01
+	
+	assert:
+		Este proyecto es fruto de años de _inconsciente reflexión_,\
+		aunque sólo se necesitó un instante de inspiración.
+	
+	Content:
+		Así empezaba la bienvenida en 2013, en la primer versión de STxT. 
+		
+		Si queréis ver completo este capítulo podéis ir a la página [Introducción STXT 2013](01-intro-2013). 
+		Creo que es muy interesante y curioso. En ese momento quería hacer un libro inspirador, 
+		y quería explicarlo todo. Ahora quiero que conozcais el lenguaje, y lo uséis. 
+		Sin más. Será un viaje rápido, pero valdrá la pena.
+		
+		He modificado el lenguaje, aún sin haberlo usado, y ya estamos en la segunda versión.
+		Ahora todo es más directo, más claro, y sencillo. 
+		
+		**Ahora sí, ha llegado el momento de usarlo.**
+		
+	assert:	¿Empezamos?
+	#assert: ¿Preparados? No sabía que poner :-D
+	

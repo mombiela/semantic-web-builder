@@ -1,11 +1,9 @@
-Page (www.semantictext.info/page.stxt):
+Document (globalcampus.site/namespace.stxt):Donaciones al proyecto
 
 	Metadata:
-		Title: Donaciones al proyecto
 		Description: Realizar donaciones mediante PayPal al proyecto y a los autores de STxT. 
 		Author: Joan Costa Mombiela
-		Last_modif: 2013-03-01
-		Priority: 0.6
+		Last modif: 2013-03-01
 	
 	Content:
 		¿Quieres hacer una donación al proyecto?
@@ -23,9 +21,9 @@ Page (www.semantictext.info/page.stxt):
 		<p><center><strong>Muchas gracias por vuestra colaboración.</strong></center></p>
 		</div>
 	
-	Content:
-		== ¿Por qué donar? ==
+	Header: ¿Por qué donar?
 		
+	Content:
 		Podría daros muchos motivos, la inversión que hemos hecho, el mantenimiento de los servidores,
 		el trabajo realizado, el ancho de banda, las traducciones... y aunque realmente espero 
 		que estas inversiones puedan ser amortizadas (algún día :-D) mediante publicidad u otros patrocinadores,

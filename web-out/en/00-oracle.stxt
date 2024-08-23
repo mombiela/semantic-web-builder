@@ -1,0 +1,17 @@
+Document (globalcampus.site/namespace.stxt):
+	Default:
+		Title: STXT: El Libro
+		
+	Navigation:
+		Next: Siguiente (00-poesia)
+
+	Metadata:
+		Title: STxT: Un lenguaje para la web
+		Description: Primera portada del libro
+		Author: Joan Costa Mombiela
+		last modif: 2013-03-01
+		
+	Preamble:
+		Durante muchos años hemos visto el reinado de tecnologías como xml.
+
+		Pero este reinado podría estar en peligro.

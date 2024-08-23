@@ -1,84 +1,75 @@
-Page (www.semantictext.info/page.stxt):
-
-	Metadata:
-		Title: Bienvenidos a STxT
-		Description: Introducción al lenguaje STxT, ventajas sobre xml, características únicas
-		Author: Joan Costa Mombiela
-		Last_modif: 2013-03-01
-		Priority: 0.9
-	
-	Content:
-		== Nuestro objetivo ==
+Document (globalcampus.site/namespace.stxt):
+	Header: Nuestro objetivo
 		
 	Alert:
-		Crear el lenguaje más potente, más sencillo y más bonito \\
+		Crear el lenguaje más potente, más sencillo y más bonito \
 		que jamás haya existido :-)
 	
 	#Content:
 	#	Nuestro principio básico: **Sencillez, claridad y simplicidad** por encima de todo
 	#	Esto lo intentamos aplicar en todo lo que hacemos. No sé si lo habremos conseguido :-)
 	
-	Content:
-		==¡Un ejemplo!==
+	Header: ¡Un ejemplo!
 		
 	#Creemos que es lo mejor para empezarnos a conocer ;-)\\
 	#Y para eso mejor empezar por algo conocido: ¡XML!
 		
-		Un texto en XML:
+	Content: Un texto en XML:
 		
-		{{{
+	Code:
 		<email>
-		<from>John Smith</from>
-		<to>Mery Adams</to> 
-		<cc>Keyla Brown<cc> 
-		<title>Project report</title> 
-		<body>Hello Mery!! The book is finished!!</body> 
+			<from>John Smith</from>
+			<to>Mery Adams</to> 
+			<cc>Keyla Brown<cc> 
+			<title>Project report</title> 
+			<body>Hello Mery!! The book is finished!!</body> 
 		</email>
-		}}}
 		
-		Un equivalente en @STxT@:
+	Content: Un equivalente en @STxT@:
 		
-		{{{
+	Code:
 		Email (www.example.com/email.stxt):
+			From: John Smith
+			To: Mery Adams
+			Cc: Keyla Brown
+			Title: Project report
+			Body: Hello Mery!! The book is finished!!
 		
-		From: John Smith
-		To: Mery Adams
-		Cc: Keyla Brown
-		Title: Project report
-		Body: Hello Mery!! The book is finished!!
-		}}}
+	Header: ¿Y bien?
 		
-		==¿Y bien?==
+	Assert:
+		¿Aparte de eliminar esos horribles caracteres `'<','>'` qué hay de nuevo?
 		
-	assert:
-		¿Aparte de eliminar esos horribles caracteres {{{'<','>'}}} qué hay de nuevo?
-		
-	content:
+	Content:
 		Bueno, la lista es larga, pero como aperitivo ya es suficiente:
 		
-		* Mejor que XML en muchos sentidos: [[chapter_09.html|Ver Capítulo 9]]
 		* Lenguaje semántico... pero sencillo! :-)
 		* ¡No hay caracteres de escape! ¡No se necesitan! :-O 
-		* Encoding UTF-8 //siempre//
-		* Sencillo de aprender por humanos (//¡y por no informáticos!//)
+		* Encoding UTF-8 _siempre_
+		* Sencillo de aprender por humanos (_¡y por no informáticos!_)
 		* Sencillo de leer por máquinas
 		
 		Otras características que gustarán a los informáticos ;-)
 		
 		* Parseo super rápido
 		* Gramática integrada en el lenguaje
-		* Namespaces sencillos, pero //todo siempre// en namespaces
+		* Namespaces sencillos, **muy sencillos** (y opcionales)
 		* Integra fácilmente textos de otros lenguajes de programación
 		
-		==Y aún hay más: SWB==
+	Header: Y aún hay más: GlobalCampus.site
 		
-		No te olvides de nuestra aplicación estrella [[swb.html|Semantic Web Builder]].\\
-		**¡Atención diseñadores!** Para nosotros el mejor editor de páginas web que existe. 
+	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.site)
 		
+	Assert: 
+		Para nosotros el mejor editor de páginas web que existe.\
+		El primer **Meta Portal de aprendizaje**\
+		El primer sitio que usa STxT
+		
+	Content:
 		* Basado en @STxT@, por supuesto ;-) 
 		* Libre :-D
 		* Adaptable :-)
 		* Rápido :-O
-		* //Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!//
+		* _Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_
 		
 		**Te va a encantar :-P**

@@ -1,0 +1,30 @@
+Document (globalcampus.site/namespace.stxt):
+	Default:
+		Title: STXT: El Libro
+		
+	Navigation:
+		Previous: Anterior (00-oracle)
+		Next: Siguiente (00-prologo)
+
+	Metadata:
+		Title: Poesía introductoria a STxT
+		Description: Segunda portada del libro
+		Author: Joan Costa Mombiela
+		last modif: 2013-03-01
+	
+	Preamble:
+		Un lenguaje para gobernarlos a todos,
+		 
+		un lenguaje para encontrarlos,
+		
+		un lenguaje para entenderlos a todos
+		 
+		y atarlos al conocimiento para siempre,
+		
+		en la tierra de Internet,
+		
+		dónde se liberará al mundo (*)
+
+		_**(*) En homenaje a J.R.R.Tolkien, escritor y creador de lenguajes.**_
+		
+	

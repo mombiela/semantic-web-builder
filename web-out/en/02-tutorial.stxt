@@ -1,0 +1,198 @@
+Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
+	Default:
+		Title: STXT: El Libro
+		
+	Navigation:
+		Previous: Anterior (01-intro-2024)
+		Next: Siguiente (03-ai-powered)
+
+	Content:
+		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
+		Te explicamos lo que es @STxT@ directamente, sin más preámbulos.
+		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
+		
+	header:	Un ejemplo... ¡ya!
+		
+	subheader: Documentos sin namespace
+		
+	Content:
+		Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
+		y _todo el mundo_ lo puede llega a entender.
+		
+		El ejemplo será una receta de cocina. ¡Adelante!
+		
+	Code:
+		Receta: Receta de macarrones
+			Descripción:
+				:Esta es la descripción de la recta de macarrones.
+				:Bla, bla, bla
+				:Bla, bla, bla
+			Comensales: 3
+			Dificultad: fácil
+			Ingredientes:
+				Ingrediente: (100g) Tomate
+				Ingrediente: (240g) Macarrones
+			Pasos:
+				Paso: (1) Hacer sofrito
+				Paso: (2) Hervir macarrones
+				Paso: (3) Juntar macarrones con sofrito y servir
+	Content:
+		Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.
+		
+	Alert: No uséis esta receta en casa, esperad al próximo capítulo ;-)
+	
+	Content:
+		Bien, acabáis de ver lo que es un **documento @STxT@ sin namespace**. Este tipo de documentos
+		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
+		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
+		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así
+		hasta formar una estructura jerárquica. 
+	
+		Vale la pena mencionar el nodo `Descripción` que es un nodo que permite **multilíneas**.
+		Al no tener una estructura previa se distinguen porque estan anidados pero las
+		líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.
+	
+	Subheader: Documentos con namespace
+	
+	Content: 
+		Ahora iremos más allá, y definiremos la misma receta con un namespace.
+		Primero mostraremos como queda la receta, y después mostraremos el
+		namespace. Podéis pensar que normalmente se debería hacer al revés,
+		pero la realidad es que la mayoría de las veces tendremos un ejemplo
+		y de forma posterior definiremos el caso general.
+		
+		Aquí tenemos la receta:
+		
+	Code:
+		Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
+			Descripción:
+				Esta es la descripción de la recta de macarrones.
+				Bla, bla, bla
+				Bla, bla, bla
+			Comensales: 3
+			Dificultad: fácil
+			Ingredientes:
+				Ingrediente: (100g) Tomate
+				Ingrediente: (240g) Macarrones
+			Pasos:
+				Paso: (1) Hacer sofrito
+				Paso: (2) Hervir macarrones
+				Paso: (3) Juntar macarrones con sofrito y servir
+	
+	Content: 
+		¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
+		que es `www.kocinando.com/receta.stxt`, y el nodo `Descripción` parece
+		más natural. **Pues ya está :-)** Hemos convertido un documento sin namespace
+		a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter `:`
+		de los campos multilínea. 
+		
+		No podía ser más sencillo ;-)
+		
+		Ahora creamos el namespace. **La definición del namespace se encuentra en
+		un documento sin namespace**. En la versión anterior de STxT no era así,
+		pero complicaba los parseadores, y te obligaba a tener siempre definición
+		de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.
+		
+		Aquí está el namespace que podemos crear para el ejemplo:
+		
+	Code:
+		***Namespace: www.kocinando.com/receta.stxt***
+			Receta:
+			    Descripción: (?) TEXT
+			    Comensales: (?) NUMBER
+				Dificultad: (?) ENUM
+				   	: fácil
+				   	: media
+			    	: difícil
+			    Ingredientes: (1)
+					Ingrediente: (+)
+			    Pasos: (1)
+			    	Paso: (+)
+	
+	Content:
+		Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
+		el tipo del nodo si hiciera falta.
+		
+		El namespace **debería poderse consultar vía internet**, en la misma url que lo indica.
+		Así, este namespace debería estar disponible mediante la url `https://www.kocinando.com/receta.stxt`. 
+		Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.
+		
+		Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
+		debería ser mucho más sencillo que en otros lenguajes.
+	
+	Header: Otros elementos
+	Subheader: Comentarios
+	
+	Content:  
+		Es posible insertar comentarios en los documentos para 
+		expresar partes no finalizadas, pensamientos del autor, etc.
+		Los comentarios no se usarán pero permiten enriquecer el documento.
+		
+	Code:
+		Receta (www.kocinando.com/receta.stxt): Receta de macarrones
+		***# Esta receta me la pasó XX y la he hecho un montón de veces***
+		***# Os gustará mucho!!***
+			Descripción:
+				Esta es la descripción de la recta de macarrones.
+				Bla, bla, bla
+				Bla, bla, bla
+			Comensales: 3
+			Dificultad: fácil
+			Ingredientes:
+				Ingrediente: (100g) Tomate
+				Ingrediente: (240g) Macarrones
+			Pasos:
+				Paso: (1) Hacer sofrito
+				Paso: (2) Hervir macarrones
+				Paso: (3) Juntar macarrones con sofrito y servir	
+
+	Subheader: Distintos namespaces en un documento
+	
+	Content: 
+		Un namespace puede hacer referencia a otro, para indicar que
+		una parte del documento tiene la estructura en otro namespace.
+		Mejor ver un ejemplo:
+		
+	Code: 
+		***Namespace: www.kocinando.com/recetario.stxt***
+			Recetario:
+				Receta: (+) ***(www.kocinando.com/receta.stxt)***
+
+	Content: Aquí vemos que `Receta` es de otro namespace y vemos que
+		en vez de poner la estructura se hace referencia a otro namespace.
+		
+	Assert: NO es necesario decir el namespace interior, sólo el nodo principal.
+	
+	Content: Así, un ejemplo de recetario sería:
+	
+	Code:
+		***Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama*** 
+			***Receta: Receta de macarrones***
+				Descripción:
+					Esta es la descripción de la recta de macarrones.
+					Bla, bla, bla
+					Bla, bla, bla
+				Comensales: 3
+				Dificultad: fácil
+				Ingredientes:
+					Ingrediente: (100g) Tomate
+					Ingrediente: (240g) Macarrones
+				Pasos:
+					Paso: (1) Hacer sofrito
+					Paso: (2) Hervir macarrones
+					Paso: (3) Juntar macarrones con sofrito y servir	
+			***Receta: Receta de pizza***
+				Ingredientes:
+					Ingrediente: (1u) Masa pizza
+					Ingrediente: (100g) Tomate
+					Ingrediente: (50g) Queso
+				Pasos:
+					Paso: (1) Poner tomate y queso en pizza
+					Paso: (2) Hornear durante 15'
+	
+	Header: Fin del tutorial
+
+	Alert:
+		Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.\
+		O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-) 
+		
