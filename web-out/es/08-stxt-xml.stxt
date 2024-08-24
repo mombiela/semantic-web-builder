@@ -14,7 +14,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 		Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.
 		Leed bajo vuestra propia responsabilidad ;-)
 		
-	header:La leyenda (**)
+	header:La leyenda
 		
 	Content:
 		El origen del mal: SGML.
@@ -47,7 +47,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 	alert:
 		La hora de @STxT@ había llegado.
 		
-	header:La actualidad (**)
+	header:La actualidad
 	
 	Content:	
 		El mundo está plagado de documentos feos, _xml's que nos gustan..._ ¡si es un formato horrible!
@@ -66,29 +66,24 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 		No quiero asustaros, pero @STxT@, comparado con xml es:
 		
 		* Más bonito
-		* Más compacto
 		* Más simple
+		* Más compacto
+		* Más rápido
 	
 		Y además se puede expresar lo mismo.
 			
-		En otros apartados también veremos que:
-		
-		* Internacionalización automática de la semántica
-		* Más rápido de parsear
-		* ¡Todo son namespaces! ¡Y ni tan siquiera los ves!
-		
 		Vamos a ver un ejemplo de XML, y lo compararemos con @STxT@, para empezar. 
 		Será un ejemplo fácil:
 		
 	code:
 		<?xml version="1.0" encoding="UTF-8" ?> 
-		<!-- This is a line comment  --> 
-		<email>
-		<from>John Smith</from>
-		<to>Mery Adams</to> 
-		<cc>Keyla Brown</cc> 
-		<title>Project report</title> 
-		<body>Hello Mery!! The book is finished!!</body> 
+			<!-- This is a line comment  --> 
+			<email>
+			<from>John Smith</from>
+			<to>Mery Adams</to> 
+			<cc>Keyla Brown</cc> 
+			<title>Project report</title> 
+			<body>Hello Mery!! The book is finished!!</body> 
 		</email>
 		
 	Content:
@@ -112,8 +107,8 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 	Content:
 		Vamos a por el tamaño.
 		
-		Longitud XML: 246\\
-		Longitud @STxT@: 183
+		Longitud XML: 254\\
+		Longitud @STxT@: 190
 		
 		Veamos cuando compactamos al máximo
 		
@@ -126,11 +121,11 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 	code:
 		# This is a line comment
 		Email(www.example.com/email.stxt):
-		From:John Smith
-		To:Mery Adams
-		Cc:Keyla Brown
-		Title:Project report
-		Body:Hello Mery!! The book is finished!!
+			From:John Smith
+			To:Mery Adams
+			Cc:Keyla Brown
+			Title:Project report
+			Body:Hello Mery!! The book is finished!!
 		
 	Content:
 		Longitud Mínima XML: 225\\
@@ -139,7 +134,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 		Si comparamos sin cabecera de xml ni namespace de @STxT@:
 		
 		Longitud Mínima XML: 186\\
-		Longitud Mínima @STxT@: 144
+		Longitud Mínima @STxT@: 149
 		
 		Creo que es evidente que
 		
@@ -310,91 +305,6 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 			
 		¿Hay alguien que lo entienda? Perdón, perdón. ¿Hay alguien _que no sea un superhéroe_ que lo entienda?
 			
-		En cambio con @STxT@ la mayoría de personas no tendría dificultad en entender el @STxT@ de un @STxT@.
-		Lo voy a enseñar, aunque ya lo habíamos visto en el capítulo 4:
-		
-	code:
-		ns_def(www.semantictext.info/namespace.stxt):
-		 
-		n_def:
-			type:NODE
-			cn:ns_def
-			a:namespace definition
-			a:namespace_definition
-			ch:
-				cn:n_def
-				n:+
-		n_def:
-			type:NODE
-			cn:n_def
-			a:node definition
-			a:node def
-			a:node_def
-			ch:
-				cn:cn
-				n:1
-			ch:
-				cn:a
-				n:*
-			ch:
-				cn:type
-				n:1
-			ch:
-				cn:dsc
-				n:?
-			ch:
-				cn:ch
-				n:*
-		n_def:
-			type:NODE
-			cn:ch
-			a:Child
-			a:Child Node
-			ch:
-				cn:cn
-				n:1
-			ch:
-				cn:ns
-				n:?
-			ch:
-				cn:n
-				n:1
-		n_def:
-			type:TEXT
-			cn:cn
-			a:name
-			a:node
-			a:node name
-			a:canonical name
-		n_def:
-			type:TEXT
-			cn:a
-			a:al
-			a:alias
-		n_def:
-			type:TEXT
-			cn:type
-			a:node type
-		n_def:
-			type:TEXT
-			cn:n
-			a:num
-			a:occurs
-		n_def:
-			type:TEXT
-			cn:dsc
-			a:descrip
-			a:description
-		n_def:
-			type:TEXT
-			cn:ns
-			a:namespace
-		
-	Content:
-		¡Ya está! ¡Comparadlo! :-D \\
-		¡No hay color!
-		
-		Vale, es mucho más simple, pero ¡nadie se atreve a leer lo que sale de los xsd's!
 		Todo es mucho más complicado. Con @STxT@ hemos buscado la sencillez.
 		¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!
 		

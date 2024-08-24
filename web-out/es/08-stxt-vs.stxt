@@ -19,7 +19,6 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		Es tan sencillo como coger un ejemplo cualquiera de otro lenguaje
 		y ver cómo se escribiría en @STxT@. Quizá lo más simple sea un ejemplo
 		que venga de XML, ya que tienen muchos paralelismos con @STxT@
-		(el próximo capítulo trata sobre este tema en particular).
 		
 		Muchos ejemplos los he obtenido de [[http:_www.wikipedia.org|Wikipedia|wiki]].
 		
@@ -109,8 +108,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		
 	Content:
 		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el @STxT@.
-		Por cierto, el @STxT@ siempre tiene una gramática, mientras que el XML no la tiene
-		hasta que no se le aplique un dtd o xsd. 
+		
+		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xwm), por si lo queréis leer. 
+		Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)
 		 
 	header:Wikipedia (*)
 		
@@ -296,28 +296,24 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		Y además, hemos mantenido la compacidad en la creación de fórmulas matemáticas
 		y otros elementos dónde TeX sí es realmente un gran lenguaje.
 		
-	subheader:JSON (*)
+	subheader:JSON
 	
 	Content:
 		JSON en principio no tiene nada que ver con @STxT@, pero hay ciertos momentos
-		en los que pueden entrar en competencia. Estoy pensando en servicios web mediante REST.
-		Yo apuesto por @STxT@, ya que es tan fácil (o más) de parsear que JSON,
-		y dota a los documentos de un significado evidente.
+		en los que pueden entrar en competencia. Estoy pensando en ficheros de configuración, por ejemplo.
 		Además, es más flexible y fácil de leer cuando incrustamos gran cantidad de texto,
 		cosa que en JSON hay que tener en cuenta siempre todos los caracteres de escapamiento.
 		
-		Pero no hace falta preocuparse mucho. Aparte de servicios web,
-		no creo que JSON y @STxT@ sean competencia directa,
+		Pero no hace falta preocuparse mucho. 
+		No creo que JSON y @STxT@ sean competencia directa,
 		debido a su distinto ámbito de aplicación.
 		
-	subheader:Otros (*)
+	subheader: YAML
 		
 	Content:
-		Hay otros lenguajes que se pueden parecer a @STxT@, pero creo que ninguno se ha hecho con el mismo enfoque.
-		Por ejemplo, tenemos YAML, que tiene ciertos parecidos en la forma en que usa la identación,
-		o CofeeScript, que teniendo un aspecto a veces similar, no tiene nada que ver con @STxT@.
-		
-		El objetivo de @STxT@ es dotar de una estructura y de una semántica al documento,
+		Quizá YAML sea el que más se parezca en enfoque, aunque también es muy distinto.
+		Nosotros creemos que con nuestra estructura se puede mostrar lo mismo que YAML,
+		y mucho más simple. Además, podemos añadir semántica al documento con los namespaces,
 		al mismo tiempo que permite un texto legible para la mayoría de personas,
 		independientemente de sus conocimientos informáticos.
 		

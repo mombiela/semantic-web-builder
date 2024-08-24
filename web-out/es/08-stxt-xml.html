@@ -69,7 +69,7 @@
 															            	<h2><a id="index_0"></a>Advertencia al lector</h2>
 																<p>Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.<br>Leed bajo vuestra propia responsabilidad ;-)</p>
 
-								            	<h2><a id="index_1"></a>La leyenda (**)</h2>
+								            	<h2><a id="index_1"></a>La leyenda</h2>
 																<p>El origen del mal: SGML.</p>
 <p>Todo empezó hace mucho, mucho tiempo, en una tierra oscura llamada &quot;informática&quot;.<br>Los encodings campaban por ese mundo. Sembrando incompatibilidades.<br>Entorpeciendo comunicaciones. Riéndose de los que no eran como ellos.<br>Algunos intentaron estar en paz con todos ellos.</p>
 <p>Y entonces crearon el monstruo: SGML</p>
@@ -83,7 +83,7 @@
             		<div class="alert"><p>La hora de <span class='STxT'><span class='first'>S</span>TxT</span> había llegado.</p>
 </div>
             	</div>
-								            	<h2><a id="index_2"></a>La actualidad (**)</h2>
+								            	<h2><a id="index_2"></a>La actualidad</h2>
 																<p>El mundo está plagado de documentos feos, <em>xml's que nos gustan...</em> ¡si es un formato horrible!</p>
 <p>Estamos heredando un formato anticuado, con encodings anticuados, con forma de pensar muy informatizada.<br>Y está en todas partes. Y seguimos usándolo. Y queremos que esté para todo... ¡Un momento! ¡Stop!<br>¿Es necesario? Si no supiéramos nada de sgml y quisiéramos tener un txt rápido de parsear, con estructura,<br>con espacio de nombres, ¿hubiésemos creado xml? Yo creo que no. Si a un niño le decimos que invente algo,<br>supongo que jamás habría creado xml... hubiese hecho algo más natural... ¡HUBIESE CREADO <span class='STxT'><span class='first'>S</span>TxT</span>!</p>
 <p>Bien, nosotros tenemos más experiencia y hemos aprendido. ¡Vamos a crearlo!</p>
@@ -92,26 +92,21 @@
 																<p>No quiero asustaros, pero <span class='STxT'><span class='first'>S</span>TxT</span>, comparado con xml es:</p>
 <ul>
 <li>Más bonito</li>
-<li>Más compacto</li>
 <li>Más simple</li>
+<li>Más compacto</li>
+<li>Más rápido</li>
 </ul>
 <p>Y además se puede expresar lo mismo.</p>
-<p>En otros apartados también veremos que:</p>
-<ul>
-<li>Internacionalización automática de la semántica</li>
-<li>Más rápido de parsear</li>
-<li>¡Todo son namespaces! ¡Y ni tan siquiera los ves!</li>
-</ul>
 <p>Vamos a ver un ejemplo de XML, y lo compararemos con <span class='STxT'><span class='first'>S</span>TxT</span>, para empezar.<br>Será un ejemplo fácil:</p>
 
 												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
-&lt;!-- This is a line comment  --&gt; 
-&lt;email&gt;
-&lt;from&gt;John Smith&lt;/from&gt;
-&lt;to&gt;Mery Adams&lt;/to&gt; 
-&lt;cc&gt;Keyla Brown&lt;/cc&gt; 
-&lt;title&gt;Project report&lt;/title&gt; 
-&lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
+    &lt;!-- This is a line comment  --&gt; 
+    &lt;email&gt;
+    &lt;from&gt;John Smith&lt;/from&gt;
+    &lt;to&gt;Mery Adams&lt;/to&gt; 
+    &lt;cc&gt;Keyla Brown&lt;/cc&gt; 
+    &lt;title&gt;Project report&lt;/title&gt; 
+    &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
 &lt;/email&gt;</pre>
 												<p>Vamos a ver la version de <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
 
@@ -129,7 +124,7 @@ Email (www.example.com/email.stxt):
 </div>
             	</div>
 												<p>Vamos a por el tamaño.</p>
-<p>Longitud XML: 246\<br>Longitud <span class='STxT'><span class='first'>S</span>TxT</span>: 183</p>
+<p>Longitud XML: 254\<br>Longitud <span class='STxT'><span class='first'>S</span>TxT</span>: 190</p>
 <p>Veamos cuando compactamos al máximo</p>
 
 												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!-- This is a line comment  --&gt;
@@ -138,14 +133,14 @@ Email (www.example.com/email.stxt):
 is finished!!&lt;/body&gt;&lt;/email&gt;</pre>
 												<pre># This is a line comment
 Email(www.example.com/email.stxt):
-From:John Smith
-To:Mery Adams
-Cc:Keyla Brown
-Title:Project report
-Body:Hello Mery!! The book is finished!!</pre>
+    From:John Smith
+    To:Mery Adams
+    Cc:Keyla Brown
+    Title:Project report
+    Body:Hello Mery!! The book is finished!!</pre>
 												<p>Longitud Mínima XML: 225\<br>Longitud Mínima <span class='STxT'><span class='first'>S</span>TxT</span>: 172</p>
 <p>Si comparamos sin cabecera de xml ni namespace de <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
-<p>Longitud Mínima XML: 186\<br>Longitud Mínima <span class='STxT'><span class='first'>S</span>TxT</span>: 144</p>
+<p>Longitud Mínima XML: 186\<br>Longitud Mínima <span class='STxT'><span class='first'>S</span>TxT</span>: 149</p>
 <p>Creo que es evidente que</p>
 
 												<div class="row">
@@ -267,85 +262,7 @@ Body:
 <p>Os dejo el enlace, por si alguien lo quiere ver:</p>
 <p>[[http:_www.w3.org/2001/XMLSchema.xsd|http:_www.w3.org/2001/XMLSchema.xsd|xsd]]</p>
 <p>¿Hay alguien que lo entienda? Perdón, perdón. ¿Hay alguien <em>que no sea un superhéroe</em> que lo entienda?</p>
-<p>En cambio con <span class='STxT'><span class='first'>S</span>TxT</span> la mayoría de personas no tendría dificultad en entender el <span class='STxT'><span class='first'>S</span>TxT</span> de un <span class='STxT'><span class='first'>S</span>TxT</span>.<br>Lo voy a enseñar, aunque ya lo habíamos visto en el capítulo 4:</p>
-
-												<pre>ns_def(www.semantictext.info/namespace.stxt):
- 
-n_def:
-    type:NODE
-    cn:ns_def
-    a:namespace definition
-    a:namespace_definition
-    ch:
-        cn:n_def
-        n:+
-n_def:
-    type:NODE
-    cn:n_def
-    a:node definition
-    a:node def
-    a:node_def
-    ch:
-        cn:cn
-        n:1
-    ch:
-        cn:a
-        n:*
-    ch:
-        cn:type
-        n:1
-    ch:
-        cn:dsc
-        n:?
-    ch:
-        cn:ch
-        n:*
-n_def:
-    type:NODE
-    cn:ch
-    a:Child
-    a:Child Node
-    ch:
-        cn:cn
-        n:1
-    ch:
-        cn:ns
-        n:?
-    ch:
-        cn:n
-        n:1
-n_def:
-    type:TEXT
-    cn:cn
-    a:name
-    a:node
-    a:node name
-    a:canonical name
-n_def:
-    type:TEXT
-    cn:a
-    a:al
-    a:alias
-n_def:
-    type:TEXT
-    cn:type
-    a:node type
-n_def:
-    type:TEXT
-    cn:n
-    a:num
-    a:occurs
-n_def:
-    type:TEXT
-    cn:dsc
-    a:descrip
-    a:description
-n_def:
-    type:TEXT
-    cn:ns
-    a:namespace</pre>
-												<p>¡Ya está! ¡Comparadlo! :-D \<br>¡No hay color!</p>
-<p>Vale, es mucho más simple, pero ¡nadie se atreve a leer lo que sale de los xsd's!<br>Todo es mucho más complicado. Con <span class='STxT'><span class='first'>S</span>TxT</span> hemos buscado la sencillez.<br>¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!</p>
+<p>Todo es mucho más complicado. Con <span class='STxT'><span class='first'>S</span>TxT</span> hemos buscado la sencillez.<br>¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!</p>
 
 								            	<h2><a id="index_9"></a>Parsers y validators</h2>
 																<p>¿Alguien quiere comparar los parsers y validators? No hace falta,<br>uno con <span class='STxT'><span class='first'>S</span>TxT</span> es MUCHO más rápido y más sencillo de implementar.<br>¿Por qué? Es muy sencillo:</p>
