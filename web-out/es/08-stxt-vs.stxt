@@ -109,7 +109,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 	Content:
 		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el @STxT@.
 		
-		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xwm), por si lo queréis leer. 
+		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xml), por si lo queréis leer. 
 		Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)
 		 
 	header:Wikipedia (*)
