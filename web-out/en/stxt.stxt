@@ -6,8 +6,9 @@ Document (globalcampus.site/namespace.stxt):Semantic Text en nuestra propia web
 		Last modif: 2013-03-01
 	
 	Assert:
-		Toda nuestra web está disponible en @STxT@.\\
-		Sólo hay que cambiar //*.html// por //*.stxt// \\ o pulsar en los triángulos amarillos :-)
+		Toda nuestra web está disponible en @STxT@.\
+		Sólo hay que cambiar `*.html` por `*.stxt`\
+		o pulsar en los triángulos amarillos :-)
 	
 	Content:
 		Nos gusta probar nuestra propia medicina ;-)

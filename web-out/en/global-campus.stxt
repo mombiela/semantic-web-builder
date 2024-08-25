@@ -1,54 +1,50 @@
-Document (globalcampus.site/namespace.stxt):Semantic Web Builder: La aplicación web
+Document (globalcampus.site/namespace.stxt): Global Campus
 
 	Metadata:
-		Description: SWB son una serie de scripts que permiten crear portales web a partir del lenguaje STxT.
+		Description: GlobalCampus.site es un portal de creación de contenidos descentralizados de aprendizaje.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 		
-	Content:
-		==Semantic Web Builder (SWB)==
-		
 	Assert:
-		//Bienvenido a nuestra aplicación estrella// \\
-		[[https://github.com/mombiela/semantic-web-builder | Semantic Web Builder]]
+		_Bienvenido a nuestra aplicación estrella_ \
+		[GlobalCampus.site](https://globalcampus.site)
+		
+	Header: ¿Qué es GlobalCampus.site?
 		
 	Content:
-		===¿Qué es SWB?===
-		
-		Un conjunto de scripts de Java que permiten construir un portal mediante
-		el uso de páginas creadas con @STxT@. Aunque a nosotros nos gustaría
-		que fuese usado como "fuente de inspiración" para otros proyectos
+		Es un portal de aprendizaje, aunque de momento es más **un espacio de trabajo para STxT**.
+		Se ha usado para crear este mismo portal, y a nosotros nos gustaría
+		que fuese usado como "**fuente de inspiración**" para otros proyectos
 		o desarrollos. Con ese proyecto hemos usado este mismo portal, por
 		lo que estamos muy satisfechos con los resultados.
 	
-	# Por cierto, tuve problemas para escoger el nombre de SWB. 
-	# Estos eran los candidatos: 	
-	# * Super Web Builder
-	# * Semantic Web Builder
-	# * STxT Web Builder
-	# * Sexy Web Builder
+	Header: ¿Por qué lo hicisteis?
 	
-		===¿Qué NO es SWB?===
+	Content:
+		En 2013 realizamos un proyecto llamado _SemanticWebBuilder_, que es justamente
+		lo que hemos usado actualmente para esta web. Pero queríamos algo que fuera
+		muy rápido de probar, **casi immediato**. Además, siempre hemos hechado en falta
+		una wiki de aprendizaje global. Evidentemente, en este momento no podemos 
+		financiar un proyecto así, pero con un poco de imaginación y con el uso
+		de @STXT@ quizá no hacía falta. 
 		
-		SWB no es un editor o GUI para crear portales, ni un entorno de desarrollo web. Para
-		ello hay grandes programas, y no es nuestra intención entrar en competencia
-		con ninguno de ellos. 
+		El proyecto se inició con sólo los fuentes javascript para parseo de STxT,
+		y fue evolucionando hacia un portal dinámico. Partimos el proyecto en 2,
+		y por un lado quedó el parser y por el otro el portal (que usa el parser).
 		
-		===¿Por qué lo hicisteis?===
-		
-		Realmente hicimos estos scripts en un día; justo cuando empezábamos a hacer esta web.
-		Queríamos algo muy funcional, rápido de hacer, y que nos permitiese tener contenido estático
-		rápidamente publicado. Y resulta que @STxT@ nos aportó la solución.
-		Nos ha gustado tanto que hemos tenido que enseñarlo. Además, es el //código	fuente//
-		con el que hemos construido esta web. ¿Quién más puede presumir de ésto?
-		
-		=== ¿Qué requerimientos tiene? ===
-		
-		Bien, para funcionar es necesario una máquina virtual de Java disponible en el path.
-		El proyecto está creado con Eclipse, por lo que su integración es directa. Para las plantillas
-		hemos usado [[http://velocity.apache.org|Apache Velocity|apache]].
-		
+		En un futuro nos gustaría que el parser fuera mantenido por otros
+		(_¡hola Apache! ¿como lo veis?_), y nosotros dedicarnos a mantener el origen
+		de STxT y el libro.
+		 
 	# ¡¡Un saludo a la comunidad de Apache!! ¡¡El mundo de la informática no sería igual sin vosotros!!
+		
+	Header: ¿Qué requerimientos tiene?
+		
+	Content: 
+		¡Casi nada! Clonáis un proyecto de github... ¡y ya podéis hacer cambios y probarlos!
+		En cuanto subáis los cambios esperáis unos minutos y ya tenéis vuestro contenido 
+		disponible! :-)
+		
 		
 		
 		
