@@ -72,8 +72,12 @@
 			
 			
 																				            	<h2><a id="index_0"></a>Introducción</h2>
-																<p>Parsear un fichero <span class='STxT'><span class='first'>S</span>TxT</span> es mucho más fácil que parsear ficheros de otras tecnologías.<br>Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está<br>basado en principios muy simples.</p>
-<p>Yo os explicaré mi forma de parsear un fichero. Es posible que no sea la mejor, ni la más óptima,<br>pero es una forma de hacerlo. De hecho, si queréis ver la implementación que he hecho<br>está disponible en Internet:</p>
+																<p>Parsear un fichero <span class='STxT'><span class='first'>S</span>TxT</span> es mucho más fácil que parsear ficheros de otras tecnologías.
+Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está
+basado en principios muy simples.</p>
+<p>Yo os explicaré mi forma de parsear un fichero. Es posible que no sea la mejor, ni la más óptima,
+pero es una forma de hacerlo. De hecho, si queréis ver la implementación que he hecho
+está disponible en Internet:</p>
 
 												<div class="row">
             		<div class="assert"><p>[[https:_github.com/mombiela/stxt-parser | https:_github.com/mombiela/stxt-parser]]</p>
@@ -81,10 +85,12 @@
             	</div>
 												<p>Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.</p>
 <p>Espero que <span class='STxT'><span class='first'>S</span>TxT</span> tenga éxito, y que muy pronto aparezcan otras implementaciones.</p>
-<p>No voy a entrar en todos los detalles, pero sí que me gustaría explicar<br>algunos puntos que requieren más atención.</p>
+<p>No voy a entrar en todos los detalles, pero sí que me gustaría explicar
+algunos puntos que requieren más atención.</p>
 
 												<div class="row">
-            		<div class="assert"><p>Si no tenéis intención de implementar un parseador no continuéis leyendo.<br>El siguiente capítulo es mucho más interesante ;-)</p>
+            		<div class="assert"><p>Si no tenéis intención de implementar un parseador no continuéis leyendo.
+El siguiente capítulo es mucho más interesante ;-)</p>
 </div>
             	</div>
 								            	<h2><a id="index_1"></a>Proceso genérico</h2>
@@ -95,30 +101,48 @@
     leer linea
     procesar linea
 fin mientras</pre>
-												<p>Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,<br>ya que de esto depende el procesado correcto.</p>
+												<p>Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,
+ya que de esto depende el procesado correcto.</p>
 
 								            	<h3><a id="index_3"></a>Procesado de línea</h3>
-																<p>El primer paso en el procesado de la línea es la <em>normalización</em> de la línea.<br>Una línea está normalizada cuando está en forma compacta (o semicompacta), por lo que hay que comprobar si lo está,<br>y si no lo está, transformarla. En la normalización también se eliminan las líneas de comentarios.</p>
-<p>Hay que tener en cuenta en la normalización que si el nodo anterior era de texto,<br>al superar cierto nivel será parte de ese mismo nodo. Es decir, será texto a continuación. También será parte de él<br>si no llega al nivel pero la línea está completamente en blanco,<br>en cuyo caso se traducirá por texto con un salto de línea ([[chapter_06.html#index_9|Ver tutorial avanzado]]).</p>
-<p>Una vez hemos compactada la línea, el procesado sigue independientemente, y ya sólo falta obtener<br>el nivel de la nueva línea y distinguir entre unos pocos casos:</p>
+																<p>El primer paso en el procesado de la línea es la <em>normalización</em> de la línea.
+Una línea está normalizada cuando está en forma compacta (o semicompacta), por lo que hay que comprobar si lo está,
+y si no lo está, transformarla. En la normalización también se eliminan las líneas de comentarios.</p>
+<p>Hay que tener en cuenta en la normalización que si el nodo anterior era de texto,
+al superar cierto nivel será parte de ese mismo nodo. Es decir, será texto a continuación. También será parte de él
+si no llega al nivel pero la línea está completamente en blanco,
+en cuyo caso se traducirá por texto con un salto de línea ([[chapter_06.html#index_9|Ver tutorial avanzado]]).</p>
+<p>Una vez hemos compactada la línea, el procesado sigue independientemente, y ya sólo falta obtener
+el nivel de la nueva línea y distinguir entre unos pocos casos:</p>
 <ul>
 <li>¿Estamos en el primer nodo?</li>
 <li>¿La línea es texto de un nodo de texto anterior?</li>
 <li>¿Empieza un nuevo nodo?</li>
 </ul>
 <p>En cada uno de los casos se trata de actualizar el estado de nuestras variables, y proseguir con el proceso.</p>
-<p>Nota: Lo más importante aquí es ver que es un proceso que se puede hacer línea a línea,<br>y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,<br>que a su vez puede actuar de validador de la gramática y los nodos.</p>
+<p>Nota: Lo más importante aquí es ver que es un proceso que se puede hacer línea a línea,
+y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,
+que a su vez puede actuar de validador de la gramática y los nodos.</p>
 
 								            	<h3><a id="index_4"></a>Validaciones</h3>
 																<p>Las validaciones se hacen en varios puntos del parseo:</p>
 <ul>
-<li>Al crear un nodo nuevo: Al crear un nodo nuevo se valida que se pueda deducir su namespace.<br>En caso contrario significa que no se podía crear en esa posición y sería incorrecto.</li>
-<li>Al finalizar un nodo: Cuando damos por cerrado un nodo se valida.<br>** En caso que sea tipo NODE se valida que el número de hijos sea correcto.<br>** En caso que no sea NODE se valida que tenga el contenido adecuado dependiendo de su tipo.</li>
+<li>Al crear un nodo nuevo: Al crear un nodo nuevo se valida que se pueda deducir su namespace.
+En caso contrario significa que no se podía crear en esa posición y sería incorrecto.</li>
+<li>Al finalizar un nodo: Cuando damos por cerrado un nodo se valida.
+** En caso que sea tipo NODE se valida que el número de hijos sea correcto.
+** En caso que no sea NODE se valida que tenga el contenido adecuado dependiendo de su tipo.</li>
 </ul>
-<p>¿Cuándo damos por finalizado un nodo? Este punto es interesante,<br>ya que hay dos circunstancias que hacen que un nodo se de por finalizado.<br>Una de ellas es cuando aparece otro nodo con un nivel igual o inferior a este nodo.<br>La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.<br>En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.</p>
+<p>¿Cuándo damos por finalizado un nodo? Este punto es interesante,
+ya que hay dos circunstancias que hacen que un nodo se de por finalizado.
+Una de ellas es cuando aparece otro nodo con un nivel igual o inferior a este nodo.
+La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.
+En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.</p>
 
 								            	<h2><a id="index_5"></a>Los nodos del lenguaje</h2>
-																<p>En la descripción del lenguaje habíamos dicho que los tipos de datos no tienen limitación<br>ni están ligados a un lenguaje, por lo que las validaciones sólo deberían ser comprobadas<br>mediante expresiones regulares o métodos que aseguren este hecho.</p>
+																<p>En la descripción del lenguaje habíamos dicho que los tipos de datos no tienen limitación
+ni están ligados a un lenguaje, por lo que las validaciones sólo deberían ser comprobadas
+mediante expresiones regulares o métodos que aseguren este hecho.</p>
 <p>Tenemos los siguientes tipos de nodos:</p>
 <ul>
 <li>NODE</li>
@@ -144,17 +168,28 @@ NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 RATIONAL     = ^(\-|\+)?\d+\/\d+$</pre>
 								            	<h2><a id="index_6"></a>Gramáticas</h2>
 												            	<h3><a id="index_7"></a>Almacenaje</h3>
-																<p>Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar<br>siempre las definiciones de forma remota. La estrategia más eficiente es tener una especie de repositorio de gramáticas,<br>en disco, e ir a buscarlas siempre allí. En caso de no encontrarse se buscaría en Internet,<br>y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.<br>La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.</p>
+																<p>Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar
+siempre las definiciones de forma remota. La estrategia más eficiente es tener una especie de repositorio de gramáticas,
+en disco, e ir a buscarlas siempre allí. En caso de no encontrarse se buscaría en Internet,
+y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.
+La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.</p>
 
 								            	<h3><a id="index_8"></a>Gramática inicial</h3>
-																<p>Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.<br>Para parsear una gramática hay que tener la definición de la gramática base ya parseada.<br>Por esta razón habrá una definición de la gramática inicial en el propio código.</p>
+																<p>Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.
+Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
+Por esta razón habrá una definición de la gramática inicial en el propio código.</p>
 
 								            	<h2><a id="index_9"></a>Detalles a tener en cuenta</h2>
 																<p>Hay algunos detalles que hay que tener en cuenta en el parseo:</p>
 <ul>
-<li>Case-insensitive: Todos los nodos son considerados CASE-INSENSITIVE,<br>por lo que hay que hacer las transformaciones adecuadas en el proceso de parseo.</li>
-<li>Base64: Con el texto BASE64 hay que permitir saltos de línea,<br>y hacer un parseo estándar del contenido así obtenido.</li>
-<li>Para lectura de líneas hay que tener en cuenta tanto formato UNIX como DOS.<br>Por ello permitiremos tanto el salto de línea, como salto de línea + retorno de carro.<br>Esto lo hacemos para permitir ediciones rápidas de ficheros desde cualquier entorno,<br>aunque lo más adecuado sería siempre usar estándar UNIX (sólo carácter de salto de línea).</li>
+<li>Case-insensitive: Todos los nodos son considerados CASE-INSENSITIVE,
+por lo que hay que hacer las transformaciones adecuadas en el proceso de parseo.</li>
+<li>Base64: Con el texto BASE64 hay que permitir saltos de línea,
+y hacer un parseo estándar del contenido así obtenido.</li>
+<li>Para lectura de líneas hay que tener en cuenta tanto formato UNIX como DOS.
+Por ello permitiremos tanto el salto de línea, como salto de línea + retorno de carro.
+Esto lo hacemos para permitir ediciones rápidas de ficheros desde cualquier entorno,
+aunque lo más adecuado sería siempre usar estándar UNIX (sólo carácter de salto de línea).</li>
 </ul>
 
 						

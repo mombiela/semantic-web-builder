@@ -71,11 +71,14 @@
 	
 			
 			
-																			<p>Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo.<br>Te explicamos lo que es <span class='STxT'><span class='first'>S</span>TxT</span> directamente, sin más preámbulos.<br>Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.</p>
+																			<p>Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo.
+Te explicamos lo que es <span class='STxT'><span class='first'>S</span>TxT</span> directamente, sin más preámbulos.
+Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.</p>
 
 								            	<h2><a id="index_0"></a>Un ejemplo... ¡ya!</h2>
 												            	<h3><a id="index_1"></a>Documentos sin namespace</h3>
-																<p>Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo<br>y <em>todo el mundo</em> lo puede llega a entender.</p>
+																<p>Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
+y <em>todo el mundo</em> lo puede llega a entender.</p>
 <p>El ejemplo será una receta de cocina. ¡Adelante!</p>
 
 												<pre>Receta: Receta de macarrones
@@ -98,11 +101,21 @@
             		<div class="alert"><p>No uséis esta receta en casa, esperad al próximo capítulo ;-)</p>
 </div>
             	</div>
-												<p>Bien, acabáis de ver lo que es un <strong>documento <span class='STxT'><span class='first'>S</span>TxT</span> sin namespace</strong>. Este tipo de documentos<br>son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya<br>se puede ver que tienen estructura, con un nodo principal <code>Receta</code>, el qual tiene<br>un nodo <code>Descripción</code>, <code>Ingredientes</code>, etc. A su vez estos nodos tienen otros, y así<br>hasta formar una estructura jerárquica.</p>
-<p>Vale la pena mencionar el nodo <code>Descripción</code> que es un nodo que permite <strong>multilíneas</strong>.<br>Al no tener una estructura previa se distinguen porque estan anidados pero las<br>líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.</p>
+												<p>Bien, acabáis de ver lo que es un <strong>documento <span class='STxT'><span class='first'>S</span>TxT</span> sin namespace</strong>. Este tipo de documentos
+son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya
+se puede ver que tienen estructura, con un nodo principal <code>Receta</code>, el qual tiene
+un nodo <code>Descripción</code>, <code>Ingredientes</code>, etc. A su vez estos nodos tienen otros, y así
+hasta formar una estructura jerárquica.</p>
+<p>Vale la pena mencionar el nodo <code>Descripción</code> que es un nodo que permite <strong>multilíneas</strong>.
+Al no tener una estructura previa se distinguen porque estan anidados pero las
+líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.</p>
 
 								            	<h3><a id="index_2"></a>Documentos con namespace</h3>
-																<p>Ahora iremos más allá, y definiremos la misma receta con un namespace.<br>Primero mostraremos como queda la receta, y después mostraremos el<br>namespace. Podéis pensar que normalmente se debería hacer al revés,<br>pero la realidad es que la mayoría de las veces tendremos un ejemplo<br>y de forma posterior definiremos el caso general.</p>
+																<p>Ahora iremos más allá, y definiremos la misma receta con un namespace.
+Primero mostraremos como queda la receta, y después mostraremos el
+namespace. Podéis pensar que normalmente se debería hacer al revés,
+pero la realidad es que la mayoría de las veces tendremos un ejemplo
+y de forma posterior definiremos el caso general.</p>
 <p>Aquí tenemos la receta:</p>
 
 												<pre>Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
@@ -119,9 +132,16 @@
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,<br>que es <code>www.kocinando.com/receta.stxt</code>, y el nodo <code>Descripción</code> parece<br>más natural. <strong>Pues ya está :-)</strong> Hemos convertido un documento sin namespace<br>a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter <code>:</code><br>de los campos multilínea.</p>
+												<p>¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
+que es <code>www.kocinando.com/receta.stxt</code>, y el nodo <code>Descripción</code> parece
+más natural. <strong>Pues ya está :-)</strong> Hemos convertido un documento sin namespace
+a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter <code>:</code>
+de los campos multilínea.</p>
 <p>No podía ser más sencillo ;-)</p>
-<p>Ahora creamos el namespace. <strong>La definición del namespace se encuentra en<br>un documento sin namespace</strong>. En la versión anterior de STxT no era así,<br>pero complicaba los parseadores, y te obligaba a tener siempre definición<br>de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
+<p>Ahora creamos el namespace. <strong>La definición del namespace se encuentra en
+un documento sin namespace</strong>. En la versión anterior de STxT no era así,
+pero complicaba los parseadores, y te obligaba a tener siempre definición
+de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
 <p>Aquí está el namespace que podemos crear para el ejemplo:</p>
 
 												<pre>***Namespace: www.kocinando.com/receta.stxt***
@@ -136,13 +156,19 @@
             Ingrediente: (+)
         Pasos: (1)
             Paso: (+)</pre>
-												<p>Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando<br>el tipo del nodo si hiciera falta.</p>
-<p>El namespace <strong>debería poderse consultar vía internet</strong>, en la misma url que lo indica.<br>Así, este namespace debería estar disponible mediante la url <code>https://www.kocinando.com/receta.stxt</code>.<br>Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.</p>
-<p>Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos<br>debería ser mucho más sencillo que en otros lenguajes.</p>
+												<p>Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
+el tipo del nodo si hiciera falta.</p>
+<p>El namespace <strong>debería poderse consultar vía internet</strong>, en la misma url que lo indica.
+Así, este namespace debería estar disponible mediante la url <code>https://www.kocinando.com/receta.stxt</code>.
+Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.</p>
+<p>Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
+debería ser mucho más sencillo que en otros lenguajes.</p>
 
 								            	<h2><a id="index_3"></a>Otros elementos</h2>
 												            	<h3><a id="index_4"></a>Comentarios</h3>
-																<p>Es posible insertar comentarios en los documentos para<br>expresar partes no finalizadas, pensamientos del autor, etc.<br>Los comentarios no se usarán pero permiten enriquecer el documento.</p>
+																<p>Es posible insertar comentarios en los documentos para
+expresar partes no finalizadas, pensamientos del autor, etc.
+Los comentarios no se usarán pero permiten enriquecer el documento.</p>
 
 												<pre>Receta (www.kocinando.com/receta.stxt): Receta de macarrones
 ***# Esta receta me la pas&oacute; XX y la he hecho un mont&oacute;n de veces***
@@ -161,12 +187,15 @@
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
 								            	<h3><a id="index_5"></a>Distintos namespaces en un documento</h3>
-																<p>Un namespace puede hacer referencia a otro, para indicar que<br>una parte del documento tiene la estructura en otro namespace.<br>Mejor ver un ejemplo:</p>
+																<p>Un namespace puede hacer referencia a otro, para indicar que
+una parte del documento tiene la estructura en otro namespace.
+Mejor ver un ejemplo:</p>
 
 												<pre>***Namespace: www.kocinando.com/recetario.stxt***
     Recetario:
         Receta: (+) ***(www.kocinando.com/receta.stxt)***</pre>
-												<p>Aquí vemos que <code>Receta</code> es de otro namespace y vemos que<br>en vez de poner la estructura se hace referencia a otro namespace.</p>
+												<p>Aquí vemos que <code>Receta</code> es de otro namespace y vemos que
+en vez de poner la estructura se hace referencia a otro namespace.</p>
 
 												<div class="row">
             		<div class="assert"><p>NO es necesario decir el namespace interior, sólo el nodo principal.</p>
@@ -199,8 +228,7 @@
             Paso: (2) Hornear durante 15'</pre>
 								            	<h2><a id="index_6"></a>Fin del tutorial</h2>
 																<div class="row">
-            		<div class="alert"><p>Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.<br />
-O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-)</p>
+            		<div class="alert"><p>Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.<br>O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-)</p>
 </div>
             	</div>
 						
