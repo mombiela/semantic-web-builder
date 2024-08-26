@@ -1,97 +1,97 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
+Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (08-stxt-vs)
-		Next: Siguiente (10-stxt-now)
+		Previous: Previous (08-stxt-vs)
+		Next: Next (10-stxt-now)
 
 	Metadata:
-		Title: Capítulo 12: Web semántica
-		Description: Una propuesta para la web semántica usando STxT.
+		Title: Chapter 12: Semantic Web
+		Description: A proposal for the semantic web using STxT.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
 	Content:
-		Ha llegado el momento de ir más allá.
+		The time has come to go further.
 		
-	alert:		
-		Bienvenidos a la web semántica.
+	Alert:		
+		Welcome to the semantic web.
 		
-	header:	Una propuesta para la web
+	Header: A Proposal for the Web
 		
 	Content:
-		He visto muchas propuestas anteriormente, pero a mi entender no acaban de funcionar.
-		Voy a decir algo que quizá no guste a muchas personas:
+		I’ve seen many proposals before, but in my opinion, they don’t quite work.
+		I’m going to say something that some people may not like:
 		
-	assert:
-		HTML no es semántico
+	Assert:
+		HTML is not semantic.
 			
 	Content:							
-		Otra vez lo siento, pero es así. HTML nunca ha sido un buen lenguaje semántico,
-		aunque está bien para presentar contenido. Se ha hecho mucho para separar el contenido de la presentación,
-		pero creo que todavía queda un largo camino por recorrer. Y no sé si se hace en la dirección adecuada.
+		Again, I’m sorry, but it’s true. HTML has never been a good semantic language,
+		though it’s fine for presenting content. A lot has been done to separate content from presentation,
+		but I think there’s still a long way to go. And I’m not sure it’s heading in the right direction.
 		
-	#	_Por cierto, hay cientos de personas involucradas en este proceso, 
-	#	grandes expertos del mundo web. ¿Quién soy yo para cuestionarlo?_
+	#	By the way, there are hundreds of people involved in this process, 
+	#	great experts in the web world. Who am I to question it?
 		
-		¿Qué tenemos ahora mismo?
+		What do we have right now?
 		
-		Bien, existe HTML para el contenido. Después tenemos CSS para la presentación. Se mezcla, se agita bien 
-		y obtenemos una fantástica página web. Además, tenemos los grandes buscadores actuales, 
-		de los que normalmente obtenemos buenos resultados. No siempre los que queremos, pero eso es inevitable.
+		Well, there’s HTML for content. Then we have CSS for presentation. It’s mixed, shaken well, 
+		and we get a fantastic web page. We also have the major search engines,
+		which usually give us good results. Not always what we want, but that’s inevitable.
 		
-		Pero volvamos al HTML y CSS. ¿Realmente es semántico? Pues creo que no. HTML4 evidentemente no lo era,
-		y ahora hemos evolucionado hacia HTML5, pero ¿qué hemos ganado? Mucho en términos de estandarización 
-		y de evolución del lenguaje, pero no nos engañemos: HTML sigue estando basado en la presentación.
+		But let’s go back to HTML and CSS. Is it really semantic? I don’t think so. HTML4 obviously wasn’t,
+		and now we’ve evolved to HTML5, but what have we gained? A lot in terms of standardization 
+		and language evolution, but let’s not fool ourselves: HTML is still based on presentation.
 		
-		¿Cuál es mi propuesta? ¿De verdad lo preguntáis?
+		What’s my proposal? Are you really asking?
 		
-	alert:
+	Alert:
 		Semantic Text
 		
 	Content:								
-		Vale, ya está claro, @STxT@. ¿Y cómo se hace la web semántica con @STxT@? 
+		Okay, it’s clear: @STxT@. And how do you make the semantic web with @STxT@?
 		
-		No lo sé, aunque sospecho que es una de las mejores formas de hacerlo hoy en día :-D
+		I don’t know, though I suspect it’s one of the best ways to do it today :-D
 		
-		¿Qué esperabais? ¿Que os lo diera todo hecho? Si llegamos a alguna parte con @STxT@ ya se verá.
-		Mis poderes visionarios no son tan avanzados :-)
+		What did you expect? That I’d give you everything ready-made? If we get anywhere with @STxT@, we’ll see.
+		My visionary powers aren’t that advanced :-)
 		
-		Los siguientes apartados son ideas, formas que he pensado, pero no hay ninguna propuesta concreta.
-		Hay muchos escenarios en los que podemos imaginar esta nueva tecnología, 
-		y muchas formas de aplicarla. Ahora ni tan siquiera lo sé, pero puedo ver su potencial.
-		Espero que otros también lo vean y lo sepan aplicar.
+		The following sections are ideas, ways I’ve thought of, but there’s no concrete proposal.
+		There are many scenarios where we can imagine this new technology, 
+		and many ways to apply it. Right now, I don’t even know, but I can see its potential.
+		I hope others see it too and know how to apply it.
 		
-	header:	Ideas
+	Header: Ideas
 		
-	subheader: ¡¡Reemplazar HTML5!!
-		
-	Content:
-		¡¡Pero qué locura es esa!! ¡¡Llevamos años evolucionando, haciendo navegadores,... ¡¡cómo podríamos hacer algo así!!
-		
-		Eso es de locos >:-O
-		
-		Ya lo sé, pero dejadme que os enseñe mi visión. Esto va para los informáticos, y la gente que trabaja con HTML.
-		
-	alert:
-		Relajaos, os voy a hipnotizar.
+	Subheader: Replace HTML5!!
 		
 	Content:
-		Con @STxT@ todo puede cambiar, es un mundo nuevo, una nueva forma de pensar. No nos cerremos a nada. 
+		What madness is that!! We’ve spent years evolving, making browsers,... how could we do something like that!!
 		
-		Dejad la mente en blanco. Ahora no hay nada. Nada existe todavía. Estamos en el 1985.
-		No hemos oído hablar de SGML, ni HTML, ni hipervínculos, ni CSS.
-		Tenemos un conocido con un PC y usa la línea de comandos para hacer cosas.
+		That’s crazy >:-O
 		
-		Alguien nos dice que se ha inventado un lenguaje nuevo. Se llama @STxT@ y sirve para expresar ideas y mostrar texto.
+		I know, but let me show you my vision. This is for IT people and those who work with HTML.
 		
-		Ahora tenemos una visión del futuro, y estamos en 2020, y vemos una web, pero no sabemos nada de informática.
-		La web se parece mucho a la de hoy en día, pero todo está estructurado con @STxT@.
+	Alert:
+		Relax, I’m going to hypnotize you.
 		
-		Os preguntáis... ¿Cómo estará hecha? ¿Cómo es por dentro? 
+	Content:
+		With @STxT@, everything can change; it’s a new world, a new way of thinking. Let’s not close ourselves off to anything. 
 		
-	code:
+		Clear your mind. Now there’s nothing. Nothing exists yet. We’re in 1985.
+		We haven’t heard of SGML, HTML, hyperlinks, or CSS.
+		We know someone with a PC, and they use the command line to do things.
+		
+		Someone tells us that a new language has been invented. It’s called @STxT@ and is used to express ideas and display text.
+		
+		Now we have a vision of the future, and we’re in 2020, and we see a web, but we know nothing about IT.
+		The web looks a lot like today’s, but everything is structured with @STxT@.
+		
+		You wonder... How is it made? What’s it like inside?
+		
+	Code:
 		...
 		
 		...
@@ -100,80 +100,80 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		
 		...
 		
-	alert:
-		¡¡DESPERTAD!!!
+	Alert:
+		WAKE UP!!!
 		
 	Content:
-		¿Qué habéis visto? 
+		What did you see?
 		
-		Bueno, como no me podéis contestar os diré lo que _yo_ he visto.
-		Os puede ayudar o quizá sea una tontería, pero es mi visión.
+		Well, since you can’t answer, I’ll tell you what _I_ saw.
+		It might help you, or maybe it’s just nonsense, but it’s my vision.
 		
-		Las páginas web son páginas @STxT@, con cada web y portal definiendo su propia estructura.
+		Web pages are @STxT@ pages, with each website and portal defining its own structure.
 		
-		Esto nos permite ver la web como un conjunto de contenido bien diferenciado de páginas. 
-		Por ejemplo, para una web de cocina:
+		This allows us to see the web as a well-differentiated set of content pages.
+		For example, for a cooking website:
 		
-	code:
-		/recetas/*.stxt
-		/trucos/*.stxt
-		/dietas/*.stxt
+	Code:
+		/recipes/*.stxt
+		/tips/*.stxt
+		/diets/*.stxt
 		
 	Content:
-		A parte de esto, todo portal web tiene una serie de páginas que nos da la información de cómo formatear
-		o presentar el texto. Hay un grupo de personas que se encargó de hacer esto e hicieron un gran trabajo.
-		Fueron en la W3C.
+		In addition, every web portal has a series of pages that give us information on how to format
+		or present the text. A group of people was in charge of doing this, and they did a great job.
+		They were at the W3C.
 		
-		Hicieron unos documentos @STxT@ que permitían esto, y todas las web los usaban, gracias a su popularidad. 
-		Además, como existían visores fantásticos de @STxT@, se pudo integrar todo sin problemas, 
-		y se crearon múltiples visualizadores.
+		They made some @STxT@ documents that allowed this, and all the websites used them because of their popularity. 
+		Also, since there were fantastic @STxT@ viewers, everything could be integrated without problems, 
+		and multiple viewers were created.
 		
-		Las páginas que tenía que tener una web eran unas cuantas. Las principales eran:
+		The pages that a website had to have were a few. The main ones were:
 		
-	code:
+	Code:
 		robots.stxt
 		sitemap.stxt
-		estilos.stxt
-		/estilos/*.stxt
+		styles.stxt
+		/styles/*.stxt
 		
 	Content:
-		Con estas páginas se permitía hacernos una idea del contenido del portal,
-		al mismo tiempo que aplicábamos unos estilos a todo el conjunto.
-		Lo mejor de los estilos es que se aplicaban automáticamente dependiendo del tipo de documento,
-		y además era muy sencillo hacer estilos nuevos.
-		Se creaba un documento que seguía un namespace conocido y fácil de usar: w3c.org/css.stxt
+		With these pages, we could get an idea of the portal’s content,
+		while applying styles to the entire set.
+		The best thing about the styles is that they were applied automatically depending on the document type,
+		and it was very easy to create new styles.
+		A document was created following a well-known and easy-to-use namespace: w3c.org/css.stxt
 		
-		Así, las páginas eran muy fáciles de crear. Con un sencillo editor de @STxT@ se construía una página con un contenido perfecto.
-		Un diseñador creaba un estilo fantástico para ella, y finalmente un programador le daba un comportamiento dinámico
-		creando un fichero js para cada tipo de página (un lenguaje de script para dotar de comportamiento a estas páginas).
+		So, the pages were very easy to create. With a simple @STxT@ editor, a page with perfect content was built.
+		A designer created a fantastic style for it, and finally, a programmer gave it dynamic behavior
+		by creating a js file for each page type (a scripting language to add behavior to these pages).
 		
-		Así, por ejemplo, nuestra web de cocina tendría la siguiente forma:
+		Thus, for example, our cooking website would look like this:
 		
-	code:
+	Code:
 		robots.stxt
 		sitemap.stxt
-		estilos.stxt
+		styles.stxt
 		
-		/estilos/receta.stxt
-		/estilos/trucos.stxt
-		/estilos/dietas.stxt
+		/styles/recipe.stxt
+		/styles/tips.stxt
+		/styles/diets.stxt
 		
-		/dynamic/receta.js
-		/dynamic/trucos.js
-		/dynamic/dietas.js
+		/dynamic/recipe.js
+		/dynamic/tips.js
+		/dynamic/diets.js
 		
-		/imagenes/*.png
-		/imagenes/*.gif
+		/images/*.png
+		/images/*.gif
 		...
 		
-		/recetas/receta1.stxt
-		/recetas/receta2.stxt
-		/recetas/receta3.stxt
+		/recipes/recipe1.stxt
+		/recipes/recipe2.stxt
+		/recipes/recipe3.stxt
 		...
 		
-		/trucos/truco1.stxt
-		/trucos/truco2.stxt
-		/trucos/truco3.stxt
+		/tips/tip1.stxt
+		/tips/tip2.stxt
+		/tips/tip3.stxt
 		...
 		
 		
@@ -182,58 +182,57 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		...
 		
 	Content:
-		Bien, ya está. Perdonad la simplicidad del esquema, pero una sesión de hipnosis no da para más :-)
-		No sé si esto os despertará la imaginación, pero me gustaría que al menos os hiciera pensar.
-		No todo está bien como está. Siempre hay margen a mejorar. A hacer las cosas distintas.
-		Y somos informáticos. Hay que probar. Y experimentar. Y equivocarnos. Es la única forma de avanzar.
+		Okay, that’s it. Sorry for the simplicity of the scheme, but a hypnosis session doesn’t allow for more :-)
+		I don’t know if this will spark your imagination, but I hope it at least makes you think.
+		Not everything is fine as it is. There’s always room for improvement. To do things differently.
+		And we’re IT people. We have to try. And experiment. And make mistakes. It’s the only way to move forward.
 		
-	subheader:Buscadores
+	Subheader: Search Engines
 		
 	Content:
-		Creo que los buscadores y los navegadores en general aumentarían su capacidad de búsqueda
-		y de indexar contenidos sabiendo de qué trata el texto. Además, ya estaría jerarquizado
-		y cada parte tendría un significado concreto y bien definido.
+		I believe search engines and browsers, in general, would increase their ability to search
+		and index content by knowing what the text is about. Also, it would already be hierarchized,
+		and each part would have a specific and well-defined meaning.
 	
-		Es posible que surgieran plantillas @STxT@ famosas, y una página podría seguirla para mostrar ciertos contenidos.
-		Esto todavía facilitaría más la indexación, ya que unificaría ciertos aspectos.
+		It’s possible that famous @STxT@ templates would emerge, and a page could follow them to display certain content.
+		This would make indexing even easier, as it would unify certain aspects.
 		
-	subheader:La transición
+	Subheader: The Transition
 		
 	Content:
-		¿Cómo debe ser la transición? Debe ser _fácil y transparente_. Sino, no habrá transición.
-		Lo primero sería definir la nueva forma de ver documentos con @STxT@ y los nuevos CSS.
-		Por cierto, sería un buen momento para hacer los CSS y tener una primera versión.
-		¡Quizá los renders de los navegadores por fin los tratarían todos iguales!
+		How should the transition be? It should be _easy and transparent_. Otherwise, there won’t be a transition.
+		The first thing would be to define the new way of viewing documents with @STxT@ and the new CSS.
+		By the way, it would be a good time to make the CSS and have a first version.
+		Maybe the browser renders would finally treat them all the same!
 		
-		A partir de aquí se prevé un tiempo de coexistencia de páginas. 
-		Habrá páginas HTML de toda la vida junto con páginas con @STxT@.
-		Me imagino también un buen momento para integrar y unificar un "lightweight language" para el contenido.
-		Me gustaría que la W3C se interesara en todo este proceso.
-		Aunque sería un frente muy alternativo a todo lo que se está haciendo ahora.
-		Pero tampoco debería ser traumático. Se puede pensar en @STxT@ como otra extensión a tener en cuenta por los navegadores,
-		con una forma particular de visualización. La visualización sería muy parecida a un XML cuando no hay css's ni nada estándar,
-		y a medida que la web los fuera incorporando el aspecto mejoraría.
+		From here, a time of coexistence of pages is expected.
+		There will be traditional HTML pages alongside @STxT@ pages.
+		I also imagine a good time to integrate and unify a "lightweight language" for content.
+		I would like the W3C to take an interest in this whole process.
+		Although it would be a very alternative approach to everything that is being done now.
+		But it shouldn’t be traumatic either. @STxT@ can be thought of as another extension for browsers to consider,
+		with a particular way of viewing. The visualization would be very similar to XML when there are no CSS or standard elements,
+		and as the web incorporated them, the appearance would improve.
 		
-		Incluso se puede plantear cohexistencia de páginas HTML con un homólogo @STxT@ más estructurado.
-		El HTML contendría metatags que dirían a los buscadores que tiene un @STxT@ asociado,
-		ya que la indexación mediante este fichero sería más adecuada.
+		We can even consider the coexistence of HTML pages with a more structured @STxT@ counterpart.
+		HTML would contain metatags telling search engines that it has an associated @STxT@,
+		as indexing through this file would be more appropriate.
 		
-		No hay que olvidar que el objetivo de todo esto es llegar a la web semántica de una forma poco traumática,
-		fácil para todo el mundo, no sólo para los super-informáticos. 
+		Let’s not forget that the goal of all this is to reach the semantic web in a non-traumatic way,
+		easy for everyone, not just super-IT experts.
 		
-	header:	SWB: Semantic Web Builder
+	Header: SWB: Semantic Web Builder
 	
 	Content:
-		No podría terminar este capítulo sin hablar de SWB. Ésta es la primera aplicación de @STxT@ que se ha hecho.
-		Bien, sé que es la primera porque se ha hecho para publicar esta web, y antes no había nada más :-D
+		I couldn’t end this chapter without talking about SWB. This is the first @STxT@ application ever made.
+		Well, I know it’s the first because it was made to publish this website, and there was nothing else before it :-D
 		
-		También podría decir que es la primera web en mostrar el contenido no sólo en HTML sino también en @STxT@.
+		I could also say that it’s the first website to show content not only in HTML but also in @STxT@.
 		
-		Puedo afirmar que la experiencia de usar @STxT@ ha sido realmente impresionante.
+		I can say that the experience of using @STxT@ has been truly impressive.
 		
-		Llevo años programando para la web, y nunca antes me había sentido tan cómodo.
-		Incluso sin herramientas de edición, el proceso de creación del libro ha sido simplemente _una gozada_.
-		Os animo a todos a que lo probéis.
+		I’ve been programming for the web for years, and I’ve never felt so comfortable before.
+		Even without editing tools, the process of creating the book has been simply _a joy_.
+		I encourage you all to try it.
 		
-		Vale la pena ;-)
-		
+		It’s worth it ;-)

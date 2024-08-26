@@ -1,81 +1,81 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
+Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Metadata:
-		Title: Capítulo 9: STxT y XML
-		Description: Comparamos STxT con XML y mostramos similitudes y diferencias.
+		Title: Chapter 9: STxT and XML
+		Description: We compare STxT with XML and show similarities and differences.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Advertencia al lector
+	Header: Warning to the Reader
 		
 	Content:
-		Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.
-		Leed bajo vuestra propia responsabilidad ;-)
+		This chapter may offend the sensitivities of enthusiastic XML readers.
+		Read at your own risk ;-)
 		
-	header:La leyenda
+	Header: The Legend
 		
 	Content:
-		El origen del mal: SGML.
+		The origin of evil: SGML.
 		
-		Todo empezó hace mucho, mucho tiempo, en una tierra oscura llamada "informática".
-		Los encodings campaban por ese mundo. Sembrando incompatibilidades.
-		Entorpeciendo comunicaciones. Riéndose de los que no eran como ellos.
-		Algunos intentaron estar en paz con todos ellos. 
+		It all started a long, long time ago in a dark land called "informatics."
+		Encodings roamed this world. Sowing incompatibilities.
+		Hindering communications. Laughing at those who were not like them.
+		Some tried to make peace with all of them.
 		
-		Y entonces crearon el monstruo: SGML
+		And then they created the monster: SGML.
 		
-		El monstruo empezaba diciendo con qué encoding se quedaba. Y ya no había problema.
-		Pero el esfuerzo era demasiado. Un montón de caracteres extraños eran necesarios.
-		Textos repletos de "<", ">", "&xxx;". Ininteligibles.
+		The monster began by stating which encoding it would stick with. And there was no problem.
+		But the effort was too much. A bunch of strange characters were needed.
+		Texts filled with "<", ">", "&xxx;". Unintelligible.
 		
-		Y se han reproducido. El mundo está lleno de sus hijos. Pequeños monstruos que
-		llenan la tierra de estos caracteres, entorpeciendo la lectura para humanos.
-		Sólo un puñado de élite puede tratar con los monstruos. Se los llama "Los Informáticos".
-		Son el terror. Nadie los quiere ver, pero todos los necesitan. Son oscuros.
-		Hablan lenguas extrañas.
+		And they have reproduced. The world is full of their offspring. Little monsters that
+		fill the earth with these characters, hindering reading for humans.
+		Only a handful of elites can deal with the monsters. They are called "The IT People."
+		They are the terror. Nobody wants to see them, but everyone needs them. They are dark.
+		They speak strange tongues.
 		
-		Pero los monstruos todavía están aquí. Han mutado. Ahora se llaman xml's.
-		¡Y a la gente les gusta!!
+		But the monsters are still here. They have mutated. Now they are called XMLs.
+		And people like them!!
 		
 		...
 		
-		Pero un pequeño grupo de gente se reunió, y decidió que no podía ser.
-		Crearían un campeón. Alguien que los iluminara. Sólo podía quedar uno.
+		But a small group of people gathered and decided this couldn’t go on.
+		They would create a champion. Someone to enlighten them. There could be only one.
 		
-	alert:
-		La hora de @STxT@ había llegado.
+	Alert:
+		The time for @STxT@ had arrived.
 		
-	header:La actualidad
+	Header: The Present
 	
 	Content:	
-		El mundo está plagado de documentos feos, _xml's que nos gustan..._ ¡si es un formato horrible!
+		The world is full of ugly documents, _XMLs that we like..._ even though it's a horrible format!
 		
-		Estamos heredando un formato anticuado, con encodings anticuados, con forma de pensar muy informatizada.
-		Y está en todas partes. Y seguimos usándolo. Y queremos que esté para todo... ¡Un momento! ¡Stop!
-		¿Es necesario? Si no supiéramos nada de sgml y quisiéramos tener un txt rápido de parsear, con estructura,
-		con espacio de nombres, ¿hubiésemos creado xml? Yo creo que no. Si a un niño le decimos que invente algo,
-		supongo que jamás habría creado xml... hubiese hecho algo más natural... ¡HUBIESE CREADO @STxT@!
+		We are inheriting an outdated format, with outdated encodings, with a very IT-centric mindset.
+		And it's everywhere. And we keep using it. And we want it for everything... Wait a minute! Stop!
+		Is it necessary? If we knew nothing about SGML and wanted to have a quick-to-parse TXT, with structure,
+		with namespaces, would we have created XML? I don't think so. If you asked a child to invent something,
+		I suppose they would never have created XML... they would have made something more natural... THEY WOULD HAVE CREATED @STxT@!
 		
-		Bien, nosotros tenemos más experiencia y hemos aprendido. ¡Vamos a crearlo!
+		Well, we have more experience, and we’ve learned. Let's create it!
 		
-	header:Toma de contacto
+	Header: First Contact
 		
 	Content:
-		No quiero asustaros, pero @STxT@, comparado con xml es:
+		I don't want to scare you, but @STxT@, compared to XML, is:
 		
-		* Más bonito
-		* Más simple
-		* Más compacto
-		* Más rápido
+		* Prettier
+		* Simpler
+		* More compact
+		* Faster
 	
-		Y además se puede expresar lo mismo.
+		And it can also express the same things.
 			
-		Vamos a ver un ejemplo de XML, y lo compararemos con @STxT@, para empezar. 
-		Será un ejemplo fácil:
+		Let's take a look at an XML example, and we’ll compare it with @STxT@ to start. 
+		It’ll be an easy example:
 		
-	code:
+	Code:
 		<?xml version="1.0" encoding="UTF-8" ?> 
 			<!-- This is a line comment  --> 
 			<email>
@@ -87,9 +87,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 		</email>
 		
 	Content:
-		Vamos a ver la version de @STxT@:
+		Let's look at the @STxT@ version:
 		
-	code:
+	Code:
 		# This is a line comment
 		Email (www.example.com/email.stxt):
 			From: John Smith
@@ -99,26 +99,26 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 			Body: Hello Mery!! The book is finished!!
 		
 	Content:
-		Creo que salta a la vista una primera característica:
+		I think a first characteristic is immediately apparent:
 		
-	assert:
-		@STxT@ es mucho más bonito que XML, y se entiende mejor 
+	Assert:
+		@STxT@ is much prettier than XML and easier to understand.
 		
 	Content:
-		Vamos a por el tamaño.
+		Let's talk about size.
 		
-		Longitud XML: 254\\
-		Longitud @STxT@: 190
+		XML Length: 254\\
+		@STxT@ Length: 190
 		
-		Veamos cuando compactamos al máximo
+		Let’s see what happens when we compact it as much as possible:
 		
-	code:
+	Code:
 		<?xml version="1.0" encoding="UTF-8" ?><!-- This is a line comment  -->
 		<email><from>John Smith</from><to>Mery Adams</to><cc>Keyla Brown</cc>
 		<title>Project report</title><body>Hello Mery!! The book
 		is finished!!</body></email>
 		
-	code:
+	Code:
 		# This is a line comment
 		Email(www.example.com/email.stxt):
 			From:John Smith
@@ -128,46 +128,46 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 			Body:Hello Mery!! The book is finished!!
 		
 	Content:
-		Longitud Mínima XML: 225\\
-		Longitud Mínima @STxT@: 172
+		Minimum XML Length: 225\\
+		Minimum @STxT@ Length: 172
 		
-		Si comparamos sin cabecera de xml ni namespace de @STxT@:
+		If we compare without XML header or @STxT@ namespace:
 		
-		Longitud Mínima XML: 186\\
-		Longitud Mínima @STxT@: 149
+		Minimum XML Length: 186\\
+		Minimum @STxT@ Length: 149
 		
-		Creo que es evidente que
+		I think it’s clear that:
 		
-	assert:
-		@STxT@ es más compacto que XML
-		
-	Content:
-		Pero además
-		
-	assert:
-		@STxT@ es más entendible que XML en estado compactado
+	Assert:
+		@STxT@ is more compact than XML
 		
 	Content:
-		o dicho de otra forma
+		But also:
 		
-	assert:
-		@STxT@ mantiene su comprensión en estado compactado,\\
-		mientras que XML no
+	Assert:
+		@STxT@ is more understandable than XML when compacted.
+		
+	Content:
+		Or put another way:
+		
+	Assert:
+		@STxT@ maintains its readability when compacted,\\
+		while XML does not.
 				
 	Content:		
-		Por cierto, ¿hemos perdido información? No, pero ¿que pasaría si hubiera atributos?	
-		Lo comentaremos más adelante. De momento creedme:
+		By the way, did we lose any information? No, but what would happen if there were attributes?
+		We'll talk about that later. For now, trust me:
 		
-	assert:
-		Con @STxT@ se puede expresar lo mismo que con XML
+	Assert:
+		With @STxT@, you can express the same as with XML.
 			
 	Content:			
-		Ahora vamos a probar algo divertido...
-		¿Como queda un documento XML con un nodo de texto que a su vez contiene un XML?
+		Now let’s try something fun...
+		What does an XML document look like with a text node that itself contains XML?
 		
-		Lo vemos:
+		Let's see:
 		
-	code:
+	Code:
 		<?xml version="1.0" encoding="UTF-8" ?> 
 		<!-- This is a line comment  --> 
 		<email>
@@ -189,9 +189,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 		</email>
 		
 	Content:
-		Y en @STxT@:
+		And in @STxT@:
 		
-	code:
+	Code:
 		Email (www.example.com/email.stxt):
 		From: John Smith
 		To: Mery Adams
@@ -208,152 +208,152 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: @STxT@ y XML
 			</email>
 		
 	Content:
-		Creo que sobran los comentarios. Es evidente, pero:
+		I think no further comment is needed. It’s obvious, but:
 		
-	assert:
-		@STxT@ es más sencillo que XML
+	Assert:
+		@STxT@ is simpler than XML.
 		
-	header:Atributos XML
-		
-	Content:
-		Vamos a por un ejemplo:
-		
-	code:
-		<ejemplo id="1" show="false">
-			Hola Mundo
-		</ejemplo>
+	Header: XML Attributes
 		
 	Content:
-		Los atributos en xml siempre han sido motivo de controversia.
-		¿Qué es un atributo y qué debería ser un nodo? Siempre es difícil de decidir.
-		Está bastante aceptado que los atributos son como metadatos del nodo,
-		es decir, aportan información pero no del contenido.
-		Hay casos en los que es aceptable, pero (según mi modesta opinión)
-		en la mayoría de ocasiones son una fuente de problemas. 
+		Let’s take an example:
 		
-		Otro problema añadido es que todos han de tener en cuenta que los atributos existen.
-		Esto afecta a DTD's, XSD's, librerías, programadores... ¿Y para qué?
-		Realmente no aportan mucho. Sólo complejidad innecesaria.
-		Además, esto es @STxT@. Todo tiene un significado, y todo es importante.
+	Code:
+		<example id="1" show="false">
+			Hello World
+		</example>
 		
-	assert:
-		@STxT@ no tiene atributos al estilo de XML
+	Content:
+		Attributes in XML have always been a source of controversy.
+		What is an attribute and what should be a node? It’s always hard to decide.
+		It is fairly accepted that attributes are like metadata of the node,
+		that is, they provide information but not content.
+		There are cases where this is acceptable, but (in my humble opinion)
+		in most cases they are a source of problems.
+		
+		Another added problem is that everyone has to keep in mind that attributes exist.
+		This affects DTDs, XSDs, libraries, programmers... And for what?
+		They really don’t add much. Just unnecessary complexity.
+		Furthermore, this is @STxT@. Everything has meaning, and everything is important.
+		
+	Assert:
+		@STxT@ does not have attributes in the style of XML.
 						
 	Content:
-		Esto lo hace _MEJOR_, no peor. A veces, _MENOS ES MAS ;-)_
+		This makes it _BETTER_, not worse. Sometimes, _LESS IS MORE ;-)_
 		
-		El ejemplo anterior en @STxT@ sería:
+		The previous example in @STxT@ would be:
 		
-	code:
-		ejemplo(...):
+	Code:
+		example(...):
 			id:1
 			show:false
-			texto:Hola Mundo
+			text:Hello World
 		
 	Content:
-		De forma general, siempre podemos hacer algo de la forma:
+		In general, we can always do something in the form:
 		
-	code:
-		nombre_nodo:
-			metadatos:
+	Code:
+		node_name:
+			metadata:
 				m1:xxx
 				m2:xxx
 				m3:xxx
-			nodo2:
-			nodo3:
+			node2:
+			node3:
 		
-	header:DTD, XSD
+	Header: DTD, XSD
 		
-	subheader:XSD, DTD y @STxT@
-		
-	Content:
-		Vamos a hablar de dtd's y xsd's de xml. Son documentos que nos dicen cómo tiene que ser un xml válido.
-		Funcionan más o menos bien, y cada uno tiene sus ventajas e inconvenientes.
-		Si miráis por Internet un poco veréis lo que quiero decir.
-		
-		En resumen, DTD es más sencillo que XSD, es menos potente y está escrito en un lenguaje distinto a XML.
-		XSD es más potente, más difícil de hacer y entender, pero está escrito en XML, no hay que aprender otro lenguaje.
-		
-		¿Y qué pasa con @STxT@? Lo deberíais saber :-D Tiene lo mejor. Es un documento @STxT@.
-		Integrado en el propio lenguaje. Potente y fácil de aprender. Como el propio @STxT@ ;-)
-		
-	subheader:¿Dónde está?
+	Subheader: XSD, DTD, and @STxT@
 		
 	Content:
-		Me gustaría ver desaparecer un típico problema de xml:
+		Let’s talk about XML’s DTDs and XSDs. They are documents that tell us how a valid XML should be.
+		They work more or less well, and each has its advantages and disadvantages.
+		If you look around the Internet a bit, you’ll see what I mean.
 		
-	assert:
-		_¿Dónde está la gramática de este documento?_
+		In summary, DTD is simpler than XSD, less powerful, and is written in a language different from XML.
+		XSD is more powerful, harder to make and understand, but it’s written in XML, so there’s no need to learn another language.
 		
-	Content:
-		En @STxT@, _TODO_ está en la web. Cuando se quiere crear un documento automáticamente
-		hay que poder ver su definición. La gramática ha de ser accesible siempre.	 
+		And what about @STxT@? You should know :-D It has the best. It’s a @STxT@ document.
+		Integrated into the language itself. Powerful and easy to learn. Like @STxT@ itself ;-)
 		
-	assert:
-		Un documento @STxT@ por definición tiene una gramática asociada.\\
-		Sino, no es @STxT@
-		
-	subheader:XSD del XSD (*)
+	Subheader: Where is it?
 		
 	Content:
-		¿Alguien quiere comparar el xsd de un xsd? He estado tentado en incluirlo en el libro,
-		pero hubiera ocupado más de 50 páginas, y no estoy exagerando :-D
+		I would like to see a typical XML problem disappear:
 		
-		Os dejo el enlace, por si alguien lo quiere ver:
+	Assert:
+		_Where is the grammar of this document?_
+		
+	Content:
+		In @STxT@, _EVERYTHING_ is on the web. When you want to create a document, you must automatically
+		be able to see its definition. The grammar must always be accessible.
+		
+	Assert:
+		A @STxT@ document by definition has an associated grammar.\\
+		If not, it’s not @STxT@.
+		
+	Subheader: XSD of the XSD (*)
+		
+	Content:
+		Does anyone want to compare the XSD of an XSD? I was tempted to include it in the book,
+		but it would have taken up more than 50 pages, and I’m not exaggerating :-D
+		
+		I’ll leave the link here for anyone who wants to see it:
 		
 		[[http:_www.w3.org/2001/XMLSchema.xsd|http:_www.w3.org/2001/XMLSchema.xsd|xsd]]
-			
-		¿Hay alguien que lo entienda? Perdón, perdón. ¿Hay alguien _que no sea un superhéroe_ que lo entienda?
-			
-		Todo es mucho más complicado. Con @STxT@ hemos buscado la sencillez.
-		¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!
 		
-	header:Parsers y validators
+		Is there anyone who understands it? Sorry, sorry. Is there anyone _who isn’t a superhero_ who understands it?
+		
+		Everything is much more complicated. With @STxT@ we have sought simplicity.
+		We like to do things by hand! It shouldn’t be mandatory to have an XML editor or reader!
+		
+	Header: Parsers and Validators
 		
 	Content:
-		¿Alguien quiere comparar los parsers y validators? No hace falta,
-		uno con @STxT@ es MUCHO más rápido y más sencillo de implementar. 
-		¿Por qué? Es muy sencillo:
+		Does anyone want to compare parsers and validators? It’s unnecessary.
+		One with @STxT@ is MUCH faster and easier to implement. 
+		Why? It’s very simple:
 		
-	assert:
-		@STxT@ tiene muchas menos normas que XML
+	Assert:
+		@STxT@ has far fewer rules than XML.
 			
 	Content:					
-		Esto hace que todo sea más fácil. El código de los parsers es más rápido.
-		Tienen menos errores. Es más fácil de mantener. De hacer. 
-		Además, otra ventaja es que parsear y validar se puede hacer de forma simultánea.
-		Con XML hay que decidir si realmente hay que validar el xsd... ¿y dónde está?
-		Ya estamos otra vez con el problema de siempre. Con @STxT@ todo es mucho más claro.
-		Cualquier documento tiene que tener una definición de cómo es. 
-		Pero es muy fácil de hacer. No se tarda nada. Vale la pena.
-		Es una de grandes ventajas de @STxT@.
+		This makes everything easier. The parser code is faster.
+		They have fewer errors. It’s easier to maintain. Easier to make.
+		Moreover, another advantage is that parsing and validating can be done simultaneously.
+		With XML, you have to decide whether you really need to validate the XSD... and where is it?
+		We’re back to the same old problem. With @STxT@, everything is much clearer.
+		Every document must have a definition of how it is.
+		But it’s very easy to do. It doesn’t take long. It’s worth it.
+		It’s one of the big advantages of @STxT@.
 		
-		Nota: Para los amantes de la información privada: si el parseador o editor de @STxT@
-		tiene un repositorio propio de gramáticas @STxT@, no tiene por qué estar visible en la web.
-		No me gusta, estoy en contra, pero no hay nada ni nadie que impida hacer esto.
-		De hecho, en ocasiones será necesario, como yo he tenido que hacer en mi propio libro
-		antes de tener la web publicada.
+		Note: For those who love private information: if the @STxT@ parser or editor
+		has its own @STxT@ grammar repository, it doesn’t have to be visible on the web.
+		I don’t like it; I’m against it, but nothing and no one prevents this from being done.
+		In fact, in some cases, it will be necessary, as I had to do in my own book
+		before the web was published.
 		
-	header:Namespaces
-		
-	Content:
-		Siempre he odiado los namespaces de XML. Son farragosos, difíciles de controlar, y normalmente no nos dicen nada.
-		
-		Los namespaces en @STxT@ son completamente distintos, ya que no son nada difíciles de hacer,
-		aportan toda la información necesaria, y no se pierde la expresividad que se consigue con XML.
-		De hecho, ¡ni tan siquiera los ves! Pero siempre están ahí, ayudando. Completando la obra. 
-		
-		En XML los namespaces molestan, aportan complejidad, y dan muy poco a cambio.
-		
-		Por cierto, hemos desterrado el prefijo {{{http:_}}} de los namespace.
-		Ya no es necesario, ya que ello implicaría que es distinto si se obtiene con {{{http:_}}}
-		que si se hace con {{{https:_}}}. Esto no tiene sentido, lo que sí lo tiene es que sea a partir de {{{_}}}. 
-		
-	header:Futuro
+	Header: Namespaces
 		
 	Content:
-		He sido muy sincero con todo mi análisis de XML vs @STxT@, pero hay algo que no debemos olvidar.
-		XML tiene mucho recorrido ya. Está probado, se usa en todas partes. Es un estándar.
-		@STxT@ es nuevo, apenas acaba de nacer, y tiene un largo camino por recorrer. 
+		I’ve always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.
 		
-		Pero creo que merece la pena.
+		Namespaces in @STxT@ are completely different because they are not hard to make,
+		they provide all the necessary information, and you don’t lose the expressiveness that you get with XML.
+		In fact, you don’t even see them! But they are always there, helping. Completing the work.
+		
+		In XML, namespaces are annoying, add complexity, and give very little in return.
+		
+		By the way, we’ve banished the prefix {{{http:_}}} from the namespace.
+		It’s no longer necessary because that would imply it’s different if obtained with {{{http:_}}}
+		than if obtained with {{{https:_}}}. This doesn’t make sense. What does make sense is that it’s from {{{_}}}.
+		
+	Header: The Future
+		
+	Content:
+		I’ve been very honest with my analysis of XML vs. @STxT@, but there’s something we must not forget.
+		XML has been around for a long time. It’s tested, it’s used everywhere. It’s a standard.
+		@STxT@ is new; it has just been born and has a long way to go.
+		
+		But I think it’s worth it.

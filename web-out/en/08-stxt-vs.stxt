@@ -1,30 +1,30 @@
-Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnologías
+Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Technologies
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (07-parser)
-		Next: Siguiente (09-semantic-web)
+		Previous: Previous (07-parser)
+		Next: Next (09-semantic-web)
 
 	Metadata:
-		Title: Capítulo 8: Ejemplos y otras tecnologías
-		Description: Se muestran diversos ejemplos de STxT, y se comparan con otros lenguajes populares.
+		Title: Chapter 8: Examples and Other Technologies
+		Description: Various examples of STxT are shown, and comparisons with other popular languages are made.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header: Ejemplos
+	Header: Examples
 		
 	Content:	
-		Hay miles de ejemplos que se pueden hacer con esta tecnología.
-		Es tan sencillo como coger un ejemplo cualquiera de otro lenguaje
-		y ver cómo se escribiría en @STxT@. Quizá lo más simple sea un ejemplo
-		que venga de XML, ya que tienen muchos paralelismos con @STxT@
+		There are thousands of examples that can be made with this technology.
+		It is as simple as taking any example from another language
+		and seeing how it would be written in @STxT@. Perhaps the simplest is an example
+		derived from XML, as it has many parallels with @STxT@.
 		
-		Muchos ejemplos los he obtenido de [Wikipedia](https://www.wikipedia.org).
+		Many examples I have obtained from [Wikipedia](https://www.wikipedia.org).
 		
-		Un ejemplo (inventado) de xml sería:
+		An (invented) example of XML would be:
 		
-	code:
+	Code:
 	
 		<Library>
 			<Book id="1">
@@ -53,9 +53,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		</Library>
 	
 	Content:
-		Lo mismo pasado a @STxT@:
+		The same in @STxT@:
 		
-	code:
+	Code:
 		Library (www.examples.com/demo.stxt):
 		
 		Book:
@@ -83,9 +83,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 			Genre: High fantasy Adventure
 		
 	Content:
-		Otro ejemplo en XML:
+		Another example in XML:
 		
-	code:
+	Code:
 		<email>
 		<from>John Smith</from>
 		<to>Mery Adams</to> 
@@ -95,9 +95,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		</email>
 		
 	Content:
-		En @STxT@ se transforma en:
+		In @STxT@, it is transformed into:
 		
-	code:
+	Code:
 		Email (www.example.com/email.stxt):
 		
 		From: John Smith
@@ -107,29 +107,29 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		Body: Hello Mery!! The book is finished!!
 		
 	Content:
-		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el @STxT@.
+		We can see that the conversion between the two formats is instant, though @STxT@ is much more aesthetically pleasing.
 		
-		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xml), por si lo queréis leer. 
-		Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)
+		By the way, there is a hidden chapter, [STXT and XML](08-stxt-xml), in case you want to read it.
+		I wrote it in 2013, and it's... interesting. Read at your own risk ;-)
 		 
-	header:Wikipedia (*)
+	Header: Wikipedia (*)
 		
 	Content:
-		Tengo gran admiración por la wikipedia. Creo que es uno de los mejores proyectos que se han creado en Internet.
+		I have great admiration for Wikipedia. I think it is one of the best projects created on the Internet.
 		
-		_¿Como se podría beneficiar de @STxT@?_
+		_How could it benefit from @STxT@?_
 		
-		Bien, la wikipedia podría tener plantillas diferentes:
-		actores, políticos, serie tv, película, ciudades, países, ríos,... compartiendo gramáticas en muchos casos.
-		Por ejemplo, tanto actores como políticos pueden tener biografía, pero los actores también tendrían un listado de películas.
+		Well, Wikipedia could have different templates:
+		actors, politicians, TV series, movies, cities, countries, rivers... sharing grammars in many cases.
+		For example, both actors and politicians can have biographies, but actors would also have a list of movies.
 		
-		Además, sería muy interesante la mezcla de @STxT@ con el lenguaje propio de la wikipedia.
-		Creo que éste es un punto en el que @STxT@ gana a la mayoría de lenguajes.
-		La mezcla con los llamados "lightweight markup languajes" es realmente espectacular.
+		Moreover, it would be very interesting to mix @STxT@ with Wikipedia's own language.
+		I think this is a point where @STxT@ excels compared to most languages.
+		The blend with so-called "lightweight markup languages" is truly spectacular.
 		
-		Así, se pueden hacer textos mixtos del estilo:	
+		So, you can create mixed texts like this:
 		
-	code:
+	Code:
 		City (www.wikipedia.org/city.stxt):
 			 
 		Name: Barcelona 
@@ -149,72 +149,72 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 			...
 		
 	Content:
-		Otra ventaja es que con @STxT@ no solamente tendríamos "plantillas" de 
-		cómo debe ser la información de una ciudad, sino que también podríamos
-		aplicar estilos y formatos dependiendo del tipo de documento.
+		Another advantage is that with @STxT@ we would not only have "templates" of 
+		what city information should look like, but we could also
+		apply styles and formats depending on the type of document.
 		
-	header:@STxT@ y otras tecnologías
+	Header: @STxT@ and Other Technologies
 		
-	subheader:Lightweight markup language
+	Subheader: Lightweight Markup Language
 		
 	Content:
-		Los lenguajes ligeros de marcado han tenido un auge espectacular gracias a proyectos como la Wikipedia.
-		Gracias a ellos se puede definir texto de forma mucho más simple que teniendo que escribir etiquetas como HTML.
-		Pero tienen una gran carencia: No tienen una estructura ni una semántica clara.
+		Lightweight markup languages have seen a spectacular rise thanks to projects like Wikipedia.
+		Thanks to them, text can be defined much more simply than having to write tags like HTML.
+		But they have a major drawback: They do not have a clear structure or semantics.
 		
-		Es más, prácticamente todos se ocupan del estilo del texto:
+		In fact, practically all of them focus on text styling:
 		
-		* Negrita
-		* Cursiva
-		* Listas de elementos
-		* Tablas de datos
+		* Bold
+		* Italics
+		* Lists of items
+		* Data tables
 		* ...
 		
-		Resulta sorprendente ver lo que podemos conseguir si unimos estos lenguajes con @STxT@.
-		Obtenemos texto fácil de interpretar, con una semántica definida y con la expresividad de ambos lenguajes.
+		It is surprising to see what we can achieve by combining these languages with @STxT@.
+		We get text that is easy to interpret, with defined semantics, and the expressiveness of both languages.
 		
-		Un ejemplo:
+		An example:
 		
-	code:
-		Producto:
-			Nombre: Magic memory
-			Precio: 10€
-			Descripción:
-				Este producto produce un _mágico rejuvenecimiento_
-				de la memoría y proporciona un **inmediato** efecto
-				en todas las personas que lo prueban.
+	Code:
+		Product:
+			Name: Magic memory
+			Price: 10€
+			Description:
+				This product produces a _magical rejuvenation_
+				of memory and provides an **immediate** effect
+				on all those who try it.
 				
-				Efectos:
+				Effects:
 				
-				* Rápida memorización
-				* Aprendizaje automático
-				* Mayor concentración
+				* Rapid memorization
+				* Automatic learning
+				* Increased concentration
 		
 	Content:
-		Vemos que hemos dado estructura gracias a @STxT@, pero la descripción se ha dado
-		al estilo wikipedia.
+		We see that we have given structure thanks to @STxT@, but the description is given
+		in Wikipedia style.
 		
-	assert:
-		La unión de @STxT@ con _Lightweight markup languages_ es simplemente espectacular
+	Assert:
+		The combination of @STxT@ with _Lightweight markup languages_ is simply spectacular
 		
-	subheader:Tex, Latex
+	Subheader: TeX, LaTeX
 		
 	Content:
-		Perdonad si critico mucho. Nunca lo hago sin dar una alternativa o un motivo. Me gustan las críticas constructivas ;-)
-		He visto que uno de los objetivos de TeX es que un documento se imprima igual ahora y dentro de 100 años.
-		Me había parecido perfecto... hasta hoy. Ahora creo que el objetivo debería ser
-		que significara lo mismo ahora que dentro de 100 años, y que se _entienda_ ahora y dentro de 100 años.
-		Y cuanta más gente mejor. Esto no se consigue con TeX, pero Sí con @STxT@.
-		Un documento se entiende hoy y dentro de 100 años. ¿Como creo que debe evolucionar?
-		Yo haría documentos en @STxT@, especificaría una gramática para los distintos tipos de documentos,
-		permitiría elementos de TeX (como fórmulas) de la misma forma que se hace con los lenguajes de marcado ligeros, 
-		y usaría TeX como motor de renderizado.
+		Apologies if I criticize too much. I never do it without offering an alternative or a reason. I like constructive criticism ;-)
+		I have seen that one of TeX's goals is for a document to print the same now and 100 years from now.
+		I thought that was perfect... until today. Now I think the goal should be
+		for it to mean the same thing now and 100 years from now, and for it to be _understood_ now and 100 years from now.
+		And by as many people as possible. This is not achieved with TeX, but it is with @STxT@.
+		A document is understood today and 100 years from now. How do I think it should evolve?
+		I would create documents in @STxT@, specify a grammar for the different types of documents,
+		allow TeX elements (like formulas) in the same way that lightweight markup languages do, 
+		and use TeX as the rendering engine.
 		
-		Me atrevo a afirmar que TeX es imbatible en cuanto a renderizado; y creo que lo va a ser durante al menos 100 años más ;-)
+		I dare say that TeX is unbeatable in terms of rendering; and I think it will remain so for at least 100 more years ;-)
 		
-		¿Cómo quedaría un documento? Bien, un ejemplo sencillo sería algo así:
+		What would a document look like? Well, a simple example would be something like this:
 		
-	code:
+	Code:
 		Article (www.latex.com/article.stxt):
 		Title:
 		Author:
@@ -238,18 +238,18 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 			x^2-y^2&=&xy-y^2\\
 			(x+y)(x-y)&=&y(x-y)\\
 			x+y&=&y\\
-			2y&=&y\quad \mbox{(first ecuation)}\\
-			2&=&1
+			 2y&=&y\quad \mbox{(first equation)}\\
+			 2&=&1
 			\end{eqnarray}
 			
 		Paragraph:
 			Hello World!!
 		
 	Content:
-		De hecho, ahora ya podemos pensar en @STxT@, quizá sea el momento de hacer fórmulas de otra forma,
-		o notación más simplificada, como por ejemplo:
+		In fact, now that we can think about @STxT@, it might be time to create formulas in another way,
+		or a more simplified notation, such as:
 		
-	code:
+	Code:
 		Article (www.latex.com/article.stxt):
 		Title:
 		Author:
@@ -275,46 +275,45 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 				Element: x+y&=&y
 				Complex:
 					Element: 2y&=&y\quad 
-					Element: mbox{(first ecuation)}
+					Element: mbox{(first equation)}
 							 2&=&1
 		Paragraph:
 			Hello World!!
 		
 	Content:
-		Bien, hay miles de posibilidades y formas de enfocar el problema, os lo dejo como ejercicio ;-D
+		Well, there are thousands of possibilities and ways to approach the problem; I'll leave it to you as an exercise ;-D
 		
-	assert:
-		¿Qué hemos ganado con respecto a sólo TeX? 
+	Assert:
+		What have we gained compared to just TeX? 
 		
 	Content:
-		* Facilidad en la creación de documentos
+		* Ease of document creation
 		* UTF-8
-		* Estructura definida
-		* Texto semántico
-		* Texto legible
+		* Defined structure
+		* Semantic text
+		* Readable text
 			
-		Y además, hemos mantenido la compacidad en la creación de fórmulas matemáticas
-		y otros elementos dónde TeX sí es realmente un gran lenguaje.
+		And also, we have maintained the compactness in the creation of mathematical formulas
+		and other elements where TeX is indeed a great language.
 		
-	subheader:JSON
+	Subheader: JSON
 	
 	Content:
-		JSON en principio no tiene nada que ver con @STxT@, pero hay ciertos momentos
-		en los que pueden entrar en competencia. Estoy pensando en ficheros de configuración, por ejemplo.
-		Además, es más flexible y fácil de leer cuando incrustamos gran cantidad de texto,
-		cosa que en JSON hay que tener en cuenta siempre todos los caracteres de escapamiento.
+		JSON initially has nothing to do with @STxT@, but there are certain times
+		when they might compete. I am thinking of configuration files, for example.
+		Furthermore, it is more flexible and easier to read when embedding large amounts of text,
+		something that always needs to be considered with JSON due to escaping characters.
 		
-		Pero no hace falta preocuparse mucho. 
-		No creo que JSON y @STxT@ sean competencia directa,
-		debido a su distinto ámbito de aplicación.
+		But there is no need to worry too much. 
+		I do not think JSON and @STxT@ are direct competitors,
+		due to their different areas of application.
 		
-	subheader: YAML
+	Subheader: YAML
 		
 	Content:
-		Quizá YAML sea el que más se parezca en enfoque, aunque también es muy distinto.
-		Nosotros creemos que con nuestra estructura se puede mostrar lo mismo que YAML,
-		y mucho más simple. Además, podemos añadir semántica al documento con los namespaces,
-		al mismo tiempo que permite un texto legible para la mayoría de personas,
-		independientemente de sus conocimientos informáticos.
+		Perhaps YAML is the one that most resembles @STxT@ in approach, although it is also very different.
+		We believe that with our structure, we can show the same as YAML,
+		and much more simply. Additionally, we can add semantics to the document with namespaces,
+		while still allowing text that is readable to most people,
+		regardless of their technical knowledge.
 		
-	

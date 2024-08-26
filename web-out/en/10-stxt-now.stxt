@@ -1,115 +1,114 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 10: ¿Y ahora qué?
+Document (globalcampus.site/namespace.stxt): Chapter 10: What Now?
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (09-semantic-web)
-		Next: Siguiente (11-end)
+		Previous: Previous (09-semantic-web)
+		Next: Next (11-end)
 
 	Metadata:
-		Title: Capítulo 13: ¿Y ahora qué?
-		Description: Qué hacer a partir de ahora. Propuestas y posibilidades.
+		Title: Chapter 13: What Now?
+		Description: What to do from now on. Proposals and possibilities.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header: Por dónde empezar
+	Header: Where to Start
 		
 	Content:
-		Esto no es un libro. Es casi una propuesta. Un inicio de trabajo futuro. 
-		Me gustaría que a partir de aquí naciera un nuevo movimiento. 
-		Hace mucho que hacemos las cosas de la misma forma y me gustaría romper con ello. 
-		Pero de una forma bella. Bonita. Y al alcance de todos.
+		This is not a book. It’s almost a proposal. The beginning of future work.
+		I’d like to see a new movement arise from this.
+		We’ve been doing things the same way for a long time, and I’d like to break away from that.
+		But in a beautiful, elegant way. And accessible to everyone.
 		
-		Que ésta sea mi aportación.
+		Let this be my contribution.
 		
-		Quizá esto pueda parecer un poco pretencioso, pero me gusta tanto la idea que no lo puedo evitar. 
-		Perdonad mi osadía.
+		This may seem a bit pretentious, but I like the idea so much that I can’t help it.
+		Forgive my audacity.
 		
-		Con este libro he intentado explicar cómo entiendo @STxT@, y qué es lo que pretendía al crear este lenguaje.
-		¿Realmente lo he creado yo? Supongo que el lenguaje ya estaba ahí, y lo único que tenía
-		que hacer era sacarlo a la luz. Me gustaría pensar que lo hice como un escultor.
+		With this book, I’ve tried to explain how I understand @STxT@ and what I intended to do by creating this language.
+		Did I really create it? I suppose the language was already there, and all I had to do
+		was bring it to light. I’d like to think I did it like a sculptor.
 		
-	header: Cosas que quedan por hacer
+	Header: Things That Still Need to Be Done
 		
 	Content:
-		Queda mucho por hacer, si realmente se quiere adoptar esta tecnología.
-		Voy a dar ideas, aunque seguro que las aplicaciones más interesantes ni siquiera 
-		las puedo imaginar ahora mismo.
+		There’s a lot to be done if we really want to adopt this technology.
+		I’ll give you some ideas, although the most interesting applications are probably beyond what I can imagine right now.
 		
-		Esto es lo bonito, lanzas una idea y ya no te pertenece, crece y madura sola, 
-		y sólo puedes ver a donde va :-)
+		That’s the beauty of it: you launch an idea, and it no longer belongs to you, it grows and matures on its own,
+		and you can only watch where it goes :-)
 		
-		En próximas ediciones espero poder "tachar" algunas de estas cosas,
-		y añadir nuevas que ahora son impensables.
+		In future editions, I hope to "cross off" some of these items
+		and add new ones that are currently unthinkable.
 	
 	# --------------------------------------------------------------------------------------------------------------------
-	# Aquí os presento la verdadera lista de _lo que queda por hacer_, aunque no está en mi mano poderlo solucionar :-(
+	# Here is the real list of _what remains to be done_, though it’s not in my power to solve it :-(
 	# 
-	#	* Aire para todos (¡¡ya está!! al menos ya hay algo hecho...)
-	#	* Agua para todos
-	#	* Comida para todos
-	#   * Vivienda digna para todos
-	#   * Educación de calidad para todos
-	#	* Trabajo digno para todos
-	#	* Energía para todos
-	#	* Dinero para todos (Bien, me gustaría que fuera otra forma de dinero, más justo, no especulativo, 
-	#     y distinto al que conocemos. Otra vez, por favor, pensad en algo mejor que lo que tenemos ahora. 
-	#	  Seguro que hay alternativas. Sólo hay que encontrarlas. Pero para ello hay que buscar.)
+	#	* Air for all (already done! at least something is done...)
+	#	* Water for all
+	#	* Food for all
+	#   * Dignified housing for all
+	#   * Quality education for all
+	#	* Dignified work for all
+	#	* Energy for all
+	#	* Money for all (Well, I’d like it to be a different kind of money, fairer, non-speculative,
+	#     and different from what we know. Again, please think of something better than what we have now.
+	#	  I’m sure there are alternatives. You just have to find them. But to do that, you have to look.)
 	#	* .....
-	#	* En definitiva, humanidad para todos
+	#	* In short, humanity for all
 	#	
-	#	Bueno, ahora que ya he mostrado _lo que de verdad queda por hacer_, volvamos a @STxT@.
-	#	Los siguientes apartados tratan sobre eso.
+	#	Well, now that I’ve shown _what really remains to be done_, let’s get back to @STxT@.
+	#	The following sections are about that.
 	# --------------------------------------------------------------------------------------------------------------------
 		
-	subheader: Editores con contenido asistido
+	Subheader: Editors with Assisted Content
 		
 	Content:
-		Tenemos muchos editores de texto, para muchos lenguajes distintos.
-		¿Qué os parecería editores para @STxT@?
-		Nuestro editor favorito, pero ahora recogiendo semánticas de la web
-		y creando cualquier tipo de contenido estructurado. 
-		De forma fácil y rápida. Para todos.
-		Ahora las reglas del contenido aparecen solas. Con descripciones.
-		El contenido es fácil y rápido de crear. Por todos.
+		We have many text editors for many different languages.
+		What would you think of editors for @STxT@?
+		Our favorite editor, but now collecting semantics from the web
+		and creating any kind of structured content.
+		Easily and quickly. For everyone.
+		Now the content rules appear automatically. With descriptions.
+		Content is easy and quick to create. For everyone.
 		
-	subheader:	Librerías
+	Subheader: Libraries
 		
 	Content:  
-		Necesitamos parseadores de @STxT@ en cualquier lenguaje de programación.
-		Aquí hay mucho trabajo por hacer. Parseadores del lenguaje rápidos y eficientes.
+		We need @STxT@ parsers in every programming language.
+		There’s a lot of work to be done here. Fast and efficient language parsers.
 		
-		Es como portar lo que ya tenemos en XML a @STxT@. Y hay mucho.
+		It’s like porting what we already have in XML to @STxT@. And there’s a lot of it.
 		
-	subheader: Conversor de lenguajes
-		
-	Content:
-		Seguro que tenemos lenguajes que no nos gustan, o que creemos que pueden ser más sencillos. 
-		Se puede pasar directamente a @STxT@ o hacer conversores que pasen de @STxT@ a otro más especializado, 
-		pero menos semántico.
-		
-		Por ejemplo, tenemos Latex, insuperable en cuanto a calidad de documentos de salida, pero un
-		poco intratable para la mayoría de personas. ¿Cómo sería un conversor de @STxT@ a Latex?
-		Podríamos hacer tipos de documentos (artículos, cartas,...) y conversores de éstos a Latex.
-		El texto original sería muy claro (@STxT@) y el fichero de resultado final excelente (pdf).
-		
-	  	Esto permitiría a los informáticos mantener tecnologías más especializadas, 
-	  	y a los demás usar formatos más sencillos como @STxT@.
-		
-	subheader: Substitución de lenguajes
+	Subheader: Language Converter
 		
 	Content:
-		Esto se puede hacer en un montón de sitios, documentos XML, RSS's, ficheros de texto especiales, 
-		configuración de programas, hay miles de sitios donde se podría substituir directamente un lenguaje o ficheros por @STxT@.
+		Surely there are languages we don’t like, or that we think could be simpler.
+		They can be converted directly to @STxT@ or converters can be made to go from @STxT@ to another more specialized,
+		but less semantic language.
 		
-		¿Qué ganaríamos? Con un solo editor sería suficiente, textos más sencillos de mantener, y al disponer de una gramática
-		tendríamos también la descripción de cómo debe ser un documento.
+		For example, we have LaTeX, unbeatable in terms of output document quality, but a bit daunting for most people.
+		What would a converter from @STxT@ to LaTeX look like?
+		We could create document types (articles, letters,...) and converters from them to LaTeX.
+		The original text would be very clear (@STxT@) and the final result file excellent (pdf).
+		
+	  	This would allow IT experts to maintain more specialized technologies,
+	  	and others to use simpler formats like @STxT@.
+		
+	Subheader: Language Replacement
+		
+	Content:
+		This can be done in many places: XML documents, RSS feeds, special text files,
+		program configuration files—there are thousands of places where a language or files could be directly replaced with @STxT@.
+		
+		What would we gain? A single editor would be enough, texts would be easier to maintain, and by having a grammar,
+		we’d also have a description of what a document should be like.
 	
-	subheader: Web semántica
+	Subheader: Semantic Web
 		
 	Content:
-		Aquí hay tanto trabajo por hacer que sólo os diré que volváis a mirar el capítulo anterior,
-		os autohipnotizéis, y... ¡adelante!
+		There’s so much work to be done here that I’ll just say to go back and look at the previous chapter,
+		hypnotize yourselves, and... go for it!
 		
-	alert:
-		¡Quién sabe lo que puede surgir! :-D
+	Alert:
+		Who knows what might come of it! :-D

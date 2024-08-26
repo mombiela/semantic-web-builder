@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 8: <span class='STxT'><span class='first'>S</span>TxT</span> y XML</title>
-	<meta name="description" content="Comparamos STxT con XML y mostramos similitudes y diferencias.">
+    <title>Chapter 8: STxT and XML</title>
+	<meta name="description" content="We compare STxT with XML and show similarities and differences.">
 	<meta name="author" content="Joan Costa Mombiela">
 
     <link rel="stylesheet" href="/css/site.css?v=2">
@@ -66,55 +66,55 @@
       				
 			
 			
-															            	<h2><a id="index_0"></a>Advertencia al lector</h2>
-																<p>Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.
-Leed bajo vuestra propia responsabilidad ;-)</p>
+															            	<h2><a id="index_0"></a>Warning to the Reader</h2>
+																<p>This chapter may offend the sensitivities of enthusiastic XML readers.
+Read at your own risk ;-)</p>
 
-								            	<h2><a id="index_1"></a>La leyenda</h2>
-																<p>El origen del mal: SGML.</p>
-<p>Todo empezó hace mucho, mucho tiempo, en una tierra oscura llamada &quot;informática&quot;.
-Los encodings campaban por ese mundo. Sembrando incompatibilidades.
-Entorpeciendo comunicaciones. Riéndose de los que no eran como ellos.
-Algunos intentaron estar en paz con todos ellos.</p>
-<p>Y entonces crearon el monstruo: SGML</p>
-<p>El monstruo empezaba diciendo con qué encoding se quedaba. Y ya no había problema.
-Pero el esfuerzo era demasiado. Un montón de caracteres extraños eran necesarios.
-Textos repletos de &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&amp;xxx;&quot;. Ininteligibles.</p>
-<p>Y se han reproducido. El mundo está lleno de sus hijos. Pequeños monstruos que
-llenan la tierra de estos caracteres, entorpeciendo la lectura para humanos.
-Sólo un puñado de élite puede tratar con los monstruos. Se los llama &quot;Los Informáticos&quot;.
-Son el terror. Nadie los quiere ver, pero todos los necesitan. Son oscuros.
-Hablan lenguas extrañas.</p>
-<p>Pero los monstruos todavía están aquí. Han mutado. Ahora se llaman xml's.
-¡Y a la gente les gusta!!</p>
+								            	<h2><a id="index_1"></a>The Legend</h2>
+																<p>The origin of evil: SGML.</p>
+<p>It all started a long, long time ago in a dark land called &quot;informatics.&quot;
+Encodings roamed this world. Sowing incompatibilities.
+Hindering communications. Laughing at those who were not like them.
+Some tried to make peace with all of them.</p>
+<p>And then they created the monster: SGML.</p>
+<p>The monster began by stating which encoding it would stick with. And there was no problem.
+But the effort was too much. A bunch of strange characters were needed.
+Texts filled with &quot;&lt;&quot;, &quot;&gt;&quot;, &quot;&amp;xxx;&quot;. Unintelligible.</p>
+<p>And they have reproduced. The world is full of their offspring. Little monsters that
+fill the earth with these characters, hindering reading for humans.
+Only a handful of elites can deal with the monsters. They are called &quot;The IT People.&quot;
+They are the terror. Nobody wants to see them, but everyone needs them. They are dark.
+They speak strange tongues.</p>
+<p>But the monsters are still here. They have mutated. Now they are called XMLs.
+And people like them!!</p>
 <p>...</p>
-<p>Pero un pequeño grupo de gente se reunió, y decidió que no podía ser.
-Crearían un campeón. Alguien que los iluminara. Sólo podía quedar uno.</p>
+<p>But a small group of people gathered and decided this couldn’t go on.
+They would create a champion. Someone to enlighten them. There could be only one.</p>
 
 												<div class="row">
-            		<div class="alert"><p>La hora de <span class='STxT'><span class='first'>S</span>TxT</span> había llegado.</p>
+            		<div class="alert"><p>The time for <span class='STxT'><span class='first'>S</span>TxT</span> had arrived.</p>
 </div>
             	</div>
-								            	<h2><a id="index_2"></a>La actualidad</h2>
-																<p>El mundo está plagado de documentos feos, <em>xml's que nos gustan...</em> ¡si es un formato horrible!</p>
-<p>Estamos heredando un formato anticuado, con encodings anticuados, con forma de pensar muy informatizada.
-Y está en todas partes. Y seguimos usándolo. Y queremos que esté para todo... ¡Un momento! ¡Stop!
-¿Es necesario? Si no supiéramos nada de sgml y quisiéramos tener un txt rápido de parsear, con estructura,
-con espacio de nombres, ¿hubiésemos creado xml? Yo creo que no. Si a un niño le decimos que invente algo,
-supongo que jamás habría creado xml... hubiese hecho algo más natural... ¡HUBIESE CREADO <span class='STxT'><span class='first'>S</span>TxT</span>!</p>
-<p>Bien, nosotros tenemos más experiencia y hemos aprendido. ¡Vamos a crearlo!</p>
+								            	<h2><a id="index_2"></a>The Present</h2>
+																<p>The world is full of ugly documents, <em>XMLs that we like...</em> even though it's a horrible format!</p>
+<p>We are inheriting an outdated format, with outdated encodings, with a very IT-centric mindset.
+And it's everywhere. And we keep using it. And we want it for everything... Wait a minute! Stop!
+Is it necessary? If we knew nothing about SGML and wanted to have a quick-to-parse TXT, with structure,
+with namespaces, would we have created XML? I don't think so. If you asked a child to invent something,
+I suppose they would never have created XML... they would have made something more natural... THEY WOULD HAVE CREATED <span class='STxT'><span class='first'>S</span>TxT</span>!</p>
+<p>Well, we have more experience, and we’ve learned. Let's create it!</p>
 
-								            	<h2><a id="index_3"></a>Toma de contacto</h2>
-																<p>No quiero asustaros, pero <span class='STxT'><span class='first'>S</span>TxT</span>, comparado con xml es:</p>
+								            	<h2><a id="index_3"></a>First Contact</h2>
+																<p>I don't want to scare you, but <span class='STxT'><span class='first'>S</span>TxT</span>, compared to XML, is:</p>
 <ul>
-<li>Más bonito</li>
-<li>Más simple</li>
-<li>Más compacto</li>
-<li>Más rápido</li>
+<li>Prettier</li>
+<li>Simpler</li>
+<li>More compact</li>
+<li>Faster</li>
 </ul>
-<p>Y además se puede expresar lo mismo.</p>
-<p>Vamos a ver un ejemplo de XML, y lo compararemos con <span class='STxT'><span class='first'>S</span>TxT</span>, para empezar.
-Será un ejemplo fácil:</p>
+<p>And it can also express the same things.</p>
+<p>Let's take a look at an XML example, and we’ll compare it with <span class='STxT'><span class='first'>S</span>TxT</span> to start.
+It’ll be an easy example:</p>
 
 												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
     &lt;!-- This is a line comment  --&gt; 
@@ -125,7 +125,7 @@ Será un ejemplo fácil:</p>
     &lt;title&gt;Project report&lt;/title&gt; 
     &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
 &lt;/email&gt;</pre>
-												<p>Vamos a ver la version de <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
+												<p>Let's look at the <span class='STxT'><span class='first'>S</span>TxT</span> version:</p>
 
 												<pre># This is a line comment
 Email (www.example.com/email.stxt):
@@ -134,15 +134,15 @@ Email (www.example.com/email.stxt):
     Cc: Keyla Brown
     Title: Project report
     Body: Hello Mery!! The book is finished!!</pre>
-												<p>Creo que salta a la vista una primera característica:</p>
+												<p>I think a first characteristic is immediately apparent:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> es mucho más bonito que XML, y se entiende mejor</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> is much prettier than XML and easier to understand.</p>
 </div>
             	</div>
-												<p>Vamos a por el tamaño.</p>
-<p>Longitud XML: 254<br>Longitud <span class='STxT'><span class='first'>S</span>TxT</span>: 190</p>
-<p>Veamos cuando compactamos al máximo</p>
+												<p>Let's talk about size.</p>
+<p>XML Length: 254<br><span class='STxT'><span class='first'>S</span>TxT</span> Length: 190</p>
+<p>Let’s see what happens when we compact it as much as possible:</p>
 
 												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!-- This is a line comment  --&gt;
 &lt;email&gt;&lt;from&gt;John Smith&lt;/from&gt;&lt;to&gt;Mery Adams&lt;/to&gt;&lt;cc&gt;Keyla Brown&lt;/cc&gt;
@@ -155,37 +155,37 @@ Email(www.example.com/email.stxt):
     Cc:Keyla Brown
     Title:Project report
     Body:Hello Mery!! The book is finished!!</pre>
-												<p>Longitud Mínima XML: 225<br>Longitud Mínima <span class='STxT'><span class='first'>S</span>TxT</span>: 172</p>
-<p>Si comparamos sin cabecera de xml ni namespace de <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
-<p>Longitud Mínima XML: 186<br>Longitud Mínima <span class='STxT'><span class='first'>S</span>TxT</span>: 149</p>
-<p>Creo que es evidente que</p>
+												<p>Minimum XML Length: 225<br>Minimum <span class='STxT'><span class='first'>S</span>TxT</span> Length: 172</p>
+<p>If we compare without XML header or <span class='STxT'><span class='first'>S</span>TxT</span> namespace:</p>
+<p>Minimum XML Length: 186<br>Minimum <span class='STxT'><span class='first'>S</span>TxT</span> Length: 149</p>
+<p>I think it’s clear that:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> es más compacto que XML</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> is more compact than XML</p>
 </div>
             	</div>
-												<p>Pero además</p>
+												<p>But also:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> es más entendible que XML en estado compactado</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> is more understandable than XML when compacted.</p>
 </div>
             	</div>
-												<p>o dicho de otra forma</p>
+												<p>Or put another way:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> mantiene su comprensión en estado compactado,<br>mientras que XML no</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> maintains its readability when compacted,<br>while XML does not.</p>
 </div>
             	</div>
-												<p>Por cierto, ¿hemos perdido información? No, pero ¿que pasaría si hubiera atributos?	
-Lo comentaremos más adelante. De momento creedme:</p>
+												<p>By the way, did we lose any information? No, but what would happen if there were attributes?
+We'll talk about that later. For now, trust me:</p>
 
 												<div class="row">
-            		<div class="assert"><p>Con <span class='STxT'><span class='first'>S</span>TxT</span> se puede expresar lo mismo que con XML</p>
+            		<div class="assert"><p>With <span class='STxT'><span class='first'>S</span>TxT</span>, you can express the same as with XML.</p>
 </div>
             	</div>
-												<p>Ahora vamos a probar algo divertido...
-¿Como queda un documento XML con un nodo de texto que a su vez contiene un XML?</p>
-<p>Lo vemos:</p>
+												<p>Now let’s try something fun...
+What does an XML document look like with a text node that itself contains XML?</p>
+<p>Let's see:</p>
 
 												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
 &lt;!-- This is a line comment  --&gt; 
@@ -206,7 +206,7 @@ Lo comentaremos más adelante. De momento creedme:</p>
     &amp;lt;body&amp;gt;Hello Mery!! The book is finished!!&amp;lt;/body&amp;gt; 
 &lt;/body&gt; 
 &lt;/email&gt;</pre>
-												<p>Y en <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
+												<p>And in <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
 
 												<pre>Email (www.example.com/email.stxt):
 From: John Smith
@@ -222,120 +222,120 @@ Body:
     &lt;title&gt;Project report&lt;/title&gt; 
     &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
     &lt;/email&gt;</pre>
-												<p>Creo que sobran los comentarios. Es evidente, pero:</p>
+												<p>I think no further comment is needed. It’s obvious, but:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> es más sencillo que XML</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> is simpler than XML.</p>
 </div>
             	</div>
-								            	<h2><a id="index_4"></a>Atributos XML</h2>
-																<p>Vamos a por un ejemplo:</p>
+								            	<h2><a id="index_4"></a>XML Attributes</h2>
+																<p>Let’s take an example:</p>
 
-												<pre>&lt;ejemplo id=&quot;1&quot; show=&quot;false&quot;&gt;
-    Hola Mundo
-&lt;/ejemplo&gt;</pre>
-												<p>Los atributos en xml siempre han sido motivo de controversia.
-¿Qué es un atributo y qué debería ser un nodo? Siempre es difícil de decidir.
-Está bastante aceptado que los atributos son como metadatos del nodo,
-es decir, aportan información pero no del contenido.
-Hay casos en los que es aceptable, pero (según mi modesta opinión)
-en la mayoría de ocasiones son una fuente de problemas.</p>
-<p>Otro problema añadido es que todos han de tener en cuenta que los atributos existen.
-Esto afecta a DTD's, XSD's, librerías, programadores... ¿Y para qué?
-Realmente no aportan mucho. Sólo complejidad innecesaria.
-Además, esto es <span class='STxT'><span class='first'>S</span>TxT</span>. Todo tiene un significado, y todo es importante.</p>
+												<pre>&lt;example id=&quot;1&quot; show=&quot;false&quot;&gt;
+    Hello World
+&lt;/example&gt;</pre>
+												<p>Attributes in XML have always been a source of controversy.
+What is an attribute and what should be a node? It’s always hard to decide.
+It is fairly accepted that attributes are like metadata of the node,
+that is, they provide information but not content.
+There are cases where this is acceptable, but (in my humble opinion)
+in most cases they are a source of problems.</p>
+<p>Another added problem is that everyone has to keep in mind that attributes exist.
+This affects DTDs, XSDs, libraries, programmers... And for what?
+They really don’t add much. Just unnecessary complexity.
+Furthermore, this is <span class='STxT'><span class='first'>S</span>TxT</span>. Everything has meaning, and everything is important.</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> no tiene atributos al estilo de XML</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> does not have attributes in the style of XML.</p>
 </div>
             	</div>
-												<p>Esto lo hace <em>MEJOR</em>, no peor. A veces, <em>MENOS ES MAS ;-)</em></p>
-<p>El ejemplo anterior en <span class='STxT'><span class='first'>S</span>TxT</span> sería:</p>
+												<p>This makes it <em>BETTER</em>, not worse. Sometimes, <em>LESS IS MORE ;-)</em></p>
+<p>The previous example in <span class='STxT'><span class='first'>S</span>TxT</span> would be:</p>
 
-												<pre>ejemplo(...):
+												<pre>example(...):
     id:1
     show:false
-    texto:Hola Mundo</pre>
-												<p>De forma general, siempre podemos hacer algo de la forma:</p>
+    text:Hello World</pre>
+												<p>In general, we can always do something in the form:</p>
 
-												<pre>nombre_nodo:
-    metadatos:
+												<pre>node_name:
+    metadata:
         m1:xxx
         m2:xxx
         m3:xxx
-    nodo2:
-    nodo3:</pre>
+    node2:
+    node3:</pre>
 								            	<h2><a id="index_5"></a>DTD, XSD</h2>
-												            	<h3><a id="index_6"></a>XSD, DTD y <span class='STxT'><span class='first'>S</span>TxT</span></h3>
-																<p>Vamos a hablar de dtd's y xsd's de xml. Son documentos que nos dicen cómo tiene que ser un xml válido.
-Funcionan más o menos bien, y cada uno tiene sus ventajas e inconvenientes.
-Si miráis por Internet un poco veréis lo que quiero decir.</p>
-<p>En resumen, DTD es más sencillo que XSD, es menos potente y está escrito en un lenguaje distinto a XML.
-XSD es más potente, más difícil de hacer y entender, pero está escrito en XML, no hay que aprender otro lenguaje.</p>
-<p>¿Y qué pasa con <span class='STxT'><span class='first'>S</span>TxT</span>? Lo deberíais saber :-D Tiene lo mejor. Es un documento <span class='STxT'><span class='first'>S</span>TxT</span>.
-Integrado en el propio lenguaje. Potente y fácil de aprender. Como el propio <span class='STxT'><span class='first'>S</span>TxT</span> ;-)</p>
+												            	<h3><a id="index_6"></a>XSD, DTD, and <span class='STxT'><span class='first'>S</span>TxT</span></h3>
+																<p>Let’s talk about XML’s DTDs and XSDs. They are documents that tell us how a valid XML should be.
+They work more or less well, and each has its advantages and disadvantages.
+If you look around the Internet a bit, you’ll see what I mean.</p>
+<p>In summary, DTD is simpler than XSD, less powerful, and is written in a language different from XML.
+XSD is more powerful, harder to make and understand, but it’s written in XML, so there’s no need to learn another language.</p>
+<p>And what about <span class='STxT'><span class='first'>S</span>TxT</span>? You should know :-D It has the best. It’s a <span class='STxT'><span class='first'>S</span>TxT</span> document.
+Integrated into the language itself. Powerful and easy to learn. Like <span class='STxT'><span class='first'>S</span>TxT</span> itself ;-)</p>
 
-								            	<h3><a id="index_7"></a>¿Dónde está?</h3>
-																<p>Me gustaría ver desaparecer un típico problema de xml:</p>
-
-												<div class="row">
-            		<div class="assert"><p><em>¿Dónde está la gramática de este documento?</em></p>
-</div>
-            	</div>
-												<p>En <span class='STxT'><span class='first'>S</span>TxT</span>, <em>TODO</em> está en la web. Cuando se quiere crear un documento automáticamente
-hay que poder ver su definición. La gramática ha de ser accesible siempre.</p>
+								            	<h3><a id="index_7"></a>Where is it?</h3>
+																<p>I would like to see a typical XML problem disappear:</p>
 
 												<div class="row">
-            		<div class="assert"><p>Un documento <span class='STxT'><span class='first'>S</span>TxT</span> por definición tiene una gramática asociada.<br>Sino, no es <span class='STxT'><span class='first'>S</span>TxT</span></p>
+            		<div class="assert"><p><em>Where is the grammar of this document?</em></p>
 </div>
             	</div>
-								            	<h3><a id="index_8"></a>XSD del XSD (*)</h3>
-																<p>¿Alguien quiere comparar el xsd de un xsd? He estado tentado en incluirlo en el libro,
-pero hubiera ocupado más de 50 páginas, y no estoy exagerando :-D</p>
-<p>Os dejo el enlace, por si alguien lo quiere ver:</p>
+												<p>In <span class='STxT'><span class='first'>S</span>TxT</span>, <em>EVERYTHING</em> is on the web. When you want to create a document, you must automatically
+be able to see its definition. The grammar must always be accessible.</p>
+
+												<div class="row">
+            		<div class="assert"><p>A <span class='STxT'><span class='first'>S</span>TxT</span> document by definition has an associated grammar.<br>If not, it’s not <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
+</div>
+            	</div>
+								            	<h3><a id="index_8"></a>XSD of the XSD (*)</h3>
+																<p>Does anyone want to compare the XSD of an XSD? I was tempted to include it in the book,
+but it would have taken up more than 50 pages, and I’m not exaggerating :-D</p>
+<p>I’ll leave the link here for anyone who wants to see it:</p>
 <p>[[http:_www.w3.org/2001/XMLSchema.xsd|http:_www.w3.org/2001/XMLSchema.xsd|xsd]]</p>
-<p>¿Hay alguien que lo entienda? Perdón, perdón. ¿Hay alguien <em>que no sea un superhéroe</em> que lo entienda?</p>
-<p>Todo es mucho más complicado. Con <span class='STxT'><span class='first'>S</span>TxT</span> hemos buscado la sencillez.
-¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!</p>
+<p>Is there anyone who understands it? Sorry, sorry. Is there anyone <em>who isn’t a superhero</em> who understands it?</p>
+<p>Everything is much more complicated. With <span class='STxT'><span class='first'>S</span>TxT</span> we have sought simplicity.
+We like to do things by hand! It shouldn’t be mandatory to have an XML editor or reader!</p>
 
-								            	<h2><a id="index_9"></a>Parsers y validators</h2>
-																<p>¿Alguien quiere comparar los parsers y validators? No hace falta,
-uno con <span class='STxT'><span class='first'>S</span>TxT</span> es MUCHO más rápido y más sencillo de implementar.
-¿Por qué? Es muy sencillo:</p>
+								            	<h2><a id="index_9"></a>Parsers and Validators</h2>
+																<p>Does anyone want to compare parsers and validators? It’s unnecessary.
+One with <span class='STxT'><span class='first'>S</span>TxT</span> is MUCH faster and easier to implement.
+Why? It’s very simple:</p>
 
 												<div class="row">
-            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> tiene muchas menos normas que XML</p>
+            		<div class="assert"><p><span class='STxT'><span class='first'>S</span>TxT</span> has far fewer rules than XML.</p>
 </div>
             	</div>
-												<p>Esto hace que todo sea más fácil. El código de los parsers es más rápido.
-Tienen menos errores. Es más fácil de mantener. De hacer.
-Además, otra ventaja es que parsear y validar se puede hacer de forma simultánea.
-Con XML hay que decidir si realmente hay que validar el xsd... ¿y dónde está?
-Ya estamos otra vez con el problema de siempre. Con <span class='STxT'><span class='first'>S</span>TxT</span> todo es mucho más claro.
-Cualquier documento tiene que tener una definición de cómo es.
-Pero es muy fácil de hacer. No se tarda nada. Vale la pena.
-Es una de grandes ventajas de <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
-<p>Nota: Para los amantes de la información privada: si el parseador o editor de <span class='STxT'><span class='first'>S</span>TxT</span>
-tiene un repositorio propio de gramáticas <span class='STxT'><span class='first'>S</span>TxT</span>, no tiene por qué estar visible en la web.
-No me gusta, estoy en contra, pero no hay nada ni nadie que impida hacer esto.
-De hecho, en ocasiones será necesario, como yo he tenido que hacer en mi propio libro
-antes de tener la web publicada.</p>
+												<p>This makes everything easier. The parser code is faster.
+They have fewer errors. It’s easier to maintain. Easier to make.
+Moreover, another advantage is that parsing and validating can be done simultaneously.
+With XML, you have to decide whether you really need to validate the XSD... and where is it?
+We’re back to the same old problem. With <span class='STxT'><span class='first'>S</span>TxT</span>, everything is much clearer.
+Every document must have a definition of how it is.
+But it’s very easy to do. It doesn’t take long. It’s worth it.
+It’s one of the big advantages of <span class='STxT'><span class='first'>S</span>TxT</span>.</p>
+<p>Note: For those who love private information: if the <span class='STxT'><span class='first'>S</span>TxT</span> parser or editor
+has its own <span class='STxT'><span class='first'>S</span>TxT</span> grammar repository, it doesn’t have to be visible on the web.
+I don’t like it; I’m against it, but nothing and no one prevents this from being done.
+In fact, in some cases, it will be necessary, as I had to do in my own book
+before the web was published.</p>
 
 								            	<h2><a id="index_10"></a>Namespaces</h2>
-																<p>Siempre he odiado los namespaces de XML. Son farragosos, difíciles de controlar, y normalmente no nos dicen nada.</p>
-<p>Los namespaces en <span class='STxT'><span class='first'>S</span>TxT</span> son completamente distintos, ya que no son nada difíciles de hacer,
-aportan toda la información necesaria, y no se pierde la expresividad que se consigue con XML.
-De hecho, ¡ni tan siquiera los ves! Pero siempre están ahí, ayudando. Completando la obra.</p>
-<p>En XML los namespaces molestan, aportan complejidad, y dan muy poco a cambio.</p>
-<p>Por cierto, hemos desterrado el prefijo {{{http:<em>}}} de los namespace.
-Ya no es necesario, ya que ello implicaría que es distinto si se obtiene con {{{http:</em>}}}
-que si se hace con {{{https:<em>}}}. Esto no tiene sentido, lo que sí lo tiene es que sea a partir de {{{</em>}}}.</p>
+																<p>I’ve always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.</p>
+<p>Namespaces in <span class='STxT'><span class='first'>S</span>TxT</span> are completely different because they are not hard to make,
+they provide all the necessary information, and you don’t lose the expressiveness that you get with XML.
+In fact, you don’t even see them! But they are always there, helping. Completing the work.</p>
+<p>In XML, namespaces are annoying, add complexity, and give very little in return.</p>
+<p>By the way, we’ve banished the prefix {{{http:<em>}}} from the namespace.
+It’s no longer necessary because that would imply it’s different if obtained with {{{http:</em>}}}
+than if obtained with {{{https:<em>}}}. This doesn’t make sense. What does make sense is that it’s from {{{</em>}}}.</p>
 
-								            	<h2><a id="index_11"></a>Futuro</h2>
-																<p>He sido muy sincero con todo mi análisis de XML vs <span class='STxT'><span class='first'>S</span>TxT</span>, pero hay algo que no debemos olvidar.
-XML tiene mucho recorrido ya. Está probado, se usa en todas partes. Es un estándar.
-<span class='STxT'><span class='first'>S</span>TxT</span> es nuevo, apenas acaba de nacer, y tiene un largo camino por recorrer.</p>
-<p>Pero creo que merece la pena.</p>
+								            	<h2><a id="index_11"></a>The Future</h2>
+																<p>I’ve been very honest with my analysis of XML vs. <span class='STxT'><span class='first'>S</span>TxT</span>, but there’s something we must not forget.
+XML has been around for a long time. It’s tested, it’s used everywhere. It’s a standard.
+<span class='STxT'><span class='first'>S</span>TxT</span> is new; it has just been born and has a long way to go.</p>
+<p>But I think it’s worth it.</p>
 
 						
 			  </article>

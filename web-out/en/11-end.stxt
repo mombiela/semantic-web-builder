@@ -1,22 +1,21 @@
 Document (globalcampus.site/namespace.stxt):
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (10-stxt-now)
+		Previous: Previous (10-stxt-now)
 
 	Metadata:
-		Title: Poesía final de libro STxT
-		Description: Cerramos el libro STxT con un final poético. Un buen final para un buen libro.
+		Title: Final Poetry of the STxT Book
+		Description: We close the STxT book with a poetic ending. A good ending for a good book.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
 	Preamble:
-	#	Aquí termina el primer libro sobre @STxT@ y las guerras entre tecnologías.
-	#	Aquí termina el primer libro sobre @STxT@ y las guerras entre lenguajes.
-	#	     - No me gusta la palabra 'guerra'. Por eso la elimino de los dos finales anteriores.
-	#   Aquí termina el primer libro sobre @STxT@ y el nuevo descubrimiento de los lenguajes
-	#	     - Mejor que antes... pero quizá necesito algo más contundente.
-		Aquí termina el segundo libro sobre @STxT@ y el renacimiento de los lenguajes.
-	#	Ahora si. Este es un buen final :-D
-		
+	#	Here ends the first book on @STxT@ and the wars between technologies.
+	#	Here ends the first book on @STxT@ and the wars between languages.
+	#	     - I don’t like the word ‘war’. So, I’m removing it from the two previous endings.
+	#	Here ends the first book on @STxT@ and the new discovery of languages.
+	#	     - Better than before... but perhaps I need something more impactful.
+		Here ends the second book on @STxT@ and the rebirth of languages.
+	#	Now, yes. This is a good ending :-D
