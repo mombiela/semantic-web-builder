@@ -1,16 +1,16 @@
-Document (globalcampus.site/namespace.stxt):Licencia de uso
+Document (globalcampus.site/namespace.stxt): License Agreement
 
 	Metadata:
-		Description: Condiciones legales sobre la licencia y el uso de la web
+		Description: Legal terms regarding the license and use of the website
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 	
 	Content:
 	
-		Si queréis usar @STxT@, lo usáis sin más. No es nuestra intención patentar los archivos
-		de texto en formato UTF-8, ni el uso de url's o el uso de ':' para separar un término de su definición.\
-		Creo que no tendría mucho futuro una patente así ;-)
-	
-	# Me cansan estos textos legales... ;-) que tengamos que ponerlos siempre...
-	# Como me gustaría vivir en un mundo que sencillamente no fueran necesarios.
-	# ¿Llegaremos algún día a este estado de evolución?
+		If you want to use @STxT@, just use it. It is not our intention to patent text files
+		in UTF-8 format, or the use of URLs, or the use of ':' to separate a term from its definition.\
+		I don't think a patent like that would have much of a future ;-)
+
+	# I'm tired of these legal texts... ;-) that we always have to include...
+	# How I wish I could live in a world where they simply weren't necessary.
+	# Will we ever reach that level of evolution?

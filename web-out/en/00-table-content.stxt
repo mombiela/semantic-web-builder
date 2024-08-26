@@ -1,27 +1,26 @@
-Document(globalcampus.site/namespace.stxt):
+Document (globalcampus.site/namespace.stxt):
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (00-prologo)
-		Next: Siguiente (01-intro-2024)
+		Previous: Previous (00-prologue)
+		Next: Next (01-intro-2024)
 
-	Header: Parte I: Un nuevo lenguaje
+	Header: Part I: A New Language
 	Content:
-		* [Capítulo 1: Introducción - 2024](01-intro-2024)
-		* [Capítulo 2: Tutorial](02-tutorial)
-		* [Capítulo 3: Potenciado con IA](03-ai-powered)
+		* [Chapter 1: Introduction - 2024](01-intro-2024)
+		* [Chapter 2: Tutorial](02-tutorial)
+		* [Chapter 3: AI-Powered](03-ai-powered)
 			
-	Header: Parte II: Documentos
+	Header: Part II: Documents
 	Content:
-		* [Capítulo 4: Documentos sin namespace](04-raw-docs) 
-		* [Capítulo 5: Documentos con namespace](05-ns-docs)
-		* [Capítulo 6: Ejemplos](06-examples)
-		* [Capítulo 7: Parseo de documentos](07-parser)
+		* [Chapter 4: Documents Without Namespace](04-raw-docs) 
+		* [Chapter 5: Documents With Namespace](05-ns-docs)
+		* [Chapter 6: Examples](06-examples)
+		* [Chapter 7: Document Parsing](07-parser)
 			
-	Header: Parte III: Reflexiones	
+	Header: Part III: Reflections	
 	Content:
-		* [Capítulo 8: @STxT@ y otras tecnologías](08-stxt-vs)
-		* [Capítulo 9: Web semántica](09-semantic-web)
-		* [Capítulo 10: ¿Y ahora qué?](10-stxt-now)
-		
+		* [Chapter 8: @STxT@ and Other Technologies](08-stxt-vs)
+		* [Chapter 9: Semantic Web](09-semantic-web)
+		* [Chapter 10: What Now?](10-stxt-now)

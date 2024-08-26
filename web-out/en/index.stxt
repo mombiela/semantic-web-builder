@@ -1,20 +1,20 @@
 Document (globalcampus.site/namespace.stxt):
-	Header: Nuestro objetivo
+	Header: Our Goal
 		
 	Alert:
-		Crear el lenguaje más potente, más sencillo y más bonito \
-		que jamás haya existido :-)
+		To create the most powerful, simplest, and most beautiful language \
+		that has ever existed :-)
 	
 	#Content:
-	#	Nuestro principio básico: **Sencillez, claridad y simplicidad** por encima de todo
-	#	Esto lo intentamos aplicar en todo lo que hacemos. No sé si lo habremos conseguido :-)
+	#	Our basic principle: **Simplicity, clarity, and straightforwardness** above all else.
+	#	We try to apply this in everything we do. I'm not sure if we've achieved it :-)
 	
-	Header: ¡Un ejemplo!
+	Header: An Example!
 		
-	#Creemos que es lo mejor para empezarnos a conocer ;-)\\
-	#Y para eso mejor empezar por algo conocido: ¡XML!
+	#We believe it's the best way to start getting to know us ;-)\\
+	#And for that, it's better to start with something familiar: XML!
 		
-	Content: Un texto en XML:
+	Content: A text in XML:
 		
 	Code:
 		<email>
@@ -25,7 +25,7 @@ Document (globalcampus.site/namespace.stxt):
 			<body>Hello Mery!! The book is finished!!</body> 
 		</email>
 		
-	Content: Un equivalente en @STxT@:
+	Content: An equivalent in @STxT@:
 		
 	Code:
 		Email (www.example.com/email.stxt):
@@ -35,41 +35,41 @@ Document (globalcampus.site/namespace.stxt):
 			Title: Project report
 			Body: Hello Mery!! The book is finished!!
 		
-	Header: ¿Y bien?
+	Header: So, what do you think?
 		
 	Assert:
-		¿Aparte de eliminar esos horribles caracteres `'<','>'` qué hay de nuevo?
+		Apart from getting rid of those horrible `'<','>'` characters, what's new?
 		
 	Content:
-		Bueno, la lista es larga, pero como aperitivo ya es suficiente:
+		Well, the list is long, but as a starter, it's enough:
 		
-		* Lenguaje semántico... pero sencillo! :-)
-		* ¡No hay caracteres de escape! ¡No se necesitan! :-O 
-		* Encoding UTF-8 _siempre_
-		* Sencillo de aprender por humanos (_¡y por no informáticos!_)
-		* Sencillo de leer por máquinas
+		* Semantic language... but simple! :-)
+		* No escape characters! None needed! :-O 
+		* Always UTF-8 encoding
+		* Easy for humans to learn (_and for non-technical people too!_)
+		* Easy for machines to read
 		
-		Otras características que gustarán a los informáticos ;-)
+		Other features that techies will love ;-)
 		
-		* Parseo super rápido
-		* Gramática integrada en el lenguaje
-		* Namespaces sencillos, **muy sencillos** (y opcionales)
-		* Integra fácilmente textos de otros lenguajes de programación
+		* Super fast parsing
+		* Grammar integrated into the language
+		* Simple namespaces, **very simple** (and optional)
+		* Easily integrates texts from other programming languages
 		
-	Header: Y aún hay más: GlobalCampus.site
+	Header: And There's More: GlobalCampus.site
 		
-	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.site)
+	Content: Don't forget about our flagship application: [GlobalCampus.site](https://globalcampus.site)
 		
 	Assert: 
-		Para nosotros el mejor editor de páginas web que existe.\
-		El primer **Meta Portal de aprendizaje**\
-		El primer sitio que usa STxT
+		For us, the best web page editor out there.\
+		The first **Meta Learning Portal**\
+		The first site to use STxT
 		
 	Content:
-		* Basado en @STxT@, por supuesto ;-) 
-		* Libre :-D
+		* Based on @STxT@, of course ;-) 
+		* Free :-D
 		* Adaptable :-)
-		* Rápido :-O
-		* _Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_
+		* Fast :-O
+		* _This website was made with it. We've already tried it!!_
 		
-		**Te va a encantar :-P**
+		**You're going to love it :-P**

@@ -1,46 +1,45 @@
 Document (globalcampus.site/namespace.stxt):
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (00-poesia)
-		Next: Siguiente (00-table-content)
+		Previous: Previous (00-poesia)
+		Next: Next (00-table-content)
 		
 	Metadata:
-		Description: Requisitos previos y orden de lectura del libro
+		Description: Prerequisites and reading order of the book
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header: Para quién es este libro
+	Header: Who This Book Is For
 		
 	Content:
-		Este libro es para todos los que quieran aprender @STxT@. 
+		This book is for everyone who wants to learn @STxT@.
 		
-		No es sólo la explicación de una tecnología. Es el proceso mismo de su creación. 
-		Es el libro donde se explica _toda_ ella; tal como la entiende su creador. 
-		Aunque el futuro de esta tecnología es totalmente incierto
-		en el momento de la escritura del libro.
+		It’s not just an explanation of a technology. It’s the very process of its creation. 
+		This is the book that explains _all_ of it, as its creator understands it.
+		Although the future of this technology is completely uncertain 
+		at the time of writing this book.
 		 
-		¡Es muy emocionante! :-)
+		It’s very exciting! :-)
 		
-		Por supuesto, nada de esto sería posible sin todos los pasos 
-		anteriores que hemos dado: xml, dtd, html, xsd, tex,... 
-		Hay veces que ni tan siquiera sé si realmente soy su creador. 
-		Otras veces me planteo si realmente es una tecnología.
-		Pero ya es demasiado tarde ;-) 
+		Of course, none of this would be possible without all the previous steps 
+		we’ve taken: xml, dtd, html, xsd, tex,... 
+		Sometimes I’m not even sure if I’m really its creator.
+		Other times I wonder if it’s really a technology.
+		But it’s too late now ;-) 
 		
-		Esto es un eslabón más en la cadena. O pretende serlo.
-		¿Será el último de una larga búsqueda?
+		This is just another link in the chain. Or it pretends to be.
+		Will it be the last one in a long search?
 	
-	header: Requisitos previos
+	Header: Prerequisites
 		
 	Content:
-		No es necesario ningún conocimiento informático específico,
-		pero nociones de tecnologías como xml o html son recomendables. 
+		No specific computer knowledge is required,
+		but familiarity with technologies like xml or html is recommended.
 		
-	header: Orden de lectura
+	Header: Reading Order
 		
 	Content:
-		Todo el mundo debería leer el [Tutorial](tutorial). Es básico. 
-		A partir de aquí el orden es indiferente. Lo dejo a vuestra elección :-)
-		
+		Everyone should read the [Tutorial](tutorial). It’s essential. 
+		From there, the order doesn’t matter. I leave it to your choice :-)

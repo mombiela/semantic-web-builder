@@ -1,193 +1,194 @@
-Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es @STxT@?
+Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Metadata:
-		Title: Capítulo 1: ¿Qué es STxT?
-		Description: Descripción del lenguaje y de las características que lo hacen único.
+		Title: Chapter 1: What is STxT?
+		Description: Description of the language and the features that make it unique.
 		Author: Joan Costa Mombiela
-		last modif: 2013-03-01
+		Last modif: 2013-03-01
 	
-	assert:
-		Este proyecto es fruto de años de _inconsciente reflexión_,\
-		aunque sólo se necesitó un instante de inspiración.
+	Assert:
+		This project is the result of years of _unconscious reflection_,\
+		although it only took a moment of inspiration.
 	
 	Content:
-		Este capítulo puede parecer un poco disperso, pero son mis reflexiones al crear @STxT@.
-		Perdonad si me repito un poco, si no entendéis lo que digo, o si parece un discurso incoherente.
-		Pero es así. Se ha escrito como se ha podido, en días distintos, pero siempre se ha usado como la 
-		base de la creación.
+		This chapter may seem a bit scattered, but these are my reflections while creating @STxT@.
+		Sorry if I repeat myself a bit, if you don’t understand what I’m saying, or if it seems like an incoherent speech.
+		But that’s how it is. It was written as best as it could be, on different days, but it was always used as the 
+		basis for creation.
 		
-	assert:
-		Es _La Inspiración_
+	Assert:
+		It’s _The Inspiration_
 					
 	Content:
-		El resto de capítulos son _La Transpiración_.
+		The rest of the chapters are _The Perspiration_.
 		
-		Ojead este capítulo un poco por encima, y leedlo con más profundidad cuando ya sepáis
-		más de @STxT@. Es un buen consejo ;-)
-	header: ¿Qué es @STxT@?
+		Skim through this chapter a bit, and read it more deeply once you know
+		more about @STxT@. That’s good advice ;-)
+		
+	Header: What is @STxT@?
 		
 	Content:
-		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
-		que permite la creación de documentos con un contenido estructurado 
-		y sencillo de interpretar, tanto por humanos como por máquinas. 
-		Podríais estar leyendo un documento en @STxT@ sin daros cuenta en realidad
-		que lo es. 	
+		It is a purely semantic language, with very basic rules,
+		that allows the creation of documents with structured content
+		that is easy to interpret, both by humans and machines.
+		You could be reading a document in @STxT@ without even realizing
+		that it is.
 		
-		@STxT@: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
-		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
-		Todos los que se quieran. Ésta es mi propuesta.
+		@STxT@: A language for the web. It doesn’t mean just another one among many.
+		It means _A_ language for the web. Just one. And at the same time, many.
+		All those you want. This is my proposal.
 		
-		@STxT@ es un lenguaje para escribir documentos estructurados. Permite crear
-		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
-		pero consiguiendo documentos que pueden ser leídos por personas 
-		sin conocimientos informáticos.
+		@STxT@ is a language for writing structured documents. It allows creating
+		documents unambiguously, adhering to very precise rules,
+		but producing documents that can be read by people
+		without technical knowledge.
 						 
-		De hecho, los documentos tienen significado por si mismos,
-		sin ser necesaria ninguna traducción adicional.
-		Tienen una estructura jerárquica muy parecida a documentos xml,
-		y su traducción puede ser directa.                                
+		In fact, the documents have meaning in themselves,
+		without any additional translation being necessary.
+		They have a hierarchical structure very similar to XML documents,
+		and their translation can be direct.
 		
-		En un futuro @STxT@ podría ser un reemplazo a otras tecnologías como xml o LaTex.
+		In the future, @STxT@ could be a replacement for other technologies like XML or LaTeX.
 		
-	header:	Declaración de intenciones :-)
+	Header: Declaration of Intent :-)
 		
 	Content:
-		Hay un serie de principios o características que queremos que tenga este nuevo lenguaje.
+		There are a series of principles or characteristics that we want this new language to have.
 		
-		* Independiente del lenguaje de programación, sistema operativo y plataforma
-		* Fácil de leer por humanos sin conocimientos informáticos
-		* Fácil de aprender por humanos sin conocimientos informáticos
-		* Aspecto bonito e intuitivo
-		* Fomente la libre circulación y compartimiento de información
-		* Fácil de aprender por humanos con conocimientos informáticos 
-		* Fácil de interpretar por ordenadores
-		* Permitir integrar fácilmente textos de otros lenguajes de programación, 
-		  especialmente "lightweight languages", que tienen un especial interés. 
-		  De esta forma se consigue una integración muy interesante.
-		* Capacidades nativas de internacionalización (I18N)
-		* Capacidades nativas de autodescripción
-		* Permitir la creación de árboles de contenido con capacidad de distinción 
-		  entre distintos lenguajes de forma muy sencilla
-		* Ser genérico para incluir documentos de otros lenguajes
-		* Simplificar tanto que no sean necesarios caracteres de escape. 
-		  De hecho, no hay caracteres de escape!!! 
-		  ¿Es eso posible? Sí. Creo que es el primer lenguaje que puede decir esto :-D 
-		  Lo hace por estructura y contenido. Sólo hay algún carácter prohibido, 
-		  pero no de escape. Ya lo veréis, me acabo de extender demasiado en este punto...
+		* Independent of programming language, operating system, and platform
+		* Easy for humans to read without technical knowledge
+		* Easy for humans to learn without technical knowledge
+		* A beautiful and intuitive appearance
+		* Promotes the free flow and sharing of information
+		* Easy for humans with technical knowledge to learn
+		* Easy for computers to interpret
+		* Allows easy integration of texts from other programming languages,
+		  especially "lightweight languages," which are of particular interest.
+		  This results in a very interesting integration.
+		* Native internationalization (I18N) capabilities
+		* Native self-description capabilities
+		* Allows the creation of content trees with the ability to distinguish
+		  between different languages very easily
+		* Generic enough to include documents from other languages
+		* Simplified to the point where escape characters are unnecessary.
+		  In fact, there are no escape characters!!!
+		  Is that possible? Yes. I believe this is the first language that can say that :-D
+		  It achieves this through structure and content. There are only a few prohibited characters,
+		  but no escape characters. You’ll see, I just went on too long about this point...
 		  
-	header: ¿Qué significa @STxT@?
+	Header: What Does @STxT@ Mean?
 		
 	Content:
-		Bien, originariamente @STxT@ significa "Texto semántico". 
-		Aunque también podría tener otros significados, que a mi me gustan particularmente: SuperText y SexyText.
+		Originally, @STxT@ means "Semantic Text."
+		But it could also have other meanings that I particularly like: SuperText and SexyText.
 		
-		* SuperContent: es texto, pero super :-D
-		* SexyContent: es texto particularmente bonito ;-)
+		* SuperContent: it’s text, but super :-D
+		* SexyContent: it’s particularly beautiful text ;-)
 		
-		Cómo elegí la extensión: @STxT@? Yo tenía claro que los documentos tenían que ser semánticos,
-		por lo que había algo que tenía que tener "semántico". Además, están muy
-		de moda lenguajes con pocas letras: xml, tex, html, xsd,... por lo que stxt me pareció una
-		buena elección. Sólo me faltaba comprobar que esto no era ya utilizado, por lo que buscando
-		por Internet sólo encontré remotamente otro significado: sexy-text. 
-		Bien, incluso eso estaba bien, ya que semantic text tiene que ser sexy ;-)
+		How did I choose the extension: @STxT@? I was clear that the documents had to be semantic,
+		so there had to be something with "semantic." Also, languages with few letters are very
+		trendy: XML, TeX, HTML, XSD,... so STxT seemed like a good choice to me.
+		I just needed to check that it wasn’t already used, so after searching
+		on the Internet, I only found another remotely similar meaning: sexy-text.
+		Well, even that was fine since semantic text has to be sexy ;-)
 		
-	header:	¿Por qué un nuevo lenguaje?
+	Header: Why a New Language?
 		
 	Content:
-		Siempre he creído que nos faltaba un lenguaje sencillo para escribir textos, pero que a la vez
-		fuera potente en lo que a estructuración se refiere. Y no lo había encontrado... hasta ahora.
+		I have always believed that we lacked a simple language to write texts, but at the same time,
+		one that is powerful in terms of structuring. And I hadn’t found it... until now.
 	
-		Creo que el problema que ha existido siempre es que se intenta solucionar siempre el caso general,
-		con lo que todo se complica mucho. Pero además se ha abordado mal, siempre teniendo en cuenta 
-		el punto de vista de la sintáctica, buscando un enfoque informático, nunca semántico. 
+		I think the problem has always been that we try to solve the general case,
+		which complicates everything a lot. But it has also been approached incorrectly,
+		always considering the syntactic point of view, seeking a technical approach, never a semantic one.
 		
-	assert:
-		_Con @STxT@ Resolvemos semántica y sintáctica a la vez, \
-		de una forma elegante y bonita._
-		
-	Content:
-		No os equivoquéis. Yo soy informático. Pero a veces hay que ver desde el otro lado, 
-		con una visión "limpia". De hecho es un equilibrio entre aprender de lo que sabes e intentar pensar
-		como si no supieras nada de eso.
-		
-		Otro de los objetivos es hacer la información abierta. Esto también se ha abordado en la fase de diseño. 
-		Por diseño el contenido es abierto.	
-		
-	header: Un lenguaje para todos
+	Assert:
+		_With @STxT@ We Resolve Semantics and Syntax Simultaneously, \
+		In an Elegant and Beautiful Way._
 		
 	Content:
-		Intentamos hacer fácil para todos. No habría que haber problemas para los "no informáticos" 
-		el hecho de crear un documento semántico. Debería de ser intuitivo, y sencillo con las herramientas adecuadas.
+		Don’t get me wrong. I am a computer scientist. But sometimes you have to see it from the other side,
+		with a "clean" vision. In fact, it’s a balance between learning from what you know and trying to think
+		as if you knew nothing about it.
 		
-		Uno de los objetivos es pasar de tener _1_ lenguaje relativamente complicado para hacer cosas
-		(Ej: XML, Latex,...) para pasar a tener _n_ muy sencillos, con contenido ligado a una estructura.
-		Este lenguaje tiene que poder aprenderse en muy poco tiempo. Casi con un ejemplo 
-		debería ser suficiente. @STxT@ está hecho para que sea así. Además, @STxT@ permitirá pasar 
-		de @STxT@ a otros lenguajes, latex, por ejemplo, para que gente más técnica 
-		pueda hacer el trabajo final. Pero el origen y la base será siempre @STxT@. 
+		Another goal is to make information open. This was also addressed in the design phase.
+		By design, the content is open.
 		
-		Es mucho mejor que sea así, ya que escribimos en semántico puro, sin tener en cuenta _nada_ de estructura.
+	Header: A Language for Everyone
 		
-		Al iniciar la creación de este lenguaje buscaba algo muy genérico, a la vez que fuera descriptivo.
-		Quería que la información fuera muy clara, pero quería olvidar las gramáticas tan complejas de otros sistemas. 
-		Quería algo accesible, pero a la vez potente y útil. Por eso tenía que buscar
-		la sencillez, y alejarme de la mayoría de trabajos ya realizados.
-		Mi pretensión era crear un lenguaje no sólo para la gente de élite, sino para todos. 
-		También sabía que esto sería beneficioso, ya que así la cantidad de gente dispuesta a crear documentos 
-		aumentaría de forma considerable. Hay muchísima gente con grandes conocimientos,
-		pero a veces se ven limitadas por la forma con la que tienen que traducir esta información.
-		También pretendo solventar este problema.
+	Content:
+		We aim to make it easy for everyone. There shouldn’t be any problems for "non-technical" people
+		in creating a semantic document. It should be intuitive and simple with the right tools.
+		
+		One of the goals is to go from having _1_ relatively complex language for doing things
+		(e.g., XML, LaTeX,...) to having _n_ very simple ones, with content tied to a structure.
+		This language should be learnable in a very short time. Almost one example
+		should be enough. @STxT@ is designed to be that way. Moreover, @STxT@ will allow transitioning
+		from @STxT@ to other languages, LaTeX, for example, so that more technical people
+		can do the final work. But the origin and the foundation will always be @STxT@.
+		
+		It’s much better this way since we write in pure semantics, without considering _any_ structure.
+		
+		When I started creating this language, I was looking for something very generic, yet descriptive.
+		I wanted the information to be very clear, but I wanted to forget the complex grammars of other systems.
+		I wanted something accessible, yet powerful and useful. That’s why I had to look for
+		simplicity and distance myself from most of the work already done.
+		My aim was to create a language not just for the elite but for everyone.
+		I also knew this would be beneficial, as the number of people willing to create documents
+		would increase significantly. There are many people with great knowledge,
+		but sometimes they are limited by the way they have to translate this information.
+		I also intend to solve this problem.
 			
-	header: Declaración caótica de intenciones :-D (**)
+	Header: Chaotic Declaration of Intentions :-D (**)
 		
 	Content:	
-		Bien, todo esto es lo que buscábamos, o lo que hemos conseguido, o el objetivo,
-		o una mezcla de todas estos cosas. No sé, son ideas dispersas, que han estado por ahí 
-		durante su creación y quería que las vierais, nada más.	No se puede entender nada de esta lista.
-		Tenéis que esperar al final del libro, y ver qué se ha conseguido, qué no, 
-		y si hemos ganado algo... al final.
+		Well, this is what we were looking for, or what we’ve achieved, or the goal,
+		or a mix of all these things. I don’t know, these are scattered ideas that were there
+		during its creation, and I wanted you to see them, nothing more. You can’t understand anything from this list.
+		You have to wait until the end of the book and see what has been achieved, what hasn’t,
+		and if we’ve gained anything... in the end.
 		
-		* Válido durante muuuucho tiempo
-		* Content type para web: text/plain (UTF-8)
-		* No hay problemas de caracteres: UTF-8 SIEMPRE
-		* Ampliable 
-		* Cualquiera puede crear tipos de datos, y TIENE QUE EXISTIR la página, no como los namespaces de xml. 
-		* Evidentemente se puede guardar en cache, para no estar preguntando siempre, pero es algo REAL.
-		* Traspaso de datos entre plataformas fáciles
-		* Migraciones de contenido fáciles
-		* Se pueden definir ficheros de definición, de forma que quien quiera puede crear tipos antes de hacerlos públicos
-		* Definir tipos de datos con url's: sólo 1 namespace, y a partir de éste todo por defecto
-		* Se ha hecho para ser bonito
-		* Fácil de leer y hacer por humanos y máquinas
-		* Contenido deducible, no es necesario escribir todo, lo que permite abreviar o hacer descripción más larga	
-		* Hecho para aprender en muy poco tiempo, con pocas reglas
-		* Definición de tipos (gramáticas) incluido desde la fase de diseño, para integración total
-		* Refactorización de xml
-		* Gracias a la definición del tipo se puede hacer un formato super-compacto, mucho más que xml, json,...
-		* Mucho más fácil de crear a mano, ya que no hay que vigilar casi nunca los namespaces, 
-		  ya que son casi automáticos por la situación. Los namespaces como nunca antes los habías visto ;-) 
-		* Muy pocos tipos de datos (los números sin limitación, esto es semántico, no ningún lenguaje de programación)
-		* Fácil de transformar de éste a otros formatos
-		* Ambición: permitir avances hacia la web semántica, con la creación de vistas html bonitas y una base @STxT@ fuerte.
-		* Uno de los objetivos es hacer la información abierta. Esto también se hace en la fase de diseño. 
-		  Por diseño el contenido es abierto.	
+		* Valid for a very long time
+		* Content type for web: text/plain (UTF-8)
+		* No character issues: UTF-8 ALWAYS
+		* Expandable 
+		* Anyone can create data types, and THERE HAS TO BE a page, unlike XML namespaces.
+		* Obviously, it can be cached, so it’s not always asking, but it’s something REAL.
+		* Easy cross-platform data transfer
+		* Easy content migrations
+		* Definition files can be created so that anyone can create types before making them public
+		* Define data types with URLs: just 1 namespace, and from there, everything by default
+		* It was made to be beautiful
+		* Easy to read and create by humans and machines
+		* Deducible content, not everything needs to be written, allowing for brevity or more detailed descriptions
+		* Made to be learned in a very short time, with few rules
+		* Type definitions (grammars) included from the design phase, for full integration
+		* XML refactoring
+		* Thanks to type definition, a super-compact format can be created, much more than XML, JSON,...
+		* Much easier to create by hand since you hardly ever have to worry about namespaces,
+		  as they are almost automatic by location. Namespaces like you’ve never seen before ;-)
+		* Very few data types (numbers without limitation, this is semantic, not a programming language)
+		* Easy to transform into other formats
+		* Ambition: to allow progress towards the semantic web, with the creation of beautiful HTML views and a strong @STxT@ foundation.
+		* One of the goals is to make information open. This is also done in the design phase.
+		  By design, the content is open.
 			
-	header:	Aplicaciones, resultados y esperanzas
+	Header: Applications, Results, and Hopes
 		
 	Content:
-		Creo que hemos creado un gran lenguaje. Sencillo, práctico y realmente muy útil. 
+		I believe we’ve created a great language. Simple, practical, and really very useful.
 		
-		Este libro lo he escrito en este lenguaje. Y nunca me había sentido tan cómodo.
-		Para mí ha sido un gran descubrimiento. Cuando lo uso, pienso: _la gente tiene que conocerlo_.
-		El lenguaje lo merece. No se puede esconder. Hay que probarlo. Y tiene que gustar.
-		No quiero ser el único que lo tenga. No sería justo.
+		I’ve written this book in this language. And I’ve never felt so comfortable.
+		For me, it’s been a great discovery. When I use it, I think: _people need to know about it_.
+		The language deserves it. It can’t be hidden. It needs to be tried. And it has to be liked.
+		I don’t want to be the only one who has it. It wouldn’t be fair.
 	
-		Me gustaría que en el futuro @STxT@ tuviera un lugar de honor con otros lenguajes,
-		y que fuera por la aceptación y utilidad que ofreció. 
+		I would like @STxT@ to have an honored place alongside other languages in the future,
+		and for it to be because of the acceptance and usefulness it offered.
 	
 	# -----------------------------------------------
-	# Bienvenidos a una nueva era. La era de STxT :-)
+	# Welcome to a new era. The era of STxT :-)
 	# -----------------------------------------------
 	

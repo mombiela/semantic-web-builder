@@ -1,121 +1,119 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 5: Documentos con namespace
+Document (globalcampus.site/namespace.stxt): Chapter 5: Documents With Namespace
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (04-raw-docs)
-		Next: Siguiente (06-examples)
+		Previous: Previous (04-raw-docs)
+		Next: Next (06-examples)
 
-	Assert: Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.
+	Assert: Everything explained for documents without a namespace applies, except for multiline nodes.
 	
 	Content:
-		Como resumen anterior:
+		As a summary of the previous:
 		
-		* Codificación UTF-8 Siempre
-		* Los Identificadores son CASE-INSENSITIVE
-		* No existen caracteres de escape
-		* En @STxT@ son comentarios todas las líneas que empiezan por el carácter #
-		* 4 espacios equivalen a un tabulador
+		* UTF-8 Encoding Always
+		* Identifiers are CASE-INSENSITIVE
+		* There are no escape characters
+		* In @STxT@, all lines that start with the character # are comments
+		* 4 spaces are equivalent to one tab
 		
-	Assert: No se permite el uso de `:` para nodos multilínea.\
-		Ésto esta implícito por el tipo de nodo.
+	Assert: The use of `:` for multiline nodes is not allowed.\
+		This is implicit due to the node type.
 
 	Content: 
-		En caso que se inserte el carcter `:` lo que pasará es que formará
-		parte del texto, no se considerará especial. Los otros tipos
-		de texto no permiten varias líneas, por lo que no tendrá efecto.
+		If the `:` character is inserted, it will simply become part of the text, not considered special. The other text types do not allow multiple lines, so it will have no effect.
 		
-	Header: Definición de namespace
+	Header: Namespace Definition
 	
 	Content:
-		Un namespace es un documento sin namespace con el primer nodo llamado `Namespace`,
-		el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.
+		A namespace is a document without a namespace with the first node called `Namespace`,
+		which is a structure with all the possible node types, as an example.
 		
 	Assert: 
-		Un nodo se define sólamente una vez, después ya no se puede redefinir.\
-		Se permite que aparezca antes siempre y cuando no se defina la estructura.
+		A node is defined only once, and it cannot be redefined afterward.\
+		It is allowed to appear earlier as long as the structure is not defined.
 			
 	Content: 
-		Vamos a ver un ejemplo:
+		Let's look at an example:
 		
 	Code:
-		Namespace: www.demo.com/documento.stxt
-			Documento:
-	        	Título: (1)
-	        	***Secciones: (?)***
+		Namespace: www.demo.com/document.stxt
+			Document:
+	        	Title: (1)
+	        	***Sections: (?)***
 	        	Description: (1) TEXT
-	        	Tipo Documento: (1) ENUM
-	        		:informe
-	        		:artículo
-	        		:ensayo
+	        	Document Type: (1) ENUM
+	        		:report
+	        		:article
+	        		:essay
         		
-	    	***Secciones:***
-    	    	***Seccion: (+) TEXT***
+	    	***Sections:***
+    	    	***Section: (+) TEXT***
 	
-	Content: Otra forma de definirlo más simple hubiera sido:
+	Content: A simpler way to define it would have been:
 	
 	Code:
-		Namespace: www.demo.com/documento.stxt
-			Documento:
-	        	Título: (1)
-	        	***Secciones: (?)***
-	        		***Seccion: (+) TEXT***
+		Namespace: www.demo.com/document.stxt
+			Document:
+	        	Title: (1)
+	        	***Sections: (?)***
+	        		***Section: (+) TEXT***
 	        	Description: (1) TEXT
-	        	Tipo Documento: (1) ENUM
-	        		:informe
-	        		:artículo
-	        		:ensayo
+	        	Document Type: (1) ENUM
+	        		:report
+	        		:article
+	        		:essay
 
-	Content: Finalmente un documento del namespace:
+	Content: Finally, a document from the namespace:
 	
 	Code:
-		Documento (www.demo.com/documento.stxt):
-		    Título: Primer documento simple
+		Document (www.demo.com/document.stxt):
+		    Title: First simple document
 		    Description:
-		    	Este es el
-		    	primer documento
-		    	simple. Tiene varias líneas
-		    Tipo Documento: informe
-		    Secciones:
-		    	Seccion: Esta es una sección
-		    	Seccion:
-		    		Esta es una sección
-		    		con más de una
-		    		línea.
+		    	This is the
+		    	first simple document.
+		    	It has multiple lines
+		    Document Type: report
+		    Sections:
+		    	Section: This is a section
+		    	Section:
+		    		This is a section
+		    		with more than one
+		    		line.
 
-	Subheader: Definición de cantidad
+	Subheader: Quantity Definition
 	
 	Content: 
-		Se permite definir la cantidad de nodos de la siguiente forma:
+		It is allowed to define the quantity of nodes as follows:
 		
-		* `?`: Puede o no aparecer (máximo 1)
-		* `+`: Al menos un nodo
-		* `*`: Cualquier número de nodos
-		* `num+`: _num_ o más nodos
-		* `num-`: _num_ o menos nodos
-		* `num`: exactamente _num_ nodos
+		* `?`: May or may not appear (maximum 1)
+		* `+`: At least one node
+		* `*`: Any number of nodes
+		* `num+`: _num_ or more nodes
+		* `num-`: _num_ or fewer nodes
+		* `num`: exactly _num_ nodes
 	
-	Subheader: Tipos de nodos
+	Subheader: Node Types
 	
 	Content: 
-		Se permiten los siguientes tipos de nodos:
+		The following node types are allowed:
 	
-	    * `STRING` (Valor por defecto)
-		* `TEXT` (permite multiline, no permite nodos hijos)
+	    * `STRING` (Default value)
+		* `TEXT` (allows multiline, does not allow child nodes)
 	    * `NUMBER`: /^(\-|\+)?\d+(\.\d+(e(\-|\+)?\d+)?/
 	    * `BOOLEAN`: true | false
 	    * `REGEX`: valid regex
-	    * `ENUM`: En las siguientes multilineas se muestran los valores válidos
+	    * `ENUM`: Valid values are shown in the following multilines
 	    * `DATE`: YYYY-MM-DD
 	    * `TIMESTAMP`: ISO_8601
 	    * `EMAIL`: valid email
 	    * `URL`: valid url
-	    * `HEXADECIMAL` (permite multiline, no permite nodos hijos)
-	    * `BASE64` (permite multiline, no permite nodos hijos)
-	    * `EMPTY`: no permite contenido
+	    * `HEXADECIMAL` (allows multiline, does not allow child nodes)
+	    * `BASE64` (allows multiline, does not allow child nodes)
+	    * `EMPTY`: does not allow content
 	    * `INTEGER`: (+|-)?\d+
 	    * `NATURAL`: \d+
-		
+	
 	
 	
 	

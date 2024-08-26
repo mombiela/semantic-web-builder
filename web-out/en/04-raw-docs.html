@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 4: Documentos sin namespace</title>
+    <title>Chapter 4: Documents Without Namespace</title>
 	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
@@ -71,139 +71,139 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Documentos sin namespace</h2>
-																<p>Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:</p>
+															            	<h2><a id="index_0"></a>Documents Without Namespace</h2>
+																<p>I believe it’s already clear what documents without a namespace are like. Example:</p>
 
-												<pre>Receta: Receta de macarrones
-    Descripci&oacute;n:
-        :Esta es la descripci&oacute;n de la recta de macarrones.
+												<pre>Recipe: Macaroni Recipe
+    Description:
+        :This is the description of the macaroni recipe.
         :Bla, bla, bla
         :Bla, bla, bla
-    Comensales: 3
-    Dificultad: f&aacute;cil
-    Ingredientes:
-        Ingrediente: (100g) Tomate
-        Ingrediente: (240g) Macarrones
-    Pasos:
-        Paso: (1) Hacer sofrito
-        Paso: (2) Hervir macarrones
-        Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Vamos a profundizar un poco más.</p>
+    Servings: 3
+    Difficulty: easy
+    Ingredients:
+        Ingredient: (100g) Tomato
+        Ingredient: (240g) Macaroni
+    Steps:
+        Step: (1) Make the sauce
+        Step: (2) Boil the macaroni
+        Step: (3) Mix the macaroni with the sauce and serve</pre>
+												<p>Let's delve a little deeper.</p>
 
-								            	<h2><a id="index_1"></a>Codificación</h2>
+								            	<h2><a id="index_1"></a>Encoding</h2>
 																<div class="row">
-            		<div class="assert"><p>Codificación UTF-8 Siempre</p>
+            		<div class="assert"><p>UTF-8 Encoding Always</p>
 </div>
             	</div>
-												<p>Fin. Es una buena regla y estoy muy contento con ella.
-Hoy en día es la codificación más aceptable, más universal,
-y más implementada. No creo que esto cambie en los próximos años.</p>
+												<p>The end. It’s a good rule, and I’m very happy with it.
+Nowadays, it’s the most acceptable, most universal,
+and most implemented encoding. I don’t think this will change in the coming years.</p>
 
-								            	<h2><a id="index_2"></a>Identificadores</h2>
+								            	<h2><a id="index_2"></a>Identifiers</h2>
 																<div class="row">
-            		<div class="assert"><p>Los Identificadores son CASE-INSENSITIVE</p>
+            		<div class="assert"><p>Identifiers are CASE-INSENSITIVE</p>
 </div>
             	</div>
 												<div class="row">
-            		<div class="assert"><p>Se permiten espacios en los nombres. <br>¿Por qué no? ¿Para parecer informáticos?<br>Los tiempos están cambiando :-D</p>
+            		<div class="assert"><p>Spaces are allowed in names. <br>Why not? Just to seem more technical?<br>Times are changing :-D</p>
 </div>
             	</div>
-								            	<h2><a id="index_3"></a>Caracteres de escape</h2>
+								            	<h2><a id="index_3"></a>Escape Characters</h2>
 																<div class="row">
-            		<div class="assert"><p>No existen caracteres de escape</p>
+            		<div class="assert"><p>There are no escape characters</p>
 </div>
             	</div>
-												<p>Creo que es lo mejor que he oído en mucho tiempo.
-<strong>No existen caracteres de escape</strong> <em>porque no son necesarios</em>.
-Debido a la estructura no son necesarios.</p>
+												<p>I think this is the best thing I’ve heard in a long time.
+<strong>There are no escape characters</strong> <em>because they aren’t necessary</em>.
+Due to the structure, they aren’t needed.</p>
 
-								            	<h2><a id="index_4"></a>Comentarios</h2>
-																<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
-Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí
-para comentar o añadir alguna observación, pero no influyen en el documento en sí.</p>
+								            	<h2><a id="index_4"></a>Comments</h2>
+																<p>All tech-savvy individuals know what comments are in any language.
+For any beginners, I’ll explain that comments are text that’s only there
+to comment or add some observation, but they don’t influence the document itself.</p>
 
 												<div class="row">
-            		<div class="assert"><p>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</p>
+            		<div class="assert"><p>In <span class='STxT'><span class='first'>S</span>TxT</span>, comments are all lines that start with the character #</p>
 </div>
             	</div>
-												<p>Los comentarios no tienen que tener ningún tipo de formato,
-es texto libre que el autor del documento puede incluir.
-Además, no tiene que estar situado en ningún sitio concreto del documento.
-Cualquier línea que empiece por # será tratada como comentario,
-y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
-<p>Ejemplo:</p>
+												<p>Comments don’t need any specific format;
+they’re free text that the document author can include.
+Moreover, they don’t need to be placed in any specific part of the document.
+Any line that starts with # will be treated as a comment,
+and won’t be considered by programs or in communications.</p>
+<p>Example:</p>
 
-												<pre>Receta: Receta de macarrones
-***# (1) Esto es un comentario***
-***# (2) Esto tambi&eacute;n es un comentario***
-    ***# (3) Esto tambi&eacute;n es un comentario***
-    Descripci&oacute;n:
-        :Esta es la descripci&oacute;n de la recta de macarrones.
+												<pre>Recipe: Macaroni Recipe
+***# (1) This is a comment***
+***# (2) This is also a comment***
+    ***# (3) This is also a comment***
+    Description:
+        :This is the description of the macaroni recipe.
         :Bla, bla, bla
-    ***# (4) Esto es un comentario***    
+    ***# (4) This is a comment***    
         :Bla, bla, bla
-        ***# (5) esto NO es un comentario***
-    Comensales: 3
-    Dificultad: f&aacute;cil
-    Ingredientes:
-        Ingrediente: (100g) Tomate
-        Ingrediente: (240g) Macarrones
-    Pasos:
-        Paso: (1) Hacer sofrito
-        Paso: (2) Hervir macarrones
-        Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Aquí cabe señalar que <code>(1),(2),(3) y (4)</code> son comentarios, mientras
-que <code>(5)</code> no lo es, ya que está dentro del texto identado.</p>
+        ***# (5) This is NOT a comment***
+    Servings: 3
+    Difficulty: easy
+    Ingredients:
+        Ingredient: (100g) Tomato
+        Ingredient: (240g) Macaroni
+    Steps:
+        Step: (1) Make the sauce
+        Step: (2) Boil the macaroni
+        Step: (3) Mix the macaroni with the sauce and serve</pre>
+												<p>It’s worth noting that <code>(1),(2),(3) and (4)</code> are comments, while
+<code>(5)</code> is not, as it is within the indented text.</p>
 
-								            	<h2><a id="index_5"></a>Nodos e identación</h2>
-																<p>Antes hemos dicho que un documento <span class='STxT'><span class='first'>S</span>TxT</span> es un conjunto de nodos anidados.
-La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.</p>
+								            	<h2><a id="index_5"></a>Nodes and Indentation</h2>
+																<p>We mentioned earlier that an <span class='STxT'><span class='first'>S</span>TxT</span> document is a set of nested nodes.
+Indentation is very similar to other languages, and tabs or spaces can be used.</p>
 
 												<div class="row">
-            		<div class="assert"><p>4 espacios equivalen a un tabulador
-Es mejor no mezclar documentos con tabuladores y espacios</p>
+            		<div class="assert"><p>4 spaces are equivalent to one tab
+It’s better not to mix documents with tabs and spaces</p>
 </div>
             	</div>
-								            	<h3><a id="index_6"></a>Nodos multilínea</h3>
-																<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace
-serán equivalentes a nodos tipo <code>TEXT</code>. Se construyen con líneas
-que empiezan por <code>:</code>, pero sin una etiqueta previa. Ejemplo:</p>
+								            	<h3><a id="index_6"></a>Multiline Nodes</h3>
+																<p>These nodes allow for <strong>complete texts across multiple lines</strong>. In documents with namespaces,
+they will be equivalent to <code>TEXT</code> type nodes. They are constructed with lines
+that start with <code>:</code>, but without a preceding label. Example:</p>
 
-												<pre>Receta: Receta de macarrones
-    ***Descripci&oacute;n:***
-        ***:Esta es la descripci&oacute;n de la recta de macarrones.***
+												<pre>Recipe: Macaroni Recipe
+    ***Description:***
+        ***:This is the description of the macaroni recipe.***
         ***:Bla, bla, bla***
         ***:Bla, bla, bla***
-    Comensales: 3
-    Dificultad: f&aacute;cil
-    Ingredientes:
-        Ingrediente: (100g) Tomate
-        Ingrediente: (240g) Macarrones
-    Pasos:
-        Paso: (1) Hacer sofrito
-        Paso: (2) Hervir macarrones
-        Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Acabamos de ver que el nodo <code>Descripción</code> es un nodo MULTILINE.</p>
+    Servings: 3
+    Difficulty: easy
+    Ingredients:
+        Ingredient: (100g) Tomato
+        Ingredient: (240g) Macaroni
+    Steps:
+        Step: (1) Make the sauce
+        Step: (2) Boil the macaroni
+        Step: (3) Mix the macaroni with the sauce and serve</pre>
+												<p>We’ve just seen that the <code>Description</code> node is a MULTILINE node.</p>
 
-								            	<h2><a id="index_7"></a>(Prefix) Central (Sufix)</h2>
-																<p>Aunque no forma parte del lenguaje, es una práctica habitual que
-campos simples se estructuren con <code>(prefix) central (sufix)</code>.
-Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
+								            	<h2><a id="index_7"></a>(Prefix) Central (Suffix)</h2>
+																<p>Although it’s not part of the language, it’s common practice that
+simple fields are structured with <code>(prefix) central (suffix)</code>.
+All three can appear, or just 1 or 2 of them. Example:</p>
 
-												<pre>Receta: Receta de macarrones
-    Descripci&oacute;n:
-        :Esta es la descripci&oacute;n de la recta de macarrones.
+												<pre>Recipe: Macaroni Recipe
+    Description:
+        :This is the description of the macaroni recipe.
         :Bla, bla, bla
         :Bla, bla, bla
-    Comensales: 3
-    Dificultad: f&aacute;cil
-    Ingredientes:
-        Ingrediente: ***(100g) Tomate***
-        Ingrediente: ***(240g) Macarrones***
-    Pasos:
-        Paso: ***(1) Hacer sofrito***
-        Paso: ***(2) Hervir macarrones***
-        Paso: ***(3) Juntar macarrones con sofrito y servir***</pre>
+    Servings: 3
+    Difficulty: easy
+    Ingredients:
+        Ingredient: ***(100g) Tomato***
+        Ingredient: ***(240g) Macaroni***
+    Steps:
+        Step: ***(1) Make the sauce***
+        Step: ***(2) Boil the macaroni***
+        Step: ***(3) Mix the macaroni with the sauce and serve***</pre>
 						
 			  </article>
 	  	

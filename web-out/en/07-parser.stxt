@@ -1,109 +1,110 @@
-Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
+Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (06-examples)
-		Next: Siguiente (08-stxt-vs)
+		Previous: Previous (06-examples)
+		Next: Next (08-stxt-vs)
 
 	Metadata:
-		Title: Capítulo 11: Parseo de STxT
-		Description: Aunque el parseo de STxT es sencillo, se explican algunas partes con más detalle
+		Title: Chapter 11: Parsing STxT
+		Description: Although parsing STxT is simple, some parts are explained in more detail
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Introducción
+	Header: Introduction
 		
 	Content:
-		Parsear un fichero @STxT@ es mucho más fácil que parsear ficheros de otras tecnologías. 
-		Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está
-		basado en principios muy simples.
+		Parsing an @STxT@ file is much easier than parsing files from other technologies. 
+		It may seem paradoxical, since it is actually a very powerful language, but at the same time, it is
+		based on very simple principles.
 		
-		Yo os explicaré mi forma de parsear un fichero. Es posible que no sea la mejor, ni la más óptima, 
-		pero es una forma de hacerlo. De hecho, si queréis ver la implementación que he hecho
-		está disponible en Internet:
+		I will explain my way of parsing a file. It may not be the best or most optimal method, 
+		but it is one way to do it. In fact, if you want to see the implementation I have made,
+		it is available online:
 	
-	assert:
+	Assert:
 		[[https:_github.com/mombiela/stxt-parser | https:_github.com/mombiela/stxt-parser]]
 		
 	Content:
-		Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.
+		This implementation has been done in Java, as it is the language I am most familiar with.
 		
-		Espero que @STxT@ tenga éxito, y que muy pronto aparezcan otras implementaciones.
+		I hope that @STxT@ is successful, and that other implementations appear very soon.
 		
-		No voy a entrar en todos los detalles, pero sí que me gustaría explicar
-		algunos puntos que requieren más atención.
+		I will not go into all the details, but I would like to explain
+		some points that require more attention.
 		
 	Assert:
-		Si no tenéis intención de implementar un parseador no continuéis leyendo.
-		El siguiente capítulo es mucho más interesante ;-)	
-	header:	Proceso genérico
+		If you do not intend to implement a parser, do not continue reading.
+		The next chapter is much more interesting ;-)
 		
-	subheader:Parseo por líneas
+	Header: Generic Process
 		
-	Content:
-		El proceso de parseo puede hacerse línea a línea, por lo que podemos decir que de forma general tenemos:
-		
-	code:
-		mientras no fin de fichero
-			leer linea
-			procesar linea
-		fin mientras
+	Subheader: Line-by-line Parsing
 		
 	Content:
-		Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,
-		ya que de esto depende el procesado correcto.
+		The parsing process can be done line by line, so we can say that, in general, we have:
 		
-	subheader:Procesado de línea
-		
-	Content:
-		El primer paso en el procesado de la línea es la _normalización_ de la línea.
-		Una línea está normalizada cuando está en forma compacta (o semicompacta), por lo que hay que comprobar si lo está,
-		y si no lo está, transformarla. En la normalización también se eliminan las líneas de comentarios.
-		
-		Hay que tener en cuenta en la normalización que si el nodo anterior era de texto,
-		al superar cierto nivel será parte de ese mismo nodo. Es decir, será texto a continuación. También será parte de él
-		si no llega al nivel pero la línea está completamente en blanco,
-		en cuyo caso se traducirá por texto con un salto de línea ([[chapter_06.html#index_9|Ver tutorial avanzado]]).
-		
-		Una vez hemos compactada la línea, el procesado sigue independientemente, y ya sólo falta obtener
-		el nivel de la nueva línea y distinguir entre unos pocos casos:
-		
-		* ¿Estamos en el primer nodo?
-		* ¿La línea es texto de un nodo de texto anterior?
-		* ¿Empieza un nuevo nodo?
-		
-		En cada uno de los casos se trata de actualizar el estado de nuestras variables, y proseguir con el proceso.
-		
-		Nota: Lo más importante aquí es ver que es un proceso que se puede hacer línea a línea,
-		y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,
-		que a su vez puede actuar de validador de la gramática y los nodos. 
-		
-	subheader:Validaciones
+	Code:
+		while not end of file
+			read line
+			process line
+		end while
 		
 	Content:
-		Las validaciones se hacen en varios puntos del parseo:
+		During the process, it is advisable to have a list of the last nodes we have encountered according to the level,
+		as this is crucial for correct processing.
 		
-		* Al crear un nodo nuevo: Al crear un nodo nuevo se valida que se pueda deducir su namespace. 
-		  En caso contrario significa que no se podía crear en esa posición y sería incorrecto.
-		* Al finalizar un nodo: Cuando damos por cerrado un nodo se valida.
-		** En caso que sea tipo NODE se valida que el número de hijos sea correcto.
-		** En caso que no sea NODE se valida que tenga el contenido adecuado dependiendo de su tipo.
+	Subheader: Line Processing
+		
+	Content:
+		The first step in line processing is the _normalization_ of the line.
+		A line is normalized when it is in compact (or semi-compact) form, so we need to check if it is,
+		and if not, transform it. During normalization, comment lines are also removed.
+		
+		Keep in mind that if the previous node was a text node,
+		it will be part of that same node when it reaches a certain level. In other words, it will be continued text. It will also be part of it
+		if it does not reach the level, but the line is completely blank,
+		in which case it will be translated into text with a line break ([[chapter_06.html#index_9|See advanced tutorial]]).
+		
+		Once we have compacted the line, processing continues independently, and all that remains is to obtain
+		the level of the new line and distinguish between a few cases:
+		
+		* Are we in the first node?
+		* Is the line text from a previous text node?
+		* Is a new node starting?
+		
+		In each case, we update the state of our variables and proceed with the process.
+		
+		Note: The most important thing here is to see that this is a process that can be done line by line,
+		and the decisions to be made are relatively simple. This allows us to have a very efficient parser,
+		which can also act as a grammar and node validator.
+		
+	Subheader: Validations
+		
+	Content:
+		Validations are performed at various points in the parsing process:
+		
+		* When creating a new node: When creating a new node, it is validated that its namespace can be deduced. 
+		  Otherwise, it means that it could not be created in that position and would be incorrect.
+		* When closing a node: When we consider a node closed, it is validated.
+		** If it is a NODE type, it is validated that the number of children is correct.
+		** If it is not a NODE type, it is validated that it has the appropriate content depending on its type.
 			
-		¿Cuándo damos por finalizado un nodo? Este punto es interesante,
-		ya que hay dos circunstancias que hacen que un nodo se de por finalizado.
-		Una de ellas es cuando aparece otro nodo con un nivel igual o inferior a este nodo.
-		La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.
-		En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.
+		When is a node considered closed? This is an interesting point,
+		as there are two circumstances that cause a node to be considered closed.
+		One of them is when another node with an equal or lower level appears.
+		The other is when the entire file has been processed and there are no more nodes to validate.
+		At these points, the node is considered closed, and validations can begin.
 		
-	header:	Los nodos del lenguaje
+	Header: Language Nodes
 		
 	Content:
-		En la descripción del lenguaje habíamos dicho que los tipos de datos no tienen limitación
-		ni están ligados a un lenguaje, por lo que las validaciones sólo deberían ser comprobadas
-		mediante expresiones regulares o métodos que aseguren este hecho.
+		In the language description, we mentioned that data types have no limitations
+		and are not tied to a specific language, so validations should only be checked
+		using regular expressions or methods that ensure this.
 		
-		Tenemos los siguientes tipos de nodos:
+		We have the following node types:
 		
 		* NODE
 		* TEXT
@@ -117,9 +118,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		* BASE64
 		* BOOLEAN
 		 	
-		Por ejemplo, las expresiones regulares que podríamos usar para validar nodos son:
+		For example, the regular expressions we could use to validate nodes are:
 		 
-	code:
+	Code:
 		BINARY       = ^(0|1|\s)+$
 		BOOLEAN      = ^0|1$
 		HEXADECIMAL  = ^([a-f0-9]|\s)+$
@@ -128,37 +129,34 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	header:Gramáticas
+	Header: Grammars
 		
-	subheader:Almacenaje
-		
-	Content:
-		Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar
-		siempre las definiciones de forma remota. La estrategia más eficiente es tener una especie de repositorio de gramáticas,
-		en disco, e ir a buscarlas siempre allí. En caso de no encontrarse se buscaría en Internet,
-		y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.
-		La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.
-		
-	subheader:Gramática inicial
+	Subheader: Storage
 		
 	Content:
-		Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.
-		Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
-		Por esta razón habrá una definición de la gramática inicial en el propio código. 
+		Grammars are obtained from the Internet, but it is neither practical nor efficient to have to fetch
+		definitions remotely every time. The most efficient strategy is to have a kind of grammar repository,
+		on disk, and always fetch them from there. If not found, they would be fetched from the Internet,
+		and that repository would be updated. It is also possible to set verification times or other strategies.
+		The idea is that grammars do not change over time, or at least they should be backward compatible.
 		
-	header:Detalles a tener en cuenta
+	Subheader: Initial Grammar
 		
 	Content:
-		Hay algunos detalles que hay que tener en cuenta en el parseo:
+		Keep in mind that it is not possible to create a parser without having the grammar beforehand.
+		To parse a grammar, you need the definition of the base grammar already parsed.
+		For this reason, there will be an initial grammar definition in the code itself.
 		
-		* Case-insensitive: Todos los nodos son considerados CASE-INSENSITIVE, 
-		  por lo que hay que hacer las transformaciones adecuadas en el proceso de parseo.
-		* Base64: Con el texto BASE64 hay que permitir saltos de línea,
-		  y hacer un parseo estándar del contenido así obtenido.
-		* Para lectura de líneas hay que tener en cuenta tanto formato UNIX como DOS.
-		  Por ello permitiremos tanto el salto de línea, como salto de línea + retorno de carro.
-		  Esto lo hacemos para permitir ediciones rápidas de ficheros desde cualquier entorno,
-		  aunque lo más adecuado sería siempre usar estándar UNIX (sólo carácter de salto de línea).
-		  
-	
+	Header: Details to Consider
 		
+	Content:
+		There are some details to consider in parsing:
+		
+		* Case-insensitive: All nodes are considered CASE-INSENSITIVE, 
+		  so the appropriate transformations must be made during the parsing process.
+		* Base64: With BASE64 text, line breaks must be allowed,
+		  and a standard parse of the obtained content must be performed.
+		* For reading lines, both UNIX and DOS formats must be considered.
+		  Therefore, both line breaks and line break + carriage return will be allowed.
+		  This is done to allow quick file edits from any environment,
+		  although the most appropriate standard is always UNIX (line break only).

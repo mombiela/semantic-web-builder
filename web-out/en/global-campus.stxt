@@ -1,51 +1,46 @@
 Document (globalcampus.site/namespace.stxt): Global Campus
 
 	Metadata:
-		Description: GlobalCampus.site es un portal de creación de contenidos descentralizados de aprendizaje.
+		Description: GlobalCampus.site is a portal for creating decentralized learning content.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 		
 	Assert:
-		_Bienvenido a nuestra aplicación estrella_ \
+		_Welcome to our flagship application_ \
 		[GlobalCampus.site](https://globalcampus.site)
 		
-	Header: ¿Qué es GlobalCampus.site?
+	Header: What is GlobalCampus.site?
 		
 	Content:
-		Es un portal de aprendizaje, aunque de momento es más **un espacio de trabajo para @STxT@**.
-		Se ha usado para crear este mismo portal, y a nosotros nos gustaría
-		que fuese usado como "**fuente de inspiración**" para otros proyectos
-		o desarrollos. Con ese proyecto hemos usado este mismo portal, por
-		lo que estamos muy satisfechos con los resultados.
+		It is a learning portal, though for now, it’s more of **a workspace for @STxT@**.
+		It was used to create this very portal, and we would love
+		for it to be used as an "**inspiration source**" for other projects
+		or developments. We used this same portal for the project, and
+		we are very satisfied with the results.
 	
-	Header: ¿Por qué lo hicisteis?
+	Header: Why Did You Create It?
 	
 	Content:
-		En 2013 realizamos un proyecto llamado _[SemanticWebBuilder](https://github.com/mombiela/semantic-web-builder)_, que es justamente
-		lo que hemos usado actualmente para esta web. Pero queríamos algo que fuera
-		muy rápido de probar, **casi immediato**. Además, siempre hemos hechado en falta
-		una wiki de aprendizaje global. Evidentemente, en este momento no podemos 
-		financiar un proyecto así, pero con un poco de imaginación y con el uso
-		de @STxT@ quizá no hacía falta. 
+		In 2013, we carried out a project called _[SemanticWebBuilder](https://github.com/mombiela/semantic-web-builder)_, which is exactly
+		what we’ve used for this website. But we wanted something that would be
+		very quick to test, **almost immediate**. Additionally, we’ve always missed
+		a global learning wiki. Obviously, at this point, we can’t 
+		finance such a project, but with a little imagination and the use
+		of @STxT@, maybe it wasn’t necessary.
 		
-		El proyecto se inició con sólo los fuentes javascript para parseo de @STxT@,
-		y fue evolucionando hacia un portal dinámico. Partimos el proyecto en 2,
-		y por un lado quedó el parser y por el otro el portal (que usa el parser).
+		The project started with just the JavaScript source code for parsing @STxT@,
+		and it evolved into a dynamic portal. We split the project into two parts,
+		leaving the parser on one side and the portal (which uses the parser) on the other.
 		
-		En un futuro nos gustaría que el parser fuera mantenido por otros
-		(_¡hola Apache! ¿como lo veis?_), y nosotros dedicarnos a mantener el origen
-		de STxT y el libro.
+		In the future, we would like the parser to be maintained by others
+		(_Hello, Apache! How do you see it?_), while we focus on maintaining the core
+		of STxT and the book.
 		 
-	# ¡¡Un saludo a la comunidad de Apache!! ¡¡El mundo de la informática no sería igual sin vosotros!!
+	# Greetings to the Apache community!! The world of computing wouldn’t be the same without you!!
 		
-	Header: ¿Qué requerimientos tiene?
+	Header: What Are the Requirements?
 		
 	Content: 
-		¡Casi nada! Clonáis un proyecto de github... ¡y ya podéis hacer cambios y probarlos!
-		En cuanto subáis los cambios esperáis unos minutos y ya tenéis vuestro contenido 
-		disponible! :-)
-		
-		
-		
-		
-		
+		Almost nothing! Clone a GitHub project... and you can start making changes and testing them!
+		As soon as you upload the changes, wait a few minutes, and your content 
+		will be available! :-)

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 5: Documentos con namespace</title>
+    <title>Chapter 5: Documents With Namespace</title>
 	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
@@ -72,102 +72,100 @@
 			
 			
 																			<div class="row">
-            		<div class="assert"><p>Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.</p>
+            		<div class="assert"><p>Everything explained for documents without a namespace applies, except for multiline nodes.</p>
 </div>
             	</div>
-												<p>Como resumen anterior:</p>
+												<p>As a summary of the previous:</p>
 <ul>
-<li>Codificación UTF-8 Siempre</li>
-<li>Los Identificadores son CASE-INSENSITIVE</li>
-<li>No existen caracteres de escape</li>
-<li>En <span class='STxT'><span class='first'>S</span>TxT</span> son comentarios todas las líneas que empiezan por el carácter #</li>
-<li>4 espacios equivalen a un tabulador</li>
+<li>UTF-8 Encoding Always</li>
+<li>Identifiers are CASE-INSENSITIVE</li>
+<li>There are no escape characters</li>
+<li>In <span class='STxT'><span class='first'>S</span>TxT</span>, all lines that start with the character # are comments</li>
+<li>4 spaces are equivalent to one tab</li>
 </ul>
 
 												<div class="row">
-            		<div class="assert"><p>No se permite el uso de <code>:</code> para nodos multilínea.<br>Ésto esta implícito por el tipo de nodo.</p>
+            		<div class="assert"><p>The use of <code>:</code> for multiline nodes is not allowed.<br>This is implicit due to the node type.</p>
 </div>
             	</div>
-												<p>En caso que se inserte el carcter <code>:</code> lo que pasará es que formará
-parte del texto, no se considerará especial. Los otros tipos
-de texto no permiten varias líneas, por lo que no tendrá efecto.</p>
+												<p>If the <code>:</code> character is inserted, it will simply become part of the text, not considered special. The other text types do not allow multiple lines, so it will have no effect.</p>
 
-								            	<h2><a id="index_0"></a>Definición de namespace</h2>
-																<p>Un namespace es un documento sin namespace con el primer nodo llamado <code>Namespace</code>,
-el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.</p>
+								            	<h2><a id="index_0"></a>Namespace Definition</h2>
+																<p>A namespace is a document without a namespace with the first node called <code>Namespace</code>,
+which is a structure with all the possible node types, as an example.</p>
 
 												<div class="row">
-            		<div class="assert"><p>Un nodo se define sólamente una vez, después ya no se puede redefinir.<br>Se permite que aparezca antes siempre y cuando no se defina la estructura.</p>
+            		<div class="assert"><p>A node is defined only once, and it cannot be redefined afterward.<br>It is allowed to appear earlier as long as the structure is not defined.</p>
 </div>
             	</div>
-												<p>Vamos a ver un ejemplo:</p>
+												<p>Let's look at an example:</p>
 
-												<pre>Namespace: www.demo.com/documento.stxt
-    Documento:
-        T&iacute;tulo: (1)
-        ***Secciones: (?)***
+												<pre>Namespace: www.demo.com/document.stxt
+    Document:
+        Title: (1)
+        ***Sections: (?)***
         Description: (1) TEXT
-        Tipo Documento: (1) ENUM
-            :informe
-            :art&iacute;culo
-            :ensayo
+        Document Type: (1) ENUM
+            :report
+            :article
+            :essay
         
-    ***Secciones:***
-        ***Seccion: (+) TEXT***</pre>
-												<p>Otra forma de definirlo más simple hubiera sido:</p>
+    ***Sections:***
+        ***Section: (+) TEXT***</pre>
+												<p>A simpler way to define it would have been:</p>
 
-												<pre>Namespace: www.demo.com/documento.stxt
-    Documento:
-        T&iacute;tulo: (1)
-        ***Secciones: (?)***
-            ***Seccion: (+) TEXT***
+												<pre>Namespace: www.demo.com/document.stxt
+    Document:
+        Title: (1)
+        ***Sections: (?)***
+            ***Section: (+) TEXT***
         Description: (1) TEXT
-        Tipo Documento: (1) ENUM
-            :informe
-            :art&iacute;culo
-            :ensayo</pre>
-												<p>Finalmente un documento del namespace:</p>
+        Document Type: (1) ENUM
+            :report
+            :article
+            :essay</pre>
+												<p>Finally, a document from the namespace:</p>
 
-												<pre>Documento (www.demo.com/documento.stxt):
-    T&iacute;tulo: Primer documento simple
+												<pre>Document (www.demo.com/document.stxt):
+    Title: First simple document
     Description:
-        Este es el
-        primer documento
-        simple. Tiene varias l&iacute;neas
-    Tipo Documento: informe
-    Secciones:
-        Seccion: Esta es una secci&oacute;n
-        Seccion:
-            Esta es una secci&oacute;n
-            con m&aacute;s de una
-            l&iacute;nea.</pre>
-								            	<h3><a id="index_1"></a>Definición de cantidad</h3>
-																<p>Se permite definir la cantidad de nodos de la siguiente forma:</p>
+        This is the
+        first simple document.
+        It has multiple lines
+    Document Type: report
+    Sections:
+        Section: This is a section
+        Section:
+            This is a section
+            with more than one
+            line.</pre>
+								            	<h3><a id="index_1"></a>Quantity Definition</h3>
+																<p>It is allowed to define the quantity of nodes as follows:</p>
 <ul>
-<li><code>?</code>: Puede o no aparecer (máximo 1)</li>
-<li><code>+</code>: Al menos un nodo</li>
-<li><code>*</code>: Cualquier número de nodos</li>
-<li><code>num+</code>: <em>num</em> o más nodos</li>
-<li><code>num-</code>: <em>num</em> o menos nodos</li>
-<li><code>num</code>: exactamente <em>num</em> nodos</li>
+<li><code>?</code>: May or may not appear (maximum 1)</li>
+<li><code>+</code>: At least one node</li>
+<li><code>*</code>: Any number of nodes</li>
+<li><code>num+</code>: <em>num</em> or more nodes</li>
+<li><code>num-</code>: <em>num</em> or fewer nodes</li>
+<li><code>num</code>: exactly <em>num</em> nodes</li>
 </ul>
 
-								            	<h3><a id="index_2"></a>Tipos de nodos</h3>
-																<p>Se permiten los siguientes tipos de nodos:</p>
+								            	<h3><a id="index_2"></a>Node Types</h3>
+																<p>The following node types are allowed:</p>
 <ul>
-<li><code>STRING</code> (Valor por defecto)</li>
-<li><code>TEXT</code> (permite multiline, no permite nodos hijos)</li>
+<li><code>STRING</code> (Default value)</li>
+<li><code>TEXT</code> (allows multiline, does not allow child nodes)</li>
 <li><code>NUMBER</code>: /^(-|+)?\d+(.\d+(e(-|+)?\d+)?/</li>
 <li><code>BOOLEAN</code>: true | false</li>
 <li><code>REGEX</code>: valid regex</li>
-<li><code>ENUM</code>: En las siguientes multilineas se muestran los valores válidos</li>
+<li><code>ENUM</code>: Valid values are shown in the following multilines</li>
 <li><code>DATE</code>: YYYY-MM-DD</li>
 <li><code>TIMESTAMP</code>: ISO_8601</li>
 <li><code>EMAIL</code>: valid email</li>
 <li><code>URL</code>: valid url</li>
-<li><code>HEXADECIMAL</code> (permite multiline, no permite nodos hijos)</li>
-<li><code>BASE64</code> (permite multiline, no permite nodos hijos)</li>
-<li><code>EMPTY</code>: no permite contenido</li>
+<li><code>HEXADECIMAL</code> (allows multiline, does not allow child nodes)</li>
+<li><code>BASE64</code> (allows multiline, does not allow child nodes)</li>
+<li><code>EMPTY</code>: does not allow content</li>
 <li><code>INTEGER</code>: (+|-)?\d+</li>
 <li><code>NATURAL</code>: \d+</li>
 </ul>

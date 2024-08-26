@@ -1,135 +1,128 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 3: Potenciado con IA
+Document (globalcampus.site/namespace.stxt): Chapter 3: AI-Powered
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (02-tutorial)
-		Next: Siguiente (04-raw-docs)
+		Previous: Previous (02-tutorial)
+		Next: Next (04-raw-docs)
 
 	Content:
-		Con la llegada de las IA generativas, una cosa que me ha 
-		sorprendido es la naturalidad con la que tratan STxT. 
-		Parece como si lo conocieran, con sólo hacerles una breve
-		introducción. Voy a poneros una conversación y juzgad.
+		With the arrival of generative AI, one thing that has surprised me is how naturally it handles STxT.
+		It seems as if it knows it, with just a brief introduction. I’m going to share a conversation, and you can judge for yourself.
 		
-	Header: Conversación
+	Header: Conversation
 	
-	Subheader: Humano
+	Subheader: Human
 	
 	Code: 
-		Hola, te voy a hablar del lenguaje STXT (SemanticText). 
-		Es un lenguaje escribir documentos estructurados. Los documentos tienen etiquetas 
-		separadas por el caracter ":", y están anidadas mediante tabuladores.
-		Con el mismo lenguaje se puede definir un namespace, que definirá 
-		un tipo de documento y las etiquetas permitidas y las que no.
+		Hello, I'm going to talk to you about the STXT (SemanticText) language.
+		It’s a language for writing structured documents. The documents have tags 
+		separated by the ":" character, and they are nested using tabs.
+		With the same language, you can define a namespace that will define 
+		a document type and the allowed and disallowed tags.
 		
-		Te pongo un ejemplo de namespace:
+		Here’s an example of a namespace:
 		
 		Namespace: www.kocinando.com/receta.stxt
-			Receta:
-			    Descripción: (?) TEXT
-			    Comensales: (?) NUMBER
-				Dificultad: (?) ENUM
-				   	: fácil
-				   	: media
-			    	: difícil
-			    Ingredientes: (1)
-					Ingrediente: (+)
-			    Pasos: (1)
-			    	Paso: (+)
+			Recipe:
+			    Description: (?) TEXT
+			    Servings: (?) NUMBER
+				Difficulty: (?) ENUM
+				   	: easy
+				   	: medium
+			    	: hard
+			    Ingredients: (1)
+					Ingredient: (+)
+			    Steps: (1)
+			    	Step: (+)
 			    	
-		Te pongo un ejemplo de documento de ese namespace:
+		Here’s an example of a document from that namespace:
 		
-		Receta (www.kocinando.com/receta.stxt): Receta de macarrones
-			Descripción:
-				Esta es la descripción de....
-				Esta es la descripción de....
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Dorar carne
+		Recipe (www.kocinando.com/receta.stxt): Macaroni Recipe
+			Description:
+				This is the description of...
+				This is the description of...
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Brown the meat
 
-		¿Has entendido lo que te he explicado?
+		Did you understand what I explained to you?
 		
-	Subheader: IA
+	Subheader: AI
 	
 	Content: 
 	
-		Sí, he entendido lo que me has explicado sobre el lenguaje STXT (SemanticText). 
-		Es un lenguaje para estructurar documentos utilizando etiquetas que están 
-		organizadas jerárquicamente mediante tabulaciones. Además, las etiquetas se 
-		definen dentro de un namespace, que establece qué etiquetas son permitidas 
-		y sus posibles valores o formatos.
+		Yes, I understood what you explained to me about the STXT (SemanticText) language.
+		It’s a language for structuring documents using tags that are 
+		organized hierarchically through tabulations. Additionally, the tags are 
+		defined within a namespace, which establishes the allowed tags 
+		and their possible values or formats.
 
-		En tu ejemplo, has definido un namespace específico para recetas 
-		de cocina (www.kocinando.com/receta.stxt) que incluye etiquetas como Receta, 
-		Descripción, Comensales, Dificultad, Ingredientes, Ingrediente, Pasos, y Paso. 
-		Cada etiqueta puede tener ciertos tipos de valores asociados, como texto libre (TEXT), 
-		números (NUMBER), o valores enumerados (ENUM) con opciones específicas como fácil, media, y difícil.
+		In your example, you defined a specific namespace for cooking recipes 
+		(www.kocinando.com/receta.stxt) that includes tags like Recipe, 
+		Description, Servings, Difficulty, Ingredients, Ingredient, Steps, and Step. 
+		Each tag can have certain associated value types, such as free text (TEXT), 
+		numbers (NUMBER), or enumerated values (ENUM) with specific options like easy, medium, and hard.
 
-		Luego, has mostrado cómo se puede estructurar un documento de receta utilizando 
-		este namespace, siguiendo la jerarquía y las reglas definidas en él. 
-		Por ejemplo, en el documento de la receta de macarrones, se especifica la descripción, 
-		la cantidad de comensales, la dificultad, los ingredientes con sus respectivas cantidades, 
-		y los pasos a seguir, todo siguiendo la estructura definida en el namespace.
+		Then, you showed how a recipe document can be structured using 
+		this namespace, following the hierarchy and rules defined within it.
+		For example, in the macaroni recipe document, the description, 
+		the number of servings, the difficulty, the ingredients with their respective quantities, 
+		and the steps to follow are all specified, adhering to the structure defined in the namespace.
 
-		¿Hay algo más específico que te gustaría discutir o aclarar sobre este lenguaje?
+		Is there anything more specific you would like to discuss or clarify about this language?
 		
-	Subheader: Humano
+	Subheader: Human
 	
 	Code: 
-		Me gustaría que siguiendo el namespace de www.kocinando.com/receta.stxt 
-		me hicieras una receta real de macarrones a la boloñesa.
+		I’d like you to create a real recipe for macaroni bolognese following the namespace www.kocinando.com/receta.stxt.
 		
-	Subheader: IA
+	Subheader: AI
 	
 	Content: 
-		Aquí tienes una receta de macarrones a la boloñesa siguiendo el namespace www.kocinando.com/receta.stxt:
+		Here is a recipe for macaroni bolognese following the namespace www.kocinando.com/receta.stxt:
 	
 	Code: 
-		Receta (www.kocinando.com/receta.stxt): Macarrones a la boloñesa
-			Descripción:
-				Los macarrones a la boloñesa son un plato clásico de la cocina italiana, compuesto de pasta y una deliciosa salsa de carne con tomate, cebolla, zanahoria y apio. Perfecto para cualquier ocasión.
-			Comensales: 4
-			Dificultad: media
-			Ingredientes:
-				Ingrediente: (400g) Macarrones
-				Ingrediente: (400g) Carne de res picada
-				Ingrediente: (1) Cebolla
-				Ingrediente: (2) Dientes de ajo
-				Ingrediente: (1) Zanahoria
-				Ingrediente: (1) Rama de apio
-				Ingrediente: (400g) Tomate triturado
-				Ingrediente: (2 cucharadas) Aceite de oliva
-				Ingrediente: (1/2 taza) Vino tinto
-				Ingrediente: (Al gusto) Sal
-				Ingrediente: (Al gusto) Pimienta negra
-				Ingrediente: (Al gusto) Queso parmesano rallado
-				Ingrediente: (1 hoja) Laurel
-				Ingrediente: (1 cucharadita) Azúcar
-			Pasos:
-				Paso: (1) Picar finamente la cebolla, el ajo, la zanahoria y el apio.
-				Paso: (2) Calentar el aceite de oliva en una sartén grande y sofreír la cebolla, el ajo, la zanahoria y el apio hasta que estén blandos.
-				Paso: (3) Añadir la carne picada y cocinar hasta que se dore.
-				Paso: (4) Verter el vino tinto y cocinar a fuego medio hasta que el alcohol se evapore.
-				Paso: (5) Agregar el tomate triturado, la hoja de laurel, el azúcar, la sal y la pimienta. Dejar cocer a fuego lento durante 30 minutos, removiendo de vez en cuando.
-				Paso: (6) Mientras la salsa se cocina, hervir agua con sal en una olla grande y cocinar los macarrones según las instrucciones del paquete.
-				Paso: (7) Escurrir los macarrones y mezclarlos con la salsa boloñesa.
-				Paso: (8) Servir caliente y espolvorear con queso parmesano rallado al gusto.
+		Recipe (www.kocinando.com/receta.stxt): Macaroni Bolognese
+			Description:
+				Macaroni Bolognese is a classic Italian dish consisting of pasta and a delicious meat sauce with tomato, onion, carrot, and celery. Perfect for any occasion.
+			Servings: 4
+			Difficulty: medium
+			Ingredients:
+				Ingredient: (400g) Macaroni
+				Ingredient: (400g) Ground beef
+				Ingredient: (1) Onion
+				Ingredient: (2) Garlic cloves
+				Ingredient: (1) Carrot
+				Ingredient: (1) Celery stalk
+				Ingredient: (400g) Crushed tomatoes
+				Ingredient: (2 tablespoons) Olive oil
+				Ingredient: (1/2 cup) Red wine
+				Ingredient: (To taste) Salt
+				Ingredient: (To taste) Black pepper
+				Ingredient: (To taste) Grated Parmesan cheese
+				Ingredient: (1 leaf) Bay leaf
+				Ingredient: (1 teaspoon) Sugar
+			Steps:
+				Step: (1) Finely chop the onion, garlic, carrot, and celery.
+				Step: (2) Heat the olive oil in a large pan and sauté the onion, garlic, carrot, and celery until soft.
+				Step: (3) Add the ground beef and cook until browned.
+				Step: (4) Pour in the red wine and cook over medium heat until the alcohol evaporates.
+				Step: (5) Add the crushed tomatoes, bay leaf, sugar, salt, and pepper. Let it simmer over low heat for 30 minutes, stirring occasionally.
+				Step: (6) While the sauce is cooking, boil salted water in a large pot and cook the macaroni according to the package instructions.
+				Step: (7) Drain the macaroni and mix with the Bolognese sauce.
+				Step: (8) Serve hot and sprinkle with grated Parmesan cheese to taste.
 		
-	Header: Análisis
+	Header: Analysis
 	
 	Content: 
-		1. Bueno, en primer lugar: ahora sí. **Quizá esta receta sea mejor que la mía :-D**
-		1. En segundo lugar: con qué facilidad ha tratado la IA los documentos :-O
-		1. Finalmente, destacar que al mostrar el resultado se ha identificado como **YAML** en
-		   vez de STXT. Entiendo que es muy similar, más adelante comentaremos 
-		   las similitudes y diferencias.
+		1. Well, first of all: now it’s real. **Maybe this recipe is better than mine :-D**
+		2. Secondly: how easily the AI handled the documents :-O
+		3. Finally, note that when displaying the result, it was identified as **YAML** instead of STXT. I understand they are very similar; we will discuss 
+		   the similarities and differences later on.
 		 
-		
-	
-	

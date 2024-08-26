@@ -1,17 +1,17 @@
 Document (globalcampus.site/namespace.stxt):
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Next: Siguiente (00-poesia)
+		Next: Next (00-poesia)
 
 	Metadata:
-		Title: STxT: Un lenguaje para la web
-		Description: Primera portada del libro
+		Title: STxT: A Language for the Web
+		Description: First cover of the book
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 		
 	Preamble:
-		Durante muchos años hemos visto el reinado de tecnologías como xml.
+		For many years, we have seen the reign of technologies like XML.
 
-		Pero este reinado podría estar en peligro.
+		But this reign could be in danger.

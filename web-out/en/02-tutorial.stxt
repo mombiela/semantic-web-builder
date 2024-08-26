@@ -1,198 +1,197 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
+Document (globalcampus.site/namespace.stxt): Chapter 2: Tutorial
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (01-intro-2024)
-		Next: Siguiente (03-ai-powered)
+		Previous: Previous (01-intro-2024)
+		Next: Next (03-ai-powered)
 
 	Content:
-		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
-		Te explicamos lo que es @STxT@ directamente, sin más preámbulos.
-		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
+		If you were to read only one chapter of this book, this would be the chapter. 
+		We explain what @STxT@ is directly, without further ado.
+		And we also give you enough knowledge to read any other chapter.
 		
-	header:	Un ejemplo... ¡ya!
+	Header: An Example... Right Now!
 		
-	subheader: Documentos sin namespace
+	Subheader: Documents Without Namespace
 		
 	Content:
-		Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
-		y _todo el mundo_ lo puede llega a entender.
+		This is the first language I know of where you can start with an example
+		and _everyone_ can understand it.
 		
-		El ejemplo será una receta de cocina. ¡Adelante!
+		The example will be a recipe. Let's go!
 		
 	Code:
-		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
+		Recipe: Macaroni Recipe
+			Description:
+				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
 				:Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve
+				
 	Content:
-		Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.
+		Easy, right? Okay, I'm not a great chef :-D but it’s perfectly understandable.
 		
-	Alert: No uséis esta receta en casa, esperad al próximo capítulo ;-)
+	Alert: Don’t use this recipe at home, wait for the next chapter ;-)
 	
 	Content:
-		Bien, acabáis de ver lo que es un **documento @STxT@ sin namespace**. Este tipo de documentos
-		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
-		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
-		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así
-		hasta formar una estructura jerárquica. 
+		Well, you’ve just seen what a **@STxT@ document without a namespace** looks like. These types of documents
+		are structured, but we don’t know the shape of the nodes. However, you can already see that they have structure, with a main node `Recipe`, which has
+		a `Description` node, `Ingredients`, etc. These nodes in turn have others, and so on,
+		forming a hierarchical structure. 
 	
-		Vale la pena mencionar el nodo `Descripción` que es un nodo que permite **multilíneas**.
-		Al no tener una estructura previa se distinguen porque estan anidados pero las
-		líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.
+		It’s worth mentioning the `Description` node, which is a node that allows **multilines**.
+		Without a predefined structure, they are distinguished by being indented but with
+		lines that have no preceding label. This is very important for documents without a namespace.
 	
-	Subheader: Documentos con namespace
+	Subheader: Documents With Namespace
 	
 	Content: 
-		Ahora iremos más allá, y definiremos la misma receta con un namespace.
-		Primero mostraremos como queda la receta, y después mostraremos el
-		namespace. Podéis pensar que normalmente se debería hacer al revés,
-		pero la realidad es que la mayoría de las veces tendremos un ejemplo
-		y de forma posterior definiremos el caso general.
+		Now we’ll go further and define the same recipe with a namespace.
+		First, we’ll show the recipe, and then we’ll show the
+		namespace. You might think it should be done the other way around,
+		but the reality is that most of the time, we’ll have an example
+		and later define the general case.
 		
-		Aquí tenemos la receta:
+		Here’s the recipe:
 		
 	Code:
-		Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
-			Descripción:
-				Esta es la descripción de la recta de macarrones.
+		Recipe ***(www.kocinando.com/receta.stxt)***: Macaroni Recipe
+			Description:
+				This is the description of the macaroni recipe.
 				Bla, bla, bla
 				Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve
 	
 	Content: 
-		¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
-		que es `www.kocinando.com/receta.stxt`, y el nodo `Descripción` parece
-		más natural. **Pues ya está :-)** Hemos convertido un documento sin namespace
-		a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter `:`
-		de los campos multilínea. 
+		What has changed? Well, now the recipe has an associated namespace,
+		which is `www.kocinando.com/receta.stxt`, and the `Description` node seems
+		more natural. **That’s it :-)** We’ve converted a document without a namespace
+		into one with a namespace, just by adding who it belongs to and removing the `:`
+		character from the multiline fields.
 		
-		No podía ser más sencillo ;-)
+		It couldn’t be simpler ;-)
 		
-		Ahora creamos el namespace. **La definición del namespace se encuentra en
-		un documento sin namespace**. En la versión anterior de STxT no era así,
-		pero complicaba los parseadores, y te obligaba a tener siempre definición
-		de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.
+		Now let’s create the namespace. **The namespace definition is found in
+		a document without a namespace**. In the previous version of STxT, it wasn’t like this,
+		but it complicated the parsers and forced you to always have a namespace definition.
+		Now this has changed, and everything has been greatly simplified.
 		
-		Aquí está el namespace que podemos crear para el ejemplo:
+		Here’s the namespace we can create for the example:
 		
 	Code:
 		***Namespace: www.kocinando.com/receta.stxt***
-			Receta:
-			    Descripción: (?) TEXT
-			    Comensales: (?) NUMBER
-				Dificultad: (?) ENUM
-				   	: fácil
-				   	: media
-			    	: difícil
-			    Ingredientes: (1)
-					Ingrediente: (+)
-			    Pasos: (1)
-			    	Paso: (+)
+			Recipe:
+			    Description: (?) TEXT
+			    Servings: (?) NUMBER
+				Difficulty: (?) ENUM
+				   	: easy
+				   	: medium
+			    	: hard
+			    Ingredients: (1)
+					Ingredient: (+)
+			    Steps: (1)
+			    	Step: (+)
 	
 	Content:
-		Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
-		el tipo del nodo si hiciera falta.
+		It’s very intuitive, the structure itself is a reflection of the hierarchical order, indicating
+		the type of node if necessary.
 		
-		El namespace **debería poderse consultar vía internet**, en la misma url que lo indica.
-		Así, este namespace debería estar disponible mediante la url `https://www.kocinando.com/receta.stxt`. 
-		Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.
+		The namespace **should be accessible via the internet**, at the same URL that indicates it.
+		Thus, this namespace should be available at `https://www.kocinando.com/receta.stxt`.
+		Parsers should also have it available locally, and it’s better that way for performance.
 		
-		Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
-		debería ser mucho más sencillo que en otros lenguajes.
+		We’ll talk more about namespaces later, but creating a document from them
+		should be much simpler than in other languages.
 	
-	Header: Otros elementos
-	Subheader: Comentarios
+	Header: Other Elements
+	Subheader: Comments
 	
 	Content:  
-		Es posible insertar comentarios en los documentos para 
-		expresar partes no finalizadas, pensamientos del autor, etc.
-		Los comentarios no se usarán pero permiten enriquecer el documento.
+		It’s possible to insert comments in the documents to
+		express unfinished parts, the author’s thoughts, etc.
+		Comments won’t be used but allow enriching the document.
 		
 	Code:
-		Receta (www.kocinando.com/receta.stxt): Receta de macarrones
-		***# Esta receta me la pasó XX y la he hecho un montón de veces***
-		***# Os gustará mucho!!***
-			Descripción:
-				Esta es la descripción de la recta de macarrones.
+		Recipe (www.kocinando.com/receta.stxt): Macaroni Recipe
+		***# This recipe was given to me by XX and I’ve made it many times***
+		***# You’ll love it!!***
+			Description:
+				This is the description of the macaroni recipe.
 				Bla, bla, bla
 				Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve	
 
-	Subheader: Distintos namespaces en un documento
+	Subheader: Different Namespaces in a Document
 	
 	Content: 
-		Un namespace puede hacer referencia a otro, para indicar que
-		una parte del documento tiene la estructura en otro namespace.
-		Mejor ver un ejemplo:
+		A namespace can refer to another one, to indicate that
+		part of the document has its structure in another namespace.
+		It’s better to see an example:
 		
 	Code: 
 		***Namespace: www.kocinando.com/recetario.stxt***
-			Recetario:
-				Receta: (+) ***(www.kocinando.com/receta.stxt)***
+			RecipeBook:
+				Recipe: (+) ***(www.kocinando.com/receta.stxt)***
 
-	Content: Aquí vemos que `Receta` es de otro namespace y vemos que
-		en vez de poner la estructura se hace referencia a otro namespace.
+	Content: Here we see that `Recipe` is from another namespace, and instead of providing the structure,
+		it refers to another namespace.
 		
-	Assert: NO es necesario decir el namespace interior, sólo el nodo principal.
+	Assert: There is NO need to specify the internal namespace, only the main node.
 	
-	Content: Así, un ejemplo de recetario sería:
+	Content: So, an example of a recipe book would be:
 	
 	Code:
-		***Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama*** 
-			***Receta: Receta de macarrones***
-				Descripción:
-					Esta es la descripción de la recta de macarrones.
+		***RecipeBook (www.kocinando.com/recetario.stxt): Mom’s Recipes*** 
+			***Recipe: Macaroni Recipe***
+				Description:
+					This is the description of the macaroni recipe.
 					Bla, bla, bla
 					Bla, bla, bla
-				Comensales: 3
-				Dificultad: fácil
-				Ingredientes:
-					Ingrediente: (100g) Tomate
-					Ingrediente: (240g) Macarrones
-				Pasos:
-					Paso: (1) Hacer sofrito
-					Paso: (2) Hervir macarrones
-					Paso: (3) Juntar macarrones con sofrito y servir	
-			***Receta: Receta de pizza***
-				Ingredientes:
-					Ingrediente: (1u) Masa pizza
-					Ingrediente: (100g) Tomate
-					Ingrediente: (50g) Queso
-				Pasos:
-					Paso: (1) Poner tomate y queso en pizza
-					Paso: (2) Hornear durante 15'
+				Servings: 3
+				Difficulty: easy
+				Ingredients:
+					Ingredient: (100g) Tomato
+					Ingredient: (240g) Macaroni
+				Steps:
+					Step: (1) Make the sauce
+					Step: (2) Boil the macaroni
+					Step: (3) Mix the macaroni with the sauce and serve	
+			***Recipe: Pizza Recipe***
+				Ingredients:
+					Ingredient: (1u) Pizza dough
+					Ingredient: (100g) Tomato
+					Ingredient: (50g) Cheese
+				Steps:
+					Step: (1) Add tomato and cheese to the pizza
+					Step: (2) Bake for 15 minutes
 	
-	Header: Fin del tutorial
+	Header: End of the Tutorial
 
 	Alert:
-		Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.\
-		O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-) 
-		
+		Please don’t continue. Reread this section at least one more time. Then continue.\
+		Or better: read it again, take a break, and move on to the next section :-)

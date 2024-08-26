@@ -1,49 +1,41 @@
-Document (globalcampus.site/namespace.stxt):Contribuye con nosotros
+Document (globalcampus.site/namespace.stxt): Contribute with Us
 
 	Metadata:
-		Description: Cosas que faltan por hacer en el lenguaje STxT y formas de contribuir con el mantenimiento y los contenidos del portal.
+		Description: Things still to be done in the STxT language and ways to contribute to the maintenance and content of the portal.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-10-17
 		
-	Header: ¿Quieres contribuir?
+	Header: Do You Want to Contribute?
 		
-	Alert: ¡¡Gracias por querer colaborar con nosotros!!
+	Alert: Thank you for wanting to collaborate with us!
 		
 	Content:
-		La mejor forma de ayudarnos es dando a conocer el lenguaje. Usándolo,
-		hablando a otras personas, y disfrutando con él. Nosotros ya lo hemos 
-		usado, y la experiencia ha sido genial.
+		The best way to help us is by spreading the word about the language. By using it,
+		talking to others about it, and enjoying it. We’ve already used it, and the experience has been fantastic.
 		
-		Aunque queda mucho trabajo por hacer. Faltan librerías, editores de texto,
-		aplicaciones,... la lista es interminable.
+		However, there’s still a lot of work to be done. Libraries, text editors,
+		applications... the list is endless.
 		
-		Buenas noticias para los informáticos: un nuevo juguete para explorar :-)	
+		Good news for developers: a new toy to explore :-)
 		
-	Header:  www.semantictext.info
+	Header: www.semantictext.info
 	
 	Content:		
-		Nuestro lenguaje tiene infinitas aplicaciones, pero creemos que su definición 
-		es única y que ya está lista.
+		Our language has infinite applications, but we believe its definition 
+		is unique and already complete.
 		
-		_Las posibles aplicaciones o utilidades las dejamos para vosotros ;-)_
+		_We leave the possible applications or utilities up to you ;-)_
 		
-		Por lo que respecta a esta web, creemos que es un proyecto cerrado, pero dista
-		mucho de considerarse perfecto. Seguro que puede mejorar de mil formas. ¿Crees que 
-		hay que añadir un capítulo nuevo al libro? ¿Has encontrado algún error en la documentación? 
-		¿Mejorarías algún ejemplo? ¿Nos propones un css distinto y más reducido de tamaño?
+		As for this website, we consider it a finished project, but it is far
+		from perfect. It can surely be improved in a thousand ways. Do you think 
+		a new chapter should be added to the book? Have you found any errors in the documentation? 
+		Would you improve any examples? Would you suggest a different, more compact CSS?
 		
-		Queremos que esta web sea un punto de referencia en el aprendizaje de @STxT@.
+		We want this website to be a reference point in learning @STxT@.
 		
-	alert: ¡Ayúdanos a que esto sea posible!\
+	Alert: Help us make this possible!\
 		[[admin@semantictext.info]]
 		
 	Content:
-		**Estaremos encantados de poderos contestar lo antes posible ;-)**\
-		Por cierto, sólo hablamos en catalán, castellano e inglés :-)
-			
-	
-	
-		
-		
-		
-		
+		**We’ll be happy to respond to you as soon as possible ;-)**\
+		By the way, we only speak Catalan, Spanish, and English :-)

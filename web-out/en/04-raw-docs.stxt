@@ -1,159 +1,158 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespace
+Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namespace
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (03-ai-powered)
-		Next: Siguiente (05-ns-docs)
+		Previous: Previous (03-ai-powered)
+		Next: Next (05-ns-docs)
 
-	header: Documentos sin namespace
+	Header: Documents Without Namespace
 	
-	Content: Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:
+	Content: I believe it’s already clear what documents without a namespace are like. Example:
 	
 	Code:
-		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
+		Recipe: Macaroni Recipe
+			Description:
+				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
 				:Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve
 
-	Content: Vamos a profundizar un poco más.
+	Content: Let's delve a little deeper.
 
-	header: Codificación
+	Header: Encoding
 	
-	Assert: Codificación UTF-8 Siempre
+	Assert: UTF-8 Encoding Always
 	
 	Content: 
-		Fin. Es una buena regla y estoy muy contento con ella. 
-		Hoy en día es la codificación más aceptable, más universal,
-		y más implementada. No creo que esto cambie en los próximos años.	
+		The end. It’s a good rule, and I’m very happy with it.
+		Nowadays, it’s the most acceptable, most universal,
+		and most implemented encoding. I don’t think this will change in the coming years.
 	
-	header: Identificadores
+	Header: Identifiers
 	
-	Assert: Los Identificadores son CASE-INSENSITIVE
+	Assert: Identifiers are CASE-INSENSITIVE
 	
 	Assert: 
-		Se permiten espacios en los nombres. \
-		¿Por qué no? ¿Para parecer informáticos?\
-		Los tiempos están cambiando :-D
+		Spaces are allowed in names. \
+		Why not? Just to seem more technical?\
+		Times are changing :-D
 
-	header: Caracteres de escape
+	Header: Escape Characters
 	
-	Assert: No existen caracteres de escape
+	Assert: There are no escape characters
 	
 	Content: 
-		Creo que es lo mejor que he oído en mucho tiempo. 
-		**No existen caracteres de escape** _porque no son necesarios_.
-		Debido a la estructura no son necesarios.	
+		I think this is the best thing I’ve heard in a long time.
+		**There are no escape characters** _because they aren’t necessary_.
+		Due to the structure, they aren’t needed.
 
-	header:	Comentarios
+	Header: Comments
 		
 	Content:
-		Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
-		Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí 
-		para comentar o añadir alguna observación, pero no influyen en el documento en sí.
+		All tech-savvy individuals know what comments are in any language.
+		For any beginners, I’ll explain that comments are text that’s only there
+		to comment or add some observation, but they don’t influence the document itself.
 		
-	assert:
-		En @STxT@ son comentarios todas las líneas que empiezan por el carácter #
+	Assert:
+		In @STxT@, comments are all lines that start with the character #
 		
 	Content:
-		Los comentarios no tienen que tener ningún tipo de formato, 
-		es texto libre que el autor del documento puede incluir. 
-		Además, no tiene que estar situado en ningún sitio concreto del documento. 
-		Cualquier línea que empiece por # será tratada como comentario,
-		y no será tenida en cuenta ni en programas ni en comunicaciones.
+		Comments don’t need any specific format; 
+		they’re free text that the document author can include.
+		Moreover, they don’t need to be placed in any specific part of the document.
+		Any line that starts with # will be treated as a comment,
+		and won’t be considered by programs or in communications.
 		
-		Ejemplo:
+		Example:
 
 	Code:
-		Receta: Receta de macarrones
-		***# (1) Esto es un comentario***
-		***# (2) Esto también es un comentario***
-			***# (3) Esto también es un comentario***
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
+		Recipe: Macaroni Recipe
+		***# (1) This is a comment***
+		***# (2) This is also a comment***
+			***# (3) This is also a comment***
+			Description:
+				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
-			***# (4) Esto es un comentario***	
+			***# (4) This is a comment***	
 				:Bla, bla, bla
-				***# (5) esto NO es un comentario***
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
+				***# (5) This is NOT a comment***
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve	
 	
-	Content: Aquí cabe señalar que `(1),(2),(3) y (4)` son comentarios, mientras 
-		que `(5)` no lo es, ya que está dentro del texto identado. 
+	Content: It’s worth noting that `(1),(2),(3) and (4)` are comments, while 
+		`(5)` is not, as it is within the indented text.
 
-	header:	Nodos e identación
+	Header: Nodes and Indentation
 	
 	Content:	
-		Antes hemos dicho que un documento @STxT@ es un conjunto de nodos anidados. 
-		La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.
+		We mentioned earlier that an @STxT@ document is a set of nested nodes.
+		Indentation is very similar to other languages, and tabs or spaces can be used.
 		
 	Assert: 
-		4 espacios equivalen a un tabulador
-		Es mejor no mezclar documentos con tabuladores y espacios
+		4 spaces are equivalent to one tab
+		It’s better not to mix documents with tabs and spaces
 		
-	Subheader: Nodos multilínea
+	Subheader: Multiline Nodes
 	
 	Content: 
-		Estos nodos permiten tener **textos completos en varias líneas**. En documentos con namespace
-		serán equivalentes a nodos tipo `TEXT`. Se construyen con líneas
-		que empiezan por `:`, pero sin una etiqueta previa. Ejemplo:
+		These nodes allow for **complete texts across multiple lines**. In documents with namespaces,
+		they will be equivalent to `TEXT` type nodes. They are constructed with lines
+		that start with `:`, but without a preceding label. Example:
 		
 	Code:
-		Receta: Receta de macarrones
-			***Descripción:***
-				***:Esta es la descripción de la recta de macarrones.***
+		Recipe: Macaroni Recipe
+			***Description:***
+				***:This is the description of the macaroni recipe.***
 				***:Bla, bla, bla***
 				***:Bla, bla, bla***
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sauce
+				Step: (2) Boil the macaroni
+				Step: (3) Mix the macaroni with the sauce and serve	
 				
 	Content:
-		Acabamos de ver que el nodo `Descripción` es un nodo MULTILINE. 
+		We’ve just seen that the `Description` node is a MULTILINE node.
 	
-	Header: (Prefix) Central (Sufix)
+	Header: (Prefix) Central (Suffix)
 	
 	Content: 
-		Aunque no forma parte del lenguaje, es una práctica habitual que 
-		campos simples se estructuren con `(prefix) central (sufix)`.
-		Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:
+		Although it’s not part of the language, it’s common practice that 
+		simple fields are structured with `(prefix) central (suffix)`.
+		All three can appear, or just 1 or 2 of them. Example:
 		
 	Code:
-		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
+		Recipe: Macaroni Recipe
+			Description:
+				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
 				:Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: ***(100g) Tomate***
-				Ingrediente: ***(240g) Macarrones***
-			Pasos:
-				Paso: ***(1) Hacer sofrito***
-				Paso: ***(2) Hervir macarrones***
-				Paso: ***(3) Juntar macarrones con sofrito y servir***
-	
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: ***(100g) Tomato***
+				Ingredient: ***(240g) Macaroni***
+			Steps:
+				Step: ***(1) Make the sauce***
+				Step: ***(2) Boil the macaroni***
+				Step: ***(3) Mix the macaroni with the sauce and serve***

@@ -1,30 +1,28 @@
 Document (globalcampus.site/namespace.stxt):
 	Default:
-		Title: STXT: El Libro
+		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Anterior (00-oracle)
-		Next: Siguiente (00-prologo)
+		Previous: Previous (00-oracle)
+		Next: Next (00-prologue)
 
 	Metadata:
-		Title: Poesía introductoria a STxT
-		Description: Segunda portada del libro
+		Title: Introductory Poem to STxT
+		Description: Second cover of the book
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
 	Preamble:
-		Un lenguaje para gobernarlos a todos,
+		A language to rule them all,
 		 
-		un lenguaje para encontrarlos,
+		a language to find them,
 		
-		un lenguaje para entenderlos a todos
+		a language to understand them all
 		 
-		y atarlos al conocimiento para siempre,
+		and bind them to knowledge forever,
 		
-		en la tierra de Internet,
+		in the land of the Internet,
 		
-		dónde se liberará al mundo (*)
+		where the world will be set free (*)
 
-		_**(*) En homenaje a J.R.R.Tolkien, escritor y creador de lenguajes.**_
-		
-	
+		_**(*) In tribute to J.R.R. Tolkien, writer and creator of languages.**_

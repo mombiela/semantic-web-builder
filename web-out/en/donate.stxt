@@ -1,46 +1,44 @@
-Document (globalcampus.site/namespace.stxt):Donaciones al proyecto
+Document (globalcampus.site/namespace.stxt): Donations to the Project
 
 	Metadata:
-		Description: Realizar donaciones mediante PayPal al proyecto y a los autores de STxT. 
+		Description: Make donations via PayPal to the project and the authors of STxT. 
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 	
 	Content:
-		¿Quieres hacer una donación al proyecto?
-		En estos momentos sólo tenemos disponible hacerlo mediante PayPal,
-		aunque en el futuro quizás aceptemos otros medios.
+		Do you want to make a donation to the project?
+		At the moment, we only have PayPal available for this,
+		although in the future we may accept other methods.
 		
 	HTML:
 		<div style="text-align:center;">
 		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 		<input type="hidden" name="cmd" value="_s-xclick">
 		<input type="hidden" name="hosted_button_id" value="LXDSP85F44K9W">
-		<input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal. La forma rápida y segura de pagar en Internet.">
-		<img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+		<input type="image" src="https://www.paypalobjects.com/en_US/EN/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal. The fast and secure way to pay online.">
+		<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 		</form>
-		<p><center><strong>Muchas gracias por vuestra colaboración.</strong></center></p>
+		<p><center><strong>Thank you very much for your collaboration.</strong></center></p>
 		</div>
 	
-	Header: ¿Por qué donar?
+	Header: Why Donate?
 		
 	Content:
-		Podría daros muchos motivos, la inversión que hemos hecho, el mantenimiento de los servidores,
-		el trabajo realizado, el ancho de banda, las traducciones... y aunque realmente espero 
-		que estas inversiones puedan ser amortizadas (algún día :-D) mediante publicidad u otros patrocinadores,
-		éste no es el motivo principal.
+		I could give you many reasons: the investment we’ve made, server maintenance,
+		the work done, bandwidth, translations... and while I do hope 
+		that these investments can be recouped (someday :-D) through advertising or other sponsors,
+		this is not the main reason.
 		
-		Las donaciones son para nosotros. Por haber hecho libre este proyecto y haberlo dado a la comunidad. 
-		Por haberlo realizado y haber puesto todo nuestro esfuerzo. Todo nuestro trabajo está liberado.	
-		Sois libres de usarlo. De ganar dinero. De aprovecharos de él.
-		Pero si realmente creéis que ha sido una aportación útil, una donación será muy agradecida.
+		Donations are for us. For making this project free and giving it to the community. 
+		For having created it and put all our effort into it. All our work is released.	
+		You are free to use it. To make money. To take advantage of it.
+		But if you truly believe it has been a useful contribution, a donation will be greatly appreciated.
 		
-		Vosotros ponéis el precio. Nosotros os regalamos @STxT@.
+		You set the price. We give you @STxT@.
 		
-	# ¿Qué vamos a hacer con las donaciones? La lista es larga... Primero financiar este proyecto. Hemos tenido
-	# muchos gastos, las traducciones, los dominios, el tiempo invertido. Luego una justa recompensa para
-	# nosotros. Si esto va a alguna parte creo que será merecida ;-) Finalmente, arrancar otros proyectos, pensar nuevas
-	# ideas... ¡hay tanto por hacer! ¡Tanto por inventar! Pero necesitamos tiempo para ello. Y también es
-	# parte de lo que pedimos.
-	# ¡¡¡Gracias por ayudarnos!!!
-		
-		
+	# What will we do with the donations? The list is long... First, fund this project. We've had
+	# many expenses: translations, domains, the time invested. Then, a fair reward for
+	# ourselves. If this goes anywhere, I believe it will be deserved ;-) Finally, to kickstart other projects, think of new
+	# ideas... There’s so much to do! So much to invent! But we need time for it. And that’s also
+	# part of what we’re asking for.
+	# Thank you for helping us!!!
