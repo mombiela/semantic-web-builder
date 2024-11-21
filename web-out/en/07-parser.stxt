@@ -24,7 +24,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		it is available online:
 	
 	Assert:
-		[[https:_github.com/mombiela/stxt-parser | https:_github.com/mombiela/stxt-parser]]
+		[https://github.com/mombiela/stxt-parser](https://github.com/mombiela/stxt-parser)
 		
 	Content:
 		This implementation has been done in Java, as it is the language I am most familiar with.
