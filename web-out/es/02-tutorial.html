@@ -118,7 +118,7 @@ pero la realidad es que la mayoría de las veces tendremos un ejemplo
 y de forma posterior definiremos el caso general.</p>
 <p>Aquí tenemos la receta:</p>
 
-												<pre>Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
+												<pre>Receta <strong>(www.kocinando.com/receta.stxt)</strong>: Receta de macarrones
     Descripci&oacute;n:
         Esta es la descripci&oacute;n de la recta de macarrones.
         Bla, bla, bla
@@ -144,7 +144,7 @@ pero complicaba los parseadores, y te obligaba a tener siempre definición
 de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
 <p>Aquí está el namespace que podemos crear para el ejemplo:</p>
 
-												<pre>***Namespace: www.kocinando.com/receta.stxt***
+												<pre><strong>Namespace: www.kocinando.com/receta.stxt</strong>
     Receta:
         Descripci&oacute;n: (?) TEXT
         Comensales: (?) NUMBER
@@ -171,8 +171,8 @@ expresar partes no finalizadas, pensamientos del autor, etc.
 Los comentarios no se usarán pero permiten enriquecer el documento.</p>
 
 												<pre>Receta (www.kocinando.com/receta.stxt): Receta de macarrones
-***# Esta receta me la pas&oacute; XX y la he hecho un mont&oacute;n de veces***
-***# Os gustar&aacute; mucho!!***
+<strong># Esta receta me la pas&oacute; XX y la he hecho un mont&oacute;n de veces</strong>
+<strong># Os gustar&aacute; mucho!!</strong>
     Descripci&oacute;n:
         Esta es la descripci&oacute;n de la recta de macarrones.
         Bla, bla, bla
@@ -191,9 +191,9 @@ Los comentarios no se usarán pero permiten enriquecer el documento.</p>
 una parte del documento tiene la estructura en otro namespace.
 Mejor ver un ejemplo:</p>
 
-												<pre>***Namespace: www.kocinando.com/recetario.stxt***
+												<pre><strong>Namespace: www.kocinando.com/recetario.stxt</strong>
     Recetario:
-        Receta: (+) ***(www.kocinando.com/receta.stxt)***</pre>
+        Receta: (+) <strong>(www.kocinando.com/receta.stxt)</strong></pre>
 												<p>Aquí vemos que <code>Receta</code> es de otro namespace y vemos que
 en vez de poner la estructura se hace referencia a otro namespace.</p>
 
@@ -203,8 +203,8 @@ en vez de poner la estructura se hace referencia a otro namespace.</p>
             	</div>
 												<p>Así, un ejemplo de recetario sería:</p>
 
-												<pre>***Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama*** 
-    ***Receta: Receta de macarrones***
+												<pre><strong>Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama</strong> 
+    <strong>Receta: Receta de macarrones</strong>
         Descripci&oacute;n:
             Esta es la descripci&oacute;n de la recta de macarrones.
             Bla, bla, bla
@@ -218,7 +218,7 @@ en vez de poner la estructura se hace referencia a otro namespace.</p>
             Paso: (1) Hacer sofrito
             Paso: (2) Hervir macarrones
             Paso: (3) Juntar macarrones con sofrito y servir    
-    ***Receta: Receta de pizza***
+    <strong>Receta: Receta de pizza</strong>
         Ingredientes:
             Ingrediente: (1u) Masa pizza
             Ingrediente: (100g) Tomate

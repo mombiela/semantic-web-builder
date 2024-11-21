@@ -102,7 +102,7 @@
             	<h3><a id="index_${numPart}"></a>$node.text</h3>
 				#set($numPart = $numPart + 1)
 			#elseif(${node.name} == "code")
-				<pre>${utils.escapeHtml($node.text)}</pre>
+				<pre>${utils.escapeHtmlBold($node.text)}</pre>
 			#elseif(${node.name} == "assert")
 				<div class="row">
             		<div class="assert">${wiki.render($node.text)}</div>

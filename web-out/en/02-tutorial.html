@@ -117,7 +117,7 @@ but the reality is that most of the time, we’ll have an example
 and later define the general case.</p>
 <p>Here’s the recipe:</p>
 
-												<pre>Recipe ***(www.kocinando.com/receta.stxt)***: Macaroni Recipe
+												<pre>Recipe <strong>(www.kocinando.com/receta.stxt)</strong>: Macaroni Recipe
     Description:
         This is the description of the macaroni recipe.
         Bla, bla, bla
@@ -143,7 +143,7 @@ but it complicated the parsers and forced you to always have a namespace definit
 Now this has changed, and everything has been greatly simplified.</p>
 <p>Here’s the namespace we can create for the example:</p>
 
-												<pre>***Namespace: www.kocinando.com/receta.stxt***
+												<pre><strong>Namespace: www.kocinando.com/receta.stxt</strong>
     Recipe:
         Description: (?) TEXT
         Servings: (?) NUMBER
@@ -170,8 +170,8 @@ express unfinished parts, the author’s thoughts, etc.
 Comments won’t be used but allow enriching the document.</p>
 
 												<pre>Recipe (www.kocinando.com/receta.stxt): Macaroni Recipe
-***# This recipe was given to me by XX and I&rsquo;ve made it many times***
-***# You&rsquo;ll love it!!***
+<strong># This recipe was given to me by XX and I&rsquo;ve made it many times</strong>
+<strong># You&rsquo;ll love it!!</strong>
     Description:
         This is the description of the macaroni recipe.
         Bla, bla, bla
@@ -190,9 +190,9 @@ Comments won’t be used but allow enriching the document.</p>
 part of the document has its structure in another namespace.
 It’s better to see an example:</p>
 
-												<pre>***Namespace: www.kocinando.com/recetario.stxt***
+												<pre><strong>Namespace: www.kocinando.com/recetario.stxt</strong>
     RecipeBook:
-        Recipe: (+) ***(www.kocinando.com/receta.stxt)***</pre>
+        Recipe: (+) <strong>(www.kocinando.com/receta.stxt)</strong></pre>
 												<p>Here we see that <code>Recipe</code> is from another namespace, and instead of providing the structure,
 it refers to another namespace.</p>
 
@@ -202,8 +202,8 @@ it refers to another namespace.</p>
             	</div>
 												<p>So, an example of a recipe book would be:</p>
 
-												<pre>***RecipeBook (www.kocinando.com/recetario.stxt): Mom&rsquo;s Recipes*** 
-    ***Recipe: Macaroni Recipe***
+												<pre><strong>RecipeBook (www.kocinando.com/recetario.stxt): Mom&rsquo;s Recipes</strong> 
+    <strong>Recipe: Macaroni Recipe</strong>
         Description:
             This is the description of the macaroni recipe.
             Bla, bla, bla
@@ -217,7 +217,7 @@ it refers to another namespace.</p>
             Step: (1) Make the sauce
             Step: (2) Boil the macaroni
             Step: (3) Mix the macaroni with the sauce and serve    
-    ***Recipe: Pizza Recipe***
+    <strong>Recipe: Pizza Recipe</strong>
         Ingredients:
             Ingredient: (1u) Pizza dough
             Ingredient: (100g) Tomato

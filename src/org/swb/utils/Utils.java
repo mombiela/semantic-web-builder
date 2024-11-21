@@ -9,6 +9,11 @@ public class Utils
 		text = text.replaceAll("\\t", "    ");
 		return StringEscapeUtils.escapeHtml(text);
 	}
+	public String escapeHtmlBold(String text)
+	{
+		text = text.replaceAll("\\t", "    ");
+		return TextReplacer.replaceWithStrong(StringEscapeUtils.escapeHtml(text));
+	}
     public int parseInt(String text)
     {
         return Integer.parseInt(text);
