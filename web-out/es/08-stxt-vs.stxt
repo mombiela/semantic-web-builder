@@ -57,30 +57,29 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		
 	code:
 		Library (www.examples.com/demo.stxt):
-		
-		Book:
-			id: 1
-			Title: The Fellowship of the Ring
-			Author: J.R.R. Tolkien
-			Language: EN
-			Published: 29 July 1954
-			Genre: High fantasy Adventure
-		Book:
-			id: 2
-			Title: The Two Towers
-			Author: J.R.R. Tolkien
-			ISBN: 76542
-			Language: EN
-			Published: 11 November 1954
-			Genre: High fantasy Adventure
-		Book:
-			id: 3
-			Title: The Return of the King
-			Author: J.R.R. Tolkien
-			ISBN: 12345
-			Language: EN
-			Published: 20 October 1955
-			Genre: High fantasy Adventure
+			Book:
+				id: 1
+				Title: The Fellowship of the Ring
+				Author: J.R.R. Tolkien
+				Language: EN
+				Published: 29 July 1954
+				Genre: High fantasy Adventure
+			Book:
+				id: 2
+				Title: The Two Towers
+				Author: J.R.R. Tolkien
+				ISBN: 76542
+				Language: EN
+				Published: 11 November 1954
+				Genre: High fantasy Adventure
+			Book:
+				id: 3
+				Title: The Return of the King
+				Author: J.R.R. Tolkien
+				ISBN: 12345
+				Language: EN
+				Published: 20 October 1955
+				Genre: High fantasy Adventure
 		
 	Content:
 		Otro ejemplo en XML:
@@ -99,12 +98,11 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		
 	code:
 		Email (www.example.com/email.stxt):
-		
-		From: John Smith
-		To: Mery Adams
-		Cc: Keyla Brown
-		Title: Project report
-		Body: Hello Mery!! The book is finished!!
+			From: John Smith
+			To: Mery Adams
+			Cc: Keyla Brown
+			Title: Project report
+			Body: Hello Mery!! The book is finished!!
 		
 	Content:
 		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el @STxT@.
@@ -132,21 +130,21 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 	code:
 		City (www.wikipedia.org/city.stxt):
 			 
-		Name: Barcelona 
-		Autonomous Community: Catalonia
-		Country: Spain
-		
-		History:
-			{{Main|History of Barcelona}}
-			The founding of Barcelona is the subject of 
-			two different legends. The first attributes 
-			the founding of the city to the mythological [[Hercules]].
-			The second legend attributes the foundation
-			of the city directly to the historical
-			[[Carthage|Carthaginian]] [[Hamilcar Barca]],
-			father of [[Hannibal]], who named the city ''Barcino''
-			after his family in the 3rd century BC.
-			...
+			Name: Barcelona 
+			Autonomous Community: Catalonia
+			Country: Spain
+			
+			History:
+				{{Main|History of Barcelona}}
+				The founding of Barcelona is the subject of 
+				two different legends. The first attributes 
+				the founding of the city to the mythological [[Hercules]].
+				The second legend attributes the foundation
+				of the city directly to the historical
+				[[Carthage|Carthaginian]] [[Hamilcar Barca]],
+				father of [[Hannibal]], who named the city ''Barcino''
+				after his family in the 3rd century BC.
+				...
 		
 	Content:
 		Otra ventaja es que con @STxT@ no solamente tendríamos "plantillas" de 
@@ -216,17 +214,17 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		
 	code:
 		Article (www.latex.com/article.stxt):
-		Title:
-		Author:
-		References:
-			Reference:
-				Title:
-				Year:
-				ISBN:
-			Reference:
-				Title:
-				Year:
-				ISBN:
+			Title:
+			Author:
+			References:
+				Reference:
+					Title:
+					Year:
+					ISBN:
+				Reference:
+					Title:
+					Year:
+					ISBN:
 				
 		Paragraph:
 			This is a mathematical formula:
@@ -251,17 +249,17 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: Ejemplos y otras tecnol
 		
 	code:
 		Article (www.latex.com/article.stxt):
-		Title:
-		Author:
-		References:
-			Reference:
-				Title:
-				Year:
-				ISBN:
-			Reference:
-				Title:
-				Year:
-				ISBN:
+			Title:
+			Author:
+			References:
+				Reference:
+					Title:
+					Year:
+					ISBN:
+				Reference:
+					Title:
+					Year:
+					ISBN:
 				
 		Paragraph:
 			This is a mathematical formula:

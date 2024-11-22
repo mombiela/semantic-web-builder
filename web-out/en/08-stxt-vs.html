@@ -108,30 +108,29 @@ derived from XML, as it has many parallels with <span class='STxT'><span class='
 												<p>The same in <span class='STxT'><span class='first'>S</span>TxT</span>:</p>
 
 												<pre>Library (www.examples.com/demo.stxt):
-
-Book:
-    id: 1
-    Title: The Fellowship of the Ring
-    Author: J.R.R. Tolkien
-    Language: EN
-    Published: 29 July 1954
-    Genre: High fantasy Adventure
-Book:
-    id: 2
-    Title: The Two Towers
-    Author: J.R.R. Tolkien
-    ISBN: 76542
-    Language: EN
-    Published: 11 November 1954
-    Genre: High fantasy Adventure
-Book:
-    id: 3
-    Title: The Return of the King
-    Author: J.R.R. Tolkien
-    ISBN: 12345
-    Language: EN
-    Published: 20 October 1955
-    Genre: High fantasy Adventure</pre>
+    Book:
+        id: 1
+        Title: The Fellowship of the Ring
+        Author: J.R.R. Tolkien
+        Language: EN
+        Published: 29 July 1954
+        Genre: High fantasy Adventure
+    Book:
+        id: 2
+        Title: The Two Towers
+        Author: J.R.R. Tolkien
+        ISBN: 76542
+        Language: EN
+        Published: 11 November 1954
+        Genre: High fantasy Adventure
+    Book:
+        id: 3
+        Title: The Return of the King
+        Author: J.R.R. Tolkien
+        ISBN: 12345
+        Language: EN
+        Published: 20 October 1955
+        Genre: High fantasy Adventure</pre>
 												<p>Another example in XML:</p>
 
 												<pre>&lt;email&gt;
@@ -144,12 +143,11 @@ Book:
 												<p>In <span class='STxT'><span class='first'>S</span>TxT</span>, it is transformed into:</p>
 
 												<pre>Email (www.example.com/email.stxt):
-
-From: John Smith
-To: Mery Adams
-Cc: Keyla Brown
-Title: Project report
-Body: Hello Mery!! The book is finished!!</pre>
+    From: John Smith
+    To: Mery Adams
+    Cc: Keyla Brown
+    Title: Project report
+    Body: Hello Mery!! The book is finished!!</pre>
 												<p>We can see that the conversion between the two formats is instant, though <span class='STxT'><span class='first'>S</span>TxT</span> is much more aesthetically pleasing.</p>
 <p>By the way, there is a hidden chapter, <a href="08-stxt-xml">STXT and XML</a>, in case you want to read it.
 I wrote it in 2013, and it's... interesting. Read at your own risk ;-)</p>
@@ -166,22 +164,21 @@ The blend with so-called &quot;lightweight markup languages&quot; is truly spect
 <p>So, you can create mixed texts like this:</p>
 
 												<pre>City (www.wikipedia.org/city.stxt):
-     
-Name: Barcelona 
-Autonomous Community: Catalonia
-Country: Spain
-
-History:
-    {{Main|History of Barcelona}}
-    The founding of Barcelona is the subject of 
-    two different legends. The first attributes 
-    the founding of the city to the mythological [[Hercules]].
-    The second legend attributes the foundation
-    of the city directly to the historical
-    [[Carthage|Carthaginian]] [[Hamilcar Barca]],
-    father of [[Hannibal]], who named the city ''Barcino''
-    after his family in the 3rd century BC.
-    ...</pre>
+    Name: Barcelona 
+    Autonomous Community: Catalonia
+    Country: Spain
+    
+    History:
+        {{Main|History of Barcelona}}
+        The founding of Barcelona is the subject of 
+        two different legends. The first attributes 
+        the founding of the city to the mythological [[Hercules]].
+        The second legend attributes the foundation
+        of the city directly to the historical
+        [[Carthage|Carthaginian]] [[Hamilcar Barca]],
+        father of [[Hannibal]], who named the city ''Barcino''
+        after his family in the 3rd century BC.
+        ...</pre>
 												<p>Another advantage is that with <span class='STxT'><span class='first'>S</span>TxT</span> we would not only have &quot;templates&quot; of
 what city information should look like, but we could also
 apply styles and formats depending on the type of document.</p>
@@ -237,17 +234,17 @@ and use TeX as the rendering engine.</p>
 <p>What would a document look like? Well, a simple example would be something like this:</p>
 
 												<pre>Article (www.latex.com/article.stxt):
-Title:
-Author:
-References:
-    Reference:
-        Title:
-        Year:
-        ISBN:
-    Reference:
-        Title:
-        Year:
-        ISBN:
+    Title:
+    Author:
+    References:
+        Reference:
+            Title:
+            Year:
+            ISBN:
+        Reference:
+            Title:
+            Year:
+            ISBN:
         
 Paragraph:
     This is a mathematical formula:
@@ -269,17 +266,17 @@ Paragraph:
 or a more simplified notation, such as:</p>
 
 												<pre>Article (www.latex.com/article.stxt):
-Title:
-Author:
-References:
-    Reference:
-        Title:
-        Year:
-        ISBN:
-    Reference:
-        Title:
-        Year:
-        ISBN:
+    Title:
+    Author:
+    References:
+        Reference:
+            Title:
+            Year:
+            ISBN:
+        Reference:
+            Title:
+            Year:
+            ISBN:
         
 Paragraph:
     This is a mathematical formula:
