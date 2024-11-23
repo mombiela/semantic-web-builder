@@ -5,9 +5,13 @@
 span.STxT {
 	font-family: "Courier New", Courier, monospace;
 	font-size: 1.3em;
-}
-span.STxT span.first, .color1 {
 	color: $color1 !important;
+}
+
+header {
+	span.STxT {
+		font-size: 1em;
+	}	
 }
 
 .text-center {
