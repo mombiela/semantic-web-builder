@@ -25,7 +25,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 10: What Now?
 		This may seem a bit pretentious, but I like the idea so much that I can’t help it.
 		Forgive my audacity.
 		
-		With this book, I’ve tried to explain how I understand @STxT@ and what I intended to do by creating this language.
+		With this book, I’ve tried to explain how I understand [STxT] and what I intended to do by creating this language.
 		Did I really create it? I suppose the language was already there, and all I had to do
 		was bring it to light. I’d like to think I did it like a sculptor.
 		
@@ -57,7 +57,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 10: What Now?
 	#	* .....
 	#	* In short, humanity for all
 	#	
-	#	Well, now that I’ve shown _what really remains to be done_, let’s get back to @STxT@.
+	#	Well, now that I’ve shown _what really remains to be done_, let’s get back to [STxT].
 	#	The following sections are about that.
 	# --------------------------------------------------------------------------------------------------------------------
 		
@@ -65,7 +65,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 10: What Now?
 		
 	Content:
 		We have many text editors for many different languages.
-		What would you think of editors for @STxT@?
+		What would you think of editors for [STxT]?
 		Our favorite editor, but now collecting semantics from the web
 		and creating any kind of structured content.
 		Easily and quickly. For everyone.
@@ -75,31 +75,31 @@ Document (globalcampus.site/namespace.stxt): Chapter 10: What Now?
 	Subheader: Libraries
 		
 	Content:  
-		We need @STxT@ parsers in every programming language.
+		We need [STxT] parsers in every programming language.
 		There’s a lot of work to be done here. Fast and efficient language parsers.
 		
-		It’s like porting what we already have in XML to @STxT@. And there’s a lot of it.
+		It’s like porting what we already have in XML to [STxT]. And there’s a lot of it.
 		
 	Subheader: Language Converter
 		
 	Content:
 		Surely there are languages we don’t like, or that we think could be simpler.
-		They can be converted directly to @STxT@ or converters can be made to go from @STxT@ to another more specialized,
+		They can be converted directly to [STxT] or converters can be made to go from [STxT] to another more specialized,
 		but less semantic language.
 		
 		For example, we have LaTeX, unbeatable in terms of output document quality, but a bit daunting for most people.
-		What would a converter from @STxT@ to LaTeX look like?
+		What would a converter from [STxT] to LaTeX look like?
 		We could create document types (articles, letters,...) and converters from them to LaTeX.
-		The original text would be very clear (@STxT@) and the final result file excellent (pdf).
+		The original text would be very clear ([STxT]) and the final result file excellent (pdf).
 		
 	  	This would allow IT experts to maintain more specialized technologies,
-	  	and others to use simpler formats like @STxT@.
+	  	and others to use simpler formats like [STxT].
 		
 	Subheader: Language Replacement
 		
 	Content:
 		This can be done in many places: XML documents, RSS feeds, special text files,
-		program configuration files—there are thousands of places where a language or files could be directly replaced with @STxT@.
+		program configuration files—there are thousands of places where a language or files could be directly replaced with [STxT].
 		
 		What would we gain? A single editor would be enough, texts would be easier to maintain, and by having a grammar,
 		we’d also have a description of what a document should be like.

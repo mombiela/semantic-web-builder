@@ -1,4 +1,4 @@
-Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
+Document (globalcampus.site/namespace.stxt): Chapter 1: What is [STxT]?
 	Default:
 		Title: STXT: The Book
 		
@@ -13,7 +13,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		although it only took a moment of inspiration.
 	
 	Content:
-		This chapter may seem a bit scattered, but these are my reflections while creating @STxT@.
+		This chapter may seem a bit scattered, but these are my reflections while creating [STxT].
 		Sorry if I repeat myself a bit, if you don’t understand what I’m saying, or if it seems like an incoherent speech.
 		But that’s how it is. It was written as best as it could be, on different days, but it was always used as the 
 		basis for creation.
@@ -25,22 +25,22 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		The rest of the chapters are _The Perspiration_.
 		
 		Skim through this chapter a bit, and read it more deeply once you know
-		more about @STxT@. That’s good advice ;-)
+		more about [STxT]. That’s good advice ;-)
 		
-	Header: What is @STxT@?
+	Header: What is [STxT]?
 		
 	Content:
 		It is a purely semantic language, with very basic rules,
 		that allows the creation of documents with structured content
 		that is easy to interpret, both by humans and machines.
-		You could be reading a document in @STxT@ without even realizing
+		You could be reading a document in [STxT] without even realizing
 		that it is.
 		
-		@STxT@: A language for the web. It doesn’t mean just another one among many.
+		[STxT]: A language for the web. It doesn’t mean just another one among many.
 		It means _A_ language for the web. Just one. And at the same time, many.
 		All those you want. This is my proposal.
 		
-		@STxT@ is a language for writing structured documents. It allows creating
+		[STxT] is a language for writing structured documents. It allows creating
 		documents unambiguously, adhering to very precise rules,
 		but producing documents that can be read by people
 		without technical knowledge.
@@ -50,7 +50,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		They have a hierarchical structure very similar to XML documents,
 		and their translation can be direct.
 		
-		In the future, @STxT@ could be a replacement for other technologies like XML or LaTeX.
+		In the future, [STxT] could be a replacement for other technologies like XML or LaTeX.
 		
 	Header: Declaration of Intent :-)
 		
@@ -78,16 +78,16 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		  It achieves this through structure and content. There are only a few prohibited characters,
 		  but no escape characters. You’ll see, I just went on too long about this point...
 		  
-	Header: What Does @STxT@ Mean?
+	Header: What Does [STxT] Mean?
 		
 	Content:
-		Originally, @STxT@ means "Semantic Text."
+		Originally, [STxT] means "Semantic Text."
 		But it could also have other meanings that I particularly like: SuperText and SexyText.
 		
 		* SuperContent: it’s text, but super :-D
 		* SexyContent: it’s particularly beautiful text ;-)
 		
-		How did I choose the extension: @STxT@? I was clear that the documents had to be semantic,
+		How did I choose the extension: [STxT]? I was clear that the documents had to be semantic,
 		so there had to be something with "semantic." Also, languages with few letters are very
 		trendy: XML, TeX, HTML, XSD,... so STxT seemed like a good choice to me.
 		I just needed to check that it wasn’t already used, so after searching
@@ -105,7 +105,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		always considering the syntactic point of view, seeking a technical approach, never a semantic one.
 		
 	Assert:
-		_With @STxT@ We Resolve Semantics and Syntax Simultaneously, \
+		_With [STxT] We Resolve Semantics and Syntax Simultaneously, \
 		In an Elegant and Beautiful Way._
 		
 	Content:
@@ -125,9 +125,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		One of the goals is to go from having _1_ relatively complex language for doing things
 		(e.g., XML, LaTeX,...) to having _n_ very simple ones, with content tied to a structure.
 		This language should be learnable in a very short time. Almost one example
-		should be enough. @STxT@ is designed to be that way. Moreover, @STxT@ will allow transitioning
-		from @STxT@ to other languages, LaTeX, for example, so that more technical people
-		can do the final work. But the origin and the foundation will always be @STxT@.
+		should be enough. [STxT] is designed to be that way. Moreover, [STxT] will allow transitioning
+		from [STxT] to other languages, LaTeX, for example, so that more technical people
+		can do the final work. But the origin and the foundation will always be [STxT].
 		
 		It’s much better this way since we write in pure semantics, without considering _any_ structure.
 		
@@ -171,7 +171,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		  as they are almost automatic by location. Namespaces like you’ve never seen before ;-)
 		* Very few data types (numbers without limitation, this is semantic, not a programming language)
 		* Easy to transform into other formats
-		* Ambition: to allow progress towards the semantic web, with the creation of beautiful HTML views and a strong @STxT@ foundation.
+		* Ambition: to allow progress towards the semantic web, with the creation of beautiful HTML views and a strong [STxT] foundation.
 		* One of the goals is to make information open. This is also done in the design phase.
 		  By design, the content is open.
 			
@@ -185,7 +185,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is @STxT@?
 		The language deserves it. It can’t be hidden. It needs to be tried. And it has to be liked.
 		I don’t want to be the only one who has it. It wouldn’t be fair.
 	
-		I would like @STxT@ to have an honored place alongside other languages in the future,
+		I would like [STxT] to have an honored place alongside other languages in the future,
 		and for it to be because of the acceptance and usefulness it offered.
 	
 	# -----------------------------------------------

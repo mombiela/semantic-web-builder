@@ -51,11 +51,11 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		Semantic Text
 		
 	Content:								
-		Okay, it’s clear: @STxT@. And how do you make the semantic web with @STxT@?
+		Okay, it’s clear: [STxT]. And how do you make the semantic web with [STxT]?
 		
 		I don’t know, though I suspect it’s one of the best ways to do it today :-D
 		
-		What did you expect? That I’d give you everything ready-made? If we get anywhere with @STxT@, we’ll see.
+		What did you expect? That I’d give you everything ready-made? If we get anywhere with [STxT], we’ll see.
 		My visionary powers aren’t that advanced :-)
 		
 		The following sections are ideas, ways I’ve thought of, but there’s no concrete proposal.
@@ -78,16 +78,16 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		Relax, I’m going to hypnotize you.
 		
 	Content:
-		With @STxT@, everything can change; it’s a new world, a new way of thinking. Let’s not close ourselves off to anything. 
+		With [STxT], everything can change; it’s a new world, a new way of thinking. Let’s not close ourselves off to anything. 
 		
 		Clear your mind. Now there’s nothing. Nothing exists yet. We’re in 1985.
 		We haven’t heard of SGML, HTML, hyperlinks, or CSS.
 		We know someone with a PC, and they use the command line to do things.
 		
-		Someone tells us that a new language has been invented. It’s called @STxT@ and is used to express ideas and display text.
+		Someone tells us that a new language has been invented. It’s called [STxT] and is used to express ideas and display text.
 		
 		Now we have a vision of the future, and we’re in 2020, and we see a web, but we know nothing about IT.
-		The web looks a lot like today’s, but everything is structured with @STxT@.
+		The web looks a lot like today’s, but everything is structured with [STxT].
 		
 		You wonder... How is it made? What’s it like inside?
 		
@@ -109,7 +109,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		Well, since you can’t answer, I’ll tell you what _I_ saw.
 		It might help you, or maybe it’s just nonsense, but it’s my vision.
 		
-		Web pages are @STxT@ pages, with each website and portal defining its own structure.
+		Web pages are [STxT] pages, with each website and portal defining its own structure.
 		
 		This allows us to see the web as a well-differentiated set of content pages.
 		For example, for a cooking website:
@@ -124,8 +124,8 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		or present the text. A group of people was in charge of doing this, and they did a great job.
 		They were at the W3C.
 		
-		They made some @STxT@ documents that allowed this, and all the websites used them because of their popularity. 
-		Also, since there were fantastic @STxT@ viewers, everything could be integrated without problems, 
+		They made some [STxT] documents that allowed this, and all the websites used them because of their popularity. 
+		Also, since there were fantastic [STxT] viewers, everything could be integrated without problems, 
 		and multiple viewers were created.
 		
 		The pages that a website had to have were a few. The main ones were:
@@ -143,7 +143,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		and it was very easy to create new styles.
 		A document was created following a well-known and easy-to-use namespace: w3c.org/css.stxt
 		
-		So, the pages were very easy to create. With a simple @STxT@ editor, a page with perfect content was built.
+		So, the pages were very easy to create. With a simple [STxT] editor, a page with perfect content was built.
 		A designer created a fantastic style for it, and finally, a programmer gave it dynamic behavior
 		by creating a js file for each page type (a scripting language to add behavior to these pages).
 		
@@ -194,28 +194,28 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		and index content by knowing what the text is about. Also, it would already be hierarchized,
 		and each part would have a specific and well-defined meaning.
 	
-		It’s possible that famous @STxT@ templates would emerge, and a page could follow them to display certain content.
+		It’s possible that famous [STxT] templates would emerge, and a page could follow them to display certain content.
 		This would make indexing even easier, as it would unify certain aspects.
 		
 	Subheader: The Transition
 		
 	Content:
 		How should the transition be? It should be _easy and transparent_. Otherwise, there won’t be a transition.
-		The first thing would be to define the new way of viewing documents with @STxT@ and the new CSS.
+		The first thing would be to define the new way of viewing documents with [STxT] and the new CSS.
 		By the way, it would be a good time to make the CSS and have a first version.
 		Maybe the browser renders would finally treat them all the same!
 		
 		From here, a time of coexistence of pages is expected.
-		There will be traditional HTML pages alongside @STxT@ pages.
+		There will be traditional HTML pages alongside [STxT] pages.
 		I also imagine a good time to integrate and unify a "lightweight language" for content.
 		I would like the W3C to take an interest in this whole process.
 		Although it would be a very alternative approach to everything that is being done now.
-		But it shouldn’t be traumatic either. @STxT@ can be thought of as another extension for browsers to consider,
+		But it shouldn’t be traumatic either. [STxT] can be thought of as another extension for browsers to consider,
 		with a particular way of viewing. The visualization would be very similar to XML when there are no CSS or standard elements,
 		and as the web incorporated them, the appearance would improve.
 		
-		We can even consider the coexistence of HTML pages with a more structured @STxT@ counterpart.
-		HTML would contain metatags telling search engines that it has an associated @STxT@,
+		We can even consider the coexistence of HTML pages with a more structured [STxT] counterpart.
+		HTML would contain metatags telling search engines that it has an associated [STxT],
 		as indexing through this file would be more appropriate.
 		
 		Let’s not forget that the goal of all this is to reach the semantic web in a non-traumatic way,
@@ -224,12 +224,12 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 	Header: SWB: Semantic Web Builder
 	
 	Content:
-		I couldn’t end this chapter without talking about SWB. This is the first @STxT@ application ever made.
+		I couldn’t end this chapter without talking about SWB. This is the first [STxT] application ever made.
 		Well, I know it’s the first because it was made to publish this website, and there was nothing else before it :-D
 		
-		I could also say that it’s the first website to show content not only in HTML but also in @STxT@.
+		I could also say that it’s the first website to show content not only in HTML but also in [STxT].
 		
-		I can say that the experience of using @STxT@ has been truly impressive.
+		I can say that the experience of using [STxT] has been truly impressive.
 		
 		I’ve been programming for the web for years, and I’ve never felt so comfortable before.
 		Even without editing tools, the process of creating the book has been simply _a joy_.

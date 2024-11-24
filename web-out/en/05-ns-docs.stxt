@@ -14,7 +14,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 5: Documents With Namespace
 		* UTF-8 Encoding Always
 		* Identifiers are CASE-INSENSITIVE
 		* There are no escape characters
-		* In @STxT@, all lines that start with the character # are comments
+		* In [STxT], all lines that start with the character # are comments
 		* 4 spaces are equivalent to one tab
 		
 	Assert: The use of `:` for multiline nodes is not allowed.\

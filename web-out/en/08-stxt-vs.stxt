@@ -17,8 +17,8 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 	Content:	
 		There are thousands of examples that can be made with this technology.
 		It is as simple as taking any example from another language
-		and seeing how it would be written in @STxT@. Perhaps the simplest is an example
-		derived from XML, as it has many parallels with @STxT@.
+		and seeing how it would be written in [STxT]. Perhaps the simplest is an example
+		derived from XML, as it has many parallels with [STxT].
 		
 		Many examples I have obtained from [Wikipedia](https://www.wikipedia.org).
 		
@@ -53,7 +53,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 		</Library>
 	
 	Content:
-		The same in @STxT@:
+		The same in [STxT]:
 		
 	Code:
 		Library (www.examples.com/demo.stxt):
@@ -94,7 +94,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 		</email>
 		
 	Content:
-		In @STxT@, it is transformed into:
+		In [STxT], it is transformed into:
 		
 	Code:
 		Email (www.example.com/email.stxt):
@@ -105,7 +105,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 			Body: Hello Mery!! The book is finished!!
 		
 	Content:
-		We can see that the conversion between the two formats is instant, though @STxT@ is much more aesthetically pleasing.
+		We can see that the conversion between the two formats is instant, though [STxT] is much more aesthetically pleasing.
 		
 		By the way, there is a hidden chapter, [STXT and XML](08-stxt-xml), in case you want to read it.
 		I wrote it in 2013, and it's... interesting. Read at your own risk ;-)
@@ -115,14 +115,14 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 	Content:
 		I have great admiration for Wikipedia. I think it is one of the best projects created on the Internet.
 		
-		_How could it benefit from @STxT@?_
+		_How could it benefit from [STxT]?_
 		
 		Well, Wikipedia could have different templates:
 		actors, politicians, TV series, movies, cities, countries, rivers... sharing grammars in many cases.
 		For example, both actors and politicians can have biographies, but actors would also have a list of movies.
 		
-		Moreover, it would be very interesting to mix @STxT@ with Wikipedia's own language.
-		I think this is a point where @STxT@ excels compared to most languages.
+		Moreover, it would be very interesting to mix [STxT] with Wikipedia's own language.
+		I think this is a point where [STxT] excels compared to most languages.
 		The blend with so-called "lightweight markup languages" is truly spectacular.
 		
 		So, you can create mixed texts like this:
@@ -146,11 +146,11 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 				...
 		
 	Content:
-		Another advantage is that with @STxT@ we would not only have "templates" of 
+		Another advantage is that with [STxT] we would not only have "templates" of 
 		what city information should look like, but we could also
 		apply styles and formats depending on the type of document.
 		
-	Header: @STxT@ and Other Technologies
+	Header: [STxT] and Other Technologies
 		
 	Subheader: Lightweight Markup Language
 		
@@ -167,7 +167,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 		* Data tables
 		* ...
 		
-		It is surprising to see what we can achieve by combining these languages with @STxT@.
+		It is surprising to see what we can achieve by combining these languages with [STxT].
 		We get text that is easy to interpret, with defined semantics, and the expressiveness of both languages.
 		
 		An example:
@@ -188,11 +188,11 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 				* Increased concentration
 		
 	Content:
-		We see that we have given structure thanks to @STxT@, but the description is given
+		We see that we have given structure thanks to [STxT], but the description is given
 		in Wikipedia style.
 		
 	Assert:
-		The combination of @STxT@ with _Lightweight markup languages_ is simply spectacular
+		The combination of [STxT] with _Lightweight markup languages_ is simply spectacular
 		
 	Subheader: TeX, LaTeX
 		
@@ -201,9 +201,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 		I have seen that one of TeX's goals is for a document to print the same now and 100 years from now.
 		I thought that was perfect... until today. Now I think the goal should be
 		for it to mean the same thing now and 100 years from now, and for it to be _understood_ now and 100 years from now.
-		And by as many people as possible. This is not achieved with TeX, but it is with @STxT@.
+		And by as many people as possible. This is not achieved with TeX, but it is with [STxT].
 		A document is understood today and 100 years from now. How do I think it should evolve?
-		I would create documents in @STxT@, specify a grammar for the different types of documents,
+		I would create documents in [STxT], specify a grammar for the different types of documents,
 		allow TeX elements (like formulas) in the same way that lightweight markup languages do, 
 		and use TeX as the rendering engine.
 		
@@ -243,7 +243,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 			Hello World!!
 		
 	Content:
-		In fact, now that we can think about @STxT@, it might be time to create formulas in another way,
+		In fact, now that we can think about [STxT], it might be time to create formulas in another way,
 		or a more simplified notation, such as:
 		
 	Code:
@@ -296,19 +296,19 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 	Subheader: JSON
 	
 	Content:
-		JSON initially has nothing to do with @STxT@, but there are certain times
+		JSON initially has nothing to do with [STxT], but there are certain times
 		when they might compete. I am thinking of configuration files, for example.
 		Furthermore, it is more flexible and easier to read when embedding large amounts of text,
 		something that always needs to be considered with JSON due to escaping characters.
 		
 		But there is no need to worry too much. 
-		I do not think JSON and @STxT@ are direct competitors,
+		I do not think JSON and [STxT] are direct competitors,
 		due to their different areas of application.
 		
 	Subheader: YAML
 		
 	Content:
-		Perhaps YAML is the one that most resembles @STxT@ in approach, although it is also very different.
+		Perhaps YAML is the one that most resembles [STxT] in approach, although it is also very different.
 		We believe that with our structure, we can show the same as YAML,
 		and much more simply. Additionally, we can add semantics to the document with namespaces,
 		while still allowing text that is readable to most people,

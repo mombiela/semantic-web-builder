@@ -8,7 +8,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 2: Tutorial
 
 	Content:
 		If you were to read only one chapter of this book, this would be the chapter. 
-		We explain what @STxT@ is directly, without further ado.
+		We explain what [STxT] is directly, without further ado.
 		And we also give you enough knowledge to read any other chapter.
 		
 	Header: An Example... Right Now!
@@ -43,7 +43,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 2: Tutorial
 	Alert: Don’t use this recipe at home, wait for the next chapter ;-)
 	
 	Content:
-		Well, you’ve just seen what a **@STxT@ document without a namespace** looks like. These types of documents
+		Well, you’ve just seen what a **[STxT] document without a namespace** looks like. These types of documents
 		are structured, but we don’t know the shape of the nodes. However, you can already see that they have structure, with a main node `Recipe`, which has
 		a `Description` node, `Ingredients`, etc. These nodes in turn have others, and so on,
 		forming a hierarchical structure. 

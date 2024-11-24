@@ -15,7 +15,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 	Header: Introduction
 		
 	Content:
-		Parsing an @STxT@ file is much easier than parsing files from other technologies. 
+		Parsing an [STxT] file is much easier than parsing files from other technologies. 
 		It may seem paradoxical, since it is actually a very powerful language, but at the same time, it is
 		based on very simple principles.
 		
@@ -29,7 +29,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 	Content:
 		This implementation has been done in Java, as it is the language I am most familiar with.
 		
-		I hope that @STxT@ is successful, and that other implementations appear very soon.
+		I hope that [STxT] is successful, and that other implementations appear very soon.
 		
 		I will not go into all the details, but I would like to explain
 		some points that require more attention.
