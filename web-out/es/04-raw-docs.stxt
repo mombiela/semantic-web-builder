@@ -63,7 +63,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 		para comentar o añadir alguna observación, pero no influyen en el documento en sí.
 		
 	assert:
-		En [STxT] son comentarios todas las líneas que empiezan por el carácter #
+		En STxT son comentarios todas las líneas que empiezan por el carácter #
 		
 	Content:
 		Los comentarios no tienen que tener ningún tipo de formato, 
@@ -101,7 +101,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 	header:	Nodos e identación
 	
 	Content:	
-		Antes hemos dicho que un documento [STxT] es un conjunto de nodos anidados. 
+		Antes hemos dicho que un documento STxT es un conjunto de nodos anidados. 
 		La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.
 		
 	Assert: 

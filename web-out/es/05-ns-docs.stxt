@@ -14,7 +14,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 5: Documentos con namespa
 		* Codificación UTF-8 Siempre
 		* Los Identificadores son CASE-INSENSITIVE
 		* No existen caracteres de escape
-		* En [STxT] son comentarios todas las líneas que empiezan por el carácter #
+		* En STxT son comentarios todas las líneas que empiezan por el carácter #
 		* 4 espacios equivalen a un tabulador
 		
 	Assert: No se permite el uso de `:` para nodos multilínea.\

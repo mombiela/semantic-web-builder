@@ -32,8 +32,8 @@
     <header id="main_header">
 	    <h1>
 			<a href="index.html">
-			#if(${doc.getChild("default")})	[STxT]: ${lang.get("title_book")}
-			#else                  			[STxT]: Semantic text
+			#if(${doc.getChild("default")})	STxT: ${lang.get("title_book")}
+			#else                  			STxT: Semantic text
 			#end
     	    </a>
 		</h1>

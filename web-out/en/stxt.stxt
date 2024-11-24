@@ -6,7 +6,7 @@ Document (globalcampus.site/namespace.stxt): Semantic Text on Our Own Website
 		Last modif: 2013-03-01
 	
 	Assert:
-		Our entire website is available in [STxT].\
+		Our entire website is available in STxT.\
 		Just change `*.html` to `*.stxt`\
 		or click on the yellow triangles :-)
 	
@@ -15,10 +15,10 @@ Document (globalcampus.site/namespace.stxt): Semantic Text on Our Own Website
 
 		You’ll see that all pages can be accessed with the extension *.stxt instead
 		of *.html, allowing you to view the original source code of the page. We like free information,
-		and we believe that using [STxT] is a great way to achieve that. Plus, it didn’t cost us anything to do it. 
-		Our original source files were already in [STxT]!! :-D
+		and we believe that using STxT is a great way to achieve that. Plus, it didn’t cost us anything to do it. 
+		Our original source files were already in STxT!! :-D
 		
-		By the way, [STxT] files contain surprises! Check them out, sometimes you'll find something interesting 
+		By the way, STxT files contain surprises! Check them out, sometimes you'll find something interesting 
 		or something that just makes you smile ;-)
 
 	html:

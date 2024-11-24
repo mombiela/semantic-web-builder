@@ -45,7 +45,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		They would create a champion. Someone to enlighten them. There could be only one.
 		
 	Alert:
-		The time for [STxT] had arrived.
+		The time for STxT had arrived.
 		
 	Header: The Present
 	
@@ -56,14 +56,14 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		And it's everywhere. And we keep using it. And we want it for everything... Wait a minute! Stop!
 		Is it necessary? If we knew nothing about SGML and wanted to have a quick-to-parse TXT, with structure,
 		with namespaces, would we have created XML? I don't think so. If you asked a child to invent something,
-		I suppose they would never have created XML... they would have made something more natural... THEY WOULD HAVE CREATED [STxT]!
+		I suppose they would never have created XML... they would have made something more natural... THEY WOULD HAVE CREATED STxT!
 		
 		Well, we have more experience, and we’ve learned. Let's create it!
 		
 	Header: First Contact
 		
 	Content:
-		I don't want to scare you, but [STxT], compared to XML, is:
+		I don't want to scare you, but STxT, compared to XML, is:
 		
 		* Prettier
 		* Simpler
@@ -72,7 +72,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 	
 		And it can also express the same things.
 			
-		Let's take a look at an XML example, and we’ll compare it with [STxT] to start. 
+		Let's take a look at an XML example, and we’ll compare it with STxT to start. 
 		It’ll be an easy example:
 		
 	Code:
@@ -87,7 +87,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		</email>
 		
 	Content:
-		Let's look at the [STxT] version:
+		Let's look at the STxT version:
 		
 	Code:
 		# This is a line comment
@@ -102,13 +102,13 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		I think a first characteristic is immediately apparent:
 		
 	Assert:
-		[STxT] is much prettier than XML and easier to understand.
+		STxT is much prettier than XML and easier to understand.
 		
 	Content:
 		Let's talk about size.
 		
 		XML Length: 254\\
-		[STxT] Length: 190
+		STxT Length: 190
 		
 		Let’s see what happens when we compact it as much as possible:
 		
@@ -129,29 +129,29 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		
 	Content:
 		Minimum XML Length: 225\\
-		Minimum [STxT] Length: 172
+		Minimum STxT Length: 172
 		
-		If we compare without XML header or [STxT] namespace:
+		If we compare without XML header or STxT namespace:
 		
 		Minimum XML Length: 186\\
-		Minimum [STxT] Length: 149
+		Minimum STxT Length: 149
 		
 		I think it’s clear that:
 		
 	Assert:
-		[STxT] is more compact than XML
+		STxT is more compact than XML
 		
 	Content:
 		But also:
 		
 	Assert:
-		[STxT] is more understandable than XML when compacted.
+		STxT is more understandable than XML when compacted.
 		
 	Content:
 		Or put another way:
 		
 	Assert:
-		[STxT] maintains its readability when compacted,\\
+		STxT maintains its readability when compacted,\\
 		while XML does not.
 				
 	Content:		
@@ -159,7 +159,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		We'll talk about that later. For now, trust me:
 		
 	Assert:
-		With [STxT], you can express the same as with XML.
+		With STxT, you can express the same as with XML.
 			
 	Content:			
 		Now let’s try something fun...
@@ -189,7 +189,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		</email>
 		
 	Content:
-		And in [STxT]:
+		And in STxT:
 		
 	Code:
 		Email (www.example.com/email.stxt):
@@ -211,7 +211,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		I think no further comment is needed. It’s obvious, but:
 		
 	Assert:
-		[STxT] is simpler than XML.
+		STxT is simpler than XML.
 		
 	Header: XML Attributes
 		
@@ -234,15 +234,15 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		Another added problem is that everyone has to keep in mind that attributes exist.
 		This affects DTDs, XSDs, libraries, programmers... And for what?
 		They really don’t add much. Just unnecessary complexity.
-		Furthermore, this is [STxT]. Everything has meaning, and everything is important.
+		Furthermore, this is STxT. Everything has meaning, and everything is important.
 		
 	Assert:
-		[STxT] does not have attributes in the style of XML.
+		STxT does not have attributes in the style of XML.
 						
 	Content:
 		This makes it _BETTER_, not worse. Sometimes, _LESS IS MORE ;-)_
 		
-		The previous example in [STxT] would be:
+		The previous example in STxT would be:
 		
 	Code:
 		example(...):
@@ -264,7 +264,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		
 	Header: DTD, XSD
 		
-	Subheader: XSD, DTD, and [STxT]
+	Subheader: XSD, DTD, and STxT
 		
 	Content:
 		Let’s talk about XML’s DTDs and XSDs. They are documents that tell us how a valid XML should be.
@@ -274,8 +274,8 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		In summary, DTD is simpler than XSD, less powerful, and is written in a language different from XML.
 		XSD is more powerful, harder to make and understand, but it’s written in XML, so there’s no need to learn another language.
 		
-		And what about [STxT]? You should know :-D It has the best. It’s a [STxT] document.
-		Integrated into the language itself. Powerful and easy to learn. Like [STxT] itself ;-)
+		And what about STxT? You should know :-D It has the best. It’s a STxT document.
+		Integrated into the language itself. Powerful and easy to learn. Like STxT itself ;-)
 		
 	Subheader: Where is it?
 		
@@ -286,12 +286,12 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		_Where is the grammar of this document?_
 		
 	Content:
-		In [STxT], _EVERYTHING_ is on the web. When you want to create a document, you must automatically
+		In STxT, _EVERYTHING_ is on the web. When you want to create a document, you must automatically
 		be able to see its definition. The grammar must always be accessible.
 		
 	Assert:
-		A [STxT] document by definition has an associated grammar.\\
-		If not, it’s not [STxT].
+		A STxT document by definition has an associated grammar.\\
+		If not, it’s not STxT.
 		
 	Subheader: XSD of the XSD (*)
 		
@@ -305,31 +305,31 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 		
 		Is there anyone who understands it? Sorry, sorry. Is there anyone _who isn’t a superhero_ who understands it?
 		
-		Everything is much more complicated. With [STxT] we have sought simplicity.
+		Everything is much more complicated. With STxT we have sought simplicity.
 		We like to do things by hand! It shouldn’t be mandatory to have an XML editor or reader!
 		
 	Header: Parsers and Validators
 		
 	Content:
 		Does anyone want to compare parsers and validators? It’s unnecessary.
-		One with [STxT] is MUCH faster and easier to implement. 
+		One with STxT is MUCH faster and easier to implement. 
 		Why? It’s very simple:
 		
 	Assert:
-		[STxT] has far fewer rules than XML.
+		STxT has far fewer rules than XML.
 			
 	Content:					
 		This makes everything easier. The parser code is faster.
 		They have fewer errors. It’s easier to maintain. Easier to make.
 		Moreover, another advantage is that parsing and validating can be done simultaneously.
 		With XML, you have to decide whether you really need to validate the XSD... and where is it?
-		We’re back to the same old problem. With [STxT], everything is much clearer.
+		We’re back to the same old problem. With STxT, everything is much clearer.
 		Every document must have a definition of how it is.
 		But it’s very easy to do. It doesn’t take long. It’s worth it.
-		It’s one of the big advantages of [STxT].
+		It’s one of the big advantages of STxT.
 		
-		Note: For those who love private information: if the [STxT] parser or editor
-		has its own [STxT] grammar repository, it doesn’t have to be visible on the web.
+		Note: For those who love private information: if the STxT parser or editor
+		has its own STxT grammar repository, it doesn’t have to be visible on the web.
 		I don’t like it; I’m against it, but nothing and no one prevents this from being done.
 		In fact, in some cases, it will be necessary, as I had to do in my own book
 		before the web was published.
@@ -339,7 +339,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 	Content:
 		I’ve always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.
 		
-		Namespaces in [STxT] are completely different because they are not hard to make,
+		Namespaces in STxT are completely different because they are not hard to make,
 		they provide all the necessary information, and you don’t lose the expressiveness that you get with XML.
 		In fact, you don’t even see them! But they are always there, helping. Completing the work.
 		
@@ -352,8 +352,8 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STxT and XML
 	Header: The Future
 		
 	Content:
-		I’ve been very honest with my analysis of XML vs. [STxT], but there’s something we must not forget.
+		I’ve been very honest with my analysis of XML vs. STxT, but there’s something we must not forget.
 		XML has been around for a long time. It’s tested, it’s used everywhere. It’s a standard.
-		[STxT] is new; it has just been born and has a long way to go.
+		STxT is new; it has just been born and has a long way to go.
 		
 		But I think it’s worth it.

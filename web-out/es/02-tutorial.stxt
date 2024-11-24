@@ -8,7 +8,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
 
 	Content:
 		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
-		Te explicamos lo que es [STxT] directamente, sin más preámbulos.
+		Te explicamos lo que es STxT directamente, sin más preámbulos.
 		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
 		
 	header:	Un ejemplo... ¡ya!
@@ -42,7 +42,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
 	Alert: No uséis esta receta en casa, esperad al próximo capítulo ;-)
 	
 	Content:
-		Bien, acabáis de ver lo que es un **documento [STxT] sin namespace**. Este tipo de documentos
+		Bien, acabáis de ver lo que es un **documento STxT sin namespace**. Este tipo de documentos
 		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
 		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
 		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así

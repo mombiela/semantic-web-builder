@@ -63,7 +63,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 		to comment or add some observation, but they don’t influence the document itself.
 		
 	Assert:
-		In [STxT], comments are all lines that start with the character #
+		In STxT, comments are all lines that start with the character #
 		
 	Content:
 		Comments don’t need any specific format; 
@@ -101,7 +101,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 	Header: Nodes and Indentation
 	
 	Content:	
-		We mentioned earlier that an [STxT] document is a set of nested nodes.
+		We mentioned earlier that an STxT document is a set of nested nodes.
 		Indentation is very similar to other languages, and tabs or spaces can be used.
 		
 	Assert: 

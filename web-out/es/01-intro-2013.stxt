@@ -1,4 +1,4 @@
-Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
+Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 	Default:
 		Title: STXT: El Libro
 		
@@ -13,7 +13,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		aunque sólo se necesitó un instante de inspiración.
 	
 	Content:
-		Este capítulo puede parecer un poco disperso, pero son mis reflexiones al crear [STxT].
+		Este capítulo puede parecer un poco disperso, pero son mis reflexiones al crear STxT.
 		Perdonad si me repito un poco, si no entendéis lo que digo, o si parece un discurso incoherente.
 		Pero es así. Se ha escrito como se ha podido, en días distintos, pero siempre se ha usado como la 
 		base de la creación.
@@ -25,21 +25,21 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		El resto de capítulos son _La Transpiración_.
 		
 		Ojead este capítulo un poco por encima, y leedlo con más profundidad cuando ya sepáis
-		más de [STxT]. Es un buen consejo ;-)
-	header: ¿Qué es [STxT]?
+		más de STxT. Es un buen consejo ;-)
+	header: ¿Qué es STxT?
 		
 	Content:
 		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
 		que permite la creación de documentos con un contenido estructurado 
 		y sencillo de interpretar, tanto por humanos como por máquinas. 
-		Podríais estar leyendo un documento en [STxT] sin daros cuenta en realidad
+		Podríais estar leyendo un documento en STxT sin daros cuenta en realidad
 		que lo es. 	
 		
-		[STxT]: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
+		STxT: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
 		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
 		Todos los que se quieran. Ésta es mi propuesta.
 		
-		[STxT] es un lenguaje para escribir documentos estructurados. Permite crear
+		STxT es un lenguaje para escribir documentos estructurados. Permite crear
 		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
 		pero consiguiendo documentos que pueden ser leídos por personas 
 		sin conocimientos informáticos.
@@ -49,7 +49,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		Tienen una estructura jerárquica muy parecida a documentos xml,
 		y su traducción puede ser directa.                                
 		
-		En un futuro [STxT] podría ser un reemplazo a otras tecnologías como xml o LaTex.
+		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o LaTex.
 		
 	header:	Declaración de intenciones :-)
 		
@@ -77,16 +77,16 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		  Lo hace por estructura y contenido. Sólo hay algún carácter prohibido, 
 		  pero no de escape. Ya lo veréis, me acabo de extender demasiado en este punto...
 		  
-	header: ¿Qué significa [STxT]?
+	header: ¿Qué significa STxT?
 		
 	Content:
-		Bien, originariamente [STxT] significa "Texto semántico". 
+		Bien, originariamente STxT significa "Texto semántico". 
 		Aunque también podría tener otros significados, que a mi me gustan particularmente: SuperText y SexyText.
 		
 		* SuperContent: es texto, pero super :-D
 		* SexyContent: es texto particularmente bonito ;-)
 		
-		Cómo elegí la extensión: [STxT]? Yo tenía claro que los documentos tenían que ser semánticos,
+		Cómo elegí la extensión: STxT? Yo tenía claro que los documentos tenían que ser semánticos,
 		por lo que había algo que tenía que tener "semántico". Además, están muy
 		de moda lenguajes con pocas letras: xml, tex, html, xsd,... por lo que stxt me pareció una
 		buena elección. Sólo me faltaba comprobar que esto no era ya utilizado, por lo que buscando
@@ -104,7 +104,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		el punto de vista de la sintáctica, buscando un enfoque informático, nunca semántico. 
 		
 	assert:
-		_Con [STxT] Resolvemos semántica y sintáctica a la vez, \
+		_Con STxT Resolvemos semántica y sintáctica a la vez, \
 		de una forma elegante y bonita._
 		
 	Content:
@@ -124,9 +124,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		Uno de los objetivos es pasar de tener _1_ lenguaje relativamente complicado para hacer cosas
 		(Ej: XML, Latex,...) para pasar a tener _n_ muy sencillos, con contenido ligado a una estructura.
 		Este lenguaje tiene que poder aprenderse en muy poco tiempo. Casi con un ejemplo 
-		debería ser suficiente. [STxT] está hecho para que sea así. Además, [STxT] permitirá pasar 
-		de [STxT] a otros lenguajes, latex, por ejemplo, para que gente más técnica 
-		pueda hacer el trabajo final. Pero el origen y la base será siempre [STxT]. 
+		debería ser suficiente. STxT está hecho para que sea así. Además, STxT permitirá pasar 
+		de STxT a otros lenguajes, latex, por ejemplo, para que gente más técnica 
+		pueda hacer el trabajo final. Pero el origen y la base será siempre STxT. 
 		
 		Es mucho mejor que sea así, ya que escribimos en semántico puro, sin tener en cuenta _nada_ de estructura.
 		
@@ -170,7 +170,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		  ya que son casi automáticos por la situación. Los namespaces como nunca antes los habías visto ;-) 
 		* Muy pocos tipos de datos (los números sin limitación, esto es semántico, no ningún lenguaje de programación)
 		* Fácil de transformar de éste a otros formatos
-		* Ambición: permitir avances hacia la web semántica, con la creación de vistas html bonitas y una base [STxT] fuerte.
+		* Ambición: permitir avances hacia la web semántica, con la creación de vistas html bonitas y una base STxT fuerte.
 		* Uno de los objetivos es hacer la información abierta. Esto también se hace en la fase de diseño. 
 		  Por diseño el contenido es abierto.	
 			
@@ -184,7 +184,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es [STxT]?
 		El lenguaje lo merece. No se puede esconder. Hay que probarlo. Y tiene que gustar.
 		No quiero ser el único que lo tenga. No sería justo.
 	
-		Me gustaría que en el futuro [STxT] tuviera un lugar de honor con otros lenguajes,
+		Me gustaría que en el futuro STxT tuviera un lugar de honor con otros lenguajes,
 		y que fuera por la aceptación y utilidad que ofreció. 
 	
 	# -----------------------------------------------

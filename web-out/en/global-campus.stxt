@@ -12,7 +12,7 @@ Document (globalcampus.site/namespace.stxt): Global Campus
 	Header: What is GlobalCampus.site?
 		
 	Content:
-		It is a learning portal, though for now, it’s more of **a workspace for [STxT]**.
+		It is a learning portal, though for now, it’s more of **a workspace for STxT**.
 		It was used to create this very portal, and we would love
 		for it to be used as an "**inspiration source**" for other projects
 		or developments. We used this same portal for the project, and
@@ -26,9 +26,9 @@ Document (globalcampus.site/namespace.stxt): Global Campus
 		very quick to test, **almost immediate**. Additionally, we’ve always missed
 		a global learning wiki. Obviously, at this point, we can’t 
 		finance such a project, but with a little imagination and the use
-		of [STxT], maybe it wasn’t necessary.
+		of STxT, maybe it wasn’t necessary.
 		
-		The project started with just the JavaScript source code for parsing [STxT],
+		The project started with just the JavaScript source code for parsing STxT,
 		and it evolved into a dynamic portal. We split the project into two parts,
 		leaving the parser on one side and the portal (which uses the parser) on the other.
 		

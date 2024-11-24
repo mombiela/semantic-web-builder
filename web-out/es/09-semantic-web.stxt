@@ -51,11 +51,11 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		Semantic Text
 		
 	Content:								
-		Vale, ya está claro, [STxT]. ¿Y cómo se hace la web semántica con [STxT]? 
+		Vale, ya está claro, STxT. ¿Y cómo se hace la web semántica con STxT? 
 		
 		No lo sé, aunque sospecho que es una de las mejores formas de hacerlo hoy en día :-D
 		
-		¿Qué esperabais? ¿Que os lo diera todo hecho? Si llegamos a alguna parte con [STxT] ya se verá.
+		¿Qué esperabais? ¿Que os lo diera todo hecho? Si llegamos a alguna parte con STxT ya se verá.
 		Mis poderes visionarios no son tan avanzados :-)
 		
 		Los siguientes apartados son ideas, formas que he pensado, pero no hay ninguna propuesta concreta.
@@ -78,16 +78,16 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		Relajaos, os voy a hipnotizar.
 		
 	Content:
-		Con [STxT] todo puede cambiar, es un mundo nuevo, una nueva forma de pensar. No nos cerremos a nada. 
+		Con STxT todo puede cambiar, es un mundo nuevo, una nueva forma de pensar. No nos cerremos a nada. 
 		
 		Dejad la mente en blanco. Ahora no hay nada. Nada existe todavía. Estamos en el 1985.
 		No hemos oído hablar de SGML, ni HTML, ni hipervínculos, ni CSS.
 		Tenemos un conocido con un PC y usa la línea de comandos para hacer cosas.
 		
-		Alguien nos dice que se ha inventado un lenguaje nuevo. Se llama [STxT] y sirve para expresar ideas y mostrar texto.
+		Alguien nos dice que se ha inventado un lenguaje nuevo. Se llama STxT y sirve para expresar ideas y mostrar texto.
 		
 		Ahora tenemos una visión del futuro, y estamos en 2020, y vemos una web, pero no sabemos nada de informática.
-		La web se parece mucho a la de hoy en día, pero todo está estructurado con [STxT].
+		La web se parece mucho a la de hoy en día, pero todo está estructurado con STxT.
 		
 		Os preguntáis... ¿Cómo estará hecha? ¿Cómo es por dentro? 
 		
@@ -109,7 +109,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		Bueno, como no me podéis contestar os diré lo que _yo_ he visto.
 		Os puede ayudar o quizá sea una tontería, pero es mi visión.
 		
-		Las páginas web son páginas [STxT], con cada web y portal definiendo su propia estructura.
+		Las páginas web son páginas STxT, con cada web y portal definiendo su propia estructura.
 		
 		Esto nos permite ver la web como un conjunto de contenido bien diferenciado de páginas. 
 		Por ejemplo, para una web de cocina:
@@ -124,8 +124,8 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		o presentar el texto. Hay un grupo de personas que se encargó de hacer esto e hicieron un gran trabajo.
 		Fueron en la W3C.
 		
-		Hicieron unos documentos [STxT] que permitían esto, y todas las web los usaban, gracias a su popularidad. 
-		Además, como existían visores fantásticos de [STxT], se pudo integrar todo sin problemas, 
+		Hicieron unos documentos STxT que permitían esto, y todas las web los usaban, gracias a su popularidad. 
+		Además, como existían visores fantásticos de STxT, se pudo integrar todo sin problemas, 
 		y se crearon múltiples visualizadores.
 		
 		Las páginas que tenía que tener una web eran unas cuantas. Las principales eran:
@@ -143,7 +143,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		y además era muy sencillo hacer estilos nuevos.
 		Se creaba un documento que seguía un namespace conocido y fácil de usar: w3c.org/css.stxt
 		
-		Así, las páginas eran muy fáciles de crear. Con un sencillo editor de [STxT] se construía una página con un contenido perfecto.
+		Así, las páginas eran muy fáciles de crear. Con un sencillo editor de STxT se construía una página con un contenido perfecto.
 		Un diseñador creaba un estilo fantástico para ella, y finalmente un programador le daba un comportamiento dinámico
 		creando un fichero js para cada tipo de página (un lenguaje de script para dotar de comportamiento a estas páginas).
 		
@@ -194,28 +194,28 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		y de indexar contenidos sabiendo de qué trata el texto. Además, ya estaría jerarquizado
 		y cada parte tendría un significado concreto y bien definido.
 	
-		Es posible que surgieran plantillas [STxT] famosas, y una página podría seguirla para mostrar ciertos contenidos.
+		Es posible que surgieran plantillas STxT famosas, y una página podría seguirla para mostrar ciertos contenidos.
 		Esto todavía facilitaría más la indexación, ya que unificaría ciertos aspectos.
 		
 	subheader:La transición
 		
 	Content:
 		¿Cómo debe ser la transición? Debe ser _fácil y transparente_. Sino, no habrá transición.
-		Lo primero sería definir la nueva forma de ver documentos con [STxT] y los nuevos CSS.
+		Lo primero sería definir la nueva forma de ver documentos con STxT y los nuevos CSS.
 		Por cierto, sería un buen momento para hacer los CSS y tener una primera versión.
 		¡Quizá los renders de los navegadores por fin los tratarían todos iguales!
 		
 		A partir de aquí se prevé un tiempo de coexistencia de páginas. 
-		Habrá páginas HTML de toda la vida junto con páginas con [STxT].
+		Habrá páginas HTML de toda la vida junto con páginas con STxT.
 		Me imagino también un buen momento para integrar y unificar un "lightweight language" para el contenido.
 		Me gustaría que la W3C se interesara en todo este proceso.
 		Aunque sería un frente muy alternativo a todo lo que se está haciendo ahora.
-		Pero tampoco debería ser traumático. Se puede pensar en [STxT] como otra extensión a tener en cuenta por los navegadores,
+		Pero tampoco debería ser traumático. Se puede pensar en STxT como otra extensión a tener en cuenta por los navegadores,
 		con una forma particular de visualización. La visualización sería muy parecida a un XML cuando no hay css's ni nada estándar,
 		y a medida que la web los fuera incorporando el aspecto mejoraría.
 		
-		Incluso se puede plantear cohexistencia de páginas HTML con un homólogo [STxT] más estructurado.
-		El HTML contendría metatags que dirían a los buscadores que tiene un [STxT] asociado,
+		Incluso se puede plantear cohexistencia de páginas HTML con un homólogo STxT más estructurado.
+		El HTML contendría metatags que dirían a los buscadores que tiene un STxT asociado,
 		ya que la indexación mediante este fichero sería más adecuada.
 		
 		No hay que olvidar que el objetivo de todo esto es llegar a la web semántica de una forma poco traumática,
@@ -224,12 +224,12 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 	header:	SWB: Semantic Web Builder
 	
 	Content:
-		No podría terminar este capítulo sin hablar de SWB. Ésta es la primera aplicación de [STxT] que se ha hecho.
+		No podría terminar este capítulo sin hablar de SWB. Ésta es la primera aplicación de STxT que se ha hecho.
 		Bien, sé que es la primera porque se ha hecho para publicar esta web, y antes no había nada más :-D
 		
-		También podría decir que es la primera web en mostrar el contenido no sólo en HTML sino también en [STxT].
+		También podría decir que es la primera web en mostrar el contenido no sólo en HTML sino también en STxT.
 		
-		Puedo afirmar que la experiencia de usar [STxT] ha sido realmente impresionante.
+		Puedo afirmar que la experiencia de usar STxT ha sido realmente impresionante.
 		
 		Llevo años programando para la web, y nunca antes me había sentido tan cómodo.
 		Incluso sin herramientas de edición, el proceso de creación del libro ha sido simplemente _una gozada_.

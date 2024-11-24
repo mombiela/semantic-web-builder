@@ -25,7 +25,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 10: ¿Y ahora qué?
 		Quizá esto pueda parecer un poco pretencioso, pero me gusta tanto la idea que no lo puedo evitar. 
 		Perdonad mi osadía.
 		
-		Con este libro he intentado explicar cómo entiendo [STxT], y qué es lo que pretendía al crear este lenguaje.
+		Con este libro he intentado explicar cómo entiendo STxT, y qué es lo que pretendía al crear este lenguaje.
 		¿Realmente lo he creado yo? Supongo que el lenguaje ya estaba ahí, y lo único que tenía
 		que hacer era sacarlo a la luz. Me gustaría pensar que lo hice como un escultor.
 		
@@ -58,7 +58,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 10: ¿Y ahora qué?
 	#	* .....
 	#	* En definitiva, humanidad para todos
 	#	
-	#	Bueno, ahora que ya he mostrado _lo que de verdad queda por hacer_, volvamos a [STxT].
+	#	Bueno, ahora que ya he mostrado _lo que de verdad queda por hacer_, volvamos a STxT.
 	#	Los siguientes apartados tratan sobre eso.
 	# --------------------------------------------------------------------------------------------------------------------
 		
@@ -66,7 +66,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 10: ¿Y ahora qué?
 		
 	Content:
 		Tenemos muchos editores de texto, para muchos lenguajes distintos.
-		¿Qué os parecería editores para [STxT]?
+		¿Qué os parecería editores para STxT?
 		Nuestro editor favorito, pero ahora recogiendo semánticas de la web
 		y creando cualquier tipo de contenido estructurado. 
 		De forma fácil y rápida. Para todos.
@@ -76,31 +76,31 @@ Document (globalcampus.site/namespace.stxt): Capítulo 10: ¿Y ahora qué?
 	subheader:	Librerías
 		
 	Content:  
-		Necesitamos parseadores de [STxT] en cualquier lenguaje de programación.
+		Necesitamos parseadores de STxT en cualquier lenguaje de programación.
 		Aquí hay mucho trabajo por hacer. Parseadores del lenguaje rápidos y eficientes.
 		
-		Es como portar lo que ya tenemos en XML a [STxT]. Y hay mucho.
+		Es como portar lo que ya tenemos en XML a STxT. Y hay mucho.
 		
 	subheader: Conversor de lenguajes
 		
 	Content:
 		Seguro que tenemos lenguajes que no nos gustan, o que creemos que pueden ser más sencillos. 
-		Se puede pasar directamente a [STxT] o hacer conversores que pasen de [STxT] a otro más especializado, 
+		Se puede pasar directamente a STxT o hacer conversores que pasen de STxT a otro más especializado, 
 		pero menos semántico.
 		
 		Por ejemplo, tenemos Latex, insuperable en cuanto a calidad de documentos de salida, pero un
-		poco intratable para la mayoría de personas. ¿Cómo sería un conversor de [STxT] a Latex?
+		poco intratable para la mayoría de personas. ¿Cómo sería un conversor de STxT a Latex?
 		Podríamos hacer tipos de documentos (artículos, cartas,...) y conversores de éstos a Latex.
-		El texto original sería muy claro ([STxT]) y el fichero de resultado final excelente (pdf).
+		El texto original sería muy claro (STxT) y el fichero de resultado final excelente (pdf).
 		
 	  	Esto permitiría a los informáticos mantener tecnologías más especializadas, 
-	  	y a los demás usar formatos más sencillos como [STxT].
+	  	y a los demás usar formatos más sencillos como STxT.
 		
 	subheader: Substitución de lenguajes
 		
 	Content:
 		Esto se puede hacer en un montón de sitios, documentos XML, RSS's, ficheros de texto especiales, 
-		configuración de programas, hay miles de sitios donde se podría substituir directamente un lenguaje o ficheros por [STxT].
+		configuración de programas, hay miles de sitios donde se podría substituir directamente un lenguaje o ficheros por STxT.
 		
 		¿Qué ganaríamos? Con un solo editor sería suficiente, textos más sencillos de mantener, y al disponer de una gramática
 		tendríamos también la descripción de cómo debe ser un documento.
