@@ -33,7 +33,7 @@
 	    <h1>
 			<a href="index.html">
 			#if(${doc.getChild("default")})	STxT: ${lang.get("title_book")}
-			#else                  			STxT: Semantic text
+			#else                  			STxT: Semantic TexT
 			#end
     	    </a>
 		</h1>
