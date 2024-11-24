@@ -21,7 +21,7 @@ Document(globalcampus.site/namespace.stxt):
 			
 	Header: Parte III: Reflexiones	
 	Content:
-		* [Capítulo 8: @STxT@ y otras tecnologías](08-stxt-vs)
+		* [Capítulo 8: [STxT] y otras tecnologías](08-stxt-vs)
 		* [Capítulo 9: Web semántica](09-semantic-web)
 		* [Capítulo 10: ¿Y ahora qué?](10-stxt-now)
 		

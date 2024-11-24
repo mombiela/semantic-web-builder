@@ -15,7 +15,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 	header:	Introducción
 		
 	Content:
-		Parsear un fichero @STxT@ es mucho más fácil que parsear ficheros de otras tecnologías. 
+		Parsear un fichero [STxT] es mucho más fácil que parsear ficheros de otras tecnologías. 
 		Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está
 		basado en principios muy simples.
 		
@@ -29,7 +29,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 	Content:
 		Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.
 		
-		Espero que @STxT@ tenga éxito, y que muy pronto aparezcan otras implementaciones.
+		Espero que [STxT] tenga éxito, y que muy pronto aparezcan otras implementaciones.
 		
 		No voy a entrar en todos los detalles, pero sí que me gustaría explicar
 		algunos puntos que requieren más atención.

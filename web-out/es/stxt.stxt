@@ -6,7 +6,7 @@ Document (globalcampus.site/namespace.stxt):Semantic Text en nuestra propia web
 		Last modif: 2013-03-01
 	
 	Assert:
-		Toda nuestra web está disponible en @STxT@.\
+		Toda nuestra web está disponible en [STxT].\
 		Sólo hay que cambiar `*.html` por `*.stxt`\
 		o pulsar en los triángulos amarillos :-)
 	
@@ -15,10 +15,10 @@ Document (globalcampus.site/namespace.stxt):Semantic Text en nuestra propia web
 		
 		Veréis que todas las páginas pueden ser accedidas con la extensión *.stxt en vez
 		de *.html, obteniendo el código fuente original de la página. Nos gusta la información
-		libre, y creemos que usar @STxT@ es una bonita forma de conseguirlo. Además, no nos
-		ha costado nada hacerlo. ¡¡Nuestros fuentes originales ya eran @STxT@!! :-D
+		libre, y creemos que usar [STxT] es una bonita forma de conseguirlo. Además, no nos
+		ha costado nada hacerlo. ¡¡Nuestros fuentes originales ya eran [STxT]!! :-D
 		
-		Por cierto, ¡¡los ficheros @STxT@ contienen sorpresas!! Míralos, a veces verás algo que pueda ser
+		Por cierto, ¡¡los ficheros [STxT] contienen sorpresas!! Míralos, a veces verás algo que pueda ser
 		interesante o que simplemente te haga sonreír ;-)
 		
 	html:
