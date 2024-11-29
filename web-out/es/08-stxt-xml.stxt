@@ -8,7 +8,8 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Advertencia al lector
+	Header: Capítulo 8: STxT y XML
+	Subheader:	Advertencia al lector
 		
 	Content:
 		Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.

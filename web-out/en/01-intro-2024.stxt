@@ -11,7 +11,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		Description: Description of the language and the features that make it unique.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
-	
+	Header: Chapter 1: What is STxT?
 	Assert:
 		This project is the result of years of _unconscious reflection_,\
 		although it only took a moment of inspiration.

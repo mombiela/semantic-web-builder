@@ -6,6 +6,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 5: Documentos con namespa
 		Previous: Anterior (04-raw-docs)
 		Next: Siguiente (06-examples)
 
+	Header: Capítulo 5: Documentos con namespace
 	Assert: Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.
 	
 	Content:

@@ -6,6 +6,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 5: Documents With Namespace
 		Previous: Previous (04-raw-docs)
 		Next: Next (06-examples)
 
+	Header: Chapter 5: Documents With Namespace
 	Assert: Everything explained for documents without a namespace applies, except for multiline nodes.
 	
 	Content:

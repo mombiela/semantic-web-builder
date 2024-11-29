@@ -6,7 +6,8 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		Previous: Anterior (05-ns-docs)
 		Next: Siguiente (07-parser)
 
-	Header:	Cliente
+	Header: Capítulo 6: Ejemplos
+	Header: Clientes
 	Subheader: Cliente sin namespace
 	
 	Code:

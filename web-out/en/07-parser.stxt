@@ -12,7 +12,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	Header: Introduction
+	Header: Chapter 7: Parsing STxT (*)
 		
 	Content:
 		Parsing an STxT file is much easier than parsing files from other technologies. 
