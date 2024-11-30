@@ -77,7 +77,7 @@ public class Velocity extends AbstractDirProcessor
                     if (todir != null) FileUtils.writeStringToFile(new File(todir, key + '.' + extension), result, encoding); 
                 }
                 
-                // Si había salida la insertamos en contexto
+                // Si habï¿½a salida la insertamos en contexto
                 if (out != null) context.put(out, outMap);
             }
             else
@@ -101,6 +101,16 @@ public class Velocity extends AbstractDirProcessor
         velocityContext.put("doc_name", name);
         velocityContext.put("wiki", new WikiRender());
         velocityContext.put("utils", new Utils());
+        
+        // Obtenemos Ã­ndice
+        String lang = (String) ((Map) context.get("nav_lang")).get("lang");
+        Map pages = (Map) context.get("pages_" + lang);
+        Object index = pages.get("00-table-content");
+        if(!name.equals("00-table-content"))
+        {
+        	velocityContext.put("index", index);
+        }
+        System.out.println("Velocity: " + name + " -> " + lang);
         
         // Renderizamos
         return VelocityUtils.render(template, velocityContext);
