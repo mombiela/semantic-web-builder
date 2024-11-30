@@ -71,12 +71,12 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Capítulo 5: Documentos con namespace</h2>
-																<div class="row">
+																								            	<h2><a id="index_0"></a>Capítulo 5: Documentos con namespace</h2>
+																			<div class="row">
             		<div class="assert"><p>Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.</p>
 </div>
             	</div>
-												<p>Como resumen anterior:</p>
+															<p>Como resumen anterior:</p>
 <ul>
 <li>Codificación UTF-8 Siempre</li>
 <li>Los Identificadores son CASE-INSENSITIVE</li>
@@ -85,25 +85,25 @@
 <li>4 espacios equivalen a un tabulador</li>
 </ul>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>No se permite el uso de <code>:</code> para nodos multilínea.<br>Ésto esta implícito por el tipo de nodo.</p>
 </div>
             	</div>
-												<p>En caso que se inserte el carcter <code>:</code> lo que pasará es que formará
+															<p>En caso que se inserte el carcter <code>:</code> lo que pasará es que formará
 parte del texto, no se considerará especial. Los otros tipos
 de texto no permiten varias líneas, por lo que no tendrá efecto.</p>
 
-								            	<h2><a id="index_1"></a>Definición de namespace</h2>
-																<p>Un namespace es un documento sin namespace con el primer nodo llamado <code>Namespace</code>,
+											            	<h2><a id="index_1"></a>Definición de namespace</h2>
+																			<p>Un namespace es un documento sin namespace con el primer nodo llamado <code>Namespace</code>,
 el cual es una estructura con todos los tipos de nodo posibles, a modo de ejemplo.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>Un nodo se define sólamente una vez, después ya no se puede redefinir.<br>Se permite que aparezca antes siempre y cuando no se defina la estructura.</p>
 </div>
             	</div>
-												<p>Vamos a ver un ejemplo:</p>
+															<p>Vamos a ver un ejemplo:</p>
 
-												<pre>Namespace: www.demo.com/documento.stxt
+															<pre>Namespace: www.demo.com/documento.stxt
     Documento:
         T&iacute;tulo: (1)
         <strong>Secciones: (?)</strong>
@@ -115,9 +115,9 @@ el cual es una estructura con todos los tipos de nodo posibles, a modo de ejempl
         
     <strong>Secciones:</strong>
         <strong>Seccion: (+) TEXT</strong></pre>
-												<p>Otra forma de definirlo más simple hubiera sido:</p>
+															<p>Otra forma de definirlo más simple hubiera sido:</p>
 
-												<pre>Namespace: www.demo.com/documento.stxt
+															<pre>Namespace: www.demo.com/documento.stxt
     Documento:
         T&iacute;tulo: (1)
         <strong>Secciones: (?)</strong>
@@ -127,9 +127,9 @@ el cual es una estructura con todos los tipos de nodo posibles, a modo de ejempl
             :informe
             :art&iacute;culo
             :ensayo</pre>
-												<p>Finalmente un documento del namespace:</p>
+															<p>Finalmente un documento del namespace:</p>
 
-												<pre>Documento (www.demo.com/documento.stxt):
+															<pre>Documento (www.demo.com/documento.stxt):
     T&iacute;tulo: Primer documento simple
     Description:
         Este es el
@@ -142,8 +142,8 @@ el cual es una estructura con todos los tipos de nodo posibles, a modo de ejempl
             Esta es una secci&oacute;n
             con m&aacute;s de una
             l&iacute;nea.</pre>
-								            	<h3><a id="index_2"></a>Definición de cantidad</h3>
-																<p>Se permite definir la cantidad de nodos de la siguiente forma:</p>
+											            	<h3><a id="index_2"></a>Definición de cantidad</h3>
+																			<p>Se permite definir la cantidad de nodos de la siguiente forma:</p>
 <ul>
 <li><code>?</code>: Puede o no aparecer (máximo 1)</li>
 <li><code>+</code>: Al menos un nodo</li>
@@ -153,8 +153,8 @@ el cual es una estructura con todos los tipos de nodo posibles, a modo de ejempl
 <li><code>num</code>: exactamente <em>num</em> nodos</li>
 </ul>
 
-								            	<h3><a id="index_3"></a>Tipos de nodos</h3>
-																<p>Se permiten los siguientes tipos de nodos:</p>
+											            	<h3><a id="index_3"></a>Tipos de nodos</h3>
+																			<p>Se permiten los siguientes tipos de nodos:</p>
 <ul>
 <li><code>STRING</code> (Valor por defecto)</li>
 <li><code>TEXT</code> (permite multiline, no permite nodos hijos)</li>
@@ -177,10 +177,30 @@ el cual es una estructura con todos los tipos de nodo posibles, a modo de ejempl
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
-    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
-    	<p>Este espacio está reservado para este fin.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_4"></a>Parte I: Un nuevo lenguaje</h2>
+																					<ul>
+<li><a href="01-intro-2024">Capítulo 1: Introducción - 2024</a></li>
+<li><a href="02-tutorial">Capítulo 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Capítulo 3: Potenciado con IA</a></li>
+</ul>
+
+													            	<h2><a id="index_5"></a>Parte II: Documentos</h2>
+																					<ul>
+<li><a href="04-raw-docs">Capítulo 4: Documentos sin namespace</a></li>
+<li><a href="05-ns-docs">Capítulo 5: Documentos con namespace</a></li>
+<li><a href="06-examples">Capítulo 6: Ejemplos</a></li>
+<li><a href="07-parser">Capítulo 7: Parseo de documentos</a></li>
+</ul>
+
+													            	<h2><a id="index_6"></a>Parte III: Reflexiones</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Capítulo 8: <span class='STxT'>STxT</span> y otras tecnologías</a></li>
+<li><a href="09-semantic-web">Capítulo 9: Web semántica</a></li>
+<li><a href="10-stxt-now">Capítulo 10: ¿Y ahora qué?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

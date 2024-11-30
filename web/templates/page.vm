@@ -89,29 +89,7 @@
 		#set($numPart = 0)
 	
 		#foreach($node in $doc.getChilds())
-			#if(${node.name} == "html")
-				${node.text}
-			#elseif(${node.name} == "content" || ${node.name} == "text")
-				${wiki.render($node.text)}
-			#elseif(${node.name} == "preamble")
-            	<div class="preamble">${wiki.render($node.text)}</div>
-			#elseif(${node.name} == "header")
-            	<h2><a id="index_${numPart}"></a>$node.text</h2>
-				#set($numPart = $numPart + 1)
-			#elseif(${node.name} == "subheader")
-            	<h3><a id="index_${numPart}"></a>$node.text</h3>
-				#set($numPart = $numPart + 1)
-			#elseif(${node.name} == "code")
-				<pre>${utils.escapeHtmlBold($node.text)}</pre>
-			#elseif(${node.name} == "assert")
-				<div class="row">
-            		<div class="assert">${wiki.render($node.text)}</div>
-            	</div>
-			#elseif(${node.name} == "alert")
-				<div class="row">
-            		<div class="alert">${wiki.render($node.text)}</div>
-            	</div>
-			#end
+			#parse("/node.vm")
 		#end
 	
 		#if($doc.getChilds("text").size()>0)
@@ -125,10 +103,13 @@
     	##<p>${lang.get("lat.sponsors.2")}</p>
     	##<p>${lang.get("lat.sponsors.3")}</p>
     	##<br>
-    	<h2>${lang.get("lat.ads.title")}</h2>
-    	<p>${lang.get("lat.ads.1")}</p>
-    	<p>${lang.get("lat.ads.2")}</p>
     	
+    	#if($index)
+			#foreach($node in $index.getChilds())
+				#parse("/node.vm")
+			#end
+    	#end
+
     	#parse("/ads.vm")
 	  </aside>
 	</div>

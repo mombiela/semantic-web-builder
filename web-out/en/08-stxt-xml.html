@@ -66,13 +66,13 @@
       				
 			
 			
-															            	<h2><a id="index_0"></a>Chapter 8: <span class='STxT'>STxT</span> and XML</h2>
-												            	<h3><a id="index_1"></a>Warning to the Reader</h3>
-																<p>This chapter may offend the sensitivities of enthusiastic XML readers.
+																								            	<h2><a id="index_0"></a>Chapter 8: <span class='STxT'>STxT</span> and XML</h2>
+															            	<h3><a id="index_1"></a>Warning to the Reader</h3>
+																			<p>This chapter may offend the sensitivities of enthusiastic XML readers.
 Read at your own risk ;-)</p>
 
-								            	<h2><a id="index_2"></a>The Legend</h2>
-																<p>The origin of evil: SGML.</p>
+											            	<h2><a id="index_2"></a>The Legend</h2>
+																			<p>The origin of evil: SGML.</p>
 <p>It all started a long, long time ago in a dark land called &quot;informatics.&quot;
 Encodings roamed this world. Sowing incompatibilities.
 Hindering communications. Laughing at those who were not like them.
@@ -92,12 +92,12 @@ And people like them!!</p>
 <p>But a small group of people gathered and decided this couldn’t go on.
 They would create a champion. Someone to enlighten them. There could be only one.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="alert"><p>The time for <span class='STxT'>STxT</span> had arrived.</p>
 </div>
             	</div>
-								            	<h2><a id="index_3"></a>The Present</h2>
-																<p>The world is full of ugly documents, <em>XMLs that we like...</em> even though it's a horrible format!</p>
+											            	<h2><a id="index_3"></a>The Present</h2>
+																			<p>The world is full of ugly documents, <em>XMLs that we like...</em> even though it's a horrible format!</p>
 <p>We are inheriting an outdated format, with outdated encodings, with a very IT-centric mindset.
 And it's everywhere. And we keep using it. And we want it for everything... Wait a minute! Stop!
 Is it necessary? If we knew nothing about SGML and wanted to have a quick-to-parse TXT, with structure,
@@ -105,8 +105,8 @@ with namespaces, would we have created XML? I don't think so. If you asked a chi
 I suppose they would never have created XML... they would have made something more natural... THEY WOULD HAVE CREATED <span class='STxT'>STxT</span>!</p>
 <p>Well, we have more experience, and we’ve learned. Let's create it!</p>
 
-								            	<h2><a id="index_4"></a>First Contact</h2>
-																<p>I don't want to scare you, but <span class='STxT'>STxT</span>, compared to XML, is:</p>
+											            	<h2><a id="index_4"></a>First Contact</h2>
+																			<p>I don't want to scare you, but <span class='STxT'>STxT</span>, compared to XML, is:</p>
 <ul>
 <li>Prettier</li>
 <li>Simpler</li>
@@ -117,7 +117,7 @@ I suppose they would never have created XML... they would have made something mo
 <p>Let's take a look at an XML example, and we’ll compare it with <span class='STxT'>STxT</span> to start.
 It’ll be an easy example:</p>
 
-												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+															<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
     &lt;!-- This is a line comment  --&gt; 
     &lt;email&gt;
     &lt;from&gt;John Smith&lt;/from&gt;
@@ -126,69 +126,69 @@ It’ll be an easy example:</p>
     &lt;title&gt;Project report&lt;/title&gt; 
     &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
 &lt;/email&gt;</pre>
-												<p>Let's look at the <span class='STxT'>STxT</span> version:</p>
+															<p>Let's look at the <span class='STxT'>STxT</span> version:</p>
 
-												<pre># This is a line comment
+															<pre># This is a line comment
 Email (www.example.com/email.stxt):
     From: John Smith
     To: Mery Adams
     Cc: Keyla Brown
     Title: Project report
     Body: Hello Mery!! The book is finished!!</pre>
-												<p>I think a first characteristic is immediately apparent:</p>
+															<p>I think a first characteristic is immediately apparent:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> is much prettier than XML and easier to understand.</p>
 </div>
             	</div>
-												<p>Let's talk about size.</p>
+															<p>Let's talk about size.</p>
 <p>XML Length: 254<br><span class='STxT'>STxT</span> Length: 190</p>
 <p>Let’s see what happens when we compact it as much as possible:</p>
 
-												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!-- This is a line comment  --&gt;
+															<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;&lt;!-- This is a line comment  --&gt;
 &lt;email&gt;&lt;from&gt;John Smith&lt;/from&gt;&lt;to&gt;Mery Adams&lt;/to&gt;&lt;cc&gt;Keyla Brown&lt;/cc&gt;
 &lt;title&gt;Project report&lt;/title&gt;&lt;body&gt;Hello Mery!! The book
 is finished!!&lt;/body&gt;&lt;/email&gt;</pre>
-												<pre># This is a line comment
+															<pre># This is a line comment
 Email(www.example.com/email.stxt):
     From:John Smith
     To:Mery Adams
     Cc:Keyla Brown
     Title:Project report
     Body:Hello Mery!! The book is finished!!</pre>
-												<p>Minimum XML Length: 225<br>Minimum <span class='STxT'>STxT</span> Length: 172</p>
+															<p>Minimum XML Length: 225<br>Minimum <span class='STxT'>STxT</span> Length: 172</p>
 <p>If we compare without XML header or <span class='STxT'>STxT</span> namespace:</p>
 <p>Minimum XML Length: 186<br>Minimum <span class='STxT'>STxT</span> Length: 149</p>
 <p>I think it’s clear that:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> is more compact than XML</p>
 </div>
             	</div>
-												<p>But also:</p>
+															<p>But also:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> is more understandable than XML when compacted.</p>
 </div>
             	</div>
-												<p>Or put another way:</p>
+															<p>Or put another way:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> maintains its readability when compacted,<br>while XML does not.</p>
 </div>
             	</div>
-												<p>By the way, did we lose any information? No, but what would happen if there were attributes?
+															<p>By the way, did we lose any information? No, but what would happen if there were attributes?
 We'll talk about that later. For now, trust me:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>With <span class='STxT'>STxT</span>, you can express the same as with XML.</p>
 </div>
             	</div>
-												<p>Now let’s try something fun...
+															<p>Now let’s try something fun...
 What does an XML document look like with a text node that itself contains XML?</p>
 <p>Let's see:</p>
 
-												<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+															<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
 &lt;!-- This is a line comment  --&gt; 
 &lt;email&gt;
 &lt;from&gt;John Smith&lt;/from&gt;
@@ -207,9 +207,9 @@ What does an XML document look like with a text node that itself contains XML?</
     &amp;lt;body&amp;gt;Hello Mery!! The book is finished!!&amp;lt;/body&amp;gt; 
 &lt;/body&gt; 
 &lt;/email&gt;</pre>
-												<p>And in <span class='STxT'>STxT</span>:</p>
+															<p>And in <span class='STxT'>STxT</span>:</p>
 
-												<pre>Email (www.example.com/email.stxt):
+															<pre>Email (www.example.com/email.stxt):
 From: John Smith
 To: Mery Adams
 Cc: Keyla Brown
@@ -223,19 +223,19 @@ Body:
     &lt;title&gt;Project report&lt;/title&gt; 
     &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
     &lt;/email&gt;</pre>
-												<p>I think no further comment is needed. It’s obvious, but:</p>
+															<p>I think no further comment is needed. It’s obvious, but:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> is simpler than XML.</p>
 </div>
             	</div>
-								            	<h2><a id="index_5"></a>XML Attributes</h2>
-																<p>Let’s take an example:</p>
+											            	<h2><a id="index_5"></a>XML Attributes</h2>
+																			<p>Let’s take an example:</p>
 
-												<pre>&lt;example id=&quot;1&quot; show=&quot;false&quot;&gt;
+															<pre>&lt;example id=&quot;1&quot; show=&quot;false&quot;&gt;
     Hello World
 &lt;/example&gt;</pre>
-												<p>Attributes in XML have always been a source of controversy.
+															<p>Attributes in XML have always been a source of controversy.
 What is an attribute and what should be a node? It’s always hard to decide.
 It is fairly accepted that attributes are like metadata of the node,
 that is, they provide information but not content.
@@ -246,29 +246,29 @@ This affects DTDs, XSDs, libraries, programmers... And for what?
 They really don’t add much. Just unnecessary complexity.
 Furthermore, this is <span class='STxT'>STxT</span>. Everything has meaning, and everything is important.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> does not have attributes in the style of XML.</p>
 </div>
             	</div>
-												<p>This makes it <em>BETTER</em>, not worse. Sometimes, <em>LESS IS MORE ;-)</em></p>
+															<p>This makes it <em>BETTER</em>, not worse. Sometimes, <em>LESS IS MORE ;-)</em></p>
 <p>The previous example in <span class='STxT'>STxT</span> would be:</p>
 
-												<pre>example(...):
+															<pre>example(...):
     id:1
     show:false
     text:Hello World</pre>
-												<p>In general, we can always do something in the form:</p>
+															<p>In general, we can always do something in the form:</p>
 
-												<pre>node_name:
+															<pre>node_name:
     metadata:
         m1:xxx
         m2:xxx
         m3:xxx
     node2:
     node3:</pre>
-								            	<h2><a id="index_6"></a>DTD, XSD</h2>
-												            	<h3><a id="index_7"></a>XSD, DTD, and <span class='STxT'>STxT</span></h3>
-																<p>Let’s talk about XML’s DTDs and XSDs. They are documents that tell us how a valid XML should be.
+											            	<h2><a id="index_6"></a>DTD, XSD</h2>
+															            	<h3><a id="index_7"></a>XSD, DTD, and <span class='STxT'>STxT</span></h3>
+																			<p>Let’s talk about XML’s DTDs and XSDs. They are documents that tell us how a valid XML should be.
 They work more or less well, and each has its advantages and disadvantages.
 If you look around the Internet a bit, you’ll see what I mean.</p>
 <p>In summary, DTD is simpler than XSD, less powerful, and is written in a language different from XML.
@@ -276,22 +276,22 @@ XSD is more powerful, harder to make and understand, but it’s written in XML, 
 <p>And what about <span class='STxT'>STxT</span>? You should know :-D It has the best. It’s a <span class='STxT'>STxT</span> document.
 Integrated into the language itself. Powerful and easy to learn. Like <span class='STxT'>STxT</span> itself ;-)</p>
 
-								            	<h3><a id="index_8"></a>Where is it?</h3>
-																<p>I would like to see a typical XML problem disappear:</p>
+											            	<h3><a id="index_8"></a>Where is it?</h3>
+																			<p>I would like to see a typical XML problem disappear:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><em>Where is the grammar of this document?</em></p>
 </div>
             	</div>
-												<p>In <span class='STxT'>STxT</span>, <em>EVERYTHING</em> is on the web. When you want to create a document, you must automatically
+															<p>In <span class='STxT'>STxT</span>, <em>EVERYTHING</em> is on the web. When you want to create a document, you must automatically
 be able to see its definition. The grammar must always be accessible.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>A <span class='STxT'>STxT</span> document by definition has an associated grammar.<br>If not, it’s not <span class='STxT'>STxT</span>.</p>
 </div>
             	</div>
-								            	<h3><a id="index_9"></a>XSD of the XSD (*)</h3>
-																<p>Does anyone want to compare the XSD of an XSD? I was tempted to include it in the book,
+											            	<h3><a id="index_9"></a>XSD of the XSD (*)</h3>
+																			<p>Does anyone want to compare the XSD of an XSD? I was tempted to include it in the book,
 but it would have taken up more than 50 pages, and I’m not exaggerating :-D</p>
 <p>I’ll leave the link here for anyone who wants to see it:</p>
 <p>[[http:_www.w3.org/2001/XMLSchema.xsd|http:_www.w3.org/2001/XMLSchema.xsd|xsd]]</p>
@@ -299,16 +299,16 @@ but it would have taken up more than 50 pages, and I’m not exaggerating :-D</p
 <p>Everything is much more complicated. With <span class='STxT'>STxT</span> we have sought simplicity.
 We like to do things by hand! It shouldn’t be mandatory to have an XML editor or reader!</p>
 
-								            	<h2><a id="index_10"></a>Parsers and Validators</h2>
-																<p>Does anyone want to compare parsers and validators? It’s unnecessary.
+											            	<h2><a id="index_10"></a>Parsers and Validators</h2>
+																			<p>Does anyone want to compare parsers and validators? It’s unnecessary.
 One with <span class='STxT'>STxT</span> is MUCH faster and easier to implement.
 Why? It’s very simple:</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p><span class='STxT'>STxT</span> has far fewer rules than XML.</p>
 </div>
             	</div>
-												<p>This makes everything easier. The parser code is faster.
+															<p>This makes everything easier. The parser code is faster.
 They have fewer errors. It’s easier to maintain. Easier to make.
 Moreover, another advantage is that parsing and validating can be done simultaneously.
 With XML, you have to decide whether you really need to validate the XSD... and where is it?
@@ -322,8 +322,8 @@ I don’t like it; I’m against it, but nothing and no one prevents this from b
 In fact, in some cases, it will be necessary, as I had to do in my own book
 before the web was published.</p>
 
-								            	<h2><a id="index_11"></a>Namespaces</h2>
-																<p>I’ve always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.</p>
+											            	<h2><a id="index_11"></a>Namespaces</h2>
+																			<p>I’ve always hated XML namespaces. They are cumbersome, difficult to control, and usually tell us nothing.</p>
 <p>Namespaces in <span class='STxT'>STxT</span> are completely different because they are not hard to make,
 they provide all the necessary information, and you don’t lose the expressiveness that you get with XML.
 In fact, you don’t even see them! But they are always there, helping. Completing the work.</p>
@@ -332,8 +332,8 @@ In fact, you don’t even see them! But they are always there, helping. Completi
 It’s no longer necessary because that would imply it’s different if obtained with {{{http:</em>}}}
 than if obtained with {{{https:<em>}}}. This doesn’t make sense. What does make sense is that it’s from {{{</em>}}}.</p>
 
-								            	<h2><a id="index_12"></a>The Future</h2>
-																<p>I’ve been very honest with my analysis of XML vs. <span class='STxT'>STxT</span>, but there’s something we must not forget.
+											            	<h2><a id="index_12"></a>The Future</h2>
+																			<p>I’ve been very honest with my analysis of XML vs. <span class='STxT'>STxT</span>, but there’s something we must not forget.
 XML has been around for a long time. It’s tested, it’s used everywhere. It’s a standard.
 <span class='STxT'>STxT</span> is new; it has just been born and has a long way to go.</p>
 <p>But I think it’s worth it.</p>
@@ -342,10 +342,30 @@ XML has been around for a long time. It’s tested, it’s used everywhere. It�
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Advertisements</h2>
-    	<p>That’s right! Right now we also need advertising. Perhaps in the future this situation will change. For now, it is simply not possible.</p>
-    	<p>This space is reserved for this purpose.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_13"></a>Part I: A New Language</h2>
+																					<ul>
+<li><a href="01-intro-2024">Chapter 1: Introduction - 2024</a></li>
+<li><a href="02-tutorial">Chapter 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Chapter 3: AI-Powered</a></li>
+</ul>
+
+													            	<h2><a id="index_14"></a>Part II: Documents</h2>
+																					<ul>
+<li><a href="04-raw-docs">Chapter 4: Documents Without Namespace</a></li>
+<li><a href="05-ns-docs">Chapter 5: Documents With Namespace</a></li>
+<li><a href="06-examples">Chapter 6: Examples</a></li>
+<li><a href="07-parser">Chapter 7: Document Parsing</a></li>
+</ul>
+
+													            	<h2><a id="index_15"></a>Part III: Reflections</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Chapter 8: <span class='STxT'>STxT</span> and Other Technologies</a></li>
+<li><a href="09-semantic-web">Chapter 9: Semantic Web</a></li>
+<li><a href="10-stxt-now">Chapter 10: What Now?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

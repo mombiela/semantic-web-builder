@@ -71,10 +71,10 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Capítulo 6: Ejemplos</h2>
-												            	<h2><a id="index_1"></a>Clientes</h2>
-												            	<h3><a id="index_2"></a>Cliente sin namespace</h3>
-																<pre>
+																								            	<h2><a id="index_0"></a>Capítulo 6: Ejemplos</h2>
+															            	<h2><a id="index_1"></a>Clientes</h2>
+															            	<h3><a id="index_2"></a>Cliente sin namespace</h3>
+																			<pre>
 # ----------------
 # Datos de cliente
 # ----------------
@@ -167,8 +167,8 @@ Cliente:
     Datos Bancarios:
         Titular cuenta: Joan Costa Mombiela
         N&uacute;mero cuenta: 0000-0000-00-000000000</pre>
-								            	<h3><a id="index_3"></a>Cliente con namespace</h3>
-																<pre>
+											            	<h3><a id="index_3"></a>Cliente con namespace</h3>
+																			<pre>
 # ----------------
 # Datos de cliente
 # ----------------
@@ -261,8 +261,8 @@ Cliente(www.gymstxt.com/client.stxt):
     Datos Bancarios:
         Titular cuenta: Joan Costa Mombiela
         N&uacute;mero cuenta: 0000-0000-00-000000000</pre>
-								            	<h3><a id="index_4"></a>Namespace de cliente</h3>
-																<pre>Namespace: www.gymstxt.com/client.stxt
+											            	<h3><a id="index_4"></a>Namespace de cliente</h3>
+																			<pre>Namespace: www.gymstxt.com/client.stxt
 
     Cliente:
         Datos Personales: (1)
@@ -279,9 +279,9 @@ Cliente(www.gymstxt.com/client.stxt):
     Datos Bancarios:
         Titular cuenta: (?)
         N&uacute;mero cuenta: (1)</pre>
-								            	<h2><a id="index_5"></a>Recetas y recetarios</h2>
-												            	<h3><a id="index_6"></a>Namespace de recetas</h3>
-																<pre># ------
+											            	<h2><a id="index_5"></a>Recetas y recetarios</h2>
+															            	<h3><a id="index_6"></a>Namespace de recetas</h3>
+																			<pre># ------
 # Receta
 # ------
 
@@ -305,13 +305,13 @@ Namespace: www.kocinando.com/receta.stxt
         Calorias: (?) NUMBER
         Comensales: (?) NUMBER
         Documento: (*) (www.dokumentando.com/doc_simple.stxt)</pre>
-								            	<h3><a id="index_7"></a>Namespace de rectario</h3>
-																<pre>Namespace: www.kocinando.com/recetario.stxt
+											            	<h3><a id="index_7"></a>Namespace de rectario</h3>
+																			<pre>Namespace: www.kocinando.com/recetario.stxt
 
     Recetario:
         Receta: (+) (www.kocinando.com/receta.stxt)</pre>
-								            	<h3><a id="index_8"></a>Receta</h3>
-																<pre># -----------------
+											            	<h3><a id="index_8"></a>Receta</h3>
+																			<pre># -----------------
 # Receta macarrones
 # -----------------
 
@@ -337,8 +337,8 @@ Receta(www.kocinando.com/receta.stxt):
             primer documento
             simple. Tiene varias l&iacute;neas
         Tipo Documento: informe</pre>
-								            	<h3><a id="index_9"></a>Recetario</h3>
-																<pre>Recetario(www.kocinando.com/recetario.stxt):
+											            	<h3><a id="index_9"></a>Recetario</h3>
+																			<pre>Recetario(www.kocinando.com/recetario.stxt):
 
     # --------
     # Receta 1
@@ -404,9 +404,9 @@ Receta(www.kocinando.com/receta.stxt):
                 En caso de error consultar realizar una llamada
                 al servicio &uacute;nico
             Paso:Paso 9</pre>
-								            	<h2><a id="index_10"></a>Documentos</h2>
-												            	<h3><a id="index_11"></a>Namespace documento simple</h3>
-																<pre>Namespace: www.dokumentando.com/doc_simple.stxt
+											            	<h2><a id="index_10"></a>Documentos</h2>
+															            	<h3><a id="index_11"></a>Namespace documento simple</h3>
+																			<pre>Namespace: www.dokumentando.com/doc_simple.stxt
 
     Documento:
         T&iacute;tulo: (1)
@@ -419,16 +419,16 @@ Receta(www.kocinando.com/receta.stxt):
         
     Secciones:
         Seccion: (+) TEXT</pre>
-								            	<h3><a id="index_12"></a>Documento simple</h3>
-																<pre>Documento (www.dokumentando.com/doc_simple.stxt):
+											            	<h3><a id="index_12"></a>Documento simple</h3>
+																			<pre>Documento (www.dokumentando.com/doc_simple.stxt):
     T&iacute;tulo: Primer documento simple
     Description:
         Este es el
         primer documento
         simple. Tiene varias l&iacute;neas
     Tipo Documento: informe</pre>
-								            	<h3><a id="index_13"></a>Namespace documento</h3>
-																<pre>
+											            	<h3><a id="index_13"></a>Namespace documento</h3>
+																			<pre>
 Namespace: www.dokumentando.com/documento.stxt
 
     Secci&oacute;n:
@@ -453,8 +453,8 @@ Namespace: www.dokumentando.com/documento.stxt
             : informe
             : art&iacute;culo
             : ensayo</pre>
-								            	<h3><a id="index_14"></a>Documento</h3>
-																<div class="row">
+											            	<h3><a id="index_14"></a>Documento</h3>
+																			<div class="row">
             		<div class="assert"><p>Ahora os toca a vosotros crearlo ;-)</p>
 </div>
             	</div>
@@ -462,10 +462,30 @@ Namespace: www.dokumentando.com/documento.stxt
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
-    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
-    	<p>Este espacio está reservado para este fin.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_15"></a>Parte I: Un nuevo lenguaje</h2>
+																					<ul>
+<li><a href="01-intro-2024">Capítulo 1: Introducción - 2024</a></li>
+<li><a href="02-tutorial">Capítulo 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Capítulo 3: Potenciado con IA</a></li>
+</ul>
+
+													            	<h2><a id="index_16"></a>Parte II: Documentos</h2>
+																					<ul>
+<li><a href="04-raw-docs">Capítulo 4: Documentos sin namespace</a></li>
+<li><a href="05-ns-docs">Capítulo 5: Documentos con namespace</a></li>
+<li><a href="06-examples">Capítulo 6: Ejemplos</a></li>
+<li><a href="07-parser">Capítulo 7: Parseo de documentos</a></li>
+</ul>
+
+													            	<h2><a id="index_17"></a>Parte III: Reflexiones</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Capítulo 8: <span class='STxT'>STxT</span> y otras tecnologías</a></li>
+<li><a href="09-semantic-web">Capítulo 9: Web semántica</a></li>
+<li><a href="10-stxt-now">Capítulo 10: ¿Y ahora qué?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

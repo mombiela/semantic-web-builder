@@ -71,18 +71,18 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Capítulo 2: Tutorial</h2>
-																<p>Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo.
+																								            	<h2><a id="index_0"></a>Capítulo 2: Tutorial</h2>
+																			<p>Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo.
 Te explicamos lo que es <span class='STxT'>STxT</span> directamente, sin más preámbulos.
 Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.</p>
 
-								            	<h2><a id="index_1"></a>Un ejemplo... ¡ya!</h2>
-												            	<h3><a id="index_2"></a>Documentos sin namespace</h3>
-																<p>Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
+											            	<h2><a id="index_1"></a>Un ejemplo... ¡ya!</h2>
+															            	<h3><a id="index_2"></a>Documentos sin namespace</h3>
+																			<p>Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
 y <em>todo el mundo</em> lo puede llega a entender.</p>
 <p>El ejemplo será una receta de cocina. ¡Adelante!</p>
 
-												<pre>Receta: Receta de macarrones
+															<pre>Receta: Receta de macarrones
     Descripci&oacute;n:
         :Esta es la descripci&oacute;n de la recta de macarrones.
         :Bla, bla, bla
@@ -96,13 +96,13 @@ y <em>todo el mundo</em> lo puede llega a entender.</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.</p>
+															<p>Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="alert"><p>No uséis esta receta en casa, esperad al próximo capítulo ;-)</p>
 </div>
             	</div>
-												<p>Bien, acabáis de ver lo que es un <strong>documento <span class='STxT'>STxT</span> sin namespace</strong>. Este tipo de documentos
+															<p>Bien, acabáis de ver lo que es un <strong>documento <span class='STxT'>STxT</span> sin namespace</strong>. Este tipo de documentos
 son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya
 se puede ver que tienen estructura, con un nodo principal <code>Receta</code>, el qual tiene
 un nodo <code>Descripción</code>, <code>Ingredientes</code>, etc. A su vez estos nodos tienen otros, y así
@@ -111,15 +111,15 @@ hasta formar una estructura jerárquica.</p>
 Al no tener una estructura previa se distinguen porque estan anidados pero las
 líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.</p>
 
-								            	<h3><a id="index_3"></a>Documentos con namespace</h3>
-																<p>Ahora iremos más allá, y definiremos la misma receta con un namespace.
+											            	<h3><a id="index_3"></a>Documentos con namespace</h3>
+																			<p>Ahora iremos más allá, y definiremos la misma receta con un namespace.
 Primero mostraremos como queda la receta, y después mostraremos el
 namespace. Podéis pensar que normalmente se debería hacer al revés,
 pero la realidad es que la mayoría de las veces tendremos un ejemplo
 y de forma posterior definiremos el caso general.</p>
 <p>Aquí tenemos la receta:</p>
 
-												<pre>Receta <strong>(www.kocinando.com/receta.stxt)</strong>: Receta de macarrones
+															<pre>Receta <strong>(www.kocinando.com/receta.stxt)</strong>: Receta de macarrones
     Descripci&oacute;n:
         Esta es la descripci&oacute;n de la recta de macarrones.
         Bla, bla, bla
@@ -133,7 +133,7 @@ y de forma posterior definiremos el caso general.</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
+															<p>¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
 que es <code>www.kocinando.com/receta.stxt</code>, y el nodo <code>Descripción</code> parece
 más natural. <strong>Pues ya está :-)</strong> Hemos convertido un documento sin namespace
 a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter <code>:</code>
@@ -145,7 +145,7 @@ pero complicaba los parseadores, y te obligaba a tener siempre definición
 de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
 <p>Aquí está el namespace que podemos crear para el ejemplo:</p>
 
-												<pre><strong>Namespace: www.kocinando.com/receta.stxt</strong>
+															<pre><strong>Namespace: www.kocinando.com/receta.stxt</strong>
     Receta:
         Descripci&oacute;n: (?) TEXT
         Comensales: (?) NUMBER
@@ -157,7 +157,7 @@ de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.</p>
             Ingrediente: (+)
         Pasos: (1)
             Paso: (+)</pre>
-												<p>Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
+															<p>Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
 el tipo del nodo si hiciera falta.</p>
 <p>El namespace <strong>debería poderse consultar vía internet</strong>, en la misma url que lo indica.
 Así, este namespace debería estar disponible mediante la url <code>https://www.kocinando.com/receta.stxt</code>.
@@ -165,13 +165,13 @@ Los parseadores igualmente deberían tenerlo disponible de forma local, y es mej
 <p>Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
 debería ser mucho más sencillo que en otros lenguajes.</p>
 
-								            	<h2><a id="index_4"></a>Otros elementos</h2>
-												            	<h3><a id="index_5"></a>Comentarios</h3>
-																<p>Es posible insertar comentarios en los documentos para
+											            	<h2><a id="index_4"></a>Otros elementos</h2>
+															            	<h3><a id="index_5"></a>Comentarios</h3>
+																			<p>Es posible insertar comentarios en los documentos para
 expresar partes no finalizadas, pensamientos del autor, etc.
 Los comentarios no se usarán pero permiten enriquecer el documento.</p>
 
-												<pre>Receta (www.kocinando.com/receta.stxt): Receta de macarrones
+															<pre>Receta (www.kocinando.com/receta.stxt): Receta de macarrones
 <strong># Esta receta me la pas&oacute; XX y la he hecho un mont&oacute;n de veces</strong>
 <strong># Os gustar&aacute; mucho!!</strong>
     Descripci&oacute;n:
@@ -187,24 +187,24 @@ Los comentarios no se usarán pero permiten enriquecer el documento.</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-								            	<h3><a id="index_6"></a>Distintos namespaces en un documento</h3>
-																<p>Un namespace puede hacer referencia a otro, para indicar que
+											            	<h3><a id="index_6"></a>Distintos namespaces en un documento</h3>
+																			<p>Un namespace puede hacer referencia a otro, para indicar que
 una parte del documento tiene la estructura en otro namespace.
 Mejor ver un ejemplo:</p>
 
-												<pre><strong>Namespace: www.kocinando.com/recetario.stxt</strong>
+															<pre><strong>Namespace: www.kocinando.com/recetario.stxt</strong>
     Recetario:
         Receta: (+) <strong>(www.kocinando.com/receta.stxt)</strong></pre>
-												<p>Aquí vemos que <code>Receta</code> es de otro namespace y vemos que
+															<p>Aquí vemos que <code>Receta</code> es de otro namespace y vemos que
 en vez de poner la estructura se hace referencia a otro namespace.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>NO es necesario decir el namespace interior, sólo el nodo principal.</p>
 </div>
             	</div>
-												<p>Así, un ejemplo de recetario sería:</p>
+															<p>Así, un ejemplo de recetario sería:</p>
 
-												<pre><strong>Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama</strong> 
+															<pre><strong>Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama</strong> 
     <strong>Receta: Receta de macarrones</strong>
         Descripci&oacute;n:
             Esta es la descripci&oacute;n de la recta de macarrones.
@@ -227,8 +227,8 @@ en vez de poner la estructura se hace referencia a otro namespace.</p>
         Pasos:
             Paso: (1) Poner tomate y queso en pizza
             Paso: (2) Hornear durante 15'</pre>
-								            	<h2><a id="index_7"></a>Fin del tutorial</h2>
-																<div class="row">
+											            	<h2><a id="index_7"></a>Fin del tutorial</h2>
+																			<div class="row">
             		<div class="alert"><p>Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.<br>O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-)</p>
 </div>
             	</div>
@@ -236,10 +236,30 @@ en vez de poner la estructura se hace referencia a otro namespace.</p>
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
-    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
-    	<p>Este espacio está reservado para este fin.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_8"></a>Parte I: Un nuevo lenguaje</h2>
+																					<ul>
+<li><a href="01-intro-2024">Capítulo 1: Introducción - 2024</a></li>
+<li><a href="02-tutorial">Capítulo 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Capítulo 3: Potenciado con IA</a></li>
+</ul>
+
+													            	<h2><a id="index_9"></a>Parte II: Documentos</h2>
+																					<ul>
+<li><a href="04-raw-docs">Capítulo 4: Documentos sin namespace</a></li>
+<li><a href="05-ns-docs">Capítulo 5: Documentos con namespace</a></li>
+<li><a href="06-examples">Capítulo 6: Ejemplos</a></li>
+<li><a href="07-parser">Capítulo 7: Parseo de documentos</a></li>
+</ul>
+
+													            	<h2><a id="index_10"></a>Parte III: Reflexiones</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Capítulo 8: <span class='STxT'>STxT</span> y otras tecnologías</a></li>
+<li><a href="09-semantic-web">Capítulo 9: Web semántica</a></li>
+<li><a href="10-stxt-now">Capítulo 10: ¿Y ahora qué?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

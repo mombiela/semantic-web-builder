@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.StringUtils;
 import org.swb.utils.PropertiesUtils;
 import org.swb.utils.Utils;
 import org.swb.utils.WikiRender;
@@ -108,7 +109,12 @@ public class Velocity extends AbstractDirProcessor
         Object index = pages.get("00-table-content");
         if(!name.equals("00-table-content"))
         {
-        	velocityContext.put("index", index);
+        	String[] parts = name.split("-");
+        	if (parts.length>1)
+        	{
+        		if (StringUtils.isNumeric(parts[0]))
+        			velocityContext.put("index", index);
+        	}
         }
         System.out.println("Velocity: " + name + " -> " + lang);
         

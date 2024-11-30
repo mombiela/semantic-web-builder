@@ -1,0 +1,23 @@
+			#if(${node.name} == "html")
+				${node.text}
+			#elseif(${node.name} == "content" || ${node.name} == "text")
+				${wiki.render($node.text)}
+			#elseif(${node.name} == "preamble")
+            	<div class="preamble">${wiki.render($node.text)}</div>
+			#elseif(${node.name} == "header")
+            	<h2><a id="index_${numPart}"></a>$node.text</h2>
+				#set($numPart = $numPart + 1)
+			#elseif(${node.name} == "subheader")
+            	<h3><a id="index_${numPart}"></a>$node.text</h3>
+				#set($numPart = $numPart + 1)
+			#elseif(${node.name} == "code")
+				<pre>${utils.escapeHtmlBold($node.text)}</pre>
+			#elseif(${node.name} == "assert")
+				<div class="row">
+            		<div class="assert">${wiki.render($node.text)}</div>
+            	</div>
+			#elseif(${node.name} == "alert")
+				<div class="row">
+            		<div class="alert">${wiki.render($node.text)}</div>
+            	</div>
+			#end

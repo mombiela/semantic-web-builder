@@ -71,15 +71,15 @@
 	
 			
 			
-																				            	<h2><a id="index_0"></a>Capítulo 8: Ejemplos y otras tecnologías</h2>
-																<p>Hay miles de ejemplos que se pueden hacer con esta tecnología.
+																																            	<h2><a id="index_0"></a>Capítulo 8: Ejemplos y otras tecnologías</h2>
+																			<p>Hay miles de ejemplos que se pueden hacer con esta tecnología.
 Es tan sencillo como coger un ejemplo cualquiera de otro lenguaje
 y ver cómo se escribiría en <span class='STxT'>STxT</span>. Quizá lo más simple sea un ejemplo
 que venga de XML, ya que tienen muchos paralelismos con <span class='STxT'>STxT</span></p>
 <p>Muchos ejemplos los he obtenido de <a href="https://www.wikipedia.org">Wikipedia</a>.</p>
 <p>Un ejemplo (inventado) de xml sería:</p>
 
-												<pre>
+															<pre>
 &lt;Library&gt;
     &lt;Book id=&quot;1&quot;&gt;
         &lt;Title&gt;The Fellowship of the Ring&lt;/Title&gt;
@@ -105,9 +105,9 @@ que venga de XML, ya que tienen muchos paralelismos con <span class='STxT'>STxT<
         &lt;Genre&gt;High fantasy Adventure&lt;/Genre&gt;
     &lt;/Book&gt;
 &lt;/Library&gt;</pre>
-												<p>Lo mismo pasado a <span class='STxT'>STxT</span>:</p>
+															<p>Lo mismo pasado a <span class='STxT'>STxT</span>:</p>
 
-												<pre>Library (www.examples.com/demo.stxt):
+															<pre>Library (www.examples.com/demo.stxt):
     Book:
         id: 1
         Title: The Fellowship of the Ring
@@ -131,29 +131,29 @@ que venga de XML, ya que tienen muchos paralelismos con <span class='STxT'>STxT<
         Language: EN
         Published: 20 October 1955
         Genre: High fantasy Adventure</pre>
-												<p>Otro ejemplo en XML:</p>
+															<p>Otro ejemplo en XML:</p>
 
-												<pre>&lt;email&gt;
+															<pre>&lt;email&gt;
 &lt;from&gt;John Smith&lt;/from&gt;
 &lt;to&gt;Mery Adams&lt;/to&gt; 
 &lt;cc&gt;Keyla Brown&lt;cc&gt; 
 &lt;title&gt;Project report&lt;/title&gt; 
 &lt;body&gt;Hello Mery!! The book is finished!!&lt;/body&gt; 
 &lt;/email&gt;</pre>
-												<p>En <span class='STxT'>STxT</span> se transforma en:</p>
+															<p>En <span class='STxT'>STxT</span> se transforma en:</p>
 
-												<pre>Email (www.example.com/email.stxt):
+															<pre>Email (www.example.com/email.stxt):
     From: John Smith
     To: Mery Adams
     Cc: Keyla Brown
     Title: Project report
     Body: Hello Mery!! The book is finished!!</pre>
-												<p>Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el <span class='STxT'>STxT</span>.</p>
+															<p>Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el <span class='STxT'>STxT</span>.</p>
 <p>Por cierto, hay un capítulo oculto, <a href="08-stxt-xml">STXT y XML</a>, por si lo queréis leer.
 Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)</p>
 
-								            	<h2><a id="index_1"></a>Wikipedia (*)</h2>
-																<p>Tengo gran admiración por la wikipedia. Creo que es uno de los mejores proyectos que se han creado en Internet.</p>
+											            	<h2><a id="index_1"></a>Wikipedia (*)</h2>
+																			<p>Tengo gran admiración por la wikipedia. Creo que es uno de los mejores proyectos que se han creado en Internet.</p>
 <p><em>¿Como se podría beneficiar de <span class='STxT'>STxT</span>?</em></p>
 <p>Bien, la wikipedia podría tener plantillas diferentes:
 actores, políticos, serie tv, película, ciudades, países, ríos,... compartiendo gramáticas en muchos casos.
@@ -163,7 +163,7 @@ Creo que éste es un punto en el que <span class='STxT'>STxT</span> gana a la ma
 La mezcla con los llamados &quot;lightweight markup languajes&quot; es realmente espectacular.</p>
 <p>Así, se pueden hacer textos mixtos del estilo:</p>
 
-												<pre>City (www.wikipedia.org/city.stxt):
+															<pre>City (www.wikipedia.org/city.stxt):
      
     Name: Barcelona 
     Autonomous Community: Catalonia
@@ -180,13 +180,13 @@ La mezcla con los llamados &quot;lightweight markup languajes&quot; es realmente
         father of [[Hannibal]], who named the city ''Barcino''
         after his family in the 3rd century BC.
         ...</pre>
-												<p>Otra ventaja es que con <span class='STxT'>STxT</span> no solamente tendríamos &quot;plantillas&quot; de
+															<p>Otra ventaja es que con <span class='STxT'>STxT</span> no solamente tendríamos &quot;plantillas&quot; de
 cómo debe ser la información de una ciudad, sino que también podríamos
 aplicar estilos y formatos dependiendo del tipo de documento.</p>
 
-								            	<h2><a id="index_2"></a><span class='STxT'>STxT</span> y otras tecnologías</h2>
-												            	<h3><a id="index_3"></a>Lightweight markup language</h3>
-																<p>Los lenguajes ligeros de marcado han tenido un auge espectacular gracias a proyectos como la Wikipedia.
+											            	<h2><a id="index_2"></a><span class='STxT'>STxT</span> y otras tecnologías</h2>
+															            	<h3><a id="index_3"></a>Lightweight markup language</h3>
+																			<p>Los lenguajes ligeros de marcado han tenido un auge espectacular gracias a proyectos como la Wikipedia.
 Gracias a ellos se puede definir texto de forma mucho más simple que teniendo que escribir etiquetas como HTML.
 Pero tienen una gran carencia: No tienen una estructura ni una semántica clara.</p>
 <p>Es más, prácticamente todos se ocupan del estilo del texto:</p>
@@ -201,7 +201,7 @@ Pero tienen una gran carencia: No tienen una estructura ni una semántica clara.
 Obtenemos texto fácil de interpretar, con una semántica definida y con la expresividad de ambos lenguajes.</p>
 <p>Un ejemplo:</p>
 
-												<pre>Producto:
+															<pre>Producto:
     Nombre: Magic memory
     Precio: 10&euro;
     Descripci&oacute;n:
@@ -214,15 +214,15 @@ Obtenemos texto fácil de interpretar, con una semántica definida y con la expr
         * R&aacute;pida memorizaci&oacute;n
         * Aprendizaje autom&aacute;tico
         * Mayor concentraci&oacute;n</pre>
-												<p>Vemos que hemos dado estructura gracias a <span class='STxT'>STxT</span>, pero la descripción se ha dado
+															<p>Vemos que hemos dado estructura gracias a <span class='STxT'>STxT</span>, pero la descripción se ha dado
 al estilo wikipedia.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>La unión de <span class='STxT'>STxT</span> con <em>Lightweight markup languages</em> es simplemente espectacular</p>
 </div>
             	</div>
-								            	<h3><a id="index_4"></a>Tex, Latex</h3>
-																<p>Perdonad si critico mucho. Nunca lo hago sin dar una alternativa o un motivo. Me gustan las críticas constructivas ;-)
+											            	<h3><a id="index_4"></a>Tex, Latex</h3>
+																			<p>Perdonad si critico mucho. Nunca lo hago sin dar una alternativa o un motivo. Me gustan las críticas constructivas ;-)
 He visto que uno de los objetivos de TeX es que un documento se imprima igual ahora y dentro de 100 años.
 Me había parecido perfecto... hasta hoy. Ahora creo que el objetivo debería ser
 que significara lo mismo ahora que dentro de 100 años, y que se <em>entienda</em> ahora y dentro de 100 años.
@@ -234,7 +234,7 @@ y usaría TeX como motor de renderizado.</p>
 <p>Me atrevo a afirmar que TeX es imbatible en cuanto a renderizado; y creo que lo va a ser durante al menos 100 años más ;-)</p>
 <p>¿Cómo quedaría un documento? Bien, un ejemplo sencillo sería algo así:</p>
 
-												<pre>Article (www.latex.com/article.stxt):
+															<pre>Article (www.latex.com/article.stxt):
     Title:
     Author:
     References:
@@ -263,10 +263,10 @@ Formula:
     
 Paragraph:
     Hello World!!</pre>
-												<p>De hecho, ahora ya podemos pensar en <span class='STxT'>STxT</span>, quizá sea el momento de hacer fórmulas de otra forma,
+															<p>De hecho, ahora ya podemos pensar en <span class='STxT'>STxT</span>, quizá sea el momento de hacer fórmulas de otra forma,
 o notación más simplificada, como por ejemplo:</p>
 
-												<pre>Article (www.latex.com/article.stxt):
+															<pre>Article (www.latex.com/article.stxt):
     Title:
     Author:
     References:
@@ -295,13 +295,13 @@ Formula:
                      2&amp;=&amp;1
 Paragraph:
     Hello World!!</pre>
-												<p>Bien, hay miles de posibilidades y formas de enfocar el problema, os lo dejo como ejercicio ;-D</p>
+															<p>Bien, hay miles de posibilidades y formas de enfocar el problema, os lo dejo como ejercicio ;-D</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>¿Qué hemos ganado con respecto a sólo TeX?</p>
 </div>
             	</div>
-												<ul>
+															<ul>
 <li>Facilidad en la creación de documentos</li>
 <li>UTF-8</li>
 <li>Estructura definida</li>
@@ -311,8 +311,8 @@ Paragraph:
 <p>Y además, hemos mantenido la compacidad en la creación de fórmulas matemáticas
 y otros elementos dónde TeX sí es realmente un gran lenguaje.</p>
 
-								            	<h3><a id="index_5"></a>JSON</h3>
-																<p>JSON en principio no tiene nada que ver con <span class='STxT'>STxT</span>, pero hay ciertos momentos
+											            	<h3><a id="index_5"></a>JSON</h3>
+																			<p>JSON en principio no tiene nada que ver con <span class='STxT'>STxT</span>, pero hay ciertos momentos
 en los que pueden entrar en competencia. Estoy pensando en ficheros de configuración, por ejemplo.
 Además, es más flexible y fácil de leer cuando incrustamos gran cantidad de texto,
 cosa que en JSON hay que tener en cuenta siempre todos los caracteres de escapamiento.</p>
@@ -320,8 +320,8 @@ cosa que en JSON hay que tener en cuenta siempre todos los caracteres de escapam
 No creo que JSON y <span class='STxT'>STxT</span> sean competencia directa,
 debido a su distinto ámbito de aplicación.</p>
 
-								            	<h3><a id="index_6"></a>YAML</h3>
-																<p>Quizá YAML sea el que más se parezca en enfoque, aunque también es muy distinto.
+											            	<h3><a id="index_6"></a>YAML</h3>
+																			<p>Quizá YAML sea el que más se parezca en enfoque, aunque también es muy distinto.
 Nosotros creemos que con nuestra estructura se puede mostrar lo mismo que YAML,
 y mucho más simple. Además, podemos añadir semántica al documento con los namespaces,
 al mismo tiempo que permite un texto legible para la mayoría de personas,
@@ -331,10 +331,30 @@ independientemente de sus conocimientos informáticos.</p>
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
-    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
-    	<p>Este espacio está reservado para este fin.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_7"></a>Parte I: Un nuevo lenguaje</h2>
+																					<ul>
+<li><a href="01-intro-2024">Capítulo 1: Introducción - 2024</a></li>
+<li><a href="02-tutorial">Capítulo 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Capítulo 3: Potenciado con IA</a></li>
+</ul>
+
+													            	<h2><a id="index_8"></a>Parte II: Documentos</h2>
+																					<ul>
+<li><a href="04-raw-docs">Capítulo 4: Documentos sin namespace</a></li>
+<li><a href="05-ns-docs">Capítulo 5: Documentos con namespace</a></li>
+<li><a href="06-examples">Capítulo 6: Ejemplos</a></li>
+<li><a href="07-parser">Capítulo 7: Parseo de documentos</a></li>
+</ul>
+
+													            	<h2><a id="index_9"></a>Parte III: Reflexiones</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Capítulo 8: <span class='STxT'>STxT</span> y otras tecnologías</a></li>
+<li><a href="09-semantic-web">Capítulo 9: Web semántica</a></li>
+<li><a href="10-stxt-now">Capítulo 10: ¿Y ahora qué?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

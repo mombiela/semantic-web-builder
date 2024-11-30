@@ -71,10 +71,10 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Capítulo 4: Documentos sin namespace</h2>
-																<p>Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:</p>
+																								            	<h2><a id="index_0"></a>Capítulo 4: Documentos sin namespace</h2>
+																			<p>Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:</p>
 
-												<pre>Receta: Receta de macarrones
+															<pre>Receta: Receta de macarrones
     Descripci&oacute;n:
         :Esta es la descripci&oacute;n de la recta de macarrones.
         :Bla, bla, bla
@@ -88,52 +88,52 @@
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Vamos a profundizar un poco más.</p>
+															<p>Vamos a profundizar un poco más.</p>
 
-								            	<h2><a id="index_1"></a>Codificación</h2>
-																<div class="row">
+											            	<h2><a id="index_1"></a>Codificación</h2>
+																			<div class="row">
             		<div class="assert"><p>Codificación UTF-8 Siempre</p>
 </div>
             	</div>
-												<p>Fin. Es una buena regla y estoy muy contento con ella.
+															<p>Fin. Es una buena regla y estoy muy contento con ella.
 Hoy en día es la codificación más aceptable, más universal,
 y más implementada. No creo que esto cambie en los próximos años.</p>
 
-								            	<h2><a id="index_2"></a>Identificadores</h2>
-																<div class="row">
+											            	<h2><a id="index_2"></a>Identificadores</h2>
+																			<div class="row">
             		<div class="assert"><p>Los Identificadores son CASE-INSENSITIVE</p>
 </div>
             	</div>
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>Se permiten espacios en los nombres. <br>¿Por qué no? ¿Para parecer informáticos?<br>Los tiempos están cambiando :-D</p>
 </div>
             	</div>
-								            	<h2><a id="index_3"></a>Caracteres de escape</h2>
-																<div class="row">
+											            	<h2><a id="index_3"></a>Caracteres de escape</h2>
+																			<div class="row">
             		<div class="assert"><p>No existen caracteres de escape</p>
 </div>
             	</div>
-												<p>Creo que es lo mejor que he oído en mucho tiempo.
+															<p>Creo que es lo mejor que he oído en mucho tiempo.
 <strong>No existen caracteres de escape</strong> <em>porque no son necesarios</em>.
 Debido a la estructura no son necesarios.</p>
 
-								            	<h2><a id="index_4"></a>Comentarios</h2>
-																<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
+											            	<h2><a id="index_4"></a>Comentarios</h2>
+																			<p>Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
 Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí
 para comentar o añadir alguna observación, pero no influyen en el documento en sí.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>En <span class='STxT'>STxT</span> son comentarios todas las líneas que empiezan por el carácter #</p>
 </div>
             	</div>
-												<p>Los comentarios no tienen que tener ningún tipo de formato,
+															<p>Los comentarios no tienen que tener ningún tipo de formato,
 es texto libre que el autor del documento puede incluir.
 Además, no tiene que estar situado en ningún sitio concreto del documento.
 Cualquier línea que empiece por # será tratada como comentario,
 y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
 <p>Ejemplo:</p>
 
-												<pre>Receta: Receta de macarrones
+															<pre>Receta: Receta de macarrones
 <strong># (1) Esto es un comentario</strong>
 <strong># (2) Esto tambi&eacute;n es un comentario</strong>
     <strong># (3) Esto tambi&eacute;n es un comentario</strong>
@@ -152,24 +152,24 @@ y no será tenida en cuenta ni en programas ni en comunicaciones.</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Aquí cabe señalar que <code>(1),(2),(3) y (4)</code> son comentarios, mientras
+															<p>Aquí cabe señalar que <code>(1),(2),(3) y (4)</code> son comentarios, mientras
 que <code>(5)</code> no lo es, ya que está dentro del texto identado.</p>
 
-								            	<h2><a id="index_5"></a>Nodos e identación</h2>
-																<p>Antes hemos dicho que un documento <span class='STxT'>STxT</span> es un conjunto de nodos anidados.
+											            	<h2><a id="index_5"></a>Nodos e identación</h2>
+																			<p>Antes hemos dicho que un documento <span class='STxT'>STxT</span> es un conjunto de nodos anidados.
 La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>4 espacios equivalen a un tabulador
 Es mejor no mezclar documentos con tabuladores y espacios</p>
 </div>
             	</div>
-								            	<h3><a id="index_6"></a>Nodos multilínea</h3>
-																<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace
+											            	<h3><a id="index_6"></a>Nodos multilínea</h3>
+																			<p>Estos nodos permiten tener <strong>textos completos en varias líneas</strong>. En documentos con namespace
 serán equivalentes a nodos tipo <code>TEXT</code>. Se construyen con líneas
 que empiezan por <code>:</code>, pero sin una etiqueta previa. Ejemplo:</p>
 
-												<pre>Receta: Receta de macarrones
+															<pre>Receta: Receta de macarrones
     <strong>Descripci&oacute;n:</strong>
         <strong>:Esta es la descripci&oacute;n de la recta de macarrones.</strong>
         <strong>:Bla, bla, bla</strong>
@@ -183,14 +183,14 @@ que empiezan por <code>:</code>, pero sin una etiqueta previa. Ejemplo:</p>
         Paso: (1) Hacer sofrito
         Paso: (2) Hervir macarrones
         Paso: (3) Juntar macarrones con sofrito y servir</pre>
-												<p>Acabamos de ver que el nodo <code>Descripción</code> es un nodo MULTILINE.</p>
+															<p>Acabamos de ver que el nodo <code>Descripción</code> es un nodo MULTILINE.</p>
 
-								            	<h2><a id="index_7"></a>(Prefix) Central (Sufix)</h2>
-																<p>Aunque no forma parte del lenguaje, es una práctica habitual que
+											            	<h2><a id="index_7"></a>(Prefix) Central (Sufix)</h2>
+																			<p>Aunque no forma parte del lenguaje, es una práctica habitual que
 campos simples se estructuren con <code>(prefix) central (sufix)</code>.
 Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
 
-												<pre>Receta: Receta de macarrones
+															<pre>Receta: Receta de macarrones
     Descripci&oacute;n:
         :Esta es la descripci&oacute;n de la recta de macarrones.
         :Bla, bla, bla
@@ -208,10 +208,30 @@ Pueden aparecer las 3 o sólo 1 o 2 de ellas. Ejemplo:</p>
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Anuncios</h2>
-    	<p>¡Pues sí! Ahora mismo nosotros también necesitamos publicidad. Quizá en el futuro esta situación cambie. Por el momento simplemente no es posible.</p>
-    	<p>Este espacio está reservado para este fin.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_8"></a>Parte I: Un nuevo lenguaje</h2>
+																					<ul>
+<li><a href="01-intro-2024">Capítulo 1: Introducción - 2024</a></li>
+<li><a href="02-tutorial">Capítulo 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Capítulo 3: Potenciado con IA</a></li>
+</ul>
+
+													            	<h2><a id="index_9"></a>Parte II: Documentos</h2>
+																					<ul>
+<li><a href="04-raw-docs">Capítulo 4: Documentos sin namespace</a></li>
+<li><a href="05-ns-docs">Capítulo 5: Documentos con namespace</a></li>
+<li><a href="06-examples">Capítulo 6: Ejemplos</a></li>
+<li><a href="07-parser">Capítulo 7: Parseo de documentos</a></li>
+</ul>
+
+													            	<h2><a id="index_10"></a>Parte III: Reflexiones</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Capítulo 8: <span class='STxT'>STxT</span> y otras tecnologías</a></li>
+<li><a href="09-semantic-web">Capítulo 9: Web semántica</a></li>
+<li><a href="10-stxt-now">Capítulo 10: ¿Y ahora qué?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->

@@ -71,12 +71,12 @@
 	
 			
 			
-															            	<h2><a id="index_0"></a>Chapter 5: Documents With Namespace</h2>
-																<div class="row">
+																								            	<h2><a id="index_0"></a>Chapter 5: Documents With Namespace</h2>
+																			<div class="row">
             		<div class="assert"><p>Everything explained for documents without a namespace applies, except for multiline nodes.</p>
 </div>
             	</div>
-												<p>As a summary of the previous:</p>
+															<p>As a summary of the previous:</p>
 <ul>
 <li>UTF-8 Encoding Always</li>
 <li>Identifiers are CASE-INSENSITIVE</li>
@@ -85,23 +85,23 @@
 <li>4 spaces are equivalent to one tab</li>
 </ul>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>The use of <code>:</code> for multiline nodes is not allowed.<br>This is implicit due to the node type.</p>
 </div>
             	</div>
-												<p>If the <code>:</code> character is inserted, it will simply become part of the text, not considered special. The other text types do not allow multiple lines, so it will have no effect.</p>
+															<p>If the <code>:</code> character is inserted, it will simply become part of the text, not considered special. The other text types do not allow multiple lines, so it will have no effect.</p>
 
-								            	<h2><a id="index_1"></a>Namespace Definition</h2>
-																<p>A namespace is a document without a namespace with the first node called <code>Namespace</code>,
+											            	<h2><a id="index_1"></a>Namespace Definition</h2>
+																			<p>A namespace is a document without a namespace with the first node called <code>Namespace</code>,
 which is a structure with all the possible node types, as an example.</p>
 
-												<div class="row">
+															<div class="row">
             		<div class="assert"><p>A node is defined only once, and it cannot be redefined afterward.<br>It is allowed to appear earlier as long as the structure is not defined.</p>
 </div>
             	</div>
-												<p>Let's look at an example:</p>
+															<p>Let's look at an example:</p>
 
-												<pre>Namespace: www.demo.com/document.stxt
+															<pre>Namespace: www.demo.com/document.stxt
     Document:
         Title: (1)
         <strong>Sections: (?)</strong>
@@ -113,9 +113,9 @@ which is a structure with all the possible node types, as an example.</p>
         
     <strong>Sections:</strong>
         <strong>Section: (+) TEXT</strong></pre>
-												<p>A simpler way to define it would have been:</p>
+															<p>A simpler way to define it would have been:</p>
 
-												<pre>Namespace: www.demo.com/document.stxt
+															<pre>Namespace: www.demo.com/document.stxt
     Document:
         Title: (1)
         <strong>Sections: (?)</strong>
@@ -125,9 +125,9 @@ which is a structure with all the possible node types, as an example.</p>
             :report
             :article
             :essay</pre>
-												<p>Finally, a document from the namespace:</p>
+															<p>Finally, a document from the namespace:</p>
 
-												<pre>Document (www.demo.com/document.stxt):
+															<pre>Document (www.demo.com/document.stxt):
     Title: First simple document
     Description:
         This is the
@@ -140,8 +140,8 @@ which is a structure with all the possible node types, as an example.</p>
             This is a section
             with more than one
             line.</pre>
-								            	<h3><a id="index_2"></a>Quantity Definition</h3>
-																<p>It is allowed to define the quantity of nodes as follows:</p>
+											            	<h3><a id="index_2"></a>Quantity Definition</h3>
+																			<p>It is allowed to define the quantity of nodes as follows:</p>
 <ul>
 <li><code>?</code>: May or may not appear (maximum 1)</li>
 <li><code>+</code>: At least one node</li>
@@ -151,8 +151,8 @@ which is a structure with all the possible node types, as an example.</p>
 <li><code>num</code>: exactly <em>num</em> nodes</li>
 </ul>
 
-								            	<h3><a id="index_3"></a>Node Types</h3>
-																<p>The following node types are allowed:</p>
+											            	<h3><a id="index_3"></a>Node Types</h3>
+																			<p>The following node types are allowed:</p>
 <ul>
 <li><code>STRING</code> (Default value)</li>
 <li><code>TEXT</code> (allows multiline, does not allow child nodes)</li>
@@ -175,10 +175,30 @@ which is a structure with all the possible node types, as an example.</p>
 			  </article>
 	  	
 	  <aside id="advertisement">
-		    	    	    	    	    	<h2>Advertisements</h2>
-    	<p>That’s right! Right now we also need advertising. Perhaps in the future this situation will change. For now, it is simply not possible.</p>
-    	<p>This space is reserved for this purpose.</p>
-    	
+		    	    	    	    	    	
+    																															            	<h2><a id="index_4"></a>Part I: A New Language</h2>
+																					<ul>
+<li><a href="01-intro-2024">Chapter 1: Introduction - 2024</a></li>
+<li><a href="02-tutorial">Chapter 2: Tutorial</a></li>
+<li><a href="03-ai-powered">Chapter 3: AI-Powered</a></li>
+</ul>
+
+													            	<h2><a id="index_5"></a>Part II: Documents</h2>
+																					<ul>
+<li><a href="04-raw-docs">Chapter 4: Documents Without Namespace</a></li>
+<li><a href="05-ns-docs">Chapter 5: Documents With Namespace</a></li>
+<li><a href="06-examples">Chapter 6: Examples</a></li>
+<li><a href="07-parser">Chapter 7: Document Parsing</a></li>
+</ul>
+
+													            	<h2><a id="index_6"></a>Part III: Reflections</h2>
+																					<ul>
+<li><a href="08-stxt-vs">Chapter 8: <span class='STxT'>STxT</span> and Other Technologies</a></li>
+<li><a href="09-semantic-web">Chapter 9: Semantic Web</a></li>
+<li><a href="10-stxt-now">Chapter 10: What Now?</a></li>
+</ul>
+
+						    	
     	<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- <span class='STxT'>STxT</span> - Adaptable -->
