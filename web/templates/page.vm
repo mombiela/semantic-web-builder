@@ -103,14 +103,12 @@
     	##<p>${lang.get("lat.sponsors.2")}</p>
     	##<p>${lang.get("lat.sponsors.3")}</p>
     	##<br>
-    	
+    	#parse("/ads.vm")
     	#if($index)
 			#foreach($node in $index.getChilds())
 				#parse("/node.vm")
 			#end
     	#end
-
-    	#parse("/ads.vm")
 	  </aside>
 	</div>
 	
