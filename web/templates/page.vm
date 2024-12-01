@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=20241124">
+    <link rel="stylesheet" href="/css/site.css?v=20241201">
 		
 	#if(${lang.get("lang")} == "en")
 	<link rel="alternate" hreflang="es" href="http://semantictext.info/es/${doc_name}.html" />
@@ -92,9 +92,7 @@
 			#parse("/node.vm")
 		#end
 	
-		#if($doc.getChilds("text").size()>0)
-			#parse("/navigation.vm")
-		#end
+		##parse("/navigation.vm")
 	  </article>
 	  	
 	  <aside id="advertisement">
@@ -104,9 +102,11 @@
     	##<p>${lang.get("lat.sponsors.3")}</p>
     	##<br>
     	#if($index)
+    		<div class="d-none d-md-block">
 			#foreach($node in $index.getChilds())
 				#parse("/node.vm")
 			#end
+			</div>
     	#end
     	#parse("/ads.vm")
 	  </aside>
