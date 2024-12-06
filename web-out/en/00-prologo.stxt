@@ -4,7 +4,7 @@ Document (globalcampus.site/namespace.stxt):
 		
 	Navigation:
 		Previous: Previous (00-poesia)
-		Next: Next (00-table-content)
+		Next: Next (01-intro-2024)
 		
 	Metadata:
 		Description: Prerequisites and reading order of the book
@@ -41,5 +41,5 @@ Document (globalcampus.site/namespace.stxt):
 	Header: Reading Order
 		
 	Content:
-		Everyone should read the [Tutorial](tutorial). It’s essential. 
+		Everyone should read the [Tutorial](02-tutorial). It’s essential. 
 		From there, the order doesn’t matter. I leave it to your choice :-)
