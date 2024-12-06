@@ -1,7 +1,7 @@
 Default (globalcampus.site/namespace.stxt):
 	Title: STxT: Semantic Text
 	Subtitle: Un lenguaje para la web
-	Left Menu: [¡Hola!](index) [El libro](00-table-content) [Tutorial](02-tutorial) [STxT vs](08-stxt-vs) [Semantic Text](stxt) [Global Campus](global-campus)
+	Left Menu: [¡Hola!](index) [El libro](00-prologo) [Tutorial](02-stxt-tutorial) [STxT vs](08-stxt-vs) [Semantic Text](stxt) [Global Campus](global-campus)
 	Right Menu: [Sobre nosotros](about) [Donaciones](donate) [Contribuir](contribute) [Licencia](licence) | **Español** _[English](../en/)_
 	Footer: &copy; 2014 - Esta obra está bajo una [Licencia MIT](https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE)
 	Display edit: false
