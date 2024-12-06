@@ -41,6 +41,6 @@ Document (globalcampus.site/namespace.stxt):
 	header: Orden de lectura
 		
 	Content:
-		Todo el mundo debería leer el [Tutorial](02-tutorial). Es básico. 
+		Todo el mundo debería leer el [Tutorial](02-stxt-tutorial). Es básico. 
 		A partir de aquí el orden es indiferente. Lo dejo a vuestra elección :-)
 		

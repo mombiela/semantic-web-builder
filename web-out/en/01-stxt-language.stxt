@@ -1,4 +1,4 @@
-Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
+Document (globalcampus.site/namespace.stxt): Chapter 1: STXT, The Language
 	Default:
 		Title: STXT: The Book
 		
@@ -7,11 +7,38 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		Next: Next (02-stxt-tutorial)
 
 	Metadata:
-		Title: What is STxT?
+		Title: Chapter 1: What is STxT?
 		Description: Description of the language and the features that make it unique.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
+		
 	Header: Chapter 1: What is STxT?
+	
+	Content:
+		It is a purely semantic language, with very basic rules,
+		that allows the creation of documents with structured content
+		that is easy to interpret, both by humans and machines.
+		You could be reading a document in STxT without even realizing
+		that it is.
+		
+		STxT: A language for the web. It doesn’t mean just another one among many.
+		It means _A_ language for the web. Just one. And at the same time, many.
+		All those you want. This is the proposal.
+		
+		STxT is a language for writing structured documents. It allows creating
+		documents unambiguously, adhering to very precise rules,
+		but producing documents that can be read by people
+		without technical knowledge.
+						 
+		In fact, the documents have meaning in themselves,
+		without any additional translation being necessary.
+		They have a hierarchical structure very similar to XML documents,
+		and their translation can be direct.
+		
+		In the future, STxT could be a replacement for other technologies like XML or YAML.
+	
+	Header: Intro 2013
+		
 	Assert:
 		This project is the result of years of _unconscious reflection_,\
 		although it only took a moment of inspiration.
@@ -31,3 +58,4 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		
 	Assert: Shall we start?
 	#Assert: Ready? I didn’t know what to put :-D
+

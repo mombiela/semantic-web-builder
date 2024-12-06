@@ -41,5 +41,5 @@ Document (globalcampus.site/namespace.stxt):
 	Header: Reading Order
 		
 	Content:
-		Everyone should read the [Tutorial](02-tutorial). It’s essential. 
+		Everyone should read the [Tutorial](02-stxt-tutorial). It’s essential. 
 		From there, the order doesn’t matter. I leave it to your choice :-)

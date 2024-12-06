@@ -13,6 +13,32 @@ Document (globalcampus.site/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		last modif: 2013-03-01
 	
 	Header: Capítulo 1: ¿Qué es STxT?
+
+	Content:
+		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
+		que permite la creación de documentos con un contenido estructurado 
+		y sencillo de interpretar, tanto por humanos como por máquinas. 
+		Podríais estar leyendo un documento en STxT sin daros cuenta en realidad
+		que lo es. 	
+		
+		STxT: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
+		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
+		Todos los que se quieran. Ésta es la propuesta.
+		
+		STxT es un lenguaje para escribir documentos estructurados. Permite crear
+		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
+		pero consiguiendo documentos que pueden ser leídos por personas 
+		sin conocimientos informáticos.
+						 
+		De hecho, los documentos tienen significado por si mismos,
+		sin ser necesaria ninguna traducción adicional.
+		Tienen una estructura jerárquica muy parecida a documentos xml,
+		y su traducción puede ser directa.                                
+		
+		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o YAML.
+
+	Header: Introducción 2013
+	
 	assert:
 		Este proyecto es fruto de años de _inconsciente reflexión_,\
 		aunque sólo se necesitó un instante de inspiración.
@@ -32,4 +58,5 @@ Document (globalcampus.site/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		
 	assert:	¿Empezamos?
 	#assert: ¿Preparados? No sabía que poner :-D
+	
 	
