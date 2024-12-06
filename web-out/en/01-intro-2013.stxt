@@ -2,6 +2,10 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 	Default:
 		Title: STXT: The Book
 		
+	Navigation:
+		Previous: Anterior (01-stxt-language)
+		Next: Siguiente (02-tutorial)
+
 	Metadata:
 		Title: Chapter 1: What is STxT?
 		Description: Description of the language and the features that make it unique.
