@@ -103,9 +103,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
 			    Descripción: (?) TEXT
 			    Comensales: (?) NUMBER
 				Dificultad: (?) ENUM
-				   	: fácil
-				   	: media
-			    	: difícil
+				    : fácil
+				    : media
+			        : difícil
 			    Ingredientes: (1)
 					Ingrediente: (+)
 			    Pasos: (1)
