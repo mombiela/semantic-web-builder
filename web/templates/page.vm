@@ -112,7 +112,7 @@
     	##<p>${lang.get("lat.sponsors.3")}</p>
     	##<br>
     	#if($index)
-    		<div class="d-none d-md-block" style="margin-bottom:5em;">
+    		<div class="d-none d-md-block" style="margin-bottom:4em;">
 			#foreach($node in $index.getChilds())
 				#parse("/node.vm")
 			#end
