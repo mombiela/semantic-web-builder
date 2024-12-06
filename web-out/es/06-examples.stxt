@@ -7,6 +7,207 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		Next: Siguiente (07-parser)
 
 	Header: Capítulo 6: Ejemplos
+	Header: Recetas y recetarios
+	
+	Subheader: Namespace de recetas
+	
+	Code:
+		# ------
+		# Receta
+		# ------
+		
+		Namespace: www.kocinando.com/receta.stxt
+		
+			Receta:
+			    Nombre Receta: (1)
+			    Descripción: (?) TEXT
+			    Ingredientes: (1)
+					Ingrediente: (+)
+			    		Cantidad: (1) NUMBER
+			    		Unidades: (1)
+			    		Nombre: (1)
+			    Pasos: (1)
+			    	Paso: (+) NATURAL
+			    	Descripción: (1)
+				Dificultad: (?) ENUM
+				   	: fácil
+				   	: media
+			    	: difícil
+			    Calorias: (?) NUMBER
+			    Comensales: (?) NUMBER
+			    Documento: (*) (www.dokumentando.com/doc_simple.stxt)
+	
+	Subheader: Namespace de rectario
+	
+	Code:
+		Namespace: www.kocinando.com/recetario.stxt
+		
+			Recetario:
+				Receta: (+) (www.kocinando.com/receta.stxt)
+	
+	Subheader: Receta
+	
+	Code:
+		# -----------------
+		# Receta macarrones
+		# -----------------
+		
+		Receta(www.kocinando.com/receta.stxt):
+			Nombre Receta: Una receta
+			Descripción: Esta es una receta de ejemplo
+			Pasos:
+				Paso: 1
+				Descripción:
+			        Esta receta te guiará a través de los pasos necesarios para preparar una deliciosa pizza de jamón en casa.
+			        Sigue las instrucciones cuidadosamente para obtener los mejores resultados.
+		    Dificultad: media
+		    Ingredientes:
+				Ingrediente:
+		    		Cantidad: 1
+		    		Unidades: dl
+		    		Nombre: Agua
+		    
+			Documento:
+		    	Título: Primer documento simple
+		    	Description:
+		    		Este es el
+		    		primer documento
+		    		simple. Tiene varias líneas
+		    	Tipo Documento: informe
+		    	
+	Subheader: Recetario
+	
+	Code:
+		Recetario(www.kocinando.com/recetario.stxt):
+		
+			# --------
+			# Receta 1
+			# --------
+			
+			Receta:
+				Nombre Receta: Una receta
+				Descripción: Esta es una receta de ejemplo
+				Ingredientes:
+					Ingrediente:
+						Cantidad:10
+						Unidades:g
+						Nombre:tomate
+					Ingrediente:
+						Cantidad:1
+						Unidades:u
+						Nombre:pera
+					Ingrediente:
+						Cantidad:200
+						Unidades:dl
+						Nombre:leche
+					
+				Pasos:
+					Paso: 1
+					Paso: 2
+					Paso: 3
+					Paso: 4
+					Descripción: 
+						Hay que vigilar este Paso, ya que 
+						no se puede garantizar su buen funcionamiento.
+						En caso de error consultar realizar una llamada 
+						al servicio único.
+						
+						Esta es otra linea
+						# Hola
+						Mundo
+					# Hola
+			
+			
+			Receta:
+				Nombre Receta: Una receta
+				Descripción: Esta es una receta de ejemplo
+				Ingredientes:
+					Ingrediente:
+						Cantidad:10
+						Unidades:g
+						Nombre:tomate
+					Ingrediente:
+						Cantidad:1
+						Unidades:u
+						Nombre:pera
+					Ingrediente:
+						Cantidad:200
+						Unidades:dl
+						Nombre:leche
+				Pasos:
+					Paso: 5
+					Paso: 6
+					Paso: 7
+					Paso: 8
+					Descripción: Hay que vigilar este Paso, ya que
+						no se puede garantizar su buen funcionamiento.
+						En caso de error consultar realizar una llamada
+						al servicio único
+					Paso:Paso 9
+	
+	Header: Documentos
+	
+	Subheader: Namespace documento simple
+	
+	Code:
+		Namespace: www.dokumentando.com/doc_simple.stxt
+		
+			Documento:
+		        Título: (1)
+		        Secciones: (*)
+		        Description: (1) TEXT
+		        Tipo Documento: (1) ENUM
+		        	:informe
+		        	:artículo
+		        	:ensayo
+		        
+		    Secciones:
+		        Seccion: (+) TEXT
+
+	Subheader: Documento simple
+	
+	Code:
+		Documento (www.dokumentando.com/doc_simple.stxt):
+		    Título: Primer documento simple
+		    Description:
+		    	Este es el
+		    	primer documento
+		    	simple. Tiene varias líneas
+		    Tipo Documento: informe
+
+	
+	Subheader: Namespace documento
+	
+	Code:
+	
+		Namespace: www.dokumentando.com/documento.stxt
+		
+			Sección:
+				Título: (1)
+		        Contenido: (1) TEXT 
+			
+		    Documento:
+		        Título: (1)
+		        Cuerpo: (1) TEXT 
+		        Autor: (1) 
+		        Fecha Creación: (1) DATE
+		        Última modificacion: (1) TIMESTAMP
+		        Email Contacto: (1) EMAIL 
+		        Sitio Web: (1) URL
+		        Código Postal: (1) REGEX
+		        	: ^\d{5}$
+		        Es Público: (1) BOOLEAN 
+		        Color Tema: (?) HEXADECIMAL 
+		        Secciones: (1)
+			        Sección: (+)
+		        Tipo Documento: (1) ENUM
+		        	: informe
+		        	: artículo
+		        	: ensayo
+	Subheader: Documento
+	
+	Assert: Ahora os toca a vosotros crearlo ;-)
+	
 	Header: Clientes
 	Subheader: Cliente sin namespace
 	
@@ -223,208 +424,4 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 				Titular cuenta: (?)
 			    Número cuenta: (1) 
 			
-	Header: Recetas y recetarios
-	
-	Subheader: Namespace de recetas
-	
-	Code:
-		# ------
-		# Receta
-		# ------
-		
-		Namespace: www.kocinando.com/receta.stxt
-		
-			Receta:
-			    Nombre Receta: (1)
-			    Descripción: (?) TEXT
-			    Ingredientes: (1)
-					Ingrediente: (+)
-			    		Cantidad: (1) NUMBER
-			    		Unidades: (1)
-			    		Nombre: (1)
-			    Pasos: (1)
-			    	Paso: (+) NATURAL
-			    	Descripción: (1)
-				Dificultad: (?) ENUM
-				   	: fácil
-				   	: media
-			    	: difícil
-			    Calorias: (?) NUMBER
-			    Comensales: (?) NUMBER
-			    Documento: (*) (www.dokumentando.com/doc_simple.stxt)
-	
-	Subheader: Namespace de rectario
-	
-	Code:
-		Namespace: www.kocinando.com/recetario.stxt
-		
-			Recetario:
-				Receta: (+) (www.kocinando.com/receta.stxt)
-	
-	Subheader: Receta
-	
-	Code:
-		# -----------------
-		# Receta macarrones
-		# -----------------
-		
-		Receta(www.kocinando.com/receta.stxt):
-			Nombre Receta: Una receta
-			Descripción: Esta es una receta de ejemplo
-			Pasos:
-				Paso: 1
-				Descripción:
-			        Esta receta te guiará a través de los pasos necesarios para preparar una deliciosa pizza de jamón en casa.
-			        Sigue las instrucciones cuidadosamente para obtener los mejores resultados.
-		    Dificultad: media
-		    Ingredientes:
-				Ingrediente:
-		    		Cantidad: 1
-		    		Unidades: dl
-		    		Nombre: Agua
-		    
-			Documento:
-		    	Título: Primer documento simple
-		    	Description:
-		    		Este es el
-		    		primer documento
-		    		simple. Tiene varias líneas
-		    	Tipo Documento: informe
-		    	
-	Subheader: Recetario
-	
-	Code:
-		Recetario(www.kocinando.com/recetario.stxt):
-		
-			# --------
-			# Receta 1
-			# --------
-			
-			Receta:
-				Nombre Receta: Una receta
-				Descripción: Esta es una receta de ejemplo
-				Ingredientes:
-					Ingrediente:
-						Cantidad:10
-						Unidades:g
-						Nombre:tomate
-					Ingrediente:
-						Cantidad:1
-						Unidades:u
-						Nombre:pera
-					Ingrediente:
-						Cantidad:200
-						Unidades:dl
-						Nombre:leche
-					
-				Pasos:
-					Paso: 1
-					Paso: 2
-					Paso: 3
-					Paso: 4
-					Descripción: 
-						Hay que vigilar este Paso, ya que 
-						no se puede garantizar su buen funcionamiento.
-						En caso de error consultar realizar una llamada 
-						al servicio único.
-						
-						Esta es otra linea
-						# Hola
-						Mundo
-					# Hola
-			
-			
-			Receta:
-				Nombre Receta: Una receta
-				Descripción: Esta es una receta de ejemplo
-				Ingredientes:
-					Ingrediente:
-						Cantidad:10
-						Unidades:g
-						Nombre:tomate
-					Ingrediente:
-						Cantidad:1
-						Unidades:u
-						Nombre:pera
-					Ingrediente:
-						Cantidad:200
-						Unidades:dl
-						Nombre:leche
-				Pasos:
-					Paso: 5
-					Paso: 6
-					Paso: 7
-					Paso: 8
-					Descripción: Hay que vigilar este Paso, ya que
-						no se puede garantizar su buen funcionamiento.
-						En caso de error consultar realizar una llamada
-						al servicio único
-					Paso:Paso 9
-	
-	Header: Documentos
-	
-	Subheader: Namespace documento simple
-	
-	Code:
-		Namespace: www.dokumentando.com/doc_simple.stxt
-		
-			Documento:
-		        Título: (1)
-		        Secciones: (*)
-		        Description: (1) TEXT
-		        Tipo Documento: (1) ENUM
-		        	:informe
-		        	:artículo
-		        	:ensayo
-		        
-		    Secciones:
-		        Seccion: (+) TEXT
-
-	Subheader: Documento simple
-	
-	Code:
-		Documento (www.dokumentando.com/doc_simple.stxt):
-		    Título: Primer documento simple
-		    Description:
-		    	Este es el
-		    	primer documento
-		    	simple. Tiene varias líneas
-		    Tipo Documento: informe
-
-	
-	Subheader: Namespace documento
-	
-	Code:
-	
-		Namespace: www.dokumentando.com/documento.stxt
-		
-			Sección:
-				Título: (1)
-		        Contenido: (1) TEXT 
-			
-		    Documento:
-		        Título: (1)
-		        Cuerpo: (1) TEXT 
-		        Autor: (1) 
-		        Fecha Creación: (1) DATE
-		        Última modificacion: (1) TIMESTAMP
-		        Email Contacto: (1) EMAIL 
-		        Sitio Web: (1) URL
-		        Código Postal: (1) REGEX
-		        	: ^\d{5}$
-		        Es Público: (1) BOOLEAN 
-		        Color Tema: (?) HEXADECIMAL 
-		        Secciones: (1)
-			        Sección: (+)
-		        Tipo Documento: (1) ENUM
-		        	: informe
-		        	: artículo
-		        	: ensayo
-	Subheader: Documento
-	
-	Assert: Ahora os toca a vosotros crearlo ;-)
-	
-	
-	
-	
 	

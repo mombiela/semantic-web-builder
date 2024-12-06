@@ -7,6 +7,205 @@ Document (globalcampus.site/namespace.stxt): Chapter 6: Examples
 		Next: Next (07-parser)
 
 	Header: Chapter 6: Examples
+	Header: Recipes and Recipe Books
+	
+	Subheader: Recipe Namespace
+	
+	Code:
+		# ------
+		# Recipe
+		# ------
+		
+		Namespace: www.kocinando.com/receta.stxt
+		
+			Recipe:
+			    Recipe Name: (1)
+			    Description: (?) TEXT
+			    Ingredients: (1)
+					Ingredient: (+)
+			    		Quantity: (1) NUMBER
+			    		Units: (1)
+			    		Name: (1)
+			    Steps: (1)
+			    	Step: (+) NATURAL
+			    	Description: (1)
+				Difficulty: (?) ENUM
+				   	: easy
+				   	: medium
+			    	: hard
+			    Calories: (?) NUMBER
+			    Servings: (?) NUMBER
+			    Document: (*) (www.dokumentando.com/doc_simple.stxt)
+	
+	Subheader: Recipe Book Namespace
+	
+	Code:
+		Namespace: www.kocinando.com/recetario.stxt
+		
+			Recipe Book:
+				Recipe: (+) (www.kocinando.com/receta.stxt)
+	
+	Subheader: Recipe
+	
+	Code:
+		# -----------------
+		# Macaroni Recipe
+		# -----------------
+		
+		Recipe(www.kocinando.com/receta.stxt):
+			Recipe Name: A Recipe
+			Description: This is an example recipe
+			Steps:
+				Step: 1
+				Description:
+			        This recipe will guide you through the steps needed to prepare a delicious ham pizza at home.
+			        Follow the instructions carefully to achieve the best results.
+		    Difficulty: medium
+		    Ingredients:
+				Ingredient:
+		    		Quantity: 1
+		    		Units: dl
+		    		Name: Water
+		    
+			Document:
+		    	Title: First Simple Document
+		    	Description:
+		    		This is the
+		    		first simple document.
+		    		It has multiple lines.
+		    	Document Type: report
+		    	
+	Subheader: Recipe Book
+	
+	Code:
+		Recipe Book(www.kocinando.com/recetario.stxt):
+		
+			# --------
+			# Recipe 1
+			# --------
+			
+			Recipe:
+				Recipe Name: A Recipe
+				Description: This is an example recipe
+				Ingredients:
+					Ingredient:
+						Quantity: 10
+						Units: g
+						Name: tomato
+					Ingredient:
+						Quantity: 1
+						Units: u
+						Name: pear
+					Ingredient:
+						Quantity: 200
+						Units: dl
+						Name: milk
+					
+				Steps:
+					Step: 1
+					Step: 2
+					Step: 3
+					Step: 4
+					Description: 
+						You must watch this Step, as 
+						it cannot guarantee proper operation.
+						In case of error, consult the unique service.
+						
+						This is another line
+						# Hello
+						World
+					# Hello
+			
+			
+			Recipe:
+				Recipe Name: A Recipe
+				Description: This is an example recipe
+				Ingredients:
+					Ingredient:
+						Quantity: 10
+						Units: g
+						Name: tomato
+					Ingredient:
+						Quantity: 1
+						Units: u
+						Name: pear
+					Ingredient:
+						Quantity: 200
+						Units: dl
+						Name: milk
+				Steps:
+					Step: 5
+					Step: 6
+					Step: 7
+					Step: 8
+					Description: You must watch this Step, as
+						it cannot guarantee proper operation.
+						In case of error, consult the unique service.
+					Step: Step 9
+	
+	Header: Documents
+	
+	Subheader: Simple Document Namespace
+	
+	Code:
+		Namespace: www.dokumentando.com/doc_simple.stxt
+		
+			Document:
+		        Title: (1)
+		        Sections: (*)
+		        Description: (1) TEXT
+		        Document Type: (1) ENUM
+		        	:report
+		        	:article
+		        	:essay
+		        
+		    Sections:
+		        Section: (+) TEXT
+
+	Subheader: Simple Document
+	
+	Code:
+		Document (www.dokumentando.com/doc_simple.stxt):
+		    Title: First Simple Document
+		    Description:
+		    	This is the
+		    	first simple document.
+		    	It has multiple lines.
+		    Document Type: report
+
+	
+	Subheader: Document Namespace
+	
+	Code:
+	
+		Namespace: www.dokumentando.com/documento.stxt
+		
+			Section:
+				Title: (1)
+		        Content: (1) TEXT 
+			
+		    Document:
+		        Title: (1)
+		        Body: (1) TEXT 
+		        Author: (1) 
+		        Creation Date: (1) DATE
+		        Last Modification: (1) TIMESTAMP
+		        Contact Email: (1) EMAIL 
+		        Website: (1) URL
+		        Postal Code: (1) REGEX
+		        	: ^\d{5}$
+		        Is Public: (1) BOOLEAN 
+		        Theme Color: (?) HEXADECIMAL 
+		        Sections: (1)
+			        Section: (+)
+		        Document Type: (1) ENUM
+		        	: report
+		        	: article
+		        	: essay
+	Subheader: Document
+	
+	Assert: Now it's your turn to create it ;-)
+
 	Header: Client
 	Subheader: Client without Namespace
 	
@@ -223,201 +422,3 @@ Document (globalcampus.site/namespace.stxt): Chapter 6: Examples
 				Account Holder: (?)
 			    Account Number: (1) 
 			
-	Header: Recipes and Recipe Books
-	
-	Subheader: Recipe Namespace
-	
-	Code:
-		# ------
-		# Recipe
-		# ------
-		
-		Namespace: www.kocinando.com/receta.stxt
-		
-			Recipe:
-			    Recipe Name: (1)
-			    Description: (?) TEXT
-			    Ingredients: (1)
-					Ingredient: (+)
-			    		Quantity: (1) NUMBER
-			    		Units: (1)
-			    		Name: (1)
-			    Steps: (1)
-			    	Step: (+) NATURAL
-			    	Description: (1)
-				Difficulty: (?) ENUM
-				   	: easy
-				   	: medium
-			    	: hard
-			    Calories: (?) NUMBER
-			    Servings: (?) NUMBER
-			    Document: (*) (www.dokumentando.com/doc_simple.stxt)
-	
-	Subheader: Recipe Book Namespace
-	
-	Code:
-		Namespace: www.kocinando.com/recetario.stxt
-		
-			Recipe Book:
-				Recipe: (+) (www.kocinando.com/receta.stxt)
-	
-	Subheader: Recipe
-	
-	Code:
-		# -----------------
-		# Macaroni Recipe
-		# -----------------
-		
-		Recipe(www.kocinando.com/receta.stxt):
-			Recipe Name: A Recipe
-			Description: This is an example recipe
-			Steps:
-				Step: 1
-				Description:
-			        This recipe will guide you through the steps needed to prepare a delicious ham pizza at home.
-			        Follow the instructions carefully to achieve the best results.
-		    Difficulty: medium
-		    Ingredients:
-				Ingredient:
-		    		Quantity: 1
-		    		Units: dl
-		    		Name: Water
-		    
-			Document:
-		    	Title: First Simple Document
-		    	Description:
-		    		This is the
-		    		first simple document.
-		    		It has multiple lines.
-		    	Document Type: report
-		    	
-	Subheader: Recipe Book
-	
-	Code:
-		Recipe Book(www.kocinando.com/recetario.stxt):
-		
-			# --------
-			# Recipe 1
-			# --------
-			
-			Recipe:
-				Recipe Name: A Recipe
-				Description: This is an example recipe
-				Ingredients:
-					Ingredient:
-						Quantity: 10
-						Units: g
-						Name: tomato
-					Ingredient:
-						Quantity: 1
-						Units: u
-						Name: pear
-					Ingredient:
-						Quantity: 200
-						Units: dl
-						Name: milk
-					
-				Steps:
-					Step: 1
-					Step: 2
-					Step: 3
-					Step: 4
-					Description: 
-						You must watch this Step, as 
-						it cannot guarantee proper operation.
-						In case of error, consult the unique service.
-						
-						This is another line
-						# Hello
-						World
-					# Hello
-			
-			
-			Recipe:
-				Recipe Name: A Recipe
-				Description: This is an example recipe
-				Ingredients:
-					Ingredient:
-						Quantity: 10
-						Units: g
-						Name: tomato
-					Ingredient:
-						Quantity: 1
-						Units: u
-						Name: pear
-					Ingredient:
-						Quantity: 200
-						Units: dl
-						Name: milk
-				Steps:
-					Step: 5
-					Step: 6
-					Step: 7
-					Step: 8
-					Description: You must watch this Step, as
-						it cannot guarantee proper operation.
-						In case of error, consult the unique service.
-					Step: Step 9
-	
-	Header: Documents
-	
-	Subheader: Simple Document Namespace
-	
-	Code:
-		Namespace: www.dokumentando.com/doc_simple.stxt
-		
-			Document:
-		        Title: (1)
-		        Sections: (*)
-		        Description: (1) TEXT
-		        Document Type: (1) ENUM
-		        	:report
-		        	:article
-		        	:essay
-		        
-		    Sections:
-		        Section: (+) TEXT
-
-	Subheader: Simple Document
-	
-	Code:
-		Document (www.dokumentando.com/doc_simple.stxt):
-		    Title: First Simple Document
-		    Description:
-		    	This is the
-		    	first simple document.
-		    	It has multiple lines.
-		    Document Type: report
-
-	
-	Subheader: Document Namespace
-	
-	Code:
-	
-		Namespace: www.dokumentando.com/documento.stxt
-		
-			Section:
-				Title: (1)
-		        Content: (1) TEXT 
-			
-		    Document:
-		        Title: (1)
-		        Body: (1) TEXT 
-		        Author: (1) 
-		        Creation Date: (1) DATE
-		        Last Modification: (1) TIMESTAMP
-		        Contact Email: (1) EMAIL 
-		        Website: (1) URL
-		        Postal Code: (1) REGEX
-		        	: ^\d{5}$
-		        Is Public: (1) BOOLEAN 
-		        Theme Color: (?) HEXADECIMAL 
-		        Sections: (1)
-			        Section: (+)
-		        Document Type: (1) ENUM
-		        	: report
-		        	: article
-		        	: essay
-	Subheader: Document
-	
-	Assert: Now it's your turn to create it ;-)
