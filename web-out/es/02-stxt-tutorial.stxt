@@ -1,4 +1,4 @@
-Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
+Document (globalcampus.site/namespace.stxt): Capítulo 2: STXT Tutorial
 	Default:
 		Title: STXT: El Libro
 		
@@ -6,7 +6,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: Tutorial
 		Previous: Anterior (01-stxt-language)
 		Next: Siguiente (03-ai-powered)
 
-	header: Capítulo 2: Tutorial
+	header: Capítulo 2: STxT Tutorial
 	
 	Content:
 		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 

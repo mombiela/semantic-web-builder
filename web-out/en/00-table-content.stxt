@@ -9,7 +9,7 @@ Document (globalcampus.site/namespace.stxt): STXT: The Book
 	Header: Part I: A New Language
 	Content:
 		* [Chapter 1: What is STxT?](01-stxt-language)
-		* [Chapter 2: Tutorial](02-stxt-tutorial)
+		* [Chapter 2: STxT Tutorial](02-stxt-tutorial)
 		* [Chapter 3: AI-Powered](03-ai-powered)
 			
 	Header: Part II: Documents
