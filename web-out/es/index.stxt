@@ -58,20 +58,20 @@ Document (globalcampus.site/namespace.stxt):STXT - Semantic TexT, el lenguaje
 		* Namespaces sencillos, **muy sencillos** (y opcionales)
 		* Integra fácilmente textos de otros lenguajes de programación
 		
-	SubHeader: Y aún hay más: GlobalCampus.site
-		
-	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.site/#github/mombiela/globalcampus-docs-es/)
-		
-	Assert: 
-		Para nosotros el mejor editor de páginas web que existe.\
-		El primer **Meta Portal de aprendizaje**\
-		El primer sitio que usa STxT
-		
-	Content:
-		* Basado en STxT, por supuesto ;-) 
-		* Libre :-D
-		* Adaptable :-)
-		* Rápido :-O
-		* _Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_
+#	SubHeader: Y aún hay más: GlobalCampus.site
+#		
+#	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.site/#github/mombiela/globalcampus-docs-es/)
+#		
+#	Assert: 
+#		Para nosotros el mejor editor de páginas web que existe.\
+#		El primer **Meta Portal de aprendizaje**\
+#		El primer sitio que usa STxT
+#		
+#	Content:
+#		* Basado en STxT, por supuesto ;-) 
+#		* Libre :-D
+#		* Adaptable :-)
+#		* Rápido :-O
+#		* _Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_
 		
 		**Te va a encantar :-P**
