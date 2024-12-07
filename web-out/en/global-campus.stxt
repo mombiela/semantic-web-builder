@@ -18,7 +18,7 @@ Document (globalcampus.site/namespace.stxt): Global Campus
 		or developments. We used this same portal for the project, and
 		we are very satisfied with the results.
 	
-	Header: Why Did You Create It?
+	Subheader: Why Did You Create It?
 	
 	Content:
 		In 2013, we carried out a project called _[SemanticWebBuilder](https://github.com/mombiela/semantic-web-builder)_, which is exactly
@@ -38,7 +38,7 @@ Document (globalcampus.site/namespace.stxt): Global Campus
 		 
 	# Greetings to the Apache community!! The world of computing wouldn’t be the same without you!!
 		
-	Header: What Are the Requirements?
+	Subheader: What Are the Requirements?
 		
 	Content: 
 		Almost nothing! Clone a GitHub project... and you can start making changes and testing them!

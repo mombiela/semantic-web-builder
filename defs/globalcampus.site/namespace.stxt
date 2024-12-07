@@ -12,8 +12,9 @@ Namespace: globalcampus.site/namespace.stxt
 			Previous: (?)
 			Next: (?)
 		Preamble: (?) TEXT
-		Header: (*)
+		Header: (?)
 		Subheader: (*)
+		SubSubHeader: (*)
 		Content: (*) TEXT
 		Math: (*) TEXT
 		Assert: (*) TEXT

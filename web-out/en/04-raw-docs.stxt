@@ -28,7 +28,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 
 	Content: Let's delve a little deeper.
 
-	Header: Encoding
+	Subheader: Encoding
 	
 	Assert: UTF-8 Encoding Always
 	
@@ -37,7 +37,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 		Nowadays, it’s the most acceptable, most universal,
 		and most implemented encoding. I don’t think this will change in the coming years.
 	
-	Header: Identifiers
+	Subheader: Identifiers
 	
 	Assert: Identifiers are CASE-INSENSITIVE
 	
@@ -46,7 +46,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 		Why not? Just to seem more technical?\
 		Times are changing :-D
 
-	Header: Escape Characters
+	Subheader: Escape Characters
 	
 	Assert: There are no escape characters
 	
@@ -55,7 +55,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 		**There are no escape characters** _because they aren’t necessary_.
 		Due to the structure, they aren’t needed.
 
-	Header: Comments
+	Subheader: Comments
 		
 	Content:
 		All tech-savvy individuals know what comments are in any language.
@@ -98,7 +98,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 	Content: It’s worth noting that `(1),(2),(3) and (4)` are comments, while 
 		`(5)` is not, as it is within the indented text.
 
-	Header: Nodes and Indentation
+	Subheader: Nodes and Indentation
 	
 	Content:	
 		We mentioned earlier that an STxT document is a set of nested nodes.
@@ -134,7 +134,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 4: Documents Without Namesp
 	Content:
 		We’ve just seen that the `Description` node is a MULTILINE node.
 	
-	Header: (Prefix) Central (Suffix)
+	Subheader: (Prefix) Central (Suffix)
 	
 	Content: 
 		Although it’s not part of the language, it’s common practice that 

@@ -31,7 +31,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		
 		Ojead este capítulo un poco por encima, y leedlo con más profundidad cuando ya sepáis
 		más de STxT. Es un buen consejo ;-)
-	header: ¿Qué es STxT?
+	Subheader: ¿Qué es STxT?
 		
 	Content:
 		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
@@ -56,7 +56,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		
 		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o LaTex.
 		
-	header:	Declaración de intenciones :-)
+	Subheader:	Declaración de intenciones :-)
 		
 	Content:
 		Hay un serie de principios o características que queremos que tenga este nuevo lenguaje.
@@ -82,7 +82,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		  Lo hace por estructura y contenido. Sólo hay algún carácter prohibido, 
 		  pero no de escape. Ya lo veréis, me acabo de extender demasiado en este punto...
 		  
-	header: ¿Qué significa STxT?
+	Subheader: ¿Qué significa STxT?
 		
 	Content:
 		Bien, originariamente STxT significa "Texto semántico". 
@@ -98,7 +98,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		por Internet sólo encontré remotamente otro significado: sexy-text. 
 		Bien, incluso eso estaba bien, ya que semantic text tiene que ser sexy ;-)
 		
-	header:	¿Por qué un nuevo lenguaje?
+	Subheader:	¿Por qué un nuevo lenguaje?
 		
 	Content:
 		Siempre he creído que nos faltaba un lenguaje sencillo para escribir textos, pero que a la vez
@@ -120,7 +120,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		Otro de los objetivos es hacer la información abierta. Esto también se ha abordado en la fase de diseño. 
 		Por diseño el contenido es abierto.	
 		
-	header: Un lenguaje para todos
+	Subheader: Un lenguaje para todos
 		
 	Content:
 		Intentamos hacer fácil para todos. No habría que haber problemas para los "no informáticos" 
@@ -145,7 +145,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		pero a veces se ven limitadas por la forma con la que tienen que traducir esta información.
 		También pretendo solventar este problema.
 			
-	header: Declaración caótica de intenciones :-D (**)
+	Subheader: Declaración caótica de intenciones :-D (**)
 		
 	Content:	
 		Bien, todo esto es lo que buscábamos, o lo que hemos conseguido, o el objetivo,
@@ -179,7 +179,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 1: ¿Qué es STxT?
 		* Uno de los objetivos es hacer la información abierta. Esto también se hace en la fase de diseño. 
 		  Por diseño el contenido es abierto.	
 			
-	header:	Aplicaciones, resultados y esperanzas
+	Subheader:	Aplicaciones, resultados y esperanzas
 		
 	Content:
 		Creo que hemos creado un gran lenguaje. Sencillo, práctico y realmente muy útil. 

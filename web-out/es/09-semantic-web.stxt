@@ -20,7 +20,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 	alert:		
 		Bienvenidos a la web semántica.
 		
-	header:	Una propuesta para la web
+	Subheader:	Una propuesta para la web
 		
 	Content:
 		He visto muchas propuestas anteriormente, pero a mi entender no acaban de funcionar.
@@ -65,9 +65,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		y muchas formas de aplicarla. Ahora ni tan siquiera lo sé, pero puedo ver su potencial.
 		Espero que otros también lo vean y lo sepan aplicar.
 		
-	header:	Ideas
+	Subheader:	Ideas
 		
-	subheader: ¡¡Reemplazar HTML5!!
+	subSubheader: ¡¡Reemplazar HTML5!!
 		
 	Content:
 		¡¡Pero qué locura es esa!! ¡¡Llevamos años evolucionando, haciendo navegadores,... ¡¡cómo podríamos hacer algo así!!
@@ -189,7 +189,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		No todo está bien como está. Siempre hay margen a mejorar. A hacer las cosas distintas.
 		Y somos informáticos. Hay que probar. Y experimentar. Y equivocarnos. Es la única forma de avanzar.
 		
-	subheader:Buscadores
+	subSubheader:Buscadores
 		
 	Content:
 		Creo que los buscadores y los navegadores en general aumentarían su capacidad de búsqueda
@@ -199,7 +199,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		Es posible que surgieran plantillas STxT famosas, y una página podría seguirla para mostrar ciertos contenidos.
 		Esto todavía facilitaría más la indexación, ya que unificaría ciertos aspectos.
 		
-	subheader:La transición
+	subSubheader:La transición
 		
 	Content:
 		¿Cómo debe ser la transición? Debe ser _fácil y transparente_. Sino, no habrá transición.
@@ -223,7 +223,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 9: Web semántica
 		No hay que olvidar que el objetivo de todo esto es llegar a la web semántica de una forma poco traumática,
 		fácil para todo el mundo, no sólo para los super-informáticos. 
 		
-	header:	SWB: Semantic Web Builder
+	Subheader:	SWB: Semantic Web Builder
 	
 	Content:
 		No podría terminar este capítulo sin hablar de SWB. Ésta es la primera aplicación de STxT que se ha hecho.

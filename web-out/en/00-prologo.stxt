@@ -32,13 +32,13 @@ Document (globalcampus.site/namespace.stxt):
 		This is just another link in the chain. Or it pretends to be.
 		Will it be the last one in a long search?
 	
-	Header: Prerequisites
+	SubHeader: Prerequisites
 		
 	Content:
 		No specific computer knowledge is required,
 		but familiarity with technologies like xml or html is recommended.
 		
-	Header: Reading Order
+	SubHeader: Reading Order
 		
 	Content:
 		Everyone should read the [Tutorial](02-stxt-tutorial). It’s essential. 

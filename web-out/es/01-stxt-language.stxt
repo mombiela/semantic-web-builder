@@ -37,7 +37,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		
 		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o YAML.
 
-	Header: Introducción 2013
+	Subheader: Introducción 2013
 	
 	assert:
 		Este proyecto es fruto de años de _inconsciente reflexión_,\

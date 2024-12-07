@@ -37,9 +37,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 	Assert:
 		Si no tenéis intención de implementar un parseador no continuéis leyendo.
 		El siguiente capítulo es mucho más interesante ;-)	
-	header:	Proceso genérico
+	Subheader:	Proceso genérico
 		
-	subheader:Parseo por líneas
+	subSubheader:Parseo por líneas
 		
 	Content:
 		El proceso de parseo puede hacerse línea a línea, por lo que podemos decir que de forma general tenemos:
@@ -54,7 +54,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		Durante el proceso es adecuado tener un listado de los últimos nodos que hemos ido encontrando según el nivel,
 		ya que de esto depende el procesado correcto.
 		
-	subheader:Procesado de línea
+	subSubheader:Procesado de línea
 		
 	Content:
 		El primer paso en el procesado de la línea es la _normalización_ de la línea.
@@ -79,7 +79,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,
 		que a su vez puede actuar de validador de la gramática y los nodos. 
 		
-	subheader:Validaciones
+	subSubheader:Validaciones
 		
 	Content:
 		Las validaciones se hacen en varios puntos del parseo:
@@ -96,7 +96,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.
 		En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.
 		
-	header:	Los nodos del lenguaje
+	Subheader:	Los nodos del lenguaje
 		
 	Content:
 		En la descripción del lenguaje habíamos dicho que los tipos de datos no tienen limitación
@@ -128,9 +128,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	header:Gramáticas
+	Subheader:Gramáticas
 		
-	subheader:Almacenaje
+	subSubheader:Almacenaje
 		
 	Content:
 		Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar
@@ -139,14 +139,14 @@ Document (globalcampus.site/namespace.stxt):Capítulo 7: Parseo de STxT (*)
 		y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.
 		La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.
 		
-	subheader:Gramática inicial
+	subSubheader:Gramática inicial
 		
 	Content:
 		Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.
 		Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
 		Por esta razón habrá una definición de la gramática inicial en el propio código. 
 		
-	header:Detalles a tener en cuenta
+	Subheader:Detalles a tener en cuenta
 		
 	Content:
 		Hay algunos detalles que hay que tener en cuenta en el parseo:

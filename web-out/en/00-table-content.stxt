@@ -6,20 +6,20 @@ Document (globalcampus.site/namespace.stxt): STXT: The Book
 		Previous: Previous (00-prologo)
 		Next: Next (01-intro-2024)
 
-	Header: Part I: A New Language
+	SubHeader: Part I: A New Language
 	Content:
 		* [Chapter 1: What is STxT?](01-stxt-language)
 		* [Chapter 2: STxT Tutorial](02-stxt-tutorial)
 		* [Chapter 3: AI-Powered](03-ai-powered)
 			
-	Header: Part II: Documents
+	SubHeader: Part II: Documents
 	Content:
 		* [Chapter 4: Documents Without Namespace](04-raw-docs) 
 		* [Chapter 5: Documents With Namespace](05-ns-docs)
 		* [Chapter 6: Examples](06-examples)
 		* [Chapter 7: Document Parsing](07-parser)
 			
-	Header: Part III: Reflections	
+	SubHeader: Part III: Reflections	
 	Content:
 		* [Chapter 8: STxT and Other Technologies](08-stxt-vs)
 		* [Chapter 9: Semantic Web](09-semantic-web)

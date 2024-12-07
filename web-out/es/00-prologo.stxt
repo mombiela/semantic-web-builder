@@ -32,13 +32,13 @@ Document (globalcampus.site/namespace.stxt):
 		Esto es un eslabón más en la cadena. O pretende serlo.
 		¿Será el último de una larga búsqueda?
 	
-	header: Requisitos previos
+	Subheader: Requisitos previos
 		
 	Content:
 		No es necesario ningún conocimiento informático específico,
 		pero nociones de tecnologías como xml o html son recomendables. 
 		
-	header: Orden de lectura
+	Subheader: Orden de lectura
 		
 	Content:
 		Todo el mundo debería leer el [Tutorial](02-stxt-tutorial). Es básico. 

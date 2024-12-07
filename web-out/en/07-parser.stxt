@@ -38,9 +38,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		If you do not intend to implement a parser, do not continue reading.
 		The next chapter is much more interesting ;-)
 		
-	Header: Generic Process
+	Subheader: Generic Process
 		
-	Subheader: Line-by-line Parsing
+	SubSubheader: Line-by-line Parsing
 		
 	Content:
 		The parsing process can be done line by line, so we can say that, in general, we have:
@@ -55,7 +55,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		During the process, it is advisable to have a list of the last nodes we have encountered according to the level,
 		as this is crucial for correct processing.
 		
-	Subheader: Line Processing
+	SubSubheader: Line Processing
 		
 	Content:
 		The first step in line processing is the _normalization_ of the line.
@@ -80,7 +80,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		and the decisions to be made are relatively simple. This allows us to have a very efficient parser,
 		which can also act as a grammar and node validator.
 		
-	Subheader: Validations
+	SubSubheader: Validations
 		
 	Content:
 		Validations are performed at various points in the parsing process:
@@ -97,7 +97,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		The other is when the entire file has been processed and there are no more nodes to validate.
 		At these points, the node is considered closed, and validations can begin.
 		
-	Header: Language Nodes
+	Subheader: Language Nodes
 		
 	Content:
 		In the language description, we mentioned that data types have no limitations
@@ -129,9 +129,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	Header: Grammars
+	Subheader: Grammars
 		
-	Subheader: Storage
+	SubSubheader: Storage
 		
 	Content:
 		Grammars are obtained from the Internet, but it is neither practical nor efficient to have to fetch
@@ -140,14 +140,14 @@ Document (globalcampus.site/namespace.stxt): Chapter 7: Parsing STxT (*)
 		and that repository would be updated. It is also possible to set verification times or other strategies.
 		The idea is that grammars do not change over time, or at least they should be backward compatible.
 		
-	Subheader: Initial Grammar
+	SubSubheader: Initial Grammar
 		
 	Content:
 		Keep in mind that it is not possible to create a parser without having the grammar beforehand.
 		To parse a grammar, you need the definition of the base grammar already parsed.
 		For this reason, there will be an initial grammar definition in the code itself.
 		
-	Header: Details to Consider
+	Subheader: Details to Consider
 		
 	Content:
 		There are some details to consider in parsing:

@@ -110,7 +110,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: STXT y otras tecnologí
 		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xml), por si lo queréis leer. 
 		Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)
 		 
-	header:Wikipedia (*)
+	Subheader:Wikipedia (*)
 		
 	Content:
 		Tengo gran admiración por la wikipedia. Creo que es uno de los mejores proyectos que se han creado en Internet.
@@ -151,9 +151,9 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: STXT y otras tecnologí
 		cómo debe ser la información de una ciudad, sino que también podríamos
 		aplicar estilos y formatos dependiendo del tipo de documento.
 		
-	header:STxT y otras tecnologías
+	Subheader:STxT y otras tecnologías
 		
-	subheader:Lightweight markup language
+	subSubheader:Lightweight markup language
 		
 	Content:
 		Los lenguajes ligeros de marcado han tenido un auge espectacular gracias a proyectos como la Wikipedia.
@@ -195,7 +195,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: STXT y otras tecnologí
 	assert:
 		La unión de STxT con _Lightweight markup languages_ es simplemente espectacular
 		
-	subheader:Tex, Latex
+	subSubheader:Tex, Latex
 		
 	Content:
 		Perdonad si critico mucho. Nunca lo hago sin dar una alternativa o un motivo. Me gustan las críticas constructivas ;-)
@@ -294,7 +294,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: STXT y otras tecnologí
 		Y además, hemos mantenido la compacidad en la creación de fórmulas matemáticas
 		y otros elementos dónde TeX sí es realmente un gran lenguaje.
 		
-	subheader:JSON
+	subSubheader:JSON
 	
 	Content:
 		JSON en principio no tiene nada que ver con STxT, pero hay ciertos momentos
@@ -306,7 +306,7 @@ Document (globalcampus.site/namespace.stxt):Capítulo 8: STXT y otras tecnologí
 		No creo que JSON y STxT sean competencia directa,
 		debido a su distinto ámbito de aplicación.
 		
-	subheader: YAML
+	subSubheader: YAML
 		
 	Content:
 		Quizá YAML sea el que más se parezca en enfoque, aunque también es muy distinto.

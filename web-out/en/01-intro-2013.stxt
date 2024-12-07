@@ -11,7 +11,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		Description: Description of the language and the features that make it unique.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
+		
 	Header: Chapter 1: What is STxT?
+	
 	Assert:
 		This project is the result of years of _unconscious reflection_,\
 		although it only took a moment of inspiration.
@@ -31,7 +33,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		Skim through this chapter a bit, and read it more deeply once you know
 		more about STxT. That’s good advice ;-)
 		
-	Header: What is STxT?
+	Subheader: What is STxT?
 		
 	Content:
 		It is a purely semantic language, with very basic rules,
@@ -56,7 +58,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		
 		In the future, STxT could be a replacement for other technologies like XML or LaTeX.
 		
-	Header: Declaration of Intent :-)
+	Subheader: Declaration of Intent :-)
 		
 	Content:
 		There are a series of principles or characteristics that we want this new language to have.
@@ -82,7 +84,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		  It achieves this through structure and content. There are only a few prohibited characters,
 		  but no escape characters. You’ll see, I just went on too long about this point...
 		  
-	Header: What Does STxT Mean?
+	Subheader: What Does STxT Mean?
 		
 	Content:
 		Originally, STxT means "Semantic Text."
@@ -98,7 +100,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		on the Internet, I only found another remotely similar meaning: sexy-text.
 		Well, even that was fine since semantic text has to be sexy ;-)
 		
-	Header: Why a New Language?
+	Subheader: Why a New Language?
 		
 	Content:
 		I have always believed that we lacked a simple language to write texts, but at the same time,
@@ -120,7 +122,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		Another goal is to make information open. This was also addressed in the design phase.
 		By design, the content is open.
 		
-	Header: A Language for Everyone
+	Subheader: A Language for Everyone
 		
 	Content:
 		We aim to make it easy for everyone. There shouldn’t be any problems for "non-technical" people
@@ -145,7 +147,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		but sometimes they are limited by the way they have to translate this information.
 		I also intend to solve this problem.
 			
-	Header: Chaotic Declaration of Intentions :-D (**)
+	Subheader: Chaotic Declaration of Intentions :-D (**)
 		
 	Content:	
 		Well, this is what we were looking for, or what we’ve achieved, or the goal,
@@ -179,7 +181,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: What is STxT?
 		* One of the goals is to make information open. This is also done in the design phase.
 		  By design, the content is open.
 			
-	Header: Applications, Results, and Hopes
+	Subheader: Applications, Results, and Hopes
 		
 	Content:
 		I believe we’ve created a great language. Simple, practical, and really very useful.

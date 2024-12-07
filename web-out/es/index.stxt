@@ -1,7 +1,9 @@
-Document (globalcampus.site/namespace.stxt):Semantic TexT
-	Header: Nuestro objetivo
+Document (globalcampus.site/namespace.stxt):STXT - Semantic TexT, el lenguaje
+	Header: STxT - Semantic TexT, el lenguaje
 		
 	Alert:
+		**__Nuestro objetivo:__**\\
+		\\
 		Crear el lenguaje más potente, más sencillo y más bonito \
 		que jamás haya existido :-)
 	
@@ -9,7 +11,7 @@ Document (globalcampus.site/namespace.stxt):Semantic TexT
 	#	Nuestro principio básico: **Sencillez, claridad y simplicidad** por encima de todo
 	#	Esto lo intentamos aplicar en todo lo que hacemos. No sé si lo habremos conseguido :-)
 	
-	Header: ¡Un ejemplo!
+	SubHeader: ¡Un ejemplo!
 		
 	#Creemos que es lo mejor para empezarnos a conocer ;-)\\
 	#Y para eso mejor empezar por algo conocido: ¡XML!
@@ -35,7 +37,7 @@ Document (globalcampus.site/namespace.stxt):Semantic TexT
 			Title: Project report
 			Body: Hello Mery!! The book is finished!!
 		
-	Header: ¿Y bien?
+	SubHeader: ¿Y bien?
 		
 	Assert:
 		¿Aparte de eliminar esos horribles caracteres `'<','>'` qué hay de nuevo?
@@ -56,7 +58,7 @@ Document (globalcampus.site/namespace.stxt):Semantic TexT
 		* Namespaces sencillos, **muy sencillos** (y opcionales)
 		* Integra fácilmente textos de otros lenguajes de programación
 		
-	Header: Y aún hay más: GlobalCampus.site
+	SubHeader: Y aún hay más: GlobalCampus.site
 		
 	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.site/#github/mombiela/globalcampus-docs-es/)
 		

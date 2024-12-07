@@ -10,7 +10,7 @@ Document (globalcampus.site/namespace.stxt):Cookies
 	Content:
 		Para que este sitio funcione adecuadamente, a veces instalamos en los dispositivos de los usuarios pequeños ficheros de datos, conocidos como cookies. La mayoría de los grandes sitios web también lo hacen.
 		
-	Header: ¿Qué son las cookies?
+	Subheader: ¿Qué son las cookies?
 	
 	Content:
 		Una cookie es un pequeño fichero de texto que los sitios web instalan 
@@ -21,7 +21,7 @@ Document (globalcampus.site/namespace.stxt):Cookies
 		para que este no tenga que volver a configurarlos 
 		cuando regrese al sitio o navegue por sus páginas. 
 	
-	Header: ¿Cómo utilizamos las cookies?
+	Subheader: ¿Cómo utilizamos las cookies?
 	
 	Content:
 		Nosotros usamos cookies para poder mostrar contenido personalizado, en particular
@@ -29,7 +29,7 @@ Document (globalcampus.site/namespace.stxt):Cookies
 		así como saber si un usuario ha leído nuestra política de cookies. Estas cookies
 		tienen una duración indefinida.
 		
-	Header: Cómo controlar las cookies
+	Subheader: Cómo controlar las cookies
 	
 	Content:
 		Usted puede controlar o borrar las cookies siempre que lo desee: para más información, 

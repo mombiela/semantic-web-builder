@@ -11,8 +11,6 @@ Document (globalcampus.site/namespace.stxt): Chapter 3: AI-Powered
 		With the arrival of generative AI, one thing that has surprised me is how naturally it handles STxT.
 		It seems as if it knows it, with just a brief introduction. I’m going to share a conversation, and you can judge for yourself.
 		
-	Header: Conversation
-	
 	Subheader: Human
 	
 	Code: 
@@ -119,7 +117,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 3: AI-Powered
 				Step: (7) Drain the macaroni and mix with the Bolognese sauce.
 				Step: (8) Serve hot and sprinkle with grated Parmesan cheese to taste.
 		
-	Header: Analysis
+	Subheader: Analysis
 	
 	Content: 
 		1. Well, first of all: now it’s real. **Maybe this recipe is better than mine :-D**

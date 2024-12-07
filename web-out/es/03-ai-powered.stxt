@@ -13,8 +13,6 @@ Document (globalcampus.site/namespace.stxt): Capítulo 3: Potenciado con IA
 		Parece como si lo conocieran, con sólo hacerles una breve
 		introducción. Voy a poneros una conversación y juzgad.
 		
-	Header: Conversación
-	
 	Subheader: Humano
 	
 	Code: 
@@ -122,7 +120,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 3: Potenciado con IA
 				Paso: (7) Escurrir los macarrones y mezclarlos con la salsa boloñesa.
 				Paso: (8) Servir caliente y espolvorear con queso parmesano rallado al gusto.
 		
-	Header: Análisis
+	Subheader: Análisis
 	
 	Content: 
 		1. Bueno, en primer lugar: ahora sí. **Quizá esta receta sea mejor que la mía :-D**

@@ -37,7 +37,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 1: STXT, The Language
 		
 		In the future, STxT could be a replacement for other technologies like XML or YAML.
 	
-	Header: Intro 2013
+	Subheader: Intro 2013
 		
 	Assert:
 		This project is the result of years of _unconscious reflection_,\

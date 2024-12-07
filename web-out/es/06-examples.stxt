@@ -7,9 +7,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		Next: Siguiente (07-parser)
 
 	Header: Capítulo 6: Ejemplos
-	Header: Recetas y recetarios
+	Subheader: Recetas y recetarios
 	
-	Subheader: Namespace de recetas
+	SubSubheader: Namespace de recetas
 	
 	Code:
 		# ------
@@ -37,7 +37,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 			    Comensales: (?) NUMBER
 			    Documento: (*) (www.dokumentando.com/doc_simple.stxt)
 	
-	Subheader: Namespace de rectario
+	SubSubheader: Namespace de rectario
 	
 	Code:
 		Namespace: www.kocinando.com/recetario.stxt
@@ -45,7 +45,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 			Recetario:
 				Receta: (+) (www.kocinando.com/receta.stxt)
 	
-	Subheader: Receta
+	SubSubheader: Receta
 	
 	Code:
 		# -----------------
@@ -75,7 +75,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		    		simple. Tiene varias líneas
 		    	Tipo Documento: informe
 		    	
-	Subheader: Recetario
+	SubSubheader: Recetario
 	
 	Code:
 		Recetario(www.kocinando.com/recetario.stxt):
@@ -145,9 +145,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 						al servicio único
 					Paso:Paso 9
 	
-	Header: Documentos
+	Subheader: Documentos
 	
-	Subheader: Namespace documento simple
+	SubSubheader: Namespace documento simple
 	
 	Code:
 		Namespace: www.dokumentando.com/doc_simple.stxt
@@ -164,7 +164,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		    Secciones:
 		        Seccion: (+) TEXT
 
-	Subheader: Documento simple
+	SubSubheader: Documento simple
 	
 	Code:
 		Documento (www.dokumentando.com/doc_simple.stxt):
@@ -176,7 +176,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		    Tipo Documento: informe
 
 	
-	Subheader: Namespace documento
+	SubSubheader: Namespace documento
 	
 	Code:
 	
@@ -204,12 +204,12 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 		        	: informe
 		        	: artículo
 		        	: ensayo
-	Subheader: Documento
+	SubSubheader: Documento
 	
 	Assert: Ahora os toca a vosotros crearlo ;-)
 	
-	Header: Clientes
-	Subheader: Cliente sin namespace
+	Subheader: Clientes
+	SubSubheader: Cliente sin namespace
 	
 	Code:
 	
@@ -306,7 +306,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 				Titular cuenta: Joan Costa Mombiela
 				Número cuenta: 0000-0000-00-000000000
 	
-	Subheader: Cliente con namespace
+	SubSubheader: Cliente con namespace
 	
 	Code:
 	
@@ -403,7 +403,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 6: Ejemplos
 				Titular cuenta: Joan Costa Mombiela
 				Número cuenta: 0000-0000-00-000000000
 	
-	Subheader: Namespace de cliente
+	SubSubheader: Namespace de cliente
 	
 	Code:
 		Namespace: www.gymstxt.com/client.stxt

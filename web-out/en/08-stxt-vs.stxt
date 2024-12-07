@@ -110,7 +110,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technolog
 		By the way, there is a hidden chapter, [STXT and XML](08-stxt-xml), in case you want to read it.
 		I wrote it in 2013, and it's... interesting. Read at your own risk ;-)
 		 
-	Header: Wikipedia (*)
+	Subheader: Wikipedia (*)
 		
 	Content:
 		I have great admiration for Wikipedia. I think it is one of the best projects created on the Internet.
@@ -150,9 +150,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technolog
 		what city information should look like, but we could also
 		apply styles and formats depending on the type of document.
 		
-	Header: STxT and Other Technologies
+	Subheader: STxT and Other Technologies
 		
-	Subheader: Lightweight Markup Language
+	SubSubheader: Lightweight Markup Language
 		
 	Content:
 		Lightweight markup languages have seen a spectacular rise thanks to projects like Wikipedia.
@@ -194,7 +194,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technolog
 	Assert:
 		The combination of STxT with _Lightweight markup languages_ is simply spectacular
 		
-	Subheader: TeX, LaTeX
+	SubSubheader: TeX, LaTeX
 		
 	Content:
 		Apologies if I criticize too much. I never do it without offering an alternative or a reason. I like constructive criticism ;-)
@@ -293,7 +293,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technolog
 		And also, we have maintained the compactness in the creation of mathematical formulas
 		and other elements where TeX is indeed a great language.
 		
-	Subheader: JSON
+	SubSubheader: JSON
 	
 	Content:
 		JSON initially has nothing to do with STxT, but there are certain times
@@ -305,7 +305,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technolog
 		I do not think JSON and STxT are direct competitors,
 		due to their different areas of application.
 		
-	Subheader: YAML
+	SubSubheader: YAML
 		
 	Content:
 		Perhaps YAML is the one that most resembles STxT in approach, although it is also very different.

@@ -27,7 +27,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 
 	Content: Vamos a profundizar un poco más.
 
-	header: Codificación
+	Subheader: Codificación
 	
 	Assert: Codificación UTF-8 Siempre
 	
@@ -36,7 +36,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 		Hoy en día es la codificación más aceptable, más universal,
 		y más implementada. No creo que esto cambie en los próximos años.	
 	
-	header: Identificadores
+	Subheader: Identificadores
 	
 	Assert: Los Identificadores son CASE-INSENSITIVE
 	
@@ -45,7 +45,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 		¿Por qué no? ¿Para parecer informáticos?\
 		Los tiempos están cambiando :-D
 
-	header: Caracteres de escape
+	Subheader: Caracteres de escape
 	
 	Assert: No existen caracteres de escape
 	
@@ -54,7 +54,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 		**No existen caracteres de escape** _porque no son necesarios_.
 		Debido a la estructura no son necesarios.	
 
-	header:	Comentarios
+	Subheader:	Comentarios
 		
 	Content:
 		Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
@@ -97,7 +97,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 	Content: Aquí cabe señalar que `(1),(2),(3) y (4)` son comentarios, mientras 
 		que `(5)` no lo es, ya que está dentro del texto identado. 
 
-	header:	Nodos e identación
+	Subheader:	Nodos e identación
 	
 	Content:	
 		Antes hemos dicho que un documento STxT es un conjunto de nodos anidados. 
@@ -133,7 +133,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 4: Documentos sin namespa
 	Content:
 		Acabamos de ver que el nodo `Descripción` es un nodo MULTILINE. 
 	
-	Header: (Prefix) Central (Sufix)
+	Subheader: (Prefix) Central (Sufix)
 	
 	Content: 
 		Aunque no forma parte del lenguaje, es una práctica habitual que 

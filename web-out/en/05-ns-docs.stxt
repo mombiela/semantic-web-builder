@@ -24,7 +24,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 5: Documents With Namespace
 	Content: 
 		If the `:` character is inserted, it will simply become part of the text, not considered special. The other text types do not allow multiple lines, so it will have no effect.
 		
-	Header: Namespace Definition
+	Subheader: Namespace Definition
 	
 	Content:
 		A namespace is a document without a namespace with the first node called `Namespace`,

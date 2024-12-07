@@ -13,7 +13,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: STXT Tutorial
 		Te explicamos lo que es STxT directamente, sin más preámbulos.
 		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
 		
-	header:	Un ejemplo... ¡ya!
+	Alert: Un ejemplo... ¡ya!
 		
 	subheader: Documentos sin namespace
 		
@@ -122,7 +122,6 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: STXT Tutorial
 		Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
 		debería ser mucho más sencillo que en otros lenguajes.
 	
-	Header: Otros elementos
 	Subheader: Comentarios
 	
 	Content:  
@@ -192,7 +191,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 2: STXT Tutorial
 					Paso: (1) Poner tomate y queso en pizza
 					Paso: (2) Hornear durante 15'
 	
-	Header: Fin del tutorial
+	Subheader: Fin del tutorial
 
 	Alert:
 		Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.\

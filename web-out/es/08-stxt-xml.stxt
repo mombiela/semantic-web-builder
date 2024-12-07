@@ -15,7 +15,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		Este capítulo puede herir la sensibilidad de los lectores entusiastas de xml.
 		Leed bajo vuestra propia responsabilidad ;-)
 		
-	header:La leyenda
+	Subheader:La leyenda
 		
 	Content:
 		El origen del mal: SGML.
@@ -48,7 +48,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 	alert:
 		La hora de STxT había llegado.
 		
-	header:La actualidad
+	Subheader:La actualidad
 	
 	Content:	
 		El mundo está plagado de documentos feos, _xml's que nos gustan..._ ¡si es un formato horrible!
@@ -61,7 +61,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		
 		Bien, nosotros tenemos más experiencia y hemos aprendido. ¡Vamos a crearlo!
 		
-	header:Toma de contacto
+	Subheader:Toma de contacto
 		
 	Content:
 		No quiero asustaros, pero STxT, comparado con xml es:
@@ -214,7 +214,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 	assert:
 		STxT es más sencillo que XML
 		
-	header:Atributos XML
+	Subheader:Atributos XML
 		
 	Content:
 		Vamos a por un ejemplo:
@@ -263,9 +263,9 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 			nodo2:
 			nodo3:
 		
-	header:DTD, XSD
+	Subheader:DTD, XSD
 		
-	subheader:XSD, DTD y STxT
+	subSubheader:XSD, DTD y STxT
 		
 	Content:
 		Vamos a hablar de dtd's y xsd's de xml. Son documentos que nos dicen cómo tiene que ser un xml válido.
@@ -278,7 +278,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		¿Y qué pasa con STxT? Lo deberíais saber :-D Tiene lo mejor. Es un documento STxT.
 		Integrado en el propio lenguaje. Potente y fácil de aprender. Como el propio STxT ;-)
 		
-	subheader:¿Dónde está?
+	subSubheader:¿Dónde está?
 		
 	Content:
 		Me gustaría ver desaparecer un típico problema de xml:
@@ -294,7 +294,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		Un documento STxT por definición tiene una gramática asociada.\\
 		Sino, no es STxT
 		
-	subheader:XSD del XSD (*)
+	subSubheader:XSD del XSD (*)
 		
 	Content:
 		¿Alguien quiere comparar el xsd de un xsd? He estado tentado en incluirlo en el libro,
@@ -309,7 +309,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		Todo es mucho más complicado. Con STxT hemos buscado la sencillez.
 		¡Nos gusta hacer las cosas a mano! ¡No debería ser obligatorio tener un editor o lector de XML!
 		
-	header:Parsers y validators
+	Subheader:Parsers y validators
 		
 	Content:
 		¿Alguien quiere comparar los parsers y validators? No hace falta,
@@ -335,7 +335,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		De hecho, en ocasiones será necesario, como yo he tenido que hacer en mi propio libro
 		antes de tener la web publicada.
 		
-	header:Namespaces
+	Subheader:Namespaces
 		
 	Content:
 		Siempre he odiado los namespaces de XML. Son farragosos, difíciles de controlar, y normalmente no nos dicen nada.
@@ -350,7 +350,7 @@ Document (globalcampus.site/namespace.stxt): Capítulo 8: STxT y XML
 		Ya no es necesario, ya que ello implicaría que es distinto si se obtiene con {{{http:_}}}
 		que si se hace con {{{https:_}}}. Esto no tiene sentido, lo que sí lo tiene es que sea a partir de {{{_}}}. 
 		
-	header:Futuro
+	Subheader:Futuro
 		
 	Content:
 		He sido muy sincero con todo mi análisis de XML vs STxT, pero hay algo que no debemos olvidar.

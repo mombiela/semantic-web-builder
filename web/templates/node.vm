@@ -5,9 +5,12 @@
 			#elseif(${node.name} == "preamble")
             	<div class="preamble">${wiki.render($node.text)}</div>
 			#elseif(${node.name} == "header")
-            	<h2><a id="index_${numPart}"></a>$node.text</h2>
+            	<h1><a id="index_${numPart}"></a>$node.text</h1>
 				#set($numPart = $numPart + 1)
 			#elseif(${node.name} == "subheader")
+            	<h2><a id="index_${numPart}"></a>$node.text</h2>
+				#set($numPart = $numPart + 1)
+			#elseif(${node.name} == "subsubheader")
             	<h3><a id="index_${numPart}"></a>$node.text</h3>
 				#set($numPart = $numPart + 1)
 			#elseif(${node.name} == "code")

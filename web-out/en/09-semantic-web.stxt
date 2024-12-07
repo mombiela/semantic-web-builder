@@ -19,7 +19,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 	Alert:		
 		Welcome to the semantic web.
 		
-	Header: A Proposal for the Web
+	Subheader: A Proposal for the Web
 		
 	Content:
 		I’ve seen many proposals before, but in my opinion, they don’t quite work.
@@ -64,9 +64,9 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		and many ways to apply it. Right now, I don’t even know, but I can see its potential.
 		I hope others see it too and know how to apply it.
 		
-	Header: Ideas
+	Subheader: Ideas
 		
-	Subheader: Replace HTML5!!
+	SubSubheader: Replace HTML5!!
 		
 	Content:
 		What madness is that!! We’ve spent years evolving, making browsers,... how could we do something like that!!
@@ -188,7 +188,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		Not everything is fine as it is. There’s always room for improvement. To do things differently.
 		And we’re IT people. We have to try. And experiment. And make mistakes. It’s the only way to move forward.
 		
-	Subheader: Search Engines
+	SubSubheader: Search Engines
 		
 	Content:
 		I believe search engines and browsers, in general, would increase their ability to search
@@ -198,7 +198,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		It’s possible that famous STxT templates would emerge, and a page could follow them to display certain content.
 		This would make indexing even easier, as it would unify certain aspects.
 		
-	Subheader: The Transition
+	SubSubheader: The Transition
 		
 	Content:
 		How should the transition be? It should be _easy and transparent_. Otherwise, there won’t be a transition.
@@ -222,7 +222,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 9: Semantic Web
 		Let’s not forget that the goal of all this is to reach the semantic web in a non-traumatic way,
 		easy for everyone, not just super-IT experts.
 		
-	Header: SWB: Semantic Web Builder
+	Subheader: SWB: Semantic Web Builder
 	
 	Content:
 		I couldn’t end this chapter without talking about SWB. This is the first STxT application ever made.

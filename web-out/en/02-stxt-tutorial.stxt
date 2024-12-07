@@ -13,7 +13,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 2: STxT Tutorial
 		We explain what STxT is directly, without further ado.
 		And we also give you enough knowledge to read any other chapter.
 		
-	Header: An Example... Right Now!
+	Alert: An Example... Right Now!
 		
 	Subheader: Documents Without Namespace
 		
@@ -122,7 +122,6 @@ Document (globalcampus.site/namespace.stxt): Chapter 2: STxT Tutorial
 		We’ll talk more about namespaces later, but creating a document from them
 		should be much simpler than in other languages.
 	
-	Header: Other Elements
 	Subheader: Comments
 	
 	Content:  
@@ -192,7 +191,7 @@ Document (globalcampus.site/namespace.stxt): Chapter 2: STxT Tutorial
 					Step: (1) Add tomato and cheese to the pizza
 					Step: (2) Bake for 15 minutes
 	
-	Header: End of the Tutorial
+	Subheader: End of the Tutorial
 
 	Alert:
 		Please don’t continue. Reread this section at least one more time. Then continue.\
