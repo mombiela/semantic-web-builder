@@ -1,4 +1,4 @@
-Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Technologies
+Document (globalcampus.site/namespace.stxt): Chapter 8: STXT and Other Technologies
 	Default:
 		Title: STXT: The Book
 		
@@ -7,12 +7,12 @@ Document (globalcampus.site/namespace.stxt): Chapter 8: Examples and Other Techn
 		Next: Next (09-semantic-web)
 
 	Metadata:
-		Title: Chapter 8: Examples and Other Technologies
+		Title: Chapter 8: STxT and Other Technologies
 		Description: Various examples of STxT are shown, and comparisons with other popular languages are made.
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	Header: Chapter 8: Examples and Other Technologies
+	Header: Chapter 8: STxT and Other Technologies
 	
 	Content:	
 		There are thousands of examples that can be made with this technology.
