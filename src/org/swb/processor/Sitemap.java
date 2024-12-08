@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.StringUtils;
 import org.swb.Processor;
 
 public class Sitemap implements Processor
@@ -38,7 +39,7 @@ public class Sitemap implements Processor
         todir.mkdirs();
         
         pages = config.getProperty("pages", "").split(",");
-        prefix = config.getProperty("prefix", "").split(",");
+        prefix = StringUtils.splitByWholeSeparator(config.getProperty("prefix", ""),",");
         sufix = config.getProperty("sufix", "").split(",");
         domain = config.getProperty("domain");
         
