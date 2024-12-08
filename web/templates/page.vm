@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="/css/site.css?v=20241207-1">
 		
 	#if(${lang.get("lang")} == "en")
-	<link rel="alternate" hreflang="es" href="http://semantictext.info/es/${doc_name}.html" />
+		<link rel="alternate" hreflang="es" href="http://semantictext.info/es/${doc_name}.html" />
+		#set($indexPage = "/")
 	#end
 		
 	#if(${lang.get("lang")} == "es")
-	<link rel="alternate" hreflang="en" href="http://semantictext.info/${doc_name}.html" />
+		<link rel="alternate" hreflang="en" href="http://semantictext.info/${doc_name}.html" />
+		#set($indexPage = "/es")
 	#end
 </head>
 
@@ -28,7 +30,7 @@
 	
     <header id="main_header">
 	    <div class="title">
-			<a href="index.html">
+			<a href="$indexPage">
 			#if(${doc.getChild("default")})	STxT: ${lang.get("title_book")}
 			#else                  			STxT: Semantic TexT
 			#end
@@ -59,7 +61,7 @@
     <div class="top-bar">
     	<ul>
 			<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="index" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
+			<li><a href="$indexPage" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 			<li><a href="00-prologo" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
 			<li><a href="02-stxt-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
 			<li><a href="08-stxt-vs" title="${lang.get("menu.vs")}">${lang.get("menu.vs")}</a></li>
