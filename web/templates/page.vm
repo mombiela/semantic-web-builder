@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="/css/site.css?v=20241208">
 		
 	#if(${lang.get("lang")} == "en")
-		<link rel="alternate" hreflang="es" href="http://semantictext.info/es/${doc_name}.html" />
+		<link rel="alternate" hreflang="es" href="http://stxt.dev/es/${doc_name}.html" />
 		#set($indexPage = "/")
 	#end
 		
 	#if(${lang.get("lang")} == "es")
-		<link rel="alternate" hreflang="en" href="http://semantictext.info/${doc_name}.html" />
+		<link rel="alternate" hreflang="en" href="http://stxt.dev/${doc_name}.html" />
 		#set($indexPage = "/es")
 	#end
 </head>

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /set
 
-Sitemap: https://semantictext.info/sitemap.xml
+Sitemap: https://stxt.dev/sitemap.xml
