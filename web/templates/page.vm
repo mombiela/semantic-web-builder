@@ -118,7 +118,7 @@
 			#end
 			</div>
     	#end
-    	#parse("/ads.vm")
+    	##parse("/ads.vm")
 	  </aside>
 	</div>
 	

@@ -1,3 +1,3 @@
 cd %~dp0
-cd web-out
+cd ../stxt-dev/
 http-server . -c-1
