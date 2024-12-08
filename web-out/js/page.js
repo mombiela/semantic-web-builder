@@ -1,7 +1,5 @@
 function setLang(dest_lang)
 {
-	var pathact = window.location.pathname.substring(4);
-	var newlocation = "/" + dest_lang + "/" + pathact;
 	Cookies.set('lang', dest_lang, {expires: 365});
 	window.location.href = newlocation;
 }

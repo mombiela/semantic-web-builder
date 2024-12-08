@@ -18,9 +18,6 @@
 	#if(${lang.get("lang")} == "es")
 	<link rel="alternate" hreflang="en" href="http://semantictext.info/${doc_name}.html" />
 	#end
-	
-	<script src="/js/cookie.js?v=1"></script>
-	<script src="/js/page.js?v=1"></script>
 </head>
 
 <body>
@@ -46,10 +43,10 @@
 			<li><b> | </b></li>
 			#if(${lang.get("lang")} == "es")
 				<li><b>${lang.get("menu.lang.es")}</b></li>
-				<li><a href="../${doc_name}.html" onclick="setLang('en'); return false;"  title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
+				<li><a href="../${doc_name}.html" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
 			#end
 			#if(${lang.get("lang")} == "en")
-				<li><a href="./es/${doc_name}.html" onclick="setLang('es'); return false;" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
+				<li><a href="./es/${doc_name}.html" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
 				<li><b>${lang.get("menu.lang.en")}</b></li>
 			#end
     	</ul>
@@ -113,14 +110,5 @@
 	</div>
 	
 	<footer>${lang.get("foot.1")}</footer>
-	
-	<!--
-	<div id="cookies_adv">
-		${lang.get("cookies_1")}
-        <a href="javascript:accept();" class="button">${lang.get("cookies_2")}</a>
-        <a href="cookies.html">${lang.get("cookies_3")}</a>
-    </div>
-    -->
-    <script>//checkCookies();</script>
 </body>
 </html>
