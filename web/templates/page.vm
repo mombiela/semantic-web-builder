@@ -9,7 +9,7 @@
 	<meta name="description" content="${meta.getChild("description").text}">
 	<meta name="author" content="${meta.getChild("author").value}">
 
-    <link rel="stylesheet" href="/css/site.css?v=20241208">
+    <link rel="stylesheet" href="/css/site.css?v=20241210">
 		
 	#if(${lang.get("lang")} == "en")
 		<link rel="alternate" hreflang="es" href="https://stxt.dev/es/${doc_name}" />
