@@ -25,7 +25,6 @@ public class Sitemap implements Processor
     private String domain;
     private String[] pages;
     private String[] prefix;
-    private String[] sufix;
     
     // -------------
     // Configuraci�n
@@ -40,13 +39,7 @@ public class Sitemap implements Processor
         
         pages = config.getProperty("pages", "").split(",");
         prefix = StringUtils.splitByWholeSeparator(config.getProperty("prefix", ""),",");
-        sufix = config.getProperty("sufix", "").split(",");
         domain = config.getProperty("domain");
-        
-        if (pages.length!=prefix.length && pages.length != sufix.length)
-        {
-            throw new IllegalArgumentException("prefix, pages y sufix deben tener la misma longitud");
-        }
     }
     
     // ---------
@@ -68,12 +61,11 @@ public class Sitemap implements Processor
             // Obtenemos mapa de p�ginas a usar
             Map<String, Object> mapPages = (Map) context.get(this.pages[i]);
             String prefix = this.prefix[i];
-            String sufix  = this.sufix[i];
             
             // Vamos iterando
             for (String page: mapPages.keySet())
             {
-                Page p = createPage(mapPages.get(page), page, prefix, sufix);
+                Page p = createPage(mapPages.get(page), page, prefix);
                 if (p!=null) pages.add(p);
             }
         }
@@ -91,13 +83,13 @@ public class Sitemap implements Processor
         return out.toString();
     }
     
-    private Page createPage(Object object, String name, String prefix, String sufix) throws IOException
+    private Page createPage(Object object, String name, String prefix) throws IOException
     {
         // Creamos result
         Page result = new Page();
         
         // Create name
-        result.setUrl("https://" + domain + prefix + '/' + name + '.' + sufix);
+        result.setUrl("https://" + domain + prefix + '/' + name);
         
         // Obtenemos metadata // TODO Revisar
         if (!(object instanceof Node))
