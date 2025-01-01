@@ -1,0 +1,62 @@
+Document (stxt.dev/namespace.stxt): Capítulo 1: ¿Qué es STxT?
+	Default:
+		Title: STXT: El Libro
+		
+	Navigation:
+		Previous: Anterior (00-prologo)
+		Next: Siguiente (02-stxt-tutorial)
+
+	Metadata:
+		Title: ¿Qué es STxT?
+		Description: Descripción del lenguaje y de las características que lo hacen único.
+		Author: Joan Costa Mombiela
+		last modif: 2013-03-01
+	
+	Header: Capítulo 1: ¿Qué es STxT?
+
+	Content:
+		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
+		que permite la creación de documentos con un contenido estructurado 
+		y sencillo de interpretar, tanto por humanos como por máquinas. 
+		Podríais estar leyendo un documento en STxT sin daros cuenta en realidad
+		que lo es. 	
+		
+		STxT: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
+		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
+		Todos los que se quieran. Ésta es la propuesta.
+		
+		STxT es un lenguaje para escribir documentos estructurados. Permite crear
+		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
+		pero consiguiendo documentos que pueden ser leídos por personas 
+		sin conocimientos informáticos.
+						 
+		De hecho, los documentos tienen significado por si mismos,
+		sin ser necesaria ninguna traducción adicional.
+		Tienen una estructura jerárquica muy parecida a documentos xml,
+		y su traducción puede ser directa.                                
+		
+		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o YAML.
+
+	Subheader: Introducción 2013
+	
+	assert:
+		Este proyecto es fruto de años de _inconsciente reflexión_,\
+		aunque sólo se necesitó un instante de inspiración.
+	
+	Content:
+		Así empezaba la bienvenida en 2013, en la primer versión de STxT. 
+		
+		Si queréis ver completo este capítulo podéis ir a la página [Introducción STXT 2013](01-intro-2013). 
+		Creo que es muy interesante y curioso. En ese momento quería hacer un libro inspirador, 
+		y quería explicarlo todo. Ahora quiero que conozcais el lenguaje, y lo uséis. 
+		Sin más. Será un viaje rápido, pero valdrá la pena.
+		
+		He modificado el lenguaje, aún sin haberlo usado, y ya estamos en la segunda versión.
+		Ahora todo es más directo, más claro, y sencillo. 
+		
+		**Ahora sí, ha llegado el momento de usarlo.**
+		
+	assert:	¿Empezamos?
+	#assert: ¿Preparados? No sabía que poner :-D
+	
+	

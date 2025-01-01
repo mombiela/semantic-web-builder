@@ -1,0 +1,77 @@
+Document (stxt.dev/namespace.stxt): STXT - Semantic TexT, The Ultimate Language
+	Header: STxT, The Language
+		
+	Alert:
+		**__Our Goal:__**\\
+		\\
+		To create the most powerful, simplest, and most beautiful language \
+		that has ever existed :-)
+	
+	#Content:
+	#	Our basic principle: **Simplicity, clarity, and straightforwardness** above all else.
+	#	We try to apply this in everything we do. I'm not sure if we've achieved it :-)
+	
+	SubHeader: An Example!
+		
+	#We believe it's the best way to start getting to know us ;-)\\
+	#And for that, it's better to start with something familiar: XML!
+		
+	Content: A text in XML:
+		
+	Code:
+		<email>
+			<from>John Smith</from>
+			<to>Mery Adams</to> 
+			<cc>Keyla Brown<cc> 
+			<title>Project report</title> 
+			<body>Hello Mery!! The book is finished!!</body> 
+		</email>
+		
+	Content: An equivalent in STxT:
+		
+	Code:
+		Email (www.example.com/email.stxt):
+			From: John Smith
+			To: Mery Adams
+			Cc: Keyla Brown
+			Title: Project report
+			Body: Hello Mery!! The book is finished!!
+		
+	SubHeader: So, what do you think?
+		
+	Assert:
+		Apart from getting rid of those horrible `'<','>'` characters, what's new?
+		
+	Content:
+		Well, the list is long, but as a starter, it's enough:
+		
+		* Semantic language... but simple! :-)
+		* No escape characters! None needed! :-O 
+		* Always UTF-8 encoding
+		* Easy for humans to learn (_and for non-technical people too!_)
+		* Easy for machines to read
+		
+		Other features that techies will love ;-)
+		
+		* Super fast parsing
+		* Grammar integrated into the language
+		* Simple namespaces, **very simple** (and optional)
+		* Easily integrates texts from other programming languages
+		
+#	SubHeader: And There's More: GlobalCampus.site
+#		
+#	Content: Don't forget about our flagship application: [GlobalCampus.site](https://globalcampus.site/#github/mombiela/globalcampus-docs/)
+#		
+#	Assert: 
+#		For us, the best web page editor out there.\
+#		The first **Meta Learning Portal**\
+#		The first site to use STxT
+		
+#	Content:
+#		* Based on STxT, of course ;-) 
+#		* Free :-D
+#		* Adaptable :-)
+#		* Fast :-O
+#		* _This website was made with it. We've already tried it!!_
+		
+		**You're going to love it :-P**

@@ -1,0 +1,41 @@
+Document (stxt.dev/namespace.stxt): Contribute with Us
+
+	Metadata:
+		Description: Things still to be done in the STxT language and ways to contribute to the maintenance and content of the portal.
+		Author: Joan Costa Mombiela
+		Last modif: 2013-10-17
+		
+	Header: Do You Want to Contribute?
+		
+	Alert: Thank you for wanting to collaborate with us!
+		
+	Content:
+		The best way to help us is by spreading the word about the language. By using it,
+		talking to others about it, and enjoying it. We’ve already used it, and the experience has been fantastic.
+		
+		However, there’s still a lot of work to be done. Libraries, text editors,
+		applications... the list is endless.
+		
+		Good news for developers: a new toy to explore :-)
+		
+	Subheader: stxt.dev
+	
+	Content:		
+		Our language has infinite applications, but we believe its definition 
+		is unique and already complete.
+		
+		_We leave the possible applications or utilities up to you ;-)_
+		
+		As for this website, we consider it a finished project, but it is far
+		from perfect. It can surely be improved in a thousand ways. Do you think 
+		a new chapter should be added to the book? Have you found any errors in the documentation? 
+		Would you improve any examples? Would you suggest a different, more compact CSS?
+		
+		We want this website to be a reference point in learning STxT.
+		
+	Alert: Help us make this possible!\
+		[contact@stxt.dev](mailto:contact@stxt.dev)
+		
+	Content:
+		**We’ll be happy to respond to you as soon as possible ;-)**\
+		By the way, we only speak Catalan, Spanish, and English :-)
