@@ -16,5 +16,7 @@ set -e
 # Ir al directorio donde está el script
 cd "$(dirname "$0")"
 
-# Ejecuta el programa Java con el classpath adecuado
-java -cp "bin:lib/*" org.swb.Executor processor.properties clean
+# Subir un nivel en la jerarquía de directorios
+cd ..
+cd stxt-dev
+http-server . -p 8080 -c-1

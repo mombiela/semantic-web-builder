@@ -16,5 +16,5 @@ set -e
 # Ir al directorio donde está el script
 cd "$(dirname "$0")"
 
-# Ejecuta el programa Java con el classpath adecuado
-java -cp "bin:lib/*" org.swb.Executor processor.properties clean
+# Ejecutar node-sass para compilar SCSS a CSS
+node-sass web/scss -o web/static/css --output-style compressed
