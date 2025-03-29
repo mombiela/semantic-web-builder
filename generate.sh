@@ -16,5 +16,8 @@ set -e
 # Ir al directorio donde está el script
 cd "$(dirname "$0")"
 
+# Compile sass
+node-sass web/scss -o web/static/css --output-style compressed
+
 # Ejecuta el programa Java con el classpath adecuado
 java -cp 'bin:lib/*' org.swb.Executor processor.properties main
