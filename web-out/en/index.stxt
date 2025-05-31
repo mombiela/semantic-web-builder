@@ -58,9 +58,9 @@ Document (globalcampus.site/namespace.stxt): STXT - Semantic TexT, the language
 		* Simple namespaces, **very simple** (and optional)
 		* Easily integrates texts from other programming languages
 		
-#	SubHeader: And There's More: GlobalCampus.site
+#	SubHeader: And There's More: GlobalCampus
 #		
-#	Content: Don't forget about our flagship application: [GlobalCampus.site](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs/)
+#	Content: Don't forget about our flagship application: [GlobalCampus](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs/)
 #		
 #	Assert: 
 #		For us, the best web page editor out there.\

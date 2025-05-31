@@ -58,9 +58,9 @@ Document (stxt.dev/namespace.stxt):STXT - Semantic TexT, El Lenguaje Definitivo
 		* Namespaces sencillos, **muy sencillos** (y opcionales)
 		* Integra fácilmente textos de otros lenguajes de programación
 		
-#	SubHeader: Y aún hay más: GlobalCampus.site
+#	SubHeader: Y aún hay más: GlobalCampus
 #		
-#	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus.site](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs-es/)
+#	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs-es/)
 #		
 #	Assert: 
 #		Para nosotros el mejor editor de páginas web que existe.\

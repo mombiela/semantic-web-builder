@@ -1,15 +1,15 @@
 Document (stxt.dev/namespace.stxt): Global Campus
 
 	Metadata:
-		Description: GlobalCampus.site es un portal de creación de contenidos descentralizados de aprendizaje.
+		Description: GlobalCampus es un portal de creación de contenidos descentralizados de aprendizaje.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 		
 	Assert:
 		_Bienvenido a nuestra aplicación estrella_ \
-		[GlobalCampus.site](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs-es/)
+		[GlobalCampus](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs-es/)
 		
-	Header: ¿Qué es GlobalCampus.site?
+	Header: ¿Qué es GlobalCampus?
 		
 	Content:
 		Es un portal de aprendizaje, aunque de momento es más **un espacio de trabajo para STxT**.
