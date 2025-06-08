@@ -42,7 +42,9 @@
 		<div class="subtitle"><a href="index">${lang.get("title")}</a></div>
 		<ul>
 			<li><a href="about" title="${lang.get("menu.about")}" rel="nofollow">${lang.get("menu.about")}</a></li>
+			<!--
 			<li><a href="donate" title="${lang.get("menu.donate")}" rel="nofollow">${lang.get("menu.donate")}</a></li>
+			-->
 			<li><a href="contribute" title="${lang.get("menu.contrib")}" rel="nofollow">${lang.get("menu.contrib")}</a></li>
 			<li><a href="licence" title="${lang.get("menu.licence")}" rel="nofollow">${lang.get("menu.licence")}</a></li>
 			<li><b> | </b></li>
