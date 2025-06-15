@@ -3,7 +3,7 @@ Document (stxt.dev/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		Title: STXT: El Libro
 		
 	Navigation:
-		Previous: Anterior (00-prologo)
+#		Previous: Anterior (00-prologo)
 		Next: Siguiente (02-stxt-tutorial)
 
 	Metadata:

@@ -3,7 +3,7 @@ Document (stxt.dev/namespace.stxt): Chapter 1: STXT, The Language
 		Title: STXT: The Book
 		
 	Navigation:
-		Previous: Previous (00-prologo)
+#		Previous: Previous (00-prologo)
 		Next: Next (02-stxt-tutorial)
 
 	Metadata:
