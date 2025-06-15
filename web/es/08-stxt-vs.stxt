@@ -104,12 +104,6 @@ Document (stxt.dev/namespace.stxt):Capítulo 8: STXT y otras tecnologías
 			Title: Project report
 			Body: Hello Mery!! The book is finished!!
 		
-	Content:
-		Vemos que la conversión entre los 2 formatos es instantánea, aunque mucho más bonito el STxT.
-		
-		Por cierto, hay un capítulo oculto, [STXT y XML](08-stxt-xml), por si lo queréis leer. 
-		Lo hice en 2013 y es... curioso. Leer bajo vuestra responsabilidad ;-)
-		 
 	Subheader:Wikipedia (*)
 		
 	Content:

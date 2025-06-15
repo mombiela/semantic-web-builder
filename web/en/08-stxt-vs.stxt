@@ -104,12 +104,6 @@ Document (stxt.dev/namespace.stxt): Chapter 8: STXT and Other Technologies
 			Title: Project report
 			Body: Hello Mery!! The book is finished!!
 		
-	Content:
-		We can see that the conversion between the two formats is instant, though STxT is much more aesthetically pleasing.
-		
-		By the way, there is a hidden chapter, [STXT and XML](08-stxt-xml), in case you want to read it.
-		I wrote it in 2013, and it's... interesting. Read at your own risk ;-)
-		 
 	Subheader: Wikipedia (*)
 		
 	Content:
