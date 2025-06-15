@@ -67,10 +67,10 @@
     	<ul>
 			<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
 			<li><a href="$indexPage" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-			<li><a href="00-prologo" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>
+			<!--<li><a href="00-prologo" title="${lang.get("menu.book")}">${lang.get("menu.book")}</a></li>-->
 			<li><a href="02-stxt-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-			<li><a href="08-stxt-vs" title="${lang.get("menu.vs")}">${lang.get("menu.vs")}</a></li>
-			<li><a href="global-campus" title="${lang.get("menu.global_campus")}">${lang.get("menu.global_campus")}</a></li>
+			<!--<li><a href="08-stxt-vs" title="${lang.get("menu.vs")}">${lang.get("menu.vs")}</a></li>-->
+			<!--<li><a href="global-campus" title="${lang.get("menu.global_campus")}">${lang.get("menu.global_campus")}</a></li>-->
 			<li><a href="stxt" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
     	</ul>
     </div>
@@ -81,11 +81,6 @@
 	
     <div id="main_content" class="clearfix">
 	  <aside id="advertisement">
-		##<h2>${lang.get("lat.sponsors.title")}</h2>
-    	##<p>${lang.get("lat.sponsors.1")}<p>
-    	##<p>${lang.get("lat.sponsors.2")}</p>
-    	##<p>${lang.get("lat.sponsors.3")}</p>
-    	##<br>
     	#if($index)
     		<div class="d-none d-md-block" style="margin-bottom:3rem;">
 			#foreach($node in $index.getChilds())
@@ -93,11 +88,9 @@
 			#end
 			</div>
     	#end
-    	##parse("/ads.vm")
 	  </aside>
 	  
       <article>
-      	##parse("/ads.vm")
 		#parse("/navigation.vm")
 	
 		#if(${doc.name} == "chapter")

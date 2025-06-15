@@ -14,6 +14,20 @@
 	overflow-x: auto;
 }
 
+pre {
+	strong {
+		color: #4e4afd;
+	}
+}
+
+code {
+	border-color: #d9d9d9;
+	background: #f2f2f2;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: #4e4afd;
+}
+
 #advertisement {
 	div {
 		display:none;
