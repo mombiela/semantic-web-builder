@@ -16,7 +16,7 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 	Content: An example document with an `Email` element from the `com.example.email` namespace
 		
 	Code:
-		Email ***(com.example.email)***:
+		***Email (com.example.email)***:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
