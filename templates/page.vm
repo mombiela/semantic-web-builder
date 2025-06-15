@@ -80,6 +80,22 @@
 	<!-- ******* -->
 	
     <div id="main_content" class="clearfix">
+	  <aside id="advertisement">
+		##<h2>${lang.get("lat.sponsors.title")}</h2>
+    	##<p>${lang.get("lat.sponsors.1")}<p>
+    	##<p>${lang.get("lat.sponsors.2")}</p>
+    	##<p>${lang.get("lat.sponsors.3")}</p>
+    	##<br>
+    	#if($index)
+    		<div class="d-none d-md-block" style="margin-bottom:3rem;">
+			#foreach($node in $index.getChilds())
+				#parse("/node.vm")
+			#end
+			</div>
+    	#end
+    	##parse("/ads.vm")
+	  </aside>
+	  
       <article>
       	##parse("/ads.vm")
 		#parse("/navigation.vm")
@@ -99,21 +115,6 @@
 		##parse("/navigation.vm")
 	  </article>
 	  	
-	  <aside id="advertisement">
-		##<h2>${lang.get("lat.sponsors.title")}</h2>
-    	##<p>${lang.get("lat.sponsors.1")}<p>
-    	##<p>${lang.get("lat.sponsors.2")}</p>
-    	##<p>${lang.get("lat.sponsors.3")}</p>
-    	##<br>
-    	#if($index)
-    		<div class="d-none d-md-block" style="margin-bottom:3rem;">
-			#foreach($node in $index.getChilds())
-				#parse("/node.vm")
-			#end
-			</div>
-    	#end
-    	##parse("/ads.vm")
-	  </aside>
 	</div>
 	
 	<footer>${lang.get("foot.1")}</footer>

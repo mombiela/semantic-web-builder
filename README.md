@@ -4,7 +4,7 @@
 
 This is a builder of portals that uses the STxT language.
 
-This project comes with the source code of http://stct.dev
+This project comes with the source code of http://stxt.dev
 
 ## Requirements
 

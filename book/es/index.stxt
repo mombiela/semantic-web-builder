@@ -1,77 +1,51 @@
 Document (stxt.dev/namespace.stxt):STXT - Semantic TexT, El Lenguaje Definitivo
-	Header: STxT, El Lenguaje
-		
+	Header: Tutorial en 1 minuto
+
 	Alert:
-		**__Nuestro objetivo:__**\\
-		\\
-		Crear el lenguaje más potente, más sencillo y más bonito \
-		que jamás haya existido :-)
-	
-	#Content:
+		**STxT**: un lenguaje para construir documentos estructurados, con namespaces y validación.
+		
+	#	**Nuestro objetivo:**
+	#	Crear el lenguaje más potente, más sencillo y más bonito \
+	#	que jamás haya existido :-)
+	#
 	#	Nuestro principio básico: **Sencillez, claridad y simplicidad** por encima de todo
 	#	Esto lo intentamos aplicar en todo lo que hacemos. No sé si lo habremos conseguido :-)
 	
-	SubHeader: ¡Un ejemplo!
-		
-	#Creemos que es lo mejor para empezarnos a conocer ;-)\\
-	#Y para eso mejor empezar por algo conocido: ¡XML!
-		
-	Content: Un texto en XML:
+	SubHeader: Documentos com namespace
+	
+	Content: Ejemplo de documento con un elemento `Email` del namespace `com.example.email`
 		
 	Code:
-		<email>
-			<from>John Smith</from>
-			<to>Mery Adams</to> 
-			<cc>Keyla Brown<cc> 
-			<title>Project report</title> 
-			<body>Hello Mery!! The book is finished!!</body> 
-		</email>
-		
-	Content: Un equivalente en STxT:
-		
-	Code:
-		Email (www.example.com/email.stxt):
+		Email ***(com.example.email)***:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
 			Title: Project report
-			Body: Hello Mery!! The book is finished!!
-		
-	SubHeader: ¿Y bien?
-		
-	Assert:
-		¿Aparte de eliminar esos horribles caracteres `'<','>'` qué hay de nuevo?
-		
+			Body Content: 
+				Hello Mery!! 
+				The book is finished!!
 	Content:
-		Bueno, la lista es larga, pero como aperitivo ya es suficiente:
+		Y la definición del namespace
 		
-		* Lenguaje semántico... pero sencillo! :-)
-		* ¡No hay caracteres de escape! ¡No se necesitan! :-O 
-		* Encoding UTF-8 _siempre_
-		* Sencillo de aprender por humanos (_¡y por no informáticos!_)
-		* Sencillo de leer por máquinas
+	Code:
+		Namespace: ***com.example.email***
+			Email:
+				From: (1)
+				To: (1)
+				Cc: (?)
+				Bcc: (?)
+				Title: (1)
+				Body Content: (1) TEXT
+
+	SubHeader: Documentos sin namespace
+	
+	Code:
+		Email:
+			From: John Smith
+			To: Mery Adams
+			Cc: Keyla Brown
+			Title: Project report
+			Body Content:
+				:Hello Mery! 
+				:The book is finished!
 		
-		Otras características que gustarán a los informáticos ;-)
-		
-		* Parseo super rápido
-		* Gramática integrada en el lenguaje
-		* Namespaces sencillos, **muy sencillos** (y opcionales)
-		* Integra fácilmente textos de otros lenguajes de programación
-		
-#	SubHeader: Y aún hay más: GlobalCampus
-#		
-#	Content: No te olvides de nuestra aplicación estrella: [GlobalCampus](https://globalcampus.stxt.dev/#github/mombiela/globalcampus-docs-es/)
-#		
-#	Assert: 
-#		Para nosotros el mejor editor de páginas web que existe.\
-#		El primer **Meta Portal de aprendizaje**\
-#		El primer sitio que usa STxT
-#		
-#	Content:
-#		* Basado en STxT, por supuesto ;-) 
-#		* Libre :-D
-#		* Adaptable :-)
-#		* Rápido :-O
-#		* _Esta web está hecha con él. ¡¡Nosotros ya lo hemos probado!!_
-		
-		**Te va a encantar :-P**
