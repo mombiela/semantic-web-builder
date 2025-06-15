@@ -13,10 +13,10 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 
 	SubHeader: Documents with namespace
 	
-	Content: An example document with an `Email` element from the `com.example.email` namespace
+	Content: An example document with an `Email` element from the `com.example.docs` namespace
 		
 	Code:
-		***Email (com.example.email)***:
+		***Email (com.example.docs)***:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
@@ -28,7 +28,7 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 		And the definition of the namespace
 		
 	Code:
-		Namespace: ***com.example.email***
+		Namespace: ***com.example.docs***
 			Email:
 				From: (1)
 				To: (1)
