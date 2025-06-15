@@ -1,18 +1,14 @@
-Document (stxt.dev/namespace.stxt):Capítulo 7: Parseo de STxT (*)
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): Parseo de STxT (*)
 	Navigation:
-		Previous: Anterior (06-examples)
-		Next: Siguiente (08-stxt-vs)
+		Previous: Anterior (examples)
 
 	Metadata:
-		Title: Capítulo 11: Parseo de STxT
+		Title: Parseo de STxT
 		Description: Aunque el parseo de STxT es sencillo, se explican algunas partes con más detalle
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Capítulo 7: Parseo de STxT (*)
+	header:	Parseo de STxT (*)
 		
 	Content:
 		Parsear un fichero STxT es mucho más fácil que parsear ficheros de otras tecnologías. 

@@ -2,20 +2,16 @@ Document (stxt.dev/namespace.stxt): STXT: The Book
 	Default:
 		Title: STXT: The Book
 		
-	Navigation:
-		Previous: Previous (00-prologo)
-		Next: Next (01-intro-2024)
-
 	SubHeader: Part I: A New Language
 	Content:
-		* [What is STxT?](01-stxt-language)
-		* [STxT Tutorial](02-stxt-tutorial)
-		* [AI-Powered](03-ai-powered)
+		* [What is STxT?](stxt-language)
+		* [STxT Tutorial](stxt-tutorial)
+		* [AI-Powered](ai-powered)
 			
 	SubHeader: Part II: Documents
 	Content:
-		* [Documents Without Namespace](04-raw-docs) 
-		* [Documents With Namespace](05-ns-docs)
-		* [Examples](06-examples)
-		* [Document Parsing](07-parser)
+		* [Documents Without Namespace](raw-docs) 
+		* [Documents With Namespace](ns-docs)
+		* [Examples](examples)
+		* [Document Parsing](parser)
 			

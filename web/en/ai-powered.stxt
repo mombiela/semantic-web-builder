@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Chapter 3: AI-Powered
-	Default:
-		Title: STXT: The Book
-		
+Document (stxt.dev/namespace.stxt): AI-Powered
 	Navigation:
-		Previous: Previous (02-stxt-tutorial)
-		Next: Next (04-raw-docs)
+		Previous: Previous (stxt-tutorial)
+		Next: Next (raw-docs)
 
-	Header: Chapter 3: AI-Powered
+	Header: AI-Powered
 	Content:
 		With the arrival of generative AI, one thing that has surprised me is how naturally it handles STxT.
 		It seems as if it knows it, with just a brief introduction. I’m going to share a conversation, and you can judge for yourself.

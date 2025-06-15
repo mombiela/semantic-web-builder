@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Capítulo 4: Documentos sin namespace
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): Documentos sin namespace
 	Navigation:
-		Previous: Anterior (03-ai-powered)
-		Next: Siguiente (05-ns-docs)
+		Previous: Anterior (ai-powered)
+		Next: Siguiente (ns-docs)
 
-	Header: Capítulo 4: Documentos sin namespace
+	Header: Documentos sin namespace
 	Content: Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:
 	
 	Code:

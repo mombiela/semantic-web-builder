@@ -1,10 +1,6 @@
-Document (stxt.dev/namespace.stxt): Capítulo 1: ¿Qué es STxT?
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): ¿Qué es STxT?
 	Navigation:
-#		Previous: Anterior (00-prologo)
-		Next: Siguiente (02-stxt-tutorial)
+		Next: Siguiente (stxt-tutorial)
 
 	Metadata:
 		Title: ¿Qué es STxT?
@@ -12,7 +8,7 @@ Document (stxt.dev/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	Header: Capítulo 1: ¿Qué es STxT?
+	Header: ¿Qué es STxT?
 
 	Content:
 		Es un lenguaje puramente semántico, con unas reglas muy básicas, 

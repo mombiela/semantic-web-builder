@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Capítulo 6: Ejemplos
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): Ejemplos
 	Navigation:
-		Previous: Anterior (05-ns-docs)
-		Next: Siguiente (07-parser)
+		Previous: Anterior (ns-docs)
+		Next: Siguiente (parser)
 
-	Header: Capítulo 6: Ejemplos
+	Header: Ejemplos
 	Subheader: Recetas y recetarios
 	
 	SubSubheader: Namespace de recetas

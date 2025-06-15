@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Capítulo 2: STXT Tutorial
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): STXT Tutorial
 	Navigation:
-		Previous: Anterior (01-stxt-language)
-		Next: Siguiente (03-ai-powered)
+		Previous: Anterior (stxt-language)
+		Next: Siguiente (ai-powered)
 
-	header: Capítulo 2: STxT Tutorial
+	header: STxT Tutorial
 	
 	Content:
 		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 

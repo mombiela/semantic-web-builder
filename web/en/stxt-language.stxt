@@ -1,18 +1,14 @@
-Document (stxt.dev/namespace.stxt): Chapter 1: STXT, The Language
-	Default:
-		Title: STXT: The Book
-		
+Document (stxt.dev/namespace.stxt): STXT, The Language
 	Navigation:
-#		Previous: Previous (00-prologo)
-		Next: Next (02-stxt-tutorial)
+		Next: Next (stxt-tutorial)
 
 	Metadata:
-		Title: Chapter 1: What is STxT?
+		Title: What is STxT?
 		Description: Description of the language and the features that make it unique.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-03-01
 		
-	Header: Chapter 1: What is STxT?
+	Header: What is STxT?
 	
 	Content:
 		It is a purely semantic language, with very basic rules,

@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Capítulo 5: Documentos con namespace
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): Documentos con namespace
 	Navigation:
-		Previous: Anterior (04-raw-docs)
-		Next: Siguiente (06-examples)
+		Previous: Anterior (raw-docs)
+		Next: Siguiente (examples)
 
-	Header: Capítulo 5: Documentos con namespace
+	Header: Documentos con namespace
 	Assert: Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.
 	
 	Content:

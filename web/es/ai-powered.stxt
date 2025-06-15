@@ -1,12 +1,9 @@
-Document (stxt.dev/namespace.stxt): Capítulo 3: Potenciado con IA
-	Default:
-		Title: STXT: El Libro
-		
+Document (stxt.dev/namespace.stxt): Potenciado con IA
 	Navigation:
-		Previous: Anterior (02-stxt-tutorial)
-		Next: Siguiente (04-raw-docs)
+		Previous: Anterior (stxt-tutorial)
+		Next: Siguiente (raw-docs)
 
-	Header:  Capítulo 3: Potenciado con IA
+	Header:  Potenciado con IA
 	Content:
 		Con la llegada de las IA generativas, una cosa que me ha 
 		sorprendido es la naturalidad con la que tratan STxT. 
