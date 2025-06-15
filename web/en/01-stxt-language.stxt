@@ -34,8 +34,6 @@ Document (stxt.dev/namespace.stxt): Chapter 1: STXT, The Language
 		without any additional translation being necessary.
 		They have a hierarchical structure very similar to XML documents,
 		and their translation can be direct.
-		
-		In the future, STxT could be a replacement for other technologies like XML or YAML.
 	
 	Assert: Shall we start?
 

@@ -34,8 +34,6 @@ Document (stxt.dev/namespace.stxt): Capítulo 1: ¿Qué es STxT?
 		sin ser necesaria ninguna traducción adicional.
 		Tienen una estructura jerárquica muy parecida a documentos xml,
 		y su traducción puede ser directa.                                
-		
-		En un futuro STxT podría ser un reemplazo a otras tecnologías como xml o YAML.
 
 	assert:	¿Empezamos?
 	

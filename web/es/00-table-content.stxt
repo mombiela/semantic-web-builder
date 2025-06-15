@@ -6,22 +6,16 @@ Document(stxt.dev/namespace.stxt): STXT: El Libro
 		Previous: Anterior (00-prologo)
 		Next: Siguiente (01-intro-2024)
 
-	SubHeader: Parte I: Un nuevo lenguaje
+	SubHeader: Introducción al lenguaje
 	Content:
-		* [Capítulo 1: ¿Qué es STxT?](01-stxt-language)
-		* [Capítulo 2: STxT Tutorial](02-stxt-tutorial)
-		* [Capítulo 3: Potenciado con IA](03-ai-powered)
+		* [¿Qué es STxT?](01-stxt-language)
+		* [STxT Tutorial](02-stxt-tutorial)
+		* [Potenciado con IA](03-ai-powered)
 			
-	SubHeader: Parte II: Documentos
+	SubHeader: Documentos
 	Content:
-		* [Capítulo 4: Documentos sin namespace](04-raw-docs) 
-		* [Capítulo 5: Documentos con namespace](05-ns-docs)
-		* [Capítulo 6: Ejemplos](06-examples)
-		* [Capítulo 7: Parseo de documentos](07-parser)
+		* [Documentos sin namespace](04-raw-docs) 
+		* [Documentos con namespace](05-ns-docs)
+		* [Ejemplos](06-examples)
+		* [Parseo de documentos](07-parser)
 			
-	SubHeader: Parte III: Reflexiones	
-	Content:
-		* [Capítulo 8: STxT y otras tecnologías](08-stxt-vs)
-		* [Capítulo 9: Web semántica](09-semantic-web)
-		* [Capítulo 10: ¿Y ahora qué?](10-stxt-now)
-		
