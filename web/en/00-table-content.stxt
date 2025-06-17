@@ -1,17 +1,16 @@
-Document (dev.stxt.namespace): STXT: The Book
+Document(dev.stxt.namespace): STXT: The Book
 	Default:
 		Title: STXT: The Book
 		
-	SubHeader: Part I: A New Language
+	SubHeader: Introduction to the language
 	Content:
 		* [What is STxT?](stxt-language)
 		* [STxT Tutorial](stxt-tutorial)
-		* [AI-Powered](ai-powered)
+		* [Powered by AI](ai-powered)
 			
-	SubHeader: Part II: Documents
+	SubHeader: Documents
 	Content:
-		* [Documents Without Namespace](raw-docs) 
-		* [Documents With Namespace](ns-docs)
+		* [Documents without namespace](raw-docs) 
+		* [Documents with namespace](ns-docs)
 		* [Examples](examples)
-		* [Document Parsing](parser)
-			
+		* [Document parsing](parser)
