@@ -1,4 +1,4 @@
-Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
+Document (stxt.dev/namespace.stxt):STXT - A Language, Infinite Possibilities
 	Header: Tutorial in 1 minute
 
 	Alert:
@@ -13,7 +13,7 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 
 	SubHeader: Documents with namespace
 	
-	Content: An example document with an `Email` element from the `com.example.docs` namespace
+	Content: Example of a document with an `Email` element from the `com.example.docs` namespace
 		
 	Code:
 		***Email (com.example.docs)***:
@@ -28,7 +28,7 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 		And the definition of the namespace
 		
 	Code:
-		Namespace: ***com.example.docs***
+		***Namespace: com.example.docs***
 			Email:
 				From: (1)
 				To: (1)
@@ -39,12 +39,14 @@ Document (stxt.dev/namespace.stxt):STXT - One Language, Infinite Possibilities
 
 	SubHeader: Documents without namespace
 	
+	Content: Documents without namespace must mark multiline nodes with `:` in front of the name:
+	
 	Code:
 		Email:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
 			Title: Project report
-			Body Content:
-				:Hello Mery!
-				:The book is finished!
+			***:Body Content:***
+				Hello Mery! 
+				The book is finished!

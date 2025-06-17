@@ -28,7 +28,7 @@ Document (stxt.dev/namespace.stxt):STXT - Un Lenguaje, Infinitas Posibilidades
 		Y la definición del namespace
 		
 	Code:
-		Namespace: ***com.example.docs***
+		***Namespace: com.example.docs***
 			Email:
 				From: (1)
 				To: (1)
@@ -39,13 +39,15 @@ Document (stxt.dev/namespace.stxt):STXT - Un Lenguaje, Infinitas Posibilidades
 
 	SubHeader: Documentos sin namespace
 	
+	Content: Los documentos sin namespace deben marcar los nodos multiline con `:` delante del nombre:
+	
 	Code:
 		Email:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
 			Title: Project report
-			Body Content:
-				:Hello Mery! 
-				:The book is finished!
+			***:Body Content:***
+				Hello Mery! 
+				The book is finished!
 		
