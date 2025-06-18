@@ -1,2 +1,12 @@
 * Añadir índice en libro y todas las páginas
 * GTM
+
+Reddit posts:
+
+Nombre (SemanticText, SuperText, SexyText)
+Parser java (Maven)
+Parser python
+Parser javascript
+EBNF
+Eclipse plugin
+VSCode Plugin
