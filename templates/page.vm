@@ -102,7 +102,7 @@
 			#parse("/node.vm")
 		#end
 	
-		##parse("/navigation.vm")
+		#parse("/navigation.vm")
 	  </article>
 	  	
 	</div>
