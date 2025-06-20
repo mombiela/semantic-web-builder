@@ -3,14 +3,20 @@ Document(dev.stxt.namespace): STXT: The Book
 		Title: STXT: The Book
 		
 	SubHeader: Introduction to the language
+	
 	Content:
 		* [What is STxT?](stxt-language)
 		* [STxT Tutorial](stxt-tutorial)
-		* [Powered by AI](ai-powered)
+		* [AI Powered](ai-powered)
 			
 	SubHeader: Documents
+	
 	Content:
 		* [Documents without namespace](raw-docs) 
 		* [Documents with namespace](ns-docs)
 		* [Examples](examples)
+			
+	SubHeader: Technical resources
+	
+	Content:
 		* [Document parsing](parser)
