@@ -1,7 +1,3 @@
-/* ************ */
-/* main_content */
-/* ************ */
-
 #main_content {
 	@media (min-width: 750px) {
 		article {
@@ -13,25 +9,8 @@
 			float: right;
 			padding-left: 1.5em;
 		}
-
-		/* Revisar...
-		display: flex;
-		article {
-			flex: 1;
-		}
-		aside { 
-			padding-left: 1.5em;
-			flex: 0 0 350px;
-		}
-		*/
 	}
 
-/*	
-	aside {
-		height: 500px;
-	}
-	*/
-	
 	background-color: #fff;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	padding: 1em;
@@ -73,7 +52,6 @@
 	div.preamble p
 	{
 		text-align: right;
-	}
-	
+	}	
 }
 
