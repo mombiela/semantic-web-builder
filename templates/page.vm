@@ -77,7 +77,7 @@
 	<!-- ******* -->
 	
     <div id="main_content" class="clearfix">
-	  <aside id="advertisement">
+	  <aside id="index_content">
     	#if($index)
     		<div class="d-none d-md-block" style="margin-bottom:3rem;">
 			#foreach($node in $index.getChilds())
