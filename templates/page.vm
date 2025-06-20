@@ -1,112 +1,13 @@
 <!DOCTYPE html>
 #parse("/init.vm")
 <html lang="${lang.get("lang")}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${doc.getText()}</title>
-	<meta name="description" content="${meta.getChild("description").text}">
-	<meta name="author" content="${meta.getChild("author").value}">
-
-	<style>@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');</style>
-    <link rel="stylesheet" href="/css/site.css?v=20241210">
+	<head>#parse("/head.vm")</head>
+	
+	<body>
+		#parse("/main_header.vm")
+		#parse("/top_bar.vm")
+		#parse("/main_content.vm")		
 		
-	#if(${lang.get("lang")} == "en")
-		<link rel="alternate" hreflang="es" href="https://stxt.dev/es/${doc_name}" />
-		#set($indexPage = "/")
-	#end
-		
-	#if(${lang.get("lang")} == "es")
-		<link rel="alternate" hreflang="en" href="https://stxt.dev/${doc_name}" />
-		#set($indexPage = "/es")
-	#end
-	
-	<link rel="alternate" hreflang="x-default" href="https://stxt.dev/${doc_name}" />
-</head>
-
-<body>
-
-	<!-- *********** -->
-	<!-- main_header -->
-	<!-- *********** -->
-	
-    <header id="main_header">
-	    <div class="title">
-			<a href="$indexPage">
-			#if(${doc.getChild("default")})	STxT: ${lang.get("title_book")}
-			#else                  			STxT: Semantic TexT
-			#end
-    	    </a>
-		</div>
-		<div class="subtitle"><a href="index">${lang.get("title")}</a></div>
-		<ul>
-			<li><a href="about" title="${lang.get("menu.about")}" rel="nofollow">${lang.get("menu.about")}</a></li>
-			<!--
-			<li><a href="donate" title="${lang.get("menu.donate")}" rel="nofollow">${lang.get("menu.donate")}</a></li>
-			-->
-			<li><a href="contribute" title="${lang.get("menu.contrib")}" rel="nofollow">${lang.get("menu.contrib")}</a></li>
-			<li><a href="licence" title="${lang.get("menu.licence")}" rel="nofollow">${lang.get("menu.licence")}</a></li>
-			<li><b> | </b></li>
-			#if(${lang.get("lang")} == "es")
-				<li><b>${lang.get("menu.lang.es")}</b></li>
-				<li><a href="../${doc_name}" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.en")}</i></a></li>
-			#end
-			#if(${lang.get("lang")} == "en")
-				<li><a href="./es/${doc_name}" title="${lang.get("menu.lang.es")}"><i>${lang.get("menu.lang.es")}</i></a></li>
-				<li><b>${lang.get("menu.lang.en")}</b></li>
-			#end
-    	</ul>
-    </header>
-
-	<!-- ******* -->
-	<!-- top bar -->
-	<!-- ******* -->
-	
-    <div class="top-bar">
-    	<ul>
-			<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a></li>
-			<li><a href="$indexPage" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-			<li><a href="stxt-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-			<li><a href="stxt" title="${lang.get("menu.stxt")}">${lang.get("menu.stxt")}</a></li>
-    	</ul>
-    </div>
-	
-	<!-- ******* -->
-	<!-- Content -->
-	<!-- ******* -->
-	
-    <div id="main_content" class="clearfix">
-	  <aside id="index_content">
-    	#if($index)
-    		<div class="d-none d-md-block" style="margin-bottom:3rem;">
-			#foreach($node in $index.getChilds())
-				#parse("/node.vm")
-			#end
-			</div>
-    	#end
-	  </aside>
-	  
-      <article>
-		#parse("/navigation.vm")
-	
-		#if(${doc.name} == "chapter")
-			#if(${doc.getChild("title")})
-				<h1>${doc.getChild("title").text}</h1>
-			#end
-		#end
-	
-		#set($numPart = 0)
-	
-		#foreach($node in $doc.getChilds())
-			#parse("/node.vm")
-		#end
-	
-		#parse("/navigation.vm")
-	  </article>
-	  	
-	</div>
-	
-	<footer>${lang.get("foot.1")}</footer>
-</body>
+		<footer>${lang.get("foot.1")}</footer>
+	</body>
 </html>
