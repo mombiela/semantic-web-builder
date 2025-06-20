@@ -1,22 +1,6 @@
 <div id="main_content" class="clearfix">
-  <aside id="index_content">
-	#if($index)
-		<div class="d-none d-md-block" style="margin-bottom:3rem;">
-		#foreach($node in $index.getChilds())
-			#parse("/node.vm")
-		#end
-		</div>
-	#end
-  </aside>
-  
   <article>
 	#parse("/navigation.vm")
-
-	#if(${doc.name} == "chapter")
-		#if(${doc.getChild("title")})
-			<h1>${doc.getChild("title").text}</h1>
-		#end
-	#end
 
 	#set($numPart = 0)
 
@@ -26,4 +10,14 @@
 
 	#parse("/navigation.vm")
   </article>
+  
+  <aside id="index_content">
+	#if($index)
+		<div class="d-none d-md-block" style="margin-bottom:3rem;">
+		#foreach($node in $index.getChilds())
+			#parse("/node.vm")
+		#end
+		</div>
+	#end
+  </aside>
 </div>
