@@ -7,7 +7,6 @@
 		#parse("/main_header.vm")
 		#parse("/top_bar.vm")
 		#parse("/main_content.vm")		
-		
-		<footer>${lang.get("foot.1")}</footer>
+		#parse("/footer.vm")		
 	</body>
 </html>
