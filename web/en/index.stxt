@@ -2,7 +2,7 @@ Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
 	Navigation:
 		Next: Next (stxt-language)
 		
-	Header: Tutorial in 1 minute
+	Header: STxT in 1 Minute
 
 	Alert:
 		**STxT**: a language for building structured text documents, with namespaces and validation.
