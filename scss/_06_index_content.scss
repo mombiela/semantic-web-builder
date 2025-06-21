@@ -3,12 +3,10 @@
 	@media (min-width: 750px) {
 		display:block;
 	}
-	ul {
-		padding-left: 0rem;
-		list-style-type: none;
-	}
-	li {
-		margin: 0.5rem;
+	
+	div.link {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
 		font-size: 1.2rem;
 		a.selected {
 			font-weight: bold;
@@ -16,6 +14,5 @@
 			padding: 0.5rem;
 		}
 	}
-	
 }
 
