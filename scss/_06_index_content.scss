@@ -4,11 +4,17 @@
 		display:block;
 	}
 	ul {
-		padding-left: 1.5rem;
+		padding-left: 0rem;
+		list-style-type: none;
 	}
 	li {
 		margin: 0.5rem;
 		font-size: 1.2rem;
+		a.selected {
+			font-weight: bold;
+			background-color: #fbd7ff;
+			padding: 0.5rem;
+		}
 	}
 	
 }

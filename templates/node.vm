@@ -23,4 +23,8 @@
 	<div class="row">
 		<div class="alert">${wiki.render($node.text)}</div>
 	</div>
+#elseif(${node.name} == "link")
+	<div class="link">
+		<a href="${node.textSufix}">${node.textCentral}</a>
+	</div>
 #end
