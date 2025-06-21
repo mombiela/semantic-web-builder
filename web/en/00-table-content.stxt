@@ -4,16 +4,17 @@ Document(dev.stxt.namespace): STXT: The Book
 		
 	SubHeader: Introduction to the language
 	
-	Link: What is STxT?(stxt-language)
-	Link: STxT Tutorial(stxt-tutorial)
-	Link: AI Powered(ai-powered)
+	Link: STxT in 1 Minute (index)
+	Link: What is STxT? (stxt-language)
+	Link: STxT Tutorial (stxt-tutorial)
+	Link: AI Powered (ai-powered)
 			
 	SubHeader: Documents
 	
-	Link: Documents without namespace(raw-docs) 
-	Link: Documents with namespace(ns-docs)
-	Link: Examples(examples)
+	Link: Documents without namespace (raw-docs) 
+	Link: Documents with namespace (ns-docs)
+	Link: Examples (examples)
 			
 	SubHeader: Technical resources
 	
-	Link: Document parsing(parser)
+	Link: Document parsing (parser)

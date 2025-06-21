@@ -25,6 +25,6 @@
 	</div>
 #elseif(${node.name} == "link")
 	<div class="link">
-		<a href="${node.textSufix}">${node.textCentral}</a>
+		<a href="${node.textSufix}" #if(${doc_name}==${node.textSufix}) class="selected"  #end>${node.textCentral}</a>
 	</div>
 #end
