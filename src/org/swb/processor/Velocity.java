@@ -107,15 +107,7 @@ public class Velocity extends AbstractDirProcessor
         String lang = (String) ((Map) context.get("nav_lang")).get("lang");
         Map pages = (Map) context.get("pages_" + lang);
         Object index = pages.get("00-table-content");
-        //if(!name.equals("00-table-content"))
-        {
-        	String[] parts = name.split("-");
-        	//if (parts.length>1)
-        	{
-        		//if (StringUtils.isNumeric(parts[0]))
-        			velocityContext.put("index", index);
-        	}
-        }
+		velocityContext.put("index", index);
         System.out.println("Velocity: " + name + " -> " + lang);
         
         // Renderizamos
