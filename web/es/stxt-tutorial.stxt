@@ -1,10 +1,35 @@
 Document (dev.stxt.namespace): STXT Tutorial
 	Navigation:
 		Previous: Anterior (stxt-language)
-		Next: Siguiente (ai-powered)
+		Next: Siguiente (raw-docs)
 
 	header: STxT Tutorial
 	
+	SubHeader: ¿Qué es STxT?
+
+	Content:
+		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
+		que permite la creación de documentos con un contenido estructurado 
+		y sencillo de interpretar, tanto por humanos como por máquinas. 
+		Podríais estar leyendo un documento en STxT sin daros cuenta en realidad
+		que lo es. 	
+		
+		STxT: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
+		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
+		Todos los que se quieran. Ésta es la propuesta.
+		
+		STxT es un lenguaje para escribir documentos estructurados. Permite crear
+		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
+		pero consiguiendo documentos que pueden ser leídos por personas 
+		sin conocimientos informáticos.
+						 
+		De hecho, los documentos tienen significado por si mismos,
+		sin ser necesaria ninguna traducción adicional.
+		Tienen una estructura jerárquica muy parecida a documentos xml,
+		y su traducción puede ser directa.                                
+
+
+
 	Content:
 		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
 		Te explicamos lo que es STxT directamente, sin más preámbulos.
