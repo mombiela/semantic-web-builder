@@ -75,10 +75,10 @@ Document (dev.stxt.namespace): STXT Tutorial
 			Recipe:
 			    Description: (?) TEXT
 			    Servings: (?) NUMBER
-				Difficulty: (?) ENUM
-				    : easy
-				    : medium
-			        : hard
+				:Difficulty: (?) ENUM
+					easy
+					medium
+			    	hard
 			    Ingredients: (1)
 					Ingredient: (+)
 			    Steps: (1)

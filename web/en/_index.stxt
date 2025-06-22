@@ -2,12 +2,12 @@ Document(dev.stxt.namespace): STXT: The Book
 	Default:
 		Title: STXT: The Book
 		
-	SubHeader: Introduction to the language
+	SubHeader: Introduction
 	
 	Link: STxT in 1 Minute (index)
 	Link: STxT Tutorial (stxt-tutorial)
 			
-	SubHeader: STxT Documents
+	SubHeader: The Language
 	
 	Link: Documents without namespace (raw-docs) 
 	Link: Documents with namespace (ns-docs)

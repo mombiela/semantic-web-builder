@@ -75,10 +75,10 @@ Document (dev.stxt.namespace): STXT Tutorial
 			Receta:
 			    Descripción: (?) TEXT
 			    Comensales: (?) NUMBER
-				Dificultad: (?) ENUM
-				    : fácil
-				    : media
-			        : difícil
+				:Dificultad: (?) ENUM
+					fácil
+					media
+			    	difícil
 			    Ingredientes: (1)
 					Ingrediente: (+)
 			    Pasos: (1)
