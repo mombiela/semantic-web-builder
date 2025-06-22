@@ -1,0 +1,13 @@
+Document (dev.stxt.namespace):EBNF
+	Navigation:
+		Previous: Anterior (doc-parsing)
+		Next: EBNF (parsers)
+
+	Metadata:
+		Description: Se muestra la descripción en EBNF de STxT
+		Author: Joan Costa Mombiela
+		Last modif: 2025-06-22
+		
+	Header: EBNF
+		
+	Content:

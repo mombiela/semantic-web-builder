@@ -1,0 +1,158 @@
+Document (dev.stxt.namespace): Parsing of STxT (*)
+	Navigation:
+		Previous: Previous (examples)
+		Next: EBNF (ebnf)
+		
+	Metadata:
+		Title: Parsing of STxT
+		Description: Although the parsing of STxT is simple, some parts are explained in more detail
+		Author: Joan Costa Mombiela
+		last modif: 2013-03-01
+	
+	header:	Parsing of STxT (*)
+		
+	Content:
+		Parsing an STxT file is much easier than parsing files from other technologies. 
+		It may seem paradoxical, as it is indeed a very powerful language, but at the same time it is
+		based on very simple principles.
+		
+		I will explain my way of parsing a file. It may not be the best, nor the most optimal, 
+		but it is one way to do it. In fact, if you want to see the implementation I have done
+		it is available on the Internet:
+	
+	assert:
+		[https://github.com/mombiela/stxt-parser](https://github.com/mombiela/stxt-parser)
+		
+	Content:
+		This implementation has been done in Java, as it is the language I know best.
+		
+		I hope STxT succeeds, and that other implementations will appear very soon.
+		
+		I will not go into all the details, but I would like to explain
+		some points that require more attention.
+		
+	Assert:
+		If you do not intend to implement a parser, do not continue reading.
+		The next chapter is much more interesting ;-)	
+	Subheader:	Generic process
+		
+	subSubheader:Line-by-line parsing
+		
+	Content:
+		The parsing process can be done line by line, so we can say that in general we have:
+		
+	code:
+		while not end of file
+			read line
+			process line
+		end while
+		
+	Content:
+		During the process, it is appropriate to have a list of the last nodes we have been finding according to the level,
+		as this depends on the correct processing.
+		
+	subSubheader:Line processing
+		
+	Content:
+		The first step in line processing is the _normalization_ of the line.
+		A line is normalized when it is in compact (or semi-compact) form, so it must be checked if it is,
+		and if it is not, transform it. In normalization, comment lines are also removed.
+		
+		It must be taken into account in normalization that if the previous node was text,
+		when exceeding a certain level it will be part of that same node. That is, it will be text that follows. It will also be part of it
+		if it does not reach the level but the line is completely blank,
+		in which case it will be translated as text with a line break ([[chapter_06.html#index_9|See advanced tutorial]]).
+		
+		Once we have compacted the line, the processing continues independently, and it only remains to obtain
+		the level of the new line and distinguish between a few cases:
+		
+		* Are we in the first node?
+		* Is the line text from a previous text node?
+		* Does a new node start?
+		
+		In each of the cases, it is about updating the state of our variables and continuing with the process.
+		
+		Note: The most important thing here is to see that it is a process that can be done line by line,
+		and the decisions to be made are relatively simple. This allows us to have a very efficient parser,
+		which in turn can act as a validator of the grammar and nodes. 
+		
+	subSubheader:Validations
+		
+	Content:
+		Validations are done at several points in the parsing:
+		
+		* When creating a new node: When creating a new node, it is validated that its namespace can be deduced. 
+		  Otherwise, it means that it could not be created in that position and would be incorrect.
+		* When closing a node: When we close a node, it is validated.
+		** In case it is of type NODE, it is validated that the number of children is correct.
+		** In case it is not NODE, it is validated that it has the appropriate content depending on its type.
+			
+		When do we consider a node finished? This point is interesting,
+		as there are two circumstances that cause a node to be considered finished.
+		One of them is when another node appears with a level equal to or lower than this node.
+		The other is when the entire file has been processed and there are no more nodes to validate.
+		At these points, the node is considered finished and validations can begin.
+		
+	Subheader:	The language nodes
+		
+	Content:
+		In the description of the language, we had said that data types have no limitation
+		and are not tied to a language, so validations should only be checked
+		through regular expressions or methods that ensure this fact.
+		
+		We have the following types of nodes:
+		
+		* NODE
+		* TEXT
+		* URL
+		* NATURAL
+		* INTEGER
+		* RATIONAL
+		* NUMBER
+		* BINARY
+		* HEXADECIMAL
+		* BASE64
+		* BOOLEAN
+		 	
+		For example, the regular expressions we could use to validate nodes are:
+		 
+	code:
+		BINARY       = ^(0|1|\s)+$
+		BOOLEAN      = ^0|1$
+		HEXADECIMAL  = ^([a-f0-9]|\s)+$
+		INTEGER      = ^(\-|\+)?\d+$
+		NATURAL      = ^\d+$
+		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
+		RATIONAL     = ^(\-|\+)?\d+\/\d+$
+		 	
+	Subheader:Grammars
+		
+	subSubheader:Storage
+		
+	Content:
+		Grammars are obtained from the Internet, but it is not practical or efficient to always have to search
+		for definitions remotely. The most efficient strategy is to have a kind of grammar repository,
+		on disk, and always look for them there. If not found, they would be searched for on the Internet,
+		and that repository would be updated. It is also possible to establish check times or other strategies.
+		The idea is that grammars do not change over time, or at least be retroactively compatible.
+		
+	subSubheader:Initial grammar
+		
+	Content:
+		It must be taken into account that it is not possible to make a parser without having the grammar beforehand.
+		To parse a grammar, you must have the definition of the base grammar already parsed.
+		For this reason, there will be a definition of the initial grammar in the code itself. 
+		
+	Subheader:Details to consider
+		
+	Content:
+		There are some details to consider in parsing:
+		
+		* Case-insensitive: All nodes are considered CASE-INSENSITIVE, 
+		  so the appropriate transformations must be made in the parsing process.
+		* Base64: With BASE64 text, line breaks must be allowed,
+		  and a standard parse of the content thus obtained must be done.
+		* For line reading, both UNIX and DOS formats must be considered.
+		  Therefore, both line break and line break + carriage return will be allowed.
+		  This is done to allow quick file edits from any environment,
+		  although it would be most appropriate to always use UNIX standard (line break character only).

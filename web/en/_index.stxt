@@ -9,10 +9,14 @@ Document(dev.stxt.namespace): STXT: The Book
 			
 	SubHeader: The Language
 	
-	Link: Documents without namespace (raw-docs) 
-	Link: Documents with namespace (ns-docs)
+	Link: General Description (lang)
+	Link: Documents without Namespace (raw-docs) 
+	Link: Documents with Namespace (ns-docs)
+	Link: Compaction (compact)
 	Link: Examples (examples)
 			
-	SubHeader: Technical resources
+	SubHeader: Technical Resources
 	
-	Link: Document parsing (parser)
+	Link: Document Parsing (doc-parsing)
+	Link: EBNF (ebnf)
+	Link: Available Parsers (parsers)

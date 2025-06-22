@@ -1,12 +1,12 @@
 Document (dev.stxt.namespace): Examples
 	Navigation:
-		Previous: Previous (ns-docs)
-		Next: Next (parser)
+		Previous: Previous (compact)
+		Next: Next (doc-parsing)
 
 	Header: Examples
-	Subheader: Recipes and Recipe Books
+	Subheader: Recipes and cookbooks
 	
-	SubSubheader: Recipe Namespace
+	SubSubheader: Recipe namespace
 	
 	Code:
 		# ------
@@ -34,12 +34,12 @@ Document (dev.stxt.namespace): Examples
 			    Servings: (?) NUMBER
 			    Document: (*) (www.dokumentando.com/doc_simple.stxt)
 	
-	SubSubheader: Recipe Book Namespace
+	SubSubheader: Cookbook namespace
 	
 	Code:
 		Namespace: www.kocinando.com/recetario.stxt
 		
-			Recipe Book:
+			Cookbook:
 				Recipe: (+) (www.kocinando.com/receta.stxt)
 	
 	SubSubheader: Recipe
@@ -50,13 +50,13 @@ Document (dev.stxt.namespace): Examples
 		# -----------------
 		
 		Recipe(www.kocinando.com/receta.stxt):
-			Recipe Name: A Recipe
-			Description: This is an example recipe
+			Recipe Name: A recipe
+			Description: This is a sample recipe
 			Steps:
 				Step: 1
 				Description:
-			        This recipe will guide you through the steps needed to prepare a delicious ham pizza at home.
-			        Follow the instructions carefully to achieve the best results.
+			        This recipe will guide you through the necessary steps to prepare a delicious ham pizza at home.
+			        Follow the instructions carefully for the best results.
 		    Difficulty: medium
 		    Ingredients:
 				Ingredient:
@@ -65,38 +65,38 @@ Document (dev.stxt.namespace): Examples
 		    		Name: Water
 		    
 			Document:
-		    	Title: First Simple Document
+		    	Title: First simple document
 		    	Description:
 		    		This is the
 		    		first simple document.
-		    		It has multiple lines.
+		    		It has several lines
 		    	Document Type: report
 		    	
-	SubSubheader: Recipe Book
+	SubSubheader: Cookbook
 	
 	Code:
-		Recipe Book(www.kocinando.com/recetario.stxt):
+		Cookbook(www.kocinando.com/recetario.stxt):
 		
 			# --------
 			# Recipe 1
 			# --------
 			
 			Recipe:
-				Recipe Name: A Recipe
-				Description: This is an example recipe
+				Recipe Name: A recipe
+				Description: This is a sample recipe
 				Ingredients:
 					Ingredient:
-						Quantity: 10
-						Units: g
-						Name: tomato
+						Quantity:10
+						Units:g
+						Name:tomato
 					Ingredient:
-						Quantity: 1
-						Units: u
-						Name: pear
+						Quantity:1
+						Units:u
+						Name:pear
 					Ingredient:
-						Quantity: 200
-						Units: dl
-						Name: milk
+						Quantity:200
+						Units:dl
+						Name:milk
 					
 				Steps:
 					Step: 1
@@ -104,9 +104,10 @@ Document (dev.stxt.namespace): Examples
 					Step: 3
 					Step: 4
 					Description: 
-						You must watch this Step, as 
-						it cannot guarantee proper operation.
-						In case of error, consult the unique service.
+						This Step needs to be monitored, as 
+						its proper functioning cannot be guaranteed.
+						In case of error, consult by making a call 
+						to the unique service.
 						
 						This is another line
 						# Hello
@@ -115,34 +116,35 @@ Document (dev.stxt.namespace): Examples
 			
 			
 			Recipe:
-				Recipe Name: A Recipe
-				Description: This is an example recipe
+				Recipe Name: A recipe
+				Description: This is a sample recipe
 				Ingredients:
 					Ingredient:
-						Quantity: 10
-						Units: g
-						Name: tomato
+						Quantity:10
+						Units:g
+						Name:tomato
 					Ingredient:
-						Quantity: 1
-						Units: u
-						Name: pear
+						Quantity:1
+						Units:u
+						Name:pear
 					Ingredient:
-						Quantity: 200
-						Units: dl
-						Name: milk
+						Quantity:200
+						Units:dl
+						Name:milk
 				Steps:
 					Step: 5
 					Step: 6
 					Step: 7
 					Step: 8
-					Description: You must watch this Step, as
-						it cannot guarantee proper operation.
-						In case of error, consult the unique service.
-					Step: Step 9
+					Description: This Step needs to be monitored, as
+						its proper functioning cannot be guaranteed.
+						In case of error, consult by making a call
+						to the unique service
+					Step:Step 9
 	
 	Subheader: Documents
 	
-	SubSubheader: Simple Document Namespace
+	SubSubheader: Simple document namespace
 	
 	Code:
 		Namespace: www.dokumentando.com/doc_simple.stxt
@@ -159,19 +161,19 @@ Document (dev.stxt.namespace): Examples
 		    Sections:
 		        Section: (+) TEXT
 
-	SubSubheader: Simple Document
+	SubSubheader: Simple document
 	
 	Code:
 		Document (www.dokumentando.com/doc_simple.stxt):
-		    Title: First Simple Document
+		    Title: First simple document
 		    Description:
 		    	This is the
 		    	first simple document.
-		    	It has multiple lines.
+		    	It has several lines
 		    Document Type: report
 
 	
-	SubSubheader: Document Namespace
+	SubSubheader: Document namespace
 	
 	Code:
 	
@@ -186,7 +188,7 @@ Document (dev.stxt.namespace): Examples
 		        Body: (1) TEXT 
 		        Author: (1) 
 		        Creation Date: (1) DATE
-		        Last Modification: (1) TIMESTAMP
+		        Last modification: (1) TIMESTAMP
 		        Contact Email: (1) EMAIL 
 		        Website: (1) URL
 		        Postal Code: (1) REGEX
@@ -202,9 +204,9 @@ Document (dev.stxt.namespace): Examples
 	SubSubheader: Document
 	
 	Assert: Now it's your turn to create it ;-)
-
-	Subheader: Client
-	SubSubheader: Client without Namespace
+	
+	Subheader: Clients
+	SubSubheader: Client without namespace
 	
 	Code:
 	
@@ -220,7 +222,7 @@ Document (dev.stxt.namespace): Examples
 			
 			Personal Data:
 			
-				First Name: Shila
+				Name: Shila
 				Last Name: Kween
 				Age: 28
 				VIP Client: true
@@ -242,30 +244,30 @@ Document (dev.stxt.namespace): Examples
 					:olVZ+uYXPA20yWCTFgAATADMSGpO6aTQ5wFsXuqQpXH4Nw1s8qhZ6xblEAqqm0xY5Qf/lpBxMSIG
 					:q0rRhShH+HREGrcxSsGMpr2ZHLVmVgBLGmtc0+Key4w0LA9c4TEjg8kQY1SHtv3DXwbK3beDG+lY
 					:Om0jfQ5gq3n4RDuKqPIKZacf8y47nTgXaNHaDjNKeN8Ft8aRLikVdirMwoohxM6MAmeca0dhkroF
-					:tEYugZ2z9GDBsGqbFKDzLigbXFAZoOmGz7z2xVISZhhsUVAkpsm8MiHAfsFEoq1EpgnAkGjxjV80
-					:ARAvx0nMmGgaXD3XrwWMNtQn1mdTW7NHmVRlTgG9qdJ2N7PWGJkSShz5Bt1UvFQquIFMAXA7qtZc
-					:9DeIJGrfS39aMLJPktiGdRkGnqfc/1yLluUePgbXuqzkNUupWksEaOmDSSzNE/qu5Wg6dVyI4LMj
-					:MY8awKgim6C2qM6jK7iM7ezBhc+4faQj4T9h++rZnzt4LQy6uCFGeSmg5ZgdE4y+HGPUUpiEpA86
-					:HgWZXr6aaxvlR7zMOM9JUE/TzMJEtA9IOif3oN4ec7NJG8iKW67+oYhraEkxovBOn5Kjrs9x4jnS
-					:wYumHiGrrTBsOcuonU/csQWNhWg98qnPFrwWilEQC36wmJS3xrKLYCQjMjoA3vPywz8wmMIpkYmG
-					:6irVFUJJQ2e10gIAalWgJOTFPMCrCT4Ylbqm9GUapHhSAERXxCSBTwgsSYbBtBC/nv8gRlYvi0iW
-					:wDhERvHthcnTUjJIiAc2eE0uGXuVjt4IidQFD0SzOFcvuHA9CsoKNAUUBmKm0TdZNWpXyBLGrFoD
-					:EDC6r43RKKM7zOG2ZSylFjo7in8SCEYRirBWQ4xkEwl1E7HVygzSkkQZs+UcIB7LiPEjUQZ/Yg2A
-					:XWoXQuwb3wbiyCB6TV3TmVoZC1lGUPqilxISQDHB9SXXXZEWUUkO3xjXG51Z85ep0eEydQY6gdRC
-					:mdyES1+G8ccOouiToGTUhFhpgWoJwSmIItoVhgLETLqjDWcoptf0yU9ftMNyZawnokTHN6V5pkod
-					:Y1XqisnFSxUQjErURhLukbo/pvP/WNZMoncYyIsKKnOILzNi6hrSwOGAA5NbyORHkXW1UBqobrsg
-					:IkWSAFJEhU1rypzGGLFZL41y8zRUk8AzcvLMcNTnnjMqJtB+qYz6dFQxH+Ei69JVT87sNEuyGOUd
-					:OjU0tcXSRcNjx7byRxSbKjNzRiJnUEtREkrtK56NautRcOMZrTXoOaFjo8HWisdG1OGAPVAXJeRl
-					:yCH6o30FDZp0ssS6vWhiCUn8Qz1nhZppoOSQaxhmMi5YiqLeYJxmQIJAHoUkYWJkOhRUZnB4Jooe
-					:qYkvBK2oMa3RQVupjR1DzIvFGNmJhGXpsnBRjofwQQCQ3qS1ycnCy9gIIsmGsoJA/5yGd/J3vQaN
-					:c4hWUKMmPGuD83gtLqqZKDai8dHnZswd7fvbUdAFnqGBVKmI+pf4nmYegNXzb/5wJw6e0sRdlGdc
-					:yVCJImtaOZuZkSIg2mlAbUXI54wOvBVFVBa2e1KMnZJSIeoRkNgyYNHphaaaRfCAEnvKUdaEneVo
-					:YROdilX9GjV0bfBJljRcpoEScShCHCJUGcmPOJU3iE9o1jHSYUA7phSXGmlDEHckr4DFKJ5GWUJA
-					:IVXAe3yCd5zgDrVod+SdJTAmWvKoT4gXNaceq6YYajJ1FnGPbWVAFfPiImhyKCVwjEF3O4uEncBH
-					:0056xyFGupvRLkJD1gHslxjhjv9HwJG1zAJzb4hAhxDB9b2+GQZSbrLgFFPqFCPsuBOI8G9xsxdc
-					:AF2G0JH+FRdpLIKXKG2fneYdqwV1CztUEDVcC8FiLxND85VgbkoIJYUjIeTeFqy+OnaLoF0za/mE
-					:rVx8QumoE60m7FxaEKkqnHKZ2L4XkO27LtaibGvVRmpGK6FBINZibsNYbXh7b5w9ju3KuIpag2ew
-					:gkpVVPo00pGNjLuAjsW8AW5dEA9rD5/jaxxe2pKCtLuDbSC4+pAkDJaOoCrBJugTPCfwZUOBFfKF
+					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
 					:ie1CykcUtDZWRRNBESP8NDS0kbiDMJAb/ryYZ+NY4vq4RsUtLoKpzXxnssCGeXz/IwdTTDNLF5ja
 					:G1iHgnaHLdyPta81E7SdNTRILjgPQ2oAhkkMbaNNJthrf0vAhbB10BjBkRBn0D2DRUBxKNfWxx9g
 					:MzAQqLRU/dhlELmJZX5H5RF4igLvyr4Tha/bDJ2FOgvxXgnLqhV6tNwE+WAFBR0Ng0LT04AguWL1
@@ -290,18 +292,18 @@ Document (dev.stxt.namespace): Examples
 					:AjwuaomD+J5OCgNveUckajccWKU0EBdDlQKMIz5c2nbWF6UjoDYwOqZbdhItEChqqitG4IotYG5v
 					:6gLpx6Aygad1aqd72qd++qeAGqiCOqiEWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
 			
-			# Note: if anyone wants to entertain themselves, the photo was drawn by me. 
-			# You'll find that I'm a much better computer scientist than illustrator :-D
+			# Note: if anyone wants to have fun, the photo was drawn by me. 
+			# You will find that I am a much better computer scientist than illustrator :-D
 			
 			# ---------------
-			# Banking Details
+			# Bank Details
 			# ---------------
 			
-			Banking Details:
+			Bank Details:
 				Account Holder: Joan Costa Mombiela
 				Account Number: 0000-0000-00-000000000
 	
-	SubSubheader: Client with Namespace
+	SubSubheader: Client with namespace
 	
 	Code:
 	
@@ -317,7 +319,7 @@ Document (dev.stxt.namespace): Examples
 			
 			Personal Data:
 			
-				First Name: Shila
+				Name: Shila
 				Last Name: Kween
 				Age: 28
 				VIP Client: true
@@ -387,35 +389,36 @@ Document (dev.stxt.namespace): Examples
 					AjwuaomD+J5OCgNveUckajccWKU0EBdDlQKMIz5c2nbWF6UjoDYwOqZbdhItEChqqitG4IotYG5v
 					6gLpx6Aygad1aqd72qd++qeAGqiCOqiEWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
 			
-			# Note: if anyone wants to entertain themselves, the photo was drawn by me. 
-			# You'll find that I'm a much better computer scientist than illustrator :-D
+			# Note: if anyone wants to have fun, the photo was drawn by me. 
+			# You will find that I am a much better computer scientist than illustrator :-D
 			
 			# ---------------
-			# Banking Details
+			# Bank Details
 			# ---------------
 			
-			Banking Details:
+			Bank Details:
 				Account Holder: Joan Costa Mombiela
 				Account Number: 0000-0000-00-000000000
 	
-	SubSubheader: Client Namespace
+	SubSubheader: Client namespace
 	
 	Code:
 		Namespace: www.gymstxt.com/client.stxt
 		
 			Client:
 				Personal Data: (1)
-				Banking Details: (1)
+				Bank Details: (1)
 			
 			Personal Data:
-				First Name: (1)
+				Name: (1)
 				Last Name: (1)
-				Middle Name: (?)
+				Second Last Name: (?)
 				Age: (?) NUMBER 
 				VIP Client: (?) BOOLEAN
 				Photo: (*) BASE64
 				
-			Banking Details:
+			Bank Details:
 				Account Holder: (?)
 			    Account Number: (1) 
 			
+	

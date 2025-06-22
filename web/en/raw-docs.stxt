@@ -1,14 +1,13 @@
-Document (dev.stxt.namespace): Documents Without Namespace
+Document (dev.stxt.namespace): Documents without namespace
 	Navigation:
-		Previous: Previous (stxt-tutorial)
+		Previous: Previous (lang)
 		Next: Next (ns-docs)
 
-	Header: Documents Without Namespace
-	
-	Content: I believe it’s already clear what documents without a namespace are like. Example:
+	Header: Documents without namespace
+	Content: I think it is already clear what documents without namespace are like. Example:
 	
 	Code:
-		Recipe: Macaroni Recipe
+		Recipe: Macaroni recipe
 			Description:
 				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
@@ -19,9 +18,9 @@ Document (dev.stxt.namespace): Documents Without Namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sauce
-				Step: (2) Boil the macaroni
-				Step: (3) Mix the macaroni with the sauce and serve
+				Step: (1) Make sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve
 
 	Content: Let's delve a little deeper.
 
@@ -30,9 +29,9 @@ Document (dev.stxt.namespace): Documents Without Namespace
 	Assert: UTF-8 Encoding Always
 	
 	Content: 
-		The end. It’s a good rule, and I’m very happy with it.
-		Nowadays, it’s the most acceptable, most universal,
-		and most implemented encoding. I don’t think this will change in the coming years.
+		End. It's a good rule and I'm very happy with it. 
+		Nowadays it is the most acceptable, most universal,
+		and most implemented encoding. I don't think this will change in the coming years.	
 	
 	Subheader: Identifiers
 	
@@ -40,39 +39,39 @@ Document (dev.stxt.namespace): Documents Without Namespace
 	
 	Assert: 
 		Spaces are allowed in names. \
-		Why not? Just to seem more technical?\
+		Why not? To look like computer scientists?\
 		Times are changing :-D
 
-	Subheader: Escape Characters
+	Subheader: Escape characters
 	
 	Assert: There are no escape characters
 	
 	Content: 
-		I think this is the best thing I’ve heard in a long time.
-		**There are no escape characters** _because they aren’t necessary_.
-		Due to the structure, they aren’t needed.
+		I think it's the best thing I've heard in a long time. 
+		**There are no escape characters** _because they are not necessary_.
+		Due to the structure, they are not necessary.	
 
-	Subheader: Comments
+	Subheader:	Comments
 		
 	Content:
-		All tech-savvy individuals know what comments are in any language.
-		For any beginners, I’ll explain that comments are text that’s only there
-		to comment or add some observation, but they don’t influence the document itself.
+		All computer scientists know what comments are in any language.
+		In case there is a neophyte, I will explain that comments are text that is only there 
+		to comment or add some observation, but they do not influence the document itself.
 		
-	Assert:
-		In STxT, comments are all lines that start with the character #
+	assert:
+		In STxT, all lines that start with the character # are comments
 		
 	Content:
-		Comments don’t need any specific format; 
-		they’re free text that the document author can include.
-		Moreover, they don’t need to be placed in any specific part of the document.
+		Comments do not have to have any specific format, 
+		it is free text that the document author can include. 
+		Also, it does not have to be located in any specific place in the document. 
 		Any line that starts with # will be treated as a comment,
-		and won’t be considered by programs or in communications.
+		and will not be considered in programs or communications.
 		
 		Example:
 
 	Code:
-		Recipe: Macaroni Recipe
+		Recipe: Macaroni recipe
 		***# (1) This is a comment***
 		***# (2) This is also a comment***
 			***# (3) This is also a comment***
@@ -81,39 +80,39 @@ Document (dev.stxt.namespace): Documents Without Namespace
 				:Bla, bla, bla
 			***# (4) This is a comment***	
 				:Bla, bla, bla
-				***# (5) This is NOT a comment***
+				***# (5) this is NOT a comment***
 			Servings: 3
 			Difficulty: easy
 			Ingredients:
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sauce
-				Step: (2) Boil the macaroni
-				Step: (3) Mix the macaroni with the sauce and serve	
+				Step: (1) Make sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve	
 	
-	Content: It’s worth noting that `(1),(2),(3) and (4)` are comments, while 
-		`(5)` is not, as it is within the indented text.
+	Content: It should be noted here that `(1),(2),(3) and (4)` are comments, while 
+		`(5)` is not, as it is within the indented text. 
 
-	Subheader: Nodes and Indentation
+	Subheader:	Nodes and indentation
 	
 	Content:	
-		We mentioned earlier that an STxT document is a set of nested nodes.
+		We have previously said that an STxT document is a set of nested nodes. 
 		Indentation is very similar to other languages, and tabs or spaces can be used.
 		
 	Assert: 
-		4 spaces are equivalent to one tab
-		It’s better not to mix documents with tabs and spaces
+		4 spaces are equivalent to a tab
+		It is better not to mix documents with tabs and spaces
 		
-	Subheader: Multiline Nodes
+	Subheader: Multiline nodes
 	
 	Content: 
-		These nodes allow for **complete texts across multiple lines**. In documents with namespaces,
+		These nodes allow for **complete texts in multiple lines**. In documents with namespace
 		they will be equivalent to `TEXT` type nodes. They are constructed with lines
-		that start with `:`, but without a preceding label. Example:
+		that start with `:`, but without a previous label. Example:
 		
 	Code:
-		Recipe: Macaroni Recipe
+		Recipe: Macaroni recipe
 			***Description:***
 				***:This is the description of the macaroni recipe.***
 				***:Bla, bla, bla***
@@ -124,22 +123,22 @@ Document (dev.stxt.namespace): Documents Without Namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sauce
-				Step: (2) Boil the macaroni
-				Step: (3) Mix the macaroni with the sauce and serve	
+				Step: (1) Make sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve	
 				
 	Content:
-		We’ve just seen that the `Description` node is a MULTILINE node.
+		We have just seen that the `Description` node is a MULTILINE node. 
 	
 	Subheader: (Prefix) Central (Suffix)
 	
 	Content: 
-		Although it’s not part of the language, it’s common practice that 
+		Although it is not part of the language, it is a common practice that 
 		simple fields are structured with `(prefix) central (suffix)`.
-		All three can appear, or just 1 or 2 of them. Example:
+		All three or only 1 or 2 of them may appear. Example:
 		
 	Code:
-		Recipe: Macaroni Recipe
+		Recipe: Macaroni recipe
 			Description:
 				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
@@ -150,6 +149,6 @@ Document (dev.stxt.namespace): Documents Without Namespace
 				Ingredient: ***(100g) Tomato***
 				Ingredient: ***(240g) Macaroni***
 			Steps:
-				Step: ***(1) Make the sauce***
-				Step: ***(2) Boil the macaroni***
-				Step: ***(3) Mix the macaroni with the sauce and serve***
+				Step: ***(1) Make sofrito***
+				Step: ***(2) Boil macaroni***
+				Step: ***(3) Mix macaroni with sofrito and serve***

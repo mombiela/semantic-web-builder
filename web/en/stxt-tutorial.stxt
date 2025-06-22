@@ -1,7 +1,7 @@
 Document (dev.stxt.namespace): STXT Tutorial
 	Navigation:
 		Previous: Previous (index)
-		Next: Next (raw-docs)
+		Next: Next (lang)
 
 	header: STxT Tutorial
 	
@@ -33,7 +33,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 			Steps:
 				Step: (1) Make sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve
+				Step: (3) Combine macaroni with sofrito and serve
 	Content:
 		This is a **STxT document without namespace**. These types of documents
 		are structured, but we don't know what form the nodes take. Anyway, it can already
@@ -64,7 +64,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 			Steps:
 				Step: (1) Make sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve
+				Step: (3) Combine macaroni with sofrito and serve
 	
 	Content: 
 		Now we show the namespace. **The definition of the namespace is found in
@@ -93,7 +93,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 		
 	Code:
 		Recipe (com.kocinando.receta): Macaroni Recipe
-		***# This recipe was given to me by XX and I have made it a lot of times***
+		***# This recipe was given to me by XX and I have made it many times***
 		***# You will like it a lot!!***
 			Description:
 				This is the description of the macaroni recipe.
@@ -107,7 +107,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 			Steps:
 				Step: (1) Make sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve	
+				Step: (3) Combine macaroni with sofrito and serve	
 
 	Subheader: Different namespaces in a document
 	
@@ -143,7 +143,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Steps:
 					Step: (1) Make sofrito
 					Step: (2) Boil macaroni
-					Step: (3) Mix macaroni with sofrito and serve	
+					Step: (3) Combine macaroni with sofrito and serve	
 			***Recipe: Pizza Recipe***
 				Ingredients:
 					Ingredient: (1u) Pizza dough

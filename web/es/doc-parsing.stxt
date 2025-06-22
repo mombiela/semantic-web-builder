@@ -1,7 +1,8 @@
 Document (dev.stxt.namespace): Parseo de STxT (*)
 	Navigation:
 		Previous: Anterior (examples)
-
+		Next: EBNF (ebnf)
+		
 	Metadata:
 		Title: Parseo de STxT
 		Description: Aunque el parseo de STxT es sencillo, se explican algunas partes con más detalle

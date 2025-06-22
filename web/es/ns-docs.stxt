@@ -1,7 +1,7 @@
 Document (dev.stxt.namespace): Documentos con namespace
 	Navigation:
 		Previous: Anterior (raw-docs)
-		Next: Siguiente (examples)
+		Next: Siguiente (compact)
 
 	Header: Documentos con namespace
 	Assert: Todo lo explicado para documentos sin namespace es aplicable, excepto los nodos multilínea.
