@@ -7,7 +7,7 @@ Document(dev.stxt.namespace): STXT: El Libro
 	Link: STxT en 1 Minuto (index)
 	Link: STxT Tutorial (stxt-tutorial)
 			
-	SubHeader: Documentos
+	SubHeader: Documentos STxT
 	
 	Link: Documentos sin namespace(raw-docs) 
 	Link: Documentos con namespace(ns-docs)
