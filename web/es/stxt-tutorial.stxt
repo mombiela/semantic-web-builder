@@ -10,47 +10,21 @@ Document (dev.stxt.namespace): STXT Tutorial
 	Content:
 		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
 		que permite la creación de documentos con un contenido estructurado 
-		y sencillo de interpretar, tanto por humanos como por máquinas. 
-		Podríais estar leyendo un documento en STxT sin daros cuenta en realidad
+		y sencillo de interpretar, tanto por humanos (sin conocimientos informáticos) como por máquinas. 
+		Se puede estar leyendo un documento en STxT sin darse cuenta en realidad
 		que lo es. 	
-		
-		STxT: Un lenguaje para la web. No significa uno más, uno más entre tantos. 
-		Significa _UN_ lenguaje para la web. Uno sólo. Y a la vez muchos. 
-		Todos los que se quieran. Ésta es la propuesta.
-		
-		STxT es un lenguaje para escribir documentos estructurados. Permite crear
-		documentos de forma no ambigua,	ciñéndose a unas reglas muy precisas, 
-		pero consiguiendo documentos que pueden ser leídos por personas 
-		sin conocimientos informáticos.
-						 
-		De hecho, los documentos tienen significado por si mismos,
-		sin ser necesaria ninguna traducción adicional.
-		Tienen una estructura jerárquica muy parecida a documentos xml,
-		y su traducción puede ser directa.                                
 
-
-
-	Content:
-		Si tuvieras que leer sólo un capítulo de este libro, éste sería el capítulo. 
-		Te explicamos lo que es STxT directamente, sin más preámbulos.
-		Y además te damos las nociones suficientes para que puedas leer cualquier otro capítulo.
-		
-	Alert: Un ejemplo... ¡ya!
-		
 	subheader: Documentos sin namespace
 		
 	Content:
-		Éste es el primer lenguaje que conozco dónde se puede empezar con un ejemplo
-		y _todo el mundo_ lo puede llega a entender.
-		
-		El ejemplo será una receta de cocina. ¡Adelante!
+		Mostramos un ejemplo de una receta de cocina:
 		
 	Code:
 		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
-				:Bla, bla, bla
-				:Bla, bla, bla
+			***:Descripción:***
+				Esta es la descripción de la recta de macarrones.
+				Bla, bla, bla
+				Bla, bla, bla
 			Comensales: 3
 			Dificultad: fácil
 			Ingredientes:
@@ -61,34 +35,23 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Paso: (2) Hervir macarrones
 				Paso: (3) Juntar macarrones con sofrito y servir
 	Content:
-		Fácil, ¿verdad? De acuerdo, no soy un gran chef :-D pero se entiende perfectamente.
-		
-	Alert: No uséis esta receta en casa, esperad al próximo capítulo ;-)
-	
-	Content:
-		Bien, acabáis de ver lo que es un **documento STxT sin namespace**. Este tipo de documentos
+		Este es un **documento STxT sin namespace**. Este tipo de documentos
 		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
 		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
 		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así
 		hasta formar una estructura jerárquica. 
 	
 		Vale la pena mencionar el nodo `Descripción` que es un nodo que permite **multilíneas**.
-		Al no tener una estructura previa se distinguen porque estan anidados pero las
-		líneas no tienen etiqueta previa. Esto es muy importante para los documentos sin namespace.
+		Al no tener una estructura previa se distinguen porque el nombre del nodo
+		es de la forma `:nombre del nodo:`
 	
 	Subheader: Documentos con namespace
 	
 	Content: 
-		Ahora iremos más allá, y definiremos la misma receta con un namespace.
-		Primero mostraremos como queda la receta, y después mostraremos el
-		namespace. Podéis pensar que normalmente se debería hacer al revés,
-		pero la realidad es que la mayoría de las veces tendremos un ejemplo
-		y de forma posterior definiremos el caso general.
-		
-		Aquí tenemos la receta:
+		Ahora un ejemplo de la misma receta con un namespace:
 		
 	Code:
-		Receta ***(www.kocinando.com/receta.stxt)***: Receta de macarrones
+		Receta ***(com.kocinando.receta)***: Receta de macarrones
 			Descripción:
 				Esta es la descripción de la recta de macarrones.
 				Bla, bla, bla
@@ -104,23 +67,11 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Paso: (3) Juntar macarrones con sofrito y servir
 	
 	Content: 
-		¿Qué ha cambiado? Bien, ahora la receta tiene un namespace asocidado,
-		que es `www.kocinando.com/receta.stxt`, y el nodo `Descripción` parece
-		más natural. **Pues ya está :-)** Hemos convertido un documento sin namespace
-		a otro con namespace, con sólo añadir a quien pertenece y eliminando el caracter `:`
-		de los campos multilínea. 
-		
-		No podía ser más sencillo ;-)
-		
-		Ahora creamos el namespace. **La definición del namespace se encuentra en
-		un documento sin namespace**. En la versión anterior de STxT no era así,
-		pero complicaba los parseadores, y te obligaba a tener siempre definición
-		de namespace. Ahora ésto ha cambiado, y todo se ha simplificado mucho.
-		
-		Aquí está el namespace que podemos crear para el ejemplo:
+		Ahora mostramos el namespace. **La definición del namespace se encuentra en
+		un documento sin namespace**:
 		
 	Code:
-		***Namespace: www.kocinando.com/receta.stxt***
+		***Namespace: com.kocinando.receta***
 			Receta:
 			    Descripción: (?) TEXT
 			    Comensales: (?) NUMBER
@@ -133,17 +84,6 @@ Document (dev.stxt.namespace): STXT Tutorial
 			    Pasos: (1)
 			    	Paso: (+)
 	
-	Content:
-		Es muy intuitivo, la propia estructura es un reflejo del órden jerárquico, indicando
-		el tipo del nodo si hiciera falta.
-		
-		El namespace **debería poderse consultar vía internet**, en la misma url que lo indica.
-		Así, este namespace debería estar disponible mediante la url `https://www.kocinando.com/receta.stxt`. 
-		Los parseadores igualmente deberían tenerlo disponible de forma local, y es mejor que sea así por rendimiento.
-		
-		Más adelante hablaremos en profundidad de los namespaces, pero hacer un documento a partir de ellos
-		debería ser mucho más sencillo que en otros lenguajes.
-	
 	Subheader: Comentarios
 	
 	Content:  
@@ -152,7 +92,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 		Los comentarios no se usarán pero permiten enriquecer el documento.
 		
 	Code:
-		Receta (www.kocinando.com/receta.stxt): Receta de macarrones
+		Receta (com.kocinando.receta): Receta de macarrones
 		***# Esta receta me la pasó XX y la he hecho un montón de veces***
 		***# Os gustará mucho!!***
 			Descripción:
@@ -177,9 +117,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 		Mejor ver un ejemplo:
 		
 	Code: 
-		***Namespace: www.kocinando.com/recetario.stxt***
+		***Namespace:com.kocinando.recetario***
 			Recetario:
-				Receta: (+) ***(www.kocinando.com/receta.stxt)***
+				Receta: (+) ***(com.kocinando.receta)***
 
 	Content: Aquí vemos que `Receta` es de otro namespace y vemos que
 		en vez de poner la estructura se hace referencia a otro namespace.
@@ -189,7 +129,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 	Content: Así, un ejemplo de recetario sería:
 	
 	Code:
-		***Recetario (www.kocinando.com/recetario.stxt): Recetas de la mama*** 
+		***Recetario (com.kocinando.recetario): Recetas de la mama*** 
 			***Receta: Receta de macarrones***
 				Descripción:
 					Esta es la descripción de la recta de macarrones.
@@ -213,9 +153,3 @@ Document (dev.stxt.namespace): STXT Tutorial
 					Paso: (1) Poner tomate y queso en pizza
 					Paso: (2) Hornear durante 15'
 	
-	Subheader: Fin del tutorial
-
-	Alert:
-		Por favor, no continúes. Vuelve a leer este apartado al menos otra vez.	Después continua.\
-		O mejor: lo vuelves a leer, descansas y pasas al próximo apartado :-) 
-		
