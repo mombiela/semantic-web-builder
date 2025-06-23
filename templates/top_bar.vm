@@ -1,7 +1,7 @@
 <div class="top-bar">
 	<ul>
 		<li><a href="$indexPage" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
-		<li><a href="stxt-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
+		<li><a href="tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
 		<li><a href="parsers" title="Parsers">Parsers</a></li>
 		<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="Source STxT">${lang.get("menu.source_code")}</a></li>
 	</ul>
