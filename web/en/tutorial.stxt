@@ -1,0 +1,155 @@
+Document (dev.stxt.namespace): STXT Tutorial
+	Navigation:
+		Previous: Previous (index)
+		Next: Next (raw-docs)
+
+	header: STxT Tutorial
+	
+	SubHeader: What is STxT?
+
+	Content:
+		It is a purely semantic language, with very basic rules,
+		that allows the creation of documents with structured content
+		and easy to interpret, both by humans (without computer knowledge) and by machines.
+		You can be reading a document in STxT without actually realizing
+		that it is. 	
+
+	subheader: Documents without namespace
+		
+	Content:
+		Here is an example of a cooking recipe:
+		
+	Code:
+		Recipe: Macaroni Recipe
+			***:Description:***
+				This is the description of the macaroni recipe.
+				Bla, bla, bla
+				Bla, bla, bla
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve
+	Content:
+		This is a **STxT document without namespace**. These types of documents
+		are structured, but we don't know what form the nodes take. In any case, you can
+		already see that they have structure, with a main node `Recipe`, which has
+		a `Description` node, `Ingredients`, etc. In turn, these nodes have others, and so on
+		until forming a hierarchical structure. 
+	
+		It is worth mentioning the `Description` node, which is a node that allows **multilines**.
+		Not having a previous structure, they are distinguished because the node name
+		is in the form `:node name:`
+	
+	Subheader: Documents with namespace
+	
+	Content: 
+		Now an example of the same recipe with a namespace:
+		
+	Code:
+		Recipe ***(com.kocinando.receta)***: Macaroni Recipe
+			Description:
+				This is the description of the macaroni recipe.
+				Bla, bla, bla
+				Bla, bla, bla
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve
+	
+	Content: 
+		Now we show the namespace. **The definition of the namespace is found in
+		a document without namespace**:
+		
+	Code:
+		***Namespace: com.kocinando.receta***
+			Recipe:
+			    Description: (?) TEXT
+			    Servings: (?) NUMBER
+				:Difficulty: (?) ENUM
+					easy
+					medium
+			    	hard
+			    Ingredients: (1)
+					Ingredient: (+)
+			    Steps: (1)
+			    	Step: (+)
+	
+	Subheader: Comments
+	
+	Content:  
+		It is possible to insert comments in the documents to
+		express unfinished parts, author's thoughts, etc.
+		Comments will not be used but allow enriching the document.
+		
+	Code:
+		Recipe (com.kocinando.receta): Macaroni Recipe
+		***# This recipe was given to me by XX and I have made it a lot of times***
+		***# You will really like it!!***
+			Description:
+				This is the description of the macaroni recipe.
+				Bla, bla, bla
+				Bla, bla, bla
+			Servings: 3
+			Difficulty: easy
+			Ingredients:
+				Ingredient: (100g) Tomato
+				Ingredient: (240g) Macaroni
+			Steps:
+				Step: (1) Make the sofrito
+				Step: (2) Boil macaroni
+				Step: (3) Mix macaroni with sofrito and serve	
+
+	Subheader: Different namespaces in a document
+	
+	Content: 
+		A namespace can refer to another, to indicate that
+		a part of the document has the structure in another namespace.
+		Better to see an example:
+		
+	Code: 
+		***Namespace:com.kocinando.recetario***
+			RecipeBook:
+				Recipe: (+) ***(com.kocinando.receta)***
+
+	Content: Here we see that `Recipe` is from another namespace and we see that
+		instead of putting the structure, it refers to another namespace.
+		
+	Assert: It is NOT necessary to specify the inner namespace, only the main node.
+	
+	Content: Thus, an example of a recipe book would be:
+	
+	Code:
+		***RecipeBook (com.kocinando.recetario): Mom's Recipes*** 
+			***Recipe: Macaroni Recipe***
+				Description:
+					This is the description of the macaroni recipe.
+					Bla, bla, bla
+					Bla, bla, bla
+				Servings: 3
+				Difficulty: easy
+				Ingredients:
+					Ingredient: (100g) Tomato
+					Ingredient: (240g) Macaroni
+				Steps:
+					Step: (1) Make the sofrito
+					Step: (2) Boil macaroni
+					Step: (3) Mix macaroni with sofrito and serve	
+			***Recipe: Pizza Recipe***
+				Ingredients:
+					Ingredient: (1u) Pizza dough
+					Ingredient: (100g) Tomato
+					Ingredient: (50g) Cheese
+				Steps:
+					Step: (1) Put tomato and cheese on pizza
+					Step: (2) Bake for 15'
+	
