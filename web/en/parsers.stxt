@@ -1,6 +1,6 @@
 Document (dev.stxt.namespace): Available Parsers
 	Navigation:
-		Previous: Previous (ebnf)
+		Previous: Previous (doc-parsing)
 
 	Metadata:
 		Description: The different parsers available so far are shown

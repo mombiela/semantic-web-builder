@@ -16,7 +16,7 @@ Document(dev.stxt.namespace): STXT: The Book
 			
 	SubHeader: Technical Resources
 	
-	Link: Document Parsing (doc-parsing)
 	Link: EBNF (ebnf)
+	Link: Document Parsing (doc-parsing)
 	Link: Available Parsers (parsers)
 			

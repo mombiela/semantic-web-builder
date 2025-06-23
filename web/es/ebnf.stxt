@@ -1,7 +1,7 @@
 Document (dev.stxt.namespace):EBNF
 	Navigation:
-		Previous: Anterior (doc-parsing)
-		Next: EBNF (parsers)
+		Previous: Anterior (examples)
+		Next: EBNF (doc-parsing)
 
 	Metadata:
 		Description: Se muestra la descripción en EBNF de STxT

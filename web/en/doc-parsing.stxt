@@ -1,7 +1,7 @@
 Document (dev.stxt.namespace): STxT Parsing (*)
 	Navigation:
-		Previous: Previous (examples)
-		Next: EBNF (ebnf)
+		Previous: Previous (ebnf)
+		Next: EBNF (parsers)
 		
 	Metadata:
 		Title: STxT Parsing
