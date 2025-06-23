@@ -28,3 +28,36 @@ a {
 	color: $color2;
 	text-decoration: none;
 }
+
+table {
+	border: 1px solid $color2;
+	margin-bottom: 15px;
+	border-collapse: collapse;
+}
+
+tr, td, th {
+	border: 1px solid $color2;
+	margin: 0;
+	padding: 0px 3px;
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	padding: 3px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+th {
+	background-color: $color2;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+
