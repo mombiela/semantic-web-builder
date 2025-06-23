@@ -10,4 +10,91 @@ Document (dev.stxt.namespace):Compaction
 		
 	Header: Compaction
 		
+	Subheader: Analysis of STxT information
+		
 	Content:
+		A document is just a set of nodes with a certain indentation, so the information is really about **order** and **level**.
+		
+		Let's see it in an example:
+		
+	Code:
+		Node_0 (com.example.docs):
+			Node_1:
+				Node_2: Node2 Text
+				Node_3: Node3 Text
+			Node_4:
+				Node_5: Node5 Text
+				Node_6: Node6 Text
+					Continuation text
+					Another line of text
+				Node_7:
+					Node_8:
+						Node_9: Last line
+		
+	Content:
+		We see that there are 10 Nodes in this document.
+		The first node is Node_0, and it contains the others.
+		We could say it is the first to appear (order)
+		and has level 0 (it is not indented and contains the others).
+		The second node is Node_1. It is the second to appear and has level 1.
+		In this way we could qualify all the lines, and extract the information.
+		It is not difficult to make a table with this information:
+		
+	Content:
+		| Order  | Node   |  Level  |
+		|--------|--------|---------|
+		| 1      |Node_0  |0        |
+		| 2      |Node_1  |1        |
+		| 3      |Node_2  |2        |
+		| 4      |Node_3  |2        |
+		| 5      |Node_4  |1        |
+		| 6      |Node_5  |2        |
+		| 7      |Node_6  |2        |
+		| 8      |Text    |3        |
+		| 9      |Text    |3        |
+		| 10     |Node_7  |2        |
+		| 11     |Node_8  |3        |
+		| 12     |Node_9  |4        |
+		
+	Content:
+		Now it's just a matter of including this information. This is what the next section is about.
+		
+	Subheader: A form of compaction
+		
+	Content:
+		From the previous table, let's propose a way to compact the information.
+		It will be as simple as inserting the level number instead of using tabs,
+		and separating it with the usual character ':'.
+		
+		So, the previous example would look like:
+		
+	code:
+		0:Node_0 (com.example.docs):
+		1:Node_1:
+		2:Node_2: Node2 Text
+		3:Node_3: Node3 Text
+		1:Node_4:
+		2:Node_5: Node5 Text
+		2:Node_6: Node6 Text
+		3:Continuation text
+		3:Another line of text
+		2:Node_7:
+		3:Node_8:
+		4:Node_9: Last line
+		
+	Content:
+		Really, the rule for compacting is this simple:
+		
+	assert:
+		Substitute the starting tabs with: \\
+		number of tabs + ':'
+		
+	Content:
+		The usefulness of compaction is to create a slightly more efficient format,
+		which is still easy for humans to read and write.
+		With the level numbers it is also very easy to read,
+		and for machines it has some advantages:
+		
+		* The file size is usually smaller.
+		* Parsing the file is faster, since there is no need to calculate the level through tabs (or spaces).
+		
