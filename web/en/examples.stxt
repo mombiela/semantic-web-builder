@@ -4,7 +4,7 @@ Document (dev.stxt.namespace): Examples
 		Next: Next (doc-parsing)
 
 	Header: Examples
-	Subheader: Recipes and cookbooks
+	Subheader: Recipes and recipe books
 	
 	SubSubheader: Recipe namespace
 	
@@ -13,9 +13,9 @@ Document (dev.stxt.namespace): Examples
 		# Recipe
 		# ------
 		
-		Namespace: www.kocinando.com/receta.stxt
+		Namespace: com.kocinando.receta
 		
-			Recipe:
+			Receta:
 			    Recipe Name: (1)
 			    Description: (?) TEXT
 			    Ingredients: (1)
@@ -34,13 +34,13 @@ Document (dev.stxt.namespace): Examples
 			    Servings: (?) NUMBER
 			    Document: (*) (www.dokumentando.com/doc_simple.stxt)
 	
-	SubSubheader: Cookbook namespace
+	SubSubheader: Recipe book namespace
 	
 	Code:
-		Namespace: www.kocinando.com/recetario.stxt
+		Namespace: com.kocinando.recetario.stxt
 		
-			Cookbook:
-				Recipe: (+) (www.kocinando.com/receta.stxt)
+			Recetario:
+				Receta: (+) (com.kocinando.receta)
 	
 	SubSubheader: Recipe
 	
@@ -49,7 +49,7 @@ Document (dev.stxt.namespace): Examples
 		# Macaroni recipe
 		# -----------------
 		
-		Recipe(www.kocinando.com/receta.stxt):
+		Receta(com.kocinando.receta):
 			Recipe Name: A recipe
 			Description: This is a sample recipe
 			Steps:
@@ -72,16 +72,16 @@ Document (dev.stxt.namespace): Examples
 		    		document. It has several lines
 		    	Document Type: report
 		    	
-	SubSubheader: Cookbook
+	SubSubheader: Recipe book
 	
 	Code:
-		Cookbook(www.kocinando.com/recetario.stxt):
+		Recetario(com.kocinando.recetario):
 		
 			# --------
 			# Recipe 1
 			# --------
 			
-			Recipe:
+			Receta:
 				Recipe Name: A recipe
 				Description: This is a sample recipe
 				Ingredients:
@@ -115,7 +115,7 @@ Document (dev.stxt.namespace): Examples
 					# Hello
 			
 			
-			Recipe:
+			Receta:
 				Recipe Name: A recipe
 				Description: This is a sample recipe
 				Ingredients:
@@ -147,9 +147,9 @@ Document (dev.stxt.namespace): Examples
 	SubSubheader: Simple document namespace
 	
 	Code:
-		Namespace: www.dokumentando.com/doc_simple.stxt
+		Namespace: com.example.doc_simple
 		
-			Document:
+			Documento:
 		        Title: (1)
 		        Sections: (*)
 		        Description: (1) TEXT
@@ -164,7 +164,7 @@ Document (dev.stxt.namespace): Examples
 	SubSubheader: Simple document
 	
 	Code:
-		Document (www.dokumentando.com/doc_simple.stxt):
+		Documento (com.example.doc_simple):
 		    Title: First simple document
 		    Description:
 		    	This is the
@@ -177,13 +177,13 @@ Document (dev.stxt.namespace): Examples
 	
 	Code:
 	
-		Namespace: www.dokumentando.com/documento.stxt
+		Namespace: com.example.documento
 		
 			Section:
 				Title: (1)
 		        Content: (1) TEXT 
 			
-		    Document:
+		    Documento:
 		        Title: (1)
 		        Body: (1) TEXT 
 		        Author: (1) 
@@ -214,7 +214,7 @@ Document (dev.stxt.namespace): Examples
 		# Client data
 		# ----------------
 		
-		Client:
+		Cliente:
 		
 			# ----------------
 			# Personal data
@@ -226,54 +226,54 @@ Document (dev.stxt.namespace): Examples
 				First surname: Kween
 				Age: 28
 				VIP client: true
-				Photo:
-					:R0lGODlhlgCNALMAAFtepau07X2I1tvg+pOe42dwwMPK9vz+/AAAAAAAAAAAAAAAAAAAAAAAAAAA
-					:AAAAACH5BAAAAAAALAAAAACWAI0AAwT/8MhJq7046827/2AojmRpnmiqrmzrvnAsz3Rt3/Vg7Mbg
-					:D7igsATUBQgCAYEQ2AGH0KGPR9XxAkdBIdl8Rr8qK3bJxJp5vosBmxQEvOA4yIhdvw/PonVt2OjI
-					:fXKCF1ZpPzsuA1hwg18DBDoVa0sde04bPQc9aY1Ra14+AUmQB00Se3RMO1h4lxisEoGdQgZMOrdK
-					:TwZKWW2jZUcBW25XmRaPEnezQZ8UvLFIvErAaKsFwb3RZZsSpAHLOM2nbhRLyh0CkXqTWkjmTQS1
-					:jOAwfBMD5BOitx/f86fBFJGJ9o3eDCT38nUzUxCDkR61qnGiwKfIGAGnDL7YdwohQCak/wh1mdJE
-					:gJ1gA0dOiveIjChZGlO07GgyVi1bFYws4WOsFJ5jq+os4QLSpBZXMU3g1OEGyJtteOiY0kAgw8oj
-					:maykS7frEMykICa1wvkGW0V+HM61qgPnUcMD8dxMbfUVLAclfZqY6nEEiayeaUnWORY1pKYm1zBS
-					:QGt3AxlNB8hZGeqlbgamWeuGmjRSUToAHCVZbjxhV7we8b6VTV26AxpFrQ79mKgGibB4hEaTxlsK
-					:5FpVd2jnRLpwZIidopQ4BEwaD6RArJvUevtzOO1bokgoeiRwy79YzTNSclqr1CTmkkDdKsL3lOzZ
-					:PxbfA4LkWlQ13+ndOu18EZ+5arhX3f9aO0BShB+RSIJHO5qMphs4f1TVRzxVCaXMP9zM5wpsHMQ3
-					:IHil5JIgUI3R8cNOQV1IHVAZUrAiYRpwUsBpws1n13RdMIHRIrglg94pP+oT44MClnINELoR2Yg5
-					:V3D1hzFr1GSdHy8WyUEgBhSwXX5BziIXPPLUMdcYOalF1WUf9AHENc9poKQcbgFDY0R5aAFKeR5w
-					:GKAHfUyoyoNdDoKVGyDtMZcWBcgyAABVfdAoIR9MoYmWb+QHmUa2+AWJam8EguijcM0YaZUfIvhD
-					:olVZ+uYXPA20yWCTFgAATADMSGpO6aTQ5wFsXuqQpXH4Nw1s8qhZ6xblEAqqm0xY5Qf/lpBxMSIG
-					:q0rRhShH+HREGrcxSsGMpr2ZHLVmVgBLGmtc0+Key4w0LA9c4TEjg8kQY1SHtv3DXwbK3beDG+lY
-					:Om0jfQ5gq3n4RDuKqPIKZacf8y47nTgXaNHaDjNKeN8Ft8aRLikVdirMwoohxM6MAmeca0dhkroF
-					:tEYugZ2z9GDBsGqbFKDzLigbXFAZoOmGz7z2xVISZhhsUVAkpsm8MiHAfsFEoq1EpgnAkGjxjV80
-					:ARAvx0nMmGgaXD3XrwWMNtQn1mdTW7NHmVRlTgG9qdJ2N7PWGJkSShz5Bt1UvFQquIFMAXA7qtZc
-					:9DeIJGrfS39aMLJPktiGdRkGnqfc/1yLluUePgbXuqzkNUupWksEaOmDSSzNE/qu5Wg6dVyI4LMj
-					:MY8awKgim6C2qM6jK7iM7ezBhc+4faQj4T9h++rZnzt4LQy6uCFGeSmg5ZgdE4y+HGPUUpiEpA86
-					:HgWZXr6aaxvlR7zMOM9JUE/TzMJEtA9IOif3oN4ec7NJG8iKW67+oYhraEkxovBOn5Kjrs9x4jnS
-					:wYumHiGrrTBsOcuonU/csQWNhWg98qnPFrwWilEQC36wmJS3xrKLYCQjMjoA3vPywz8wmMIpkYmG
-					:6irVFUJJQ2e10gIAalWgJOTFPMCrCT4Ylbqm9GUapHhSAERXxCSBTwgsSYbBtBC/nv8gRlYvi0iW
-					:wDhERvHthcnTUjJIiAc2eE0uGXuVjt4IidQFD0SzOFcvuHA9CsoKNAUUBmKm0TdZNWpXyBLGrFoD
-					:EDC6r43RKKM7zOG2ZSylFjo7in8SCEYRirBWQ4xkEwl1E7HVygzSkkQZs+UcIB7LiPEjUQZ/Yg2A
-					:XWoXQuwb3wbiyCB6TV3TmVoZC1lGUPqilxISQDHB9SXXXZEWUUkO3xjXG51Z85ep0eEydQY6gdRC
-					:mdyES1+G8ccOouiToGTUhFhpgWoJwSmIItoVhgLETLqjDWcoptf0yU9ftMNyZawnokTHN6V5pkod
-					:Y1XqisnFSxUQjErURhLukbo/pvP/WNZMoncYyIsKKnOILzNi6hrSwOGAA5NbyORHkXW1UBqobrsg
-					:IkWSAFJEhU1rypzGGLFZL41y8zRUk8AzcvLMcNTnnjMqJtB+qYz6dFQxH+Ei69JVT87sNEuyGOUd
-					:OjU0tcXSRcNjx7byRxSbKjNzRiJnUEtREkrtK56NautRcOMZrTXoOaFjo8HWisdG1OGAPVAXJeRl
-					:yCH6o30FDZp0ssS6vWhiCUn8Qz1nhZppoOSQaxhmMi5YiqLeYJxmQIJAHoUkYWJkOhRUZnB4Jooe
-					:qYkvBK2oMa3RQVupjR1DzIvFGNmJhGXpsnBRjofwQQCQ3qS1ycnCy9gIIsmGsoJA/5yGd/J3vQaN
+				:Photo:
+					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
-					:0056xyFGupvRLkJD1gHslxjhjv9HwJG1zAJzb4hAhxDB9b2+GQZSbrLgFFPqFCPsuBOI8G9xsxdc
-					:AF2G0JH+FRdpLIKXKG2fneYdqwV1CztUEDVcC8FiLxND85VgbkoIJYUjIeTeFqy+OnaLoF0za/mE
-					:rVx8QumoE60m7FxaEKkqnHKZ2L4XkO27LtaibGvVRmpGK6FBINZibsNYbXh7b5w9ju3KuIpag2ew
-					:gkpVVPo00pGNjLuAjsW8AW5dEA9rD5/jaxxe2pKCtLuDbSC4+pAkDJaOoCrBJugTPCfwZUOBFfKF
-					:ie1CykcUtDZWRRNBESP8NDS0kbiDMJAb/ryYZ+NY4vq4RsUtLoKpzXxnssCGeXz/IwdTTDNLF5ja
-					:G1iHgnaHLdyPta81E7SdNTRILjgPQ2oAhkkMbaNNJthrf0vAhbB10BjBkRBn0D2DRUBxKNfWxx9g
-					:MzAQqLRU/dhlELmJZX5H5RF4igLvyr4Tha/bDJ2FOgvxXgnLqhV6tNwE+WAFBR0Ng0LT04AguWL1
-					:EnSB8X4widjEJg2cuOe1tlB80xM4CrjQbgOj4FTY2XscNigtuVk4Ryjosq8hQNagDGmWZZySyQWd
-					:gPZ5ss0wRssLdv8lv6iFwiO4KBRFIB49U6jo1nDuBOnk4dR9G4M5QKLeBPuDKZ8XAutDu13fWF3k
-					:hssfijvEu5Vc8/IiYaDVvW+H/8AqpnBRZAd1VwPRYAfLgw/vh3iGMAVjFCXgw0k55koCxQhVd1Rc
+					0056xyFGupvRLkJD1gHslxjhjv9HwJG1zAJzb4hAhxDB9b2+GQZSbrLgFFPqFCPsuBOI8G9xsxdc
+					AF2G0JH+FRdpLIKXKG2fneYdqwV1CztUEDVcC8FiLxND85VgbkoIJYUjIeTeFqy+OnaLoF0za/mE
+					rVx8QumoE60m7FxaEKkqnHKZ2L4XkO27LtaibGvVRmpGK6FBINZibsNYbXh7b5w9ju3KuIpag2ew
+					gkpVVPo00pGNjLuAjsW8AW5dEA9rD5/jaxxe2pKCtLuDbSC4+pAkDJaOoCrBJugTPCfwZUOBFfKF
+					ie1CykcUtDZWRRNBESP8NDS0kbiDMJAb/ryYZ+NY4vq4RsUtLoKpzXxnssCGeXz/IwdTTDNLF5ja
+					G1iHgnaHLdyPta81E7SdNTRILjgPQ2oAhkkMbaNNJthrf0vAhbB10BjBkRBn0D2DRUBxKNfWxx9g
+					MzAQqLRU/dhlELmJZX5H5RF4igLvyr4Tha/bDJ2FOgvxXgnLqhV6tNwE+WAFBR0Ng0LT04AguWL1
+					EnSB8X4widjEJg2cuOe1tlB80xM4CrjQbgOj4FTY2XscNigtuVk4Ryjosq8hQNagDGmWZZySyQWd
+					gPZ5ss0wRssLdv8lv6iFwiO4KBRFIB49U6jo1nDuBOnk4dR9G4M5QKLeBPuDKZ8XAutDu13fWF3k
+					hssfijvEu5Vc8/IiYaDVvW+H/8AqpnBRZAd1VwPRYAfLgw/vh3iGMAVjFCXgw0k55koCxQhVd1Rc
 					lQlUwDPftx2xwRrMQBTyoA4UokWRcFhFUFHRACwFJFWIJX5clAeX8E1cAxF6sAgJ5HA8cT6bonoX
 					B0XigyVP0Q1I0iBw0XHWtGgHshjpQhQiKAoyxTsAIUEdiCUwZ0cr8xToIx0plAPSQA63lTCd9XdH
 					8xPtwyZxlxN2Q35lGBKV0Q5bVUfP9wmiNRV50QWboCP7ZXmb4iKrczpD+E3QQk+M1ReUR1HjdoSa
@@ -292,11 +292,8 @@ Document (dev.stxt.namespace): Examples
 					AjwuaomD+J5OCgNveUckajccWKU0EBdDlQKMIz5c2nbWF6UjoDYwOqZbdhItEChqqitG4IotYG5v
 					6gLpx6Aygad1aqd72qd++qeAGqiCOqiEWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
 			
-			# Note: if anyone wants to have fun, the photo was drawn by me.
-			# You will see that I am a much better computer scientist than illustrator :-D
-			
 			# ---------------
-			# Bank Data
+			# Bank data
 			# ---------------
 			
 			Bank Data:
@@ -311,7 +308,7 @@ Document (dev.stxt.namespace): Examples
 		# Client data
 		# ----------------
 		
-		Client(www.gymstxt.com/client.stxt):
+		Cliente(com.gym.client):
 		
 			# ----------------
 			# Personal data
@@ -389,11 +386,8 @@ Document (dev.stxt.namespace): Examples
 					AjwuaomD+J5OCgNveUckajccWKU0EBdDlQKMIz5c2nbWF6UjoDYwOqZbdhItEChqqitG4IotYG5v
 					6gLpx6Aygad1aqd72qd++qeAGqiCOqiEWqiGeqiImqiKuqiM2qiO+qiQGqlyEAEAOw==
 			
-			# Note: if anyone wants to have fun, the photo was drawn by me.
-			# You will see that I am a much better computer scientist than illustrator :-D
-			
 			# ---------------
-			# Bank Data
+			# Bank data
 			# ---------------
 			
 			Bank Data:
@@ -403,9 +397,9 @@ Document (dev.stxt.namespace): Examples
 	SubSubheader: Client namespace
 	
 	Code:
-		Namespace: www.gymstxt.com/client.stxt
+		Namespace: com.gym.client
 		
-			Client:
+			Cliente:
 				Personal Data: (1)
 				Bank Data: (1)
 			
