@@ -9,7 +9,7 @@ Document (dev.stxt.namespace): Parseo de STxT (*)
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Parseo de STxT (*)
+	header:	Parseo de STxT
 		
 	Content:
 		Parsear un fichero STxT es mucho más fácil que parsear ficheros de otras tecnologías. 

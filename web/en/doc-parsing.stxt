@@ -9,7 +9,7 @@ Document (dev.stxt.namespace): STxT Parsing (*)
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	STxT Parsing (*)
+	header:	STxT Parsing
 		
 	Content:
 		Parsing an STxT file is much easier than parsing files from other technologies.
