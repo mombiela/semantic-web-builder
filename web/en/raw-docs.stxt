@@ -18,11 +18,11 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
 				Step: (3) Mix macaroni with sofrito and serve
 
-	Content: Let's delve a little deeper.
+	Content: Let's go a little deeper.
 
 	Subheader: Encoding
 	
@@ -47,26 +47,26 @@ Document (dev.stxt.namespace): Documents without namespace
 	Assert: There are no escape characters
 	
 	Content: 
-		I think it's the best thing I've heard in a long time. 
+		I think this is the best thing I've heard in a long time. 
 		**There are no escape characters** _because they are not necessary_.
-		Due to the structure, they are not necessary.	
+		Due to the structure, they are not needed.	
 
 	Subheader:	Comments
 		
 	Content:
 		All computer scientists know what comments are in any language.
-		In case there is a neophyte, I will explain that comments are text that is only there 
-		to comment or add some observation, but they do not influence the document itself.
+		In case there are any newbies, I will explain that comments are text that is only there 
+		to comment or add some observation, but do not affect the document itself.
 		
 	assert:
 		In STxT, all lines that start with the character # are comments
 		
 	Content:
-		Comments do not have to have any specific format, 
-		it is free text that the document author can include. 
+		Comments do not need to have any particular format, 
+		it is free text that the author of the document can include. 
 		Also, it does not have to be located in any specific place in the document. 
 		Any line that starts with # will be treated as a comment,
-		and will not be considered in programs or communications.
+		and will not be taken into account by programs or communications.
 		
 		Example:
 
@@ -87,18 +87,18 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
 				Step: (3) Mix macaroni with sofrito and serve	
 	
 	Content: It should be noted here that `(1),(2),(3) and (4)` are comments, while 
-		`(5)` is not, as it is within the indented text. 
+		`(5)` is not, since it is inside the indented text. 
 
 	Subheader:	Nodes and indentation
 	
 	Content:	
 		We have previously said that an STxT document is a set of nested nodes. 
-		Indentation is very similar to other languages, and tabs or spaces can be used.
+		Indentation is very similar to other languages, and you can use tabs or spaces.
 		
 	Assert: 
 		4 spaces are equivalent to a tab
@@ -107,8 +107,8 @@ Document (dev.stxt.namespace): Documents without namespace
 	Subheader: Multiline nodes
 	
 	Content: 
-		These nodes allow for **complete texts in multiple lines**. In documents with namespace
-		they will be equivalent to `TEXT` type nodes. They are constructed with lines
+		These nodes allow you to have **full texts on several lines**. In documents with namespace
+		they will be equivalent to `TEXT` type nodes. They are built with lines
 		that start with `:`, but without a previous label. Example:
 		
 	Code:
@@ -123,7 +123,7 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
 				Step: (3) Mix macaroni with sofrito and serve	
 				
@@ -133,9 +133,9 @@ Document (dev.stxt.namespace): Documents without namespace
 	Subheader: (Prefix) Central (Suffix)
 	
 	Content: 
-		Although it is not part of the language, it is a common practice that 
-		simple fields are structured with `(prefix) central (suffix)`.
-		All three or only 1 or 2 of them may appear. Example:
+		Although it is not part of the language, it is common practice for 
+		simple fields to be structured with `(prefix) central (suffix)`.
+		All 3 or only 1 or 2 of them may appear. Example:
 		
 	Code:
 		Recipe: Macaroni recipe
@@ -149,6 +149,7 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: ***(100g) Tomato***
 				Ingredient: ***(240g) Macaroni***
 			Steps:
-				Step: ***(1) Make sofrito***
+				Step: ***(1) Make the sofrito***
 				Step: ***(2) Boil macaroni***
 				Step: ***(3) Mix macaroni with sofrito and serve***
+	

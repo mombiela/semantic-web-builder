@@ -4,19 +4,19 @@ Document (dev.stxt.namespace): Documents with namespace
 		Next: Next (compact)
 
 	Header: Documents with namespace
-	Assert: Everything explained for documents without namespace is applicable, except for multiline nodes.
+	Assert: Everything explained for documents without namespace applies, except for multiline nodes.
 	
 	Content:
 		As a previous summary:
 		
-		* UTF-8 Encoding Always
+		* Always UTF-8 Encoding
 		* Identifiers are CASE-INSENSITIVE
 		* There are no escape characters
 		* In STxT, all lines starting with the character # are comments
 		* 4 spaces are equivalent to a tab
 		
 	Assert: The use of `:` for multiline nodes is not allowed.\
-		This is implied by the type of node.
+		This is implied by the node type.
 
 	Content: 
 		If the character `:` is inserted, what will happen is that it will become
@@ -30,11 +30,11 @@ Document (dev.stxt.namespace): Documents with namespace
 		which is a structure with all possible node types, as an example.
 		
 	Assert: 
-		A node is defined only once, afterwards it cannot be redefined.\
+		A node is defined only once, after that it cannot be redefined.\
 		It is allowed to appear before as long as the structure is not defined.
 			
 	Content: 
-		Let's see an example:
+		Let's look at an example:
 		
 	Code:
 		Namespace: www.demo.com/documento.stxt
@@ -71,8 +71,8 @@ Document (dev.stxt.namespace): Documents with namespace
 		    Title: First simple document
 		    Description:
 		    	This is the
-		    	first simple document.
-		    	It has multiple lines
+		    	first simple
+		    	document. It has several lines
 		    Document Type: report
 		    Sections:
 		    	Section: This is a section
@@ -84,7 +84,7 @@ Document (dev.stxt.namespace): Documents with namespace
 	Subheader: Quantity definition
 	
 	Content: 
-		It is allowed to define the quantity of nodes in the following way:
+		It is allowed to define the quantity of nodes as follows:
 		
 		* `?`: May or may not appear (maximum 1)
 		* `+`: At least one node
@@ -96,14 +96,14 @@ Document (dev.stxt.namespace): Documents with namespace
 	Subheader: Node types
 	
 	Content: 
-		The following types of nodes are allowed:
+		The following node types are allowed:
 	
 	    * `STRING` (Default value)
 		* `TEXT` (allows multiline, does not allow child nodes)
 	    * `NUMBER`: /^(\-|\+)?\d+(\.\d+(e(\-|\+)?\d+)?/
 	    * `BOOLEAN`: true | false
 	    * `REGEX`: valid regex
-	    * `ENUM`: The valid values are shown in the following multilines
+	    * `ENUM`: The following multilines show the valid values
 	    * `DATE`: YYYY-MM-DD
 	    * `TIMESTAMP`: ISO_8601
 	    * `EMAIL`: valid email
@@ -113,3 +113,9 @@ Document (dev.stxt.namespace): Documents with namespace
 	    * `EMPTY`: does not allow content
 	    * `INTEGER`: (+|-)?\d+
 	    * `NATURAL`: \d+
+		
+	
+	
+	
+	
+	

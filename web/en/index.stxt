@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
+Document (dev.stxt.namespace):STXT - One Language, Infinite Possibilities
 	Navigation:
 		Next: Next (stxt-tutorial)
 
@@ -11,8 +11,8 @@ Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
 	#	To create the most powerful, simplest, and most beautiful language \
 	#	that has ever existed :-)
 	#
-	#	Our basic principle: **Simplicity, clarity, and simplicity** above all
-	#	We try to apply this in everything we do. I don't know if we have achieved it :-)
+	#	Our basic principle: **Simplicity, clarity, and straightforwardness** above all else
+	#	We try to apply this in everything we do. I don't know if we've achieved it :-)
 
 	SubHeader: Documents with namespace
 	
@@ -28,7 +28,7 @@ Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
 				Hello Mery!! 
 				The book is finished!!
 	Content:
-		And the definition of the namespace
+		And the namespace definition
 		
 	Code:
 		***Namespace: com.example.docs***
@@ -42,7 +42,7 @@ Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
 
 	SubHeader: Documents without namespace
 	
-	Content: Documents without namespace must mark multiline nodes with `:` in front of the name:
+	Content: Documents without namespace must mark multiline nodes with `:` before the name:
 	
 	Code:
 		Email:
@@ -53,3 +53,4 @@ Document (dev.stxt.namespace):STXT - A Language, Infinite Possibilities
 			***:Body Content:***
 				Hello Mery! 
 				The book is finished!
+		

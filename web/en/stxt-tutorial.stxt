@@ -17,7 +17,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 	subheader: Documents without namespace
 		
 	Content:
-		We show an example of a cooking recipe:
+		Here is an example of a cooking recipe:
 		
 	Code:
 		Recipe: Macaroni Recipe
@@ -31,18 +31,18 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Combine macaroni with sofrito and serve
+				Step: (3) Mix macaroni with sofrito and serve
 	Content:
 		This is a **STxT document without namespace**. These types of documents
-		are structured, but we don't know what form the nodes take. Anyway, it can already
-		be seen that they have structure, with a main node `Recipe`, which has
+		are structured, but we do not know what form the nodes take. In any case, you can
+		already see that they have structure, with a main node `Recipe`, which has
 		a `Description` node, `Ingredients`, etc. In turn, these nodes have others, and so on
-		until forming a hierarchical structure.
+		until forming a hierarchical structure. 
 	
-		It is worth mentioning the `Description` node which is a node that allows **multilines**.
-		Without a prior structure, they are distinguished because the node name
+		It is worth mentioning the `Description` node, which is a node that allows **multilines**.
+		Not having a previous structure, they are distinguished because the node name
 		is in the form `:node name:`
 	
 	Subheader: Documents with namespace
@@ -62,9 +62,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Combine macaroni with sofrito and serve
+				Step: (3) Mix macaroni with sofrito and serve
 	
 	Content: 
 		Now we show the namespace. **The definition of the namespace is found in
@@ -93,8 +93,8 @@ Document (dev.stxt.namespace): STXT Tutorial
 		
 	Code:
 		Recipe (com.kocinando.receta): Macaroni Recipe
-		***# This recipe was given to me by XX and I have made it many times***
-		***# You will like it a lot!!***
+		***# This recipe was given to me by XX and I have made it a lot of times***
+		***# You will love it!!***
 			Description:
 				This is the description of the macaroni recipe.
 				Bla, bla, bla
@@ -105,9 +105,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make sofrito
+				Step: (1) Make the sofrito
 				Step: (2) Boil macaroni
-				Step: (3) Combine macaroni with sofrito and serve	
+				Step: (3) Mix macaroni with sofrito and serve	
 
 	Subheader: Different namespaces in a document
 	
@@ -124,7 +124,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 	Content: Here we see that `Recipe` is from another namespace and we see that
 		instead of putting the structure, it refers to another namespace.
 		
-	Assert: It is NOT necessary to say the inner namespace, only the main node.
+	Assert: It is NOT necessary to specify the inner namespace, only the main node.
 	
 	Content: Thus, an example of a recipe book would be:
 	
@@ -141,9 +141,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 					Ingredient: (100g) Tomato
 					Ingredient: (240g) Macaroni
 				Steps:
-					Step: (1) Make sofrito
+					Step: (1) Make the sofrito
 					Step: (2) Boil macaroni
-					Step: (3) Combine macaroni with sofrito and serve	
+					Step: (3) Mix macaroni with sofrito and serve	
 			***Recipe: Pizza Recipe***
 				Ingredients:
 					Ingredient: (1u) Pizza dough

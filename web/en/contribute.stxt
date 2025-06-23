@@ -14,10 +14,10 @@ Document (dev.stxt.namespace):Contribute with us
 		telling others about it, and enjoying it. We have already used it,
 		and the experience has been great.
 		
-		Although there is still a lot of work to do. Libraries are missing, text editors,
-		applications,... the list is endless.
+		Although there is still a lot of work to do. Libraries, text editors,
+		applications are missing... the list is endless.
 		
-		Good news for computer scientists: a new toy to explore :-)	
+		Good news for computer scientists: a new toy to explore :-)
 		
 	Subheader:  stxt.dev
 	
@@ -30,7 +30,7 @@ Document (dev.stxt.namespace):Contribute with us
 		As for this website, we believe it is a closed project, but it is far
 		from perfect. Surely it can be improved in a thousand ways. Do you think
 		a new chapter should be added to the book? Have you found any errors in the documentation?
-		Would you improve any example? Would you suggest a different and more compact css?
+		Would you improve any example? Would you suggest a different and more lightweight CSS?
 		
 		We want this website to be a reference point for learning STxT.
 		
