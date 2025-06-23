@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace): STxT Parsing (*)
+Document (dev.stxt.namespace): Parsing of documents
 	Navigation:
 		Previous: Previous (ebnf)
 		Next: EBNF (parsers)
