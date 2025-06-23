@@ -13,7 +13,6 @@ Document (dev.stxt.namespace):EBNF
 	Content:Below we show the EBNF grammar:
 	
 	Code:
-	
 		Document         ::= Line*
 
 		Line             ::= CommentLine | NodeLine | IndentedTextLine
@@ -53,4 +52,3 @@ Document (dev.stxt.namespace):EBNF
 		Digit            ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 		
 		TEXT             ::= ? any printable character except newline ?
-		

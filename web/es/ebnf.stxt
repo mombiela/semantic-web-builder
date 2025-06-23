@@ -13,7 +13,6 @@ Document (dev.stxt.namespace):EBNF
 	Content:A continuación mostramos la gramática EBNF:
 	
 	Code:
-	
 		Document         ::= Line*
 
 		Line             ::= CommentLine | NodeLine | IndentedTextLine
