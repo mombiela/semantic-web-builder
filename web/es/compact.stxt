@@ -10,4 +10,281 @@ Document (dev.stxt.namespace):Compactación
 		
 	Header: Compactación
 		
+	Subheader: Análisis de la información de STxT
+		
 	Content:
+		Un documento es sólo un conjunto de nodos con una cierta identación, con lo que realmente la 
+		información es de **orden** y de **nivel**.
+		
+		Vamos a verlo en un ejemplo:
+		
+	Code:
+		Nodo_0 (www.example.com/...):
+			Nodo_1:
+				Nodo_2: Texto Nodo2
+				Nodo_3: Texto Nodo3
+			Nodo_4:
+				Nodo_5: Texto Nodo5
+				Nodo_6: Texto Nodo6
+					Continuación texto
+					Otra linea de texto
+				Nodo_7:
+					Nodo_8:
+						Nodo_9: Última linea
+		
+	Content:
+		Vemos que hay 10 Nodos en este documento.
+		El primer nodo es Nodo_0, y es el que contiene a los demás.
+		Podríamos decir que es el primero en aparecer (orden)
+		y tiene nivel 0 (no está identado y contiene a los demás).
+		El segundo nodo es Nodo_1. Es el segundo en aparecer y tiene nivel 1.
+		De esta forma podríamos cualificar todas las líneas, y extraer la información. 
+		No es difícil de hacer una tabla con esta información:
+		
+	Content:
+		| Orden  | Nodo   |  Nivel  |
+		|--------|--------|---------|
+		| 1      |Nodo_0  |0        |
+		| 2      |Nodo_1  |1        |
+		| 3      |Nodo_2  |2        |
+		| 4      |Nodo_3  |2        |
+		| 5      |Nodo_4  |1        |
+		| 6      |Nodo_5  |2        |
+		| 7      |Nodo_6  |2        |
+		| 8      |Texto   |3        |
+		| 9      |Texto   |3        |
+		| 10     |Nodo_7  |2        |
+		| 11     |Nodo_8  |3        |
+		| 12     |Nodo_9  |4        |
+		
+	Content:
+		Ahora sólo se trata de incluir esta información. De esto trata la siguiente sección.
+		
+	Subheader: Una forma de compactación
+		
+	Content:
+		A partir de la tabla anterior, vamos a proponer una forma de compactar la información.
+		Será algo tan fácil como insertar el número de nivel en vez de utilizar tabuladores,
+		y separarlo con el carácter habitual ':'.
+		
+		Así, el ejemplo anterior quedaría como:
+		
+	code:
+		0:Nodo_0 (www.example.com/...):
+		1:Nodo_1:
+		2:Nodo_2: Texto Nodo2
+		3:Nodo_3: Texto Nodo3
+		1:Nodo_4:
+		2:Nodo_5: Texto Nodo5
+		2:Nodo_6: Texto Nodo6
+		3:Continuación texto
+		3:Otra linea de texto
+		2:Nodo_7:
+		3:Nodo_8:
+		4:Nodo_9: Última linea
+		
+	Content:
+		Realmente, todavía hay información redundante, 
+		ya que el primer nodo siempre tiene nivel 0
+		(de hecho los parsers pueden suponer que es -1), 
+		y los de nivel 1 podrían suponerse de nivel 0. 
+		De esta forma habrá programas que llegarán a dejarlo
+		de la siguiente forma:
+		
+	code:
+		Nodo_0 (www.example.com/...):
+		Nodo_1:
+		1:Nodo_2: Texto Nodo2
+		2:Nodo_3: Texto Nodo3
+		Nodo_4:
+		1:Nodo_5: Texto Nodo5
+		1:Nodo_6: Texto Nodo6
+		2:Continuación texto
+		2:Otra linea de texto
+		1:Nodo_7:
+		2:Nodo_8:
+		3:Nodo_9: Última linea
+		
+	Content:
+		Como comentario personal diré que a mí me gusta más que todos los nodos tengan un nivel
+		(excepto el primero) ya que lo considero más estético y fácil de leer. 
+		
+		Según mis preferencias quedaría así:
+		 
+	code:
+		Nodo0 (www.example.com/...):
+		1:Nodo_1:
+		2:Nodo_2: Texto Nodo2
+		3:Nodo_3: Texto Nodo3
+		1:Nodo_4:
+		2:Nodo_5: Texto Nodo5
+		2:Nodo_6: Texto Nodo6
+		3:Continuación texto
+		3:Otra linea de texto
+		2:Nodo_7:
+		3:Nodo_8:
+		4:Nodo_9: Última linea 
+		
+	Content:
+		Hay una regla básica para la compactación:
+		
+	assert:
+		Si se han usado alias \\
+		se substituirán	por el Nombre Canónico
+		
+	Content:	
+		Esta regla es importante, ya que normalmente los nombres son más cortos que los alias,
+		y a su vez es más rápido de parsear un documento de esta forma. Además, también
+		juega un papel importante en la transformación de documentos, tal como
+		veremos en el [[chapter_07.html|Capítulo 7: Equivalencias e Internacionalización)]].
+		
+	assert:
+		En caso de no usar nombres canónicos hablaríamos de documentos //semicompactados//,
+		que siendo correctos no serían tan óptimos como los compactados.
+		
+	Content:
+		Finalmente tener en cuenta que las líneas de texto que pertenecen 
+		a un nodo tendrán siempre un nivel superior al nodo al que pertenecen.
+		En el ejemplo anterior se ve que después del Nodo6 (con nivel 2)
+		hay dos líneas de texto que le pertenecen, las dos con nivel 3.
+		
+		Realmente, la regla para compactar es así de simple:
+		
+	assert:
+		Substituir los tabuladores de inicio por: \\
+		número de tabuladores + ':'
+		
+	Subheader: Otros ejemplos
+		
+	Content:
+		Si compactamos la receta de los buñuelos, nos quedaría el siguiente texto:
+		
+	code:
+		Receta(www.kocinando.com/receta1.stxt):
+		1:Título: Buñuelos de Girona
+		1:Descripción:Esta es una receta para hacer buñuelos en la época de Cuaresma. Son conocidos
+		2:también como Buñuelos del Empordà. Normalmente son servidos
+		2:como postre, y hay cantidad suficiente hasta para 12 personas. Es una receta
+		2:fácil de hacer.
+		1:Ingredientes:1Kg harina
+		2:8 huevos
+		2:la ralladura de 1-2 limones
+		2:150 gramos de azúcar
+		2:100 gramos mantequilla
+		2:1/4 litro de leche
+		2:1 vaso de grassolis (mezcla de moscatel, anís, cointreau)
+		2:75 gramos de levadura (de panadería)
+		2:matalauva (anís)
+		2:una pizca de sal
+		2:un poquito de canela molida
+		1:Preparación:En un recipiente pondremos la harina y el resto de ingredientes.
+		2:La mantequilla se funde con un poco de leche, al igual que la levadura. 
+		2:La leche para deshacer la levadura sólo tiene que estar ligeramente
+		2:templada, ya que de lo contrario perdería seguramente su efecto.
+		2:Se mezcla todo muy bien, y se deja reposar tapado por espacio de 3-5 horas
+		2:(hasta que sube la masa).
+		2:Con una cuchara o cucharadita según se quieran de tamaño, se fríen en
+		2:abundante aceite hasta coger color. Conforme se van sacando se espolvorean 
+		2:con un poco de la mezcla del grassolis, y se pasan por azúcar.
+		
+	Content:
+		Vamos a ver como queda la compactación de un ejemplo que veíamos
+		en el capítulo de las gramáticas.
+		
+		Teníamos los datos de un cliente, y compactado queda como:
+		
+	code:
+		Cliente(www.gym.com/client.stxt):
+		1:Datos Personales:
+		2:Nombre: Shila
+		2:Primer apellido: Kween
+		2:Edad:28
+		2:Cliente vip:1
+		2:Foto:
+		3:R0lGODlhlgCNALMAAFtepau07X2I1tvg+pOe42dwwMPK9vz+/AAAAAAAAAAAAAAAAAAAA
+		3:AAAAAAAAAAAACH5BAAAAAAALAAAAACWAI0AAwT/8MhJq7046827/2AojmRpnmiqrmzrvn
+		3:Asz3Rt3/Vg7MbgD7igsATUBQgCAYEQ2AGH0KGPR9XxAkdBIdl8Rr8qK3bJxJp5vosBmxQ
+		3:EvOA4yIhdvw/PonVt2OjIfXKCF1ZpPzsuA1hwg18DBDoVa0sde04bPQc9aY1Ra14+AUmQ
+		3:B00Se3RMO1h4lxisEoGdQgZMOrdKTwZKWW2jZUcBW25XmRaPEnezQZ8UvLFIvErAaKsFw
+		3:b3RZZsSpAHLOM2nbhRLyh0CkXqTWkjmTQS1jOAwfBMD5BOitx/f86fBFJGJ9o3eDCT38n
+		3:UzUxCDkR61qnGiwKfIGAGnDL7YdwohQCak/wh1mdJEgJ1gA0dOiveIjChZGlO07GgyVi1
+		3:bFYws4WOsFJ5jq+os4QLSpBZXMU3g1OEGyJtteOiY0kAgw8ojmaykS7frEMykICa1wvkG
+		3:W0V+HM61qgPnUcMD8dxMbfUVLAclfZqY6nEEiayeaUnWORY1pKYm1zBSQGt3AxlNB8hZG
+		3:eqlbgamWeuGmjRSUToAHCVZbjxhV7we8b6VTV26AxpFrQ79mKgGibB4hEaTxlsK5FpVd2
+		3:jnRLpwZIidopQ4BEwaD6RArJvUevtzOO1bokgoeiRwy79YzTNSclqr1CTmkkDdKsL3lOz
+		3:ZPxbfA4LkWlQ13+ndOu18EZ+5arhX3f9aO0BShB+RSIJHO5qMphs4f1TVRzxVCaXMP9zM
+		3:5wpsHMQ3IHil5JIgUI3R8cNOQV1IHVAZUrAiYRpwUsBpws1n13RdMIHRIrglg94pP+oT4
+		3:4MClnINELoR2Yg5V3D1hzFr1GSdHy8WyUEgBhSwXX5BziIXPPLUMdcYOalF1WUf9AHENc
+		3:9poKQcbgFDY0R5aAFKeR5wGKAHfUyoyoNdDoKVGyDtMZcWBcgyAABVfdAoIR9MoYmWb+Q
+		3:HmUa2+AWJam8EguijcM0YaZUfIvhDolVZ+uYXPA20yWCTFgAATADMSGpO6aTQ5wFsXuqQ
+		3:pXH4Nw1s8qhZ6xblEAqqm0xY5Qf/lpBxMSIGq0rRhShH+HREGrcxSsGMpr2ZHLVmVgBLG
+		3:mtc0+Key4w0LA9c4TEjg8kQY1SHtv3DXwbK3beDG+lYOm0jfQ5gq3n4RDuKqPIKZacf8y
+		3:47nTgXaNHaDjNKeN8Ft8aRLikVdirMwoohxM6MAmeca0dhkroFtEYugZ2z9GDBsGqbFKD
+		3:zLigbXFAZoOmGz7z2xVISZhhsUVAkpsm8MiHAfsFEoq1EpgnAkGjxjV80ARAvx0nMmGga
+		3:XD3XrwWMNtQn1mdTW7NHmVRlTgG9qdJ2N7PWGJkSShz5Bt1UvFQquIFMAXA7qtZc9DeIJ
+		3:GrfS39aMLJPktiGdRkGnqfc/1yLluUePgbXuqzkNUupWksEaOmDSSzNE/qu5Wg6dVyI4L
+		3:MjMY8awKgim6C2qM6jK7iM7ezBhc+4faQj4T9h++rZnzt4LQy6uCFGeSmg5ZgdE4y+HGP
+		3:UUpiEpA86HgWZXr6aaxvlR7zMOM9JUE/TzMJEtA9IOif3oN4ec7NJG8iKW67+oYhraEkx
+		3:ovBOn5Kjrs9x4jnSwYumHiGrrTBsOcuonU/csQWNhWg98qnPFrwWilEQC36wmJS3xrKLY
+		3:CQjMjoA3vPywz8wmMIpkYmG6irVFUJJQ2e10gIAalWgJOTFPMCrCT4Ylbqm9GUapHhSAE
+		3:RXxCSBTwgsSYbBtBC/nv8gRlYvi0iWwDhERvHthcnTUjJIiAc2eE0uGXuVjt4IidQFD0S
+		3:zOFcvuHA9CsoKNAUUBmKm0TdZNWpXyBLGrFoDEDC6r43RKKM7zOG2ZSylFjo7in8SCEYR
+		3:irBWQ4xkEwl1E7HVygzSkkQZs+UcIB7LiPEjUQZ/Yg2AXWoXQuwb3wbiyCB6TV3TmVoZC
+		3:1lGUPqilxISQDHB9SXXXZEWUUkO3xjXG51Z85ep0eEydQY6gdRCmdyES1+G8ccOouiToG
+		3:TUhFhpgWoJwSmIItoVhgLETLqjDWcoptf0yU9ftMNyZawnokTHN6V5pkodY1XqisnFSxU
+		3:QjErURhLukbo/pvP/WNZMoncYyIsKKnOILzNi6hrSwOGAA5NbyORHkXW1UBqobrsgIkWS
+		3:AFJEhU1rypzGGLFZL41y8zRUk8AzcvLMcNTnnjMqJtB+qYz6dFQxH+Ei69JVT87sNEuyG
+		3:OUdOjU0tcXSRcNjx7byRxSbKjNzRiJnUEtREkrtK56NautRcOMZrTXoOaFjo8HWisdG1O
+		3:GAPVAXJeRlyCH6o30FDZp0ssS6vWhiCUn8Qz1nhZppoOSQaxhmMi5YiqLeYJxmQIJAHoU
+		3:kYWJkOhRUZnB4JooeqYkvBK2oMa3RQVupjR1DzIvFGNmJhGXpsnBRjofwQQCQ3qS1ycnC
+		3:y9gIIsmGsoJA/5yGd/J3vQaNc4hWUKMmPGuD83gtLqqZKDai8dHnZswd7fvbUdAFnqGBV
+		3:KmI+pf4nmYegNXzb/5wJw6e0sRdlGdcyVCJImtaOZuZkSIg2mlAbUXI54wOvBVFVBa2e1
+		3:KMnZJSIeoRkNgyYNHphaaaRfCAEnvKUdaEneVoYROdilX9GjV0bfBJljRcpoEScShCHCJ
+		3:UGcmPOJU3iE9o1jHSYUA7phSXGmlDEHckr4DFKJ5GWUJAIVXAe3yCd5zgDrVod+SdJTAm
+		3:WvKoT4gXNaceq6YYajJ1FnGPbWVAFfPiImhyKCVwjEF3O4uEncBH0056xyFGupvRLkJD1
+		3:gHslxjhjv9HwJG1zAJzb4hAhxDB9b2+GQZSbrLgFFPqFCPsuBOI8G9xsxdcAF2G0JH+FR
+		3:dpLIKXKG2fneYdqwV1CztUEDVcC8FiLxND85VgbkoIJYUjIeTeFqy+OnaLoF0za/mErVx
+		3:8QumoE60m7FxaEKkqnHKZ2L4XkO27LtaibGvVRmpGK6FBINZibsNYbXh7b5w9ju3KuIpa
+		3:g2ewgkpVVPo00pGNjLuAjsW8AW5dEA9rD5/jaxxe2pKCtLuDbSC4+pAkDJaOoCrBJugTP
+		3:CfwZUOBFfKFie1CykcUtDZWRRNBESP8NDS0kbiDMJAb/ryYZ+NY4vq4RsUtLoKpzXxnss
+		3:CGeXz/IwdTTDNLF5jaG1iHgnaHLdyPta81E7SdNTRILjgPQ2oAhkkMbaNNJthrf0vAhbB
+		3:10BjBkRBn0D2DRUBxKNfWxx9gMzAQqLRU/dhlELmJZX5H5RF4igLvyr4Tha/bDJ2FOgvx
+		3:XgnLqhV6tNwE+WAFBR0Ng0LT04AguWL1EnSB8X4widjEJg2cuOe1tlB80xM4CrjQbgOj4
+		3:FTY2XscNigtuVk4Ryjosq8hQNagDGmWZZySyQWdgPZ5ss0wRssLdv8lv6iFwiO4KBRFIB
+		3:49U6jo1nDuBOnk4dR9G4M5QKLeBPuDKZ8XAutDu13fWF3khssfijvEu5Vc8/IiYaDVvW+
+		3:H/8AqpnBRZAd1VwPRYAfLgw/vh3iGMAVjFCXgw0k55koCxQhVd1RclQlUwDPftx2xwRrM
+		3:QBTyoA4UokWRcFhFUFHRACwFJFWIJX5clAeX8E1cAxF6sAgJ5HA8cT6bonoXB0XigyVP0
+		3:Q1I0iBw0XHWtGgHshjpQhQiKAoyxTsAIUEdiCUwZ0cr8xToIx0plAPSQA63lTCd9XdH8x
+		3:PtwyZxlxN2Q35lGBKV0Q5bVUfP9wmiNRV50QWboCP7ZXmb4iKrczpD+E3QQk+M1ReUR1H
+		3:jdoSaUXFygUs74SKq4HpCWDV7kQpZBwJkED9rdlDWh0OTAi0toTW1AnjpNxzlQy8ukv9R
+		3:idFBZrJYDXcY6/YqgHgDhuYKntKHBaILV0N3QKAsZocoW5ITpUEcC4JRBiQ9UNMpttEoy
+		3:5J6F8F2TecqxfNY4iQh+uYpbbI2xjNQUvUqIqYHbQZSZCRTbvMzlFQbeTEQNiBNoXYgok
+		3:VJoCNwcPEa5QZ4ObZSkQMQVbcKEahP9NVOCcI3o4GAkIRvM4BPBfNNbAIRaiId4PEUxCI
+		3:Q9fdjxqQXVIAiKKVj+pRq+DEVCURDC/kYNFBxPdIdP/VyTjEYecEXtbN0dABO4DhM5mRm
+		3:yxRQEwUoVjM/mgckXdF2nNZIbdB5kHGOrPAQxsM4yJhdFqVP5wVi7wWTB/RSVhH/eDEEA
+		3:m4WA4yYXyuWL/egg2RBV3t4B5TASTNpURnFT0e2FaNojqd4HDyoeW1ACrjkQmmGStCALh
+		3:coVKrhSkqZlAFlR2w0FKYmOS03UXCCItsSJfLgJv0hZPGyHeaGgL9TllLWlEw0CisUXGU
+		3:QI9nhHsIgCH/xHw6JIBlGhqzkH9WBgEC0KKsWEN9kdnMGJLywPwpBfLOgkjPhGmtRGilU
+		3:FhOhA8dSgFcjDRhTKIthO1t4DHSzlZtJMNXjjNVGKvuXPuCWDg0xFAK4HFzwIOyUBos2C
+		3:LAYFviYAbuWByTULFrWikPyJVShHuI0PNA2JLFxattVOF4DQ6UBkghiWWdi5SOBGQdapn
+		3:LbdSumUCnYozxEYDsKIUsCopFw4oyEoSTIYB6hsj7aIYOfVpz40VthB5Ru8lpjRAxEECW
+		3:5EAI1FB4bwwGHpIgl+iy/dYZuUokmWjXYoy44t3SmEaNgkCVBcwLfIBf9iKM4UFxywaOu
+		3:50JAOgT/xINaUUcOeqS6AjwuaomD+J5OCgNveUckajccWKU0EBdDlQKMIz5c2nbWF6Ujo
+		3:DYwOqZbdhItEChqqitG4IotYG5v6gLpx6Aygad1aqd72qd++qeAGqiCOqiEWqiGeqiImq
+		3:iKuqiM2qiO+qiQGqlyEAEAOw==
+		1:Datos Bancarios:
+		2:Titular cuenta: Joan Costa Mombiela
+		2:Número cuenta: 0000-0000-00-000000000
+		
+	Subheader: Utilidad
+		
+	Content:
+		La utilidad de la compactación es crear un formato un poco más eficiente,
+		que igualmente sea fácil de leer y escribir por humanos.
+		Con los números de nivel también es muy sencillo de leer,
+		y para las máquinas tiene algunas ventajas:
+		
+		* El tamaño del fichero acostumbra a ser inferior.
+		* El parseo del fichero es más rápido, ya que no hay que calcular el nivel a través de tabuladores (o espacios).
+		
+		También puede usarse en transformaciones de ficheros, pero esto se verá más adelante (Capítulo 7).

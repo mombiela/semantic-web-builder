@@ -12,6 +12,8 @@
 	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/stxt-1.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/velocity-1.7.jar"/>
-	<classpathentry kind="lib" path="lib/commonmark-0.22.0.jar"/>
+	<classpathentry kind="lib" path="lib/commonmark-0.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/commonmark-ext-gfm-tables-0.24.0.jar"/>
+	<classpathentry kind="lib" path="lib/commonmark-ext-ins-0.24.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
