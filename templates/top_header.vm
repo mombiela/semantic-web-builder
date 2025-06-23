@@ -9,7 +9,6 @@
 	<div class="subtitle"><a href="index">${lang.get("title")}</a></div>
 	<ul>
 		<li><a href="contribute" title="${lang.get("menu.contrib")}" rel="nofollow">${lang.get("menu.contrib")}</a></li>
-		<li><a href="licence" title="${lang.get("menu.licence")}" rel="nofollow">${lang.get("menu.licence")}</a></li>
 		<li><b> | </b></li>
 		#if(${lang.get("lang")} == "es")
 			<li><b>${lang.get("menu.lang.es")}</b></li>

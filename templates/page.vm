@@ -4,7 +4,7 @@
 	<head>#parse("/head.vm")</head>
 	
 	<body>
-		#parse("/main_header.vm")
+		#parse("/top_header.vm")
 		#parse("/top_bar.vm")
 		#parse("/main_content.vm")		
 		#parse("/footer.vm")		
