@@ -9,7 +9,6 @@ Document(dev.stxt.namespace): STXT: El Libro
 			
 	SubHeader: El lenguaje
 	
-	Link: Descripción general (lang)
 	Link: Documentos sin namespace (raw-docs) 
 	Link: Documentos con namespace (ns-docs)
 	Link: Compactación (compact)
