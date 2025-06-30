@@ -47,7 +47,7 @@
 	
 	@media (min-width: 750px) {
 		.alert p, .assert p, .assert ul, .alert ul {
-			width: 85%;
+			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -55,6 +55,7 @@
 	
 	p {
 		text-align: justify;
+		line-height: 1.5rem;
 	}	
 	
 	div.preamble p
