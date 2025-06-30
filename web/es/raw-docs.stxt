@@ -4,14 +4,24 @@ Document (dev.stxt.namespace): Documentos sin namespace
 		Next: Siguiente (ns-docs)
 
 	Header: Documentos sin namespace
-	Content: Creo que ya ha quedado claro como son los documentos sin namespace. Ejemplo:
+	Content: Los documentos STxT son documentos de texto, con una estructura de nodos anidados. Para saber el nivel de anidación
+		se usan tabuladores (o espacios) que indican el nivel de anidación. Los documentos tendrán las siguientes características:
+		
+	Alert: 
+		* Codificación UTF-8
+		* Los Identificadores son CASE-INSENSITIVE. Se permiten espacios en los nombres, pero no `:`
+		* Los nodos multilíne serán de la siguiente forma: `:nombre del nodo:`. Esto permite identificar visualmente un nodo final que
+		  puede estar formado por varias líneas
+		* Comentarios: En STxT los comentarios son todas las líneas que empiezan por el carácter `#`
+	
+	Content: Un ejemplo
 	
 	Code:
 		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
-				:Bla, bla, bla
-				:Bla, bla, bla
+			:Descripción:
+				Esta es la descripción de la recta de macarrones.
+				Bla, bla, bla
+				Bla, bla, bla
 			Comensales: 3
 			Dificultad: fácil
 			Ingredientes:
@@ -22,60 +32,14 @@ Document (dev.stxt.namespace): Documentos sin namespace
 				Paso: (2) Hervir macarrones
 				Paso: (3) Juntar macarrones con sofrito y servir
 
-	Content: Vamos a profundizar un poco más.
-
-	Subheader: Codificación
+	Content: El mismo ejemplo con comentarios
 	
-	Assert: Codificación UTF-8 Siempre
-	
-	Content: 
-		Fin. Es una buena regla y estoy muy contento con ella. 
-		Hoy en día es la codificación más aceptable, más universal,
-		y más implementada. No creo que esto cambie en los próximos años.	
-	
-	Subheader: Identificadores
-	
-	Assert: Los Identificadores son CASE-INSENSITIVE
-	
-	Assert: 
-		Se permiten espacios en los nombres. \
-		¿Por qué no? ¿Para parecer informáticos?\
-		Los tiempos están cambiando :-D
-
-	Subheader: Caracteres de escape
-	
-	Assert: No existen caracteres de escape
-	
-	Content: 
-		Creo que es lo mejor que he oído en mucho tiempo. 
-		**No existen caracteres de escape** _porque no son necesarios_.
-		Debido a la estructura no son necesarios.	
-
-	Subheader:	Comentarios
-		
-	Content:
-		Todos los informáticos saben qué son los comentarios en cualquier lenguaje.
-		Por si hay algún neófito explicaré que los comentarios son texto que sólo están ahí 
-		para comentar o añadir alguna observación, pero no influyen en el documento en sí.
-		
-	assert:
-		En STxT son comentarios todas las líneas que empiezan por el carácter #
-		
-	Content:
-		Los comentarios no tienen que tener ningún tipo de formato, 
-		es texto libre que el autor del documento puede incluir. 
-		Además, no tiene que estar situado en ningún sitio concreto del documento. 
-		Cualquier línea que empiece por # será tratada como comentario,
-		y no será tenida en cuenta ni en programas ni en comunicaciones.
-		
-		Ejemplo:
-
 	Code:
 		Receta: Receta de macarrones
 		***# (1) Esto es un comentario***
 		***# (2) Esto también es un comentario***
 			***# (3) Esto también es un comentario***
-			Descripción:
+			:Descripción:
 				:Esta es la descripción de la recta de macarrones.
 				:Bla, bla, bla
 			***# (4) Esto es un comentario***	
@@ -87,9 +51,9 @@ Document (dev.stxt.namespace): Documentos sin namespace
 				Ingrediente: (100g) Tomate
 				Ingrediente: (240g) Macarrones
 			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
+				Paso: Hacer sofrito
+				Paso: Hervir macarrones
+				Paso: Juntar macarrones con sofrito y servir	
 	
 	Content: Aquí cabe señalar que `(1),(2),(3) y (4)` son comentarios, mientras 
 		que `(5)` no lo es, ya que está dentro del texto identado. 
@@ -97,39 +61,19 @@ Document (dev.stxt.namespace): Documentos sin namespace
 	Subheader:	Nodos e identación
 	
 	Content:	
-		Antes hemos dicho que un documento STxT es un conjunto de nodos anidados. 
+		Un documento STxT es un conjunto de nodos anidados.\
 		La identación es muy similar a otros lenguajes, y se pueden usar tabuladores o espacios.
 		
 	Assert: 
-		4 espacios equivalen a un tabulador
+		4 espacios equivalen a un tabulador\
 		Es mejor no mezclar documentos con tabuladores y espacios
-		
-	Subheader: Nodos multilínea
 	
-	Content: 
-		Estos nodos permiten tener **textos completos en varias líneas**. En documentos con namespace
-		serán equivalentes a nodos tipo `TEXT`. Se construyen con líneas
-		que empiezan por `:`, pero sin una etiqueta previa. Ejemplo:
+	Content: otra característica es la siguiente:
+	Assert:
+		Los niveles deben ser consecutivos\
+		un nivel `n` deber estar seguido por `n+1`,\
+		sin saltos entre ellos.		
 		
-	Code:
-		Receta: Receta de macarrones
-			***Descripción:***
-				***:Esta es la descripción de la recta de macarrones.***
-				***:Bla, bla, bla***
-				***:Bla, bla, bla***
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
-				
-	Content:
-		Acabamos de ver que el nodo `Descripción` es un nodo MULTILINE. 
-	
 	Subheader: (Prefix) Central (Sufix)
 	
 	Content: 
@@ -139,17 +83,17 @@ Document (dev.stxt.namespace): Documentos sin namespace
 		
 	Code:
 		Receta: Receta de macarrones
-			Descripción:
-				:Esta es la descripción de la recta de macarrones.
-				:Bla, bla, bla
-				:Bla, bla, bla
+			:Descripción:
+				Esta es la descripción de la recta de macarrones.
+				Bla, bla, bla
+				Bla, bla, bla
 			Comensales: 3
 			Dificultad: fácil
 			Ingredientes:
 				Ingrediente: ***(100g) Tomate***
 				Ingrediente: ***(240g) Macarrones***
 			Pasos:
-				Paso: ***(1) Hacer sofrito***
-				Paso: ***(2) Hervir macarrones***
-				Paso: ***(3) Juntar macarrones con sofrito y servir***
+				Paso: ***Hacer sofrito***
+				Paso: ***Hervir macarrones***
+				Paso: ***Juntar macarrones con sofrito y servir***
 	

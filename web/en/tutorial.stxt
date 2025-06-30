@@ -31,18 +31,18 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sofrito
-				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve
+				Step: Make the sofrito
+				Step: Boil macaroni
+				Step: Mix macaroni with sofrito and serve
 	Content:
-		This is a **STxT document without namespace**. These types of documents
-		are structured, but we don't know what form the nodes take. In any case, you can
+		This is a **STxT document without namespace**. This type of document
+		is structured, but we do not know what form the nodes have. In any case, you can
 		already see that they have structure, with a main node `Recipe`, which has
 		a `Description` node, `Ingredients`, etc. In turn, these nodes have others, and so on
 		until forming a hierarchical structure. 
 	
 		It is worth mentioning the `Description` node, which is a node that allows **multilines**.
-		Not having a previous structure, they are distinguished because the node name
+		As there is no prior structure, they are distinguished because the node name
 		is in the form `:node name:`
 	
 	Subheader: Documents with namespace
@@ -62,9 +62,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sofrito
-				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve
+				Step: Make the sofrito
+				Step: Boil macaroni
+				Step: Mix macaroni with sofrito and serve
 	
 	Content: 
 		Now we show the namespace. **The definition of the namespace is found in
@@ -88,13 +88,13 @@ Document (dev.stxt.namespace): STXT Tutorial
 	
 	Content:  
 		It is possible to insert comments in the documents to
-		express unfinished parts, author's thoughts, etc.
+		express unfinished parts, thoughts of the author, etc.
 		Comments will not be used but allow enriching the document.
 		
 	Code:
 		Recipe (com.kocinando.receta): Macaroni Recipe
 		***# This recipe was given to me by XX and I have made it a lot of times***
-		***# You will really like it!!***
+		***# You will love it!!***
 			Description:
 				This is the description of the macaroni recipe.
 				Bla, bla, bla
@@ -105,9 +105,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sofrito
-				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve	
+				Step: Make the sofrito
+				Step: Boil macaroni
+				Step: Mix macaroni with sofrito and serve	
 
 	Subheader: Different namespaces in a document
 	
@@ -141,15 +141,15 @@ Document (dev.stxt.namespace): STXT Tutorial
 					Ingredient: (100g) Tomato
 					Ingredient: (240g) Macaroni
 				Steps:
-					Step: (1) Make the sofrito
-					Step: (2) Boil macaroni
-					Step: (3) Mix macaroni with sofrito and serve	
+					Step: Make the sofrito
+					Step: Boil macaroni
+					Step: Mix macaroni with sofrito and serve	
 			***Recipe: Pizza Recipe***
 				Ingredients:
 					Ingredient: (1u) Pizza dough
 					Ingredient: (100g) Tomato
 					Ingredient: (50g) Cheese
 				Steps:
-					Step: (1) Put tomato and cheese on pizza
-					Step: (2) Bake for 15'
+					Step: Put tomato and cheese on pizza
+					Step: Bake for 15'
 	

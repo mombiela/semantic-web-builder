@@ -4,14 +4,24 @@ Document (dev.stxt.namespace): Documents without namespace
 		Next: Next (ns-docs)
 
 	Header: Documents without namespace
-	Content: I think it is already clear what documents without namespace are like. Example:
+	Content: STxT documents are text documents, with a structure of nested nodes. To determine the nesting level,
+		tabs (or spaces) are used to indicate the nesting level. The documents will have the following characteristics:
+		
+	Alert: 
+		* UTF-8 encoding
+		* Identifiers are CASE-INSENSITIVE. Spaces are allowed in names, but not `:`
+		* Multiline nodes will be as follows: `:node name:`. This allows you to visually identify a final node that
+		  may consist of several lines
+		* Comments: In STxT, comments are all lines that start with the `#` character
+	
+	Content: An example
 	
 	Code:
 		Recipe: Macaroni recipe
-			Description:
-				:This is the description of the macaroni recipe.
-				:Bla, bla, bla
-				:Bla, bla, bla
+			:Description:
+				This is the description of the macaroni recipe.
+				Bla, bla, bla
+				Bla, bla, bla
 			Servings: 3
 			Difficulty: easy
 			Ingredients:
@@ -22,60 +32,14 @@ Document (dev.stxt.namespace): Documents without namespace
 				Step: (2) Boil macaroni
 				Step: (3) Mix macaroni with sofrito and serve
 
-	Content: Let's go a little deeper.
-
-	Subheader: Encoding
+	Content: The same example with comments
 	
-	Assert: UTF-8 Encoding Always
-	
-	Content: 
-		End. It's a good rule and I'm very happy with it. 
-		Nowadays it is the most acceptable, most universal,
-		and most implemented encoding. I don't think this will change in the coming years.	
-	
-	Subheader: Identifiers
-	
-	Assert: Identifiers are CASE-INSENSITIVE
-	
-	Assert: 
-		Spaces are allowed in names. \
-		Why not? To look like computer scientists?\
-		Times are changing :-D
-
-	Subheader: Escape characters
-	
-	Assert: There are no escape characters
-	
-	Content: 
-		I think this is the best thing I've heard in a long time. 
-		**There are no escape characters** _because they are not necessary_.
-		Due to the structure, they are not needed.	
-
-	Subheader:	Comments
-		
-	Content:
-		All computer scientists know what comments are in any language.
-		In case there is any newbie, I will explain that comments are text that is only there 
-		to comment or add some observation, but do not affect the document itself.
-		
-	assert:
-		In STxT, all lines that start with the character # are comments
-		
-	Content:
-		Comments do not need to have any kind of format, 
-		it is free text that the author of the document can include. 
-		Also, it does not have to be located in any specific place in the document. 
-		Any line that starts with # will be treated as a comment,
-		and will not be taken into account by programs or communications.
-		
-		Example:
-
 	Code:
 		Recipe: Macaroni recipe
 		***# (1) This is a comment***
 		***# (2) This is also a comment***
 			***# (3) This is also a comment***
-			Description:
+			:Description:
 				:This is the description of the macaroni recipe.
 				:Bla, bla, bla
 			***# (4) This is a comment***	
@@ -87,49 +51,29 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: (100g) Tomato
 				Ingredient: (240g) Macaroni
 			Steps:
-				Step: (1) Make the sofrito
-				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve	
+				Step: Make the sofrito
+				Step: Boil macaroni
+				Step: Mix macaroni with sofrito and serve	
 	
-	Content: It should be noted here that `(1),(2),(3) and (4)` are comments, while 
+	Content: Here it should be noted that `(1),(2),(3) and (4)` are comments, while 
 		`(5)` is not, since it is inside the indented text. 
 
 	Subheader:	Nodes and indentation
 	
 	Content:	
-		We have previously said that an STxT document is a set of nested nodes. 
-		The indentation is very similar to other languages, and you can use tabs or spaces.
+		An STxT document is a set of nested nodes.\
+		Indentation is very similar to other languages, and you can use tabs or spaces.
 		
 	Assert: 
-		4 spaces are equivalent to a tab
+		4 spaces are equivalent to one tab\
 		It is better not to mix documents with tabs and spaces
-		
-	Subheader: Multiline nodes
 	
-	Content: 
-		These nodes allow you to have **full texts on several lines**. In documents with namespace
-		they will be equivalent to `TEXT` type nodes. They are built with lines
-		that start with `:`, but without a previous label. Example:
+	Content: another characteristic is the following:
+	Assert:
+		Levels must be consecutive\
+		a level `n` must be followed by `n+1`,\
+		with no jumps between them.		
 		
-	Code:
-		Recipe: Macaroni recipe
-			***Description:***
-				***:This is the description of the macaroni recipe.***
-				***:Bla, bla, bla***
-				***:Bla, bla, bla***
-			Servings: 3
-			Difficulty: easy
-			Ingredients:
-				Ingredient: (100g) Tomato
-				Ingredient: (240g) Macaroni
-			Steps:
-				Step: (1) Make the sofrito
-				Step: (2) Boil macaroni
-				Step: (3) Mix macaroni with sofrito and serve	
-				
-	Content:
-		We have just seen that the `Description` node is a MULTILINE node. 
-	
 	Subheader: (Prefix) Central (Suffix)
 	
 	Content: 
@@ -139,17 +83,17 @@ Document (dev.stxt.namespace): Documents without namespace
 		
 	Code:
 		Recipe: Macaroni recipe
-			Description:
-				:This is the description of the macaroni recipe.
-				:Bla, bla, bla
-				:Bla, bla, bla
+			:Description:
+				This is the description of the macaroni recipe.
+				Bla, bla, bla
+				Bla, bla, bla
 			Servings: 3
 			Difficulty: easy
 			Ingredients:
 				Ingredient: ***(100g) Tomato***
 				Ingredient: ***(240g) Macaroni***
 			Steps:
-				Step: ***(1) Make the sofrito***
-				Step: ***(2) Boil macaroni***
-				Step: ***(3) Mix macaroni with sofrito and serve***
+				Step: ***Make the sofrito***
+				Step: ***Boil macaroni***
+				Step: ***Mix macaroni with sofrito and serve***
 	

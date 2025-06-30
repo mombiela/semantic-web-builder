@@ -31,9 +31,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingrediente: (100g) Tomate
 				Ingrediente: (240g) Macarrones
 			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir
+				Paso: Hacer sofrito
+				Paso: Hervir macarrones
+				Paso: Juntar macarrones con sofrito y servir
 	Content:
 		Este es un **documento STxT sin namespace**. Este tipo de documentos
 		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
@@ -62,9 +62,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingrediente: (100g) Tomate
 				Ingrediente: (240g) Macarrones
 			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir
+				Paso: Hacer sofrito
+				Paso: Hervir macarrones
+				Paso: Juntar macarrones con sofrito y servir
 	
 	Content: 
 		Ahora mostramos el namespace. **La definición del namespace se encuentra en
@@ -105,9 +105,9 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Ingrediente: (100g) Tomate
 				Ingrediente: (240g) Macarrones
 			Pasos:
-				Paso: (1) Hacer sofrito
-				Paso: (2) Hervir macarrones
-				Paso: (3) Juntar macarrones con sofrito y servir	
+				Paso: Hacer sofrito
+				Paso: Hervir macarrones
+				Paso: Juntar macarrones con sofrito y servir	
 
 	Subheader: Distintos namespaces en un documento
 	
@@ -141,15 +141,15 @@ Document (dev.stxt.namespace): STXT Tutorial
 					Ingrediente: (100g) Tomate
 					Ingrediente: (240g) Macarrones
 				Pasos:
-					Paso: (1) Hacer sofrito
-					Paso: (2) Hervir macarrones
-					Paso: (3) Juntar macarrones con sofrito y servir	
+					Paso: Hacer sofrito
+					Paso: Hervir macarrones
+					Paso: Juntar macarrones con sofrito y servir	
 			***Receta: Receta de pizza***
 				Ingredientes:
 					Ingrediente: (1u) Masa pizza
 					Ingrediente: (100g) Tomate
 					Ingrediente: (50g) Queso
 				Pasos:
-					Paso: (1) Poner tomate y queso en pizza
-					Paso: (2) Hornear durante 15'
+					Paso: Poner tomate y queso en pizza
+					Paso: Hornear durante 15'
 	
