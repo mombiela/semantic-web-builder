@@ -93,7 +93,7 @@ Document (dev.stxt.namespace): Documents without namespace
 				Ingredient: ***(100g) Tomato***
 				Ingredient: ***(240g) Macaroni***
 			Steps:
-				Step: ***Make the sofrito***
-				Step: ***Boil macaroni***
-				Step: ***Mix macaroni with sofrito and serve***
+				Step: Make the sofrito
+				Step: Boil macaroni
+				Step: Mix macaroni with sofrito and serve
 	

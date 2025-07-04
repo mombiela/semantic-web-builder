@@ -93,7 +93,7 @@ Document (dev.stxt.namespace): Documentos sin namespace
 				Ingrediente: ***(100g) Tomate***
 				Ingrediente: ***(240g) Macarrones***
 			Pasos:
-				Paso: ***Hacer sofrito***
-				Paso: ***Hervir macarrones***
-				Paso: ***Juntar macarrones con sofrito y servir***
+				Paso: Hacer sofrito
+				Paso: Hervir macarrones
+				Paso: Juntar macarrones con sofrito y servir
 	
