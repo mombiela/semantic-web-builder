@@ -5,38 +5,15 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		
 	Metadata:
 		Title: Parseo de STxT
-		Description: Aunque el parseo de STxT es sencillo, se explican algunas partes con más detalle
+		Description: Parseo de ficheros en formato STxT
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
 	header:	Parseo de STxT
 		
-	Content:
-		Parsear un fichero STxT es mucho más fácil que parsear ficheros de otras tecnologías. 
-		Puede parecer paradójico, ya que realmente es un lenguaje muy potente, pero a la vez está
-		basado en principios muy simples.
-		
-		Yo os explicaré mi forma de parsear un fichero. Es posible que no sea la mejor, ni la más óptima, 
-		pero es una forma de hacerlo. De hecho, si queréis ver la implementación que he hecho
-		está disponible en Internet:
-	
-	assert:
-		[https://github.com/mombiela/stxt-parser](https://github.com/mombiela/stxt-parser)
-		
-	Content:
-		Esta implementación se ha hecho en lenguaje Java, ya que es el que mejor conozco.
-		
-		Espero que STxT tenga éxito, y que muy pronto aparezcan otras implementaciones.
-		
-		No voy a entrar en todos los detalles, pero sí que me gustaría explicar
-		algunos puntos que requieren más atención.
-		
-	Assert:
-		Si no tenéis intención de implementar un parseador no continuéis leyendo.
-		El siguiente capítulo es mucho más interesante ;-)	
 	Subheader:	Proceso genérico
 		
-	subSubheader:Parseo por líneas
+	SubSubheader:Parseo por líneas
 		
 	Content:
 		El proceso de parseo puede hacerse línea a línea, por lo que podemos decir que de forma general tenemos:
@@ -58,10 +35,10 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		Una línea está normalizada cuando está en forma compacta (o semicompacta), por lo que hay que comprobar si lo está,
 		y si no lo está, transformarla. En la normalización también se eliminan las líneas de comentarios.
 		
-		Hay que tener en cuenta en la normalización que si el nodo anterior era de texto,
+		Hay que tener en cuenta en la normalización que si el nodo anterior era de multitexto,
 		al superar cierto nivel será parte de ese mismo nodo. Es decir, será texto a continuación. También será parte de él
 		si no llega al nivel pero la línea está completamente en blanco,
-		en cuyo caso se traducirá por texto con un salto de línea ([[chapter_06.html#index_9|Ver tutorial avanzado]]).
+		en cuyo caso se traducirá por texto con un salto de línea.
 		
 		Una vez hemos compactada la línea, el procesado sigue independientemente, y ya sólo falta obtener
 		el nivel de la nueva línea y distinguir entre unos pocos casos:
@@ -76,7 +53,7 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		y las decisiones a tomar son relativamente sencillas. Esto nos permite tener un parser muy eficiente,
 		que a su vez puede actuar de validador de la gramática y los nodos. 
 		
-	subSubheader:Validaciones
+	subSubheader:Validaciones nodos con namespace
 		
 	Content:
 		Las validaciones se hacen en varios puntos del parseo:
@@ -87,8 +64,7 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		** En caso que sea tipo NODE se valida que el número de hijos sea correcto.
 		** En caso que no sea NODE se valida que tenga el contenido adecuado dependiendo de su tipo.
 			
-		¿Cuándo damos por finalizado un nodo? Este punto es interesante,
-		ya que hay dos circunstancias que hacen que un nodo se de por finalizado.
+		¿Cuándo damos por finalizado un nodo? Hay dos circunstancias que hacen que un nodo se de por finalizado.
 		Una de ellas es cuando aparece otro nodo con un nivel igual o inferior a este nodo.
 		La otra es cuando se ha procesado todo el fichero y ya no quedan nodos a validar.
 		En estos puntos el nodo se da por finalizado y pueden empezar las validaciones.
@@ -114,9 +90,9 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		* BASE64
 		* BOOLEAN
 		 	
-		Por ejemplo, las expresiones regulares que podríamos usar para validar nodos son:
+		Las expresiones regulares que podríamos usar para validar nodos son:
 		 
-	code:
+	Code:
 		BINARY       = ^(0|1|\s)+$
 		BOOLEAN      = ^0|1$
 		HEXADECIMAL  = ^([a-f0-9]|\s)+$
@@ -125,23 +101,13 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
 		RATIONAL     = ^(\-|\+)?\d+\/\d+$
 		 	
-	Subheader:Gramáticas
+	Subheader:Namespaces
 		
 	subSubheader:Almacenaje
 		
 	Content:
-		Las gramáticas se obtienen de Internet, pero no es práctico ni eficiente tener que ir a buscar
-		siempre las definiciones de forma remota. La estrategia más eficiente es tener una especie de repositorio de gramáticas,
-		en disco, e ir a buscarlas siempre allí. En caso de no encontrarse se buscaría en Internet,
-		y se actualizaría ese repositorio. También es posible establecer tiempos de comprobación u otras estrategias.
-		La idea es que las gramáticas no cambien con el tiempo, o que al menos sean compatibles de forma retroactiva.
-		
-	subSubheader:Gramática inicial
-		
-	Content:
-		Hay que tener en cuenta que no es posible hacer un parser sin tener la gramática previamente.
-		Para parsear una gramática hay que tener la definición de la gramática base ya parseada.
-		Por esta razón habrá una definición de la gramática inicial en el propio código. 
+		Los namespaces se deben obtener de forma independiente. Una estrategia es tener un repositorio de namespaces
+		en disco, e ir a buscarlos siempre allí. 
 		
 	Subheader:Detalles a tener en cuenta
 		
@@ -156,6 +122,4 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		  Por ello permitiremos tanto el salto de línea, como salto de línea + retorno de carro.
 		  Esto lo hacemos para permitir ediciones rápidas de ficheros desde cualquier entorno,
 		  aunque lo más adecuado sería siempre usar estándar UNIX (sólo carácter de salto de línea).
-		  
-	
-		
+		 
