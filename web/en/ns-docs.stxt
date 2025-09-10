@@ -37,7 +37,7 @@ Document (dev.stxt.namespace): Documents with namespace
 		Let's look at an example:
 		
 	Code:
-		Namespace: www.demo.com/documento.stxt
+		Namespace: com.demo.document
 			Documento:
 	        	Title: (1)
 	        	***Sections: (?)***
@@ -53,7 +53,7 @@ Document (dev.stxt.namespace): Documents with namespace
 	Content: Another simpler way to define it would have been:
 	
 	Code:
-		Namespace: www.demo.com/documento.stxt
+		Namespace: com.demo.document
 			Documento:
 	        	Title: (1)
 	        	***Sections: (?)***
@@ -67,7 +67,7 @@ Document (dev.stxt.namespace): Documents with namespace
 	Content: Finally, a document from the namespace:
 	
 	Code:
-		Documento (www.demo.com/documento.stxt):
+		Documento (com.demo.document):
 		    Title: First simple document
 		    Description:
 		    	This is the
