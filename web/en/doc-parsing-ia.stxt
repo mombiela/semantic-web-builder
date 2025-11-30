@@ -1,0 +1,382 @@
+Document (dev.stxt.namespace): Document Parsing
+	Navigation:
+		Previous: Previous (ebnf)
+		Next: Next (parsers)
+		
+	Metadata:
+		Title: STxT Parsing
+		Description: Parsing files in STxT format
+		Author: Joan Costa Mombiela
+		last modif: 2025-11-30
+	
+	header:	STxT Parsing
+		
+	Subheader:	Generic Process
+		
+	SubSubheader:Line-by-line Parsing
+		
+	Content:
+		The parsing process can be done line by line, using a stack to maintain the hierarchy.
+		The general algorithm is:
+		
+	code:
+		ALGORITHM: parse(content)
+			stack = empty stack
+			currentRoot = null
+			currentLevel = 0
+			document = empty list
+			
+			for each line in content:
+				result = processLine(line, stack, currentLevel, currentRoot)
+				currentLevel = result.level
+				currentRoot = result.rootNode
+			
+			if currentRoot is not null:
+				finalizeNode(currentRoot)
+				document.add(currentRoot)
+			
+			return document
+		
+	Content:
+		The key is to maintain a **stack of nodes** that represents the current hierarchy.
+		Each element of the stack is the parent node of the next level. In this way, the processing
+		of each line is independent and very efficient.
+		
+	subSubheader:Line Processing: Step by Step
+		
+	Content:
+		Processing a line consists of these steps:
+		
+	code:
+		STEP 1: NORMALIZATION AND LEVEL EXTRACTION
+			- Remove UTF-8 BOM if present
+			- If it's a comment (#...): ignore the line
+			- If it's empty: depends on context (see multiline)
+			- Detect compact format (2:name:value) ← convert to indentation
+			- Count spaces/tabs: each tab = 1 level, every 4 spaces = 1 level
+			- If there are 1-3 loose spaces: ERROR
+		
+		Result: lineIndent = { level, textWithoutIndent }
+		
+	code:
+		STEP 2: MULTILINE NODE HANDLING
+			
+			if (previous_node_is_multiline) AND (level >= stack_level):
+				// The line is a continuation of the previous multiline node
+				add_line_to_multiline_node(previous_node, text)
+				return
+			
+			if (previous_node_is_multiline) AND (level < stack_level):
+				// Multiline node ended, process normally
+				finalizeNode(previous_node)
+			
+			if line is empty AND (there is an active multiline node):
+				// Empty line inside multiline = line break
+				add_line_to_multiline_node(previous_node, "")
+				return
+		
+	code:
+		STEP 3: LEVEL VALIDATION
+			
+			if level > (current_level + 1):
+				// Invalid level jump, e.g.: level 0 → level 2
+				throw ERROR "Incorrect level jump"
+			
+			// Levels must be consecutive
+		
+	code:
+		STEP 4: CREATE NODE FROM LINE
+			
+			Parse the line with regex/search:
+				if starts with ':' → it's multiline
+					name = extract between first and second ':'
+					value = text after the second ':'
+				else:
+					find first ':'
+					name = text before ':'
+					value = text after ':'
+				
+				if name is empty: ERROR
+				convert name to lowercase (case-insensitive)
+			
+			Result: node = Node(name, value, isMultiline, line)
+		
+	code:
+		STEP 5: STACK HIERARCHY MANAGEMENT
+			
+			if level == 0:
+				// Root node
+				if currentRoot is not null:
+					finalizeNode(currentRoot)
+					document.add(currentRoot)
+				currentRoot = node
+				stack.clear()
+				stack.push(currentRoot)
+			
+			else:
+				// Child node
+				while stack.size() > level:
+					finished_node = stack.pop()
+					finalizeNode(finished_node)
+				
+				// Now stack.size() == level
+				parent = stack.top()
+				parent.addChild(node)
+				stack.push(node)
+		
+	Content:
+		Important: When a node disappears from the stack (because we find a lower level),
+		it is time to finalize and validate it.
+		
+	subSubheader:Execution Trace Example
+		
+	Content:
+		Document:
+		
+	code:
+		Email:
+			From: John
+			To: Mary
+			:Body:
+				Hello
+				World
+			Priority: High
+		Phone:
+			Number: 123
+	
+	Content:
+		Step-by-step trace:
+		
+	code:
+		LINE 1: "Email:"
+			Level: 0, Name: "email", Value: null, Multiline: false
+			Stack: [Email]
+			currentRoot = Email
+		
+		LINE 2: "    From: John"
+			Level: 1, Name: "from", Value: "John", Multiline: false
+			Parent: Email
+			Stack: [Email, From]
+		
+		LINE 3: "    To: Mary"
+			Level: 1, Name: "to", Value: "Mary", Multiline: false
+			Stack.pop() until size 1 (finalize From)
+			Parent: Email
+			Stack: [Email, To]
+		
+		LINE 4: "    :Body:"
+			Level: 1, Name: "body", Value: null, Multiline: true
+			Stack: [Email, Body]
+			Mark Body as multiline mode
+		
+		LINE 5: "        Hello"
+			Level: 2, but Body is multiline and 2 >= stack.size(1)
+			APPEND TO BODY! Do not create new node
+			Body.lines = ["Hello"]
+		
+		LINE 6: "        World"
+			Level: 2, but Body is multiline and 2 >= stack.size(1)
+			APPEND TO BODY! Do not create new node
+			Body.lines = ["Hello", "World"]
+		
+		LINE 7: "    Priority: High"
+			Level: 1, Body is multiline but 1 < stack.size(1)
+			Finalize Body (convert lines to text)
+			Stack.pop() until size 1
+			Parent: Email
+			Stack: [Email, Priority]
+		
+		LINE 8: (empty)
+			Ignore
+		
+		LINE 9: "Phone:"
+			Level: 0
+			Finalize Email
+			document.add(Email)
+			currentRoot = Phone
+			Stack: [Phone]
+	
+	Content:
+		Final result: document contains [Email, Phone] with their hierarchical structure.
+		
+	subSubheader:Optimized Pseudocode for LLM
+		
+	Content:
+		With this understanding, the pseudocode to implement in any language is:
+		
+	code:
+		class ParsingState:
+			stack = []
+			currentRoot = None
+			currentLevel = 0
+			document = []
+		
+		def parse(content):
+			state = ParsingState()
+			lines = content.split('\n')
+			
+			for lineNumber, rawLine in enumerate(lines):
+				lineData = normalizeLine(rawLine, state.stack)
+				if lineData is None:
+					continue  // Comment or empty line
+				
+				processLine(lineData, state)
+			
+			finalizeBatch(state)
+			return state.document
+		
+		def normalizeLine(line, stack):
+			// Returns: {level, text, isComment, isMultiline}
+			if line.startswith("#"):
+				return None  // Comment
+			
+			level = countIndentation(line)
+			textWithoutIndent = line[indentLength:]
+			
+			if textWithoutIndent.startswith(":"):
+				isMultiline = True
+			
+			return {level, textWithoutIndent, isMultiline}
+		
+		def processLine(lineData, state):
+			// Main logic from step 1 to 5 described above
+			
+			lastNode = state.stack[-1] if state.stack else None
+			
+			// STEP 2: Multiline
+			if lastNode.isMultiline and lineData.level >= len(state.stack):
+				lastNode.addLine(lineData.text)
+				return
+			
+			// STEP 3: Validation
+			if lineData.level > state.currentLevel + 1:
+				throwError("Level jump")
+			
+			// STEP 4: Create node
+			node = createNode(lineData.text, lineData.level)
+			
+			// STEP 5: Stack
+			if lineData.level == 0:
+				state.document.append(state.currentRoot)
+				state.currentRoot = node
+				state.stack = [node]
+			else:
+				while len(state.stack) > lineData.level:
+					state.stack.pop()
+				state.stack[-1].addChild(node)
+				state.stack.append(node)
+			
+			state.currentLevel = lineData.level 
+		
+	subSubheader:Node Validations with Namespace
+		
+	Content:
+		Validations occur at two key moments during parsing:
+		
+	Content:
+		**1. When creating a new node (namespace validation):**
+		
+		When a node is created, the parser tries to deduce its namespace from:
+		- The explicit namespace in the node: `Email(com.example.docs)`
+		- The parent's namespace
+		- The repository of available namespaces
+		
+		If it cannot deduce a valid namespace, it throws ERROR.
+		
+	Content:
+		**2. When finalizing a node (structure and content validation):**
+		
+		This occurs when:
+		- A node appears with level <= current level (branch closure)
+		- The end of the file is reached
+		
+		At this moment, it validates:
+		
+	code:
+		if nodeType == NODE:
+			validate that the number of children is correct
+				example: Email has {From, To, Body, Priority}
+				validated against the namespace
+		
+		else (if STRING, NUMBER, TEXT, etc):
+			validate content according to type
+				example: NUMBER must match ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
+		
+		if TEXT (multiline):
+			validate that it has no children (only textual content)
+		
+		if BOOLEAN:
+			validate that value is "true" or "false"
+	
+	Content:
+		**Complete validation example:**
+		
+	code:
+		Invalid input:
+			Email (com.example.docs):
+				From: John
+				Priority: alto  ← ERROR: "alto" is not boolean
+		
+		Stack during processing:
+			LINE "From: John": ok, level 1
+			LINE "Priority: alto": create node
+				- Deduce type of Priority in namespace
+				- Type = BOOLEAN
+				- Value = "alto"
+				- Validate with BOOLEAN regex
+				- FAILS: "alto" != "true" | "false"
+				- Throw ParseException
+		
+	Subheader:	Language Nodes
+		
+	Content:
+		In the language description we said that data types have no limitation
+		nor are they tied to a language, so validations should only be checked
+		using regular expressions or methods that ensure this fact.
+		
+		We have the following node types:
+		
+		* NODE
+		* TEXT
+		* URL
+		* NATURAL
+		* INTEGER
+		* RATIONAL
+		* NUMBER
+		* BINARY
+		* HEXADECIMAL
+		* BASE64
+		* BOOLEAN
+		 	
+		The regular expressions we could use to validate nodes are:
+		 
+	Code:
+		BINARY       = ^(0|1|\s)+$
+		BOOLEAN      = ^0|1$
+		HEXADECIMAL  = ^([a-f0-9]|\s)+$
+		INTEGER      = ^(\-|\+)?\d+$
+		NATURAL      = ^\d+$
+		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
+		RATIONAL     = ^(\-|\+)?\d+\/\d+$
+		 	
+	Subheader:Namespaces
+		
+	subSubheader:Storage
+		
+	Content:
+		Namespaces must be obtained independently. One strategy is to have a namespace repository
+		on disk, and always fetch them from there.
+		
+	Subheader:Details to Consider
+		
+	Content:
+		There are some details to keep in mind during parsing:
+		
+		* Case-insensitive: All nodes are considered CASE-INSENSITIVE,
+		  so the appropriate transformations must be made during the parsing process.
+		* Base64: With BASE64 text, line breaks must be allowed,
+		  and a standard parse of the resulting content should be performed.
+		* For reading lines, both UNIX and DOS formats must be considered.
+		  Therefore, we will allow both line feed and line feed + carriage return.
+		  This is to allow quick file edits from any environment,
+		  although the most appropriate would always be to use UNIX standard (line feed only).
