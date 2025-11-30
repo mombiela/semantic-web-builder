@@ -1,0 +1,493 @@
+Document (dev.stxt.namespace): Parseo de Documentos
+	Navigation:
+		Previous: Anterior (ebnf)
+		Next: Siguiente (parsers)
+		
+	Metadata:
+		Title: Parseo de STxT
+		Description: Parseo de ficheros en formato STxT (visión unificada)
+		Author: Joan Costa Mombiela
+		Last Modif: 2025-11-30
+	
+	header: Parseo de STxT
+		
+	Subheader: Proceso genérico
+		
+	SubSubheader: Visión general del algoritmo
+		
+	Content:
+		El parseo de documentos STxT puede hacerse en una única pasada, línea a línea.
+		La idea central es mantener un estado sencillo con:
+		
+		* Una estructura que nos dice cuál es el último nodo abierto en cada nivel.
+		* Un nodo multilínea activo (por ejemplo, TEXT o BASE64) si lo hay.
+		* El repositorio de namespaces para validar nodos al crearlos y al cerrarlos.
+		
+		Conceptualmente esto equivale a usar una pila (stack) de nodos que representa
+		la rama actual del árbol: el nodo raíz está en la base de la pila y el último
+		nodo de la rama actual está en la cima.
+		
+	Code:
+		ALGORITMO: parsearFichero(fichero)
+			estado = inicializarEstado(fichero)
+			
+			mientras no finDeFichero(fichero):
+				lineaFisica = leerLinea(fichero)
+				procesarLinea(estado, lineaFisica)
+			
+			cerrarYValidarNodosPendientes(estado)
+			
+			devolver estado.listaNodosRaiz
+		
+	Content:
+		El coste es lineal en el tamaño del fichero, y el parser puede actuar
+		a la vez como validador de estructura y tipos.
+		
+	SubSubheader: Estado interno del parser
+		
+	Code:
+		ESTRUCTURA: Nodo
+			nombre       // "Title", "Body Content", ...
+			tipo         // NODE, TEXT, BASE64, INTEGER, ...
+			nivel        // nivel de indentación
+			padre        // referencia al nodo padre (o null)
+			hijos        // lista de nodos hijos
+			valor        // para nodos escalares
+			texto        // buffer de texto para nodos multilínea
+			namespace    // especificación del nodo según repositorio
+		
+		ESTRUCTURA: EstadoParser
+			pilaPorNivel: mapa<nivel -> Nodo>   // último nodo abierto en cada nivel
+			nodoMultilinea: Nodo o null         // nodo TEXT/BASE64 activo, si lo hay
+			listaNodosRaiz: lista<Nodo>         // nodos de nivel 0
+			repositorioNamespaces               // acceso a namespaces
+			numLineaActual: entero
+			ficheroActual: identificador
+		
+	SubSubheader: Bucle principal de parseo
+		
+	Code:
+		func parsearFichero(fichero):
+			estado = inicializarEstado(fichero)
+			
+			mientras !finDeFichero(fichero):
+				lineaFisica = leerLinea(fichero)   // soportar LF y CRLF
+				estado.numLineaActual += 1
+				procesarLinea(estado, lineaFisica)
+			
+			cerrarYValidarNodosPendientes(estado)
+			return estado.listaNodosRaiz
+		
+	SubSubheader: Procesado de línea: pasos
+		
+	Content:
+		El procesado de cada línea se puede descomponer en los pasos siguientes:
+		
+		1. Normalización de la línea y cálculo de nivel.
+		2. Manejo de nodos multilínea.
+		3. Decisión: ¿texto de multilínea o nuevo nodo?
+		4. Cierre de nodos al cambiar de nivel.
+		5. Creación del nodo y validación inicial mediante namespace.
+		
+	subSubheader: Paso 1 – Normalización y cálculo de nivel
+		
+	Code:
+		func normalizarLinea(estado, lineaFisica):
+			// 1. Eliminar terminadores de línea y espacios a la derecha
+			linea = trimDerecha(lineaFisica)
+			
+			// 2. Línea vacía
+			si linea está vacía:
+				resultado = nuevo ResultadoNormalizacion()
+				si estado.nodoMultilinea != null:
+					resultado.esContinuacionMultilinea = true
+					resultado.esLineaEnBlanco = true
+				sino:
+					resultado.esInutil = true     // ignorable
+				return resultado
+			
+			// 3. Comentarios (por ejemplo, líneas que empiezan por '#')
+			si esComentario(linea):
+				resultado = nuevo ResultadoNormalizacion()
+				resultado.esInutil = true
+				return resultado
+			
+			// 4. Cálculo de nivel a partir de indentación (tabs/espacios)
+			nivel = calcularNivel(linea)              // define cómo se cuentan tabs/espacios
+			textoSinIndent = quitarIndentacion(linea, nivel)
+			
+			// 5. Transformaciones opcionales a forma compacta/semicompacta
+			textoCompacto = compactarSiEsNecesario(textoSinIndent)
+			
+			resultado = nuevo ResultadoNormalizacion()
+			resultado.esInutil = false
+			resultado.esContinuacionMultilinea = false
+			resultado.nivel = nivel
+			resultado.texto = textoCompacto
+			return resultado
+		
+	Content:
+		El cálculo de nivel debe ser consistente a lo largo de todo el documento.
+		Las reglas exactas (por ejemplo, cuántos espacios equivalen a un nivel)
+		son parte de la implementación, pero el modelo es siempre el mismo:
+		un entero que representa la profundidad de la línea.
+		
+	subSubheader: Paso 2 – Manejo de nodos multilínea
+		
+	Content:
+		Un nodo multilínea es típicamente un nodo de tipo TEXT o BASE64 (según namespace).
+		Las líneas siguientes, con un nivel estrictamente mayor, se consideran parte del
+		texto de este nodo mientras no aparezca un nodo nuevo al mismo nivel o superior
+		en la jerarquía.
+		
+	Code:
+		func manejarMultilineaSiAplica(estado, resultadoNorm):
+			si estado.nodoMultilinea == null:
+				return false    // no se ha tratado como multilínea
+			
+			nodo = estado.nodoMultilinea
+			nivelNodo = nodo.nivel
+			nivelLinea = resultadoNorm.nivel
+			
+			// Línea en blanco dentro de multilínea
+			si resultadoNorm.esLineaEnBlanco:
+				nodo.texto += "\n"
+				return true
+			
+			// Reglas:
+			// - Si la línea tiene nivel mayor que el del nodo multilínea
+			//   y no aparenta ser un nuevo nodo, se trata como texto.
+			si nivelLinea > nivelNodo y !tieneSintaxisDeNuevoNodo(resultadoNorm.texto):
+				si nodo.texto está vacío:
+					nodo.texto = resultadoNorm.texto
+				sino:
+					nodo.texto += "\n" + resultadoNorm.texto
+				return true
+			
+			// Si llegamos aquí, la línea ya no forma parte del multilínea
+			// El cierre efectivo del nodo se hará al crear el siguiente nodo
+			return false
+		
+	subSubheader: Paso 3 – Decisión texto vs nodo nuevo
+		
+	Code:
+		func procesarLinea(estado, lineaFisica):
+			r = normalizarLinea(estado, lineaFisica)
+			
+			// Línea ignorada
+			si r.esInutil:
+				return
+			
+			// Intentar tratar como multilínea
+			si manejarMultilineaSiAplica(estado, r):
+				return
+			
+			// A partir de aquí, la línea es candidata a nuevo nodo
+			nivel = r.nivel
+			contenido = r.texto
+			
+			// Comprobación adicional: en algunos casos se puede decidir que,
+			// aunque haya indentación, sigue siendo texto de multilínea.
+			// Esto se puede refinar con reglas adicionales si el lenguaje lo requiere.
+			
+			// Cierre de nodos según el nuevo nivel
+			cerrarNodosDeNivelMayorOIgual(estado, nivel)
+			
+			// Creación del nuevo nodo
+			crearNodoNuevo(estado, nivel, contenido)
+		
+	subSubheader: Paso 4 – Gestión de la jerarquía por nivel
+		
+	Content:
+		Cuando aparece un nodo con nivel N, todos los nodos con nivel mayor o igual a N
+		quedan cerrados. Este cierre dispara las validaciones de:
+		
+		* Estructura según namespace.
+		* Tipos de datos de los valores.
+		* Restricciones adicionales del lenguaje.
+		
+	Code:
+		func cerrarNodosDeNivelMayorOIgual(estado, nivelLinea):
+			para cada nivel en nivelesOrdenadosDescendentemente(estado.pilaPorNivel):
+				si nivel >= nivelLinea:
+					nodo = estado.pilaPorNivel[nivel]
+					cerrarYValidarNodo(estado, nodo)
+					eliminar estado.pilaPorNivel[nivel]
+					
+					si estado.nodoMultilinea == nodo:
+						estado.nodoMultilinea = null
+		
+	subSubheader: Paso 5 – Creación de nodo y validación inicial
+		
+	Content:
+		Al crear un nodo se separan nombre y valor, se determina su tipo a partir
+		del namespace, se conecta con su padre y se actualizan las estructuras
+		de nivel y de multilínea.
+		
+	Code:
+		func crearNodoNuevo(estado, nivel, contenidoLinea):
+			nombre, valorBruto = partirNombreYValor(contenidoLinea)   // usando ':'
+			nombreNormalizado = normalizarCase(nombre)                // case-insensitive
+			
+			// Determinar el padre
+			padre = null
+			si nivel > 0:
+				padre = estado.pilaPorNivel[nivel - 1]
+			
+			// Resolver namespace y tipo de nodo
+			spec = resolverNamespaceParaNodo(
+						estado.repositorioNamespaces,
+						padre,
+						nombreNormalizado)
+			
+			si spec == null:
+				lanzarError("No se puede deducir namespace para nodo '" + nombreNormalizado + "'")
+			
+			nodo = nuevo Nodo()
+			nodo.nombre = nombreNormalizado
+			nodo.nivel = nivel
+			nodo.padre = padre
+			nodo.tipo = spec.tipo
+			nodo.namespace = spec
+			
+			// Insertar en el árbol
+			si padre == null:
+				añadir estado.listaNodosRaiz <- nodo
+			sino:
+				añadir padre.hijos <- nodo
+			
+			// Inicializar contenido según tipo
+			si nodo.tipo es TEXT o BASE64 u otro tipoMultilinea:
+				nodo.texto = valorBruto
+				nodo.valor = null
+				estado.nodoMultilinea = nodo
+			sino:
+				nodo.valor = valorBruto
+				estado.nodoMultilinea = null
+			
+			// Registrar como último nodo de este nivel
+			estado.pilaPorNivel[nivel] = nodo
+		
+	SubSubheader: Ejemplo de traza de ejecución
+		
+	Content:
+		Consideremos el siguiente documento:
+		
+	Code:
+		Email (com.example.docs):
+			From: John
+			To: Mary
+			Body Content:
+				Hello
+				World
+			Priority: 1
+		Phone (com.example.docs):
+			Number: 123
+		
+	Content:
+		Traza resumida:
+		
+	Code:
+		LÍNEA 1: "Email (com.example.docs):"
+			nivel = 0
+			nombre = "email"
+			nodo = NODE email
+			listaRaiz = [Email]
+			pilaPorNivel[0] = Email
+		
+		LÍNEA 2: "    From: John"
+			nivel = 1
+			padre = pilaPorNivel[0] = Email
+			nodo = hijo de Email (tipo según namespace)
+			pilaPorNivel[1] = From
+		
+		LÍNEA 3: "    To: Mary"
+			nivel = 1
+			cerrar nodos nivel >= 1 → se cierra From
+			padre = Email
+			nodo = hijo de Email
+			pilaPorNivel[1] = To
+		
+		LÍNEA 4: "    Body Content:"
+			nivel = 1
+			cerrar nodos nivel >= 1 → se cierra To
+			padre = Email
+			nodo = Body Content (tipo TEXT según namespace)
+			nodoMultilinea = Body Content
+			pilaPorNivel[1] = Body Content
+		
+		LÍNEA 5: "        Hello"
+			normalizarLinea → nivel = 2, texto = "Hello"
+			nodoMultilinea = Body Content, nivelLinea > nivelNodo
+			→ se añade "Hello" al texto de Body Content
+		
+		LÍNEA 6: "        World"
+			igual que la anterior
+			Body Content.texto = "Hello\nWorld"
+		
+		LÍNEA 7: "    Priority: 1"
+			normalizarLinea → nivel = 1
+			manejarMultilineaSiAplica devuelve false
+			cerrar nodos nivel >= 1 → se cierra Body Content
+			crear nodo Priority como hijo de Email
+			pilaPorNivel[1] = Priority
+		
+		LÍNEA 8: "Phone (com.example.docs):"
+			normalizarLinea → nivel = 0
+			cerrar nodos nivel >= 0 → se cierra Priority y se cierra Email
+			Email pasa a formar parte de listaNodosRaiz
+			se crea nodo Phone de nivel 0
+			pilaPorNivel[0] = Phone
+		
+		LÍNEA 9: "    Number: 123"
+			nivel = 1
+			padre = Phone
+			nodo hijo "Number"
+			pilaPorNivel[1] = Number
+		
+	Content:
+		Al finalizar el fichero se cierran los nodos restantes (Number y Phone)
+		y se añaden los nodos raíz pendientes a la lista final del documento.
+		
+	SubSubheader: Pseudocódigo orientado a implementación
+		
+	Code:
+		class EstadoParser:
+			pilaPorNivel = {}           // nivel -> Nodo
+			nodoMultilinea = None
+			listaNodosRaiz = []
+			repositorioNamespaces = ...
+			numLineaActual = 0
+			ficheroActual = None
+		
+		def parse(content, repositorioNamespaces):
+			estado = EstadoParser()
+			estado.repositorioNamespaces = repositorioNamespaces
+			
+			for rawLine in content.split('\n'):
+				estado.numLineaActual += 1
+				procesarLinea(estado, rawLine)
+			
+			cerrarYValidarNodosPendientes(estado)
+			return estado.listaNodosRaiz
+		
+		def procesarLinea(estado, rawLine):
+			r = normalizarLinea(estado, rawLine)
+			if r.esInutil:
+				return
+			
+			if manejarMultilineaSiAplica(estado, r):
+				return
+			
+			nivel = r.nivel
+			contenido = r.texto
+			
+			cerrarNodosDeNivelMayorOIgual(estado, nivel)
+			crearNodoNuevo(estado, nivel, contenido)
+		
+	SubSubheader: Validaciones nodos con namespace
+		
+	Content:
+		Las validaciones se realizan en dos momentos principales:
+		
+		1. Al crear un nodo nuevo.
+		2. Al finalizar un nodo.
+		
+	Content:
+		1. Validación al crear nodo (namespace):
+		
+		Al crear un nodo, el parser consulta el repositorio de namespaces para:
+		
+		* Determinar si el nombre del nodo es válido como hijo del padre actual.
+		* Obtener su tipo (NODE, TEXT, INTEGER, BASE64, etc.).
+		* Aplicar reglas adicionales (por ejemplo, obligatoriedad u orden).
+		
+		Si no puede deducirse un namespace válido, significa que el nodo no
+		podía crearse en esa posición y se produce un error de parseo.
+		
+	Content:
+		2. Validación al finalizar un nodo:
+		
+		Un nodo se considera finalizado cuando:
+		
+		* Aparece otro nodo con nivel igual o inferior al suyo.
+		* Se ha procesado todo el fichero y el nodo sigue abierto.
+		
+		En ese momento se valida:
+		
+	Code:
+		func cerrarYValidarNodo(estado, nodo):
+			si nodo.tipo == NODE:
+				validarNumeroYTipoDeHijosSegunNamespace(nodo)
+			sino:
+				validarContenidoSegunTipo(nodo)
+		
+	Content:
+		Para nodos escalares (INTEGER, NUMBER, BOOLEAN, etc.) se usan
+		expresiones regulares o métodos equivalentes. Para nodos TEXT/BASE64,
+		se valida que la estructura (por ejemplo, ausencia de hijos) y el
+		formato del contenido sean correctos.
+		
+	Subheader: Los nodos del lenguaje
+		
+	Content:
+		Los tipos básicos del lenguaje no están ligados a un lenguaje de programación
+		concreto, y se validan normalmente mediante expresiones regulares o métodos
+		equivalentes.
+		
+		Tenemos, entre otros, los siguientes tipos:
+		
+		* NODE
+		* TEXT
+		* URL
+		* NATURAL
+		* INTEGER
+		* RATIONAL
+		* NUMBER
+		* BINARY
+		* HEXADECIMAL
+		* BASE64
+		* BOOLEAN
+		 	
+		Las expresiones regulares que podríamos usar para validar nodos son:
+		 
+	Code:
+		BINARY       = ^(0|1|\s)+$
+		BOOLEAN      = ^0|1$
+		HEXADECIMAL  = ^([a-f0-9]|\s)+$
+		INTEGER      = ^(\-|\+)?\d+$
+		NATURAL      = ^\d+$
+		NUMBER       = ^(\-|\+)?\d+\.\d+(e(\-|\+)?\d+)?$
+		RATIONAL     = ^(\-|\+)?\d+\/\d+$
+		
+	Subheader: Namespaces
+		
+	SubSubheader: Almacenaje
+		
+	Content:
+		Los namespaces se obtienen de forma independiente al parseo del documento.
+		Una estrategia habitual es mantener un repositorio de namespaces en disco
+		o en memoria, y consultarlo cada vez que se crea un nodo nuevo.
+		
+		Este repositorio define:
+		
+		* Qué nodos pueden aparecer en cada contexto.
+		* Qué tipo tiene cada nodo.
+		* Qué restricciones de cardinalidad o estructura se aplican.
+		
+	Subheader: Detalles a tener en cuenta
+		
+	Content:
+		Hay algunos detalles importantes en el parseo:
+		
+		* Case-insensitive: Todos los nombres de nodos se consideran insensibles
+		  a mayúsculas/minúsculas, por lo que se normalizan en el proceso de parseo.
+		* Base64: En nodos BASE64 se permiten saltos de línea y se aplica un parseo
+		  estándar del contenido resultante.
+		* Formatos de fin de línea: Se deben soportar tanto formato UNIX (LF) como
+		  formato DOS (CRLF). Esto permite editar ficheros desde distintos entornos
+		  sin problemas, aunque el estándar recomendado es usar siempre LF.
+		
+		El hecho de que el parseo sea estrictamente línea a línea y guiado por
+		indentación permite implementar parsers muy eficientes y utilizarlos
+		como validadores de documentos STxT en tiempo de carga.
