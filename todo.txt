@@ -1,3 +1,58 @@
+* Revisar documentación! Cambian cosas!
+* Parser Java
+	* stxt in -> json canonico, stxt compact, ns json cononico, error parseo
+* Parser Javascript (+Node.js)
+* Plugin VSCode
+* Parser Python
+* cli con node: stxt
+	* Validate: stxt file.stxt
+	* List namespaces: stxt --list-ns
+	* Import namespace:	stxt --import-ns file.stxt|uri.stxt
+	* JSON canónico: stxt --json-canonical file.stxt
+	* ...
+* cli con node, transformadores: stxt2
+		* stxt2 file.stxt file.json
+		* stxt2 file.stxt file.xml
+		* stxt2 file.stxt file.xxx
+	* Transformadores
+* Otros cli's?
+* WYSIWYG: editor en javascript para cms's
+* Contactar con Costaisa (si quieren patrocinar proyecto)
+* Documentación:
+	* Parseo en pseudocódigo
+	* Pruebas canónicas
+	* Casos de uso:
+		* Documentos corporativos (fuente de verdad)
+			* Wiki corp
+			* Manuales
+			* Contratos
+			* ...
+		* CMS/gestores de contenido
+		* Wikipedia!! Contactar comunidad
+		* AI con docs corporativos!! Para RAG
+		* Ficheros de configuración
+		* Formatos editoriales: recetas, manuales, especificaciones,...
+		* Ficheros stxt2
+	* ...
+* Maven con stxt
+* Node con npm stxt
+* Python con pip stxt
+* Correo: contact@stxt.dev
+* Dominios y aplicaciones
+	* ns.stxt.dev          → Repositorio de definiciones
+	* stxt.dev             → Landing + visión del proyecto
+	* spec.stxt.dev        → Especificación oficial
+	* docs.stxt.dev        → Documentación y tutoriales
+	* play.stxt.dev        → Playground (si lo haces)
+	* api.stxt.dev         → API REST del parser o servicios
+	* cli.stxt.dev         → Info del CLI e instaladores
+	* plugins.stxt.dev     → Extensiones de editores
+	* ai.stxt.dev          → Integraciones con IA
+	* lab.stxt.dev         → Experimentos	
+	* org.stxt.dev         → Sugerencias, lenguaje, etc.
+
+
+
 ===
 OLD
 ===
