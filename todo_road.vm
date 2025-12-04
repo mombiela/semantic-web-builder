@@ -1,0 +1,244 @@
+Páginas web
+/                 → Landing / “STxT en 1 Minuto” (visión rápida)
+/spec             → Spec oficial (core STxT) — sintaxis, reglas, gramática
+/schema-spec      → Spec de schemas — validación semántica, ejemplos, uso
+/tutorial         → Tutorial paso a paso (cómo escribir documentos, con y sin namespace)
+/examples         → Ejemplos reales / casos de uso
+/tools            → Parsers disponibles, validadores, playground, código fuente
+/migration        → Guía de migración desde versiones anteriores (si corresponde)
+/contribute       → Cómo contribuir, licencia, contacto, roadmap
+/docs/es/         → Versión en español de todo lo anterior
+
+STXT: Human-first
+STXT: Built for humans. Reliable for machines.
+Nuevo diseño de web (azul)
+	HEX #005A8E
+	Con acentos en:
+	#0A6FAE (más claro)
+	#E8F4FA (background claro sutil)
+Cambiar STxT por STXT
+
+Contactar Amaris!! CMS: partner o patrocinador o colaborador o mentor o soci tecnològic o impulsora
+
+
+# 🧩 Orden final recomendado (roadmap oficial)
+
+### **FASE 1 — núcleo del lenguaje**
+
+1. Parser: 
+	Javascript/Typescript
+	Python
+	Java	
+2. Serializador JSON + pretty-printer
+3. CLI mínima (en node.js)
+
+### **FASE 2 — utilidad real**
+
+4. Validador de schemas
+5. Extensión VSCode
+6. Playground
+
+### **FASE 3 — ecosistema**
+
+7. Serializadores a otros formatos
+8. Generador de documentación
+9. Linter semántico
+
+
+
+
+
+
+
+
+# ✅ **1. Parser oficial (core STXT-SPEC) — obligatorio**
+
+El parser es la base para absolutamente todo lo demás.
+
+Debe implementar **100% del STXT-SPEC**:
+
+* indentación estricta
+* mezcla espacios/tabs prohibida
+* nodos `:`
+* nodos `>>`
+* comentarios fuera de bloques
+* normalización (nombres, inline, bloques)
+* errores formales
+
+**Lenguajes prioritarios:**
+
+1. **JavaScript / TypeScript**
+
+   * Porque sirve para web, para Node, y para integraciones.
+2. **Python**
+
+   * Para automatizaciones, pipelines, IA, APIs.
+3. **Java**
+
+   * Importante en enterprise.
+
+Después: C#, Go, Rust.
+
+**En cada versión:**
+
+* parsear → entregar árbol canónico → sin validación semántica.
+
+---
+
+# ✅ **2. Serializador (canonical JSON / STxT pretty-print)** — imprescindible
+
+Un parser sin serializador no permite test unitarios reproducibles.
+
+Necesitas:
+
+### 2.1. JSON canónico
+
+Basado en lo que ya definiste:
+
+```json
+{
+  "documents": [
+      { "name": "Documento", "namespace": "@x", "children": [...] }
+  ]
+}
+```
+
+* siempre orden estable
+* sin espacios sobrantes
+* sin claves opcionales vacías
+
+Sirve para:
+
+* comparar dos parsers
+* test cross-language
+* herramientas de CI
+
+### 2.2. Pretty-printer STxT (opcional pero muy útil)
+
+Transforma el árbol parseado en STxT formateado uniformemente.
+
+Sirve para:
+
+* estilizar documentos
+* editor / extension VSCode
+* auto-format
+
+---
+
+# ✅ **3. Validador de schemas (STXT-SCHEMA-SPEC)** — muy prioritario
+
+Una vez el parser existe, el validador es el segundo gran pilar.
+
+Debe implementar:
+
+* carga de schemas
+* asociación por namespace
+* tipos (TEXT, NUMBER, BASE64, CODE, etc.)
+* cardinalidades
+* modo **strict** y modo **non-strict**
+* regla 7.1 obligatoria
+* errores precisos con línea y tipo
+
+Este componente es el que transforma STxT en un lenguaje *útil para datos reales* (similar a JSON Schema, pero human-first).
+
+---
+
+# ✅ **4. CLI oficial (`stxt`)** — altísimo valor práctico
+
+Una herramienta de línea de comandos que haga:
+
+* `stxt parse file.stxt` → JSON canónico
+* `stxt validate file.stxt` → aplica schema
+* `stxt format file.stxt` → pretty-print
+* `stxt check file.stxt` → lint básico + errores de indentación
+
+Esto también alimenta:
+
+* CI/CD
+* Makefiles
+* integración con editores
+* scripts automáticos
+
+Idealmente escrito en Node.js (cross-platform inmediato) o Rust (portabilidad + velocidad + binarios pequeños).
+
+---
+
+# ✅ **5. Extensión VSCode** — imprescindible a nivel de adopción
+
+Incluye:
+
+### Mínimo viable:
+
+* coloreado (syntax highlighting)
+* plegado de bloques (folding de jerarquía)
+* reconocimiento básico de `:` y `>>`
+
+### Fase 2:
+
+* autocompletado de nombres según schema
+* validación en tiempo real
+* tooltip con tipo / cardinalidad
+* auto-format
+
+Esta herramienta multiplica la adopción del lenguaje.
+
+---
+
+# ✅ **6. Playground web**
+
+Una web interactiva:
+
+* editor con STxT a la izquierda
+* JSON canónico a la derecha
+* validación con schema opcional
+* indicadores de error en tiempo real
+
+Ideal ejemplo: “JSON Editor Online” pero para STxT.
+
+Esto es fantástico para documentación y demos.
+
+---
+
+# ✅ **7. Libraries para serializar STxT a otros formatos (opcional pero útil)**
+
+* Serializador STxT → **YAML**
+* Serializador STxT → **JSON**
+* Serializador STxT → **Markdown**
+* Serializador STxT → **HTML**
+
+La más esencial es STxT → JSON (ya cubierto), pero un par de extras pueden dar mucho valor en algunos contextos.
+
+---
+
+# ✅ **8. Generador de documentación a partir de schemas**
+
+Similar a:
+
+* JSON Schema → documentación HTML
+* OpenAPI → swagger UI
+
+Con un schema STxT, generar:
+
+* tabla de nodos
+* cardinalidades
+* tipos
+* descripciones
+* ejemplos de uso
+
+Muy útil para publicar APIs semánticas basadas en STxT.
+
+---
+
+# ✅ **9. Linter semántico (encima del validador)**
+
+Reglas de estilo:
+
+* evitar nombres ambiguos
+* evitar nodos vacíos sin necesidad
+* recomendación sobre orden de nodos
+* guías de estilo corporativo
+
+Esto ya no es esencial para lanzamiento, pero sí útil en equipos grandes.
+
+---
+
