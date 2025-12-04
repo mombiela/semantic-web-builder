@@ -1,3 +1,7 @@
+* Documentar en 4.* que el nombre con estilo recomendado es 
+	xxxx (@namespace): value
+	xxxx: value o 
+	xxxx: 
 * Revisar documentación! Cambian cosas!
 * Parser Java
 	* stxt in -> json canonico, stxt compact, ns json cononico, error parseo
