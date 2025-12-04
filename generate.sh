@@ -17,7 +17,7 @@ set -e
 cd "$(dirname "$0")"
 
 # Compile sass
-#node-sass scss -o static/css --output-style compressed
+sass scss:static/css --style=compressed
 
 # Ejecuta el programa Java con el classpath adecuado
 java -cp 'bin:lib/*' org.swb.Executor processor.properties main
