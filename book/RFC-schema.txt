@@ -1,6 +1,6 @@
 # STXT-SCHEMA-SPEC-DRAFT
 
-**Semantic Text (STxT) — Schema Language Specification**
+**Semantic Text (STXT) — Schema Language Specification**
 **Category:** Standards Track
 **Status:** Draft
 **Format:** Markdown (RFC-style)
@@ -9,13 +9,13 @@
 
 # 1. Introducción
 
-Este documento define la especificación del lenguaje **STxT Schema**, un mecanismo para validar documentos STxT mediante reglas semánticas formales.
+Este documento define la especificación del lenguaje **STXT Schema**, un mecanismo para validar documentos STXT mediante reglas semánticas formales.
 
 Un **schema**:
 
-* Es un documento STxT con namespace `@stxt.schema`.
+* Es un documento STXT con namespace `@stxt.schema`.
 * Define los nodos, tipos y cardinalidades del namespace objetivo.
-* No modifica la sintaxis base de STxT; opera sobre la estructura ya parseada.
+* No modifica la sintaxis base de STXT; opera sobre la estructura ya parseada.
 
 ---
 
@@ -27,11 +27,11 @@ Términos como *nodo*, *indentación*, *namespace*, *inline* y *bloque `>>`* man
 
 ---
 
-# 3. Relación entre STxT y Schema
+# 3. Relación entre STXT y Schema
 
-La validación mediante schema ocurre **después** del parseo STxT:
+La validación mediante schema ocurre **después** del parseo STXT:
 
-1. Parseo a estructura jerárquica STxT.
+1. Parseo a estructura jerárquica STXT.
 2. Resolución del namespace lógico (herencia).
 3. Aplicación del schema correspondiente.
 
@@ -202,7 +202,7 @@ Los tipos definen:
 
 ## 10.1. Modo *strict* (equivalente al “modo cerrado”) — **por defecto**
 
-Un validador STxT Schema en modo *strict*:
+Un validador STXT Schema en modo *strict*:
 
 * **MUST** exigir schema para cada namespace encontrado.
 * **MUST** rechazar nodos que no estén definidos en su schema.
@@ -334,7 +334,7 @@ Esta sección define el **schema oficial** del propio sistema de schemas: el met
 
 ```stxt
 Schema (@stxt.schema): stxt.schema
-    Description: Schema that defines the STxT Schema language
+    Description: Schema that defines the STXT Schema language
 
     # Nodo raíz del documento de schema
     Node: Schema

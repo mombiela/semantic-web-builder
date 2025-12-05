@@ -1,6 +1,6 @@
 # STXT-SPEC-DRAFT
 
-**Semantic Text (STxT) — Core Language Specification**
+**Semantic Text (STXT) — Core Language Specification**
 **Category:** Standards Track
 **Status:** Draft
 **Format:** Markdown (RFC-style)
@@ -9,11 +9,11 @@
 
 # 1. Introducción
 
-Este documento define la especificación del lenguaje **STxT (Semantic Text)**.
+Este documento define la especificación del lenguaje **STXT (Semantic Text)**.
 
-STxT es un lenguaje **Human-First**, diseñado para que su forma natural sea legible, clara y cómoda para las personas, manteniendo al mismo tiempo una estructura precisa y fácilmente procesable por máquinas.
+STXT es un lenguaje **Human-First**, diseñado para que su forma natural sea legible, clara y cómoda para las personas, manteniendo al mismo tiempo una estructura precisa y fácilmente procesable por máquinas.
 
-STxT es un formato textual jerárquico y semántico orientado a:
+STXT es un formato textual jerárquico y semántico orientado a:
 
 * Representar documentos y datos de manera clara.
 * Ser extremadamente sencillo de leer y escribir.
@@ -33,7 +33,7 @@ Las palabras clave **"MUST"**, **"MUST NOT"**, **"SHOULD"**, **"SHOULD NOT"**, y
 
 # 3. Codificación del Documento
 
-Los documentos STxT **SHOULD** codificarse en **UTF-8 sin BOM**.
+Los documentos STXT **SHOULD** codificarse en **UTF-8 sin BOM**.
 
 Un parser:
 
@@ -151,7 +151,7 @@ Seccion>>
 * Todas las líneas con indentación **estrictamente mayor** que la del nodo `>>` pertenecen al **contenido textual del bloque**.
 * Dentro del bloque:
 
-  * El parser **MUST NOT** interpretar ninguna línea como nodo estructurado, aunque contenga `:` u otra sintaxis de STxT.
+  * El parser **MUST NOT** interpretar ninguna línea como nodo estructurado, aunque contenga `:` u otra sintaxis de STXT.
   * El parser **MUST NOT** interpretar líneas que comienzan por `#` como comentarios; todas las líneas son texto literal.
 * El bloque termina cuando aparece una **línea no vacía** cuya indentación es **menor o igual** que la indentación del nodo `>>`.
 * Las líneas vacías **dentro del bloque** se conservan tal cual y **MUST NOT** cerrar el bloque, independientemente de su indentación.
@@ -201,7 +201,7 @@ La indentación define la jerarquía estructurada del documento.
 
 ## 8.1 Indentación Permitida
 
-Un documento STxT:
+Un documento STXT:
 
 * **MAY** usar únicamente espacios o únicamente tabuladores.
 * **MUST NOT** mezclarlos.
@@ -257,7 +257,7 @@ Documento:
 
 # 10. Normalización de espacios en blanco
 
-Esta sección define cómo deben normalizarse los espacios en blanco para garantizar que distintas implementaciones produzcan la misma representación lógica a partir del mismo texto STxT.
+Esta sección define cómo deben normalizarse los espacios en blanco para garantizar que distintas implementaciones produzcan la misma representación lógica a partir del mismo texto STXT.
 
 ## 10.1 Valores inline (`:`)
 
@@ -370,7 +370,7 @@ Un parser conforme **MUST** rechazar el documento.
 
 # 12. Conformidad
 
-Una implementación STxT es conforme si:
+Una implementación STXT es conforme si:
 
 * Implementa la sintaxis descrita en este documento.
 * Aplica las reglas estrictas de indentación y jerarquía.
@@ -386,7 +386,7 @@ Una implementación STxT es conforme si:
 
 ## 13.1 Extensión de Archivo
 
-Los documentos STxT **SHOULD** usar la extensión:
+Los documentos STXT **SHOULD** usar la extensión:
 
 ```text
 .stxt
@@ -495,11 +495,11 @@ Indent           = ("    ")* | ("\t")*
 
 # 16. Apéndice B — Interacción con `@stxt.schema`
 
-El sistema de schemas permite añadir validación semántica a documentos STxT **sin modificar la sintaxis base** del lenguaje.
+El sistema de schemas permite añadir validación semántica a documentos STXT **sin modificar la sintaxis base** del lenguaje.
 
-El núcleo STxT no define cómo debe reaccionar una implementación: el comportamiento pertenece exclusivamente al sistema de schemas (*STXT-SCHEMA-SPEC*).
+El núcleo STXT no define cómo debe reaccionar una implementación: el comportamiento pertenece exclusivamente al sistema de schemas (*STXT-SCHEMA-SPEC*).
 
-Un schema es un documento STxT cuyo namespace es:
+Un schema es un documento STXT cuyo namespace es:
 
 ```stxt
 @stxt.schema
@@ -507,7 +507,7 @@ Un schema es un documento STxT cuyo namespace es:
 
 y cuyo objetivo es definir las reglas estructurales, tipos de valor y cardinalidades de los nodos pertenecientes a un namespace concreto.
 
-El núcleo STxT **no interpreta** estas reglas; únicamente define cómo se expresan y cómo se combinan mediante namespaces.
+El núcleo STXT **no interpreta** estas reglas; únicamente define cómo se expresan y cómo se combinan mediante namespaces.
 
 ## 16.1. Asociación de un schema a un namespace
 
@@ -525,7 +525,7 @@ Schema (@stxt.schema): com.example.docs
     Node: Texto
 ```
 
-## 16.2. Aplicación a documentos STxT
+## 16.2. Aplicación a documentos STXT
 
 Un documento que declare el mismo namespace:
 
@@ -536,7 +536,7 @@ Documento (@com.example.docs):
     Texto: dos
 ```
 
-puede ser validado por una implementación que soporte schemas STxT:
+puede ser validado por una implementación que soporte schemas STXT:
 
 * Validando la presencia de nodos según `Node` del schema.
 * Validando tipos de valor (`TEXT`, `DATE`, `NUMBER`, etc.).
@@ -544,8 +544,8 @@ puede ser validado por una implementación que soporte schemas STxT:
 
 ## 16.3. Independencia del núcleo
 
-STxT **MUST NOT** imponer reglas semánticas provenientes de schemas.
-El sistema de schemas es un componente separado y opcional que opera **sobre** el STxT ya parseado.
+STXT **MUST NOT** imponer reglas semánticas provenientes de schemas.
+El sistema de schemas es un componente separado y opcional que opera **sobre** el STXT ya parseado.
 
 ---
 
