@@ -176,7 +176,6 @@ Document (dev.stxt.namespace):STXT-SCHEMA-SPEC-DRAFT
 		
 		## 9.1. Tabla oficial de tipos
 		
-		```markdown
 		| Tipo             | Formas permitidas de valor | Hijos permitidos | Descripción / Validación                                               |
 		|------------------|----------------------------|------------------|------------------------------------------------------------------------|
 		| TEXT INLINE      | INLINE                     | SÍ               | Texto inline. **Tipo por defecto.**                                    |
@@ -192,9 +191,8 @@ Document (dev.stxt.namespace):STXT-SCHEMA-SPEC-DRAFT
 		| HEXADECIMAL      | INLINE                     | SÍ               | `[0-9A-Fa-f]+`.                                                        |
 		| BINARY           | INLINE                     | SÍ               | Cadena binaria.                                                        |
 		| BASE64           | BLOCK                      | NO               | Bloque Base64.                                                         |
-		| CODE:<language>  | BLOCK                      | NO               | Código en `<language>`.                                                |
+		| CODE[language]   | BLOCK                      | NO               | Código en `<language>`.                                                |
 		| EMPTY            | NONE                       | SÍ               | Nodo estructural sin valor.                                            |
-		```
 		
 		## 9.2. Reglas clave
 		
