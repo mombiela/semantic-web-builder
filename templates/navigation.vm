@@ -1,12 +1,29 @@
-#if(${doc.getChild("navigation")})
-	<div class="column row book_nav clearfix">
-		#set($nav = ${doc.getChild("navigation")})
+#set($previous = "")
+#set($previous_ok = "")
+#set($next_ok = "")
+#set($encontrado = false)
 
-		#if($nav.getChild("previous"))
-           	<a style="float:left;"	href="${nav.getChild("previous").getTextSufix()}" title="${lang.get("nav.prev")}">&#x25C4; ${lang.get("nav.prev")}</a>
+#if($index)
+	#foreach($node in $index.getChilds())
+		#if(${node.name} == "link")
+			#if(${doc_name}==${node.textSufix})
+				#set($encontrado = true)
+				#set($previous_ok = $previous)
+			#else
+				#if($encontrado && $next_ok == "")
+					#set($next_ok = $node)
+				#end
+			#end
+			#set($previous = $node)
 		#end
-		#if($nav.getChild("next"))
-           	<a style="float:right;" href="${nav.getChild("next").getTextSufix()}" title="${lang.get("nav.next")}">${lang.get("nav.next")} &#x25BA;</a>
+	#end
+
+	<div class="column row book_nav clearfix">
+		#if($previous_ok != "")
+           	<a style="float:left;"	href="${previous_ok.textSufix}" title="${previous_ok.textCentral}">&#x25C4; ${lang.get("nav.prev")}</a>
+		#end
+		#if($next_ok != "")
+           	<a style="float:right;" href="${next_ok.textSufix}" title="${next_ok.textCentral}">${lang.get("nav.next")} &#x25BA;</a>
 		#end
 	</div>
 #end						
