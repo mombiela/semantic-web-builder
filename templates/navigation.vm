@@ -20,10 +20,10 @@
 
 	<div class="column row book_nav clearfix">
 		#if($previous_ok != "")
-           	<a style="float:left;"	href="${previous_ok.textSufix}" title="${previous_ok.textCentral}">&#x25C4; ${lang.get("nav.prev")}</a>
+           	<a style="float:left;"	href="${previous_ok.textSufix}" title="${previous_ok.textCentral}">&#x25C4; ${previous_ok.textCentral}</a>
 		#end
 		#if($next_ok != "")
-           	<a style="float:right;" href="${next_ok.textSufix}" title="${next_ok.textCentral}">${lang.get("nav.next")} &#x25BA;</a>
+           	<a style="float:right;" href="${next_ok.textSufix}" title="${next_ok.textCentral}">${next_ok.textCentral} &#x25BA;</a>
 		#end
 	</div>
 #end						
