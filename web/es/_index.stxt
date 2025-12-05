@@ -14,7 +14,7 @@ Document(dev.stxt.namespace): STXT: El Libro
 	
 	Link: CMS (use-case-cms)
 			
-	SubHeader: Recursos técnicos
+	SubHeader: Herramientas
 	
 	Link: Parsers (tools-parsers)
 			
