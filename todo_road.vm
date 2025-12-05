@@ -7,9 +7,18 @@
 	xxxx: value o 
 	xxxx: 
 * Revisar documentación! Cambian cosas!
-
-
-
+* Comentarios: eliminar con normalización de espacios, son sólo para el texto "en bruto"
+* stxt validate, stxt trim, stxt normalize (igual que trim), stxt validate, stxt import-schema (stxt -is), stxt transform -pdf, stxt import-transform (stxt -it)
+* carpeta local del usuario: normalmente /home/nombredeusuario/.stxt o C:\Users\nombredeusuario\.stxt
+	./schema:
+		dev.stxt.stxt (namespace dev.stxt)
+		org.apache.docs.stxt (namespace org.apache.docs)
+		com.google.docs.stxt
+	./transform
+		html
+			org.aapache.docs
+		yaml
+		xml
 
 Páginas web
 /                 → Landing / “STxT en 1 Minuto” (visión rápida)
