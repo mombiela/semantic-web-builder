@@ -1,7 +1,4 @@
 Document(dev.stxt.namespace): STXT: El Libro
-	Default:
-		Title: STXT: El Libro
-
 	SubHeader: @STXT@
 	
 	Link: Introducción (index)
