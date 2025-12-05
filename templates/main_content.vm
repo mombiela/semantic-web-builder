@@ -13,7 +13,7 @@
   
   <aside id="index_content">
 	#if($index)
-		<div class="d-none d-md-block" style="margin-bottom:3rem;">
+		<div class="d-none d-md-block">
 		#foreach($node in $index.getChilds())
 			#parse("/node.vm")
 		#end
