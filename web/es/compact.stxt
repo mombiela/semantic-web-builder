@@ -10,7 +10,7 @@ Document (dev.stxt.namespace):Compactación
 		
 	Header: Compactación
 		
-	Subheader: Análisis de la información de STXT
+	Subheader: Análisis de la información de @STXT@
 		
 	Content:
 		Un documento es sólo un conjunto de nodos con una cierta identación, con lo que realmente la 

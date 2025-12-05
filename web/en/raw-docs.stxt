@@ -4,7 +4,7 @@ Document (dev.stxt.namespace): Documents without namespace
 		Next: Next (ns-docs)
 
 	Header: Documents without namespace
-	Content: STXT documents are text documents, with a structure of nested nodes. To determine the nesting level,
+	Content: @STXT@ documents are text documents, with a structure of nested nodes. To determine the nesting level,
 		tabs (or spaces) are used to indicate the nesting level. The documents will have the following characteristics:
 		
 	Alert: 
@@ -12,7 +12,7 @@ Document (dev.stxt.namespace): Documents without namespace
 		* Identifiers are CASE-INSENSITIVE. Spaces are allowed in names, but not `:`
 		* Multiline nodes will be as follows: `:node name:`. This allows you to visually identify a final node that
 		  may consist of several lines
-		* Comments: In STXT, comments are all lines that start with the `#` character
+		* Comments: In @STXT@, comments are all lines that start with the `#` character
 	
 	Content: An example
 	
@@ -61,7 +61,7 @@ Document (dev.stxt.namespace): Documents without namespace
 	Subheader:	Nodes and indentation
 	
 	Content:	
-		An STXT document is a set of nested nodes.\
+		An @STXT@ document is a set of nested nodes.\
 		Indentation is very similar to other languages, and you can use tabs or spaces.
 		
 	Assert: 

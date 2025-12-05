@@ -4,12 +4,12 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		Next: Siguiente (parsers)
 		
 	Metadata:
-		Title: Parseo de STXT
-		Description: Parseo de ficheros en formato STXT
+		Title: Parseo de @STXT@
+		Description: Parseo de ficheros en formato @STXT@
 		Author: Joan Costa Mombiela
 		last modif: 2025-11-30
 	
-	header:	Parseo de STXT
+	header:	Parseo de @STXT@
 		
 	Subheader:	Proceso genérico
 		

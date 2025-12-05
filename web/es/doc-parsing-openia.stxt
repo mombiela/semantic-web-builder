@@ -4,19 +4,19 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		Next: Siguiente (parsers)
 		
 	Metadata:
-		Title: Parseo de STXT
-		Description: Parseo de ficheros en formato STXT (visión unificada)
+		Title: Parseo de @STXT@
+		Description: Parseo de ficheros en formato @STXT@ (visión unificada)
 		Author: Joan Costa Mombiela
 		Last Modif: 2025-11-30
 	
-	header: Parseo de STXT
+	header: Parseo de @STXT@
 		
 	Subheader: Proceso genérico
 		
 	SubSubheader: Visión general del algoritmo
 		
 	Content:
-		El parseo de documentos STXT puede hacerse en una única pasada, línea a línea.
+		El parseo de documentos @STXT@ puede hacerse en una única pasada, línea a línea.
 		La idea central es mantener un estado sencillo con:
 		
 		* Una estructura que nos dice cuál es el último nodo abierto en cada nivel.
@@ -490,4 +490,4 @@ Document (dev.stxt.namespace): Parseo de Documentos
 		
 		El hecho de que el parseo sea estrictamente línea a línea y guiado por
 		indentación permite implementar parsers muy eficientes y utilizarlos
-		como validadores de documentos STXT en tiempo de carga.
+		como validadores de documentos @STXT@ en tiempo de carga.

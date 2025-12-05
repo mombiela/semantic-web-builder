@@ -10,7 +10,7 @@ Document (dev.stxt.namespace):Compaction
 		
 	Header: Compaction
 		
-	Subheader: Analysis of STXT information
+	Subheader: Analysis of @STXT@ information
 		
 	Content:
 		A document is just a set of nodes with a certain indentation, so the information is really about **order** and **level**.

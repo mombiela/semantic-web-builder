@@ -1,11 +1,11 @@
-Document (dev.stxt.namespace):STXT - One Language, Infinite Possibilities
+Document (dev.stxt.namespace):@STXT@ - One Language, Infinite Possibilities
 	Navigation:
 		Next: Next (tutorial)
 
-	Header: STXT in 1 Minute
+	Header: @STXT@ in 1 Minute
 
 	Alert:
-		**STXT**: a language for building structured text documents, with namespaces and validation.
+		**@STXT@**: a language for building structured text documents, with namespaces and validation.
 		
 	#	**Our goal:**
 	#	To create the most powerful, simplest, and most beautiful language \

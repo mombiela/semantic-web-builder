@@ -4,19 +4,19 @@ Document (dev.stxt.namespace): Document Parsing
 		Next: Next (parsers)
 		
 	Metadata:
-		Title: STXT Parsing
-		Description: Parsing files in STXT format (unified view)
+		Title: @STXT@ Parsing
+		Description: Parsing files in @STXT@ format (unified view)
 		Author: Joan Costa Mombiela
 		Last Modif: 2025-11-30
 	
-	header: STXT Parsing
+	header: @STXT@ Parsing
 		
 	Subheader: Generic process
 		
 	SubSubheader: Algorithm overview
 		
 	Content:
-		STXT document parsing can be done in a single pass, line by line.
+		@STXT@ document parsing can be done in a single pass, line by line.
 		The central idea is to maintain a simple state with:
 		
 		* A structure that tells us which is the last open node at each level.
@@ -488,4 +488,4 @@ Document (dev.stxt.namespace): Document Parsing
 		
 		The fact that parsing is strictly line by line and guided by
 		indentation allows for very efficient parsers and enables
-		them to be used as STXT document validators at load time.
+		them to be used as @STXT@ document validators at load time.

@@ -32,12 +32,12 @@ Document (dev.stxt.namespace): Examples
 			    	: hard
 			    Calories: (?) NUMBER
 			    Servings: (?) NUMBER
-			    Document: (*) (www.dokumentando.com/doc_simple.STXT)
+			    Document: (*) (www.dokumentando.com/doc_simple.@STXT@)
 	
 	SubSubheader: Recipe book namespace
 	
 	Code:
-		Namespace: com.kocinando.recetario.STXT
+		Namespace: com.kocinando.recetario.@STXT@
 		
 			Recetario:
 				Receta: (+) (com.kocinando.receta)

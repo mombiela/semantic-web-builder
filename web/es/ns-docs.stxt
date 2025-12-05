@@ -12,7 +12,7 @@ Document (dev.stxt.namespace): Documentos con namespace
 		* Codificación UTF-8 Siempre
 		* Los Identificadores son CASE-INSENSITIVE
 		* No existen caracteres de escape
-		* En STXT son comentarios todas las líneas que empiezan por el carácter #
+		* En @STXT@ son comentarios todas las líneas que empiezan por el carácter #
 		* 4 espacios equivalen a un tabulador
 		
 	Assert: No se permite el uso de `:` para nodos multilínea.\

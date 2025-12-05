@@ -1,11 +1,11 @@
-Document(dev.stxt.namespace): STXT: The Book
+Document(dev.stxt.namespace): @STXT@: The Book
 	Default:
-		Title: STXT: The Book
+		Title: @STXT@: The Book
 		
 	SubHeader: Introduction
 	
-	Link: STXT in 1 Minute (index)
-	Link: STXT Tutorial (tutorial)
+	Link: @STXT@ in 1 Minute (index)
+	Link: @STXT@ Tutorial (tutorial)
 			
 	SubHeader: The Language
 	

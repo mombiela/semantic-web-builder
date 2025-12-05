@@ -1,17 +1,17 @@
-Document (dev.stxt.namespace): STXT Tutorial
+Document (dev.stxt.namespace): @STXT@ Tutorial
 	Navigation:
 		Previous: Previous (index)
 		Next: Next (raw-docs)
 
-	header: STXT Tutorial
+	header: @STXT@ Tutorial
 	
-	SubHeader: What is STXT?
+	SubHeader: What is @STXT@?
 
 	Content:
 		It is a purely semantic language, with very basic rules,
 		that allows the creation of documents with structured content
 		and easy to interpret, both by humans (without computer knowledge) and by machines.
-		You can be reading a document in STXT without actually realizing
+		You can be reading a document in @STXT@ without actually realizing
 		that it is. 	
 
 	subheader: Documents without namespace
@@ -35,7 +35,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Step: Boil macaroni
 				Step: Mix macaroni with sofrito and serve
 	Content:
-		This is a **STXT document without namespace**. This type of document
+		This is a **@STXT@ document without namespace**. This type of document
 		is structured, but we do not know what form the nodes have. In any case, you can
 		already see that they have structure, with a main node `Recipe`, which has
 		a `Description` node, `Ingredients`, etc. In turn, these nodes have others, and so on

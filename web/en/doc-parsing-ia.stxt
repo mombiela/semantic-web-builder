@@ -4,12 +4,12 @@ Document (dev.stxt.namespace): Document Parsing
 		Next: Next (parsers)
 		
 	Metadata:
-		Title: STXT Parsing
-		Description: Parsing files in STXT format
+		Title: @STXT@ Parsing
+		Description: Parsing files in @STXT@ format
 		Author: Joan Costa Mombiela
 		last modif: 2025-11-30
 	
-	header:	STXT Parsing
+	header:	@STXT@ Parsing
 		
 	Subheader:	Generic Process
 		

@@ -4,7 +4,7 @@ Document (dev.stxt.namespace):EBNF
 		Next: EBNF (doc-parsing)
 
 	Metadata:
-		Description: The EBNF description of STXT is shown
+		Description: The EBNF description of @STXT@ is shown
 		Author: Joan Costa Mombiela
 		Last modif: 2025-06-22
 		
