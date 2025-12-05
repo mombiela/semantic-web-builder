@@ -17,6 +17,7 @@ Document(dev.stxt.namespace): STXT: El Libro
 	Link: CMS (use-cases-cms)
 	Link: Publicaciones (use-cases-editorial)
 	Link: Ficheros configuración (use-cases-config-files)
+	Link: Open api (use-cases-open-api)
 			
 	SubHeader: Herramientas
 	

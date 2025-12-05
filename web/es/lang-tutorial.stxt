@@ -1,152 +1,140 @@
 Document (dev.stxt.namespace): STXT Tutorial
 
-	header: @STXT@ Tutorial
-	
+	Header: @STXT@ Tutorial
+
 	SubHeader: ¿Qué es @STXT@?
 
 	Content:
-		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
-		que permite la creación de documentos con un contenido estructurado 
-		y sencillo de interpretar, tanto por humanos (sin conocimientos informáticos) como por máquinas. 
-		Se puede estar leyendo un documento en @STXT@ sin darse cuenta en realidad
-		que lo es. 	
+		@STXT@ es un lenguaje textual semántico y legible, pensado para representar
+		documentos estructurados de forma simple y procesable por máquinas. Sus reglas
+		básicas permiten nodos inline, bloques de texto literal y namespaces.
 
-	subheader: Documentos sin namespace
-		
+	SubHeader: Ejemplo profesional: diseño de una API REST (Gestión de usuarios)
+
 	Content:
-		Mostramos un ejemplo de una receta de cocina:
-		
+		A continuación presentamos un ejemplo realista que muestra la estructura
+		de un documento @STXT@ usado para describir una API REST sencilla.
+
 	Code:
-		Receta: Receta de macarrones
-			***:Descripción:***
-				Esta es la descripción de la recta de macarrones.
-				Bla, bla, bla
-				Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: Hacer sofrito
-				Paso: Hervir macarrones
-				Paso: Juntar macarrones con sofrito y servir
+		API: User Management API
+			Description >>
+				API para gestionar usuarios de la plataforma ACME.
+				Define los endpoints principales para listar, crear, obtener y borrar usuarios.
+			Version: 1.0.0
+			Endpoint: /users GET
+				Summary: Listar usuarios
+				Parameters:
+					Parameter: page
+						Type: NUMBER
+						Required: false
+						Description: Número de página (por defecto 1)
+					Parameter: pageSize
+						Type: NUMBER
+						Required: false
+						Description: Tamaño de página (por defecto 20)
+				Response >>
+					[
+						{"id": "uuid", "name": "string", "email": "string"}
+					]
+			Endpoint: /users POST
+				Summary: Crear usuario
+				Request >>
+					{
+						"name": "Nombre",
+						"email": "user@example.com",
+						"password": "***"
+					}
+				Response: 201
+			Endpoint: /users/{id} GET
+				Summary: Obtener usuario
+				Parameters:
+					Parameter: id
+						Type: UUID
+						Required: true
+				Response >>
+					{"id": "uuid", "name": "string", "email": "string"}
+
+	SubHeader: Documentos con namespace
+
 	Content:
-		Este es un **documento @STXT@ sin namespace**. Este tipo de documentos
-		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
-		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
-		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así
-		hasta formar una estructura jerárquica. 
-	
-		Vale la pena mencionar el nodo `Descripción` que es un nodo que permite **multilíneas**.
-		Al no tener una estructura previa se distinguen porque el nombre del nodo
-		es de la forma `:nombre del nodo:`
-	
-	Subheader: Documentos con namespace
-	
-	Content: 
-		Ahora un ejemplo de la misma receta con un namespace:
-		
-	Code:
-		Receta ***(com.kocinando.receta)***: Receta de macarrones
-			Descripción:
-				Esta es la descripción de la recta de macarrones.
-				Bla, bla, bla
-				Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: Hacer sofrito
-				Paso: Hervir macarrones
-				Paso: Juntar macarrones con sofrito y servir
-	
-	Content: 
-		Ahora mostramos el namespace. **La definición del namespace se encuentra en
-		un documento sin namespace**:
-		
-	Code:
-		***Namespace: com.kocinando.receta***
-			Receta:
-			    Descripción: (?) TEXT
-			    Comensales: (?) NUMBER
-				:Dificultad: (?) ENUM
-					fácil
-					media
-			    	difícil
-			    Ingredientes: (1)
-					Ingrediente: (+)
-			    Pasos: (1)
-			    	Paso: (+)
-	
-	Subheader: Comentarios
-	
-	Content:  
-		Es posible insertar comentarios en los documentos para 
-		expresar partes no finalizadas, pensamientos del autor, etc.
-		Los comentarios no se usarán pero permiten enriquecer el documento.
-		
-	Code:
-		Receta (com.kocinando.receta): Receta de macarrones
-		***# Esta receta me la pasó XX y la he hecho un montón de veces***
-		***# Os gustará mucho!!***
-			Descripción:
-				Esta es la descripción de la recta de macarrones.
-				Bla, bla, bla
-				Bla, bla, bla
-			Comensales: 3
-			Dificultad: fácil
-			Ingredientes:
-				Ingrediente: (100g) Tomate
-				Ingrediente: (240g) Macarrones
-			Pasos:
-				Paso: Hacer sofrito
-				Paso: Hervir macarrones
-				Paso: Juntar macarrones con sofrito y servir	
+		Mostramos ahora el mismo ejemplo pero asociado a un namespace para que
+		pueda validarse mediante un schema.
 
-	Subheader: Distintos namespaces en un documento
-	
-	Content: 
-		Un namespace puede hacer referencia a otro, para indicar que
-		una parte del documento tiene la estructura en otro namespace.
-		Mejor ver un ejemplo:
-		
-	Code: 
-		***Namespace:com.kocinando.recetario***
-			Recetario:
-				Receta: (+) ***(com.kocinando.receta)***
-
-	Content: Aquí vemos que `Receta` es de otro namespace y vemos que
-		en vez de poner la estructura se hace referencia a otro namespace.
-		
-	Assert: NO es necesario decir el namespace interior, sólo el nodo principal.
-	
-	Content: Así, un ejemplo de recetario sería:
-	
 	Code:
-		***Recetario (com.kocinando.recetario): Recetas de la mama*** 
-			***Receta: Receta de macarrones***
-				Descripción:
-					Esta es la descripción de la recta de macarrones.
-					Bla, bla, bla
-					Bla, bla, bla
-				Comensales: 3
-				Dificultad: fácil
-				Ingredientes:
-					Ingrediente: (100g) Tomate
-					Ingrediente: (240g) Macarrones
-				Pasos:
-					Paso: Hacer sofrito
-					Paso: Hervir macarrones
-					Paso: Juntar macarrones con sofrito y servir	
-			***Receta: Receta de pizza***
-				Ingredientes:
-					Ingrediente: (1u) Masa pizza
-					Ingrediente: (100g) Tomate
-					Ingrediente: (50g) Queso
-				Pasos:
-					Paso: Poner tomate y queso en pizza
-					Paso: Hornear durante 15'
-	
+		API (@com.acme.api): User Management API
+			Description: API para gestionar usuarios de ACME
+			Version: 1.0.0
+			Endpoint: /users GET
+				Summary: Listar usuarios
+			Endpoint: /users POST
+				Summary: Crear usuario
+
+	SubHeader: Definiendo un schema (ejemplo simplificado)
+
+	Content:
+		Un schema permite validar la forma de los nodos de un namespace. A modo de ejemplo,
+		mostramos un schema minimal para `com.acme.api`.
+
+	Code:
+		Schema (@stxt.schema): com.acme.api
+			Node: API
+				Type: EMPTY
+				Childs >>
+					(*) Endpoint
+			Node: Endpoint
+				Type: EMPTY
+				Childs >>
+					(?) Summary
+					(?) Parameters
+					(?) Request
+					(?) Response
+			Node: Parameters
+				Type: TEXT MULTILINE
+			Node: Request
+				Type: TEXT MULTILINE
+			Node: Response
+				Type: TEXT MULTILINE
+
+	SubHeader: Referencias cross-namespace
+
+	Content:
+		Un documento puede referenciar nodos definidos en otros namespaces. Ejemplo:
+
+	Code:
+		API (@com.acme.api): User Management API
+			Components:
+				UserType (@com.acme.types): User
+
+	Code:
+		Schema (@stxt.schema): com.acme.types
+			Node: User
+				Type: TEXT MULTILINE
+				Childs >>
+					(1) id
+					(?) name
+					(?) email
+
+	SubHeader: Buenas prácticas
+
+	Content:
+		- Usa namespaces para agrupar esquemas y evitar colisiones.
+		- Prefiere bloques `>>` para ejemplos JSON o documentación multilínea.
+		- Mantén la indentación consistente (4 espacios por nivel) y no mezcles tabs y espacios.
+		- Usa cardinalidades y tipos en schemas para mejorar la validación.
+
+	SubHeader: Ejemplo final: documento completo
+
+	Code:
+		API (@com.acme.api): ACME User API
+			Description >>
+				Documento de ejemplo que combina referencias a tipos y endpoints.
+			Version: 1.0.0
+			Endpoint: /users GET
+				Summary: Listar usuarios
+			Components:
+				UserType (@com.acme.types): User
+
+	Content:
+		Con esto tienes una plantilla clara para describir APIs y otros sistemas de forma profesional
+		usando @STXT@. Si quieres, puedo añadir ejemplos concretos de validación automática
+		o un script que transforme documentos @STXT@ en OpenAPI / JSON Schema.
