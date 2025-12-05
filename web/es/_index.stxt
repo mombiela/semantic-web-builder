@@ -9,14 +9,20 @@ Document(dev.stxt.namespace): STXT: El Libro
 	
 	Subheader: Referencia del Lenguaje
 	Link: Documentos @STXT@ (reference)
-	Link: Esquemas @STXT@ (schema)
-	Link: EBNF (ebnf)
+	Link: Esquemas @STXT@ (schema-ref)
+	Link: Grammar (grammar)
 			
 	SubHeader: Casos de uso 
 	
-	Link: CMS (use-case-cms)
+	Link: @STXT@2 (use-cases-stxt2)
+	Link: Documentos Corporativos (use-cases-corporate-docs)
+	Link: Wikipedia (use-cases-wikipedia)
+	Link: CMS (use-cases-cms)
+	Link: Publicaciones (use-cases-editorial)
+	Link: Ficheros configuración (use-cases-config-files)
 			
 	SubHeader: Herramientas
 	
 	Link: Parsers (tools-parsers)
-			
+	Link: IDE's (tools-ides)
+	Link: Editor online (tools-online-editor)
