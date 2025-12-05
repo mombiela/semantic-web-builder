@@ -1,13 +1,13 @@
 Document(dev.stxt.namespace): STXT: El Libro
 	Default:
 		Title: STXT: El Libro
-		
+
 	SubHeader: @STXT@
 	
-	Link: Introducción a @STXT@ (index)
+	Link: Introducción (index)
 	Link: Tutorial (tutorial)
-	Link: STXT (reference)
-	Link: Esquemas (schema)
+	Link: Documentos @STXT@ (reference)
+	Link: Esquemas @STXT@ (schema)
 	Link: EBNF (ebnf)
 			
 	SubHeader: Casos de uso 

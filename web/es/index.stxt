@@ -7,31 +7,38 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 	Alert:
 		**@STXT@**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
 		
-	#	**Nuestro objetivo:**
-	#	Crear el lenguaje más potente, más sencillo y más bonito \
-	#	que jamás haya existido :-)
-	#
-	#	Nuestro principio básico: **Sencillez, claridad y simplicidad** por encima de todo
-	#	Esto lo intentamos aplicar en todo lo que hacemos. No sé si lo habremos conseguido :-)
+	SubHeader: Documentos
 	
+	Content: Los documentos se construyen...
+	
+	Code:
+		***Email***:
+			From: John Smith
+			To: Mery Adams
+			Cc: Keyla Brown
+			Title: Project report
+			***Body Content >>***
+				Hello Mery! 
+				The book is finished!
+
 	SubHeader: Documentos com namespace
 	
 	Content: Ejemplo de documento con un elemento `Email` del namespace `com.example.docs`
 		
 	Code:
-		***Email (com.example.docs)***:
+		***Email (@com.example.docs)***:
 			From: John Smith
 			To: Mery Adams
 			Cc: Keyla Brown
 			Title: Project report
-			Body Content: 
+			Body Content >>
 				Hello Mery!! 
 				The book is finished!!
 	Content:
 		Y la definición del namespace
 		
 	Code:
-		***Namespace: com.example.docs***
+		***Schema (@stxt.schema): com.example.docs***
 			Email:
 				From: (1)
 				To: (1)
@@ -40,17 +47,4 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 				Title: (1)
 				Body Content: (1) TEXT
 
-	SubHeader: Documentos sin namespace
-	
-	Content: Los documentos sin namespace deben marcar los nodos multiline con `:` delante del nombre:
-	
-	Code:
-		Email:
-			From: John Smith
-			To: Mery Adams
-			Cc: Keyla Brown
-			Title: Project report
-			***:Body Content:***
-				Hello Mery! 
-				The book is finished!
 		

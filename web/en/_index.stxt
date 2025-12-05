@@ -1,22 +1,20 @@
 Document(dev.stxt.namespace): STXT: The Book
 	Default:
 		Title: STXT: The Book
-		
-	SubHeader: Introduction
+
+	SubHeader: @STXT@
 	
-	Link: @STXT@ in 1 Minute (index)
-	Link: @STXT@ Tutorial (tutorial)
+	Link: Introduction (index)
+	Link: Tutorial (tutorial)
+	Link: @STXT@ Documents (reference)
+	Link: @STXT@ Schemas (schema)
+	Link: EBNF (ebnf)
 			
-	SubHeader: The Language
+	SubHeader: Use Cases 
 	
-	Link: Documents without namespace (raw-docs) 
-	Link: Documents with namespace (ns-docs)
-	Link: Compaction (compact)
-	Link: Examples (examples)
+	Link: CMS (use-case-cms)
 			
 	SubHeader: Technical Resources
 	
-	Link: EBNF (ebnf)
-	Link: Document Parsing (doc-parsing)
-	Link: Available Parsers (parsers)
+	Link: Parsers (tools-parsers)
 			

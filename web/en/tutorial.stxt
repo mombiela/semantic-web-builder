@@ -35,14 +35,14 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Step: Boil macaroni
 				Step: Mix macaroni with sofrito and serve
 	Content:
-		This is a **@STXT@ document without namespace**. This type of document
-		is structured, but we do not know what form the nodes have. In any case, you can
+		This is a **@STXT@ document without namespace**. These types of documents
+		are structured, but we do not know what shape the nodes have. In any case, you can
 		already see that they have structure, with a main node `Recipe`, which has
 		a `Description` node, `Ingredients`, etc. In turn, these nodes have others, and so on
 		until forming a hierarchical structure. 
 	
 		It is worth mentioning the `Description` node, which is a node that allows **multilines**.
-		As there is no prior structure, they are distinguished because the node name
+		Not having a previous structure, they are distinguished because the node name
 		is in the form `:node name:`
 	
 	Subheader: Documents with namespace
