@@ -2,8 +2,8 @@
 	<ul>
 		<li><a href="$indexPage" title="${lang.get("menu.hello")}">${lang.get("menu.hello")}</a></li>
 		<li><a href="lang-tutorial" title="${lang.get("menu.tutorial")}">${lang.get("menu.tutorial")}</a></li>
-		<li><a href="use-cases" title="${lang.get("menu.examples")}">${lang.get("menu.examples")}</a></li>
-		<li><a href="tools" title="Parsers">${lang.get("menu.tools")}</a></li>
+		<li><a href="use-cases-stxt2" title="${lang.get("menu.examples")}">${lang.get("menu.examples")}</a></li>
+		<li><a href="tools-parsers" title="Parsers">${lang.get("menu.tools")}</a></li>
 		<li class="link_src"><a href="${doc_name}.stxt" target="${doc_name}" title="File ${doc_name}.stxt">@STXT@</a></li>
 	</ul>
 </div>
