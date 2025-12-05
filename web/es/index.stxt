@@ -39,12 +39,18 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 		
 	Code:
 		***Schema (@stxt.schema): com.example.docs***
-			Email:
-				From: (1)
-				To: (1)
-				Cc: (?)
-				Bcc: (?)
-				Title: (1)
-				Body Content: (1) TEXT
-
-		
+			Node: Email
+				Childs >>
+					From
+					To
+					Cc
+					Bcc
+					Title
+					Body Content
+			Node: From
+			Node: To
+			Node: Cc
+			Node: Bcc
+			Node: Title
+			Node: Body Content
+	

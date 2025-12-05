@@ -6,6 +6,8 @@ Document(dev.stxt.namespace): STXT: El Libro
 	
 	Link: Introducción (index)
 	Link: Tutorial (tutorial)
+	
+	Subheader: Referencia del Lenguaje
 	Link: Documentos @STXT@ (reference)
 	Link: Esquemas @STXT@ (schema)
 	Link: EBNF (ebnf)
