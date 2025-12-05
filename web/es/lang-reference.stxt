@@ -7,9 +7,13 @@ Document (dev.stxt.namespace):STXT-SPEC-DRAFT
 	Header: STXT-SPEC-DRAFT
 	
 	Content:
-		**Semantic Text (STXT) — Core Language Specification**
+	
+		**STXT (Semantic Text) — Core Language Specification**
+		
 		**Category:** Standards Track
+		
 		**Status:** Draft
+		
 		**Format:** Markdown (RFC-style)
 		
 		---
