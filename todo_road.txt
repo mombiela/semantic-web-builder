@@ -58,6 +58,7 @@ Archivo Narrow (en sus pesos Bold o Black): Ofrece una sensación más moderna y
 
 * CASE-SENSITIVE para nombres!!
 * Trim espacios intermedios de nombres hasta 1!! Tabs también espacios!
+* Un documento entero puede tener mezcla o sólo hay problemas en la misma línea?
 * LANG: Se permite esto LANG[yaml], LANG[markdown], LANG[html]
 * Se podría hacer también: BOOLEAN, NUMBER, NUMBER[float], NUMBER[int32], NUMBER[int64], STRING, TEXT, CHAR[32], VARCHAR[32], UUID, BINARY[base64], BINARY[hex], BINARY[binary] 
 * Documentar en 4.* que el nombre con estilo recomendado es 
