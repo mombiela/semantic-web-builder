@@ -3,6 +3,52 @@ Bebas Neue: Una opción muy popular para titulares. Es una fuente sans-serif de 
 Anton: Similar en estilo condensado y audaz a Russo One, Anton ofrece un impacto visual significativo, ideal para un lenguaje que necesita ser notado y tomado en serio.
 Archivo Narrow (en sus pesos Bold o Black): Ofrece una sensación más moderna y técnica, manteniendo la robustez y legibilidad que necesitas para un sistema lingüístico. 
 
+/
+/tutorial
+/reference
+/schema-ref
+/grammar
+
+/use-cases-stxt2
+/use-cases-corporate-docs (manuals, contracts, wiki)
+/use-cases-wikipedia
+/use-cases-ai-rag
+/use-cases-cms
+/use-cases-editorial
+/use-cases-config-files
+
+/tools-parsers
+/tools-ides
+/tools-online-editor
+
+/contribute
+
+El lenguaje
+	* 1 minuto
+	* tutorial
+	* STXT REF
+	* STXT Schema REF
+	* Grammar
+Casos de uso
+	* Conversores stxt2
+		* RFC
+		* Config (tomcat, etc.)
+		* ...
+	* Documentos corporativos (fuente de verdad)
+		* Wiki corp
+		* Manuales
+		* Contratos
+		* ...
+	* AI con docs corporativos!! Para RAG
+	* CMS/gestores de contenido
+	* Formatos editoriales: recetas, manuales, especificaciones,...
+	* Wikipedia
+	* Ficheros de configuración
+Herramientas
+	Parsers
+	IDE's
+	Online Editor
+	
 
 * CASE-SENSITIVE para nombres!!
 * Trim espacios intermedios de nombres hasta 1!! Tabs también espacios!
