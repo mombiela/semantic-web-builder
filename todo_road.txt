@@ -57,6 +57,7 @@ Archivo Narrow (en sus pesos Bold o Black): Ofrece una sensación más moderna y
 
 
 * CASE-SENSITIVE para nombres!!
+* Por defecto un nodo es empty!! Eso significa que necesita hijos
 * Trim espacios intermedios de nombres hasta 1!! Tabs también espacios!
 * Un documento entero puede tener mezcla o sólo hay problemas en la misma línea?
 * LANG: Se permite esto LANG[yaml], LANG[markdown], LANG[html]
