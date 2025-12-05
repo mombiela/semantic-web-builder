@@ -10,9 +10,8 @@
 		font-size: 1.2rem;
 		a.selected {
 			font-weight: bold;
-			background-color: #ddd7ff;
-			background-color: #fbd7ff;
-			padding: 0.5rem;
+			background-color: $color3;
+			padding: 0.5rem 0.5rem 0.5rem 0;
 		}
 	}
 }
