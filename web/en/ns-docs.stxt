@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace): Documents with namespace
+Document (dev.STXT.namespace): Documents with namespace
 	Navigation:
 		Previous: Previous (raw-docs)
 		Next: Next (compact)
@@ -12,7 +12,7 @@ Document (dev.stxt.namespace): Documents with namespace
 		* Always UTF-8 Encoding
 		* Identifiers are CASE-INSENSITIVE
 		* There are no escape characters
-		* In STxT, all lines starting with the character # are comments
+		* In STXT, all lines starting with the character # are comments
 		* 4 spaces are equivalent to a tab
 		
 	Assert: The use of `:` for multiline nodes is not allowed.\

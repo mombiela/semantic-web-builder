@@ -1,8 +1,8 @@
 <header id="main_header">
     <div class="title">
 		<a href="$indexPage">
-		#if(${doc.getChild("default")})	STxT: ${lang.get("title_book")}
-		#else                  			STxT: Semantic TexT
+		#if(${doc.getChild("default")})	STXT: ${lang.get("title_book")}
+		#else                  			STXT: Semantic TexT
 		#end
 	    </a>
 	</div>

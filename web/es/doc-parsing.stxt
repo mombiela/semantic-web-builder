@@ -1,15 +1,15 @@
-Document (dev.stxt.namespace): Parseo de Documentos
+Document (dev.STXT.namespace): Parseo de Documentos
 	Navigation:
 		Previous: Anterior (ebnf)
 		Next: Siguiente (parsers)
 		
 	Metadata:
-		Title: Parseo de STxT
-		Description: Parseo de ficheros en formato STxT
+		Title: Parseo de STXT
+		Description: Parseo de ficheros en formato STXT
 		Author: Joan Costa Mombiela
 		last modif: 2013-03-01
 	
-	header:	Parseo de STxT
+	header:	Parseo de STXT
 		
 	Subheader:	Proceso genérico
 		

@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace):Compactación
+Document (dev.STXT.namespace):Compactación
 	Navigation:
 		Previous: Anterior (ns-docs)
 		Next: Siguiente (examples)
@@ -10,7 +10,7 @@ Document (dev.stxt.namespace):Compactación
 		
 	Header: Compactación
 		
-	Subheader: Análisis de la información de STxT
+	Subheader: Análisis de la información de STXT
 		
 	Content:
 		Un documento es sólo un conjunto de nodos con una cierta identación, con lo que realmente la 

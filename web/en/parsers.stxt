@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace): Available Parsers
+Document (dev.STXT.namespace): Available Parsers
 	Navigation:
 		Previous: Previous (doc-parsing)
 
@@ -18,4 +18,4 @@ Document (dev.stxt.namespace): Available Parsers
 	Subsubheader: Java
 	Content: The parser with which this website was built is available:
 	
-		* [https://github.com/mombiela/stxt-parser](https://github.com/mombiela/stxt-parser)
+		* [https://github.com/mombiela/STXT-parser](https://github.com/mombiela/STXT-parser)

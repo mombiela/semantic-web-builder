@@ -1,10 +1,10 @@
-Document (dev.stxt.namespace):EBNF
+Document (dev.STXT.namespace):EBNF
 	Navigation:
 		Previous: Anterior (examples)
 		Next: EBNF (doc-parsing)
 
 	Metadata:
-		Description: Se muestra la descripción en EBNF de STxT
+		Description: Se muestra la descripción en EBNF de STXT
 		Author: Joan Costa Mombiela
 		Last modif: 2025-06-22
 		

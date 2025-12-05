@@ -1,7 +1,7 @@
-Document (dev.stxt.namespace):Contribuye con nosotros
+Document (dev.STXT.namespace):Contribuye con nosotros
 
 	Metadata:
-		Description: Cosas que faltan por hacer en el lenguaje STxT y formas de contribuir con el mantenimiento y los contenidos del portal.
+		Description: Cosas que faltan por hacer en el lenguaje STXT y formas de contribuir con el mantenimiento y los contenidos del portal.
 		Author: Joan Costa Mombiela
 		Last modif: 2013-10-17
 		
@@ -19,7 +19,7 @@ Document (dev.stxt.namespace):Contribuye con nosotros
 		
 		Buenas noticias para los informáticos: un nuevo juguete para explorar :-)	
 		
-	Subheader:  stxt.dev
+	Subheader:  STXT.dev
 	
 	Content:		
 		Nuestro lenguaje tiene infinitas aplicaciones, pero creemos que su definición 
@@ -32,5 +32,5 @@ Document (dev.stxt.namespace):Contribuye con nosotros
 		hay que añadir un capítulo nuevo al libro? ¿Has encontrado algún error en la documentación? 
 		¿Mejorarías algún ejemplo? ¿Nos propones un css distinto y más reducido de tamaño?
 		
-		Queremos que esta web sea un punto de referencia en el aprendizaje de STxT.
+		Queremos que esta web sea un punto de referencia en el aprendizaje de STXT.
 		

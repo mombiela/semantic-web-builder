@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace):Compaction
+Document (dev.STXT.namespace):Compaction
 	Navigation:
 		Previous: Previous (ns-docs)
 		Next: Next (examples)
@@ -10,7 +10,7 @@ Document (dev.stxt.namespace):Compaction
 		
 	Header: Compaction
 		
-	Subheader: Analysis of STxT information
+	Subheader: Analysis of STXT information
 		
 	Content:
 		A document is just a set of nodes with a certain indentation, so the information is really about **order** and **level**.

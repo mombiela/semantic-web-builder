@@ -1,15 +1,15 @@
-Document (dev.stxt.namespace): Document Parsing
+Document (dev.STXT.namespace): Document Parsing
 	Navigation:
 		Previous: Previous (ebnf)
 		Next: Next (parsers)
 		
 	Metadata:
-		Title: STxT Parsing
-		Description: Parsing files in STxT format
+		Title: STXT Parsing
+		Description: Parsing files in STXT format
 		Author: Joan Costa Mombiela
 		last modif: 2025-11-30
 	
-	header:	STxT Parsing
+	header:	STXT Parsing
 		
 	Subheader:	Generic Process
 		

@@ -1,17 +1,17 @@
-Document (dev.stxt.namespace): STXT Tutorial
+Document (dev.STXT.namespace): STXT Tutorial
 	Navigation:
 		Previous: Anterior (index)
 		Next: Siguiente (raw-docs)
 
-	header: STxT Tutorial
+	header: STXT Tutorial
 	
-	SubHeader: ¿Qué es STxT?
+	SubHeader: ¿Qué es STXT?
 
 	Content:
 		Es un lenguaje puramente semántico, con unas reglas muy básicas, 
 		que permite la creación de documentos con un contenido estructurado 
 		y sencillo de interpretar, tanto por humanos (sin conocimientos informáticos) como por máquinas. 
-		Se puede estar leyendo un documento en STxT sin darse cuenta en realidad
+		Se puede estar leyendo un documento en STXT sin darse cuenta en realidad
 		que lo es. 	
 
 	subheader: Documentos sin namespace
@@ -35,7 +35,7 @@ Document (dev.stxt.namespace): STXT Tutorial
 				Paso: Hervir macarrones
 				Paso: Juntar macarrones con sofrito y servir
 	Content:
-		Este es un **documento STxT sin namespace**. Este tipo de documentos
+		Este es un **documento STXT sin namespace**. Este tipo de documentos
 		son estructurados, pero no sabemos que forma tienen los nodos. De cualquier manera ya 
 		se puede ver que tienen estructura, con un nodo principal `Receta`, el qual tiene
 		un nodo `Descripción`, `Ingredientes`, etc. A su vez estos nodos tienen otros, y así

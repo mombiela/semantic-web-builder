@@ -1,11 +1,11 @@
-Document (dev.stxt.namespace):STXT - Un Lenguaje, Infinitas Posibilidades
+Document (dev.STXT.namespace):STXT - Un Lenguaje, Infinitas Posibilidades
 	Navigation:
 		Next: Siguiente (tutorial)
 
-	Header: STxT en 1 Minuto
+	Header: STXT en 1 Minuto
 
 	Alert:
-		**STxT**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
+		**STXT**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
 		
 	#	**Nuestro objetivo:**
 	#	Crear el lenguaje más potente, más sencillo y más bonito \

@@ -1,4 +1,4 @@
-Document (dev.stxt.namespace): Ejemplos
+Document (dev.STXT.namespace): Ejemplos
 	Navigation:
 		Previous: Anterior (compact)
 		Next: Siguiente (ebnf)
@@ -32,12 +32,12 @@ Document (dev.stxt.namespace): Ejemplos
 			    	: difícil
 			    Calorias: (?) NUMBER
 			    Comensales: (?) NUMBER
-			    Documento: (*) (www.dokumentando.com/doc_simple.stxt)
+			    Documento: (*) (www.dokumentando.com/doc_simple.STXT)
 	
 	SubSubheader: Namespace de rectario
 	
 	Code:
-		Namespace: com.kocinando.recetario.stxt
+		Namespace: com.kocinando.recetario.STXT
 		
 			Recetario:
 				Receta: (+) (com.kocinando.receta)
