@@ -1,6 +1,6 @@
-Document(dev.stxt.namespace): @STXT@: The Book
+Document(dev.stxt.namespace): STXT: The Book
 	Default:
-		Title: @STXT@: The Book
+		Title: STXT: The Book
 		
 	SubHeader: Introduction
 	
