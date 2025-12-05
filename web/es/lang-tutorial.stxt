@@ -9,132 +9,99 @@ Document (dev.stxt.namespace): STXT Tutorial
 		documentos estructurados de forma simple y procesable por máquinas. Sus reglas
 		básicas permiten nodos inline, bloques de texto literal y namespaces.
 
-	SubHeader: Ejemplo profesional: diseño de una API REST (Gestión de usuarios)
+	SubHeader: Ejemplo: ficha de libro para editoriales
 
 	Content:
-		A continuación presentamos un ejemplo realista que muestra la estructura
-		de un documento @STXT@ usado para describir una API REST sencilla.
+		A continuación mostramos un ejemplo práctico y sencillo para describir un libro
+		que pueda usar una editorial: metadatos, capítulos y contenido de muestra.
 
 	Code:
-		API: User Management API
-			Description >>
-				API para gestionar usuarios de la plataforma ACME.
-				Define los endpoints principales para listar, crear, obtener y borrar usuarios.
-			Version: 1.0.0
-			Endpoint: /users GET
-				Summary: Listar usuarios
-				Parameters:
-					Parameter: page
-						Type: NUMBER
-						Required: false
-						Description: Número de página (por defecto 1)
-					Parameter: pageSize
-						Type: NUMBER
-						Required: false
-						Description: Tamaño de página (por defecto 20)
-				Response >>
-					[
-						{"id": "uuid", "name": "string", "email": "string"}
-					]
-			Endpoint: /users POST
-				Summary: Crear usuario
-				Request >>
-					{
-						"name": "Nombre",
-						"email": "user@example.com",
-						"password": "***"
-					}
-				Response: 201
-			Endpoint: /users/{id} GET
-				Summary: Obtener usuario
-				Parameters:
-					Parameter: id
-						Type: UUID
-						Required: true
-				Response >>
-					{"id": "uuid", "name": "string", "email": "string"}
+		Book: Ejemplo de libro
+			Title: Arquitectura de software moderna
+			Authors:
+				Author: María Pérez
+				Author: Juan García
+			ISBN: 978-84-123456-7-8
+			Publisher: ACME Editorial
+			Published: 2025-10-01
+			Summary >>
+				Este libro ofrece una visión práctica de patrones y buenas prácticas
+				para diseñar sistemas distribuidos y escalables.
+			Chapters:
+				Chapter: 1
+					Title: Introducción a la arquitectura
+					Pages: 20
+					Content >>
+						En este capítulo presentamos conceptos básicos: monolitos, microservicios
+						y criterios para elegir una arquitectura adecuada.
+				Chapter: 2
+					Title: Comunicación entre servicios
+					Pages: 30
+					Content >>
+						Se describen protocolos, mensajería y patrones de integración.
 
-	SubHeader: Documentos con namespace
+	SubHeader: Asociar el documento a un namespace
 
 	Content:
-		Mostramos ahora el mismo ejemplo pero asociado a un namespace para que
-		pueda validarse mediante un schema.
+		Podemos asociar la ficha a un namespace para validarla mediante un schema.
 
 	Code:
-		API (@com.acme.api): User Management API
-			Description: API para gestionar usuarios de ACME
-			Version: 1.0.0
-			Endpoint: /users GET
-				Summary: Listar usuarios
-			Endpoint: /users POST
-				Summary: Crear usuario
+		Book (@com.acme.book): Ejemplo de libro
+			Title: Arquitectura de software moderna
+			Authors:
+				Author: María Pérez
+			ISBN: 978-84-123456-7-8
 
-	SubHeader: Definiendo un schema (ejemplo simplificado)
+	SubHeader: Schema de ejemplo (simplificado)
 
 	Content:
-		Un schema permite validar la forma de los nodos de un namespace. A modo de ejemplo,
-		mostramos un schema minimal para `com.acme.api`.
+		Un schema permite definir la forma y los tipos de los nodos de un namespace.
 
 	Code:
-		Schema (@stxt.schema): com.acme.api
-			Node: API
+		Schema (@stxt.schema): com.acme.book
+			Node: Book
 				Type: EMPTY
 				Childs >>
-					(*) Endpoint
-			Node: Endpoint
+					(1) Title
+					(1) Authors
+					(1) ISBN
+			Node: Title
+				Type: TEXT INLINE
+			Node: Authors
+				Type: TEXT MULTILINE
+			Node: ISBN
+				Type: TEXT INLINE
+			Node: Chapter
 				Type: EMPTY
 				Childs >>
-					(?) Summary
-					(?) Parameters
-					(?) Request
-					(?) Response
-			Node: Parameters
-				Type: TEXT MULTILINE
-			Node: Request
-				Type: TEXT MULTILINE
-			Node: Response
-				Type: TEXT MULTILINE
-
-	SubHeader: Referencias cross-namespace
-
-	Content:
-		Un documento puede referenciar nodos definidos en otros namespaces. Ejemplo:
-
-	Code:
-		API (@com.acme.api): User Management API
-			Components:
-				UserType (@com.acme.types): User
-
-	Code:
-		Schema (@stxt.schema): com.acme.types
-			Node: User
-				Type: TEXT MULTILINE
-				Childs >>
-					(1) id
-					(?) name
-					(?) email
+					(1) Title
+					(?) Pages
+					(?) Content
 
 	SubHeader: Buenas prácticas
 
 	Content:
-		- Usa namespaces para agrupar esquemas y evitar colisiones.
-		- Prefiere bloques `>>` para ejemplos JSON o documentación multilínea.
+		- Usa bloques `>>` para contenido de capítulos o textos multilínea.
 		- Mantén la indentación consistente (4 espacios por nivel) y no mezcles tabs y espacios.
-		- Usa cardinalidades y tipos en schemas para mejorar la validación.
+		- Usa namespaces para separar esquemas por editoriales o colecciones.
+		- Define cardinalidades mínimas en los schemas para garantizar datos clave.
 
-	SubHeader: Ejemplo final: documento completo
+	SubHeader: Ejemplo final completo
 
 	Code:
-		API (@com.acme.api): ACME User API
-			Description >>
-				Documento de ejemplo que combina referencias a tipos y endpoints.
-			Version: 1.0.0
-			Endpoint: /users GET
-				Summary: Listar usuarios
-			Components:
-				UserType (@com.acme.types): User
+		Book (@com.acme.book): ACME - Arquitectura de software moderna
+			Title: Arquitectura de software moderna
+			Authors:
+				Author: María Pérez
+				Author: Juan García
+			ISBN: 978-84-123456-7-8
+			Chapters:
+				Chapter: 1
+					Title: Introducción a la arquitectura
+					Content >>
+						Conceptos básicos y objetivos del libro.
 
 	Content:
-		Con esto tienes una plantilla clara para describir APIs y otros sistemas de forma profesional
-		usando @STXT@. Si quieres, puedo añadir ejemplos concretos de validación automática
-		o un script que transforme documentos @STXT@ en OpenAPI / JSON Schema.
+		Si quieres, puedo generar a partir de este ejemplo: (a) una conversión a JSON
+		intermedio para procesar automáticamente, (b) un conversor a un formato de catálogo
+		(ISBN/OPDS) o (c) tests de validación frente al schema de ejemplo. ¿Cuál prefieres?
