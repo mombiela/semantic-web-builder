@@ -2,11 +2,24 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 	Header: @STXT@: Introducción 
 
 	Alert:
-		**@STXT@**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
+		@STXT@ tiene un espíritu **Human-First**, colocando las personas en el centro. \\
+		Los documentos son legibles y expresivos, y al mismo tiempo fiables para máquinas.
 		
 	Subheader: Documentos
 	
-	Content: Los documentos se construyen...
+	Content:
+		Un documento @STXT@ es un archivo de texto estructurado, pensado para ser legible por personas y fácil de procesar por máquinas.
+		Contiene "nodos": líneas no vacías (fuera de bloques `>>`) que definen pares "Nombre" y valor, o bien bloques de texto literal.
+		
+	Subheader: Características principales
+		
+	Content:
+		* Nodos inline/contendor: `Nombre: Valor` (pueden tener hijos indentados).
+		* Bloques textuales: `Nombre >>` seguido de líneas literales que no se parsean internamente.
+		* La jerarquía se define por la indentación (tabuladores o 4 espacios por nivel según el documento).
+		* Soporta namespaces (e.g. `(@com.example)`), comentarios fuera de bloques (`# ...`) y validación mediante schemas (`@stxt.schema`).
+		
+		Un documento STXT equilibra la claridad humana con una estructura semántica explícita — ideal para contenidos, configuraciones y datos inter-operables.
 	
 	Code:
 		***Email***:
@@ -20,7 +33,7 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 
 	Subheader: Documentos con namespace
 	
-	Content: Ejemplo de documento con un elemento `Email` del namespace `com.example.docs`
+	Content: @STXT@ permite el uso de namespaces, para dar sentido y estructura al contenido.
 		
 	Code:
 		***Email (@com.example.docs)***:
@@ -50,4 +63,3 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 			Node: Bcc
 			Node: Title
 			Node: Body Content
-	
