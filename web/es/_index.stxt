@@ -2,21 +2,19 @@ Document(dev.stxt.namespace): STXT: El Libro
 	Default:
 		Title: STXT: El Libro
 		
-	SubHeader: Introducción
+	SubHeader: @STXT@
 	
-	Link: @STXT@ en 1 Minuto (index)
-	Link: @STXT@ Tutorial (tutorial)
+	Link: Introducción a @STXT@ (index)
+	Link: Tutorial (tutorial)
+	Link: STXT (reference)
+	Link: Esquemas (schema)
+	Link: EBNF (ebnf)
 			
-	SubHeader: El lenguaje
+	SubHeader: Casos de uso 
 	
-	Link: Documentos sin namespace (raw-docs) 
-	Link: Documentos con namespace (ns-docs)
-	Link: Compactación (compact)
-	Link: Ejemplos (examples)
+	Link: CMS (use-case-cms)
 			
 	SubHeader: Recursos técnicos
 	
-	Link: EBNF (ebnf)
-	Link: Parseo de documentos (doc-parsing)
-	Link: Parsers disponibles (parsers)
+	Link: Parsers (tools-parsers)
 			
