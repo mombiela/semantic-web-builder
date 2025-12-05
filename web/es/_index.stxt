@@ -5,12 +5,12 @@ Document(dev.stxt.namespace): STXT: El Libro
 	SubHeader: @STXT@
 	
 	Link: Introducción (index)
-	Link: Tutorial (tutorial)
+	Link: Tutorial (lang-tutorial)
 	
 	Subheader: Referencia del Lenguaje
-	Link: Documentos @STXT@ (reference)
-	Link: Esquemas @STXT@ (schema-ref)
-	Link: Grammar (grammar)
+	Link: Documentos @STXT@ (lang-reference)
+	Link: Esquemas @STXT@ (lang-schema-ref)
+	Link: Grammar (lang-grammar)
 			
 	SubHeader: Casos de uso 
 	
