@@ -4,7 +4,7 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 	Alert:
 		**@STXT@**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
 		
-	SubHeader: Documentos
+	Subheader: Documentos
 	
 	Content: Los documentos se construyen...
 	
@@ -18,7 +18,7 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 				Hello Mery! 
 				The book is finished!
 
-	SubHeader: Documentos com namespace
+	Subheader: Documentos con namespace
 	
 	Content: Ejemplo de documento con un elemento `Email` del namespace `com.example.docs`
 		
