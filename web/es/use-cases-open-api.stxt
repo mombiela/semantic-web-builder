@@ -1,8 +1,61 @@
-Document (dev.stxt.namespace):xxx
+Document (dev.stxt.namespace):STXT Use Cases
 
 	Metadata:
 		Author: Joan Costa Mombiela
 		Last modif: 2025-12-05
-		
-	Header: xxx
-		
+	
+	Header: OpenAPI con STXT
+	
+	Subheader: Ventajas de @STXT@
+	
+	Content:
+		OpenAPI, comúnmente escrito en YAML o JSON, puede volverse complejo y difícil de leer a medida que crece. @STXT@ simplifica esta tarea al mantener una estructura jerárquica clara mediante indentación, permitir comentarios fuera de bloques `>>` y ser fácilmente convertible a objetos. Esto lo convierte en una herramienta ideal para documentar servicios HTTP sin perder la expresividad de OpenAPI 3.
+	
+	Subheader: Ejemplo práctico
+	
+	Content:
+		A continuación, se presenta un ejemplo de una API mínima para gestionar tareas. Este ejemplo destaca cómo @STXT@ organiza la información clave de manera intuitiva, reflejando la jerarquía oficial de OpenAPI.
+	
+	Code:
+		***OpenAPI (@openapi.v3)***:
+			Info:
+				Title: Servicio de Tareas
+				Version: 1.0.0
+				Description: API interna para gestionar tareas pendientes
+			Servers >>
+				https://api.example.com
+			Paths:
+				/tasks:
+					Get:
+						Summary: Lista todas las tareas visibles para el usuario autenticado
+						OperationId: listTasks
+						Responses:
+							200:
+								Description: Operación exitosa
+								Content:
+									Application/Json:
+										Schema:
+											Type: array
+											Items:
+												$Ref: #/components/schemas/Task
+			Components:
+				Schemas:
+					Task:
+						Type: object
+						Required >>
+							id
+							title
+						Properties:
+							Id:
+								Type: integer
+								Format: int64
+								Description: Identificador único de la tarea
+							Title:
+								Type: string
+								Description: Título breve de la tarea
+							Completed:
+								Type: boolean
+								Description: Indica si la tarea está completada
+	
+	Content:
+		Este ejemplo muestra cómo @STXT@ respeta la jerarquía de OpenAPI mientras simplifica su lectura. Los bloques como `Servers >>` y `Required >>` permiten listas literales, mientras que los nodos inline mantienen la estructura clara. Además, un parser @STXT@ puede transformar este documento en JSON o YAML, facilitando la interoperabilidad entre humanos y herramientas.
