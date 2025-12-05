@@ -1,0 +1,422 @@
+# STXT-SCHEMA-SPEC-DRAFT
+
+**Semantic Text (STxT) — Schema Language Specification**
+**Category:** Standards Track
+**Status:** Draft
+**Format:** Markdown (RFC-style)
+
+---
+
+# 1. Introducción
+
+Este documento define la especificación del lenguaje **STxT Schema**, un mecanismo para validar documentos STxT mediante reglas semánticas formales.
+
+Un **schema**:
+
+* Es un documento STxT con namespace `@stxt.schema`.
+* Define los nodos, tipos y cardinalidades del namespace objetivo.
+* No modifica la sintaxis base de STxT; opera sobre la estructura ya parseada.
+
+---
+
+# 2. Terminología
+
+Las palabras clave **"MUST"**, **"MUST NOT"**, **"SHOULD"**, **"SHOULD NOT"**, y **"MAY"** se interpretan según **RFC 2119**.
+
+Términos como *nodo*, *indentación*, *namespace*, *inline* y *bloque `>>`* mantienen su significado en *STXT-SPEC*.
+
+---
+
+# 3. Relación entre STxT y Schema
+
+La validación mediante schema ocurre **después** del parseo STxT:
+
+1. Parseo a estructura jerárquica STxT.
+2. Resolución del namespace lógico (herencia).
+3. Aplicación del schema correspondiente.
+
+---
+
+# 4. Estructura general de un Schema
+
+Un schema es un documento cuyo nodo raíz es:
+
+```stxt
+Schema (@stxt.schema): <namespace_objetivo>
+```
+
+Ejemplo:
+
+```stxt
+Schema (@stxt.schema): com.example.docs
+    Description: Schema for example documents
+    Node: Document
+        Type: EMPTY
+        Childs>>
+            (?) Metadata (@com.google.html)
+            (*) Autor
+            (?) Fecha
+            (1) Content
+    Node: Autor
+        Type: TEXT INLINE
+    Node: Fecha
+        Type: DATE
+    Node: Content
+        Type: TEXT MULTILINE
+```
+
+---
+
+# 5. Un schema por namespace
+
+Para cada namespace lógico:
+
+* **MUST NOT** existir más de un schema activo simultáneamente.
+* Cargar dos schemas para el mismo namespace ⇒ **error de configuración**.
+
+---
+
+# 6. Definición de Nodos (`Node:`)
+
+### 6.1 Forma básica
+
+```stxt
+Node: NombreNodo
+    Type: Tipo
+    Childs>>
+        (<card>) NombreHijo [(@namespace)]
+```
+
+Reglas:
+
+* `NombreNodo` **MUST** ser único dentro del schema.
+* Cada `Node` define la semántica del nodo en el namespace objetivo.
+* Si `Type` se omite ⇒ tipo por defecto `TEXT INLINE`.
+
+---
+
+# 7. Hijos (`Childs>>`) y namespaces cruzados
+
+Cada entrada de `Childs>>`:
+
+```text
+(<card>) NombreHijo [(@namespace)]
+```
+
+Donde:
+
+* `(<card>)` = cardinalidad (ver sección 8).
+* `NombreHijo` = nombre lógico del nodo hijo.
+* `(@namespace)` (opcional):
+
+  * Si se omite: se asume el namespace objetivo del schema.
+  * Si se indica: el hijo pertenece a ese namespace concreto.
+
+## 7.1. REGLA NUEVA (estricta y obligatoria)
+
+**Todo nodo que aparezca en `Childs>>` debe tener una definición propia como `Node:` en su schema correspondiente.**
+
+Esto implica:
+
+* Si aparece:
+
+  ```stxt
+  (1) Metadata (@com.google.html)
+  ```
+
+  entonces **debe existir un schema para `com.google.html`**
+  **y dentro de él debe existir `Node: Metadata`**.
+
+* Esta regla es obligatoria tanto en modo *strict* como en modo no-strict.
+
+Así evitamos hijos “fantasma” y garantizamos que todos los nodos tienen semántica definida.
+
+---
+
+# 8. Cardinalidades
+
+Formas permitidas:
+
+| Forma     | Significado                |
+| --------- | -------------------------- |
+| `num`     | Exactamente `num`.         |
+| `*`       | Cualquier número (`0..∞`). |
+| `+`       | Una o más (`1..∞`).        |
+| `?`       | Cero o una (`0..1`).       |
+| `num+`    | `num` o más.               |
+| `num-`    | `0..num`.                  |
+| `min,max` | Entre `min` y `max`.       |
+
+Reglas:
+
+* Se aplica por instancia del nodo padre.
+* Cuenta solo hijos **directos** con nombre + namespace efectivo.
+* Un validador conforme **MUST** comprobar las cardinalidades.
+
+---
+
+# 9. Tipos
+
+Los tipos definen:
+
+1. **La forma del valor del nodo** (inline, bloque `>>`, o ninguno).
+2. **Si el nodo puede tener hijos**.
+3. **La validación del contenido**.
+
+## 9.1. Tabla oficial de tipos
+
+```markdown
+| Tipo             | Formas permitidas de valor | Hijos permitidos | Descripción / Validación                                               |
+|------------------|----------------------------|------------------|------------------------------------------------------------------------|
+| TEXT INLINE      | INLINE                     | SÍ               | Texto inline. **Tipo por defecto.**                                    |
+| TEXT MULTILINE   | BLOCK                      | NO               | Solo bloque `>>`.                                                      |
+| TEXT             | INLINE or BLOCK            | NO               | Texto genérico. Puede ser inline o bloque `>>`, pero nunca tiene hijos.|
+| BOOLEAN          | INLINE                     | SÍ               | `true` / `false`.                                                      |
+| NUMBER           | INLINE                     | SÍ               | Número JSON.                                                           |
+| DATE             | INLINE                     | SÍ               | `YYYY-MM-DD`.                                                          |
+| TIMESTAMP        | INLINE                     | SÍ               | ISO 8601.                                                              |
+| EMAIL            | INLINE                     | SÍ               | Email válido.                                                          |
+| URL              | INLINE                     | SÍ               | URL válida.                                                            |
+| UUID             | INLINE                     | SÍ               | UUID estándar.                                                         |
+| HEXADECIMAL      | INLINE                     | SÍ               | `[0-9A-Fa-f]+`.                                                        |
+| BINARY           | INLINE                     | SÍ               | Cadena binaria.                                                        |
+| BASE64           | BLOCK                      | NO               | Bloque Base64.                                                         |
+| CODE:<language>  | BLOCK                      | NO               | Código en `<language>`.                                                |
+| EMPTY            | NONE                       | SÍ               | Nodo estructural sin valor.                                            |
+```
+
+## 9.2. Reglas clave
+
+* El tipo **NO controla obligatoriedad**, solo forma y validez del valor.
+  La obligatoriedad de aparición se controla mediante cardinalidad.
+* Tipos **BLOCK-only** (`TEXT MULTILINE`, `CODE:*`, `BASE64`)
+  ⇒ **MUST NOT** tener hijos.
+* `EMPTY`:
+
+  * Sin valor inline ni bloque.
+  * Hijos según `Childs>>` sí permitidos.
+
+---
+
+# 10. Modos del validador: *strict* y *non-strict*
+
+## 10.1. Modo *strict* (equivalente al “modo cerrado”) — **por defecto**
+
+Un validador STxT Schema en modo *strict*:
+
+* **MUST** exigir schema para cada namespace encontrado.
+* **MUST** rechazar nodos que no estén definidos en su schema.
+* **MUST** validar:
+
+  * Formas permitidas (`:`, `>>`, ninguno).
+  * Tipos del valor.
+  * Cardinalidades.
+  * Compatibilidad tipo/hijos.
+  * Conocimiento de schema para todos los namespaces referenciados.
+* **MUST** aplicar la regla de sección 7.1:
+  **si aparece un hijo en `Childs>>`, su definición debe existir en su schema.**
+
+## 10.2. Modo *non-strict* (modo abierto configurable)
+
+Un validador **MAY** ofrecer un modo no-strict:
+
+* Si un namespace no tiene schema:
+
+  * Puede aceptar el documento pero **SHOULD** emitir warning.
+* Si un `Node` no está definido:
+
+  * Puede aceptarse con warning.
+* Hijos no contemplados en `Childs>>`:
+
+  * Se aceptan pero se marcan como "no cubiertos por el schema".
+
+**Importante:**
+Incluso en modo *non-strict*, la regla **7.1** se mantiene:
+
+> Si un hijo aparece en `Childs>>` de un schema, ese hijo **DEBE** estar definido en su schema correspondiente.
+
+---
+
+# 11. Ejemplos Normativos
+
+## 11.1. Schema con referencias cross-namespace
+
+```stxt
+Schema (@stxt.schema): com.example.docs
+    Node: Document
+        Type: EMPTY
+        Childs>>
+            (?) Metadata (@com.google.html)
+            (1) Content
+    Node: Content
+        Type: TEXT MULTILINE
+```
+
+Y en `com.google.html`:
+
+```stxt
+Schema (@stxt.schema): com.google.html
+    Node: Metadata
+        Type: TEXT INLINE
+```
+
+## 11.2. Documento válido
+
+```stxt
+Document (@com.example.docs):
+    Metadata (@com.google.html): info
+    Content>>
+        Línea 1
+        Línea 2
+```
+
+---
+
+# 12. Errores de Schema
+
+Un schema es inválido si:
+
+1. Define dos `Node` con el mismo nombre.
+2. Usa un `Type` desconocido.
+3. Usa formas (`:`, `>>`) incompatibles con el tipo.
+4. Define `Childs>>` en un `Node` cuyo tipo no permite hijos.
+5. La cardinalidad es inválida.
+6. Referencia un namespace inexistente **sin aportar schema para dicho namespace**.
+7. **Aparece un hijo en `Childs>>` cuyo `Node` no está definido en su schema correspondiente**.
+
+---
+
+# 13. Conformidad
+
+Una implementación es conforme si:
+
+* Implementa íntegramente este documento.
+* Valida tipos, formas de valor y cardinalidades.
+* Aplica la regla estricta de definición obligatoria de todos los nodos referenciados en `Childs>>`.
+* Maneja correctamente los modos *strict* y *non-strict*.
+* Rechaza documentos y schemas inválidos.
+
+---
+
+# 14. Schema del Schema (`@stxt.schema`)
+
+Esta sección define el **schema oficial** del propio sistema de schemas: el meta-schema que valida todos los documentos del namespace `@stxt.schema`.
+
+---
+
+## 14.1. Consideraciones
+
+* Todo documento schema es:
+
+  ```stxt
+  Schema (@stxt.schema): <namespace-objetivo>
+  ```
+
+* Un schema contiene:
+
+  * Opcionalmente una `Description`.
+  * Cero o más nodos `Node`.
+
+* Cada `Node`:
+
+  * Tiene valor inline (el nombre del nodo del namespace objetivo).
+  * Puede tener opcionalmente:
+
+    * `Type`
+    * `Childs`
+    * `Description`
+
+* Los nombres (`Schema`, `Node`, `Type`, `Childs`, `Description`) pertenecen al namespace `@stxt.schema`.
+
+---
+
+## 14.2. Meta-Schema completo
+
+```stxt
+Schema (@stxt.schema): stxt.schema
+    Description: Schema that defines the STxT Schema language
+
+    # Nodo raíz del documento de schema
+    Node: Schema
+        Type: TEXT INLINE
+        Childs>>
+            (?)  Description
+            (*)  Node
+
+    # Define un nodo del namespace objetivo
+    Node: Node
+        Type: TEXT INLINE
+        Childs>>
+            (?)  Type
+            (?)  Childs
+            (?)  Description
+
+    # Tipo declarado para un Node (opcional, por defecto TEXT)
+    Node: Type
+        Type: TEXT INLINE
+
+    # Lista de hijos permitidos (bloque multiline)
+    Node: Childs
+        Type: TEXT MULTILINE
+
+    # Descripción opcional (texto general, inline o bloque)
+    Node: Description
+        Type: TEXT
+```
+
+---
+
+## 14.3. Lectura rápida
+
+* `Schema`
+  Valor inline = namespace objetivo (ej. `com.example.docs`).
+  Hijos: `Description` (?), `Node` (*).
+
+* `Node`
+  Valor inline = nombre del nodo objetivo (ej. `Document`, `Autor`).
+  Hijos opcionales:
+
+  * `Type` ⇒ tipo concreto (si falta ⇒ `TEXT INLINE`).
+  * `Childs` ⇒ bloque `Childs>>` literal.
+  * `Description` ⇒ texto explicativo.
+
+* `Type`
+  Inline (`TEXT INLINE`), con el nombre del tipo (`EMPTY`, `TEXT INLINE`, `NUMBER`, `CODE:json`, etc.).
+
+* `Childs`
+  `TEXT MULTILINE`: contiene literalmente el bloque `Childs>>`.
+
+* `Description`
+  `TEXT`: puede ser inline o multiline.
+
+---
+
+## 14.4. Ejemplo mínimo válido
+
+```stxt
+Schema (@stxt.schema): com.example.docs
+    Node: Document
+```
+
+`Document` se considera de tipo `TEXT INLINE` (por defecto).
+
+---
+
+## 14.5. Ejemplo completo
+
+```stxt
+Schema (@stxt.schema): com.example.docs
+    Description: Example schema
+    Node: Document
+        Type: EMPTY
+        Childs>>
+            (1) Title
+            (*) Author
+            (?) Metadata (@com.google.html)
+    Node: Title
+        Type: TEXT INLINE
+    Node: Author
+        Type: TEXT INLINE
+```
+
+# 15. Fin del Documento

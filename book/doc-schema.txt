@@ -1,0 +1,72 @@
+Un schema es un documento `stxt` que pertenece a @stxt.schema, y define como debe ser un documento de un namespace concreto.
+
+Ejemplo de schema:
+
+Schema (@stxt.schema): com.example.docs
+	Description: A description of the schema
+	Node: Document
+		Type: TEXT
+		Childs>>
+			(*) Autor
+			(?) Fecha
+			(1) Content
+	Node: Fecha
+		Type: DATE
+	Node: Autor
+		Type: TEXT INLINE
+	Node: Conent
+		Type: TEXT MULTILINE
+		
+Ejemplo de documento del schema:
+
+Document (@com.example.docs):
+	Autor: Joan Costa
+	Fecha: 2025-12-04
+	Content>>
+		Este es el contenido
+
+Card:
+	num: un número exacto de apariciones
+	*: cualquier número de apariciones
+	+: uno o más
+	?: uno o cero
+	num+: num o más nodos
+	num-: num o menos nodos
+	min,max: de min a max (incluidos)
+	
+Tipos válidos básicos:
+	TEXT: Qualquier texto, multilínea o no. Tipo por defecto
+	TEXT INLINE: Sólo texto inline
+	TEXT MULTILINE: Sólo texto multiline
+	BOOLEAN: true/false
+	NUMBER: Tipo numérico (sintaxis json)
+	BOOLEAN: true/false
+	DATE: YYYY-MM-DD
+	TIMESTAMP: ISO_8601
+	EMAIL: valid email
+	URL: valid url
+	HEXADECIMAL: Formato hexadecimal 
+	BASE64: Formato Base64
+	BINARY: Formato binario (1/0)
+	EMPTY: No permite contenido inline. No puede ser `>>`
+	CODE:language_name: Es código en otros lenguajes 
+	
+Ejemplos CODE:
+	CODE:html: Texto con formato html
+	CODE:xml: Texto con formato xml
+	CODE:markdown: Texto con formato markdown
+	CODE:json: Texto con formato json
+	...
+
+Restricciones:
+	* Un nodo sólo puede estar definido una vez
+
+Notas:
+	* Un parseador **MAY** validar el contenido de CODE:*
+	* Un parseador **SHOULD** tener métodos para retornar el contenido en el formato más parecido al lenguaje con el que está hecho.
+		* Por ejemplo, si es en Javascript, los BOOLEAN podrán ser retornados en BOOLEAN, etc.
+	* UN parseador **MUST** comprobar cardinalidad
+
+
+
+			

@@ -2,7 +2,7 @@
     <div class="title">
 		<a href="$indexPage">
 		#if(${doc.getChild("default")})	STXT: ${lang.get("title_book")}
-		#else                  			STXT: Semantic TexT
+		#else                  			STXT: Semantic Text
 		#end
 	    </a>
 	</div>

@@ -1,0 +1,72 @@
+===========================
+Especificación del lenguaje
+===========================
+
+Texto estructurado en Nodos.
+Los nodos tienen estructura jerárquica, con identación dependiendo del nivel.
+No se permiten niveles vacíos, todos deben ser consecutivos.
+
+Los nodos pueden definir namespace, el cual es heredado hacia los hijos, a no ser que se sobreescriba.
+Si no se dice nada, el namespace es @stxt
+
+Nodo 1 (@com.example.docs):
+	Nodo 2: Tiene el mismo namespace 'com.example.docs'
+	Nodo 3: Tiene el mismo namespace 'com.example.docs'
+	Nodo 4 (@com.example.api): Tiene otro namespace, 'com.example.api'
+	
+Normalmente sólo hay un namespace, aunque se pueden mezclar sin problema.
+
+Ejemplo:
+
+Documento (@com.google.docs):
+	Autor: Joan Costa
+	Fecha: 03/11/1976
+	Contenido:
+		Este es el contenido en markdown
+		Se puede extender a varias líneas.
+
+Los nodos también pueden definir también el tipo, obligatorio para los nodos multilínea.
+Los tipos no son heredados, aunque el parser los puede deducir, dependiendo del parseador.
+
+No hay problema en especificar los dos:
+
+Documento (com.google.docs)[text]:
+	Esto es texto directamente
+	Se ve lo que es de forma fácil.
+	
+Tipos básicos:
+	STRING, TEXT, NUMBER, BOOLEAN
+
+===========
+Comentarios
+===========
+
+Los comentarios son líneas que empiezan por `#`.
+En caso de encontrarse en un bloque multilínea deben tener un nivel por debajo del que marca el bloque.
+
+=============
+Schema básico
+=============
+
+Debe haber un parser básico que entienda al menos @stxt.schema
+Estas son las reglas de como se crea.  
+
+Namespace (@stxt.schema): com.google.docs
+	Documento:
+		Autor: (1)
+		Fecha: (1)
+		Contenido: (1) TEXT
+		Criticidad: (?) ["Alta", "Baja", "Media"]
+		Id: (?) UUID
+		Key: (?) /^\d{3}/
+		Nota: TEXT
+	# Nota tiene (*) por defecto	
+	
+También se puede poner:
+
+Namespace: com.google.docs
+	Documento:
+		Autor: (1)
+		Fecha: (1)
+		Contenido: (1) TEXT
+

@@ -1,0 +1,13 @@
+Documento:
+	Texto >>
+		Hola Mundo
+		Esto es un texto estructurado
+		Como te llamas?
+	Otra cosa: Esto es un texto Normal
+	Demo: World
+	Biografía >>
+		Hola mundo!! Esto es un texto
+		Como me gusta este lenguaje!!
+	# Como te llamas?
+	
+		Vamos a hablar	
