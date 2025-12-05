@@ -43,7 +43,7 @@ Casos de uso
 	* CMS/gestores de contenido
 	* Formatos editoriales: recetas, manuales, especificaciones,...
 	* Wikipedia
-	* Ficheros de configuración
+	* Ficheros de configuración: con descripción dentro!! mirar que Node: permita description!!!
 Herramientas
 	Parsers
 	IDE's
