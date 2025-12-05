@@ -27,7 +27,7 @@
 	h4 {font-size: 1.0rem;}
 	
 	.alert p, .assert p {
-		border: 2px dashed $color2;
+		background-color: $color3;
 		text-align: center;
 		margin-top: 1em;
 		margin-bottom: 1em;
@@ -39,19 +39,11 @@
 	}
 	
 	.assert ul, .alert ul {
-		border: 2px dashed $color2;
+		background-color: $color3;
 		margin-top: 1em;
 		margin-bottom: 1em;
 		padding: 1.7em;
 	}
-	
-	@media (min-width: 750px) {
-		.alert p, .assert p, .assert ul, .alert ul {
-			width: 90%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}	
 	
 	p {
 		text-align: justify;
