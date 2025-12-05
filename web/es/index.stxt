@@ -2,7 +2,7 @@ Document (dev.stxt.namespace):STXT - Built for humans. Reliable for machines.
 	Navigation:
 		Next: Siguiente (tutorial)
 
-	Header: STXT en 1 Minuto
+	Header: @STXT@ en 1 Minuto
 
 	Alert:
 		**@STXT@**: un lenguaje para construir documentos de texto estructurados, con namespaces y validación.
