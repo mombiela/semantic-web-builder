@@ -11,14 +11,11 @@ Document (dev.stxt.namespace):EBNF
 	Code:
 		Document         ::= Line*
 
-		(* Líneas y tipos básicos *)
 		Line             ::= EmptyLine | CommentLine | NodeLine | BlockContentLine
 		EmptyLine        ::= Newline
 
-		(* Comentarios fuera de bloques '>>': tras la indentación, la primera columna puede ser '#'. *)
 		CommentLine      ::= IndentOpt? "#" TEXT? Newline
 
-		(* Nodo en forma inline/contener con ':' ó nodo-bloque con '>>'. *)
 		NodeLine         ::= IndentPrefix NodeHeader (Separator InlineValue)? Newline
 
 		NodeHeader       ::= NodeName NamespaceOpt (BlockOp |)
@@ -26,35 +23,18 @@ Document (dev.stxt.namespace):EBNF
 		Separator        ::= ":"
 		InlineValue      ::= TEXT
 
-		(* Líneas de contenido pertenecientes a un bloque '>>': son texto literal y no se parsean como nodos. *)
 		BlockStart       ::= IndentPrefix NodeName NamespaceOpt BlockOp Newline
 		BlockContentLine ::= IndentGreaterThan(NodeIndent) TEXT? Newline
 
-		(* Reglas semánticas (expresadas aquí en forma de comentarios EBNF): *)
-		(* - Un bloque '>>' comienza en una línea con '>>' y todas las líneas siguientes cuya
-		     indentación sea estrictamente mayor que la del nodo forman parte del bloque.
-		   - Las líneas vacías dentro del bloque se preservan y no cierran el bloque.
-		   - El bloque termina al encontrar la primera línea no vacía cuya indentación sea
-		     menor o igual que la del nodo '>>'.
-		   - Dentro del bloque no se interpretan ':' ni '>>' ni comentarios; todo es texto.
-		 *)
-
-		(* Namespaces: opcional y debe empezar por '@' cuando se indica. Ej.: (@com.example). *)
 		NamespaceOpt     ::= "(" "@" Identifier ("." Identifier)* ")"
 
-		(* Normalización y nombre lógico: el nombre del nodo se obtiene del texto entre el inicio
-		   del nombre y el primer carácter que sea '(', ':' o '>>' o fin de línea. Se triman
-		   espacios/tabs a izquierda y derecha del fragmento para obtener el nombre lógico. *)
 		NodeName         ::= Identifier
 
-		(* Indentación: o bien exclusivamente tabs por nivel, o bien espacios en múltiplos de 4. *)
 		IndentOpt        ::= (TAB | SPACES4)*
 		IndentPrefix     ::= IndentOpt
-		(* Operador auxiliar conceptual: indica una indentación estrictamente mayor que la del nodo *)
 		IndentGreaterThan(nodeIndent) ::= (line indentation) > nodeIndent
 
-		(* Terminales *)
-		SPACES4          ::= "    "    (* 4 espacios *)
+		SPACES4          ::= "    "
 		TAB              ::= "\t"
 		Newline          ::= "\n" | "\r\n"
 		Identifier       ::= IdentifierChar ( IdentifierChar )*
@@ -62,11 +42,3 @@ Document (dev.stxt.namespace):EBNF
 		Letter           ::= ? any Unicode letter ?
 		Digit            ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 		TEXT             ::= ? any printable character except newline ?
-
-		(* Notas adicionales: *)
-		(* - La gramática formal no incluye la regla que prohíbe mezclar espacios y tabs en
-		     la indentación; esa regla se especifica en la sección de validación/errores.
-		   - La normalización de valores inline: el texto tras ':' se trimará a izquierda y derecha.
-		   - La normalización de líneas en bloques '>>': se elimina la indentación mínima del bloque
-		     y se triman los espacios finales de cada línea; se eliminan líneas vacías finales.
-		*
