@@ -8,6 +8,7 @@
 	* List namespaces: stxt --list-ns
 	* Import namespace:	stxt --import-ns file.stxt|uri.stxt
 	* JSON canónico: stxt --json-canonical file.stxt
+	* Clean (spaces): stxt --clean
 	* ...
 * cli con node, transformadores: stxt2
 		* stxt2 file.stxt file.json
